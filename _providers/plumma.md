@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 34.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -216,7 +216,7 @@ modified: '2026-09-07'
 name: Plumma
 nav: Providers
 network: true
-overview: 'Plumma publishes 1 API on the [APIs.io](https://apis.io/) network: CONNECT API. Tagged areas include Telecommunications, Network APIs, Italy, Europe, and GSMA Open Gateway.
+overview: 'Plumma publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: CONNECT API. Tagged areas include Telecommunications, Network APIs, Italy, Europe, and GSMA Open Gateway.
 
 
   Plumma''s developer surface includes sandbox, signup flow, authentication, documentation, API reference, support, engineering blog, and 28 more developer resources.'
@@ -230,22 +230,22 @@ rate_limits:
   name: Plumma Rate Limits
   slug: plumma-rate-limits
 score:
-  band: strong
-  composite: 57.5
+  band: developing
+  composite: 53.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 64.3
+    artifact_dirs: 24
+    catalog_earned: 63.7
     catalog_earned_first_party: 20.0
-    catalog_gap: 50.8
+    catalog_gap: 51.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 22.0
-    contract_quality: 68.7
+    contract_quality: 62.1
     developer_ergonomics: 54.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -255,7 +255,7 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 57.5
+  previous_composite: 53.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -271,13 +271,14 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 59.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/screenshots/plumma-2026-10-11T112634.png
 security:
 - kind: authentication
   name: Plumma Authentication

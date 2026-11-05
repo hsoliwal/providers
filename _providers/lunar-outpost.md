@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: An unauthenticated remote Model Context Protocol server served from Lunar Outpost's own host and advertised by the company's llms.txt as its "Site MCP Endpoint". It exposes nine tools that let an agen
@@ -43,6 +43,10 @@ apis:
   slug: lunar-outpost-site-mcp
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.lunaroutpost.com/blog-feed.xml
 - group: company
   title: ''
   type: Website
@@ -112,14 +116,14 @@ mcp_servers:
 - description: A live, unauthenticated remote MCP server served from Lunar Outpost's own host at https://www.lunaroutpost.com/_api/mcp, advertised by the company's published llms.txt as its "Site MCP Endpoint". Veri
   name: Lunar Outpost Site MCP Server
   slug: lunar-outpost-site-mcp-server
-modified: '2026-08-25'
+modified: '2026-10-06'
 name: Lunar Outpost
 nav: Providers
 network: true
-overview: 'Lunar Outpost publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Space, Robotics, Aerospace, Lunar Exploration, and Autonomous Systems.
+overview: 'Lunar Outpost is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Space, Robotics, Aerospace, Lunar Exploration, and Autonomous Systems.
 
 
-  Lunar Outpost''s developer surface includes authentication, engineering blog, support, and 10 more developer resources.'
+  Lunar Outpost''s developer surface includes authentication, engineering blog, support, and 11 more developer resources.'
 plans:
 - name: Lunar Outpost Plans Pricing
   plan_count: 0
@@ -131,9 +135,9 @@ rate_limits:
   slug: lunar-outpost-rate-limits
 score:
   band: emerging
-  composite: 17.8
+  composite: 18.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -145,19 +149,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 17.8
+  previous_composite: 18.8
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

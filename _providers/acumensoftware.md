@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Authenticated REST surface behind the Forcelink mobile field-service ERP, served from the vendor-hosted za2.forcelink.net tenant alongside the Forcelink web login and the Forcelink Android/iOS apps. E
@@ -35,8 +35,16 @@ apis:
 - description: Anonymous, remote MCP endpoint served on each of the three Acumen Software marketing domains. It is the Wix platform's Site MCP, not a first-party Acumen or Forcelink product API — the nine tools it r
   name: Acumen Software Site MCP
   slug: acumen-software-site-mcp
-artifact_total: 8
+artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.acumensoft.net/newsroom
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.acumensoft.net/blog-feed.xml
 - group: company
   title: ''
   type: Website
@@ -106,20 +114,17 @@ description: Acumen Software is a Johannesburg, South Africa software company fo
 image: https://static.wixstatic.com/media/f3eb90_393c3a2fe853418ba367c5553bf6f8cc~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.acumensoft.net over streamable HTTP; 9 tools listed.
   name: Acumen Software Site MCP
   slug: acumen-software-site-mcp
-- description: ''
-  name: Acumen Software MCP Server
-  slug: acumen-software-mcp-server
-modified: '2026-09-06'
+modified: '2026-10-06'
 name: Acumen Software
 nav: Providers
 network: true
-overview: 'Acumen Software publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Field Service Management, Workforce Management, Asset Management, ERP, and Smart Cities.
+overview: 'Acumen Software is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Field Service, Workforce Management, Asset Management, ERP, and Smart Cities.
 
 
-  Acumen Software''s developer surface includes support, engineering blog, and 12 more developer resources.'
+  Acumen Software''s developer surface includes engineering blog, support, and 14 more developer resources.'
 plans:
 - name: Acumensoftware Plans Pricing
   plan_count: 0
@@ -131,9 +136,9 @@ rate_limits:
   slug: acumensoftware-rate-limits
 score:
   band: emerging
-  composite: 20.8
+  composite: 19.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -145,7 +150,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -154,23 +159,24 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 20.8
+  previous_composite: 19.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/screenshots/acumensoftware-2026-10-11T092729.png
 security:
 - kind: domain-security
   name: Acumensoftware Domain Security
@@ -178,7 +184,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: acumensoftware
 tags:
-- Field Service Management
+- Field Service
 - Workforce Management
 - Asset Management
 - ERP

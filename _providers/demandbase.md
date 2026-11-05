@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 60.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 24
+- acting_count: 19
   human_in_the_loop: 0
   name: Demandbase Agentic Access
   operation_count: 54
   slug: demandbase-agentic-access
-  summary_line: 54 operations · 24 acting
+  summary_line: 54 operations · 19 acting
 api_count: 16
 apis:
 - description: Hosted remote Model Context Protocol server exposing Demandbase account, person, intent, buying-group, account-brief, global company/contact and reference capabilities to AI assistants. OAuth 2.1 auth
@@ -162,6 +162,11 @@ collections:
   name: Usage API
   slug: open-demandbase-usage
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/demandbase/refs/heads/main/capabilities/demandbase-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/demandbase-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -425,26 +430,30 @@ common:
 created: '2024-01-20'
 description: Demandbase is a B2B go-to-market platform that unifies account intelligence, intent data, advertising, orchestration, personalization and sales intelligence into a single pipeline engine. Its developer surface is eight OpenAPI-documented REST APIs on uapi.demandbase.com — B2B company/contact intelligence, Data Export, Data Import, Admin, Intent (beta), Usage, Custom Sources and Auth — plus a hosted, OAuth-protected Model Context Protocol server that exposes account, person, intent, buying-group and account-brief capabilities to AI assistants, an official Python SDK, and a change-subscription webhook surface.
 finops:
-- name: Demandbase Finops
+- has_sources: true
+  method: generated
+  name: Demandbase Finops
+  primary_unit: ''
   service_category: B2B Marketing / Sales Intelligence
   slug: demandbase-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/demandbase.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at gateway.demandbase.com over HTTP requiring OAuth.
   name: Demandbase MCP Server
-  slug: demandbase-mcp-server
+  slug: db-mcp
 modified: '2026-08-13'
 name: Demandbase
 nav: Providers
 network: true
-overview: 'Demandbase publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Activities Management API, Asynchronous (Batch) API, Auth API, and 13 more. Tagged areas include Account Based Marketing, Advertising, AI Agents, B2B Marketing, and Company Data.
+overview: 'Demandbase publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities Management API, Asynchronous (Batch) API, Auth API, and 15 more. Tagged areas include Account Based Marketing, Advertising, AI Agents, B2B Marketing, and Company Data.
 
 
   The Demandbase catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Demandbase''s developer surface includes authentication, support, engineering blog, developer portal, signup flow, changelog, documentation, and 50 more developer resources.'
+  Demandbase''s developer surface includes authentication, support, engineering blog, developer portal, signup flow, changelog, documentation, and 51 more developer resources.'
 plans:
 - name: Demandbase Plans Pricing
   plan_count: 0
@@ -461,23 +470,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: strong
-  composite: 63.4
+  composite: 64.5
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 28
     catalog_earned: 53.3
     catalog_earned_first_party: 12.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 68.4
+    access_clarity: 60.5
     contract_governance: 22.0
-    contract_quality: 64.2
+    contract_quality: 58.8
     developer_ergonomics: 50.6
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 69.7
-  previous_composite: 63.4
+  previous_composite: 66.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -488,8 +497,14 @@ score:
       total: 16
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

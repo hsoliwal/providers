@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,21 +25,25 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 29.5
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 asyncapis:
 - description: ''
   name: Qingflow Webhooks
   slug: qingflow-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://qingflow.com/blog/
 - group: company
   title: ''
   type: Website
@@ -99,7 +103,11 @@ created: '2026-07-17'
 description: Qingflow (轻流) is an AI-powered no-code and low-code business management platform that lets enterprises build digital operations systems — forms, workflows and approval processes, portals, reports, data management, and automation — without writing code. Its Open Platform exposes OpenAPI interfaces, an outbound Webhook connector, single sign-on / account integration, and no-code connectors (Q-Linker, Q-Source) for pushing and collecting data across systems such as DingTalk, WeChat Work, and Feishu. Qingflow also ships AI features (QingClaw assistant, QingBuilder one-sentence app generation) and prebuilt ERP/CRM/OA/project-management solution templates. The company is backed by Qiming Venture Partners.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/qingflow.png
 layout: provider
-modified: '2026-07-20'
+mcp_servers:
+- description: Remote MCP server at mcp.qingflow.com over HTTP.
+  name: qingflow MCP Server
+  slug: qingflow
+modified: '2026-10-06'
 name: qingflow
 nav: Providers
 network: true
@@ -109,11 +117,11 @@ overview: 'qingflow is profiled on the [APIs.io](https://apis.io/) network. Tagg
   The qingflow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  qingflow''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, and 7 more developer resources.'
+  qingflow''s developer surface includes engineering blog, documentation, getting-started guide, support, pricing, signup flow, and 8 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 28.3
+  composite: 26.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -121,13 +129,13 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 32.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -136,11 +144,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 28.3
+  previous_composite: 26.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.5
-  scored_at: '2026-09-20'
+  score: 30.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,6 +68,21 @@ collections:
   name: Unpaywall API
   slug: open-unpaywall
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/unpaywall/refs/heads/main/plans/unpaywall-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/unpaywall-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/unpaywall/refs/heads/main/rate-limits/unpaywall-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/unpaywall-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/unpaywall/refs/heads/main/finops/unpaywall-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/unpaywall-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/unpaywall/refs/heads/main/capabilities/unpaywall-capability-edges.yml
   title: ''
@@ -129,9 +144,13 @@ examples:
   name: Unpaywall Search Example
   slug: unpaywall-search-example
 finops:
-- name: Unpaywall Finops
+- has_sources: false
+  method: generated
+  name: Unpaywall Finops
+  primary_unit: ''
   service_category: API
   slug: unpaywall-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unpaywall.png
 json_schemas:
 - name: Unpaywall Article Object
@@ -151,13 +170,13 @@ modified: '2026-05-19'
 name: Unpaywall
 nav: Providers
 network: true
-overview: 'Unpaywall publishes 2 APIs on the [APIs.io](https://apis.io/) network: DOI Lookup API and Search API. Tagged areas include Open Access, Scholarly Articles, Research, Academic, and Libraries.
+overview: 'Unpaywall publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: DOI Lookup API and Search API. Tagged areas include Open Access, Scholarly Articles, Research, Academic, and Library.
 
 
   The Unpaywall catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Unpaywall''s developer surface includes documentation, support, and 10 more developer resources.'
+  Unpaywall''s developer surface includes documentation, support, and 13 more developer resources.'
 plans:
 - name: Unpaywall Plans Pricing
   plan_count: 3
@@ -168,9 +187,10 @@ rate_limits:
   name: Unpaywall Rate Limits
   slug: unpaywall-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Unpaywall API Rules
+  name: Unpaywall — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -178,7 +198,8 @@ rules:
     info: 1
     warn: 4
   slug: unpaywall-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
   name: Unpaywall API Rules
@@ -191,23 +212,23 @@ rules:
   slug: unpaywall-rules
 score:
   band: thin
-  composite: 27.7
+  composite: 27.3
   coverage:
     artifact_dirs: 17
-    catalog_earned: 66.5
+    catalog_earned: 68.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 33.5
-    catalog_max: 100.0
+    catalog_gap: 46.6
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.6
   facets:
-    access_clarity: 0.0
-    contract_governance: 28.8
-    contract_quality: 65.3
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 59.5
     developer_ergonomics: 0.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 27.7
+  previous_composite: 25.7
   provenance:
     agentic_access: derived
     contracts:
@@ -220,9 +241,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -240,7 +261,7 @@ tags:
 - Scholarly Articles
 - Research
 - Academic
-- Libraries
+- Library
 - DOI
 - Science
 website: https://unpaywall.org

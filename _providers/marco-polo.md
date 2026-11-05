@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Hosted, remote Model Context Protocol server that connects governed enterprise data sources into a sandboxed agent workspace. OAuth 2.0 (WorkOS AuthKit) protected; requires a bearer token.
@@ -133,19 +133,19 @@ modified: '2026-07-20'
 name: Marco Polo
 nav: Providers
 network: true
-overview: 'Marco Polo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, MCP, Enterprise AI, Data Governance, and AI Agents.
+overview: 'Marco Polo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, MCP, Enterprise AI, Data Governance, and AI Agents.
 
 
   Marco Polo''s developer surface includes documentation, getting-started guide, pricing, engineering blog, authentication, CLI, and 11 more developer resources.'
 random_paper: 5
 scopes:
 - name: Marco Polo Scopes
-  scope_count: 0
+  scope_count: 4
   slug: marco-polo-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
-  band: emerging
-  composite: 25.0
+  band: thin
+  composite: 27.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -153,20 +153,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 25.0
+  previous_composite: 27.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -185,7 +191,7 @@ security:
 - kind: vulnerability-disclosure
   name: Marco Polo Vulnerability Disclosure
   slug: marco-polo-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Marco Polo Trust Center
   slug: marco-polo-trust-center

@@ -25,17 +25,22 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/outset/refs/heads/main/plans/outset-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/outset-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -86,6 +91,10 @@ created: '2026-07-17'
 description: Outset is an AI-powered qualitative research platform, operated by Parnassus Labs, Inc., that lets enterprise research and product teams run large-scale AI-moderated interviews across video, voice, and text in 85+ countries and many languages. Its AI moderators conduct conversational interviews, an AI-driven synthesis layer produces summaries, themes, quotes, and highlight reels, and a Visual Intelligence suite analyzes visual cues during sessions. The platform includes participant recruitment against a large panel plus an AI fraud-detection agent. Customers include Microsoft, HubSpot, Nestle, Glassdoor, Coinbase, and Indeed. Outset publishes SOC 2 Type II, ISO 42001, HIPAA, and GDPR compliance posture but exposes no public developer API, documentation, or developer portal at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/outset.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.outset.ai over HTTP.
+  name: Outset MCP Server
+  slug: outset
 modified: '2026-07-20'
 name: Outset
 nav: Providers
@@ -93,31 +102,41 @@ network: true
 overview: 'Outset is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Research, User Research, Qualitative Research, and Artificial Intelligence.
 
 
-  Outset''s developer surface includes engineering blog, pricing, support, and 8 more developer resources.'
+  Outset''s developer surface includes engineering blog, pricing, support, and 9 more developer resources.'
+plans:
+- name: Outset Plans Pricing
+  plan_count: 1
+  slug: outset-plans-pricing
 random_paper: 16
 score:
   band: emerging
-  composite: 17.2
+  composite: 21.9
   coverage:
-    artifact_dirs: 5
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 7
+    catalog_earned: 35.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 4.3
   facets:
-    access_clarity: 53.9
+    access_clarity: 75.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 17.2
+  previous_composite: 17.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

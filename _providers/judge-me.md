@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -80,6 +80,15 @@ collections:
   name: Judge.me API
   slug: open-judge-me
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://judge.me/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/judge-me/refs/heads/main/capabilities/judge-me-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/judge-me-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/judge-me/refs/heads/main/agentic-access/judge-me-agentic-access.yml
   title: ''
@@ -125,19 +134,23 @@ common:
 created: '2026-06-25'
 description: Judge.me is a product reviews platform for Shopify and other e-commerce storefronts, collecting photo and video reviews, star ratings, site reviews, and Q&A. The Judge.me REST API at https://judge.me/api/v1 lets developers list and import reviews, fetch ready-to-render widget HTML, resolve products, send review requests, and build OAuth apps authenticated with a shop_domain plus public or private api_token.
 finops:
-- name: Judge Me Finops
+- has_sources: true
+  method: generated
+  name: Judge Me Finops
+  primary_unit: ''
   service_category: Marketing and Commerce
   slug: judge-me-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/judge-me.png
 layout: provider
-modified: '2026-06-25'
+modified: '2026-10-06'
 name: Judge.me
 nav: Providers
 network: true
-overview: 'Judge.me publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Products API, Review Requests API, Reviews API, and 1 more. Tagged areas include Reviews, E-Commerce, Shopify, Ratings, and Social Proof.
+overview: 'Judge.me publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Products API, Review Requests API, Reviews API, and 1 more. Tagged areas include Reviews, E-Commerce, Shopify, Ratings, and Social Proof.
 
 
-  Judge.me''s developer surface includes authentication, documentation, and 7 more developer resources.'
+  Judge.me''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Judge Me Plans Pricing
   plan_count: 2
@@ -148,24 +161,24 @@ rate_limits:
   name: Judge Me Rate Limits
   slug: judge-me-rate-limits
 score:
-  band: thin
-  composite: 33.9
+  band: emerging
+  composite: 25.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 56.0
+    artifact_dirs: 13
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 53.1
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 33.9
+    contract_quality: 47.8
+    developer_ergonomics: 32.1
+    discoverability: 66.1
+    operational_transparency: 5.3
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -173,12 +186,19 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://raw.githubusercontent.com/api-evangelist/judge-me/refs/heads/main/screenshots/judge-me-2026-10-11T190805.png
 security:
 - kind: authentication
   name: Judge Me Authentication

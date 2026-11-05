@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: ActivityHero's provider integration surface — outbound, HMAC-SHA256-signed JSON webhooks that sync registrations and activity schedules between ActivityHero and a provider's own systems (configured un
@@ -45,6 +45,10 @@ asyncapis:
   name: Activityhero Webhooks
   slug: activityhero-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.activityhero.com/blog/feed/
 - group: design
   href: https://raw.githubusercontent.com/api-evangelist/activityhero/refs/heads/main/asyncapi/activityhero-webhooks.yml
   title: ''
@@ -107,45 +111,45 @@ created: '2026-07-17'
 description: ActivityHero is an online marketplace connecting families with kids' camps, classes, and enrichment activities — a one-stop shop to find top-rated summer camps, holiday camps, and after-school classes near you across categories like art, science, sports, dance, and online programs. For activity providers it offers marketing and registration software (MarketingHero and custom registration software) plus programs for school districts. ActivityHero's developer surface is a provider integration built on outbound, HMAC-SHA256 signed JSON webhooks (a Registration API and a Schedule API) rather than a public REST API; it was surfaced as a portfolio company of 500 Global and enriched into the API Evangelist network from its published help-center docs.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/activityhero.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: ActivityHero
 nav: Providers
 network: true
-overview: 'ActivityHero publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Kids Activities, Camps, Classes, and Marketplace.
+overview: 'ActivityHero is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Kids Activities, Camps, Classes, and Marketplace.
 
 
   The ActivityHero catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  ActivityHero''s developer surface includes authentication, documentation, engineering blog, pricing, and 9 more developer resources.'
+  ActivityHero''s developer surface includes authentication, documentation, engineering blog, pricing, and 10 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 32.5
+  composite: 29.4
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 10
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 32.5
+  previous_composite: 29.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 37.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

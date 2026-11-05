@@ -32,10 +32,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 16
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/plans/american-water-works-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/american-water-works-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/rate-limits/american-water-works-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/american-water-works-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/security/american-water-works-vulnerability-disclosure.yml
   title: ''
@@ -151,7 +161,7 @@ network: true
 overview: 'American Water Works is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Water Utility, Wastewater, Public Utility, Infrastructure, and Environmental Services.
 
 
-  American Water Works'' developer surface includes support, engineering blog, developer portal, and 13 more developer resources.'
+  American Water Works'' developer surface includes support, engineering blog, developer portal, and 15 more developer resources.'
 plans:
 - name: American Water Works Plans Pricing
   plan_count: 0
@@ -179,9 +189,9 @@ rate_limits:
   slug: american-water-works-rate-limits
 score:
   band: emerging
-  composite: 16.0
+  composite: 15.2
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -193,22 +203,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.0
+  previous_composite: 15.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 27.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

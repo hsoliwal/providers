@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.remitly.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.remitly.com/blog/feed/
 - group: company
   title: ''
   type: Website
@@ -86,39 +94,41 @@ created: '2026-07-17'
 description: 'Remitly is a Seattle-based digital financial services provider for immigrants and their families, operating a global cross-border remittance and money-movement network across more than 170 countries. Beyond its consumer money-transfer app, Remitly runs "Remitly for Developers" (Remitly Access), a gated enterprise partner API that lets businesses embed international payouts, cross-border payments, and locally relevant disbursement options into their own products, along with open-source "Connected Experiences" mobile/web SDK components. Remitly is a regulated money services business: FinCEN-registered, licensed as a money transmitter across all 50 U.S. states, and registered with FINTRAC in Canada. Added to the API Evangelist network as a fintech company profile and enriched with identity, domain-security, and compliance artifacts.'
 image: https://avatars.githubusercontent.com/u/2490045?v=4
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Remitly
 nav: Providers
 network: true
 overview: 'Remitly is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Money Transfer, Remittances, and Cross-Border Payments.
 
 
-  Remitly''s developer surface includes documentation, support, engineering blog, and 8 more developer resources.'
+  Remitly''s developer surface includes engineering blog, documentation, support, and 10 more developer resources.'
 random_paper: 4
 score:
   band: emerging
-  composite: 18.1
+  composite: 17.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.1
+  previous_composite: 17.4
   provenance:
     conformance: first-party
   regulatory:
@@ -126,9 +136,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -148,6 +158,6 @@ tags:
 - Remittances
 - Cross-Border Payments
 - Payments
-- Financial-Services
+- Financial Services
 website: https://www.remitly.com
 ---

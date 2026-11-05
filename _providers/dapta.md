@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 asyncapis:
@@ -42,6 +42,14 @@ asyncapis:
   name: Dapta Webhooks
   slug: dapta-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://dapta.ai/blog-posts/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://dapta.ai/feed/
 - group: company
   title: ''
   type: Website
@@ -130,10 +138,10 @@ description: Dapta is a no-code AI voice and text agent platform for small and m
 image: https://dapta.ai/wp-content/uploads/2025/02/og-tag.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.dapta.ai over HTTP.
   name: Dapta MCP Server
-  slug: dapta-mcp-server
-modified: '2026-07-18'
+  slug: dapta-ai
+modified: '2026-10-06'
 name: Dapta
 nav: Providers
 network: true
@@ -143,31 +151,37 @@ overview: 'Dapta is profiled on the [APIs.io](https://apis.io/) network. Tagged 
   The Dapta catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Dapta''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, support, authentication, and 12 more developer resources.'
+  Dapta''s developer surface includes engineering blog, documentation, getting-started guide, pricing, signup flow, support, authentication, and 14 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 38.2
+  composite: 37.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 23.7
   previous_composite: 38.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -194,6 +208,6 @@ tags:
 - MCP
 - Webhook
 - CRM
-- SMB
+- Small Business
 website: https://dapta.ai
 ---

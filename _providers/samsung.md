@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.5
-  scored_at: '2026-09-20'
+  score: 36.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -92,7 +92,7 @@ apis:
   description: Device event subscriptions.
   name: Samsung Subscriptions API
   slug: samsung-subscriptions-api
-artifact_total: 49
+artifact_total: 50
 collections:
 - collection_type: open
   name: API Collection
@@ -119,6 +119,21 @@ collections:
   name: Samsung SmartThings Apps Subscriptions API
   slug: open-samsung-subscriptions-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/plans/samsung-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/samsung-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/rate-limits/samsung-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/samsung-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/finops/samsung-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/samsung-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/samsung/refs/heads/main/capabilities/samsung-capability-edges.yml
   title: ''
@@ -215,9 +230,13 @@ examples:
   name: Samsung List Devices Example
   slug: samsung-list-devices-example
 finops:
-- name: Samsung Finops
+- has_sources: true
+  method: generated
+  name: Samsung Finops
+  primary_unit: ''
   service_category: Consumer Electronics / IoT Platform
   slug: samsung-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/samsung.png
 json_schemas:
 - name: App
@@ -278,17 +297,21 @@ jsonld:
   property_count: 0
   slug: samsung-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.smartthings.com over HTTP.
+  name: Samsung MCP Server
+  slug: samsung
 modified: '2026-05-19'
 name: Samsung
 nav: Providers
 network: true
-overview: 'Samsung publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Devices API, Locations API, and 3 more. Tagged areas include Consumer Electronics, Developer Platform, IoT, Mobile, and Smart Home.
+overview: 'Samsung publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Apps API, Devices API, Locations API, and 9 more. Tagged areas include Consumer Electronics, Developer Platform, IoT, Mobile, and Smart Home.
 
 
   The Samsung catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Samsung''s developer surface includes authentication, engineering blog, documentation, code examples, and 14 more developer resources.'
+  Samsung''s developer surface includes authentication, engineering blog, documentation, code examples, and 17 more developer resources.'
 plans:
 - name: Samsung Plans Pricing
   plan_count: 1
@@ -299,9 +322,10 @@ rate_limits:
   name: Samsung Rate Limits
   slug: samsung-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Samsung API Rules
+  name: Samsung — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -309,7 +333,8 @@ rules:
     info: 2
     warn: 3
   slug: samsung-jsonschema-spectral-rules
-- effective_rule_count: 54
+- authorship: unmarked
+  effective_rule_count: 54
   extends:
   - spectral:oas
   name: Samsung API Rules
@@ -322,19 +347,19 @@ rules:
   slug: samsung-rules
 score:
   band: thin
-  composite: 34.9
+  composite: 32.0
   coverage:
     artifact_dirs: 19
-    catalog_earned: 56.5
+    catalog_earned: 53.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
-    contract_governance: 28.8
-    contract_quality: 68.4
+    access_clarity: 5.3
+    contract_governance: 27.3
+    contract_quality: 62.7
     developer_ergonomics: 23.8
     discoverability: 66.7
     operational_transparency: 7.9
@@ -343,7 +368,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 34.9
+  previous_composite: 33.5
   provenance:
     agentic_access: derived
     contracts:
@@ -352,8 +377,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

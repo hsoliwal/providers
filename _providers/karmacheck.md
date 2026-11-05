@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.karmacheck.io
@@ -237,14 +237,14 @@ description: 'KarmaCheck Inc. is a San Francisco based, API-first background che
 image: https://cdn.prod.website-files.com/673634b37e2e1340c1ee5f3d/6736aa68f0e954a84817b9c0_Favicon-Icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: KarmaCheck operates a first-party remote MCP server that lets an agent order and track background checks, ID verifications and motor vehicle record checks from natural language. The company markets it
   name: KarmaCheck MCP Server
   slug: karmacheck-mcp-server
 modified: '2026-08-23'
 name: KarmaCheck
 nav: Providers
 network: true
-overview: 'KarmaCheck publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Candidate onboarding API, Case API, and 6 more. Tagged areas include Background Checks, Employment Screening, Identity Verification, Credential Verification, and Motor Vehicle Records.
+overview: 'KarmaCheck publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Candidate onboarding API, Case API, and 6 more. Tagged areas include Background Checks, Employment Screening, Identity Verification, Credential Verification, and Motor Vehicle Records.
 
 
   The KarmaCheck catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -262,7 +262,7 @@ rate_limits:
   slug: karmacheck-rate-limits
 score:
   band: developing
-  composite: 52.0
+  composite: 49.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 66.9
+    contract_quality: 61.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 52.0
+  previous_composite: 49.3
   provenance:
     conformance: first-party
     contracts:
@@ -293,9 +293,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -327,6 +327,6 @@ tags:
 - Adjudication
 - Webhook
 - MCP Server
-- agent-native
+- Agent-Native
 website: https://www.karmacheck.com/
 ---

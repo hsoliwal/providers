@@ -34,10 +34,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/rate-limits/sonatus-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/sonatus-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sonatus/refs/heads/main/security/sonatus-domain-security.yml
   title: ''
@@ -126,7 +131,7 @@ network: true
 overview: 'Sonatus is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automotive, Software Defined Vehicle, Vehicle Data, and Connected Vehicles.
 
 
-  Sonatus'' developer surface includes engineering blog, support, and 13 more developer resources.'
+  Sonatus'' developer surface includes engineering blog, support, and 14 more developer resources.'
 plans:
 - name: Sonatus Plans Pricing
   plan_count: 0
@@ -137,8 +142,8 @@ rate_limits:
   name: Sonatus Rate Limits
   slug: sonatus-rate-limits
 score:
-  band: emerging
-  composite: 11.0
+  band: minimal
+  composite: 10.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -152,11 +157,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
-  previous_composite: 11.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -23,10 +23,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/plans/aeon-life-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/aeon-life-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/rate-limits/aeon-life-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/aeon-life-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/security/aeon-life-domain-security.yml
   title: ''
@@ -105,10 +115,10 @@ modified: '2026-09-10'
 name: Aeon Life
 nav: Providers
 network: true
-overview: 'Aeon Life is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Life Insurance, Health Insurance, and Financial-Services.
+overview: 'Aeon Life is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Life Insurance, Health Insurance, and Financial Services.
 
 
-  Aeon Life''s developer surface includes support, signup flow, and 11 more developer resources.'
+  Aeon Life''s developer surface includes support, signup flow, and 13 more developer resources.'
 plans:
 - name: Aeon Life Plans Pricing
   plan_count: 0
@@ -120,9 +130,9 @@ rate_limits:
   slug: aeon-life-rate-limits
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -134,7 +144,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -143,20 +153,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 12.6
+  previous_composite: 12.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/aeon-life/refs/heads/main/screenshots/aeon-life-2026-10-11T092924.png
 security:
 - kind: domain-security
   name: Aeon Life Domain Security
@@ -168,7 +179,7 @@ tags:
 - Insurance
 - Life Insurance
 - Health Insurance
-- Financial-Services
+- Financial Services
 - China
 - Consumer
 website: https://www.aeonlife.com.cn/

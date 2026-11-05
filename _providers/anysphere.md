@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -70,7 +70,7 @@ apis:
   description: The Sub Tokens API from Anysphere — 1 operation(s) for sub tokens.
   name: Anysphere Sub Tokens API
   slug: anysphere-sub-tokens-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: postman
   name: Cursor Cloud Agents API
@@ -106,6 +106,11 @@ collections:
   name: Cursor Cloud Agents Sub Tokens API
   slug: open-anysphere-sub-tokens-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/anysphere/refs/heads/main/plans/anysphere-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/anysphere-plans-pricing.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -278,34 +283,38 @@ modified: '2026-07-17'
 name: Anysphere
 nav: Providers
 network: true
-overview: 'Anysphere publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Me API, Models API, and 2 more. Tagged areas include Company, Developer Tools, Artificial Intelligence, Code Editor, and Coding Agents.
+overview: 'Anysphere publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Me API, Models API, and 2 more. Tagged areas include Company, Developer Tools, Artificial Intelligence, Code Editor, and Coding Agents.
 
 
-  Anysphere''s developer surface includes authentication, changelog, CLI, documentation, API reference, getting-started guide, support, and 29 more developer resources.'
+  Anysphere''s developer surface includes authentication, changelog, CLI, documentation, API reference, getting-started guide, support, and 30 more developer resources.'
+plans:
+- name: Anysphere Plans Pricing
+  plan_count: 4
+  slug: anysphere-plans-pricing
 random_paper: 7
 rate_limits:
 - limit_count: 7
   name: Anysphere Rate Limits
   slug: anysphere-rate-limits
 score:
-  band: thin
-  composite: 37.2
+  band: developing
+  composite: 42.7
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 24
+    catalog_earned: 61.0
+    catalog_earned_first_party: 24.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 7.9
+    access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 57.2
+    contract_quality: 51.5
     developer_ergonomics: 26.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 37.2
+  previous_composite: 36.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -316,9 +325,15 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

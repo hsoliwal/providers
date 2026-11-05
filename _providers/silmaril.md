@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: AI application firewall classify API. A Firewall client sends each sanitized classification input (user input, tool response, model output, or system prompt) with a hook label and optional tool name t
@@ -158,19 +158,19 @@ layout: provider
 mcp_servers:
 - description: 'Hosted, read-only, tenant-scoped MCP server that lets an agent read Silmaril Firewall security evidence (findings, metrics, suspicious users, investigation packets, traces) from an authorized tenant. '
   name: Silmaril MCP Server
-  slug: silmaril-mcp-server
+  slug: silmaril-firewall
 modified: '2026-07-21'
 name: Silmaril
 nav: Providers
 network: true
-overview: 'Silmaril publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Security, AI Firewall, Prompt Injection, and Agent Security.
+overview: 'Silmaril is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Security, AI Firewall, Prompt Injection, and Agent Security.
 
 
   Silmaril''s developer surface includes documentation, API reference, getting-started guide, support, authentication, changelog, and 18 more developer resources.'
 random_paper: 3
 score:
   band: thin
-  composite: 32.2
+  composite: 34.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -178,20 +178,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 32.2
+  previous_composite: 34.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

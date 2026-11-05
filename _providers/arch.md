@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 19
+- acting_count: 18
   human_in_the_loop: 0
   name: Arch Agentic Access
   operation_count: 52
   slug: arch-agentic-access
-  summary_line: 52 operations · 19 acting
+  summary_line: 52 operations · 18 acting
 api_count: 1
 apis:
 - baseURL: https://arch.co/client-api/v0
@@ -171,6 +171,11 @@ collections:
   name: Arch Client Accounts Users API
   slug: open-arch-users-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/arch/refs/heads/main/rate-limits/arch-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/arch-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/arch/refs/heads/main/security/arch-domain-security.yml
   title: ''
@@ -224,7 +229,7 @@ common:
 - group: company
   title: ''
   type: Website
-  url: https://archlabs.com
+  url: https://arch.com/
 - group: start
   title: ''
   type: DeveloperPortal
@@ -277,10 +282,10 @@ modified: '2026-07-18'
 name: Arch
 nav: Providers
 network: true
-overview: 'Arch publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Activities API, Addepar API, and 12 more. Tagged areas include Company, Private Markets, Alternative Investments, Fintech, and Wealth Management.
+overview: 'Arch publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Activities API, Addepar API, and 12 more. Tagged areas include Company, Private Markets, Alternative Investments, Fintech, and Wealth Management.
 
 
-  Arch''s developer surface includes authentication, documentation, API reference, getting-started guide, support, signup flow, and 16 more developer resources.'
+  Arch''s developer surface includes authentication, documentation, API reference, getting-started guide, support, signup flow, and 17 more developer resources.'
 random_paper: 18
 rate_limits:
 - limit_count: 0
@@ -288,7 +293,7 @@ rate_limits:
   slug: arch-rate-limits
 score:
   band: developing
-  composite: 43.4
+  composite: 44.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -296,15 +301,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 50.4
+    contract_quality: 45.3
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 43.4
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -315,8 +320,18 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -343,7 +358,7 @@ tags:
 - Fintech
 - Wealth Management
 - Investment Administration
-- Portfolio-Management
+- Portfolio Management
 - Documents
-website: https://archlabs.com
+website: https://arch.com/
 ---

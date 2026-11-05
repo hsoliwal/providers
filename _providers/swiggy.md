@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/swiggy/refs/heads/main/security/swiggy-domain-security.yml
@@ -61,6 +61,10 @@ created: '2026-07-17'
 description: Swiggy is an Indian hyperlocal on-demand commerce and food-delivery platform founded in 2014 and headquartered in Bengaluru. Through a single consumer app it connects users with restaurant and merchant partners for food delivery, Swiggy Instamart (quick grocery and essentials commerce), Swiggy Genie (pick-up and drop errands), Swiggy Dineout (restaurant reservations and dining), and the Swiggy One membership program, operating across hundreds of cities in India with a large network of restaurant and delivery partners. Swiggy is a publicly listed company backed by Accel, Bessemer Venture Partners, Norwest Venture Partners and SoftBank Vision Fund. It exposes a login-gated merchant partner portal but does not publish a public developer API program.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/swiggy.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.swiggy.com over HTTP.
+  name: Swiggy MCP Server
+  slug: swiggy
 modified: '2026-07-21'
 name: Swiggy
 nav: Providers
@@ -74,19 +78,19 @@ score:
   band: minimal
   composite: 9.7
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -95,16 +99,23 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 9.7
+  previous_composite: 9.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/swiggy/refs/heads/main/screenshots/swiggy-2026-10-11T193117.png
 security:
 - kind: domain-security
   name: Swiggy Domain Security
@@ -120,5 +131,6 @@ tags:
 - Logistics
 - E-Commerce
 - India
+- Restaurant
 website: http://www.swiggy.com
 ---

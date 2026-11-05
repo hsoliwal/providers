@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.9
-  scored_at: '2026-09-20'
+  score: 19.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -101,6 +101,11 @@ collections:
   name: Papercups API
   slug: open-papercups
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/papercups/refs/heads/main/capabilities/papercups-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/papercups-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/papercups/refs/heads/main/agentic-access/papercups-agentic-access.yml
   title: ''
@@ -150,22 +155,26 @@ common:
 created: '2026-06-20'
 description: Papercups is an open-source customer-messaging and live-chat platform built on Elixir/Phoenix, positioned as a self-hosted alternative to Intercom. It exposes a REST API for conversations, messages, and customers, a realtime chat surface over Phoenix WebSocket channels, and outbound webhooks. The project is in maintenance mode (community-maintained, no major new features).
 finops:
-- name: Papercups Finops
+- has_sources: true
+  method: generated
+  name: Papercups Finops
+  primary_unit: ''
   service_category: Customer Engagement and Support
   slug: papercups-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/papercups.png
 layout: provider
 modified: '2026-06-20'
 name: Papercups
 nav: Providers
 network: true
-overview: 'Papercups publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Realtime Chat API (WebSocket / Phoenix Channels), Conversations API, Customers API, and 2 more. Tagged areas include Customer Messaging, Live Chat, Open-Source, Support, and Intercom Alternative.
+overview: 'Papercups publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Realtime Chat API (WebSocket / Phoenix Channels), Conversations API, Customers API, and 4 more. Tagged areas include Customer Messaging, Live Chat, Open Source, Support, and Intercom Alternative.
 
 
   The Papercups catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Papercups'' developer surface includes authentication, documentation, and 8 more developer resources.'
+  Papercups'' developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Papercups Plans Pricing
   plan_count: 2
@@ -176,10 +185,11 @@ rate_limits:
   name: Papercups Rate Limits
   slug: papercups-rate-limits
 rules:
-- effective_rule_count: 33
+- authorship: generated
+  effective_rule_count: 33
   extends:
   - spectral:asyncapi
-  name: Papercups API Rules
+  name: Papercups — asyncapi rules
   rule_count: 6
   severity_counts:
     error: 1
@@ -188,24 +198,24 @@ rules:
     warn: 5
   slug: papercups-asyncapi-spectral-rules
 score:
-  band: developing
-  composite: 40.5
+  band: thin
+  composite: 30.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 63.8
+    artifact_dirs: 13
+    catalog_earned: 45.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.3
+    catalog_gap: 69.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 11.4
-    contract_quality: 57.0
+    contract_quality: 52.5
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 40.5
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -213,9 +223,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
@@ -233,8 +249,9 @@ slug: papercups
 tags:
 - Customer Messaging
 - Live Chat
-- Open-Source
+- Open Source
 - Support
 - Intercom Alternative
+- Real-Time
 website: https://papercups.io
 ---

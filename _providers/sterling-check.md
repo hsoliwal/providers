@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.9
-  scored_at: '2026-09-20'
+  score: 25.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -109,6 +109,11 @@ collections:
   name: Sterling API
   slug: open-sterling-check
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sterling-check/refs/heads/main/capabilities/sterling-check-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sterling-check-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/sterling-check/refs/heads/main/agentic-access/sterling-check-agentic-access.yml
   title: ''
@@ -167,19 +172,23 @@ common:
 created: '2026-07-03'
 description: Sterling (Sterling Check Corp) is a global background and identity screening provider offering criminal checks, employment and education verifications, drug and health screening, identity verification, and continuous (recurring) monitoring. The Sterling API is a documented RESTful, OAuth2-secured developer API that lets platforms, ATS/HRIS systems, and marketplaces initiate background checks, manage candidates and screening packages, retrieve results and reports (PDF/HTML), send candidate invites, and receive real-time status updates via webhook callbacks. Access is gated - developers request a Client ID and Client Secret per screening region (US, EMEA, Canada, or APAC) - and the docs are published via a Postman-hosted portal at apidocs.sterlingcheck.app with a developer portal at developer.sterlingcheck.app. Sterling was acquired by First Advantage Corporation for $2.2 billion, with the deal closing on October 31, 2024; Sterling now operates as "a First Advantage company."
 finops:
-- name: Sterling Check Finops
+- has_sources: true
+  method: generated
+  name: Sterling Check Finops
+  primary_unit: ''
   service_category: Background and Identity Screening
   slug: sterling-check-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sterling-check.png
 layout: provider
 modified: '2026-07-03'
 name: Sterling
 nav: Providers
 network: true
-overview: 'Sterling publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Candidates API, Invites API, and 4 more. Tagged areas include Background Screening, Identity Verification, Background Checks, Human Resources, and Compliance.
+overview: 'Sterling publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Candidates API, Invites API, and 4 more. Tagged areas include Background Screening, Identity Verification, Background Checks, Human Resources, and Compliance.
 
 
-  Sterling''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  Sterling''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Sterling Check Plans Pricing
   plan_count: 3
@@ -196,23 +205,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 37.8
+  composite: 27.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 13
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 37.8
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -220,9 +229,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

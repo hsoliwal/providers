@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: No public API · Partner/agent-gated
   onboarding: unknown
   pricing: unknown
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -109,14 +112,14 @@ modified: '2026-07-25'
 name: Brown & Brown
 nav: Providers
 network: true
-overview: 'Brown & Brown is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United States, Brokers, Property and Casualty, and Employee Benefits.
+overview: 'Brown & Brown is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United States, Brokerage, Property and Casualty, and Employee Benefits.
 
 
   Brown & Brown''s developer surface includes engineering blog, support, and 13 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 11.0
+  composite: 11.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -130,7 +133,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -139,15 +142,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.0
+  previous_composite: 11.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -163,13 +166,12 @@ slug: brown-brown
 tags:
 - Insurance
 - United States
-- Brokers
+- Brokerage
 - Property and Casualty
 - Employee Benefits
 - Wholesale Brokerage
 - Managing General Agent
 - Risk Management
 - Agency Management
-- Partner Gated
 website: https://www.bbrown.com/
 ---

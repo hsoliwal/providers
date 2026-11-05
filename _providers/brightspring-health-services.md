@@ -32,10 +32,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/brightspring-health-services/refs/heads/main/plans/brightspring-health-services-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/brightspring-health-services-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/brightspring-health-services/refs/heads/main/rate-limits/brightspring-health-services-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/brightspring-health-services-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/brightspring-health-services/refs/heads/main/security/brightspring-health-services-domain-security.yml
   title: ''
@@ -111,7 +121,7 @@ network: true
 overview: 'BrightSpring Health Services is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Home Health, Healthcare, Pharmacy, Rehabilitation, and Managed Care.
 
 
-  BrightSpring Health Services'' developer surface includes engineering blog, support, and 10 more developer resources.'
+  BrightSpring Health Services'' developer surface includes engineering blog, support, and 12 more developer resources.'
 plans:
 - name: Brightspring Health Services Plans Pricing
   plan_count: 0
@@ -123,7 +133,7 @@ rate_limits:
   slug: brightspring-health-services-rate-limits
 score:
   band: emerging
-  composite: 17.9
+  composite: 16.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -137,9 +147,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 17.9
+  previous_composite: 16.6
   provenance:
     conformance: first-party
   regulatory:
@@ -147,9 +157,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -26,22 +26,22 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
-    openapi_examples: documented
-    protected_resource_metadata: false
+    openapi_examples: partial
+    protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 37.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 19
+- acting_count: 15
   human_in_the_loop: 0
   name: Tomorrow Io Agentic Access
   operation_count: 32
   slug: tomorrow-io-agentic-access
-  summary_line: 32 operations · 19 acting
+  summary_line: 32 operations · 15 acting
 api_count: 2
 apis:
 - baseURL: https://api.tomorrow.io/v4
@@ -94,6 +94,11 @@ apis:
   description: Flexible timeline retrieval across any combination of fields and timesteps.
   name: Tomorrow.io Timelines API
   slug: tomorrow-io-timelines-api
+- baseURL: https://api.tomorrow.io/v4
+  baseurl_source: declared
+  description: 30-year climate normals for a location.
+  name: Tomorrow.io Climate API
+  slug: tomorrow-io-climate-api
 arazzos:
 - description: Inspect an existing alert, retune its threshold, and confirm the updated definition.
   name: Tomorrow.io Alert Threshold Tuning
@@ -131,7 +136,7 @@ arazzos:
 - description: Create a location, tag it into a cohort, confirm the tag, and read its current conditions.
   name: Tomorrow.io Tag and Monitor a Location Cohort
   slug: tomorrow-io-tag-location-cohort-workflow
-artifact_total: 100
+artifact_total: 102
 collections:
 - collection_type: postman
   name: Tomorrow.io Alerts API
@@ -434,6 +439,10 @@ common:
   title: ''
   type: FinOps
   url: finops/tomorrow-io-finops.yml
+- group: build
+  title: Tomorrow.io (corporate org)
+  type: GitHubOrganization
+  url: https://github.com/tomorrowio
 created: '2026-05-24'
 description: Tomorrow.io is a Boston-based weather intelligence platform combining a global proprietary numerical weather model, a constellation of microsatellite weather radars, and a developer-facing v4 REST API. The platform exposes 60+ hyperlocal data layers — core weather, air quality, pollen, solar, soil, fire, flood, lightning, maritime, aviation, road — together with map tiles, severe-weather event detection, routable forecast queries, climate normals, historical archive access, customer-defined locations, named insights, and threshold-based webhook alerts. Used by airlines, on-demand logistics platforms, agriculture, energy, and the US Air Force, Tomorrow.io's API is designed for ETA-aware route planning, geofenced alerting, agentic workflows, and large-scale operational decisioning under weather risk.
 examples:
@@ -478,9 +487,13 @@ features:
 - description: Tomorrow.io publishes an LLMs.txt index of every documentation page and endpoint for AI agents.
   name: LLMs.txt Indexed Documentation
 finops:
-- name: Tomorrow Io Finops
+- has_sources: true
+  method: generated
+  name: Tomorrow Io Finops
+  primary_unit: request
   service_category: Weather Intelligence
   slug: tomorrow-io-finops
+  template: false
 integrations:
 - description: Drop Tomorrow.io map tiles directly into Mapbox GL JS basemaps; official tomorrow-route-mapbox sample.
   name: Mapbox
@@ -526,17 +539,21 @@ jsonld:
   property_count: 16
   slug: tomorrow-io-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.tomorrow.io over HTTP.
+  name: Tomorrow.io MCP Server
+  slug: tomorrow-io
 modified: '2026-05-24'
 name: Tomorrow.io
 nav: Providers
 network: true
-overview: 'Tomorrow.io publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Historical Weather API, Events API, Weather on Routes API, and 7 more. Tagged areas include Weather, Forecast, Climate, Risk, and Air Quality.
+overview: 'Tomorrow.io publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Historical Weather API, Events API, Weather on Routes API, and 8 more. Tagged areas include Weather, Forecast, Climate, Risk Management, and Air Quality.
 
 
   The Tomorrow.io catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Tomorrow.io''s developer surface includes authentication, developer portal, documentation, API reference, signup flow, developer console, sandbox, and 47 more developer resources.'
+  Tomorrow.io''s developer surface includes authentication, developer portal, documentation, API reference, signup flow, developer console, sandbox, and 48 more developer resources.'
 plans:
 - name: Tomorrow Io Plans Pricing
   plan_count: 4
@@ -547,9 +564,10 @@ rate_limits:
   name: Tomorrow Io Rate Limits
   slug: tomorrow-io-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Tomorrow.io API Rules
+  name: Tomorrow.io — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -557,7 +575,8 @@ rules:
     info: 2
     warn: 3
   slug: tomorrow-io-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
   name: Tomorrow.io API Rules
@@ -570,39 +589,47 @@ rules:
   slug: tomorrow-io-rules
 score:
   band: strong
-  composite: 65.1
+  composite: 56.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 85.5
+    artifact_dirs: 21
+    catalog_earned: 66.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 29.5
+    catalog_gap: 48.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.5
   facets:
-    access_clarity: 84.2
-    contract_governance: 28.8
-    contract_quality: 69.8
+    access_clarity: 60.5
+    contract_governance: 27.3
+    contract_quality: 60.7
     developer_ergonomics: 73.8
-    discoverability: 64.8
-    operational_transparency: 52.6
+    discoverability: 65.0
+    operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 65.1
+  previous_composite: 63.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
-      derived: 0
-      marker_coverage: 0.0
-      total: 10
+      derived: 1
+      marker_coverage: 9.1
+      total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -634,7 +661,7 @@ tags:
 - Weather
 - Forecast
 - Climate
-- Risk
+- Risk Management
 - Air Quality
 - Pollen
 - Lightning
@@ -646,6 +673,14 @@ tags:
 - Radar
 - Geospatial
 - Alerts
+- Historical Weather
+- Fire
+- Flood
+- Routes
+- Map Tiles
+- Aviation
+- Maritime
+- Public APIs
 use_cases:
 - description: ETA-aware weather along truck, drone, and last-mile routes to avoid storms, ice, and visibility hazards.
   name: Route Optimization and Logistics

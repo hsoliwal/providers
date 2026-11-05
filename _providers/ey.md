@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -85,6 +85,14 @@ common:
   title: ''
   type: Blog
   url: https://www.ey.com/en_gl/newsroom
+- group: company
+  title: ''
+  type: Website
+  url: https://www.ey.com/en_gl
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/EYBlockchain
 created: '2026-05-05'
 description: One of the Big Four professional services firms providing audit, tax, consulting, and advisory services. Operates in over 150 countries helping businesses navigate regulatory and strategic challenges, and runs proprietary technology platforms such as EY Helix (analytics), EY Atlas (research), and EY Canvas (audit) for internal and engagement use.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ey.png
@@ -96,13 +104,13 @@ network: true
 overview: 'EY is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Consulting, Accounting, Audit, Tax, and Advisory.
 
 
-  EY''s developer surface includes product news, engineering blog, and 10 more developer resources.'
+  EY''s developer surface includes product news, engineering blog, and 12 more developer resources.'
 random_paper: 2
 score:
   band: minimal
-  composite: 7.0
+  composite: 6.7
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 24.0
     catalog_earned_first_party: 0.0
     catalog_gap: 91.0
@@ -114,11 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 44.4
-    operational_transparency: 0.0
-  previous_composite: 7.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    discoverability: 43.8
+    operational_transparency: 5.3
+  previous_composite: 6.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -138,5 +152,25 @@ tags:
 - Tax
 - Advisory
 - Professional Services
+- Big Four
+- Assurance
+- Law
+- Strategy
+- Transaction
+- Corporate Finance
+- Technology
+- Managed Service
+- People And Workforce
+- Sustainability
+- ESG
+- Risk Management
+- Artificial Intelligence
+- AI Agents
+- Blockchain
+- Zero-Knowledge Proofs
+- Privacy
+- Insights
+- Research
+- Industry Analysis
 website: https://www.ey.com/
 ---

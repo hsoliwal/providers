@@ -33,10 +33,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/elucid-bioimaging/refs/heads/main/plans/elucid-bioimaging-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/elucid-bioimaging-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -123,7 +128,7 @@ network: true
 overview: 'Elucid Bioimaging is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Medical Imaging, Artificial Intelligence, and Cardiovascular.
 
 
-  Elucid Bioimaging''s developer surface includes engineering blog, YouTube channel, and 12 more developer resources.'
+  Elucid Bioimaging''s developer surface includes engineering blog, YouTube channel, and 13 more developer resources.'
 plans:
 - name: Elucid Bioimaging Plans Pricing
   plan_count: 0
@@ -145,7 +150,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   previous_composite: 7.4
   regulatory:
@@ -153,9 +158,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

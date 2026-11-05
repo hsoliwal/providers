@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.electriccarscheme.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.electriccarscheme.com/blog?format=rss
 - group: company
   title: ''
   type: Website
@@ -82,18 +90,18 @@ created: '2026-07-17'
 description: The Electric Car Scheme is a UK B Corp providing electric vehicle salary sacrifice as an employee benefit. Employees lease any electric car of their choice with the monthly cost deducted from gross salary before Income Tax and National Insurance, saving 20-50% versus a personal lease, while employers save on Class 1A National Insurance. Packages are all-inclusive (lease, insurance, maintenance, servicing and breakdown) with Complete Protection covering employees who leave partway through a lease term. The company integrates with employer payroll systems via API or SFTP and offers Single Sign-On for employees, plus an included Charge Scheme for charging access.
 image: http://static1.squarespace.com/static/6151d38ea56f9d31cf76ec07/t/6a2c2e992638150af2361c5c/1781280409974/Social-Share.jpg?format=1500w
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Electric Car Scheme
 nav: Providers
 network: true
 overview: 'Electric Car Scheme is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Electric Vehicles, Salary Sacrifice, Employee Benefits, and Automotive.
 
 
-  Electric Car Scheme''s developer surface includes engineering blog and 9 more developer resources.'
+  Electric Car Scheme''s developer surface includes engineering blog and 11 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 12.1
+  composite: 11.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -107,7 +115,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -117,9 +125,15 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 12.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.1
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

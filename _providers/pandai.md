@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.pandai.org/feed/
 - group: company
   title: ''
   type: Website
@@ -69,18 +73,18 @@ created: '2026-07-17'
 description: Pandai is a Malaysian education technology company founded in 2020 that operates a digital learning platform for primary and secondary school students. The app aligns to Malaysia's national curriculum (DSKP) across KSSR Years 1-6 and KSSM Forms 1-5, including SPM exam preparation, and helps learners improve their grades through interactive quizzes, tests, exams, topical practice, notes, flashcards, videos, and live tutoring. Features include personalized assessments, an AI-powered revision assistant (Ask Pbot), gamified learning with battles, leaderboards and rewards, and performance tracking via scorecards and report cards. Pandai is a consumer-facing learning app and does not publish a public developer API surface; this profile was surfaced as a 500 Global portfolio company and enriched by the API Evangelist pipeline.
 image: https://framerusercontent.com/assets/qWZuusChNvOZ56NSpucpbbpuVM.jpeg
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Pandai
 nav: Providers
 network: true
-overview: 'Pandai is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, E-Learning, and Online Learning.
+overview: 'Pandai is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, E-Learning, and Students.
 
 
-  Pandai''s developer surface includes signup flow, engineering blog, and 5 more developer resources.'
+  Pandai''s developer surface includes signup flow, engineering blog, and 6 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 12.1
+  composite: 11.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,7 +98,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -103,15 +107,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 12.1
+  previous_composite: 11.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -129,7 +133,6 @@ tags:
 - Education
 - EdTech
 - E-Learning
-- Online Learning
 - Students
 - Malaysia
 - Assessment

@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://floreovr.com/learning-center/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/floreo/refs/heads/main/security/floreo-domain-security.yml
   title: ''
@@ -85,18 +89,18 @@ created: '2026-07-17'
 description: Floreo is a research-based virtual reality (VR) digital therapeutics company that delivers immersive lessons teaching social, behavioral, communication, and life skills to neurodiverse individuals, including autistic children and adults. The platform runs across mobile (iPhone with Google Cardboard) and standalone VR headsets (Meta Quest 2/3/Pro, PICO), with a companion clinician portal for supervised sessions, progress tracking, and telehealth-style delivery. Floreo holds an FDA Breakthrough Device designation and participates in the FDA Total Product Life Cycle Advisory Program (TAP), and works with schools, behavioral-health providers, Medicaid programs, and research partners. It is tracked in the API Evangelist network as a portfolio company of Bloomberg Beta; the company publishes no public API, developer portal, or SDK at this time.
 image: https://floreovr.com/hubfs/Floreo-Default-Featured-Image.jpg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Floreo
 nav: Providers
 network: true
 overview: 'Floreo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Virtual Reality, Digital Therapeutics, Behavioral Health, and Healthcare.
 
 
-  Floreo''s developer surface includes engineering blog, support, pricing, signup flow, and 7 more developer resources.'
+  Floreo''s developer surface includes engineering blog, support, pricing, signup flow, and 8 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 15.2
+  composite: 15.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -110,17 +114,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 15.2
+  previous_composite: 15.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

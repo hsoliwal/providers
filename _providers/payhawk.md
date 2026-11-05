@@ -26,20 +26,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 13.7
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: RESTful API for programmatic access to Payhawk spend management features including expenses, corporate cards, transactions, employees, custom fields, fund accounts, bank statements, and webhook subscr
   name: Payhawk API
   slug: payhawk-api
-artifact_total: 8
+artifact_total: 9
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/payhawk/refs/heads/main/security/payhawk-trust-center.yml
@@ -115,9 +115,13 @@ common:
 created: 2026-06-12
 description: Payhawk is a spend management platform that enables finance teams to issue corporate cards, capture and manage expenses, process invoices, enforce budget controls, and integrate with ERP and accounting systems. The platform serves businesses across Europe, the US, and the UK in over 32 countries. Payhawk exposes a RESTful Developer API at https://api.payhawk.io/api/v3 that allows custom integrations over expenses, transactions, cards, employees, custom fields, fund accounts, and bank statements. The API is authenticated via API key, supports real-time webhooks for event-driven automation, and is rate-limited to 15 requests per second. The API is free to use for all Payhawk account holders, with no separate developer tier required.
 finops:
-- name: Payhawk Finops
+- has_sources: false
+  method: generated
+  name: Payhawk Finops
+  primary_unit: ''
   service_category: ''
   slug: payhawk-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/payhawk.png
 jsonld:
 - class_count: 12
@@ -125,11 +129,15 @@ jsonld:
   property_count: 0
   slug: payhawk-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.payhawk.com over HTTP.
+  name: Payhawk MCP Server
+  slug: payhawk
 modified: 2026-06-12
 name: Payhawk
 nav: Providers
 network: true
-overview: 'Payhawk publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Spend Management, Corporate Cards, Expense Management, Invoice Management, and Budget Controls.
+overview: 'Payhawk is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Spend Management, Corporate Cards, Expense Management, Invoice Management, and Budget Controls.
 
 
   The Payhawk catalog on APIs.io includes 1 JSON-LD context.
@@ -146,24 +154,24 @@ rate_limits:
   name: Payhawk Rate Limits
   slug: payhawk-rate-limits
 score:
-  band: thin
-  composite: 32.6
+  band: emerging
+  composite: 23.4
   coverage:
     artifact_dirs: 9
-    catalog_earned: 68.0
+    catalog_earned: 50.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.0
+    catalog_gap: 65.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 57.9
+    access_clarity: 26.3
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 32.6
+    discoverability: 68.3
+    operational_transparency: 15.8
+  previous_composite: 30.8
   provenance:
     mcp: first-party
   regulatory:
@@ -171,10 +179,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 25.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

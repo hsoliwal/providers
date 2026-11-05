@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -118,7 +118,7 @@ apis:
   description: The Topic API from Trieve — 1 operation(s) for topic.
   name: Trieve Topic API
   slug: trieve-topic-api
-artifact_total: 34
+artifact_total: 35
 collections:
 - collection_type: open
   name: API Collection
@@ -142,6 +142,21 @@ collections:
   name: Trieve REST API
   slug: open-trieve
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/trieve/refs/heads/main/plans/trieve-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/trieve-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/trieve/refs/heads/main/rate-limits/trieve-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/trieve-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/trieve/refs/heads/main/finops/trieve-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/trieve-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -205,22 +220,33 @@ common:
   title: ''
   type: LlmsText
   url: https://docs.trieve.ai/llms.txt
+- group: design
+  title: ''
+  type: SpectralRules
+  url: https://github.com/devflowinc/trieve/blob/a99b21e23f21025757b44efb594676c4a7b7495f/.github/rules.yaml
 created: '2026-05-23'
 description: Trieve (Devflow, Inc.) is an open-source, all-in-one search, recommendations, RAG, and analytics platform delivered as a REST API. The backend is written in Rust (Actix-web) and exposes endpoints for managing organizations, datasets, chunks, chunk groups, files, search, topics / messages (LLM chat), web crawls, events, analytics, and experiments. Trieve Cloud is hosted at api.trieve.ai; the same server can be self-hosted from the devflowinc/trieve repository. Official SDKs are published for TypeScript and Python.
 finops:
-- name: Trieve Finops
+- has_sources: false
+  method: generated
+  name: Trieve Finops
+  primary_unit: ''
   service_category: API
   slug: trieve-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trieve.png
 layout: provider
 modified: '2026-05-23'
 name: Trieve
 nav: Providers
 network: true
-overview: 'Trieve publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Chunk API, Dataset API, File API, and 2 more. Tagged areas include Search, RAG, Vector Search, Hybrid Search, and Recommendations.
+overview: 'Trieve publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chunk API, Dataset API, File API, and 18 more. Tagged areas include Search, RAG, Vector Search, Hybrid Search, and Recommendations.
 
 
-  Trieve''s developer surface includes authentication, documentation, GitHub presence, pricing, engineering blog, and 10 more developer resources.'
+  The Trieve catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Trieve''s developer surface includes authentication, documentation, GitHub presence, pricing, engineering blog, and 14 more developer resources.'
 plans:
 - name: Trieve Plans Pricing
   plan_count: 1
@@ -230,37 +256,56 @@ rate_limits:
 - limit_count: 2
   name: Trieve Rate Limits
   slug: trieve-rate-limits
+rules:
+- authorship: provider
+  effective_rule_count: 41
+  extends:
+  - spectral:oas
+  name: Trieve — trieve rules
+  rule_count: 0
+  severity_counts:
+    error: 0
+    hint: 0
+    info: 0
+    warn: 0
+  slug: trieve-trieve-spectral-rules
 score:
   band: developing
-  composite: 45.9
+  composite: 40.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 56.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    artifact_dirs: 14
+    catalog_earned: 46.0
+    catalog_earned_first_party: 5.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.8
   facets:
-    access_clarity: 34.2
-    contract_governance: 0.0
-    contract_quality: 49.5
+    access_clarity: 10.5
+    contract_governance: 15.2
+    contract_quality: 47.6
     developer_ergonomics: 22.6
-    discoverability: 75.9
-    operational_transparency: 52.6
+    discoverability: 73.2
+    operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 45.9
+  previous_composite: 44.0
   provenance:
     agentic_access: derived
     contracts:
-      callable: 0.0
+      callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -283,6 +328,6 @@ tags:
 - Hybrid Search
 - Recommendations
 - Analytics
-- Open-Source
+- Open Source
 website: https://trieve.ai/
 ---

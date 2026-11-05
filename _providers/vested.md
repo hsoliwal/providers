@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://vestedfinance.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/vested/refs/heads/main/security/vested-domain-security.yml
   title: ''
@@ -85,18 +89,18 @@ created: '2026-07-17'
 description: Vested Finance is an investment platform that enables Indian residents to build globally diversified portfolios by investing in US markets. It provides access to 10,000+ US stocks and 2,000+ ETFs, professionally managed portfolios (Vests), global mutual funds spanning 50+ countries, and private-market opportunities, alongside INR-to-USD remittance handling and US tax-reporting tools for Indian investors. Vested also operates a login-gated Partner API developer portal at developer.vestedfinance.com that exposes its brokerage and investing capabilities to partners. The company was originally surfaced as a portfolio company of Techstars and is profiled in the API Evangelist network.
 image: https://developer.vestedfinance.com/assets/images/logo-light.svg
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Vested
 nav: Providers
 network: true
-overview: 'Vested is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Investing, and Stocks.
+overview: 'Vested is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Investing, and Stocks.
 
 
-  Vested''s developer surface includes support, engineering blog, pricing, signup flow, and 7 more developer resources.'
+  Vested''s developer surface includes support, engineering blog, pricing, signup flow, and 8 more developer resources.'
 random_paper: 13
 score:
   band: emerging
-  composite: 13.6
+  composite: 14.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -110,7 +114,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -119,15 +123,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 13.6
+  previous_composite: 14.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -142,7 +146,7 @@ security:
 slug: vested
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Investing
 - Stocks

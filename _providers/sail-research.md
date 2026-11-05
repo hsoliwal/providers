@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.sailresearch.com/v1
@@ -62,7 +62,7 @@ apis:
   description: OpenAI-compatible Responses API endpoints.
   name: Sail Research Responses API
   slug: sail-research-responses-api-api
-artifact_total: 15
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Sail Research Webhooks
@@ -87,6 +87,16 @@ collections:
   name: Sail Batches API Responses API API
   slug: open-sail-research-responses-api-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/sail-research/refs/heads/main/plans/sail-research-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/sail-research-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sail-research/refs/heads/main/capabilities/sail-research-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sail-research-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -224,6 +234,10 @@ common:
   title: ''
   type: AgentSkill
   url: skills/_index.yml
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/sailresearchco
 created: '2026-07-17'
 description: 'Sail Research provides infrastructure for long-horizon agents: cost-efficient inference for leading open-source models (GLM, DeepSeek, Kimi, Nemotron and others) run on demand. Its API is OpenAI- and Anthropic-compatible (Chat Completions, Responses, Messages, Batches), so existing clients migrate by changing the base URL and key. Completion windows (asap/priority/standard/flex) trade latency for lower per-token price for background and agentic workloads, and Sailboxes provide full persistent VMs for long-running agents. Sail raised $80M and is backed by Kleiner Perkins. This profile was enriched by the API Evangelist pipeline from Sail''s public OpenAPI, docs, SDKs, CLI, and MCP surface.'
 image: https://www.sailresearch.com/og-image.png
@@ -231,38 +245,42 @@ layout: provider
 mcp_servers:
 - description: Sail's hosted documentation MCP server. Connects agents/IDEs to Sail's docs so they can answer questions about models, pricing, completion windows, Sailbox setup and execution, and the platform in gen
   name: Sail Research MCP Server
-  slug: sail-research-mcp-server
+  slug: sail-docs
 modified: '2026-09-16'
 name: Sail Research
 nav: Providers
 network: true
-overview: 'Sail Research publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Batches API, Chat Completions API, Messages API, and 2 more. Tagged areas include Company, Artificial Intelligence, LLM, Inference, and Agents.
+overview: 'Sail Research publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batches API, Chat Completions API, Messages API, and 2 more. Tagged areas include Company, Artificial Intelligence, LLM, Inference, and Agents.
 
 
   The Sail Research catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Sail Research''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 23 more developer resources.'
+  Sail Research''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 26 more developer resources.'
+plans:
+- name: Sail Research Plans Pricing
+  plan_count: 7
+  slug: sail-research-plans-pricing
 random_paper: 17
 score:
   band: developing
-  composite: 48.3
+  composite: 53.9
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 27
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 63.2
+    contract_quality: 57.7
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 48.3
+  previous_composite: 47.5
   provenance:
     conformance: derived
     contracts:
@@ -272,9 +290,15 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -295,7 +319,9 @@ tags:
 - LLM
 - Inference
 - Agents
-- Machine-Learning
+- Machine Learning
 - Developer Tools
+- Open Source Models
+- Infrastructure
 website: https://www.sailresearch.com/
 ---

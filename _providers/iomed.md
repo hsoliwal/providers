@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.iomed.health/whats-new/news
 - group: company
   title: ''
   type: Website
@@ -93,40 +97,42 @@ created: '2026-07-17'
 description: IOMED is a Barcelona-based health-tech company operating a Data Space Platform that gives hospitals and life-science companies secure, GDPR-compliant access to real-world clinical data for secondary use and research. Using AI and natural language processing, IOMED transforms free-text electronic health records into structured, coded data standardized on the OMOP Common Data Model, then exposes it through a federated EU network of hospital partners. Platform capabilities include feasibility patient counts, aggregated patient characterization, patient-level data extraction, and a patient finder for clinical-trial recruitment. IOMED is ISO 27001:2022, ISO 27701:2019, and ISO 9001:2015 certified, and is backed by Speedinvest, Adara Ventures, XTX Markets, and Philips Ventures. This profile is maintained in the API Evangelist network; IOMED does not currently publish a public developer API.
 image: https://cdn.prod.website-files.com/67112133d43dd09a761751cb/6735ed7da47fb01b7b603f93_IOMED%20-%20Open%20Graph%20Image%20URL%20A.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Iomed
 nav: Providers
 network: true
 overview: 'Iomed is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Clinical Data, Real-World Data, and OMOP CDM.
 
 
-  Iomed''s developer surface includes support and 11 more developer resources.'
+  Iomed''s developer surface includes engineering blog, support, and 11 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 18.9
+  composite: 18.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - spain
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 18.9
+  previous_composite: 18.0
   provenance:
     conformance: first-party
   regulatory:
@@ -138,9 +144,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

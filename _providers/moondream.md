@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 6
-  human_in_the_loop: 5
+- acting_count: 5
+  human_in_the_loop: 4
   name: Moondream Agentic Access
   operation_count: 6
   slug: moondream-agentic-access
-  summary_line: 6 operations · 6 acting · 5 human-in-the-loop
+  summary_line: 6 operations · 5 acting · 4 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.moondream.ai/v1
@@ -54,7 +54,7 @@ apis:
   description: Moondream vision Skills — query, caption, detect, point, segment.
   name: Moondream Skills API
   slug: moondream-skills-api
-artifact_total: 8
+artifact_total: 9
 collections:
 - collection_type: open
   name: API Collection
@@ -66,6 +66,11 @@ collections:
   name: Moondream Cloud OpenAI Compatibility Skills API
   slug: open-moondream-skills-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/moondream/refs/heads/main/plans/moondream-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/moondream-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/moondream/refs/heads/main/authentication/moondream-authentication.yml
   title: ''
@@ -210,30 +215,34 @@ modified: '2026-07-20'
 name: Moondream
 nav: Providers
 network: true
-overview: 'Moondream publishes 2 APIs on the [APIs.io](https://apis.io/) network: OpenAI Compatibility API and Skills API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Computer-Vision, and Vision Language Model.
+overview: 'Moondream publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: OpenAI Compatibility API and Skills API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Computer Vision, and Vision Language Model.
 
 
-  Moondream''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, engineering blog, pricing, and 23 more developer resources.'
+  Moondream''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, engineering blog, pricing, and 24 more developer resources.'
+plans:
+- name: Moondream Plans Pricing
+  plan_count: 13
+  slug: moondream-plans-pricing
 random_paper: 16
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 46.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 22
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 52.6
+    access_clarity: 84.2
     contract_governance: 18.2
     contract_quality: 14.5
     developer_ergonomics: 69.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 38.8
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -244,9 +253,19 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -264,8 +283,8 @@ slug: moondream
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
-- Computer-Vision
+- Machine Learning
+- Computer Vision
 - Vision Language Model
 - Object Detection
 - Image Captioning

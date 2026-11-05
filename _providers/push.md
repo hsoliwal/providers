@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-09-20'
+  score: 30.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 0
@@ -288,7 +288,7 @@ modified: '2026-09-16'
 name: Push
 nav: Providers
 network: true
-overview: 'Push publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Account API, Audience List API, Campaigns API, and 12 more. Tagged areas include Company, CRM, Customer Data Platform, Marketing Automation, and Hospitality.
+overview: 'Push publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Audience List API, Campaigns API, and 12 more. Tagged areas include Company, CRM, Customer Data Platform, Marketing Automation, and Hospitality.
 
 
   The Push catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -306,9 +306,9 @@ rate_limits:
   slug: push-rate-limits
 score:
   band: thin
-  composite: 33.0
+  composite: 32.1
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -320,9 +320,9 @@ score:
     contract_governance: 4.5
     contract_quality: 21.8
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 33.0
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -338,9 +338,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 34.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

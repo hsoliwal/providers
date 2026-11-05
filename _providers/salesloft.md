@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: documented
     mcp_server: documented
     openapi_examples: partial
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 44.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 73
   human_in_the_loop: 4
@@ -926,9 +926,13 @@ examples:
   name: Salesloft List Accounts Example
   slug: salesloft-list-accounts-example
 finops:
-- name: Salesloft Finops
+- has_sources: true
+  method: generated
+  name: Salesloft Finops
+  primary_unit: ''
   service_category: Sales
   slug: salesloft-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/salesloft.png
 json_schemas:
 - name: Salesloft Account
@@ -956,12 +960,12 @@ layout: provider
 mcp_servers:
 - description: Salesloft operates a first-party remote MCP server at https://mcp.salesloft.com. The server root (GET /) publishes the complete tool manifest ANONYMOUSLY — 15 tools with full JSON Schema inputSchema A
   name: Salesloft MCP Server
-  slug: salesloft-mcp-server
+  slug: salesloft
 modified: '2026-08-13'
 name: Salesloft
 nav: Providers
 network: true
-overview: 'Salesloft publishes 83 APIs on the [APIs.io](https://apis.io/) network, including Webhooks API, Account and People Redaction API, Account Redaction API, and 80 more. Tagged areas include Sales, Sales Engagement, Cadences, CRM, and Email.
+overview: 'Salesloft publishes 85 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks API, Account and People Redaction API, Account Redaction API, and 82 more. Tagged areas include Sales, Sales Engagement, Cadences, CRM, and Email.
 
 
   The Salesloft catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -978,9 +982,10 @@ rate_limits:
   name: Salesloft Rate Limits
   slug: salesloft-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Salesloft API Rules
+  name: Salesloft — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -988,7 +993,8 @@ rules:
     info: 1
     warn: 4
   slug: salesloft-jsonschema-spectral-rules
-- effective_rule_count: 53
+- authorship: unmarked
+  effective_rule_count: 53
   extends:
   - spectral:oas
   name: Salesloft API Rules
@@ -1006,23 +1012,23 @@ scopes:
   summary_line: 57 scopes
 score:
   band: strong
-  composite: 60.8
+  composite: 62.5
   coverage:
-    artifact_dirs: 31
+    artifact_dirs: 32
     catalog_earned: 58.5
     catalog_earned_first_party: 12.0
     catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 53.9
+    access_clarity: 46.1
     contract_governance: 31.8
-    contract_quality: 60.6
+    contract_quality: 56.5
     developer_ergonomics: 61.3
-    discoverability: 63.0
+    discoverability: 68.3
     operational_transparency: 84.2
-  previous_composite: 60.8
+  previous_composite: 64.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -1033,8 +1039,14 @@ score:
       total: 82
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

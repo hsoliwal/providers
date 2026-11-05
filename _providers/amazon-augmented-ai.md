@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -49,7 +49,7 @@ apis:
   description: Operations for creating and managing human review loops
   name: Amazon Augmented AI Human Loops API
   slug: amazon-augmented-ai-human-loops-api
-artifact_total: 72
+artifact_total: 73
 collections:
 - collection_type: open
   name: API Collection
@@ -58,10 +58,24 @@ collections:
   name: Amazon Augmented AI (A2I) Human Loops API
   slug: open-amazon-augmented-ai-human-loops-api
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://aws.amazon.com/pricing/?nc2=h_pr_hub
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-augmented-ai/refs/heads/main/plans/amazon-augmented-ai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/amazon-augmented-ai-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-augmented-ai/refs/heads/main/capabilities/amazon-augmented-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-augmented-ai-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/augmented-ai/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/amazon-augmented-ai/refs/heads/main/mcp/amazon-augmented-ai-mcp.yml
   title: ''
@@ -253,18 +267,23 @@ modified: '2026-09-16'
 name: Amazon Augmented AI
 nav: Providers
 network: true
-overview: 'Amazon Augmented AI publishes 1 API on the [APIs.io](https://apis.io/) network: Human Loops API. Tagged areas include Amazon Augmented AI, Human-in-the-Loop, Machine-Learning, and AI Review.
+overview: 'Amazon Augmented AI publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Human Loops API. Tagged areas include Amazon Augmented AI, Human-in-the-Loop, Machine Learning, and AI Review.
 
 
   The Amazon Augmented AI catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Augmented AI''s developer surface includes authentication and 9 more developer resources.'
+  Amazon Augmented AI''s developer surface includes pricing, authentication, and 11 more developer resources.'
+plans:
+- name: Amazon Augmented Ai Plans Pricing
+  plan_count: 0
+  slug: amazon-augmented-ai-plans-pricing
 random_paper: 0
 rules:
-- effective_rule_count: 4
+- authorship: generated
+  effective_rule_count: 4
   extends: []
-  name: Amazon Augmented AI API Rules
+  name: Amazon Augmented AI — jsonschema rules
   rule_count: 4
   severity_counts:
     error: 0
@@ -272,7 +291,8 @@ rules:
     info: 1
     warn: 3
   slug: amazon-augmented-ai-jsonschema-spectral-rules
-- effective_rule_count: 59
+- authorship: generated
+  effective_rule_count: 59
   extends:
   - spectral:oas
   name: Amazon Augmented AI API Rules
@@ -285,23 +305,23 @@ rules:
   slug: amazon-augmented-ai-spectral-rules
 score:
   band: thin
-  composite: 30.4
+  composite: 31.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 56.5
+    artifact_dirs: 23
+    catalog_earned: 55.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.2
   facets:
-    access_clarity: 0.0
-    contract_governance: 33.3
-    contract_quality: 72.1
+    access_clarity: 10.5
+    contract_governance: 31.8
+    contract_quality: 65.5
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 30.4
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -311,8 +331,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -335,7 +361,7 @@ slug: amazon-augmented-ai
 tags:
 - Amazon Augmented AI
 - Human-in-the-Loop
-- Machine-Learning
+- Machine Learning
 - AI Review
 use_cases:
 - Review low-confidence document text extraction results
@@ -344,5 +370,5 @@ use_cases:
 - Ensure accuracy of medical record processing
 - Verify identity document data extraction results
 - Build training datasets with human-verified labels
-website: https://amazon.com
+website: https://aws.amazon.com/augmented-ai/
 ---

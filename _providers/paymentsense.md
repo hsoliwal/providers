@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-09-20'
+  score: 27.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 1
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 50
   slug: paymentsense-agentic-access
   summary_line: 50 operations · 28 acting · 1 human-in-the-loop
-api_count: 4
+api_count: 6
 apis:
 - description: Documented WebSockets interface for the Connect platform, offering an event-driven alternative to the REST API for terminal integration. No downloadable OpenAPI/AsyncAPI specification is published; on
   name: Paymentsense Connect WebSockets API
@@ -324,7 +324,7 @@ modified: '2026-07-24'
 name: Paymentsense
 nav: Providers
 network: true
-overview: 'Paymentsense publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Access Token API, Cross Reference Payment API, Hospitality Reports API, and 14 more. Tagged areas include Payments, United Kingdom, Payment Gateway, Payment Processing, and Card Payments.
+overview: 'Paymentsense publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Token API, Cross Reference Payment API, Hospitality Reports API, and 15 more. Tagged areas include Payments, United Kingdom, Payment Gateway, Payment Processing, and Card Payments.
 
 
   The Paymentsense catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -334,7 +334,7 @@ overview: 'Paymentsense publishes 17 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 10
 score:
   band: strong
-  composite: 59.2
+  composite: 55.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -346,9 +346,9 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 64.7
+    contract_quality: 59.6
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -358,7 +358,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 59.2
+  previous_composite: 55.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -374,9 +374,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

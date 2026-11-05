@@ -29,21 +29,21 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.9
-  scored_at: '2026-09-20'
+  score: 34.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 60
+- acting_count: 59
   human_in_the_loop: 2
   name: Boldsign Agentic Access
   operation_count: 85
   slug: boldsign-agentic-access
-  summary_line: 85 operations · 60 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 85 operations · 59 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://api.boldsign.com
   baseurl_source: declared
@@ -100,7 +100,7 @@ apis:
   description: The User API from BoldSign — 8 operation(s) for user.
   name: BoldSign User API
   slug: boldsign-user-api
-artifact_total: 36
+artifact_total: 37
 collections:
 - collection_type: open
   name: API Collection
@@ -221,9 +221,13 @@ examples:
   name: Boldsign Send Document Example
   slug: boldsign-send-document-example
 finops:
-- name: Boldsign Finops
+- has_sources: false
+  method: generated
+  name: Boldsign Finops
+  primary_unit: ''
   service_category: ''
   slug: boldsign-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boldsign.png
 json_schemas:
 - name: BoldSign API Schemas
@@ -235,11 +239,15 @@ jsonld:
   property_count: 37
   slug: boldsign-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.boldsign.com over HTTP.
+  name: BoldSign MCP Server
+  slug: boldsign
 modified: 2026-06-12
 name: BoldSign
 nav: Providers
 network: true
-overview: 'BoldSign publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Branding API, Contacts API, Custom Field API, and 8 more. Tagged areas include E-Signature, Electronic Signature, Document-Management, Embedded Signing, and Webhook.
+overview: 'BoldSign publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Branding API, Contacts API, Custom Field API, and 8 more. Tagged areas include E-Signature, Document Management, Embedded Signing, Webhook, and Templates.
 
 
   The BoldSign catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -256,9 +264,10 @@ rate_limits:
   name: Boldsign Rate Limits
   slug: boldsign-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: BoldSign API Rules
+  name: BoldSign — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -267,24 +276,24 @@ rules:
     warn: 4
   slug: boldsign-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 46.5
+  band: thin
+  composite: 36.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 85.3
+    artifact_dirs: 18
+    catalog_earned: 66.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 29.8
+    catalog_gap: 48.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 67.8
+    access_clarity: 18.4
+    contract_governance: 23.5
+    contract_quality: 62.1
     developer_ergonomics: 26.2
-    discoverability: 68.5
-    operational_transparency: 39.5
-  previous_composite: 46.5
+    discoverability: 68.3
+    operational_transparency: 23.7
+  previous_composite: 44.1
   provenance:
     agentic_access: derived
     contracts:
@@ -293,9 +302,15 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -312,8 +327,7 @@ security:
 slug: boldsign
 tags:
 - E-Signature
-- Electronic Signature
-- Document-Management
+- Document Management
 - Embedded Signing
 - Webhook
 - Templates

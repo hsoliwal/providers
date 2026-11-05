@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.8
-  scored_at: '2026-09-20'
+  score: 6.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The ablefy API lets sellers automate access to their store data (orders, products, payments, and customers) using seller-generated access tokens, complemented by webhooks for event notifications. The '
@@ -42,6 +42,10 @@ apis:
   slug: ablefy-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://ablefy.io/feed/
 - group: company
   title: ''
   type: Website
@@ -83,20 +87,20 @@ created: '2026-07-17'
 description: ablefy (formerly elopage) is a German all-in-one sales and monetization platform for coaches, creators, trainers, consultants, and online educators. It provides conversion-optimized checkout with 12+ payment methods (PayPal, Klarna, SEPA, cards, Apple/Google Pay) across multiple currencies, an integrated LMS for online courses, memberships and subscriptions, community and live events, e-ticketing, automated invoicing with international tax/OSS compliance, and an optional reseller (merchant-of-record) model. Sellers can automate workflows through the ablefy API, webhooks, and access-token authentication, plus a Zapier integration and email-marketing connectors. The platform reports 80,000+ sellers, 6M+ customers serviced, and over EUR 2 billion in processed transactions across 13+ years of operation.
 image: https://ablefy.io/wp-content/uploads/2024/10/featured-image.webp
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: ablefy
 nav: Providers
 network: true
-overview: 'ablefy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales Platform, Digital Products, Online Courses, and Payments.
+overview: 'ablefy is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales Platform, Digital Products, Online Courses, and Payments.
 
 
-  ablefy''s developer surface includes pricing, engineering blog, signup flow, and 6 more developer resources.'
+  ablefy''s developer surface includes pricing, engineering blog, signup flow, and 7 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 15.3
+  composite: 15.8
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -108,7 +112,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -118,15 +122,15 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 15.3
+  previous_composite: 15.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 16
+- acting_count: 15
   human_in_the_loop: 0
   name: Hyperverge Agentic Access
   operation_count: 18
   slug: hyperverge-agentic-access
-  summary_line: 18 operations · 16 acting
+  summary_line: 18 operations · 15 acting
 api_count: 1
 apis:
 - description: Passive liveness / presentation-attack detection from a single selfie, trained on 850M+ liveness checks. Delivered primarily through HyperVerge's mobile SDKs and the hosted onboarding Workflow; a stan
@@ -97,6 +97,18 @@ collections:
   name: HyperVerge Identity Verification API
   slug: open-hyperverge
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://hyperverge.co/pricing/
+- group: company
+  title: ''
+  type: Blog
+  url: https://hyperverge.co/news/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://hyperverge.co/news/feed/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hyperverge/refs/heads/main/agentic-access/hyperverge-agentic-access.yml
   title: ''
@@ -150,19 +162,23 @@ common:
 created: '2026-07-12'
 description: HyperVerge is an AI-based identity verification and customer onboarding platform (India-HQ, global) providing document OCR and KYC extraction, face match, passive liveness, government/central database verification, and field matching. Its REST APIs extract and verify Indian identity documents (PAN, Aadhaar, Passport, Voter ID, Driving License), match a selfie against an ID photo, and validate user input against central databases for onboarding, AML, and fraud prevention. APIs are region-hosted (India `ind-*`, plus APAC/other regions) and authenticated with an appId and appKey issued by HyperVerge; enterprise onboarding is required to obtain credentials.
 finops:
-- name: Hyperverge Finops
+- has_sources: true
+  method: generated
+  name: Hyperverge Finops
+  primary_unit: ''
   service_category: Identity and Fraud Prevention
   slug: hyperverge-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hyperverge.png
 layout: provider
-modified: '2026-07-12'
+modified: '2026-10-06'
 name: HyperVerge
 nav: Providers
 network: true
-overview: 'HyperVerge publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Database Verification API, Face Match API, Input Validation API, and 2 more. Tagged areas include Identity Verification, KYC, Face Authentication, Liveness, and Document Verification.
+overview: 'HyperVerge publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Database Verification API, Face Match API, Input Validation API, and 3 more. Tagged areas include Identity Verification, KYC, Face Authentication, Liveness, and Document Verification.
 
 
-  HyperVerge''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  HyperVerge''s developer surface includes pricing, engineering blog, authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Hyperverge Plans Pricing
   plan_count: 3
@@ -174,22 +190,22 @@ rate_limits:
   slug: hyperverge-rate-limits
 score:
   band: thin
-  composite: 37.8
+  composite: 33.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 60.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    artifact_dirs: 12
+    catalog_earned: 51.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 64.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 56.9
+    contract_quality: 51.2
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 23.7
+    discoverability: 66.1
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -197,7 +213,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 37.8
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -205,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 10.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

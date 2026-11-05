@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 1
@@ -247,9 +247,13 @@ examples:
   name: Shareworks Examples
   slug: shareworks-examples
 finops:
-- name: Shareworks Finops
+- has_sources: false
+  method: generated
+  name: Shareworks Finops
+  primary_unit: ''
   service_category: ''
   slug: shareworks-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/shareworks.png
 json_schemas:
 - name: Access Token Body
@@ -493,7 +497,7 @@ modified: '2026-06-13'
 name: Shareworks
 nav: Providers
 network: true
-overview: 'Shareworks publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Public API, Authentication Token API, Authorized Capital API, and 12 more. Tagged areas include Equity Compensation, Stock Options, RSU, ESPP, and Employee Equity.
+overview: 'Shareworks publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Public API, Authentication Token API, Authorized Capital API, and 12 more. Tagged areas include Equity Compensation, Stock Options, RSU, ESPP, and Employee Equity.
 
 
   The Shareworks catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -510,9 +514,10 @@ rate_limits:
   name: Shareworks Rate Limits
   slug: shareworks-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Shareworks API Rules
+  name: Shareworks — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -521,24 +526,24 @@ rules:
     warn: 3
   slug: shareworks-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 42.2
+  band: thin
+  composite: 33.9
   coverage:
     artifact_dirs: 17
-    catalog_earned: 74.3
+    catalog_earned: 56.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.8
+    catalog_gap: 58.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 62.1
+    contract_quality: 56.7
     developer_ergonomics: 33.3
-    discoverability: 68.5
-    operational_transparency: 36.8
-  previous_composite: 42.2
+    discoverability: 66.1
+    operational_transparency: 13.2
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
@@ -546,9 +551,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -565,7 +576,7 @@ security:
 - kind: vulnerability-disclosure
   name: Shareworks Vulnerability Disclosure
   slug: shareworks-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: shareworks
 tags:
 - Equity Compensation
@@ -573,9 +584,9 @@ tags:
 - RSU
 - ESPP
 - Employee Equity
-- Financial-Services
+- Financial Services
 - Morgan Stanley
-- Equity Administration
+- Equity-Administration
 - Private Companies
 - Public Companies
 website: https://www.morganstanley.com/atwork/shareworks

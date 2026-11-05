@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://grail.com/feed/
 - group: company
   title: ''
   type: Website
@@ -69,18 +73,18 @@ created: '2026-07-17'
 description: GRAIL, Inc. is a healthcare company headquartered in Menlo Park, California, focused on detecting cancer early, when it can be cured. Its flagship product, the Galleri multi-cancer early detection (MCED) test, uses a single blood draw and methylation-based genomic sequencing to screen for a signal shared across more than 50 types of cancer, many of which lack any recommended screening today. GRAIL runs large clinical programs including the PATHFINDER, PATHFINDER 2, and NHS-Galleri studies, and distributes Galleri through health plans, employers, and partners such as Quest Diagnostics and Junction. GRAIL is a portfolio company of investors including GV and SV Angel. It does not publish a first-party public developer API; programmatic access to Galleri ordering is offered through third-party diagnostic infrastructure partners.
 image: https://grail.com/wp-content/uploads/2021/03/GRAIL-logo.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Grail
 nav: Providers
 network: true
 overview: 'Grail is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Healthcare, Cancer Detection, and Diagnostics.
 
 
-  Grail''s developer surface includes engineering blog, support, and 5 more developer resources.'
+  Grail''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 21
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,22 +98,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.8
+  previous_composite: 10.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://www.comet.com/opik/api/v1
@@ -507,12 +507,12 @@ layout: provider
 mcp_servers:
 - description: Official Model Context Protocol server for Opik. Connects MCP hosts (Claude Code, Cursor, VS Code Copilot) directly to an Opik workspace to read traces/spans/experiments/prompts, score outputs, save p
   name: Comet MCP Server
-  slug: comet-mcp-server
+  slug: opik-mcp
 modified: '2026-07-18'
 name: Comet
 nav: Providers
 network: true
-overview: 'Comet publishes 42 APIs on the [APIs.io](https://apis.io/) network, including Agent Configs API, Agent Insights API, Agent Insights Jobs API, and 39 more. Tagged areas include Company, Ai Enterprise Software, LLM Observability, LLMOps, and MLOps.
+overview: 'Comet publishes 42 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Configs API, Agent Insights API, Agent Insights Jobs API, and 39 more. Tagged areas include Company, Ai Enterprise Software, LLM Observability, LLMOps, and MLOps.
 
 
   Comet''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
@@ -530,23 +530,23 @@ rate_limits:
   slug: comet-rate-limits
 score:
   band: strong
-  composite: 61.9
+  composite: 62.8
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 10.4
+  delta: 0.1
   facets:
     access_clarity: 78.9
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 44.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 51.5
+  previous_composite: 62.7
   provenance:
     conformance: derived
     contracts:
@@ -556,9 +556,15 @@ score:
       total: 42
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 33.3
@@ -588,6 +594,6 @@ tags:
 - Model Monitoring
 - Prompt Management
 - Agents
-- Open-Source
+- Open Source
 website: https://www.comet.com/
 ---

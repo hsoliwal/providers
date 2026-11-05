@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -263,7 +263,7 @@ modified: '2026-09-16'
 name: Malt
 nav: Providers
 network: true
-overview: 'Malt publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Fee Invoices API, Invoices API, Payments API, and 1 more. Tagged areas include Company, Marketplace, Freelance Marketplace, Freelance Management System, and Talent Marketplace.
+overview: 'Malt publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Fee Invoices API, Invoices API, Payments API, and 1 more. Tagged areas include Company, Marketplace, Freelance Marketplace, Freelance Management System, and Talent Marketplace.
 
 
   Malt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 34 more developer resources.'
@@ -278,9 +278,9 @@ rate_limits:
   slug: malt-rate-limits
 score:
   band: strong
-  composite: 58.5
+  composite: 55.8
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
@@ -290,9 +290,9 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 61.3
+    contract_quality: 55.8
     developer_ergonomics: 58.9
-    discoverability: 74.1
+    discoverability: 72.3
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -302,7 +302,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 58.5
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -318,9 +318,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

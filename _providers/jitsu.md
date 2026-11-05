@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -55,7 +55,7 @@ apis:
   description: The Ingestion API from Jitsu — 2 operation(s) for ingestion.
   name: Jitsu Ingestion API
   slug: jitsu-ingestion-api
-artifact_total: 13
+artifact_total: 14
 collections:
 - collection_type: open
   name: API Collection
@@ -70,6 +70,15 @@ collections:
   name: Jitsu Event Ingestion API
   slug: open-jitsu
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://jitsu.com/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/jitsu/refs/heads/main/capabilities/jitsu-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jitsu-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/jitsu/refs/heads/main/agentic-access/jitsu-agentic-access.yml
   title: ''
@@ -124,19 +133,27 @@ common:
 created: '2026-06-21'
 description: Jitsu is an open-source, real-time event data pipeline and customer data platform (a Segment alternative). It collects events from websites, apps, and servers and streams them to data warehouses and other destinations. Jitsu is available as MIT-licensed self-hosted software (github.com/jitsucom/jitsu) and as a managed Jitsu Cloud (use.jitsu.com); both expose the same HTTP event ingestion API authenticated with a Write Key.
 finops:
-- name: Jitsu Finops
+- has_sources: true
+  method: generated
+  name: Jitsu Finops
+  primary_unit: ''
   service_category: Analytics
   slug: jitsu-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jitsu.png
 layout: provider
-modified: '2026-06-21'
+mcp_servers:
+- description: Remote MCP server at use.jitsu.com over HTTP.
+  name: Jitsu MCP Server
+  slug: jitsu
+modified: '2026-10-06'
 name: Jitsu
 nav: Providers
 network: true
-overview: 'Jitsu publishes 2 APIs on the [APIs.io](https://apis.io/) network: Batch API and Ingestion API. Tagged areas include Event Data, CDP, Data Pipeline, Analytics, and Open-Source.
+overview: 'Jitsu publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Batch API and Ingestion API. Tagged areas include Event Data, CDP, Data Pipeline, Analytics, and Open Source.
 
 
-  Jitsu''s developer surface includes authentication, documentation, and 9 more developer resources.'
+  Jitsu''s developer surface includes engineering blog, authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Jitsu Plans Pricing
   plan_count: 4
@@ -147,24 +164,24 @@ rate_limits:
   name: Jitsu Rate Limits
   slug: jitsu-rate-limits
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 29.9
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 15
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.8
   facets:
-    access_clarity: 47.4
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 55.8
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 40.0
+    contract_quality: 50.2
+    developer_ergonomics: 32.1
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -173,9 +190,15 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -199,7 +222,8 @@ tags:
 - CDP
 - Data Pipeline
 - Analytics
-- Open-Source
+- Open Source
 - Ingestion
+- Customer Data Platform
 website: https://jitsu.com/
 ---

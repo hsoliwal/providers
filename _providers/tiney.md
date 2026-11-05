@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.tiney.co/blog/
 - group: company
   title: ''
   type: Website
@@ -65,32 +69,32 @@ created: '2026-07-17'
 description: Tiney is the UK's fastest-growing Ofsted-approved childminder agency, connecting parents with quality-assured home childminders and supporting educators through training, registration, and ongoing quality assurance. Operating as a government-regulated Childminder Agency (CMA), tiney runs a consumer marketplace plus a mobile app for finding local childcare and managing payments, communication, and children's learning updates. Tiney publishes no public developer API; its backend at api.tiney.co powers the parent and childminder apps and is access-restricted (HTTP 403) and undocumented.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tiney.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Tiney
 nav: Providers
 network: true
 overview: 'Tiney is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Future Of Work, Childcare, Early Years Education, and Childminder Agency.
 
 
-  Tiney''s developer surface includes support and 5 more developer resources.'
+  Tiney''s developer surface includes engineering blog, support, and 5 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 8.0
+  composite: 8.4
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -100,15 +104,15 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 8.0
+  previous_composite: 7.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

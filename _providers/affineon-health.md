@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
@@ -137,9 +137,9 @@ plans:
 random_paper: 17
 score:
   band: emerging
-  composite: 23.9
+  composite: 22.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -151,9 +151,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 23.9
+  previous_composite: 22.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -162,14 +162,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/affineon-health/refs/heads/main/screenshots/affineon-health-2026-10-11T093023.png
 security:
 - kind: domain-security
   name: Affineon Health Domain Security

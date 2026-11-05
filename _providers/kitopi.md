@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Model Context Protocol endpoint that Kitopi''s Wix-hosted website exposes for agentic AI access. It is a platform-provided (Wix) site assistant server rather than a Kitopi product API: it lets an a'
@@ -164,21 +164,21 @@ description: Kitopi is a Dubai-headquartered, tech-powered multi-brand restauran
 image: https://static.wixstatic.com/media/eef487_23715ab360904fa2b3be013b50cad3d3%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/eef487_23715ab360904fa2b3be013b50cad3d3%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.kitopi.com over HTTP; 9 tools listed.
   name: Site Visitor Assistant for site "Kitopi"
   slug: site-visitor-assistant-for-site-kitopi
 modified: '2026-07-19'
 name: Kitopi
 nav: Providers
 network: true
-overview: 'Kitopi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Food and Beverage, Cloud Kitchen, and Restaurant.
+overview: 'Kitopi is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Food and Beverage, Cloud Kitchen, and Restaurant.
 
 
   Kitopi''s developer surface includes documentation, engineering blog, support, authentication, and 23 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 20.1
+  composite: 21.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -186,26 +186,35 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 76.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-arab-emirates
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
+    - mena
     - middle-east
-  previous_composite: 20.1
+  previous_composite: 21.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

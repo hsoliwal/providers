@@ -15,7 +15,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -26,7 +27,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: verified
@@ -37,8 +38,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 59.2
-  scored_at: '2026-09-20'
+  score: 56.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -46,7 +47,7 @@ agentic_access:
   operation_count: 5
   slug: datarails-agentic-access
   summary_line: 5 operations
-api_count: 1
+api_count: 2
 apis:
 - description: REST file-upload endpoint used to push a CSV or Excel file into a Datarails Filebox. Authenticated with HTTP Basic using a base64-encoded Datarails sync user (which must not have MFA enabled). The tar
   name: Datarails Data Gateway Service (DGS)
@@ -77,6 +78,10 @@ collections:
   name: Datarails Finance OS MCP Server
   slug: open-datarails-financeos-mcp
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.datarails.com/feed/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/datarails/refs/heads/main/mcp/datarails-mcp.yml
   title: ''
@@ -260,17 +265,17 @@ description: 'Datarails is an Excel-native financial planning and analysis (FP&A
 image: https://www.datarails.com/wp-content/uploads/2024/10/datarails-logo-1.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.datarails.com over HTTP; 25 tools listed.
   name: Datarails MCP Server
-  slug: datarails-mcp-server
-modified: '2026-08-01'
+  slug: datarails-finance-os
+modified: '2026-10-06'
 name: Datarails
 nav: Providers
 network: true
-overview: 'Datarails publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Health API, Ready API, .well Known API, and 1 more. Tagged areas include Company, FP&A, Financial Planning, Finance, and Accounting.
+overview: 'Datarails publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Ready API, .well Known API, and 2 more. Tagged areas include Company, FP&A, Financial Planning, Finance, and Accounting.
 
 
-  Datarails'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 32 more developer resources.'
+  Datarails'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 33 more developer resources.'
 plans:
 - name: Datarails Plans
   plan_count: 3
@@ -286,10 +291,10 @@ scopes:
   slug: datarails-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: developing
-  composite: 53.1
+  band: strong
+  composite: 55.3
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -299,14 +304,14 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 39.1
+    contract_quality: 35.2
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 55.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 53.1
+  previous_composite: 55.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -317,8 +322,14 @@ score:
       total: 4
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

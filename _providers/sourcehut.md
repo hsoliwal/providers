@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 9
 apis:
 - description: GraphQL API for managing Git repositories, branches, commits, tags, artifacts, access control lists, and repository webhooks on SourceHut.
@@ -109,9 +109,13 @@ common:
 created: '2026-06-13'
 description: Privacy-focused software development platform with GraphQL APIs for managing Git and Mercurial repositories, mailing lists, issue trackers, CI build services, wikis, paste, and static web hosting. All services expose OAuth 2.0-authenticated GraphQL endpoints with webhook support.
 finops:
-- name: Sourcehut Finops
+- has_sources: false
+  method: generated
+  name: Sourcehut Finops
+  primary_unit: ''
   service_category: ''
   slug: sourcehut-finops
+  template: true
 graphqls:
 - description: 'Sourcehut (sr.ht) exposes GraphQL APIs for each of its services, including Git repository hosting, Mercurial hosting, continuous integration builds, issue tracking, mailing lists, account management, '
   name: Sourcehut GraphQL API
@@ -122,7 +126,7 @@ modified: '2026-06-13'
 name: SourceHut
 nav: Providers
 network: true
-overview: 'SourceHut publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Git, Mercurial, Source Control, Continuous Integration, and Mailing Lists.
+overview: 'SourceHut is listed with 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Git, Mercurial, Version Control, Continuous Integration, and Mailing Lists.
 
 
   SourceHut''s developer surface includes documentation, engineering blog, pricing, and 7 more developer resources.'
@@ -136,27 +140,33 @@ rate_limits:
   name: Sourcehut Rate Limits
   slug: sourcehut-rate-limits
 score:
-  band: thin
-  composite: 35.9
+  band: emerging
+  composite: 24.4
   coverage:
     artifact_dirs: 9
-    catalog_earned: 67.0
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.2
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 11.9
-    discoverability: 74.1
-    operational_transparency: 52.6
-  previous_composite: 35.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    discoverability: 71.4
+    operational_transparency: 28.9
+  previous_composite: 32.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -171,12 +181,12 @@ slug: sourcehut
 tags:
 - Git
 - Mercurial
-- Source Control
+- Version Control
 - Continuous Integration
 - Mailing Lists
 - Issue Tracking
 - Developer Tools
-- Open-Source
+- Open Source
 - Privacy
 - GraphQL
 website: https://sourcehut.org

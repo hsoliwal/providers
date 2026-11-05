@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://curtisswright.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/curtiss-wright/refs/heads/main/security/curtiss-wright-domain-security.yml
   title: ''
@@ -69,14 +73,14 @@ created: '2026-03-24'
 description: Curtiss-Wright is a global integrated business that provides highly engineered products, solutions, and services mainly to the aerospace, defense, commercial power, process, and general industrial markets. Its product portfolio spans rugged embedded computing, mission-critical avionics, electronic packaging, naval propulsion, reactor coolant pumps for nuclear power, surface treatment services, industrial valves, sensors, data acquisition systems, telemetry ground stations, emergency arresting systems for military aircraft, and electronic systems for naval shipbuilding programs. The company traces its lineage to the aviation pioneers Glenn Curtiss and the Wright brothers and today operates across the Defense Electronics, Naval & Power, and Aerospace & Industrial segments.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/curtiss-wright.png
 layout: provider
-modified: '2026-04-28'
+modified: '2026-10-06'
 name: Curtiss-Wright
 nav: Providers
 network: true
 overview: 'Curtiss-Wright is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Aerospace, Avionics, Data Acquisition, Defense, and Embedded Computing.
 
 
-  Curtiss-Wright''s developer surface includes product news and 6 more developer resources.'
+  Curtiss-Wright''s developer surface includes product news and 7 more developer resources.'
 press:
 - date: ''
   title: Curtiss-Wright To Speed AI Innovation With NVIDIA ...
@@ -96,7 +100,7 @@ press:
 random_paper: 13
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -110,17 +114,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
-  previous_composite: 3.3
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

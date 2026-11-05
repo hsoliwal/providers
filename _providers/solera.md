@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-09-20'
+  score: 31.5
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 5
   human_in_the_loop: 0
   name: Solera Agentic Access
-  operation_count: 26
+  operation_count: 21
   slug: solera-agentic-access
-  summary_line: 26 operations · 8 acting
+  summary_line: 21 operations · 5 acting
 api_count: 10
 apis:
 - baseURL: https://api-demo.audatex.com/TestAssignmentapi
@@ -140,6 +140,10 @@ collections:
   name: EAPI GIC Integration API
   slug: open-solera-gic-integration
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.solera.com/blog/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/solera/refs/heads/main/capabilities/solera-capability-edges.yml
   title: ''
@@ -375,17 +379,17 @@ description: Solera is a Westlake, Texas headquartered vehicle lifecycle managem
   data mapping baseline for estimate return, which is the auto physical damage sector's analogue to ACORD rather than ACORD itself.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-25'
+modified: '2026-10-06'
 name: Solera
 nav: Providers
 network: true
-overview: 'Solera publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Assignment API, Estimate Return API, Get Claim Image Response API, and 8 more. Tagged areas include Insurance, United States, Property and Casualty, Claims, and Claims Technology.
+overview: 'Solera publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assignment API, Estimate Return API, Get Claim Image Response API, and 8 more. Tagged areas include Insurance, United States, Property and Casualty, Claims, and Claims Technology.
 
 
   The Solera catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
 
 
-  Solera''s developer surface includes authentication, engineering blog, API reference, documentation, sandbox, changelog, support, and 43 more developer resources.'
+  Solera''s developer surface includes authentication, engineering blog, API reference, documentation, sandbox, changelog, support, and 44 more developer resources.'
 random_paper: 8
 scopes:
 - name: Solera Scopes
@@ -394,7 +398,7 @@ scopes:
   summary_line: 4 scopes · password
 score:
   band: developing
-  composite: 45.2
+  composite: 41.6
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -406,9 +410,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 49.1
+    contract_quality: 45.0
     developer_ergonomics: 56.5
-    discoverability: 74.1
+    discoverability: 72.3
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -417,7 +421,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.2
+  previous_composite: 41.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -433,9 +437,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

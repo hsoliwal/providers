@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.9
-  scored_at: '2026-09-20'
+  score: 19.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -145,6 +145,21 @@ collections:
   name: Signal Server Accounts Stickers API
   slug: open-signal-stickers-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/signal/refs/heads/main/plans/signal-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/signal-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/signal/refs/heads/main/rate-limits/signal-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/signal-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/signal/refs/heads/main/finops/signal-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/signal-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/signal/refs/heads/main/agentic-access/signal-agentic-access.yml
   title: ''
@@ -207,9 +222,13 @@ examples:
   name: Signal List Devices Example
   slug: signal-list-devices-example
 finops:
-- name: Signal Finops
+- has_sources: true
+  method: generated
+  name: Signal Finops
+  primary_unit: ''
   service_category: Messaging (Non-Commercial)
   slug: signal-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/signal.png
 json_schemas:
 - name: Signal Protocol Entities
@@ -229,13 +248,13 @@ modified: '2026-05-19'
 name: Signal
 nav: Providers
 network: true
-overview: 'Signal publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Attachments API, Certificates API, and 6 more. Tagged areas include Encryption, Messaging, Security, Cryptography, and Open-Source.
+overview: 'Signal publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Attachments API, Certificates API, and 11 more. Tagged areas include Encryption, Messaging, Security, Cryptography, and Open Source.
 
 
   The Signal catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Signal''s developer surface includes authentication, documentation, engineering blog, support, GitHub presence, and 7 more developer resources.'
+  Signal''s developer surface includes authentication, documentation, engineering blog, support, GitHub presence, and 10 more developer resources.'
 plans:
 - name: Signal Plans Pricing
   plan_count: 1
@@ -246,10 +265,11 @@ rate_limits:
   name: Signal Rate Limits
   slug: signal-rate-limits
 rules:
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: Signal API Rules
+  name: Signal — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -257,9 +277,10 @@ rules:
     info: 1
     warn: 6
   slug: signal-asyncapi-spectral-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Signal API Rules
+  name: Signal — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -267,7 +288,8 @@ rules:
     info: 2
     warn: 4
   slug: signal-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Signal API Rules
@@ -280,23 +302,23 @@ rules:
   slug: signal-rules
 score:
   band: developing
-  composite: 41.3
+  composite: 40.1
   coverage:
     artifact_dirs: 18
-    catalog_earned: 62.5
+    catalog_earned: 58.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.5
+    catalog_gap: 56.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 34.2
-    contract_governance: 28.8
-    contract_quality: 74.7
+    access_clarity: 26.3
+    contract_governance: 27.3
+    contract_quality: 68.6
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 41.3
+  previous_composite: 41.6
   provenance:
     agentic_access: derived
     contracts:
@@ -304,8 +326,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -330,7 +358,8 @@ tags:
 - Messaging
 - Security
 - Cryptography
-- Open-Source
+- Open Source
 - Privacy
+- Real-Time
 website: https://signal.org/
 ---

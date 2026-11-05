@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 51
+- acting_count: 27
   human_in_the_loop: 0
   name: Canny Agentic Access
   operation_count: 51
   slug: canny-agentic-access
-  summary_line: 51 operations · 51 acting
+  summary_line: 51 operations · 27 acting
 api_count: 1
 apis:
 - description: 'REST API for retrieving and managing Canny boards, posts, comments, votes, status changes, users, companies, categories, tags, and changelog entries. Requests authenticate using a secret API key sent '
@@ -176,6 +176,11 @@ collections:
   name: Canny REST API
   slug: open-canny
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/canny/refs/heads/main/capabilities/canny-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/canny-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/canny/refs/heads/main/agentic-access/canny-agentic-access.yml
   title: ''
@@ -239,16 +244,16 @@ modified: '2026-05-11'
 name: Canny
 nav: Providers
 network: true
-overview: 'Canny publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Autopilot API, Boards API, Categories API, and 12 more. Tagged areas include Customer Feedback, Product Management, Feature Requests, Roadmaps, and Changelog.
+overview: 'Canny publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Autopilot API, Boards API, Categories API, and 13 more. Tagged areas include Customer Feedback, Product Management, Feature Requests, Roadmaps, and Changelog.
 
 
-  Canny''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 8 more developer resources.'
+  Canny''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 35.3
+  composite: 33.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -258,11 +263,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.3
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     contracts:
@@ -270,8 +275,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 15
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

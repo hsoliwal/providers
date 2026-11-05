@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-09-20'
+  score: 31.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -126,7 +126,7 @@ arazzos:
 - description: Find a sub-user by name and patch its traffic limit and status.
   name: Oxylabs Throttle Sub-user Traffic
   slug: oxylabs-throttle-sub-user-traffic-workflow
-artifact_total: 71
+artifact_total: 72
 collections:
 - collection_type: postman
   name: Oxylabs Web Intelligence APIs
@@ -481,20 +481,27 @@ features:
 - Free trial across Web Scraper API, Web Unblocker, Residential, Datacenter, and Mobile proxies
 - Pay-as-you-go and committed-use pricing; usage measured by request and by GB of proxy traffic
 finops:
-- name: Oxylabs Finops
+- has_sources: false
+  method: generated
+  name: Oxylabs Finops
+  primary_unit: ''
   service_category: API
   slug: oxylabs-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oxylabs.png
 layout: provider
 mcp_servers:
 - description: ''
   name: Oxylabs MCP Server
-  slug: oxylabs-mcp-server
+  slug: oxylabs-mcp
+- description: Remote MCP server at mcp.oxylabs.io over HTTP; 10 tools listed.
+  name: Oxylabs MCP Server
+  slug: oxylabs
 modified: '2026-05-25'
 name: Oxylabs
 nav: Providers
 network: true
-overview: 'Oxylabs publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Login API, Queries API, Stats API, and 1 more. Tagged areas include AI Web Scraping, Bot Mitigation Bypass, CAPTCHA Solving, Data Extraction, and Datacenter Proxies.
+overview: 'Oxylabs publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Login API, Queries API, Stats API, and 12 more. Tagged areas include AI Web Scraping, Bot Mitigation Bypass, CAPTCHA Solving, Data Extraction, and Datacenter Proxies.
 
 
   Oxylabs'' developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, changelog, support, and 64 more developer resources.'
@@ -509,21 +516,21 @@ rate_limits:
   slug: oxylabs-rate-limits
 score:
   band: developing
-  composite: 52.7
+  composite: 50.6
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 46.0
+    artifact_dirs: 16
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 57.9
+    access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 55.1
-    developer_ergonomics: 75.0
-    discoverability: 75.9
+    contract_quality: 49.9
+    developer_ergonomics: 74.3
+    discoverability: 76.7
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -531,7 +538,7 @@ score:
     regions:
     - cee
     - europe
-  previous_composite: 52.7
+  previous_composite: 52.1
   provenance:
     agentic_access: derived
     contracts:
@@ -540,8 +547,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -588,7 +601,7 @@ tags:
 - Residential Proxies
 - SERP
 - Scraper API
-- Scraping
+- Web Scraping
 - Web Data
 - Web Intelligence
 - Web Unblocker

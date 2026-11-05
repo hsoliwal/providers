@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-09-20'
+  score: 32.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -145,6 +145,11 @@ collections:
   name: AMD ROCm Management API
   slug: open-amd-rocm-management-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/advanced-micro-devices/refs/heads/main/finops/advanced-micro-devices-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/advanced-micro-devices-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/advanced-micro-devices/refs/heads/main/capabilities/advanced-micro-devices-capability-edges.yml
   title: ''
@@ -374,9 +379,13 @@ features:
 - description: Full compatibility with PyTorch, TensorFlow, JAX, and other ML frameworks via ROCm backend support.
   name: Framework Compatibility
 finops:
-- name: Advanced Micro Devices Finops
+- has_sources: true
+  method: generated
+  name: Advanced Micro Devices Finops
+  primary_unit: ''
   service_category: Compute / Semiconductors
   slug: advanced-micro-devices-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/advanced-micro-devices.png
 integrations:
 - description: Full ROCm support for PyTorch including autograd, distributed training, and all major model architectures.
@@ -497,13 +506,13 @@ modified: '2026-09-16'
 name: Advanced Micro Devices
 nav: Providers
 network: true
-overview: 'Advanced Micro Devices publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Configuration API, Credits API, and 6 more. Tagged areas include Artificial Intelligence, Cloud Computing, GPU, HPC, and Machine-Learning.
+overview: 'Advanced Micro Devices publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Configuration API, Credits API, and 6 more. Tagged areas include Artificial Intelligence, Cloud Computing, GPU, HPC, and Machine Learning.
 
 
   The Advanced Micro Devices catalog on APIs.io includes 2 JSON-LD contexts and 3 Spectral governance rulesets.
 
 
-  Advanced Micro Devices'' developer surface includes authentication, developer portal, documentation, getting-started guide, support, engineering blog, academy / training, and 29 more developer resources.'
+  Advanced Micro Devices'' developer surface includes authentication, developer portal, documentation, getting-started guide, support, engineering blog, academy / training, and 30 more developer resources.'
 plans:
 - name: Advanced Micro Devices Plans Pricing
   plan_count: 3
@@ -530,9 +539,10 @@ rate_limits:
   name: Advanced Micro Devices Rate Limits
   slug: advanced-micro-devices-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Advanced Micro Devices API Rules
+  name: Advanced Micro Devices — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -540,7 +550,8 @@ rules:
     info: 2
     warn: 3
   slug: advanced-micro-devices-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: generated
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: Advanced Micro Devices API Rules
@@ -551,9 +562,10 @@ rules:
     info: 1
     warn: 8
   slug: advanced-micro-devices-spectral-rules
-- effective_rule_count: 31
+- authorship: unmarked
+  effective_rule_count: 31
   extends: []
-  name: Advanced Micro Devices API Rules
+  name: Advanced Micro Devices — amd rules
   rule_count: 31
   severity_counts:
     error: 16
@@ -562,35 +574,41 @@ rules:
     warn: 11
   slug: amd-spectral-rules
 score:
-  band: strong
-  composite: 55.2
+  band: developing
+  composite: 52.6
   coverage:
-    artifact_dirs: 32
-    catalog_earned: 68.5
+    artifact_dirs: 33
+    catalog_earned: 64.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.5
+    catalog_gap: 50.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 39.5
-    contract_governance: 47.0
-    contract_quality: 66.3
+    access_clarity: 31.6
+    contract_governance: 45.5
+    contract_quality: 58.7
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 55.2
+  previous_composite: 54.1
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 50.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -608,14 +626,14 @@ security:
 - kind: vulnerability-disclosure
   name: Advanced Micro Devices Vulnerability Disclosure
   slug: advanced-micro-devices-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: advanced-micro-devices
 tags:
 - Artificial Intelligence
 - Cloud Computing
 - GPU
 - HPC
-- Machine-Learning
+- Machine Learning
 - Semiconductors
 - Fortune 500
 use_cases:

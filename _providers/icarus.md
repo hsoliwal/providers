@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://henryicarus.substack.com/feed
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/icarus/refs/heads/main/security/icarus-domain-security.yml
   title: ''
@@ -49,7 +53,7 @@ created: '2026-07-17'
 description: Icarus is an aerospace and defense company building autonomous, solar-powered stratospheric aircraft for persistent surveillance and connectivity. Its APOLLO platform operates continuously above 60,000 feet, delivering rapid aerial intelligence, wide-area coverage across 1,000+ square miles, and always-on, low-latency (5-10ms) direct-to-device communications for weeks-long missions without ground infrastructure. Founded in 2023 and based in El Segundo, California, Icarus was part of Y Combinator's Fall 2025 batch. The company operates in the defense/aerospace hardware space and does not currently publish any public API, developer portal, SDK, or technical developer surface; this profile captures its identity for the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/icarus.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Icarus
 nav: Providers
 network: true
@@ -57,9 +61,9 @@ overview: Icarus is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 9
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.6
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,22 +75,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 3.3
+  previous_composite: 3.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 13.6
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: The primary JSON-RPC interface exposed by zcashd, the original Zcash full node. Backwards compatible with Bitcoin Core 0.11.2 with Zcash-specific extensions for shielded address management and private
@@ -50,6 +50,21 @@ apis:
   slug: zebra-json-rpc-api
 artifact_total: 8
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/zcash/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/zcash/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/zcash/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -77,16 +92,20 @@ common:
   url: security/zcash-domain-security.yml
 description: Zcash is a privacy-preserving cryptocurrency that uses zero-knowledge proofs (zk-SNARKs) to enable shielded transactions. It provides JSON-RPC APIs via zcashd and zebrad for wallet operations, shielded transaction management, blockchain data access, and network interaction.
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://z.cash/wp-content/uploads/2022/01/zcash-icon-gold.png
 layout: provider
 modified: '2026-06-14'
 name: Zcash
 nav: Providers
 network: true
-overview: 'Zcash publishes 1 API on the [APIs.io](https://apis.io/) network: JSON-RPC API (zcashd). Tagged areas include Cryptocurrency, Privacy, Blockchain, Zero-Knowledge Proofs, and Shielded Transactions.'
+overview: Zcash is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including JSON-RPC API (zcashd), and 3 more. Tagged areas include Cryptocurrency, Privacy, Blockchain, Zero-Knowledge Proofs, and Shielded Transactions.
 plans:
 - name: Plans
   plan_count: 3
@@ -97,30 +116,36 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 score:
-  band: thin
-  composite: 31.1
+  band: emerging
+  composite: 23.2
   coverage:
     artifact_dirs: 7
-    catalog_earned: 55.0
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 9.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 21.1
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 31.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  previous_composite: 28.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -148,6 +148,26 @@ collections:
   name: Azure Container Apps API
   slug: open-azure-container-apps
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/azure-container-apps/refs/heads/main/plans/azure-container-apps-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/azure-container-apps-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/azure-container-apps/refs/heads/main/rate-limits/azure-container-apps-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/azure-container-apps-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/azure-container-apps/refs/heads/main/finops/azure-container-apps-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/azure-container-apps-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/azure-container-apps/refs/heads/main/capabilities/azure-container-apps-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/azure-container-apps-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -382,9 +402,13 @@ features:
 - description: Deploy AI/ML workloads on GPU-enabled container instances.
   name: GPU Support
 finops:
-- name: Azure Container Apps Finops
+- has_sources: false
+  method: generated
+  name: Azure Container Apps Finops
+  primary_unit: ''
   service_category: API
   slug: azure-container-apps-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/azure-container-apps.png
 integrations:
 - description: Share underlying Kubernetes infrastructure while abstracting cluster management complexity.
@@ -485,13 +509,13 @@ modified: '2026-05-19'
 name: Azure Container Apps
 nav: Providers
 network: true
-overview: 'Azure Container Apps publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Container Apps API, Jobs API, and 2 more. Tagged areas include Azure, Containers, Dapr, Kubernetes, and Microservices.
+overview: 'Azure Container Apps publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Container Apps API, Jobs API, and 2 more. Tagged areas include Microsoft Azure, Containers, Dapr, Kubernetes, and Microservices.
 
 
   The Azure Container Apps catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Azure Container Apps'' developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, pricing, signup flow, and 33 more developer resources.'
+  Azure Container Apps'' developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, pricing, signup flow, and 37 more developer resources.'
 plans:
 - name: Azure Container Apps Plans Pricing
   plan_count: 3
@@ -502,9 +526,10 @@ rate_limits:
   name: Azure Container Apps Rate Limits
   slug: azure-container-apps-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Azure Container Apps API Rules
+  name: Azure Container Apps — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -512,7 +537,8 @@ rules:
     info: 2
     warn: 3
   slug: azure-container-apps-jsonschema-spectral-rules
-- effective_rule_count: 64
+- authorship: generated
+  effective_rule_count: 64
   extends:
   - spectral:oas
   name: Azure Container Apps API Rules
@@ -530,26 +556,26 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: strong
-  composite: 61.6
+  composite: 61.2
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 71.5
+    artifact_dirs: 21
+    catalog_earned: 67.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.5
+    catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 60.5
-    contract_governance: 28.8
-    contract_quality: 69.5
+    access_clarity: 52.6
+    contract_governance: 27.3
+    contract_quality: 63.3
     developer_ergonomics: 56.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 52.6
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 61.6
+  previous_composite: 62.6
   provenance:
     agentic_access: derived
     contracts:
@@ -557,8 +583,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -575,7 +607,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: azure-container-apps
 tags:
-- Azure
+- Microsoft Azure
 - Containers
 - Dapr
 - Kubernetes

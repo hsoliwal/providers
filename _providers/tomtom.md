@@ -28,14 +28,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.2
-  scored_at: '2026-09-20'
+  score: 36.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -45,11 +45,6 @@ agentic_access:
   summary_line: 39 operations · 6 acting
 api_count: 4
 apis:
-- baseURL: https://api.tomtom.com
-  baseurl_source: declared
-  description: The TomTom Geocoding API converts structured addresses into geographic coordinates and supports reverse geocoding to translate coordinates into human-readable addresses. The Premium Geocoding API adds
-  name: TomTom Geocoding API
-  slug: tomtom-geocoding-api
 - description: The TomTom Fuel Prices API provides current fuel price information at specific fueling stations, including price by fuel type.
   name: TomTom Fuel Prices API
   slug: tomtom-fuel-prices-api
@@ -84,7 +79,7 @@ apis:
   slug: tomtom-filters-api
 - baseURL: https://api.tomtom.com
   baseurl_source: declared
-  description: The Geocoding API from TomTom — 2 operation(s) for geocoding.
+  description: The TomTom Geocoding API converts structured addresses into geographic coordinates and supports reverse geocoding to translate coordinates into human-readable addresses. The Premium Geocoding API adds
   name: TomTom Geocoding API
   slug: tomtom-geocoding-api
 - baseURL: https://api.tomtom.com
@@ -200,6 +195,21 @@ collections:
   name: Maps Additional Data WMS / WMTS API
   slug: open-tomtom-wms-wmts-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tomtom/refs/heads/main/plans/tomtom-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tomtom-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tomtom/refs/heads/main/rate-limits/tomtom-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tomtom-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tomtom/refs/heads/main/finops/tomtom-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tomtom-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/tomtom/refs/heads/main/agentic-access/tomtom-agentic-access.yml
   title: ''
@@ -291,9 +301,13 @@ features:
 - Move Connected Services for fleet (Enterprise)
 - Global map coverage with frequent updates
 finops:
-- name: Tomtom Finops
+- has_sources: true
+  method: generated
+  name: Tomtom Finops
+  primary_unit: ''
   service_category: Maps
   slug: tomtom-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tomtom.png
 json_schemas:
 - name: BatchResponse
@@ -342,17 +356,21 @@ jsonld:
   property_count: 4
   slug: tomtom-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tomtom.com over HTTP.
+  name: TomTom MCP Server
+  slug: tomtom
 modified: '2026-05-19'
 name: TomTom
 nav: Providers
 network: true
-overview: 'TomTom publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Geocoding API, Additional Data API, Batch Routing API, and 13 more. Tagged areas include Maps, Traffic, Transportation, Navigation, and Location.
+overview: 'TomTom publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Additional Data API, Batch Routing API, Copyrights API, and 16 more. Tagged areas include Maps, Traffic, Transportation, Navigation, and Location.
 
 
   The TomTom catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  TomTom''s developer surface includes authentication, documentation, signup flow, engineering blog, pricing, and 10 more developer resources.'
+  TomTom''s developer surface includes authentication, documentation, signup flow, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Tomtom Plans Pricing
   plan_count: 3
@@ -363,9 +381,10 @@ rate_limits:
   name: Tomtom Rate Limits
   slug: tomtom-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: TomTom API Rules
+  name: TomTom — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -373,7 +392,8 @@ rules:
     info: 2
     warn: 3
   slug: tomtom-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: TomTom API Rules
@@ -386,21 +406,21 @@ rules:
   slug: tomtom-rules
 score:
   band: developing
-  composite: 42.4
+  composite: 40.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 66.5
+    artifact_dirs: 19
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.5
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 50.0
-    contract_governance: 28.8
-    contract_quality: 58.6
+    access_clarity: 42.1
+    contract_governance: 27.3
+    contract_quality: 53.3
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 10.5
   previous_composite: 42.4
   provenance:
@@ -411,8 +431,14 @@ score:
       marker_coverage: 0.0
       total: 15
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -441,5 +467,6 @@ tags:
 - Geospatial
 - Routing
 - Geocoding
+- Mobility
 website: https://www.tomtom.com/
 ---

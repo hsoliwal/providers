@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 64.2
-  scored_at: '2026-09-20'
+  score: 62.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -64,7 +64,7 @@ apis:
 - description: API for accessing and downloading optimized versions of images uploaded to Builder.io. Supports on-the-fly image transformation and CDN-optimized delivery for web performance use cases.
   name: Builder.io Image API
   slug: image-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -157,9 +157,13 @@ examples:
   name: Builder Io Get Content Example
   slug: builder-io-get-content-example
 finops:
-- name: Builder Io Finops
+- has_sources: true
+  method: generated
+  name: Builder Io Finops
+  primary_unit: ''
   service_category: Developer Tools / Headless CMS
   slug: builder-io-finops
+  template: false
 graphqls:
 - description: 'Builder.io exposes a public GraphQL Content API that enables type-safe queries against your Builder.io space''s content models. The API is schema-driven: every content model defined in your Builder spa'
   name: Builder.io GraphQL API
@@ -175,11 +179,15 @@ jsonld:
   property_count: 24
   slug: builder-io-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.builder.io over HTTP.
+  name: Builder.io MCP Server
+  slug: builder-io
 modified: '2026-06-12'
 name: Builder.io
 nav: Providers
 network: true
-overview: 'Builder.io publishes 1 API on the [APIs.io](https://apis.io/) network: Content API. Tagged areas include Headless CMS, Visual Development, Content Delivery, A/B Testing, and GraphQL.
+overview: 'Builder.io is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Content API, and 5 more. Tagged areas include Headless CMS, Visual Development, Content Delivery, A/B Testing, and GraphQL.
 
 
   The Builder.io catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -196,9 +204,10 @@ rate_limits:
   name: Builder Io Rate Limits
   slug: builder-io-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Builder.io API Rules
+  name: Builder.io — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -207,24 +216,24 @@ rules:
     warn: 3
   slug: builder-io-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 48.4
+  band: thin
+  composite: 37.6
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 83.3
+    artifact_dirs: 20
+    catalog_earned: 61.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.8
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 66.9
+    access_clarity: 18.4
+    contract_governance: 23.5
+    contract_quality: 61.6
     developer_ergonomics: 23.8
-    discoverability: 74.1
-    operational_transparency: 50.0
-  previous_composite: 48.4
+    discoverability: 73.3
+    operational_transparency: 26.3
+  previous_composite: 45.9
   provenance:
     agentic_access: derived
     contracts:
@@ -233,9 +242,15 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

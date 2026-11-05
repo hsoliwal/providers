@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: HSDP is Philips' cloud platform for building connected health applications. It packages a suite of building-block services - including Identity and Access Management, Provisioning, IoT/Connect for dev
@@ -83,13 +83,13 @@ modified: '2026-05-09'
 name: Philips
 nav: Providers
 network: true
-overview: Philips publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Healthcare, Medical Devices, Connected Care, Patient Monitoring, and HealthSuite.
+overview: Philips is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Healthcare, Medical Devices, Connected Care, Patient Monitoring, and HealthSuite.
 random_paper: 13
 score:
   band: minimal
-  composite: 8.7
+  composite: 8.6
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -101,17 +101,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 8.7
+  previous_composite: 8.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

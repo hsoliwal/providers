@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: na
     mcp_server: verified
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.6
-  scored_at: '2026-09-20'
+  score: 38.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Primary GraphQL API for companies, tests, test sessions, live interviews, and interview templates. Authenticated with an API key.
@@ -60,6 +60,14 @@ collections:
   name: Codesignal Learn Public Organization API
   slug: open-codesignal-organization-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://codesignal.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://codesignal.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/codesignal/refs/heads/main/capabilities/codesignal-capability-edges.yml
   title: ''
@@ -208,18 +216,18 @@ layout: provider
 mcp_servers:
 - description: Official remote MCP server that lets AI agents work with CodeSignal assessments, candidate test sessions, and live interviews.
   name: Codesignal MCP Server
-  slug: codesignal-mcp-server
-modified: '2026-07-18'
+  slug: codesignal
+modified: '2026-10-06'
 name: Codesignal
 nav: Providers
 network: true
-overview: 'Codesignal publishes 1 API on the [APIs.io](https://apis.io/) network: Organization API. Tagged areas include Company, Technical Interview, Skills Assessment, Hiring, and Recruiting.
+overview: 'Codesignal publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Organization API, and 2 more. Tagged areas include Company, Technical Interview, Skills Assessment, Hiring, and Recruiting.
 
 
   The Codesignal catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Codesignal''s developer surface includes authentication, documentation, API reference, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+  Codesignal''s developer surface includes engineering blog, authentication, documentation, API reference, support, pricing, signup flow, and 26 more developer resources.'
 random_paper: 15
 scopes:
 - name: Codesignal Scopes
@@ -228,9 +236,9 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 53.0
+  composite: 47.0
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -240,11 +248,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 56.4
+    contract_quality: 51.5
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 53.0
+  previous_composite: 47.0
   provenance:
     conformance: derived
     contracts:
@@ -259,9 +267,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 85.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -13,10 +13,9 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -30,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.8
-  scored_at: '2026-09-20'
+  score: 36.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 54
   human_in_the_loop: 2
@@ -131,7 +130,7 @@ apis:
   description: Everything about Webhooks
   name: Lago Webhooks API
   slug: lago-webhooks-api
-artifact_total: 44
+artifact_total: 46
 collections:
 - collection_type: open
   name: API Collection
@@ -191,6 +190,26 @@ collections:
   name: Lago API documentation
   slug: open-lago
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/plans/lago-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/lago-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/rate-limits/lago-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/lago-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/finops/lago-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/lago-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/capabilities/lago-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lago-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/agentic-access/lago-agentic-access.yml
   title: ''
@@ -244,22 +263,37 @@ common:
   title: ''
   type: Blog
   url: https://getlago.com/blog
+- group: design
+  title: ''
+  type: SpectralRules
+  url: https://github.com/getlago/lago-openapi/blob/0607afeb3ab69b138485b64d96fc43cdce000d15/.spectral.yml
 created: '2024-07-02'
 description: Lago offers a self-hosted and cloud, scalable and modular architecture for metering and usage-based billing, at every stage of your company.
 finops:
-- name: Lago Finops
+- has_sources: false
+  method: generated
+  name: Lago Finops
+  primary_unit: ''
   service_category: API
   slug: lago-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lago.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at getlago.com over HTTP; 2 tools listed.
+  name: Lago MCP Server
+  slug: lago
 modified: '2026-05-19'
 name: Lago
 nav: Providers
 network: true
-overview: 'Lago publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Add_ons API, Analytics API, Billable_metrics API, and 14 more. Tagged areas include Billing, Metering, Open-Source, and Usage-Based.
+overview: 'Lago publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Add_ons API, Analytics API, Billable_metrics API, and 14 more. Tagged areas include Billing, Metering, Open Source, and Usage-Based.
 
 
-  Lago''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  The Lago catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Lago''s developer surface includes authentication, documentation, engineering blog, and 14 more developer resources.'
 plans:
 - name: Lago Plans Pricing
   plan_count: 3
@@ -269,25 +303,38 @@ rate_limits:
 - limit_count: 5
   name: Lago Rate Limits
   slug: lago-rate-limits
+rules:
+- authorship: provider
+  effective_rule_count: 45
+  extends:
+  - spectral:oas
+  name: Lago — lago openapi rules
+  rule_count: 4
+  severity_counts:
+    error: 3
+    hint: 0
+    info: 0
+    warn: 1
+  slug: lago-lago-openapi-spectral-rules
 score:
   band: thin
-  composite: 34.9
+  composite: 38.4
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 31.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 84.0
+    artifact_dirs: 17
+    catalog_earned: 43.0
+    catalog_earned_first_party: 15.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.9
   facets:
-    access_clarity: 23.7
-    contract_governance: 0.0
-    contract_quality: 62.8
-    developer_ergonomics: 31.0
-    discoverability: 48.1
+    access_clarity: 15.8
+    contract_governance: 45.5
+    contract_quality: 56.8
+    developer_ergonomics: 30.2
+    discoverability: 50.0
     operational_transparency: 10.5
-  previous_composite: 34.9
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -296,8 +343,14 @@ score:
       marker_coverage: 0.0
       total: 17
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -315,7 +368,7 @@ security:
 - kind: vulnerability-disclosure
   name: Lago Vulnerability Disclosure
   slug: lago-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Lago Trust Center
   slug: lago-trust-center
@@ -324,7 +377,7 @@ slug: lago
 tags:
 - Billing
 - Metering
-- Open-Source
+- Open Source
 - Usage-Based
 website: https://getlago.com/
 ---

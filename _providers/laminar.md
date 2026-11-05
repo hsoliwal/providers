@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Run SELECT-only ClickHouse SQL over a project's observability data via POST /v1/sql/query. Authenticates with a project API key as a bearer token, accepts a query plus typed {name:Type} parameters, an
@@ -200,14 +200,14 @@ description: 'Laminar is an open-source, OpenTelemetry-native observability and 
 image: https://laminar.sh/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.lmnr.ai over HTTP; 3 tools listed.
   name: Laminar MCP Server
-  slug: laminar-mcp-server
+  slug: laminar
 modified: '2026-07-19'
 name: Laminar
 nav: Providers
 network: true
-overview: 'Laminar publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Observability, LLM, AI Agents, Tracing, and OpenTelemetry.
+overview: 'Laminar is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Observability, LLM, AI Agents, Tracing, and OpenTelemetry.
 
 
   Laminar''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
@@ -218,7 +218,7 @@ plans:
 random_paper: 14
 score:
   band: developing
-  composite: 45.3
+  composite: 46.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 52.0
@@ -226,24 +226,30 @@ score:
     catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 45.3
+  previous_composite: 46.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -269,6 +275,6 @@ tags:
 - Evaluation
 - Monitoring
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://laminar.sh/
 ---

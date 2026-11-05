@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.gehealthcare.com/en-us/insights
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ge-healthcare-technologies/refs/heads/main/security/ge-healthcare-technologies-vulnerability-disclosure.yml
   title: ''
@@ -74,32 +78,37 @@ created: '2026-03-21'
 description: 'GE HealthCare Technologies (NASDAQ: GEHC) is a global medical technology, pharmaceutical diagnostics, and digital solutions innovator providing imaging, ultrasound, patient care solutions, and pharmaceutical diagnostics. Spun off from General Electric in January 2023 and headquartered in Chicago, Illinois.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ge-healthcare-technologies.png
 layout: provider
-modified: '2026-04-28'
+modified: '2026-10-06'
 name: GE HealthCare Technologies
 nav: Providers
 network: true
-overview: GE HealthCare Technologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, Healthcare, Medical Devices, and Medical Imaging.
+overview: 'GE HealthCare Technologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, Healthcare, Medical Devices, and Medical Imaging.
+
+
+  GE HealthCare Technologies'' developer surface includes engineering blog and 8 more developer resources.'
 random_paper: 1
 score:
   band: minimal
-  composite: 3.9
+  composite: 4.4
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
-    discoverability: 40.7
+    developer_ergonomics: 2.4
+    discoverability: 40.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
@@ -109,9 +118,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -126,7 +135,7 @@ security:
 - kind: vulnerability-disclosure
   name: Ge Healthcare Technologies Vulnerability Disclosure
   slug: ge-healthcare-technologies-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: ge-healthcare-technologies
 tags:
 - Fortune 500

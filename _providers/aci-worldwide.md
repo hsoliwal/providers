@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 25.8
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - description: The core RESTful payment API of the ACI Open Payment Platform (PAY.ON gateway). Server-to-Server integration lets merchants and PSPs run end-to-end payment workflows — preauthorization, debit, capture
@@ -59,6 +59,10 @@ asyncapis:
   name: Aci Worldwide Webhooks
   slug: aci-worldwide-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.aciworldwide.com/feed
 - group: agent
   title: ''
   type: MCPServer
@@ -186,24 +190,24 @@ layout: provider
 mcp_servers:
 - description: ''
   name: ACI Worldwide MCP Server
-  slug: aci-worldwide-mcp-server
-modified: '2026-07-24'
+  slug: mcp-server
+modified: '2026-10-06'
 name: ACI Worldwide
 nav: Providers
 network: true
-overview: 'ACI Worldwide publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, United States, Payment Gateway, Payment Processing, and Acquiring.
+overview: 'ACI Worldwide is listed with 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, United States, Payment Gateway, Payment Processing, and Acquiring.
 
 
   The ACI Worldwide catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  ACI Worldwide''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 19 more developer resources.'
+  ACI Worldwide''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 20 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 49.3
+  composite: 45.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -213,9 +217,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -224,7 +228,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 49.3
+  previous_composite: 45.7
   provenance:
     conformance: first-party
   regulatory:
@@ -236,9 +240,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -263,7 +267,7 @@ tags:
 - Acquiring
 - Card Payments
 - E-Commerce
-- Fraud
+- Fraud Prevention
 - Tokenization
 - 3D Secure
 - Bill Payments

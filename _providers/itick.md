@@ -23,14 +23,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Token-authenticated REST and WebSocket API for real-time and historical financial market data across crypto, forex, indices, stock, future, and fund product lines.
   name: iTick Market Data API
   slug: itick-market-data-api
-artifact_total: 7
+artifact_total: 6
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/rate-limits/itick-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/itick-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/security/itick-domain-security.yml
   title: ''
@@ -124,18 +129,15 @@ layout: provider
 mcp_servers:
 - description: ''
   name: iTick MCP Server
-  slug: itick-mcp-server
-- description: Official iTick MCP server exposing the REST market-data API as MCP tools for basics, stocks, indices, futures, funds, forex and crypto. WebSocket and FIX surfaces are explicitly NOT implemented by the
-  name: iTick MCP Server
-  slug: itick-mcp-server-2
+  slug: mcp
 modified: '2026-09-16'
 name: iTick
 nav: Providers
 network: true
-overview: 'iTick publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Data, Market Data, Stocks, Forex, and Crypto.
+overview: 'iTick is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Data, Market Data, Stocks, Foreign Exchange, and Cryptocurrency.
 
 
-  iTick''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, support, and 13 more developer resources.'
+  iTick''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, support, and 14 more developer resources.'
 plans:
 - name: Itick Plans Pricing
   plan_count: 4
@@ -146,10 +148,10 @@ rate_limits:
   name: Itick Rate Limits
   slug: itick-rate-limits
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 38.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 59.0
     catalog_earned_first_party: 24.0
     catalog_gap: 56.0
@@ -161,9 +163,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 40.0
+  previous_composite: 38.7
   provenance:
     conformance: derived
     mcp: first-party
@@ -172,14 +174,15 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/screenshots/itick-2026-10-11T105904.png
 security:
 - kind: authentication
   name: Itick Authentication
@@ -194,8 +197,8 @@ tags:
 - Financial Data
 - Market Data
 - Stocks
-- Forex
-- Crypto
+- Foreign Exchange
+- Cryptocurrency
 - Indices
 - Futures
 - Fund

@@ -35,8 +35,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
-api_count: 17
+  scored_at: '2026-10-17'
+api_count: 18
 apis:
 - description: RESTful JSON API returning Zillow property, rental and foreclosure Zestimates for approximately 100 million US properties. Zillow Group documents it on its own developer portal and routes the referenc
   name: Zillow Zestimate API
@@ -89,16 +89,28 @@ apis:
 - description: Aggregate neighborhood-level housing statistics from Zillow, listed on the Zillow Group developer portal but delivered as free CSV downloads through the Zillow Research data portal rather than as a ke
   name: Zillow Neighborhood Data
   slug: neighborhood-data
-artifact_total: 24
+- description: Bridge Interactive is Zillow Group's RESO-compliant data distribution platform for MLSs, brokers, and approved vendors. It exposes a RESO Web API (OData-based) for searching listings, members, offices
+  name: Bridge Interactive API
+  slug: bridge-interactive-api
+artifact_total: 25
 asyncapis:
 - description: ''
   name: Zillow Group Webhooks
   slug: zillow-group-webhooks
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/zillow-group/refs/heads/main/finops/zillow-group-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/zillow-group-finops.yml
 - group: company
   title: ''
   type: Website
   url: https://www.zillowgroup.com/
+- group: company
+  title: ''
+  type: Website
+  url: https://www.zillow.com/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zillow-group/refs/heads/main/security/zillow-group-domain-security.yml
   title: ''
@@ -194,25 +206,37 @@ common:
   title: ''
   type: Support
   url: https://help.zillowrentalmanager.com/hc/en-us
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.zillow.com/blog/
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/zillowgroup
 created: '2025-03-01'
 description: Zillow Group is a leading real estate and rental marketplace that aims to make the process of buying, selling, and renting homes more streamlined and efficient. The company offers a wide range of services, including an online platform where users can search for properties, view listings, and connect with real estate agents. Zillow Group also provides tools and resources for homeowners, such as Zestimate, an automated valuation model that estimates the market value of a property.
 finops:
-- name: Zillow Group Finops
+- has_sources: false
+  method: generated
+  name: Zillow Group Finops
+  primary_unit: ''
   service_category: API
   slug: zillow-group-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zillow-group.png
 layout: provider
 modified: '2026-08-28'
 name: Zillow Group
 nav: Providers
 network: true
-overview: 'Zillow Group publishes 17 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Property Data, MLS, Mortgage, and Rentals.
+overview: 'Zillow Group is listed with 18 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Property Data, MLS, Mortgage, and Rentals.
 
 
   The Zillow Group catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Zillow Group''s developer surface includes engineering blog, documentation, API reference, authentication, support, and 17 more developer resources.'
+  Zillow Group''s developer surface includes engineering blog, documentation, API reference, authentication, support, and 21 more developer resources.'
 plans:
 - name: Zillow Group Plans Pricing
   plan_count: 0
@@ -224,28 +248,34 @@ rate_limits:
   slug: zillow-group-rate-limits
 score:
   band: developing
-  composite: 41.3
+  composite: 41.1
   coverage:
     artifact_dirs: 16
-    catalog_earned: 38.0
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 42.1
+    access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 45.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 21.1
-  previous_composite: 41.3
+  previous_composite: 42.6
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -267,7 +297,7 @@ security:
   summary_line: Bugcrowd
 slug: zillow-group
 tags:
-- Real-Estate
+- Real Estate
 - Property Data
 - MLS
 - Mortgage
@@ -275,5 +305,8 @@ tags:
 - Valuation
 - Housing Data
 - Transaction Management
+- Listings
+- RESO
+- IDX
 website: https://www.zillowgroup.com/
 ---

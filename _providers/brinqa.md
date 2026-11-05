@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: GraphQL API for the Brinqa Platform. Query assets, findings, hosts, tickets, and vulnerabilities using GraphQL and the Brinqa Query Language (BQL). Bearer-token authentication; the endpoint is per-ten
@@ -42,6 +42,10 @@ apis:
   slug: brinqa-platform-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.brinqa.com/feed.xml
 - group: company
   title: ''
   type: Website
@@ -111,18 +115,18 @@ created: '2026-07-17'
 description: Brinqa is an AI-powered vulnerability and exposure management platform that unifies cyber risk data from across an enterprise's security tools into a single trusted data model. It ingests and correlates exposure findings from scanners and connectors, deduplicates them, and applies risk scoring, custom risk factors, and workflow automation to prioritize and drive remediation. The Brinqa Platform exposes a GraphQL API and the Brinqa Query Language (BQL) for traversing an entity-relationship graph of assets, findings, hosts, tickets, and vulnerabilities, plus reporting and dashboards on those datasets. This API Evangelist profile was seeded from an Insight Partners portfolio lead and enriched from Brinqa's public developer documentation.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brinqa.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Brinqa
 nav: Providers
 network: true
-overview: 'Brinqa publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Vulnerability Management, Exposure Management, and Cyber Risk.
+overview: 'Brinqa is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Vulnerability Management, Exposure Management, and Cyber Risk.
 
 
-  Brinqa''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 9 more developer resources.'
+  Brinqa''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 10 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 21.2
+  composite: 21.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -136,11 +140,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 56.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

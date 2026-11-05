@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 26.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -79,7 +79,7 @@ apis:
   description: Translate a video into other languages with optional lip-sync.
   name: Akool Video Translation API
   slug: akool-video-translation-api
-artifact_total: 21
+artifact_total: 22
 collections:
 - collection_type: open
   name: API Collection
@@ -157,16 +157,24 @@ common:
 created: '2026-07-11'
 description: Akool is a generative AI platform for video and imagery - talking avatars, talking photos, face swap, video translation with lip-sync, background change, image generation, and a real-time streaming (live) avatar product. The Akool OpenAPI exposes these tools as an HTTPS REST API under https://openapi.akool.com, authenticated with a Bearer token minted from a clientId / clientSecret pair (or a direct x-api-key). Generation is asynchronous - callers create a task, then poll by id or receive an encrypted webhook callback when the task completes. The Live Avatar product opens a real-time session whose media is carried over a third-party WebRTC transport (Agora, LiveKit, or TRTC).
 finops:
-- name: Akool Finops
+- has_sources: true
+  method: generated
+  name: Akool Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: akool-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akool.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at openapi.akool.com over HTTP; 25 tools listed.
+  name: Akool MCP Server
+  slug: akool
 modified: '2026-07-11'
 name: Akool
 nav: Providers
 network: true
-overview: 'Akool publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Face Swap API, Image Generation API, and 4 more. Tagged areas include AI Avatars, Video Generation, AI Video, Face Swap, and Generative AI.
+overview: 'Akool is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Face Swap API, Image Generation API, and 4 more. Tagged areas include AI Avatars, Video Generation, AI Video, Face Swap, and Generative AI.
 
 
   Akool''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
@@ -180,24 +188,24 @@ rate_limits:
   name: Akool Rate Limits
   slug: akool-rate-limits
 score:
-  band: thin
-  composite: 28.9
+  band: emerging
+  composite: 17.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 67.0
+    artifact_dirs: 12
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.7
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 13.6
     developer_ergonomics: 32.1
-    discoverability: 74.1
-    operational_transparency: 34.2
-  previous_composite: 28.9
+    discoverability: 73.3
+    operational_transparency: 10.5
+  previous_composite: 26.2
   provenance:
     agentic_access: derived
     contracts:
@@ -206,9 +214,15 @@ score:
       marker_coverage: 100.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 5.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

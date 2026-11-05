@@ -32,14 +32,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Historical partner/owner REST API used by fleet-management integrators (CarSync, FleetWire, Kitts) to sync bookings onto external calendars, block vehicle availability, generate invoices for professio
   name: Getaround Owner API
+  provenance: modeled
   slug: getaround-owner-api
 - description: Native iOS (Objective-C) SDK for the Getaround Connect smart-lock hardware fitted to shared vehicles - discovers nearby Connect devices over Bluetooth LE and issues lock/unlock commands via BlueforceC
   name: Getaround Connect Blueforce SDK
+  provenance: modeled
   slug: getaround-connect-blueforce-sdk
 artifact_total: 4
 common:
@@ -134,14 +136,14 @@ modified: '2026-08-08'
 name: Getaround
 nav: Providers
 network: true
-overview: 'Getaround publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Car Sharing, Mobility, Connected Car, Fleet Management, and Peer-to-Peer.
+overview: 'Getaround is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Car Sharing, Mobility, Connected Vehicles, Fleet Management, and Peer-to-Peer.
 
 
   Getaround''s developer surface includes documentation, engineering blog, and 18 more developer resources.'
 random_paper: 1
 score:
   band: minimal
-  composite: 10.1
+  composite: 0.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -154,12 +156,19 @@ score:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
-    discoverability: 59.3
-    operational_transparency: 2.6
-  previous_composite: 10.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -179,9 +188,10 @@ slug: getaround
 tags:
 - Car Sharing
 - Mobility
-- Connected Car
+- Connected Vehicles
 - Fleet Management
 - Peer-to-Peer
 - Discontinued
+- Defunct
 website: https://getaround.com
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The OpenID Connect / OAuth 2.0 identity provider behind Good Energy''s customer hub at account.goodenergy.co.uk. It is NOT a developer-facing API and Good Energy publishes no documentation for it — it '
@@ -143,7 +143,7 @@ modified: '2026-07-27'
 name: Good Energy
 nav: Providers
 network: true
-overview: 'Good Energy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
+overview: 'Good Energy is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
 
 
   Good Energy''s developer surface includes engineering blog, authentication, pricing, signup flow, support, and 16 more developer resources.'
@@ -154,8 +154,8 @@ scopes:
   slug: good-energy-scopes
   summary_line: 6 scopes · authorizationCode/clientCredentials/implicit/deviceCode/ciba
 score:
-  band: thin
-  composite: 29.1
+  band: emerging
+  composite: 25.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -169,7 +169,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -179,7 +179,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 29.1
+  previous_composite: 25.9
   provenance:
     conformance: derived
   regulatory:
@@ -187,9 +187,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 64.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -37,15 +37,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 73
+- acting_count: 72
   human_in_the_loop: 2
   name: Shortcut Software Agentic Access
   operation_count: 143
   slug: shortcut-software-agentic-access
-  summary_line: 143 operations · 73 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 143 operations · 72 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://api.app.shortcut.com
   baseurl_source: declared
@@ -332,6 +332,24 @@ collections:
   name: Shortcut Categories Workflows API
   slug: open-shortcut-software-workflows-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/shortcut-software/refs/heads/main/rate-limits/shortcut-software-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/shortcut-software-rate-limits.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.shortcut.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.shortcut.com/blog/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/shortcut-software/refs/heads/main/capabilities/shortcut-software-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/shortcut-software-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -510,20 +528,20 @@ description: Shortcut (formerly Clubhouse, renamed 2021) is a fast, lightweight 
 image: https://www.shortcut.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.shortcut.com over HTTP requiring OAuth.
   name: Shortcut Software MCP Server
-  slug: shortcut-software-mcp-server
-modified: '2026-07-21'
+  slug: shortcut
+modified: '2026-10-06'
 name: Shortcut Software
 nav: Providers
 network: true
-overview: 'Shortcut Software publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Categories API, Custom Fields API, Documents API, and 22 more. Tagged areas include Company, Project Management, Issue Tracking, Agile, and Developer Tools.
+overview: 'Shortcut Software publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Custom Fields API, Documents API, and 22 more. Tagged areas include Company, Project Management, Issue Tracking, Agile, and Developer Tools.
 
 
   The Shortcut Software catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Shortcut Software''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
+  Shortcut Software''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 35 more developer resources.'
 random_paper: 8
 rate_limits:
 - limit_count: 1
@@ -536,23 +554,23 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: strong
-  composite: 58.1
+  composite: 61.2
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 26
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 64.2
+    contract_quality: 59.0
     developer_ergonomics: 50.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 81.6
-  previous_composite: 58.1
+  previous_composite: 61.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -563,8 +581,20 @@ score:
       total: 25
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

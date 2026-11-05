@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://vetic.in/blog/feed/
 - group: company
   title: ''
   type: Website
@@ -85,18 +89,18 @@ created: '2026-07-17'
 description: Vetic is a pet healthcare company in India operating a chain of full-service veterinary clinics and hospitals across 11 cities, paired with a consumer mobile app. Founded by Gaurav Ajmera (ex-COO OYO), Vetic offers in-clinic vet consultations, vaccinations, in-house diagnostics (blood work, X-ray, imaging, endoscopy), surgery, physiotherapy, 24/7 emergency and intensive care, grooming, an in-house pharmacy, pet supplies, pet insurance, video vet consultations, digital medical records, and 2-hour pet food delivery. It is a consumer (B2C) business with no public developer API surface at this time; this profile captures its public web and app footprint.
 image: https://vetic-img.s3.ap-south-1.amazonaws.com/quick_commerce//misc/Home+Page.jpg
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Vetic
 nav: Providers
 network: true
 overview: 'Vetic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Pet Care, Veterinary, and Pet Healthcare.
 
 
-  Vetic''s developer surface includes engineering blog, YouTube channel, and 9 more developer resources.'
+  Vetic''s developer surface includes engineering blog, YouTube channel, and 10 more developer resources.'
 random_paper: 11
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -110,7 +114,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -119,15 +123,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 9.5
+  previous_composite: 9.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
@@ -76,14 +76,14 @@ modified: '2026-07-19'
 name: Haven Connect
 nav: Providers
 network: true
-overview: 'Haven Connect is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Affordable Housing, Property Management, PropTech, and Real-Estate.
+overview: 'Haven Connect is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Affordable Housing, Property Management, PropTech, and Real Estate.
 
 
   Haven Connect''s developer surface includes signup flow, support, pricing, and 5 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 13.9
+  composite: 12.7
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -91,13 +91,13 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -105,9 +105,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 13.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -120,7 +126,7 @@ tags:
 - Affordable Housing
 - Property Management
 - PropTech
-- Real-Estate
+- Real Estate
 - Housing
 - Waitlist Management
 - Software-as-a-Service

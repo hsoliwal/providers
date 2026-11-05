@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.1
-  scored_at: '2026-09-20'
+  score: 18.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 24
+- acting_count: 16
   human_in_the_loop: 0
   name: Amazon Billing And Cost Management Agentic Access
   operation_count: 24
   slug: amazon-billing-and-cost-management-agentic-access
-  summary_line: 24 operations · 24 acting
+  summary_line: 24 operations · 16 acting
 api_count: 2
 apis:
 - description: The AWS Price List API allows programmatic querying of AWS service pricing information in JSON or CSV format. Retrieve price lists for all AWS services, filter by region and attributes, and stay curre
@@ -125,6 +125,11 @@ collections:
   name: AWS Budgets Anomaly Detection Tags API
   slug: open-amazon-billing-and-cost-management-tags-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-billing-and-cost-management/refs/heads/main/capabilities/amazon-billing-and-cost-management-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-billing-and-cost-management-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/amazon-billing-and-cost-management/refs/heads/main/overlays/amazon-billing-and-cost-management-aws-budgets-api-overlay.yaml
   title: ''
@@ -267,25 +272,26 @@ jsonld:
   slug: context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at awslabs.github.io.
   name: Amazon Billing And Cost Management MCP Server
-  slug: amazon-billing-and-cost-management-mcp-server
+  slug: amazon-billing-and-cost-management-mcp-yml
 modified: '2026-06-20'
 name: Amazon Billing And Cost Management
 nav: Providers
 network: true
-overview: 'Amazon Billing And Cost Management publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Anomaly Detection API, Budget Actions API, Budgets API, and 6 more. Tagged areas include Billing, Cost Management, Cost Explorer, Budgets, and Cost Optimization.
+overview: 'Amazon Billing And Cost Management publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Anomaly Detection API, Budget Actions API, Budgets API, and 7 more. Tagged areas include Billing, Cost Management, Cost Explorer, Budgets, and Cost Optimization.
 
 
   The Amazon Billing And Cost Management catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Amazon Billing And Cost Management''s developer surface includes authentication, developer portal, developer console, documentation, pricing, FAQ, engineering blog, and 18 more developer resources.'
+  Amazon Billing And Cost Management''s developer surface includes authentication, developer portal, developer console, documentation, pricing, FAQ, engineering blog, and 19 more developer resources.'
 random_paper: 20
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Amazon Billing And Cost Management API Rules
+  name: Amazon Billing And Cost Management — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -295,23 +301,23 @@ rules:
   slug: amazon-billing-and-cost-management-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.8
+  composite: 45.0
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 53.3
+    artifact_dirs: 24
+    catalog_earned: 52.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.8
+    catalog_gap: 62.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 39.5
-    contract_governance: 29.5
-    contract_quality: 62.6
+    contract_governance: 28.0
+    contract_quality: 56.9
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 43.8
+  previous_composite: 44.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -321,8 +327,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

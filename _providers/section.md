@@ -25,17 +25,26 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 3
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.sectionai.com/pricing
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/section/refs/heads/main/plans/section-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/section-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/section/refs/heads/main/security/section-domain-security.yml
   title: ''
@@ -73,6 +82,10 @@ created: '2026-07-17'
 description: Section AI (formerly Section School) is an enterprise AI training and adoption platform that helps large organizations turn AI investment into measurable workforce transformation and ROI. Its two products are Section HQ, a command center for Heads of AI to track usage, measure "AI fitness," surface real-time insights, and manage transformation roadmaps; and Section Coach, personalized AI coaching that delivers skills training, certification programs, and workflow identification to employees and teams. Section also runs AI transformation planning, leadership coaching, AI strategy support, workflow automation, and agentic AI workshops for enterprises of 100+ employees, with customers including Johnson & Johnson, Nike, Okta, Unilever, Mercer, and Publicis. Backed by General Catalyst and led by founder Greg Shove. As of this profile the company exposes a web/app product surface (app.sectionai.com) but publishes no public developer API, OpenAPI, or documentation.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/section.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sectionai.com over HTTP.
+  name: Section AI MCP Server
+  slug: section
 modified: '2026-07-21'
 name: Section AI
 nav: Providers
@@ -80,32 +93,42 @@ network: true
 overview: 'Section AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Training, Enterprise Software, and Learning and Development.
 
 
-  Section AI''s developer surface includes engineering blog, support, signup flow, and 5 more developer resources.'
+  Section AI''s developer surface includes pricing, engineering blog, support, signup flow, and 6 more developer resources.'
+plans:
+- name: Section Plans Pricing
+  plan_count: 10
+  slug: section-plans-pricing
 random_paper: 9
 score:
   band: emerging
-  composite: 13.3
+  composite: 21.5
   coverage:
-    artifact_dirs: 6
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 7
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 8.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 76.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 13.3
+  previous_composite: 13.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

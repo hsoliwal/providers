@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 51
   human_in_the_loop: 0
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 105
   slug: inaturalist-agentic-access
   summary_line: 105 operations · 51 acting
-api_count: 1
+api_count: 2
 apis:
 - description: The next-generation iNaturalist API (v2) currently in development, designed to eventually replace v0 and v1 endpoints. Provides access to observation data with improved performance and response format
   name: iNaturalist API v2
@@ -214,6 +214,21 @@ collections:
   name: iNaturalist Annotations UTFGrid API
   slug: open-inaturalist-utfgrid-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: company
   title: ''
   type: Website
@@ -604,9 +619,13 @@ examples:
   name: Put Users Update_Session
   slug: put-users-update_session
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://static.inaturalist.org/sites/1-logo.svg
 json_schemas:
 - name: Annotation
@@ -829,13 +848,13 @@ modified: '2026-06-13'
 name: iNaturalist
 nav: Providers
 network: true
-overview: 'iNaturalist publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Annotations API, Comments API, Controlled Terms API, and 17 more. Tagged areas include Biodiversity, Nature, Citizen Science, Wildlife, and Observations.
+overview: 'iNaturalist publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Annotations API, Comments API, Controlled Terms API, and 18 more. Tagged areas include Biodiversity, Nature, Citizen Science, Wildlife, and Observations.
 
 
   The iNaturalist catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  iNaturalist''s developer surface includes authentication, developer portal, documentation, GitHub presence, engineering blog, signup flow, status page, and 10 more developer resources.'
+  iNaturalist''s developer surface includes authentication, developer portal, documentation, GitHub presence, engineering blog, signup flow, status page, and 13 more developer resources.'
 plans:
 - name: Plans
   plan_count: 1
@@ -846,9 +865,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: iNaturalist API Rules
+  name: iNaturalist — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -857,24 +877,24 @@ rules:
     warn: 4
   slug: inaturalist-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 43.8
+  band: thin
+  composite: 37.1
   coverage:
     artifact_dirs: 16
-    catalog_earned: 67.3
+    catalog_earned: 52.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.8
+    catalog_gap: 62.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 56.6
+    access_clarity: 32.9
     contract_governance: 9.8
-    contract_quality: 52.8
+    contract_quality: 48.3
     developer_ergonomics: 42.9
-    discoverability: 68.5
-    operational_transparency: 26.3
-  previous_composite: 43.8
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     contracts:
@@ -882,9 +902,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 20
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

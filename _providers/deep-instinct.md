@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Versioned REST API exposed by the Deep Instinct DSX management console (D-Appliance) at https://<your-tenant-fqdn>/api/v1. Covers devices, device groups, policies, events (including the JSON event-sea
@@ -44,7 +44,7 @@ apis:
 - description: Model Context Protocol server hosted on Deep Instinct's customer portal at https://portal.deepinstinct.com/mcp, advertised through RFC 9728 protected-resource metadata and an RFC 8414 authorization-se
   name: Deep Instinct Portal MCP Server
   slug: deep-instinct-portal-mcp-server
-artifact_total: 8
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -155,17 +155,14 @@ description: Deep Instinct is a preemptive data security company that applies a 
 image: https://www.deepinstinct.com/image/bltefff210f63a383a8/68937a472607b85c9942030a/Meta_Home_1200_x_627.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at portal.deepinstinct.com over HTTP.
   name: Deep Instinct MCP Server
-  slug: deep-instinct-mcp-server
-- description: ''
-  name: Deep Instinct MCP Server
-  slug: deep-instinct-mcp-server-2
+  slug: deep-instinct-portal
 modified: '2026-08-01'
 name: Deep Instinct
 nav: Providers
 network: true
-overview: 'Deep Instinct publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cybersecurity, Endpoint Security, malware-prevention, Ransomware, and Deep Learning.
+overview: 'Deep Instinct is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cybersecurity, Endpoint Security, malware-prevention, Ransomware, and Deep Learning.
 
 
   Deep Instinct''s developer surface includes support, engineering blog, signup flow, authentication, and 19 more developer resources.'
@@ -176,29 +173,39 @@ scopes:
   slug: deep-instinct-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 25.8
+  band: thin
+  composite: 29.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 25.8
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -227,7 +234,7 @@ tags:
 - Deep Learning
 - Threat Prevention
 - Data Security
-- EDR
+- Endpoint Detection and Response
 - SOC Automation
 - MCP
 website: https://www.deepinstinct.com/

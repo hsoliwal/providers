@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -280,7 +280,7 @@ modified: '2026-07-19'
 name: Flipturn
 nav: Providers
 network: true
-overview: 'Flipturn publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Access IDs API, Alerts API, Charger Health API, and 10 more. Tagged areas include Company, EV Charging, Electric Vehicles, Fleet Management, and Energy.
+overview: 'Flipturn publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access IDs API, Alerts API, Charger Health API, and 10 more. Tagged areas include Company, EV Charging, Electric Vehicles, Fleet Management, and Energy.
 
 
   Flipturn''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 19 more developer resources.'
@@ -291,9 +291,9 @@ rate_limits:
   slug: flipturn-rate-limits
 score:
   band: developing
-  composite: 48.6
+  composite: 46.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -305,9 +305,9 @@ score:
     contract_governance: 18.2
     contract_quality: 14.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 48.6
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -327,9 +327,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

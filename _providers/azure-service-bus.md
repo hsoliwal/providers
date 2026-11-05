@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -48,21 +48,80 @@ apis:
   baseurl_source: spec
   description: Service Bus namespace operations
   name: Azure Service Bus Namespaces API
+  phrasing_intents:
+  - id: Namespaces_List
+    intent: List all Service Bus namespaces in a subscription
+    question: Which Service Bus namespaces exist across my whole Azure subscription?
+  - id: Namespaces_ListByResourceGroup
+    intent: List namespaces in a resource group
+    question: What Service Bus namespaces are in this particular resource group?
+  - id: Namespaces_Get
+    intent: Get details of a namespace
+    question: How do I look up the configuration of one specific Service Bus namespace?
+  - id: Namespaces_CreateOrUpdate
+    intent: Create or update a Service Bus namespace
+    question: How do I provision a new Service Bus namespace in a region?
+  - id: Namespaces_Delete
+    intent: Delete a Service Bus namespace
+    question: How do I tear down a Service Bus namespace I no longer need?
+  phrasing_ops: 5
   slug: azure-service-bus-namespaces-api
 - baseURL: https://management.azure.com
   baseurl_source: spec
   description: Service Bus queue operations
   name: Azure Service Bus Queues API
+  phrasing_intents:
+  - id: Queues_ListByNamespace
+    intent: List the queues in a namespace
+    question: Which queues are defined in my Service Bus namespace?
+  - id: Queues_Get
+    intent: Get a queue's description
+    question: How do I check the settings of a single Service Bus queue?
+  - id: Queues_CreateOrUpdate
+    intent: Create or update a queue
+    question: How do I add a new queue to a Service Bus namespace?
+  - id: Queues_Delete
+    intent: Delete a queue
+    question: How do I remove a queue from a Service Bus namespace?
+  phrasing_ops: 4
   slug: azure-service-bus-queues-api
 - baseURL: https://management.azure.com
   baseurl_source: spec
   description: Service Bus topic subscription operations
   name: Azure Service Bus Subscriptions API
+  phrasing_intents:
+  - id: Subscriptions_ListByTopic
+    intent: List the subscriptions on a topic
+    question: Which subscriptions are listening on my Service Bus topic?
+  - id: Subscriptions_Get
+    intent: Get a topic subscription's description
+    question: How do I look up the settings of one subscription on a topic?
+  - id: Subscriptions_CreateOrUpdate
+    intent: Create or update a topic subscription
+    question: How do I subscribe a new consumer to a Service Bus topic?
+  - id: Subscriptions_Delete
+    intent: Delete a topic subscription
+    question: How do I stop a subscriber from receiving a topic's messages by removing its subscription?
+  phrasing_ops: 4
   slug: azure-service-bus-subscriptions-api
 - baseURL: https://management.azure.com
   baseurl_source: spec
   description: Service Bus topic operations
   name: Azure Service Bus Topics API
+  phrasing_intents:
+  - id: Topics_ListByNamespace
+    intent: List the topics in a namespace
+    question: Which topics are defined in my Service Bus namespace?
+  - id: Topics_Get
+    intent: Get a topic's description
+    question: How do I check how a single Service Bus topic is configured?
+  - id: Topics_CreateOrUpdate
+    intent: Create or update a topic
+    question: How do I add a new publish-subscribe topic to a Service Bus namespace?
+  - id: Topics_Delete
+    intent: Delete a topic
+    question: How do I remove a topic from a Service Bus namespace?
+  phrasing_ops: 4
   slug: azure-service-bus-topics-api
 - description: The management REST API enables namespace, queue, topic, and subscription configuration through Azure Resource Manager, including SKU, network rules, authorization rules, and disaster recovery configu
   name: Azure Service Bus Management REST API
@@ -71,6 +130,23 @@ apis:
   baseurl_source: declared
   description: The Messages API from Azure Service Bus — 3 operation(s) for messages.
   name: Azure Service Bus Messages API
+  phrasing_intents:
+  - id: sendMessage
+    intent: Send a message to a queue or topic
+    question: How do I post a message onto an Azure Service Bus queue over REST?
+  - id: receiveAndDelete
+    intent: Receive and delete the next queued message
+    question: How do I pull the next message off a queue and remove it in one step?
+  - id: peekLockMessage
+    intent: Peek and lock the next message for processing
+    question: How do I read the next message but keep it on the queue until I finish processing it?
+  - id: completeMessage
+    intent: Complete a peek-locked message
+    question: How do I mark a locked message as successfully processed so it leaves the queue?
+  - id: renewLock
+    intent: Renew the lock on a locked message
+    question: How do I extend the lock on a message that is taking a long time to process?
+  phrasing_ops: 5
   slug: microsoft-azure-service-bus-messages-api
 artifact_total: 66
 asyncapis:
@@ -109,6 +185,16 @@ collections:
   name: Azure Service Bus Management API
   slug: open-azure-service-bus
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/azure-service-bus/refs/heads/main/rate-limits/azure-service-bus-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/azure-service-bus-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/azure-service-bus/refs/heads/main/finops/azure-service-bus-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/azure-service-bus-finops.yml
 - group: commercial
   href: https://raw.githubusercontent.com/api-evangelist/azure-service-bus/refs/heads/main/plans/azure-service-bus-plans-pricing.yml
   title: ''
@@ -273,9 +359,13 @@ features:
 - description: Automatically forward messages from one queue or subscription to another entity for chaining processing stages.
   name: Auto-Forwarding
 finops:
-- name: Azure Service Bus Finops
+- has_sources: false
+  method: generated
+  name: Azure Service Bus Finops
+  primary_unit: ''
   service_category: API
   slug: azure-service-bus-finops
+  template: true
 image: /assets/icons/azure-service-bus.png
 integrations:
 - description: Trigger serverless functions automatically when messages arrive in queues or topic subscriptions.
@@ -344,13 +434,13 @@ modified: '2026-05-19'
 name: Azure Service Bus
 nav: Providers
 network: true
-overview: 'Azure Service Bus publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Namespaces API, Queues API, Subscriptions API, and 2 more. Tagged areas include Azure, Cloud, Enterprise, Message Broker, and Messaging.
+overview: 'Azure Service Bus publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Namespaces API, Queues API, Subscriptions API, and 3 more. Tagged areas include Microsoft Azure, Cloud, Enterprise, Message Broker, and Messaging.
 
 
   The Azure Service Bus catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Azure Service Bus'' developer surface includes support, Stack Overflow tag, authentication, developer portal, documentation, getting-started guide, pricing, and 22 more developer resources.'
+  Azure Service Bus'' developer surface includes support, Stack Overflow tag, authentication, developer portal, documentation, getting-started guide, pricing, and 24 more developer resources.'
 plans:
 - name: Azure Service Bus Plans Pricing
   plan_count: 8
@@ -361,10 +451,11 @@ rate_limits:
   name: Azure Service Bus Rate Limits
   slug: azure-service-bus-rate-limits
 rules:
-- effective_rule_count: 30
+- authorship: generated
+  effective_rule_count: 30
   extends:
   - spectral:asyncapi
-  name: Azure Service Bus API Rules
+  name: Azure Service Bus — asyncapi rules
   rule_count: 3
   severity_counts:
     error: 0
@@ -372,9 +463,10 @@ rules:
     info: 1
     warn: 2
   slug: azure-service-bus-asyncapi-spectral-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Azure Service Bus API Rules
+  name: Azure Service Bus — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -382,7 +474,8 @@ rules:
     info: 2
     warn: 3
   slug: azure-service-bus-jsonschema-spectral-rules
-- effective_rule_count: 55
+- authorship: generated
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: Azure Service Bus API Rules
@@ -399,27 +492,27 @@ scopes:
   slug: azure-service-bus-scopes
   summary_line: 1 scope · implicit
 score:
-  band: strong
-  composite: 65.8
+  band: exemplar
+  composite: 66.6
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 65.5
+    artifact_dirs: 23
+    catalog_earned: 61.9
     catalog_earned_first_party: 12.0
-    catalog_gap: 49.5
+    catalog_gap: 53.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: -1.4
   facets:
-    access_clarity: 71.1
+    access_clarity: 63.2
     contract_governance: 13.6
-    contract_quality: 68.5
+    contract_quality: 62.8
     developer_ergonomics: 65.5
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 52.6
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 61.5
+  previous_composite: 68.0
   provenance:
     agentic_access: derived
     contracts:
@@ -427,8 +520,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -449,13 +548,14 @@ security:
   summary_line: security.txt · contact published
 slug: azure-service-bus
 tags:
-- Azure
+- Microsoft Azure
 - Cloud
 - Enterprise
 - Message Broker
 - Messaging
-- Pub-Sub
+- Pub/Sub
 - Queues
+- Real-Time
 use_cases:
 - description: Decouple microservices and distributed applications using asynchronous messaging for independent scaling and deployment.
   name: Application Decoupling

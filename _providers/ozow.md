@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,19 +24,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 2
@@ -266,16 +266,20 @@ common:
 created: '2026-07-17'
 description: Ozow (formerly i-Pay) is a South African fintech providing an instant EFT / "Pay by Bank" payment gateway. Merchants create a server-side payment request, redirect the customer to the Ozow secure bank-selection flow, and reconcile via a server-to-server notification. The REST API is ZAR-only (CountryCode ZA), authenticated with an ApiKey header and a SHA512 HashCheck built from a merchant PrivateKey.
 finops:
-- name: Ozow Finops
+- has_sources: true
+  method: generated
+  name: Ozow Finops
+  primary_unit: ''
   service_category: Payment Processing
   slug: ozow-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ozow.png
 layout: provider
 modified: '2026-07-17'
 name: Ozow
 nav: Providers
 network: true
-overview: 'Ozow publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Banks API, Payments API, Refunds API, and 1 more. Tagged areas include Payments, Instant EFT, Pay by Bank, Fintech, and South Africa.
+overview: 'Ozow publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banks API, Payments API, Refunds API, and 1 more. Tagged areas include Payments, Instant EFT, Pay by Bank, Fintech, and South Africa.
 
 
   The Ozow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -292,23 +296,23 @@ rate_limits:
   name: Ozow Rate Limits
   slug: ozow-rate-limits
 score:
-  band: strong
-  composite: 56.2
+  band: developing
+  composite: 45.4
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 56.0
+    artifact_dirs: 27
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 76.3
+    access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 61.7
+    contract_quality: 56.4
     developer_ergonomics: 36.3
-    discoverability: 75.9
-    operational_transparency: 28.9
+    discoverability: 73.2
+    operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -316,7 +320,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 56.2
+  previous_composite: 51.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -332,10 +336,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 39.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

@@ -25,20 +25,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Data API delivering a constant feed of UK residential property data across Planning & Policy, Demographics, Market, Land & Ownership, and Amenities endpoints. Onboarded via the REalyse sales team; no '
   name: REalyse Data API
   slug: realyse-data-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/realyse/refs/heads/main/security/realyse-domain-security.yml
@@ -85,18 +85,22 @@ created: '2026-07-17'
 description: REalyse is a UK residential property data platform that aggregates more than 100 data sources into geospatial analysis and market-intelligence tools for developers, lenders, investors, consultants, and funds. Its data spans five domains — Planning & Policy, Demographics, Market (rental and sales pricing, yields, days on market, comparables), Land & Ownership, and Amenities. REalyse offers a data API for institutions that require a constant feed of property data, alongside the REalyse Core geospatial platform, the REalyse Pulse consumer AI valuation product, and downloadable Market Intelligence reports. The company is based in London and is backed by Anthemis. API access is onboarded through the sales team rather than a self-service developer portal, so no public OpenAPI, base URL, or authentication reference is published.
 image: https://www.realyse.com
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.realyse.com over HTTP.
+  name: REalyse MCP Server
+  slug: realyse
 modified: '2026-07-20'
 name: REalyse
 nav: Providers
 network: true
-overview: 'REalyse publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Property, Real-Estate, Data, and Analytics.
+overview: 'REalyse is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Property, Real Estate, Data, and Analytics.
 
 
   REalyse''s developer surface includes documentation, API reference, signup flow, and 7 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 18.0
+  composite: 17.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -104,13 +108,13 @@ score:
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -120,11 +124,17 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 18.0
+  previous_composite: 17.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +150,7 @@ slug: realyse
 tags:
 - Company
 - Property
-- Real-Estate
+- Real Estate
 - Data
 - Analytics
 - Geospatial

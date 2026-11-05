@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 23.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.workwelltech.com
@@ -111,14 +111,14 @@ modified: '2026-07-21'
 name: Workwell Technologies
 nav: Providers
 network: true
-overview: 'Workwell Technologies publishes 3 APIs on the [APIs.io](https://apis.io/) network: Punch Reports API, Timecards API, and Users API. Tagged areas include Company, Workforce Management, Time Tracking, Attendance, and Payroll.
+overview: 'Workwell Technologies publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Punch Reports API, Timecards API, and Users API. Tagged areas include Company, Workforce Management, Time Tracking, Attendance, and Payroll.
 
 
   Workwell Technologies'' developer surface includes documentation, API reference, support, engineering blog, and 5 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 16.2
+  composite: 13.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -132,9 +132,9 @@ score:
     contract_governance: 0.0
     contract_quality: 15.0
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 16.2
+  previous_composite: 13.1
   provenance:
     contracts:
       callable: 100.0
@@ -142,8 +142,14 @@ score:
       marker_coverage: 100.0
       total: 3
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Merit Systems Protection Board protects federal merit systems and safeguards the rights of federal employees against prohibited personnel practices under 5 U.S.C. 2301(b).
@@ -41,6 +41,21 @@ apis:
   slug: merit-systems-protection-board
 artifact_total: 6
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/merit-systems-protection-board/refs/heads/main/plans/merit-systems-protection-board-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/merit-systems-protection-board-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/merit-systems-protection-board/refs/heads/main/rate-limits/merit-systems-protection-board-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/merit-systems-protection-board-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/merit-systems-protection-board/refs/heads/main/finops/merit-systems-protection-board-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/merit-systems-protection-board-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/merit-systems-protection-board/refs/heads/main/security/merit-systems-protection-board-vulnerability-disclosure.yml
   title: ''
@@ -54,16 +69,20 @@ common:
 created: '2024-12-03'
 description: The Merit Systems Protection Board (MSPB) is an independent quasi-judicial agency that protects federal merit systems against partisan political and other prohibited personnel practices. It safeguards the rights of federal employees and adjudicates employee appeals.
 finops:
-- name: Merit Systems Protection Board Finops
+- has_sources: false
+  method: generated
+  name: Merit Systems Protection Board Finops
+  primary_unit: ''
   service_category: API
   slug: merit-systems-protection-board-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/merit-systems-protection-board.png
 layout: provider
 modified: '2026-04-28'
 name: Merit Systems Protection Board
 nav: Providers
 network: true
-overview: Merit Systems Protection Board publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Civil Service, Employment, Federal-Government, and Government.
+overview: Merit Systems Protection Board is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Civil Service, Employment, Federal Government, and Government.
 plans:
 - name: Merit Systems Protection Board Plans Pricing
   plan_count: 3
@@ -75,31 +94,36 @@ rate_limits:
   slug: merit-systems-protection-board-rate-limits
 score:
   band: minimal
-  composite: 9.3
+  composite: 7.2
   coverage:
-    artifact_dirs: 5
-    catalog_earned: 36.0
+    artifact_dirs: 6
+    catalog_earned: 33.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 82.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 9.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 8.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -114,11 +138,11 @@ security:
 - kind: vulnerability-disclosure
   name: Merit Systems Protection Board Vulnerability Disclosure
   slug: merit-systems-protection-board-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: merit-systems-protection-board
 tags:
 - Civil Service
 - Employment
-- Federal-Government
+- Federal Government
 - Government
 ---

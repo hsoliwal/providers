@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 22.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -183,6 +183,21 @@ collections:
   name: Shell B2B Mobility Accounts Transactions API
   slug: open-shell-transactions-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/shell/refs/heads/main/plans/shell-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/shell-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/shell/refs/heads/main/rate-limits/shell-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/shell-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/shell/refs/heads/main/finops/shell-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/shell-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/shell/refs/heads/main/capabilities/shell-capability-edges.yml
   title: ''
@@ -281,9 +296,13 @@ examples:
   name: Shell List Transactions Example
   slug: shell-list-transactions-example
 finops:
-- name: Shell Finops
+- has_sources: true
+  method: generated
+  name: Shell Finops
+  primary_unit: ''
   service_category: Energy / Mobility B2B
   slug: shell-finops
+  template: false
 image: https://www.shell.com/etc/designs/shell/clientlib-main/img/shell-logo.png
 json_schemas:
 - name: AccountEnrollRequest
@@ -396,13 +415,13 @@ modified: '2026-05-19'
 name: Shell
 nav: Providers
 network: true
-overview: 'Shell publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Cards API, Catalogue API, and 8 more. Tagged areas include Aviation, Electric Vehicle Charging, Energy, Fleet Management, and Fuel.
+overview: 'Shell publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Cards API, Catalogue API, and 9 more. Tagged areas include Aviation, EV Charging, Energy, Fleet Management, and Fuel.
 
 
   The Shell catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Shell''s developer surface includes authentication, getting-started guide, support, engineering blog, and 17 more developer resources.'
+  Shell''s developer surface includes authentication, getting-started guide, support, engineering blog, and 20 more developer resources.'
 plans:
 - name: Shell Plans Pricing
   plan_count: 1
@@ -413,9 +432,10 @@ rate_limits:
   name: Shell Rate Limits
   slug: shell-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Shell API Rules
+  name: Shell — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -423,7 +443,8 @@ rules:
     info: 2
     warn: 3
   slug: shell-jsonschema-spectral-rules
-- effective_rule_count: 54
+- authorship: unmarked
+  effective_rule_count: 54
   extends:
   - spectral:oas
   name: Shell API Rules
@@ -440,24 +461,24 @@ scopes:
   slug: shell-scopes
   summary_line: 9 scopes · clientCredentials
 score:
-  band: strong
-  composite: 55.3
+  band: developing
+  composite: 49.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 72.5
+    artifact_dirs: 21
+    catalog_earned: 68.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 42.5
+    catalog_gap: 47.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 34.2
-    contract_governance: 28.8
-    contract_quality: 68.6
+    access_clarity: 26.3
+    contract_governance: 27.3
+    contract_quality: 62.8
     developer_ergonomics: 51.2
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 55.3
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     contracts:
@@ -470,9 +491,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -490,14 +511,13 @@ security:
 slug: shell
 tags:
 - Aviation
-- Electric Vehicle Charging
+- EV Charging
 - Energy
 - Fleet Management
 - Fuel
 - Gas
 - Loyalty
 - Lubricants
-- Mobility
 - Oil and Gas
 - Renewable Energy
 website: https://www.shell.com

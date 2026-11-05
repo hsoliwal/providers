@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://fyld.ai/resources/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/fyld/refs/heads/main/security/fyld-domain-security.yml
   title: ''
@@ -74,18 +78,18 @@ created: '2026-07-17'
 description: FYLD is an AI-native frontline intelligence platform for the global critical-infrastructure sector, turning field-operations data into real-time, structured intelligence for utilities, energy, and heavy-civils operators. Its products include the FYLD Platform for work execution, FYLD Control Room for remote supervision, and FYLD ShowMe for customer self-service reporting, serving managers, fieldworkers, contractors, and civil engineers via web and mobile (iOS and Android) apps. FYLD is a Partech portfolio company. As of this profile FYLD publishes no public developer API, SDKs, or developer portal; integration is delivered through partnerships such as Procore, and this record captures its public identity, security, and trust surface.
 image: https://fyld.ai/hubfs/FYLD%20Website%20-%20Featured%20Image.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: FYLD
 nav: Providers
 network: true
 overview: 'FYLD is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Industrial, Energy & Iot, Field Operations, Utilities, and Energy.
 
 
-  FYLD''s developer surface includes support, engineering blog, and 6 more developer resources.'
+  FYLD''s developer surface includes support, engineering blog, and 7 more developer resources.'
 random_paper: 13
 score:
   band: emerging
-  composite: 13.1
+  composite: 12.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -99,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 13.1
+  previous_composite: 12.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 25.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

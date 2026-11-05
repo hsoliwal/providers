@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
@@ -48,14 +48,14 @@ modified: '2026-04-28'
 name: NIO
 nav: Providers
 network: true
-overview: 'NIO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Automotive, Connected Car, Electric Vehicles, and NIO.
+overview: 'NIO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Automotive, Connected Vehicles, Electric Vehicles, and NIO.
 
 
   NIO''s developer surface includes engineering blog.'
 random_paper: 18
 score:
   band: minimal
-  composite: 4.6
+  composite: 2.1
   coverage:
     artifact_dirs: 3
     catalog_earned: 22.0
@@ -69,8 +69,13 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
     owner: catalog
@@ -79,9 +84,15 @@ score:
       reason: no_resolvable_host
     - owner: catalog
       reason: never_enriched
-  previous_composite: 4.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 2.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -91,7 +102,7 @@ screenshot: https://raw.githubusercontent.com/api-evangelist/nio/refs/heads/main
 slug: nio
 tags:
 - Automotive
-- Connected Car
+- Connected Vehicles
 - Electric Vehicles
 - NIO
 ---

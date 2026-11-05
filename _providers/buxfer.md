@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://www.buxfer.com/api
@@ -83,6 +83,10 @@ collections:
   name: Buxfer Accounts Transactions API
   slug: open-buxfer-transactions-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.buxfer.com/feed/
 - group: company
   title: ''
   type: Website
@@ -200,20 +204,20 @@ created: '2026-07-17'
 description: Buxfer is a personal finance and money management platform that consolidates bank, investment and retirement accounts in one place. It connects to 20,000+ banks across 70+ countries, tracks assets in 100+ currencies, and provides budgeting with real-time alerts, expense forecasting, net-worth projection, automatic transaction tagging with custom rules, investment and retirement planning, shared-expense groups, and encrypted cloud backups to Dropbox, Google Drive or OneDrive. Buxfer exposes a JSON HTTP API for reading accounts, transactions, tags, budgets, reminders, groups, contacts and loans, and for creating, editing and deleting transactions and uploading statements. Authentication uses a login call that returns an ephemeral token passed on every subsequent request. Buxfer is a Y Combinator company.
 image: https://www.buxfer.com/favicon.ico
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Buxfer
 nav: Providers
 network: true
-overview: 'Buxfer publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Organization API, and 2 more. Tagged areas include Company, Personal Finance, Money Management, Budgeting, and Banking.
+overview: 'Buxfer publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Organization API, and 2 more. Tagged areas include Company, Personal Finance, Money Management, Budgeting, and Banking.
 
 
-  Buxfer''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 18 more developer resources.'
+  Buxfer''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
 random_paper: 14
 score:
   band: thin
-  composite: 33.3
+  composite: 32.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -225,9 +229,9 @@ score:
     contract_governance: 4.5
     contract_quality: 13.5
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 33.3
+  previous_composite: 32.5
   provenance:
     conformance: derived
     contracts:
@@ -242,9 +246,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

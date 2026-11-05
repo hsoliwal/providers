@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.5
-  scored_at: '2026-09-20'
+  score: 29.3
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 525
+- acting_count: 524
   human_in_the_loop: 15
   name: Mist Agentic Access
   operation_count: 1050
   slug: mist-agentic-access
-  summary_line: 1050 operations · 525 acting · 15 human-in-the-loop
+  summary_line: 1050 operations · 524 acting · 15 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.mist.com/api/v1
@@ -1908,7 +1908,7 @@ modified: '2026-09-16'
 name: Mist
 nav: Providers
 network: true
-overview: 'Mist publishes 212 APIs on the [APIs.io](https://apis.io/) network, including Admins API, Admins Login API, Admins Login - OAuth2 API, and 209 more. Tagged areas include Company, Networking, Wireless, Wi-Fi, and Cloud Management.
+overview: 'Mist publishes 212 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admins API, Admins Login API, Admins Login - OAuth2 API, and 209 more. Tagged areas include Company, Networking, Wireless, Wi-Fi, and Cloud Management.
 
 
   The Mist catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -1929,23 +1929,23 @@ rate_limits:
   slug: mist-rate-limits
 score:
   band: strong
-  composite: 59.0
+  composite: 60.2
   coverage:
     artifact_dirs: 21
-    catalog_earned: 44.0
+    catalog_earned: 57.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 71.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.4
+  delta: 0.0
   facets:
     access_clarity: 59.2
     contract_governance: 4.5
-    contract_quality: 69.1
+    contract_quality: 63.2
     developer_ergonomics: 61.3
-    discoverability: 51.9
+    discoverability: 73.2
     operational_transparency: 71.1
-  previous_composite: 50.6
+  previous_composite: 60.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1956,9 +1956,15 @@ score:
       total: 212
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 33.3

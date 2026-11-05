@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: 'Multi-modal MaaS API for Unisound U2 models: OpenAI-compatible chat completions and Anthropic-compatible messages for the U2 and U2-Med LLMs (streaming, function calling, structured output, context ca'
@@ -51,6 +51,10 @@ apis:
   slug: unisound-ai-open-platform-speech-webapi
 artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.unisound.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/unisound/refs/heads/main/security/unisound-domain-security.yml
   title: ''
@@ -172,14 +176,14 @@ created: '2026-07-17'
 description: Unisound (云知声) is a Chinese AGI technology company delivering conversational AI across smart living and smart healthcare. Its Token Hub MaaS platform exposes OpenAI- and Anthropic-compatible APIs for the Unisound U2 agent-native large language model and U2-Med medical model, plus U2-ASR speech transcription, U2-TTS synthesis and voice cloning, voiceprint, and U1-OCR document parsing services, alongside the legacy AI Open Platform WebSocket speech APIs and the Shanhai (UniGPT) LLM WebAPI.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unisound.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Unisound
 nav: Providers
 network: true
-overview: 'Unisound publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Speech Recognition, Text-to-Speech, and Voice Cloning.
+overview: 'Unisound is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Speech Recognition, Text-to-Speech, and Voice Cloning.
 
 
-  Unisound''s developer surface includes documentation, API reference, getting-started guide, pricing, support, signup flow, changelog, and 19 more developer resources.'
+  Unisound''s developer surface includes documentation, API reference, getting-started guide, pricing, support, signup flow, changelog, and 20 more developer resources.'
 plans:
 - name: Unisound Plans
   plan_count: 3
@@ -191,9 +195,9 @@ rate_limits:
   slug: unisound-rate-limits
 score:
   band: developing
-  composite: 47.0
+  composite: 45.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 64.0
     catalog_earned_first_party: 24.0
     catalog_gap: 51.0
@@ -205,9 +209,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 50.0
-  previous_composite: 47.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 45.8
   provenance:
     conformance: first-party
   regulatory:
@@ -215,9 +224,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -243,7 +252,7 @@ tags:
 - LLM
 - OCR
 - Healthcare
-- Machine-Learning
+- Machine Learning
 - Voice
 website: https://www.unisound.com
 ---

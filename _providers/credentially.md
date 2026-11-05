@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.2
-  scored_at: '2026-09-20'
+  score: 35.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 1
@@ -376,7 +376,7 @@ modified: '2026-07-18'
 name: Credentially
 nav: Providers
 network: true
-overview: 'Credentially publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Compliance-packages API, DBS API, Dictionary API, and 18 more. Tagged areas include Healthcare, Credentialing, Compliance, Onboarding, and Workforce.
+overview: 'Credentially publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Compliance-packages API, DBS API, Dictionary API, and 18 more. Tagged areas include Healthcare, Credentialing, Compliance, Onboarding, and Workforce.
 
 
   The Credentially catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -389,8 +389,8 @@ plans:
   slug: credentially-plans-pricing
 random_paper: 4
 score:
-  band: strong
-  composite: 55.8
+  band: developing
+  composite: 52.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -402,11 +402,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 67.7
+    contract_quality: 62.1
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 55.8
+  previous_composite: 52.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -426,9 +426,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

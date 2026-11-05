@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.championsoncology.com/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/champions-oncology/refs/heads/main/security/champions-oncology-domain-security.yml
   title: ''
@@ -86,18 +90,18 @@ created: '2026-07-17'
 description: 'Champions Oncology (NASDAQ: CSBR) is a global preclinical and clinical oncology contract research organization (CRO) supporting pharmaceutical and biotech drug development from discovery through the clinic. It maintains a living bank of more than 1,400 patient-derived tumor models and primary hematological models, and offers proprietary in vivo and ex vivo platforms, next-generation sequencing (WES/RNASeq), quantitative and phospho-proteomics, flow cytometry, and other analytical assays. Its Lumin Bioinformatics platform is an integrated, no-code analytics and visualization solution built on precisely curated multi-omics oncology data assembled from over 12,000 cancer patients, exposing gene networks, molecular signatures, target discovery, and AI-driven predictive analytics to researchers. Champions was surfaced as a portfolio company of Battery Ventures and added to the API Evangelist network.'
 image: https://www.championsoncology.com/hs-fs/hubfs/Champions_Logo_New_White.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Champions Oncology
 nav: Providers
 network: true
 overview: 'Champions Oncology is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Oncology, Cancer Research, Bioinformatics, and Contract Research Organization.
 
 
-  Champions Oncology''s developer surface includes documentation, getting-started guide, engineering blog, support, and 7 more developer resources.'
+  Champions Oncology''s developer surface includes documentation, getting-started guide, engineering blog, support, and 8 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 17.1
+  composite: 16.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -111,17 +115,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 17.1
+  previous_composite: 16.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

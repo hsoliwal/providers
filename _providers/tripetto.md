@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -49,17 +49,17 @@ apis:
   name: Tripetto Webhooks
   slug: tripetto-webhooks
 - baseURL: https://tripetto.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Create and manage form definitions
   name: Tripetto Forms API
   slug: tripetto-forms-api
 - baseURL: https://tripetto.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Access collected form response data
   name: Tripetto Responses API
   slug: tripetto-responses-api
 - baseURL: https://tripetto.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Configure outbound webhook integrations
   name: Tripetto Webhooks API
   slug: tripetto-webhooks-api
@@ -90,6 +90,21 @@ collections:
   name: Tripetto FormBuilder SDK Forms Webhooks API
   slug: open-tripetto-webhooks-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tripetto/refs/heads/main/plans/tripetto-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tripetto-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tripetto/refs/heads/main/rate-limits/tripetto-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tripetto-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tripetto/refs/heads/main/finops/tripetto-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tripetto-finops.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -202,9 +217,13 @@ examples:
   name: Tripetto List Forms Example
   slug: tripetto-list-forms-example
 finops:
-- name: Tripetto Finops
+- has_sources: false
+  method: generated
+  name: Tripetto Finops
+  primary_unit: ''
   service_category: API
   slug: tripetto-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tripetto.png
 json_schemas:
 - name: Tripetto Form
@@ -227,13 +246,13 @@ modified: '2026-05-19'
 name: Tripetto
 nav: Providers
 network: true
-overview: 'Tripetto publishes 3 APIs on the [APIs.io](https://apis.io/) network: Forms API, Responses API, and Webhooks API. Tagged areas include Forms, Surveys, Form Builder, No-Code, and SDK.
+overview: 'Tripetto publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Forms API, Responses API, Webhooks API, and 1 more. Tagged areas include Forms, Surveys, Form Builder, No-Code, and SDK.
 
 
   The Tripetto catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Tripetto''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, and 18 more developer resources.'
+  Tripetto''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, and 21 more developer resources.'
 plans:
 - name: Tripetto Plans Pricing
   plan_count: 3
@@ -244,9 +263,10 @@ rate_limits:
   name: Tripetto Rate Limits
   slug: tripetto-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Tripetto API Rules
+  name: Tripetto — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -254,7 +274,8 @@ rules:
     info: 2
     warn: 4
   slug: tripetto-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Tripetto API Rules
@@ -266,24 +287,24 @@ rules:
     warn: 5
   slug: tripetto-rules
 score:
-  band: developing
-  composite: 42.6
+  band: thin
+  composite: 38.4
   coverage:
     artifact_dirs: 18
-    catalog_earned: 73.5
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 41.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 27.6
-    contract_governance: 28.8
-    contract_quality: 71.2
+    access_clarity: 19.7
+    contract_governance: 27.3
+    contract_quality: 65.0
     developer_ergonomics: 41.7
-    discoverability: 68.5
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 42.6
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     contracts:
@@ -291,8 +312,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

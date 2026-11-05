@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://sovryn.com/all-things-sovryn/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sovryn/refs/heads/main/security/sovryn-domain-security.yml
   title: ''
@@ -81,20 +85,20 @@ created: '2026-07-17'
 description: Sovryn is a Bitcoin-native, non-custodial decentralized finance (DeFi) protocol built on Rootstock (RSK). It offers spot and margin trading, perpetual swaps, 0% interest Bitcoin-backed loans (Zero), the Sovryn Dollar (DLLR) Bitcoin-backed stablecoin, yield and liquidity pools, and SOV governance staking, operating as a DAO. Sovryn also incubated BitcoinOS, a zk-powered rollup and multi-VM execution stack for Bitcoin. Developers integrate through open-source smart contracts, a GraphQL subgraph, an indexer HTTP data API, and first-party JavaScript SDKs published under the @sovryn and @sovryn-zero npm scopes.
 image: https://sovryn.com/favicon.ico
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Sovryn
 nav: Providers
 network: true
 overview: 'Sovryn is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, DeFi, Bitcoin, Blockchain, and Cryptocurrency.
 
 
-  Sovryn''s developer surface includes documentation, support, and 8 more developer resources.'
+  Sovryn''s developer surface includes documentation, support, and 9 more developer resources.'
 random_paper: 7
 score:
   band: minimal
-  composite: 8.5
+  composite: 9.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -106,17 +110,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 8.5
+  previous_composite: 9.8
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

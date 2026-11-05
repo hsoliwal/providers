@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://basebuild.com/blog/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/basebuild/refs/heads/main/security/basebuild-domain-security.yml
   title: ''
@@ -65,43 +69,55 @@ created: '2026-07-17'
 description: Basebuild Labs, Inc. builds Beams, an AI project manager for construction and real estate teams. The product automatically transcribes project meetings, tracks decisions and action items, and assembles a searchable knowledge base from those discussions, capturing information without requiring a bot to join the call. It is aimed at giving construction and real estate project teams real-time visibility and control over teams, projects, budgets, and finances. Basebuild is an early-stage Canaan Partners portfolio company based in Santa Monica, California, and this API Evangelist profile tracks its public-facing surface. As of this enrichment pass the company publishes a marketing site and a product login only, with no public API, developer portal, OpenAPI definition, or documentation surface to catalog.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/basebuild.png
 layout: provider
-modified: '2026-07-18'
+mcp_servers:
+- description: Remote MCP server at basebuild.com over HTTP.
+  name: Basebuild MCP Server
+  slug: basebuild
+modified: '2026-10-06'
 name: Basebuild
 nav: Providers
 network: true
-overview: 'Basebuild is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction, Real-Estate, Artificial Intelligence, and Project Management.
+overview: 'Basebuild is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction, Real Estate, Artificial Intelligence, and Project Management.
 
 
-  Basebuild''s developer surface includes signup flow and 5 more developer resources.'
+  Basebuild''s developer surface includes engineering blog, signup flow, and 5 more developer resources.'
 random_paper: 15
 score:
   band: emerging
-  composite: 11.8
+  composite: 12.1
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
-    discoverability: 50.0
+    developer_ergonomics: 2.4
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.8
+  previous_composite: 11.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -117,7 +133,7 @@ slug: basebuild
 tags:
 - Company
 - Construction
-- Real-Estate
+- Real Estate
 - Artificial Intelligence
 - Project Management
 - Productivity

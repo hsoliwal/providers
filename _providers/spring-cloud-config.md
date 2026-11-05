@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -86,6 +86,26 @@ collections:
   name: Spring Cloud Config Server API
   slug: open-spring-cloud-config-server-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/spring-cloud-config/refs/heads/main/plans/spring-cloud-config-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/spring-cloud-config-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/spring-cloud-config/refs/heads/main/rate-limits/spring-cloud-config-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/spring-cloud-config-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/spring-cloud-config/refs/heads/main/finops/spring-cloud-config-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/spring-cloud-config-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spring-cloud-config/refs/heads/main/capabilities/spring-cloud-config-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spring-cloud-config-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/spring-cloud-config/refs/heads/main/agentic-access/spring-cloud-config-agentic-access.yml
   title: ''
@@ -161,9 +181,13 @@ examples:
   name: Spring Cloud Config Get Environment Example
   slug: spring-cloud-config-get-environment-example
 finops:
-- name: Spring Cloud Config Finops
+- has_sources: false
+  method: generated
+  name: Spring Cloud Config Finops
+  primary_unit: ''
   service_category: API
   slug: spring-cloud-config-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/spring-cloud-config.png
 json_schemas:
 - name: Spring Cloud Config Environment
@@ -186,13 +210,13 @@ modified: '2026-05-19'
 name: Spring Cloud Config
 nav: Providers
 network: true
-overview: 'Spring Cloud Config publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Configuration API, Encryption API, Monitoring API, and 1 more. Tagged areas include Configuration Management, Distributed Systems, Externalized Configuration, Git, and Java.
+overview: 'Spring Cloud Config publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Configuration API, Encryption API, Monitoring API, and 1 more. Tagged areas include Configuration Management, Distributed Systems, Externalized Configuration, Git, and Java.
 
 
   The Spring Cloud Config catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Spring Cloud Config''s developer surface includes authentication, engineering blog, documentation, getting-started guide, GitHub presence, release notes, Stack Overflow tag, and 8 more developer resources.'
+  Spring Cloud Config''s developer surface includes authentication, engineering blog, documentation, getting-started guide, GitHub presence, release notes, Stack Overflow tag, and 12 more developer resources.'
 plans:
 - name: Spring Cloud Config Plans Pricing
   plan_count: 3
@@ -203,9 +227,10 @@ rate_limits:
   name: Spring Cloud Config Rate Limits
   slug: spring-cloud-config-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Spring Cloud Config API Rules
+  name: Spring Cloud Config — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -213,7 +238,8 @@ rules:
     info: 2
     warn: 3
   slug: spring-cloud-config-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Spring Cloud Config API Rules
@@ -226,23 +252,23 @@ rules:
   slug: spring-cloud-config-rules
 score:
   band: thin
-  composite: 38.8
+  composite: 36.5
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 68.5
+    artifact_dirs: 18
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 62.6
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 56.9
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 38.8
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     contracts:
@@ -250,8 +276,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

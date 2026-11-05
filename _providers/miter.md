@@ -25,20 +25,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Miter exposes a REST API used to build custom integrations between the Miter HCM platform and construction ERPs, accounting, and workforce systems — syncing projects, cost codes, accounts, employees, '
   name: Miter REST API
   slug: miter-rest-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/miter/refs/heads/main/security/miter-trust-center.yml
@@ -96,20 +96,24 @@ created: '2026-07-17'
 description: Miter is a Human Capital Management (HCM) platform purpose-built for construction contractors, consolidating payroll, HR, benefits, field operations, and expense management into a single connected system. Its construction payroll automates prevailing-wage, certified-payroll, and union compliance, multi-state tax handling, and fully-burdened job-cost tracking in real time, while its HRIS covers recruiting, benefits, performance, and learning. Field Operations adds time tracking, scheduling, daily reports, production tracking, and safety, and Expense Management handles reimbursements, per diems, and corporate cards. Miter connects to construction ERPs and accounting systems (Sage Intacct, NetSuite, Acumatica, QuickBooks, Procore, Viewpoint, and more) through off-the-shelf integrations or a custom REST API. Backed by Bessemer Venture Partners.
 image: https://www.miter.com/wp-content/uploads/2025/03/OpenGraph-Homepage.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.miter.com over HTTP.
+  name: Miter MCP Server
+  slug: miter
 modified: '2026-07-20'
 name: Miter
 nav: Providers
 network: true
-overview: 'Miter publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Vertical Software, Construction, Payroll, and HCM.
+overview: 'Miter is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Vertical Software, Construction, Payroll, and HCM.
 
 
   Miter''s developer surface includes support, engineering blog, and 10 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 18.8
+  composite: 18.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -121,13 +125,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 18.8
+  previous_composite: 18.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

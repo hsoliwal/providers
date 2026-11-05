@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://department.mark43.com/partnerships/api
@@ -163,6 +163,10 @@ collections:
   name: Mark43 Partnerships Associated Records Warrants API
   slug: open-mark43-warrants-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://mark43.com/platform/data-platform/insights/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/mark43/refs/heads/main/security/mark43-trust-center.yml
   title: ''
@@ -245,34 +249,34 @@ created: '2026-07-17'
 description: Mark43 is a cloud-native public safety software company whose platform unifies computer-aided dispatch (CAD), records management (RMS), first-responder mobile applications, evidence and property management, and analytics for law enforcement and public safety agencies. Serving more than 300 federal, state, and local agencies, Mark43 exposes a Partnerships (External) API that lets approved location providers, community-engagement software, and other law-enforcement technologies integrate directly with an agency's Mark43 tenant. The REST API provides endpoints for reports, persons, evidence and chain-of-custody, attachments, CAD events and configuration, warrants, tasks, users, vehicles, and E911 data, secured with HTTP Basic authentication using agency-issued API tokens and returning a consistent JSON response envelope.
 image: https://mark43.com/wp-content/uploads/2021/04/cropped-Mark43_logo_horizontal_black-1-1-32x32.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Mark43
 nav: Providers
 network: true
-overview: 'Mark43 publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Associated Records API, Attachments API, CAD Configuration API, and 12 more. Tagged areas include Company, Public Safety, Law Enforcement, Records Management, and Computer-Aided Dispatch.
+overview: 'Mark43 publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Associated Records API, Attachments API, CAD Configuration API, and 12 more. Tagged areas include Company, Public Safety, Law Enforcement, Records Management, and Computer-Aided Dispatch.
 
 
-  Mark43''s developer surface includes documentation, API reference, authentication, and 14 more developer resources.'
+  Mark43''s developer surface includes engineering blog, documentation, API reference, authentication, and 14 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 30.4
+  composite: 28.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.4
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 12.5
-    developer_ergonomics: 39.9
-    discoverability: 75.9
+    contract_quality: 12.6
+    developer_ergonomics: 42.3
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 30.4
+  previous_composite: 28.3
   provenance:
     conformance: first-party
     contracts:
@@ -287,9 +291,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 44.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

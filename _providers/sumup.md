@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.1
-  scored_at: '2026-09-20'
+  score: 55.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -95,7 +95,7 @@ apis:
   description: Transactions represent completed or attempted payment operations processed for a merchant account. A transaction contains the core payment result, such as the amount, currency, payment method, creatio
   name: SumUp Transactions API
   slug: sumup-transactions-api
-artifact_total: 142
+artifact_total: 143
 collections:
 - collection_type: open
   name: API Collection
@@ -131,6 +131,11 @@ collections:
   name: SumUp REST Checkouts Transactions API
   slug: open-sumup-transactions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sumup/refs/heads/main/capabilities/sumup-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sumup-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -270,9 +275,13 @@ examples:
   name: Refundtransaction Request
   slug: refundtransaction-request
 finops:
-- name: Sumup Finops
+- has_sources: false
+  method: generated
+  name: Sumup Finops
+  primary_unit: ''
   service_category: ''
   slug: sumup-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sumup.png
 json_schemas:
 - name: Address
@@ -573,17 +582,21 @@ json_schemas:
   property_count: 0
   slug: version
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sumup.com over HTTP.
+  name: SumUp MCP Server
+  slug: sumup
 modified: '2026-06-13'
 name: SumUp
 nav: Providers
 network: true
-overview: 'SumUp publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Checkouts API, Customers API, Members API, and 7 more. Tagged areas include Payments, Point-of-Sale, Card Reader, Checkout, and Fintech.
+overview: 'SumUp publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Checkouts API, Customers API, Members API, and 7 more. Tagged areas include Payments, Point-of-Sale, Card Reader, Checkout, and Fintech.
 
 
   The SumUp catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  SumUp''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 17 more developer resources.'
+  SumUp''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 18 more developer resources.'
 plans:
 - name: Sumup Plans Pricing
   plan_count: 5
@@ -594,9 +607,10 @@ rate_limits:
   name: Sumup Rate Limits
   slug: sumup-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: SumUp API Rules
+  name: SumUp — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -611,26 +625,26 @@ scopes:
   summary_line: 10 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 49.1
+  composite: 39.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 63.3
+    artifact_dirs: 21
+    catalog_earned: 45.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 69.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.7
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 60.9
+    contract_quality: 55.1
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 68.4
+    discoverability: 68.3
+    operational_transparency: 52.6
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 49.1
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     contracts:
@@ -644,10 +658,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 25.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

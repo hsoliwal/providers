@@ -26,20 +26,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 12.9
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Rent Manager Web API (WAPI12) is a RESTful API that provides both read and write access to the Rent Manager Online (RMO) database. It supports property management operations including tenants, lea
   name: Rent Manager Web API
   slug: rent-manager-api
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/rent-manager/refs/heads/main/security/rent-manager-domain-security.yml
@@ -100,9 +100,13 @@ common:
 created: '2026-06-13'
 description: Rent Manager is property management software with a REST API (WAPI12) for managing properties, tenants, leases, work orders, accounting, billing, and maintenance workflows for residential and commercial portfolios. The API provides both read and write access to the Rent Manager Online (RMO) database, enabling integration with 200+ PropTech partner solutions.
 finops:
-- name: Rent Manager Finops
+- has_sources: false
+  method: generated
+  name: Rent Manager Finops
+  primary_unit: ''
   service_category: ''
   slug: rent-manager-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rent-manager.png
 jsonld:
 - class_count: 0
@@ -110,11 +114,15 @@ jsonld:
   property_count: 8
   slug: rent-manager-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.rentmanager.com over HTTP.
+  name: Rent Manager MCP Server
+  slug: rent-manager
 modified: '2026-06-13'
 name: Rent Manager
 nav: Providers
 network: true
-overview: 'Rent Manager publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Property Management, Real-Estate, Tenants, Leases, and Work Orders.
+overview: 'Rent Manager is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Property Management, Real Estate, Tenants, Leases, and Work Orders.
 
 
   The Rent Manager catalog on APIs.io includes 1 JSON-LD context.
@@ -132,28 +140,34 @@ rate_limits:
   slug: rent-manager-rate-limits
 score:
   band: emerging
-  composite: 23.9
+  composite: 16.9
   coverage:
     artifact_dirs: 9
-    catalog_earned: 57.0
+    catalog_earned: 45.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
     contract_quality: 6.7
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 15.8
-  previous_composite: 23.9
+  previous_composite: 22.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -167,7 +181,7 @@ security:
 slug: rent-manager
 tags:
 - Property Management
-- Real-Estate
+- Real Estate
 - Tenants
 - Leases
 - Work Orders

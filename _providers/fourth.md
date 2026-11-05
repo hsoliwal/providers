@@ -22,7 +22,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.8
-  scored_at: '2026-09-20'
+  score: 6.4
+  scored_at: '2026-10-17'
 api_count: 7
 apis:
 - description: Platform notifications API secured with OAuth 2.0 (scope NotificationService).
@@ -59,6 +59,14 @@ apis:
   slug: fourth-adaco-web-api
 artifact_total: 12
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.fourth.com/category/article
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.fourth.com/category/article/feed
 - group: company
   title: ''
   type: Website
@@ -178,14 +186,14 @@ created: '2026-07-17'
 description: Fourth is an AI-powered workforce management and inventory platform built for restaurants and hospitality, uniting recruiting, HR, payroll, labor scheduling, purchasing, and inventory management in a single system across 120,000+ locations globally (customers include Taco Bell, Dunkin', KFC, Pizza Hut and Culver's). Its product family includes HotSchedules for scheduling, Fourth iQ for restaurant performance, Human Capital Management for talent and payroll, and Adaco inventory for hotels. Fourth publishes a developer portal of REST APIs covering POS transactions, recipe & menu engineering, menu cycles, workforce (UK employee, labor productivity, schedules), notifications, tasks, SCIM identity provisioning, and Adaco hotel inventory. APIs authenticate with OAuth 2.0 (client_credentials and password grants) or Basic Auth; production and test host locations are provisioned per mutual customer and are not publicly disclosed.
 image: https://www.fourth.com/themes/custom/fourth/logo.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Fourth
 nav: Providers
 network: true
-overview: 'Fourth publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Workforce Management, Restaurant, Hospitality, and Inventory Management.
+overview: 'Fourth is listed with 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Workforce Management, Restaurant, Hospitality, and Inventory.
 
 
-  Fourth''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, changelog, and 19 more developer resources.'
+  Fourth''s developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, support, changelog, and 21 more developer resources.'
 random_paper: 4
 scopes:
 - name: Fourth Scopes
@@ -194,9 +202,9 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 32.5
+  composite: 37.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -208,13 +216,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 52.6
-  previous_composite: 32.5
+  previous_composite: 37.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 52.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -244,7 +258,7 @@ tags:
 - Workforce Management
 - Restaurant
 - Hospitality
-- Inventory Management
+- Inventory
 - Payroll
 - Scheduling
 - HCM

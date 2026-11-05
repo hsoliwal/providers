@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-09-20'
+  score: 24.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -260,9 +260,13 @@ examples:
   name: Datavant Healthjump Vitals Example
   slug: datavant-healthjump-vitals-example
 finops:
-- name: Roivant Sciences Finops
+- has_sources: false
+  method: generated
+  name: Roivant Sciences Finops
+  primary_unit: ''
   service_category: ''
   slug: roivant-sciences-finops
+  template: true
 image: https://roivant.com/favicon.ico
 json_schemas:
 - name: Datavant Healthjump Encounter
@@ -288,7 +292,7 @@ modified: '2026-05-23'
 name: Roivant Sciences
 nav: Providers
 network: true
-overview: 'Roivant Sciences publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Allergies API, Appointments API, Diagnoses API, and 10 more. Tagged areas include Biotech, Pharmaceuticals, Drug Development, Clinical Trials, and Health Data.
+overview: 'Roivant Sciences publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Allergies API, Appointments API, Diagnoses API, and 13 more. Tagged areas include Biotechnology, Pharmaceuticals, Drug Development, Clinical Trials, and Health Data.
 
 
   The Roivant Sciences catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -305,10 +309,11 @@ rate_limits:
   name: Roivant Sciences Rate Limits
   slug: roivant-sciences-rate-limits
 rules:
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
-  name: Roivant Sciences API Rules
+  name: Roivant Sciences — datavant healthjump rules
   rule_count: 8
   severity_counts:
     error: 4
@@ -316,9 +321,10 @@ rules:
     info: 0
     warn: 4
   slug: datavant-healthjump-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Roivant Sciences API Rules
+  name: Roivant Sciences — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -332,24 +338,24 @@ scopes:
   slug: roivant-sciences-scopes
   summary_line: 3 scopes · clientCredentials
 score:
-  band: developing
-  composite: 45.7
+  band: thin
+  composite: 31.9
   coverage:
     artifact_dirs: 18
-    catalog_earned: 93.0
+    catalog_earned: 66.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 22.0
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -9.9
   facets:
-    access_clarity: 60.5
-    contract_governance: 69.7
-    contract_quality: 12.2
+    access_clarity: 28.9
+    contract_governance: 27.3
+    contract_quality: 11.6
     developer_ergonomics: 39.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 45.7
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -362,10 +368,10 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 32.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
@@ -382,12 +388,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: roivant-sciences
 tags:
-- Biotech
+- Biotechnology
 - Pharmaceuticals
 - Drug Development
 - Clinical Trials
 - Health Data
-- Tokenization
 - Electronic Health Records
 - Real-World Evidence
 - Holding Company

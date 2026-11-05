@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 20.5
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - baseURL: https://services.amobee.com/campaign/v5/api
@@ -203,7 +203,7 @@ modified: '2026-08-13'
 name: Tremor Video
 nav: Providers
 network: true
-overview: 'Tremor Video publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Nexxen DSP API, Nexxen DSP Token Service, Nexxen DSP Reporting API, and 2 more. Tagged areas include Company, MarTech, Advertising, AdTech, and DSP.
+overview: 'Tremor Video is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Nexxen DSP API, Nexxen DSP Token Service, Nexxen DSP Reporting API, and 2 more. Tagged areas include Company, MarTech, Advertising, AdTech, and DSP.
 
 
   Tremor Video''s developer surface includes documentation, API reference, getting-started guide, authentication, code examples, engineering blog, support, and 21 more developer resources.'
@@ -223,9 +223,9 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 27.5
+  composite: 30.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
@@ -235,17 +235,23 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 37.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 31.6
-  previous_composite: 27.5
+  previous_composite: 30.0
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

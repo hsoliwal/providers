@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -106,6 +106,26 @@ collections:
   name: HCP Vault Secrets API
   slug: open-hcp
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/plans/hcp-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/hcp-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/rate-limits/hcp-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/hcp-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/finops/hcp-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/hcp-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/capabilities/hcp-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hcp-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/agentic-access/hcp-agentic-access.yml
   title: ''
@@ -152,19 +172,23 @@ common:
 created: '2024-12-03'
 description: HashiCorp Cloud Platform (HCP) is a fully managed platform for HashiCorp products including Vault, Consul, Packer, Boundary, Waypoint, and Terraform. HCP provides a unified set of APIs for managing infrastructure, secrets, service networking, and image pipelines across cloud and on-premises environments.
 finops:
-- name: Hcp Finops
+- has_sources: true
+  method: generated
+  name: Hcp Finops
+  primary_unit: ''
   service_category: Cloud / Managed Infrastructure Services
   slug: hcp-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hcp.png
 layout: provider
 modified: '2026-05-19'
 name: HashiCorp Cloud Platform
 nav: Providers
 network: true
-overview: 'HashiCorp Cloud Platform publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Gateway API, Integrations API, and 2 more. Tagged areas include Cloud, Infrastructure, DevOps, Secrets Management, and Service Networking.
+overview: 'HashiCorp Cloud Platform is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Gateway API, Integrations API, and 6 more. Tagged areas include Cloud, Infrastructure, DevOps, Secrets Management, and Service Networking.
 
 
-  HashiCorp Cloud Platform''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  HashiCorp Cloud Platform''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Hcp Plans Pricing
   plan_count: 6
@@ -192,23 +216,23 @@ rate_limits:
   slug: hcp-rate-limits
 score:
   band: thin
-  composite: 32.1
+  composite: 28.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 49.0
+    artifact_dirs: 14
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 32.1
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     contracts:
@@ -216,8 +240,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

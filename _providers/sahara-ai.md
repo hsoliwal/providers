@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -54,7 +54,7 @@ apis:
   description: OpenAI-compatible chat completion inference.
   name: Sahara AI Inference API
   slug: sahara-ai-inference-api
-artifact_total: 8
+artifact_total: 9
 collections:
 - collection_type: open
   name: API Collection
@@ -66,6 +66,16 @@ collections:
   name: Sahara AI Compute Discovery Inference API
   slug: open-sahara-ai-inference-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/sahara-ai/refs/heads/main/plans/sahara-ai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/sahara-ai-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sahara-ai/refs/heads/main/capabilities/sahara-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sahara-ai-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/sahara-ai/refs/heads/main/overlays/sahara-ai-compute-overlay.yaml
   title: ''
@@ -172,16 +182,20 @@ modified: '2026-07-21'
 name: Sahara AI
 nav: Providers
 network: true
-overview: 'Sahara AI publishes 2 APIs on the [APIs.io](https://apis.io/) network: Discovery API and Inference API. Tagged areas include Company, Crypto, Artificial Intelligence, Machine-Learning, and Agents.
+overview: 'Sahara AI publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Discovery API and Inference API. Tagged areas include Company, Cryptocurrency, Artificial Intelligence, Machine Learning, and Agents.
 
 
-  Sahara AI''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 15 more developer resources.'
+  Sahara AI''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 17 more developer resources.'
+plans:
+- name: Sahara Ai Plans Pricing
+  plan_count: 0
+  slug: sahara-ai-plans-pricing
 random_paper: 13
 score:
   band: developing
-  composite: 43.0
+  composite: 42.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -191,11 +205,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.2
+    contract_quality: 52.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 43.0
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -206,8 +220,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -225,9 +245,9 @@ security:
 slug: sahara-ai
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Agents
 - Compute
 - Blockchain

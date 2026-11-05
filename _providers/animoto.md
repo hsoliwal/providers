@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Animoto API is a partner-facing RESTful web service for programmatically directing and rendering videos from images, video clips, music and text. The host is live and authenticating (HTTP Basic, r
@@ -158,7 +158,7 @@ modified: '2026-08-13'
 name: Animoto
 nav: Providers
 network: true
-overview: 'Animoto publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Video, Video Creation, and Video Editing.
+overview: 'Animoto is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Video, Video Creation, and Video Editing.
 
 
   Animoto''s developer surface includes engineering blog, pricing, support, signup flow, authentication, changelog, and 14 more developer resources.'
@@ -173,38 +173,51 @@ rate_limits:
   slug: animoto-rate-limits
 score:
   band: thin
-  composite: 32.6
+  composite: 34.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.6
+  previous_composite: 34.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/animoto/refs/heads/main/screenshots/animoto-2026-10-11T142341.png
 security:
 - kind: authentication
   name: Animoto Authentication
@@ -223,7 +236,7 @@ tags:
 - Video Editing
 - Slideshow
 - Marketing
-- Social-Media
+- Social Media
 - Content Creation
 - Software-as-a-Service
 website: https://animoto.com/

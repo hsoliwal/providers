@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://31api.31huiyi.com
@@ -191,7 +191,7 @@ modified: '2026-09-05'
 name: 31huiyi
 nav: Providers
 network: true
-overview: '31huiyi publishes 1 API on the [APIs.io](https://apis.io/) network: 31 OpenAPI. Tagged areas include Company, Event, Event Management, Conferences, and Exhibitions.
+overview: '31huiyi is listed with 1 API on the [APIs.io](https://apis.io/) network: 31 OpenAPI. Tagged areas include Company, Event, Event Management, Conferences, and Exhibitions.
 
 
   The 31huiyi catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -209,14 +209,14 @@ rate_limits:
   slug: 31huiyi-rate-limits
 scopes:
 - name: 31Huiyi Scopes
-  scope_count: 0
+  scope_count: 9
   slug: 31huiyi-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 9 scopes
 score:
   band: developing
-  composite: 42.1
+  composite: 44.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -226,9 +226,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 0.0
-    contract_quality: 41.6
-    developer_ergonomics: 66.7
-    discoverability: 68.5
+    contract_quality: 39.0
+    developer_ergonomics: 66.2
+    discoverability: 66.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -237,17 +237,24 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 42.1
+  previous_composite: 44.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/31huiyi/refs/heads/main/screenshots/31huiyi-2026-10-11T092038.png
 security:
 - kind: authentication
   name: 31Huiyi Authentication

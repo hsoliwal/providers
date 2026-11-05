@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 128
+- acting_count: 123
   human_in_the_loop: 1
   name: Bluejay Agentic Access
   operation_count: 174
   slug: bluejay-agentic-access
-  summary_line: 174 operations · 128 acting · 1 human-in-the-loop
+  summary_line: 174 operations · 123 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.getbluejay.ai
@@ -62,7 +62,7 @@ apis:
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The bland API from Bluejay — 1 operation(s) for bland.
-  name: Bluejay bland API
+  name: Bluejay Bland API
   slug: bluejay-bland-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
@@ -262,7 +262,7 @@ apis:
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The retell API from Bluejay — 1 operation(s) for retell.
-  name: Bluejay retell API
+  name: Bluejay Retell API
   slug: bluejay-retell-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
@@ -327,7 +327,7 @@ apis:
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The vapi API from Bluejay — 3 operation(s) for vapi.
-  name: Bluejay vapi API
+  name: Bluejay Vapi API
   slug: bluejay-vapi-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
@@ -349,7 +349,7 @@ apis:
   description: The Bluejay API API from Bluejay — 0 operation(s) for bluejay api.
   name: Bluejay API
   slug: bluejay-bluejay-api-api
-artifact_total: 127
+artifact_total: 128
 asyncapis:
 - description: ''
   name: Bluejay Webhooks
@@ -539,6 +539,11 @@ collections:
   name: Bluejay Agents Workflows API
   slug: open-bluejay-workflows-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/plans/bluejay-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/bluejay-plans-pricing.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/bluejay/refs/heads/main/capabilities/bluejay-capability-edges.yml
   title: ''
@@ -682,40 +687,44 @@ description: Bluejay is the testing, monitoring, and improvement layer for conve
 image: https://framerusercontent.com/assets/0eWRRDcsziAELTSPQghHwloyXH0.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.getbluejay.ai over HTTP.
   name: Bluejay MCP Server
-  slug: bluejay-mcp-server
+  slug: bluejay
 modified: '2026-09-16'
 name: Bluejay
 nav: Providers
 network: true
-overview: 'Bluejay publishes 61 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Alerts API, Api Keys API, and 58 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Voice AI, and Conversational AI.
+overview: 'Bluejay publishes 61 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Alerts API, Api Keys API, and 58 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Voice AI, and Conversational AI.
 
 
   The Bluejay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Bluejay''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 23 more developer resources.'
+  Bluejay''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 24 more developer resources.'
+plans:
+- name: Bluejay Plans Pricing
+  plan_count: 4
+  slug: bluejay-plans-pricing
 random_paper: 0
 score:
-  band: developing
-  composite: 48.3
+  band: strong
+  composite: 57.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 24.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 91.0
+    artifact_dirs: 22
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.0
   facets:
-    access_clarity: 46.1
+    access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 56.1
     developer_ergonomics: 61.3
-    discoverability: 51.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 48.3
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -726,9 +735,15 @@ score:
       total: 61
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 33.3

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: REST API to set up, manage and administer a Marketing Cloud Intelligence (Datorama) account — accounts, workspaces, users, permission sets, data streams, connectors, data source authentications, bucke
@@ -203,14 +203,14 @@ description: 'Datorama was a cloud-based marketing intelligence and analytics pl
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/datorama.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Datorama MCP Server
-  slug: datorama-mcp-server
+  slug: mci-mcp
 modified: '2026-08-12'
 name: Datorama
 nav: Providers
 network: true
-overview: 'Datorama publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Marketing, Marketing Intelligence, and Advertising.
+overview: 'Datorama is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Marketing, Marketing Intelligence, and Advertising.
 
 
   Datorama''s developer surface includes documentation, API reference, getting-started guide, support, pricing, authentication, changelog, and 26 more developer resources.'
@@ -225,7 +225,7 @@ rate_limits:
   slug: datorama-rate-limits
 score:
   band: developing
-  composite: 47.8
+  composite: 50.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 57.0
@@ -233,20 +233,26 @@ score:
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 75.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 76.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 65.8
-  previous_composite: 47.8
+  previous_composite: 50.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

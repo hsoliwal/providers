@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.mylaurelhealth.com/blog?format=rss
 - group: company
   title: ''
   type: Website
@@ -69,18 +73,18 @@ created: '2026-07-17'
 description: myLaurel is a New York-based healthcare company delivering acute and transitional care in patients' homes. Its hybrid model pairs hands-on clinical teams with virtual technology support to prevent unnecessary hospitalizations, free critical hospital bed space, improve patient outcomes, and lower the total cost of care for both health systems and health plans. Reported results include a 49% reduction in 30-day readmissions, an average 1.5-day length-of-stay reduction, a 97 Net Promoter Score, and 3:1+ ROI within 90 days. myLaurel is a portfolio company of GV (Google Ventures). This profile has been enriched from the company's public web surface; it currently exposes no public developer API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mylaurel.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: myLaurel
 nav: Providers
 network: true
 overview: 'myLaurel is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Healthcare, Home Health, and Acute Care.
 
 
-  myLaurel''s developer surface includes engineering blog, support, and 5 more developer resources.'
+  myLaurel''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 13.0
+  composite: 12.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,22 +98,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.0
+  previous_composite: 12.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

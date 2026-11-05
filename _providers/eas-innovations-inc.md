@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.elev8automotive.com/news
 - group: company
   title: ''
   type: Website
@@ -73,42 +77,42 @@ created: '2026-07-17'
 description: EAS Innovations Inc operates ELEV8, an end-to-end, cloud-based dealer management system (DMS) built for independent auto dealers and automotive finance companies. The platform unifies real-time accounting, inventory management, CRM and desking, loan servicing, payments and collections into a single fully-integrated system. It offers per-seat pricing, user-based access rights, user-level audit logs, whitelisted IP addresses, multi-rooftop access and department-level restrictions, and is delivered as a SaaS web application at app.elev8dms.com. EAS Innovations is a 500 Global portfolio company. No public developer API is currently published.
 image: https://cdn.prod.website-files.com/65d7f99dc9d20d3b11ab8930/65dcfd1edd82ac04cfe0a8b9_2_Transparent_Image.png
 layout: provider
-modified: '2026-07-18'
-name: EAS Innovations Inc
+modified: '2026-10-06'
+name: ELEV8
 nav: Providers
 network: true
-overview: 'EAS Innovations Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automotive, Dealer Management, DMS, and Software-as-a-Service.
+overview: 'ELEV8 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automotive, Dealer Management, DMS, and Software-as-a-Service.
 
 
-  EAS Innovations Inc''s developer surface includes pricing, support, signup flow, and 5 more developer resources.'
+  ELEV8''s developer surface includes engineering blog, pricing, support, signup flow, and 5 more developer resources.'
 random_paper: 11
 score:
-  band: minimal
-  composite: 10.3
+  band: emerging
+  composite: 11.5
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 10.3
+  previous_composite: 11.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 15.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -129,7 +133,7 @@ tags:
 - Software-as-a-Service
 - CRM
 - Accounting
-- Inventory Management
+- Inventory
 - Auto Finance
 - Payments
 website: https://www.elev8automotive.com

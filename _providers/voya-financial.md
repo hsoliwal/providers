@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
@@ -104,9 +104,10 @@ press:
   url: https://www.voya.com/news/2022/11/voya-celebrates-success-247-chatbot-and-emerging-artificial-intelligence-capabilities
 random_paper: 17
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Voya Financial API Rules
+  name: Voya Financial — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -118,7 +119,7 @@ score:
   band: minimal
   composite: 7.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 35.3
     catalog_earned_first_party: 0.0
     catalog_gap: 79.8
@@ -130,7 +131,7 @@ score:
     contract_governance: 9.8
     contract_quality: 6.7
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
   previous_composite: 7.8
   regulatory:
@@ -138,9 +139,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -160,5 +161,6 @@ tags:
 - Health Savings
 - Investment Management
 - Retirement
+- Employee Benefits
 website: https://www.voya.com/
 ---

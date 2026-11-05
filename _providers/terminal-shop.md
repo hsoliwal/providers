@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -141,6 +141,11 @@ collections:
   name: Terminal Shop API
   slug: open-terminal-shop
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/capabilities/terminal-shop-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/terminal-shop-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/agentic-access/terminal-shop-agentic-access.yml
   title: ''
@@ -190,19 +195,23 @@ common:
 created: '2026-06-20'
 description: Terminal is a developer-focused coffee company with an API-first, SSH-first ordering experience. The Terminal Shop API is a public REST API (Bearer token) for browsing coffee products, managing carts, placing orders, running subscriptions, and handling addresses, cards, and profiles - the same surface that powers the famous `ssh terminal.shop` storefront.
 finops:
-- name: Terminal Shop Finops
+- has_sources: true
+  method: generated
+  name: Terminal Shop Finops
+  primary_unit: ''
   service_category: E-Commerce and Retail
   slug: terminal-shop-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/terminal-shop.png
 layout: provider
 modified: '2026-06-20'
 name: Terminal
 nav: Providers
 network: true
-overview: 'Terminal publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Address API, App API, Card API, and 8 more. Tagged areas include Coffee, E-Commerce, Developers, SSH, and Ordering.
+overview: 'Terminal publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Address API, App API, Card API, and 8 more. Tagged areas include Coffee, E-Commerce, Developers, SSH, and Ordering.
 
 
-  Terminal''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  Terminal''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Terminal Shop Plans Pricing
   plan_count: 3
@@ -214,23 +223,23 @@ rate_limits:
   slug: terminal-shop-rate-limits
 score:
   band: thin
-  composite: 39.0
+  composite: 28.5
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 60.0
+    artifact_dirs: 12
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 54.8
+    contract_quality: 49.4
     developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 39.0
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     contracts:
@@ -238,9 +247,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2

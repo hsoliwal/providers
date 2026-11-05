@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-09-20'
+  score: 22.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -448,9 +448,13 @@ features:
 - description: Access user friends, listening comparisons, and shared music taste data
   name: User Social Data
 finops:
-- name: Lastfm Finops
+- has_sources: false
+  method: generated
+  name: Lastfm Finops
+  primary_unit: ''
   service_category: ''
   slug: lastfm-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lastfm.png
 json_schemas:
 - name: Artist
@@ -497,7 +501,7 @@ modified: '2026-08-08'
 name: Last.fm
 nav: Providers
 network: true
-overview: 'Last.fm publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Auth API, and 6 more. Tagged areas include Music, Audio, Scrobbling, Recommendations, and Charts.
+overview: 'Last.fm publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Auth API, and 6 more. Tagged areas include Music, Audio, Scrobbling, Recommendations, and Charts.
 
 
   The Last.fm catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -514,9 +518,10 @@ rate_limits:
   name: Lastfm Rate Limits
   slug: lastfm-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Last.fm API Rules
+  name: Last.fm — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -524,7 +529,8 @@ rules:
     info: 1
     warn: 4
   slug: lastfm-jsonschema-spectral-rules
-- effective_rule_count: 54
+- authorship: unmarked
+  effective_rule_count: 54
   extends:
   - spectral:oas
   name: Last.fm API Rules
@@ -536,24 +542,24 @@ rules:
     warn: 4
   slug: lastfm-rules
 score:
-  band: strong
-  composite: 62.6
+  band: developing
+  composite: 54.2
   coverage:
     artifact_dirs: 19
-    catalog_earned: 87.5
+    catalog_earned: 68.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 27.5
+    catalog_gap: 47.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 73.7
-    contract_governance: 28.8
-    contract_quality: 68.8
+    access_clarity: 50.0
+    contract_governance: 27.3
+    contract_quality: 62.7
     developer_ergonomics: 72.6
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 62.6
+    discoverability: 66.1
+    operational_transparency: 26.3
+  previous_composite: 61.1
   provenance:
     agentic_access: derived
     contracts:
@@ -561,9 +567,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

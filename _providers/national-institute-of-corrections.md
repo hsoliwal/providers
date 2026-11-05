@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://nicic.gov/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/national-institute-of-corrections/refs/heads/main/security/national-institute-of-corrections-domain-security.yml
   title: ''
@@ -57,17 +61,17 @@ created: '2024-12-03'
 description: The National Institute of Corrections (NIC) is an agency within the U.S. Department of Justice that provides training, technical assistance, and information to federal, state, and local corrections agencies. NIC publishes guidance, library resources, and corrections-related data through its website but does not currently expose a public web API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/national-institute-of-corrections.png
 layout: provider
-modified: '2026-04-28'
+modified: '2026-10-06'
 name: National Institute of Corrections
 nav: Providers
 network: true
-overview: National Institute of Corrections is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Corrections, Federal-Government, and Justice.
+overview: National Institute of Corrections is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Corrections, Federal Government, and Justice.
 random_paper: 10
 score:
   band: minimal
-  composite: 2.5
+  composite: 2.8
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -79,17 +83,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
-  previous_composite: 2.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 2.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -104,7 +113,7 @@ security:
 slug: national-institute-of-corrections
 tags:
 - Corrections
-- Federal-Government
+- Federal Government
 - Justice
 website: https://nicic.gov/
 ---

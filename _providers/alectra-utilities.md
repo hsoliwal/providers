@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,9 +33,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 25.6
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://sandbox.greenbuttonalliance.org:8443/DataCustodian
   baseurl_source: spec
@@ -161,7 +161,7 @@ modified: '2026-07-27'
 name: Alectra Utilities
 nav: Providers
 network: true
-overview: 'Alectra Utilities publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Application Information API, Authorization API, Batch API, and 1 more. Tagged areas include Energy, Canada, Utilities, Electricity, and Ontario.
+overview: 'Alectra Utilities publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Application Information API, Authorization API, Batch API, and 1 more. Tagged areas include Energy, Canada, Utilities, Electricity, and Ontario.
 
 
   Alectra Utilities'' developer surface includes documentation, developer portal, support, engineering blog, and 16 more developer resources.'
@@ -173,9 +173,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 30.4
+  composite: 27.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -187,7 +187,7 @@ score:
     contract_governance: 4.5
     contract_quality: 11.1
     developer_ergonomics: 39.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,7 +196,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.4
+  previous_composite: 27.7
   provenance:
     conformance: derived
     contracts:
@@ -211,9 +211,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

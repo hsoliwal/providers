@@ -26,20 +26,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 12.9
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: RESTful API providing programmatic access to BrightLocal local SEO tools including local rank tracking, listings management, citation building, reputation management, and AI-powered insights. Uses API
   name: BrightLocal API
   slug: brightlocal-api
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/brightlocal/refs/heads/main/security/brightlocal-domain-security.yml
@@ -96,9 +96,13 @@ common:
 created: '2026-06-13'
 description: BrightLocal is a local SEO platform offering a REST API for managing local business listings, tracking Google rankings, monitoring reviews, auditing citations, and generating local search reports. Used by 15,000+ agencies and businesses to rank higher in local search.
 finops:
-- name: Brightlocal Finops
+- has_sources: false
+  method: generated
+  name: Brightlocal Finops
+  primary_unit: ''
   service_category: ''
   slug: brightlocal-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brightlocal.png
 jsonld:
 - class_count: 21
@@ -106,11 +110,15 @@ jsonld:
   property_count: 24
   slug: brightlocal-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.brightlocal.com over HTTP.
+  name: BrightLocal MCP Server
+  slug: brightlocal
 modified: '2026-06-13'
 name: BrightLocal
 nav: Providers
 network: true
-overview: 'BrightLocal publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Local SEO, Business Listings, Rank Tracking, Reviews, and Citations.
+overview: 'BrightLocal is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Local SEO, Business Listings, Rank Tracking, Reviews, and Citations.
 
 
   The BrightLocal catalog on APIs.io includes 1 JSON-LD context.
@@ -127,29 +135,35 @@ rate_limits:
   name: Brightlocal Rate Limits
   slug: brightlocal-rate-limits
 score:
-  band: thin
-  composite: 29.7
+  band: emerging
+  composite: 19.7
   coverage:
     artifact_dirs: 9
-    catalog_earned: 75.0
+    catalog_earned: 54.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.0
+    catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
     contract_quality: 14.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 29.7
+    discoverability: 68.3
+    operational_transparency: 28.9
+  previous_composite: 28.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

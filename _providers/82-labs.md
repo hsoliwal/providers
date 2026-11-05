@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.morelabs.com/blogs/journal.atom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/82-labs/refs/heads/main/security/82-labs-domain-security.yml
   title: ''
@@ -69,20 +73,20 @@ created: '2026-07-17'
 description: 82 Labs, Inc. (doing business as More Labs) is a Los Angeles-based, science-backed wellness beverage company founded in 2016 by former Tesla engineer Sisun Lee. More Labs makes functional drink supplements sold direct-to-consumer, including Morning Recovery (hydration and post-alcohol recovery with electrolytes and DHM), Liquid Focus (a nootropic caffeine energy shot), and Dream Well (a melatonin and lemon-balm sleep aid). It is a consumer packaged goods (CPG) and e-commerce business with no public developer API, developer portal, SDKs, or machine-readable API artifacts; it was surfaced as a 500 Global portfolio company. Enrichment on 2026-07-17 confirmed no API surface exists to harvest.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/82-labs.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: 82 Labs
 nav: Providers
 network: true
 overview: '82 Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer Packaged Goods, Wellness, Beverages, and Supplements.
 
 
-  82 Labs'' developer surface includes engineering blog, support, signup flow, and 4 more developer resources.'
+  82 Labs'' developer surface includes engineering blog, support, signup flow, and 5 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 13.1
+  composite: 12.9
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -94,22 +98,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.1
+  previous_composite: 12.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

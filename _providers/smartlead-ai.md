@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 54
+- acting_count: 42
   human_in_the_loop: 1
   name: Smartlead Ai Agentic Access
-  operation_count: 112
+  operation_count: 98
   slug: smartlead-ai-agentic-access
-  summary_line: 112 operations · 54 acting · 1 human-in-the-loop
+  summary_line: 98 operations · 42 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - description: REST endpoints to create, list, fetch, update, schedule, pause, resume, and delete email campaigns, plus manage sequences, A/B variants, and sender account assignments inside a campaign.
@@ -143,6 +143,16 @@ collections:
   name: Smartlead API
   slug: open-smartlead-ai
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/smartlead-ai/refs/heads/main/finops/smartlead-ai-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/smartlead-ai-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/smartlead-ai/refs/heads/main/capabilities/smartlead-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/smartlead-ai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/smartlead-ai/refs/heads/main/agentic-access/smartlead-ai-agentic-access.yml
   title: ''
@@ -330,26 +340,30 @@ common:
 created: '2026-05-23'
 description: Smartlead is cold email infrastructure for outbound sales and lead generation, focused on inbox deliverability through unlimited mailbox rotation, automated warmup, and a unified master inbox. Smartlead publishes an OpenAPI 3.1.1 contract with 98 operations at server.smartlead.ai/api/v1 covering campaigns, sequences, leads and lead lists, sender mailboxes and warmup, the master inbox, webhooks, analytics, Smart Delivery placement testing, Smart Senders and agency client management, authenticated with an API key passed as a query parameter. It also ships an unusually forward agent surface for its size — an A2A agent card, a published Agent Skill, a remote documentation MCP server, llms.txt, and a first-party CLI — alongside a 13-event signed webhook catalog.
 finops:
-- name: Smartlead Ai Finops
+- has_sources: false
+  method: generated
+  name: Smartlead Ai Finops
+  primary_unit: ''
   service_category: API
   slug: smartlead-ai-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/smartlead-ai.png
 layout: provider
 mcp_servers:
 - description: SmartLead operates a remote MCP server on its documentation/API host. `tools/list` answered anonymously over Streamable HTTP (SSE), so the tool set below is the server's real, live manifest with its r
   name: Smartlead MCP Server
-  slug: smartlead-mcp-server
+  slug: smart-lead-api
 modified: '2026-08-13'
 name: Smartlead
 nav: Providers
 network: true
-overview: 'Smartlead publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Campaign Statistics API, Campaigns API, Analytics API, and 8 more. Tagged areas include Cold Email, Outbound, Sales, Deliverability, and Email Warm-up.
+overview: 'Smartlead publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaign Statistics API, Campaigns API, Analytics API, and 16 more. Tagged areas include Cold Email, Outbound, Sales, Deliverability, and Email Warm-up.
 
 
   The Smartlead catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Smartlead''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, pricing, engineering blog, and 34 more developer resources.'
+  Smartlead''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, pricing, engineering blog, and 36 more developer resources.'
 plans:
 - name: Smartlead Ai Plans Pricing
   plan_count: 4
@@ -361,23 +375,23 @@ rate_limits:
   slug: smartlead-ai-rate-limits
 score:
   band: strong
-  composite: 60.4
+  composite: 59.5
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 64.0
+    artifact_dirs: 27
+    catalog_earned: 61.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 85.5
+    access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 64.4
+    contract_quality: 58.9
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 60.4
+  previous_composite: 61.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -388,8 +402,18 @@ score:
       total: 11
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -413,5 +437,6 @@ tags:
 - Email Warm-up
 - Automation
 - Sequences
+- A2A
 website: https://www.smartlead.ai
 ---

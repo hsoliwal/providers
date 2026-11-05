@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,54 +35,54 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The ccip API from Enso — 2 operation(s) for ccip.
-  name: Enso ccip API
+  name: Enso Ccip API
   slug: enso-ccip-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The cctp API from Enso — 3 operation(s) for cctp.
-  name: Enso cctp API
+  name: Enso Cctp API
   slug: enso-cctp-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The layerzero API from Enso — 4 operation(s) for layerzero.
-  name: Enso layerzero API
+  name: Enso Layerzero API
   slug: enso-layerzero-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The metadata API from Enso — 8 operation(s) for metadata.
-  name: Enso metadata API
+  name: Enso Metadata API
   slug: enso-metadata-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The projects API from Enso — 2 operation(s) for projects.
-  name: Enso projects API
+  name: Enso Projects API
   slug: enso-projects-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The relay API from Enso — 1 operation(s) for relay.
-  name: Enso relay API
+  name: Enso Relay API
   slug: enso-relay-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The shortcuts API from Enso — 5 operation(s) for shortcuts.
-  name: Enso shortcuts API
+  name: Enso Shortcuts API
   slug: enso-shortcuts-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The standards API from Enso — 4 operation(s) for standards.
-  name: Enso standards API
+  name: Enso Standards API
   slug: enso-standards-api
 - baseURL: https://api.enso.finance
   baseurl_source: declared
   description: The wallet API from Enso — 2 operation(s) for wallet.
-  name: Enso wallet API
+  name: Enso Wallet API
   slug: enso-wallet-api
 artifact_total: 22
 collections:
@@ -117,6 +117,10 @@ collections:
   name: Enso ccip wallet API
   slug: open-enso-wallet-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.enso.build/rss/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/enso/refs/heads/main/overlays/enso-openapi-overlay.yaml
   title: ''
@@ -240,14 +244,14 @@ created: '2026-07-17'
 description: Enso is onchain infrastructure that turns DeFi product intent into signer-ready transaction data. Its Route API finds the optimal path between any two tokens or positions across 250+ protocols and multiple chains, while the Bundle API composes ordered onchain Actions (deposit, swap, borrow, bridge, flashloan, transfer and more) into a single executable transaction. Enso also exposes protocol, token, price and balance data, a Quoter for a simulate-then-validate transaction-safety model, cross-chain routing over Stargate/LayerZero, Chainlink CCIP, Relay and Circle CCTP, and prebuilt React widgets (Checkout, cross-chain route). Developers authenticate with a Bearer API key and integrate via the @ensofinance/sdk TypeScript SDK. Backed by Multicoin Capital and Techstars; 100+ apps and 1,900+ developers build on Enso.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/enso.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Enso
 nav: Providers
 network: true
-overview: 'Enso publishes 9 APIs on the [APIs.io](https://apis.io/) network, including ccip API, cctp API, layerzero API, and 6 more. Tagged areas include Company, Crypto Web3, DeFi, Blockchain, and Cross-Chain.
+overview: 'Enso publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ccip API, Cctp API, Layerzero API, and 6 more. Tagged areas include Company, Web3, DeFi, Blockchain, and Cross-Chain.
 
 
-  Enso''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 19 more developer resources.'
+  Enso''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 20 more developer resources.'
 random_paper: 19
 rate_limits:
 - limit_count: 0
@@ -255,7 +259,7 @@ rate_limits:
   slug: enso-rate-limits
 score:
   band: developing
-  composite: 42.9
+  composite: 42.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -263,15 +267,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 50.9
+    contract_quality: 46.1
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 42.9
+  previous_composite: 42.2
   provenance:
     conformance: derived
     contracts:
@@ -281,8 +285,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -300,7 +310,7 @@ security:
 slug: enso
 tags:
 - Company
-- Crypto Web3
+- Web3
 - DeFi
 - Blockchain
 - Cross-Chain
@@ -308,5 +318,6 @@ tags:
 - Transaction Routing
 - Web3 Infrastructure
 - Onchain
+- Cryptocurrency
 website: https://enso.build
 ---

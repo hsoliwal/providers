@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST Data API (V2, May 2024) for programmatic access to U.S. state and federal trial court data — Search (Boolean/query over Cases, Documents, Rulings with filtering and sorting), Rulings, Judges, Usa
@@ -46,6 +46,10 @@ asyncapis:
   name: Trellis Research Webhooks
   slug: trellis-research-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.trellis.law/feed/
 - group: company
   title: ''
   type: Website
@@ -144,21 +148,21 @@ mcp_servers:
 - description: Official remote MCP server from Trellis (trellis.law) exposing litigation research tools over U.S. state, federal, appellate, supreme, and bankruptcy court data — case search, document retrieval, tent
   name: Trellis Law MCP
   slug: trellis-law-mcp
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Trellis Research
 nav: Providers
 network: true
-overview: 'Trellis Research publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Research, Court Records, and Litigation Analytics.
+overview: 'Trellis Research is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Research, Court Records, and Litigation Analytics.
 
 
   The Trellis Research catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Trellis Research''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, changelog, and 13 more developer resources.'
+  Trellis Research''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, changelog, and 14 more developer resources.'
 random_paper: 7
 score:
   band: developing
-  composite: 40.2
+  composite: 40.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -170,16 +174,22 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 40.2
+  previous_composite: 40.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

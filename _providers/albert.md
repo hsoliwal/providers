@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -89,16 +89,16 @@ modified: '2026-07-17'
 name: Albert
 nav: Providers
 network: true
-overview: 'Albert is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Chemistry, Materials Science, and R&D.
+overview: 'Albert is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Chemistry, Materials Science, and R&D.
 
 
   Albert''s developer surface includes engineering blog, signup flow, support, and 8 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 13.1
+  composite: 12.9
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -110,22 +110,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.1
+  previous_composite: 12.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -140,12 +142,12 @@ security:
 slug: albert
 tags:
 - Company
-- Ai Ml
+- Artificial Intelligence
 - Chemistry
 - Materials Science
 - R&D
 - Electronic Lab Notebook
-- Machine-Learning
+- Machine Learning
 - Life Sciences
 - Formulation
 website: https://www.albertinvent.com/

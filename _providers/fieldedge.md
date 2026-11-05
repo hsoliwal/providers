@@ -33,29 +33,39 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: Manage customers, their service locations, and installed equipment records (make, model, age, and service history). Endpoint paths are modeled from FieldEdge's documented Customers & Locations module;
   name: FieldEdge Customers API
+  provenance: modeled
   slug: fieldedge-customers-api
 - description: Create and track work orders (service calls / jobs) through their lifecycle, including status transitions, notes, attachments (photos), and technician signatures captured in the mobile app. Endpoint p
   name: FieldEdge Work Orders API
+  provenance: modeled
   slug: fieldedge-work-orders-api
 - description: Read and manage appointments on the dispatch board - assigning jobs to technicians and viewing scheduled work across technicians and time windows. Endpoint paths are modeled from FieldEdge's documente
   name: FieldEdge Dispatch & Scheduling API
+  provenance: modeled
   slug: fieldedge-dispatch-api
 - description: Generate and retrieve invoices from completed work and record payments, feeding the QuickBooks accounting sync. Endpoint paths are modeled from FieldEdge's documented Invoices/Payments module; the aut
   name: FieldEdge Invoices & Payments API
+  provenance: modeled
   slug: fieldedge-invoices-api
 - description: Manage recurring service agreements (maintenance plans) tied to customers and equipment, including covered visits and renewal tracking. Endpoint paths are modeled from FieldEdge's documented Service A
   name: FieldEdge Service Agreements API
+  provenance: modeled
   slug: fieldedge-service-agreements-api
 - description: Read the flat-rate pricebook of services, parts, and materials used to build quotes and invoices in the field. Endpoint paths are modeled from FieldEdge's documented Pricebook module; the authoritativ
   name: FieldEdge Pricebook API
+  provenance: modeled
   slug: fieldedge-pricebook-api
 artifact_total: 8
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://fieldedge.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/fieldedge/refs/heads/main/security/fieldedge-domain-security.yml
   title: ''
@@ -90,14 +100,14 @@ created: '2026-07-03'
 description: FieldEdge is field service management (FSM) software for HVAC, plumbing, electrical, and other home- and commercial-services contractors, owned by Xplor Technologies (branded "FieldEdge by Xplor"). It provides customer management, dispatching and scheduling, work orders, a technician mobile app, flat-rate pricebook, service agreements, invoicing and payments, and QuickBooks accounting sync. FieldEdge operates a partner-gated API delivered through an Azure API Management developer portal (docs.api.fieldedge.com); API products and keys are restricted to approved integration partners rather than being openly self-serve. The logical APIs listed here are honestly modeled from FieldEdge's documented product modules and its partner/integration surface - endpoint paths are modeled, not copied from a published public reference, because the reference and OpenAPI live behind the partner portal sign-in.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fieldedge.png
 layout: provider
-modified: '2026-07-03'
+modified: '2026-10-06'
 name: FieldEdge
 nav: Providers
 network: true
-overview: 'FieldEdge publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Field Service Management, FSM, HVAC, Plumbing, and Electrical.
+overview: 'FieldEdge is listed with 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Field Service, HVAC, Plumbing, Electrical, and Home Services.
 
 
-  FieldEdge''s developer surface includes documentation, pricing, engineering blog, and 4 more developer resources.'
+  FieldEdge''s developer surface includes documentation, pricing, engineering blog, and 5 more developer resources.'
 plans:
 - name: Fieldedge Plans Pricing
   plan_count: 2
@@ -105,25 +115,31 @@ plans:
 random_paper: 19
 score:
   band: emerging
-  composite: 16.1
+  composite: 11.3
   coverage:
     artifact_dirs: 5
-    catalog_earned: 48.0
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 67.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.7
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 0.0
-  previous_composite: 16.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -137,8 +153,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: fieldedge
 tags:
-- Field Service Management
-- FSM
+- Field Service
 - HVAC
 - Plumbing
 - Electrical

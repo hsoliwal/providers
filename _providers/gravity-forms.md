@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -173,30 +173,30 @@ modified: '2026-09-16'
 name: Gravity Forms
 nav: Providers
 network: true
-overview: 'Gravity Forms publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Entries API, Feeds API, and 3 more. Tagged areas include WordPress, Forms, Form Builder, Surveys, and Workflows.
+overview: 'Gravity Forms publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Entries API, Feeds API, and 4 more. Tagged areas include WordPress, Forms, Form Builder, Surveys, and Workflows.
 
 
   Gravity Forms'' developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 10 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 31.2
+  composite: 30.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 25.0
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.6
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 31.2
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     contracts:
@@ -204,8 +204,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -223,7 +229,7 @@ security:
 - kind: vulnerability-disclosure
   name: Gravity Forms Vulnerability Disclosure
   slug: gravity-forms-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Gravity Forms Trust Center
   slug: gravity-forms-trust-center

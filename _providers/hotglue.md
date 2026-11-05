@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.9
-  scored_at: '2026-09-20'
+  score: 29.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -73,7 +73,7 @@ apis:
   description: Create, retrieve, update, and delete linked connectors for a tenant.
   name: Hotglue Linked Connectors API
   slug: hotglue-linked-connectors-api
-artifact_total: 21
+artifact_total: 22
 collections:
 - collection_type: open
   name: API Collection
@@ -97,6 +97,21 @@ collections:
   name: Hotglue API V2
   slug: open-hotglue
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/plans/hotglue-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/hotglue-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/rate-limits/hotglue-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/hotglue-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/finops/hotglue-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/hotglue-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/agentic-access/hotglue-agentic-access.yml
   title: ''
@@ -161,19 +176,27 @@ common:
 created: '2026-03-16'
 description: Hotglue is an embedded iPaaS platform that enables SaaS products to offer native integrations to their customers. Built on the Python ecosystem, it provides a code-first approach with over 600 open-source connectors, a CLI for programmatic configuration management, detailed job logs, webhooks, and observability integrations. Hotglue allows developers to build flexible, scalable integrations without the lock-in of traditional iPaaS tools.
 finops:
-- name: Hotglue Finops
+- has_sources: false
+  method: generated
+  name: Hotglue Finops
+  primary_unit: ''
   service_category: API
   slug: hotglue-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hotglue.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.hotglue.com over HTTP.
+  name: Hotglue MCP Server
+  slug: hotglue
 modified: '2026-05-19'
 name: Hotglue
 nav: Providers
 network: true
-overview: 'Hotglue publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Connector Metadata API, Connector State API, Discover API, and 2 more. Tagged areas include Connectors, Embedded Integrations, ETL, Integration Platform, and iPaaS.
+overview: 'Hotglue publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connector Metadata API, Connector State API, Discover API, and 3 more. Tagged areas include Connectors, Embedded Integrations, ETL, Integration Platform, and iPaaS.
 
 
-  Hotglue''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, and 9 more developer resources.'
+  Hotglue''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, and 12 more developer resources.'
 plans:
 - name: Hotglue Plans Pricing
   plan_count: 3
@@ -185,23 +208,23 @@ rate_limits:
   slug: hotglue-rate-limits
 score:
   band: thin
-  composite: 35.9
+  composite: 34.0
   coverage:
     artifact_dirs: 13
-    catalog_earned: 46.0
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 40.8
+    access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 53.3
+    contract_quality: 48.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 35.9
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -210,8 +233,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -229,7 +258,7 @@ security:
 - kind: vulnerability-disclosure
   name: Hotglue Vulnerability Disclosure
   slug: hotglue-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Hotglue Trust Center
   slug: hotglue-trust-center

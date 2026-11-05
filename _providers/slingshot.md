@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -72,7 +72,7 @@ overview: 'Slingshot is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 19
 score:
   band: minimal
-  composite: 2.4
+  composite: 0.0
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -85,23 +85,26 @@ score:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
-    discoverability: 50.0
-    operational_transparency: 2.6
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 2.4
+  lifecycle: defunct
+  previous_composite: 0.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -123,5 +126,6 @@ tags:
 - Web3
 - Blockchain
 - Self-Custody
+- Defunct
 website: https://slingshot.finance/
 ---

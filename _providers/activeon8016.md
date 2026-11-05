@@ -23,10 +23,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/activeon8016/refs/heads/main/plans/activeon8016-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/activeon8016-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/activeon8016/refs/heads/main/rate-limits/activeon8016-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/activeon8016-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/activeon8016/refs/heads/main/security/activeon8016-domain-security.yml
   title: ''
@@ -64,7 +74,7 @@ description: 'ACTIVON Co., Ltd. (엑티브온) is a South Korean green-biotechno
 image: https://www.activon.kr/assets/images/common/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: ACTIVON's corporate site (www.activon-global.com) is built on Wix, and Wix serves a per-site Model Context Protocol endpoint at /_api/mcp. The endpoint is live, anonymous, and returned a real tools/li
   name: Wix site MCP endpoint (platform-provided, live)
   slug: wix-site-mcp-endpoint-platform-provided-live
 modified: '2026-09-06'
@@ -74,7 +84,7 @@ network: true
 overview: 'ACTIVON Co., Ltd. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cosmetics, Chemicals, Ingredients, and Materials.
 
 
-  ACTIVON Co., Ltd.''s developer surface includes engineering blog and 6 more developer resources.'
+  ACTIVON Co., Ltd.''s developer surface includes engineering blog and 8 more developer resources.'
 plans:
 - name: Activeon8016 Plans Pricing
   plan_count: 0
@@ -86,9 +96,9 @@ rate_limits:
   slug: activeon8016-rate-limits
 score:
   band: minimal
-  composite: 8.4
+  composite: 7.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -100,7 +110,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -109,17 +119,24 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 8.4
+  previous_composite: 7.8
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/activeon8016/refs/heads/main/screenshots/activeon8016-2026-10-11T092720.png
 security:
 - kind: domain-security
   name: Activeon8016 Domain Security

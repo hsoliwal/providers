@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.blume.com/blogs/blume-university.atom
 - group: company
   title: ''
   type: Website
@@ -104,23 +108,23 @@ description: 'Blume is a women-owned self-care and skincare brand (blume.com) se
 image: https://www.blume.com/cdn/shop/files/Screenshot_2026-06-01_at_11.33.49_AM_1.png?v=1782260453
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.blume.com over HTTP; 5 tools listed.
   name: Blume MCP Server
-  slug: blume-mcp-server
-modified: '2026-07-18'
+  slug: blume-ucp-shopping
+modified: '2026-10-06'
 name: Blume
 nav: Providers
 network: true
 overview: 'Blume is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Skincare, Beauty, Self-Care, and E-Commerce.
 
 
-  Blume''s developer surface includes documentation, engineering blog, support, signup flow, authentication, and 9 more developer resources.'
+  Blume''s developer surface includes documentation, engineering blog, support, signup flow, authentication, and 10 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 21.2
+  composite: 22.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -132,15 +136,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 21.2
+  previous_composite: 22.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

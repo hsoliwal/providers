@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://normunity.com/feed/
 - group: company
   title: ''
   type: Website
@@ -52,7 +56,7 @@ created: '2026-07-17'
 description: Normunity is a clinical-stage biotechnology company developing novel anti-cancer therapies that work at the interface of the immune system and the tumor. In collaboration with the Lieping Chen lab at the Yale School of Medicine, Normunity has identified a novel class of "Immuno-smart targets" — tumor-specific, cell-surface proteins co-opted by cancer cells to drive local immune suppression — and is building a pipeline of biologic medicines including therapeutic antibodies, bispecific antibodies, and payload-carrying biologics. Its lead program, NRM-823, is a T cell engager that has entered clinical trials. Normunity is backed by Canaan Partners. This is a corporate/scientific company with no public API, developer portal, or programmatic surface.
 image: https://normunity.com/wp-content/uploads/2022/10/normunity-logo.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Normunity
 nav: Providers
 network: true
@@ -60,9 +64,9 @@ overview: Normunity is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 1
 score:
   band: minimal
-  composite: 2.2
+  composite: 3.0
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 3
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -74,7 +78,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -82,15 +86,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 2.2
+  previous_composite: 3.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

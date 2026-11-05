@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - description: Redox's modern FHIR API for exchanging clinical and administrative healthcare data across the Redox network using HL7 FHIR resources and notifications, authenticated with OAuth2.
@@ -363,12 +363,12 @@ layout: provider
 mcp_servers:
 - description: 'Redox MCP server: an open, model-agnostic gateway for managing, configuring, monitoring, and automating a Redox organization (built on the Redox Platform API) via any MCP-compatible AI client (Claude,'
   name: Redox MCP Server
-  slug: redox-mcp-server
+  slug: redox
 modified: '2026-08-14'
 name: Redox
 nav: Providers
 network: true
-overview: 'Redox publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Interoperability, FHIR, and EHR.
+overview: 'Redox is listed with 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Interoperability, FHIR, and Electronic Health Records.
 
 
   The Redox catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -391,28 +391,30 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 61.8
+  composite: 57.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 43.0
     catalog_earned_first_party: 8.0
     catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 61.8
+  previous_composite: 57.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -429,9 +431,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 76.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 47.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -472,7 +474,7 @@ tags:
 - Healthcare
 - Interoperability
 - FHIR
-- EHR
+- Electronic Health Records
 - Health Data
 - Integration
 - HL7

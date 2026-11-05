@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.exegy.com/category/insights/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/exegy/refs/heads/main/security/exegy-domain-security.yml
   title: ''
@@ -84,18 +88,18 @@ description: Exegy is a St. Louis-based provider of low-latency market data infr
   with no self-serve API surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/exegy.png
 layout: provider
-modified: '2026-07-22'
+modified: '2026-10-06'
 name: Exegy
 nav: Providers
 network: true
-overview: 'Exegy is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Market Data, Trading, Real-Time, and Low Latency.
+overview: 'Exegy is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Market Data, Trading, Real-Time, and Low Latency.
 
 
-  Exegy''s developer surface includes developer portal, engineering blog, support, and 7 more developer resources.'
+  Exegy''s developer surface includes developer portal, engineering blog, support, and 8 more developer resources.'
 random_paper: 18
 score:
   band: minimal
-  composite: 8.7
+  composite: 9.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -109,22 +113,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 8.7
+  previous_composite: 9.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -138,7 +142,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: exegy
 tags:
-- Financial
+- Finance
 - Market Data
 - Trading
 - Real-Time

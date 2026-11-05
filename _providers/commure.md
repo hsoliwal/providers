@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +26,7 @@ agent_readiness:
     dynamic_client_registration: true
     error_semantics: verified
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.2
-  scored_at: '2026-09-20'
+  score: 39.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api-{tenant-id}.developer.commure.com
@@ -277,7 +278,7 @@ modified: '2026-09-16'
 name: Commure
 nav: Providers
 network: true
-overview: 'Commure publishes 2 APIs on the [APIs.io](https://apis.io/) network: Auth API and FHIR API. Tagged areas include Healthcare, United States, Clinical AI, Ambient AI, and Revenue Cycle Management.
+overview: 'Commure publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Auth API and FHIR API. Tagged areas include Healthcare, United States, Clinical AI, Ambient AI, and Revenue Cycle Management.
 
 
   Commure''s developer surface includes API reference, authentication, sandbox, pricing, signup flow, engineering blog, product news, and 41 more developer resources.'
@@ -297,21 +298,21 @@ scopes:
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 52.3
+  composite: 47.2
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 52.0
+    contract_quality: 46.8
     developer_ergonomics: 33.9
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -320,7 +321,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.3
+  previous_composite: 47.1
   provenance:
     conformance: derived
     contracts:
@@ -335,9 +336,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 82.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 51.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -366,7 +367,7 @@ tags:
 - FHIR
 - SMART on FHIR
 - Interoperability
-- EHR
+- Electronic Health Records
 - Remote Monitoring
 - Health System
 - Terminology Services

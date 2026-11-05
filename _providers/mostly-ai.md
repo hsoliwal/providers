@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 23
+- acting_count: 22
   human_in_the_loop: 0
   name: Mostly Ai Agentic Access
   operation_count: 48
   slug: mostly-ai-agentic-access
-  summary_line: 48 operations · 23 acting
+  summary_line: 48 operations · 22 acting
 api_count: 1
 apis:
 - description: REST API for the hosted MOSTLY AI Platform. Lets you manage connectors, generators, synthetic datasets, and runs. API keys are issued from the user profile menu in the web application.
@@ -140,6 +140,11 @@ collections:
   name: MOSTLY AI Platform REST API
   slug: open-mostly-ai
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mostly-ai/refs/heads/main/capabilities/mostly-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mostly-ai-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -213,19 +218,23 @@ common:
 created: '2026-05-23'
 description: MOSTLY AI provides a synthetic data platform for high-fidelity, privacy-safe tabular data. It ships an open-source Python SDK (mostlyai, Apache 2.0) that runs in LOCAL mode for on-prem training or CLIENT mode against the hosted MOSTLY AI Platform, plus a REST API used by both the SDK and the web app. The SDK is powered by the TabularARGN model architecture and supports differential privacy.
 finops:
-- name: Mostly Ai Finops
+- has_sources: false
+  method: generated
+  name: Mostly Ai Finops
+  primary_unit: ''
   service_category: API
   slug: mostly-ai-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mostly-ai.png
 layout: provider
 modified: '2026-05-23'
 name: MOSTLY AI
 nav: Providers
 network: true
-overview: 'MOSTLY AI publishes 10 APIs on the [APIs.io](https://apis.io/) network, including About API, Computes API, Connectors API, and 7 more. Tagged areas include Synthetic Data, Privacy, Tabular, Differential Privacy, and Python SDK.
+overview: 'MOSTLY AI publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including About API, Computes API, Connectors API, and 9 more. Tagged areas include Synthetic Data, Privacy, Tabular, Differential Privacy, and Python SDK.
 
 
-  MOSTLY AI''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 12 more developer resources.'
+  MOSTLY AI''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 13 more developer resources.'
 plans:
 - name: Mostly Ai Plans Pricing
   plan_count: 1
@@ -237,26 +246,26 @@ rate_limits:
   slug: mostly-ai-rate-limits
 score:
   band: thin
-  composite: 37.5
+  composite: 29.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 56.0
+    artifact_dirs: 12
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.4
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.6
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 42.1
+    discoverability: 66.1
+    operational_transparency: 26.3
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 37.5
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -264,9 +273,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

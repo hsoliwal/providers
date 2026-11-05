@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.quo.com
@@ -119,6 +119,14 @@ collections:
   name: Quo Public Calls Webhooks API
   slug: open-quo-webhooks-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.quo.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.quo.com/blog/feed/
 - group: commercial
   href: https://raw.githubusercontent.com/api-evangelist/quo/refs/heads/main/plans/quo-plans-pricing.yml
   title: ''
@@ -224,41 +232,41 @@ created: '2026-07-17'
 description: Quo (formerly OpenPhone) is an AI-powered business communication platform that unifies calls, texts, and contacts in one shared workspace for startups and small businesses. Its REST Public API (https://api.quo.com/v1) lets developers send and receive SMS, manage contacts, conversations, and tasks, retrieve AI-generated call summaries and transcripts, and subscribe to Standard-Webhooks-signed events for messages and calls. Authentication is via a workspace API key sent in the Authorization header. This profile was added to the API Evangelist network from VC portfolio discovery and enriched from Quo's live developer documentation and published OpenAPI.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quo.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Quo
 nav: Providers
 network: true
-overview: 'Quo publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Contact Custom Fields API, Contacts API, and 6 more. Tagged areas include Company, Communications, Messaging, SMS, and Voice.
+overview: 'Quo publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calls API, Contact Custom Fields API, Contacts API, and 6 more. Tagged areas include Company, Communications, Messaging, SMS, and Voice.
 
 
   The Quo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Quo''s developer surface includes documentation, API reference, getting-started guide, support, pricing, changelog, authentication, and 15 more developer resources.'
+  Quo''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, changelog, and 17 more developer resources.'
 plans:
 - name: Quo Plans Pricing
   plan_count: 2
   slug: quo-plans-pricing
 random_paper: 11
 score:
-  band: strong
-  composite: 55.0
+  band: developing
+  composite: 53.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: 0.5
   facets:
     access_clarity: 57.9
     contract_governance: 4.5
-    contract_quality: 67.1
-    developer_ergonomics: 56.5
-    discoverability: 75.9
+    contract_quality: 61.5
+    developer_ergonomics: 58.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 50.7
+  previous_composite: 52.5
   provenance:
     conformance: derived
     contracts:
@@ -279,9 +287,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 36.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -309,5 +317,9 @@ tags:
 - Voice
 - Contacts
 - Webhook
+- Telephony
+- Business Phone
+- CPaaS
+- Contact Center
 website: https://quo.com
 ---

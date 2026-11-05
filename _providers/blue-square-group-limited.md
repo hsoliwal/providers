@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://market-data.grvt.io
@@ -52,6 +52,14 @@ asyncapis:
   name: Blue Square Group Limited Streams
   slug: blue-square-group-limited-streams
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://grvt.io/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://grvt.io/blog/rss/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/blue-square-group-limited/refs/heads/main/security/blue-square-group-limited-domain-security.yml
   title: ''
@@ -167,37 +175,42 @@ description: Blue Square Group Limited is the corporate entity behind GRVT (pron
   Evangelist network.
 image: https://avatars.githubusercontent.com/u/112316440?v=4
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Blue Square Group Limited
 nav: Providers
 network: true
-overview: 'Blue Square Group Limited publishes 1 API on the [APIs.io](https://apis.io/) network: GRVT Market Data API. Tagged areas include Company, Cryptocurrency, Derivatives Exchange, Trading, and Perpetual Futures.
+overview: 'Blue Square Group Limited is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including GRVT Market Data API, and 1 more. Tagged areas include Company, Cryptocurrency, Derivatives Exchange, Trading, and Perpetual Futures.
 
 
   The Blue Square Group Limited catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Blue Square Group Limited''s developer surface includes documentation, API reference, authentication, sandbox, and 19 more developer resources.'
+  Blue Square Group Limited''s developer surface includes engineering blog, documentation, API reference, authentication, sandbox, and 20 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 31.0
+  composite: 30.2
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 41.6
-    developer_ergonomics: 50.0
-    discoverability: 75.9
+    contract_quality: 39.0
+    developer_ergonomics: 52.4
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 31.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 29.7
   provenance:
     conformance: derived
     mcp: derived
@@ -207,9 +220,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -239,6 +252,6 @@ tags:
 - Market Data
 - Blockchain
 - WebSocket
-- Financial-Services
+- Financial Services
 website: https://grvt.io
 ---

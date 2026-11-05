@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Landbase cloud gateway that landbase-cli calls in platform mode. It backs natural-language audience search and agent runs, dataset upload/lineage/download, record match, synchronous person/company
@@ -44,6 +44,10 @@ apis:
   slug: landbase-platform-api
 artifact_total: 29
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.landbase.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -180,14 +184,14 @@ created: '2026-08-23'
 description: 'Landbase is a Palo Alto, California go-to-market (GTM) data and agentic-AI company whose platform builds, qualifies, enriches and activates B2B audiences from natural-language requests. Its GTM-1/GTM-2 Omni models sit behind a B2B database of 300M+ contacts with 1,500+ enrichment fields, an agentic search surface, lookalike expansion, AI lead qualification, and email/LinkedIn outbound campaign execution. Landbase''s programmable surface is deliberately agent-first rather than REST-first: the documented client is `landbase-cli`, a self-updating binary distributed from cli.landbase.com that talks to the cloud gateway at api.landbase.com, returns JSON on stdout and stable error codes on stderr, and ships a library of provider-authored Agent Skills for Claude Code and Codex. No OpenAPI description of the gateway is published; the gateway itself sits behind a Cloudflare bot challenge on every path except /.well-known/.'
 image: https://cdn.prod.website-files.com/663db35157fcd223250841ff/665df6511f919f2ee06412ee_webclip-landbase.png
 layout: provider
-modified: '2026-08-23'
+modified: '2026-10-06'
 name: Landbase
 nav: Providers
 network: true
-overview: 'Landbase publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Go-To-Market, Sales, Marketing, and B2B Data.
+overview: 'Landbase is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Go-To-Market, Sales, Marketing, and B2B Data.
 
 
-  Landbase''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 22 more developer resources.'
+  Landbase''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 23 more developer resources.'
 plans:
 - name: Landbase Plans Pricing
   plan_count: 4
@@ -199,7 +203,7 @@ rate_limits:
   slug: landbase-rate-limits
 score:
   band: developing
-  composite: 44.3
+  composite: 45.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 61.0
@@ -213,15 +217,21 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 44.3
+  previous_composite: 45.8
   provenance:
     conformance: first-party
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -32,14 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 12
+- acting_count: 11
   human_in_the_loop: 0
   name: Meter Agentic Access
   operation_count: 28
   slug: meter-agentic-access
-  summary_line: 28 operations · 12 acting
+  summary_line: 28 operations · 11 acting
 api_count: 1
 apis:
 - baseURL: https://mainnet.meter.io
@@ -250,7 +250,7 @@ modified: '2026-07-20'
 name: Meter
 nav: Providers
 network: true
-overview: 'Meter publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Blocks API, Debug API, and 5 more. Tagged areas include Blockchain, Web3, Cryptocurrency, Layer 1, and EVM.
+overview: 'Meter publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Blocks API, Debug API, and 5 more. Tagged areas include Blockchain, Web3, Cryptocurrency, Layer 1, and EVM.
 
 
   The Meter catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -260,7 +260,7 @@ overview: 'Meter publishes 8 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 13
 score:
   band: thin
-  composite: 36.1
+  composite: 34.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -268,15 +268,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 47.8
+    contract_quality: 43.8
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 36.1
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -287,8 +287,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -309,5 +315,6 @@ tags:
 - Cross-Chain Bridge
 - Staking
 - Developer Tools
+- Real-Time
 website: https://www.meter.io/
 ---

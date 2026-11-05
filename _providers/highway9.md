@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Mobile Center APIs from Highway 9 Networks enable partners to integrate configuration, device management, monitoring, analytics, and operational workflows with the Virtual Mobile Cloud platform. Resou
@@ -105,14 +105,14 @@ modified: '2026-07-19'
 name: Highway9
 nav: Providers
 network: true
-overview: 'Highway9 publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, 5G, Private Mobile Networks, and Wireless.
+overview: 'Highway9 is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, 5G, Private Mobile Networks, and Wireless.
 
 
   Highway9''s developer surface includes documentation, API reference, engineering blog, support, product news, authentication, and 7 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 18.7
+  composite: 18.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -126,17 +126,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 0.0
-  previous_composite: 18.7
+  previous_composite: 18.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

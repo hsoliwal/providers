@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
@@ -32,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 61.0
-  scored_at: '2026-09-20'
+  score: 58.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -67,7 +68,7 @@ arazzos:
 - description: List unresolved issues, fetch the top one, and mark it resolved.
   name: Lucent — triage and resolve an issue
   slug: lucent-triage-and-resolve
-artifact_total: 16
+artifact_total: 17
 asyncapis:
 - description: Lucent pushes signed HTTP callbacks to a receiver URL you register (Organization → Webhooks) when events happen in your organization. Deliveries are signed with HMAC-SHA256 (Lucent-Signature) and carr
   name: Lucent Webhooks
@@ -89,6 +90,16 @@ collections:
   name: Lucent Insights Signals API
   slug: open-lucent-signals-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/lucent/refs/heads/main/plans/lucent-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/lucent-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lucent/refs/heads/main/capabilities/lucent-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lucent-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lucent/refs/heads/main/agentic-access/lucent-agentic-access.yml
   title: ''
@@ -261,20 +272,24 @@ description: 'Lucent is an AI product manager for session replay: it watches use
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lucent.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.lucenthq.com over HTTP; 5 tools listed.
   name: Lucent MCP Server
-  slug: lucent-mcp-server
+  slug: lucent
 modified: '2026-07-20'
 name: Lucent
 nav: Providers
 network: true
-overview: 'Lucent publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Insights API, Issues API, Sdk API, and 1 more. Tagged areas include Company, Session Replay, Product Analytics, Bug Detection, and Observability.
+overview: 'Lucent publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Insights API, Issues API, Sdk API, and 1 more. Tagged areas include Company, Session Replay, Product Analytics, Bug Detection, and Observability.
 
 
   The Lucent catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lucent''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, pricing, and 29 more developer resources.'
+  Lucent''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, pricing, and 31 more developer resources.'
+plans:
+- name: Lucent Plans Pricing
+  plan_count: 3
+  slug: lucent-plans-pricing
 random_paper: 13
 scopes:
 - name: Lucent Scopes
@@ -282,24 +297,24 @@ scopes:
   slug: lucent-scopes
   summary_line: 2 scopes
 score:
-  band: developing
-  composite: 49.7
+  band: strong
+  composite: 57.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 25
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 62.9
+    contract_quality: 57.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 49.7
+  previous_composite: 50.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -310,9 +325,15 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

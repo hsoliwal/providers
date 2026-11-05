@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 14
+- acting_count: 11
   human_in_the_loop: 0
   name: Halo Connect Agentic Access
   operation_count: 29
   slug: halo-connect-agentic-access
-  summary_line: 29 operations · 14 acting
+  summary_line: 29 operations · 11 acting
 api_count: 2
 apis:
 - baseURL: https://api.haloconnect.io
@@ -247,7 +247,7 @@ modified: '2026-07-24'
 name: Halo Connect
 nav: Providers
 network: true
-overview: 'Halo Connect publishes 5 APIs on the [APIs.io](https://apis.io/) network, including FHIR API, Registered Queries API, Sites API, and 2 more. Tagged areas include Healthcare, Australia, FHIR, HL7, and Interoperability.
+overview: 'Halo Connect publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including FHIR API, Registered Queries API, Sites API, and 2 more. Tagged areas include Healthcare, Australia, FHIR, HL7, and Interoperability.
 
 
   The Halo Connect catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -256,8 +256,8 @@ overview: 'Halo Connect publishes 5 APIs on the [APIs.io](https://apis.io/) netw
   Halo Connect''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, changelog, sandbox, and 27 more developer resources.'
 random_paper: 1
 score:
-  band: strong
-  composite: 57.0
+  band: developing
+  composite: 53.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -269,9 +269,9 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 63.9
+    contract_quality: 59.8
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -280,7 +280,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 57.0
+  previous_composite: 53.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -296,9 +296,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 51.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -328,7 +328,7 @@ tags:
 - FHIR
 - HL7
 - Interoperability
-- EHR
+- Electronic Health Records
 - Practice Management
 - Primary Care
 - AU Base

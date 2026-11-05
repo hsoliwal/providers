@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -44,7 +44,7 @@ agentic_access:
   operation_count: 53
   slug: fifth-third-bancorp-agentic-access
   summary_line: 53 operations · 19 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://sandbox.newline53.com/api/v1
   baseurl_source: declared
@@ -121,6 +121,10 @@ collections:
   name: Newline Platform API
   slug: open-newline-platform-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.53.com/blog/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/fifth-third-bancorp/refs/heads/main/capabilities/fifth-third-bancorp-capability-edges.yml
   title: ''
@@ -286,20 +290,20 @@ description: 'Fifth Third Bancorp is a diversified super-regional financial serv
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fifth-third-bancorp.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 34 tools listed.
   name: Fifth Third Bancorp MCP Server
-  slug: fifth-third-bancorp-mcp-server
-modified: '2026-07-23'
+  slug: newline
+modified: '2026-10-06'
 name: Fifth Third Bancorp
 nav: Providers
 network: true
-overview: 'Fifth Third Bancorp publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Combined Transfers API, Custodial Accounts API, and 10 more. Tagged areas include Banking, United States, Embedded Finance, Banking as a Service, and Payments.
+overview: 'Fifth Third Bancorp publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Combined Transfers API, Custodial Accounts API, and 10 more. Tagged areas include Banking, United States, Embedded Finance, Banking as a Service, and Payments.
 
 
   The Fifth Third Bancorp catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Fifth Third Bancorp''s developer surface includes authentication, documentation, changelog, sandbox, getting-started guide, and 30 more developer resources.'
+  Fifth Third Bancorp''s developer surface includes engineering blog, authentication, documentation, changelog, sandbox, getting-started guide, and 30 more developer resources.'
 press:
 - date: ''
   title: Fifth Third Bancorp Investor Meetings
@@ -319,21 +323,21 @@ press:
 random_paper: 7
 score:
   band: developing
-  composite: 40.4
+  composite: 41.0
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 29.0
+    artifact_dirs: 26
+    catalog_earned: 37.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 86.0
+    catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 5.3
     contract_governance: 4.5
-    contract_quality: 63.7
-    developer_ergonomics: 61.9
-    discoverability: 61.1
+    contract_quality: 58.5
+    developer_ergonomics: 64.3
+    discoverability: 75.0
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -342,7 +346,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.4
+  previous_composite: 40.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -358,9 +362,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 29.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

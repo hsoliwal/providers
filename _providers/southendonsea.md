@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -22,17 +22,21 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.7
-  scored_at: '2026-09-20'
+  score: 24.2
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://southendonsea.city/
-  baseurl_source: declared
+  baseurl_source: spec
   description: Current and archived source-linked city observations
   name: SouthendOnSea.city Southend Now API
   slug: southendonsea-southend-now-api
 artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://southendonsea.city/feed.xml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/southendonsea/refs/heads/main/well-known/southendonsea-well-known.yml
   title: ''
@@ -116,17 +120,17 @@ examples:
 image: https://southendonsea.city/southend-city-email-brand.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 3 tools listed. A candidate, not confirmed as published by the provider.
   name: SouthendOnSea.city MCP Server
-  slug: southendonseacity-mcp-server
-modified: '2026-09-03'
+  slug: southendonsea-mcp-yml
+modified: '2026-10-06'
 name: SouthendOnSea.city
 nav: Providers
 network: true
-overview: 'SouthendOnSea.city publishes 1 API on the [APIs.io](https://apis.io/) network: Southend Now API. Tagged areas include Open Data, Southend-on-Sea, Weather, Environment, and local data.
+overview: 'SouthendOnSea.city publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Southend Now API. Tagged areas include Open Data, Southend-on-Sea, Weather, Environment, and local data.
 
 
-  SouthendOnSea.city''s developer surface includes authentication, support, documentation, and 13 more developer resources.'
+  SouthendOnSea.city''s developer surface includes authentication, support, documentation, and 14 more developer resources.'
 plans:
 - name: Southendonsea Plans Pricing
   plan_count: 0
@@ -138,23 +142,23 @@ rate_limits:
   slug: southendonsea-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 30.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 19
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 47.6
+    contract_quality: 43.1
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 35.0
+  previous_composite: 30.7
   provenance:
     conformance: derived
     contracts:
@@ -169,9 +173,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

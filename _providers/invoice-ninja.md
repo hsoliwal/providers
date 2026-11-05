@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 29
+- acting_count: 23
   human_in_the_loop: 0
   name: Invoice Ninja Agentic Access
   operation_count: 44
   slug: invoice-ninja-agentic-access
-  summary_line: 44 operations · 29 acting
+  summary_line: 44 operations · 23 acting
 api_count: 1
 apis:
 - baseURL: https://invoicing.co
@@ -133,6 +133,11 @@ collections:
   name: Invoice Ninja v5 API
   slug: open-invoice-ninja
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/invoice-ninja/refs/heads/main/capabilities/invoice-ninja-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/invoice-ninja-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/invoice-ninja/refs/heads/main/agentic-access/invoice-ninja-agentic-access.yml
   title: ''
@@ -188,16 +193,16 @@ modified: '2026-05-11'
 name: Invoice Ninja
 nav: Providers
 network: true
-overview: 'Invoice Ninja publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Authentication API, Bank Integrations API, and 7 more. Tagged areas include Invoicing, Billing, Payments, Accounting, and Open-Source.
+overview: 'Invoice Ninja publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, Authentication API, Bank Integrations API, and 7 more. Tagged areas include Invoicing, Billing, Payments, Accounting, and Open Source.
 
 
-  Invoice Ninja''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, and 6 more developer resources.'
+  Invoice Ninja''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, and 7 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 28.8
+  composite: 28.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -207,11 +212,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 53.6
+    contract_quality: 48.6
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 28.8
+  previous_composite: 28.0
   provenance:
     agentic_access: derived
     contracts:
@@ -224,9 +229,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -247,8 +252,8 @@ tags:
 - Billing
 - Payments
 - Accounting
-- Open-Source
+- Open Source
 - Freelancers
-- SMB
+- Small Business
 website: https://www.invoiceninja.com
 ---

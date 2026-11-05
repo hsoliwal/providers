@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -32,7 +32,7 @@ agentic_access:
   operation_count: 0
   slug: drillr-agentic-access
   summary_line: 0 operations
-api_count: 1
+api_count: 2
 apis:
 - description: Hosted Streamable HTTP MCP server (drillr-data) exposing the same financial data as ~10 agent-callable tools covering discovery, filings, signals and arbitrary SQL. Browser OAuth auth, no API key need
   name: drillr Data MCP Server
@@ -92,7 +92,7 @@ apis:
   description: Industry inflections, enterprise AI adoption and cross-source news search
   name: drillr Public Data API Signal API
   slug: drillr-signal-api
-artifact_total: 19
+artifact_total: 18
 common:
 - group: company
   title: ''
@@ -224,19 +224,16 @@ description: 'drillr is a financial data and research API for the US, China and 
 layout: provider
 mcp_servers:
 - description: ''
-  name: drillr Public Data API MCP Server
-  slug: drillr-public-data-api-mcp-server
-- description: 'Hosted Streamable HTTP MCP server exposing drillr''s financial-research data as agent-callable tools: ticker resolution, qualitative company search, SEC filing discovery and full-text filing search, cr'
-  name: drillr Public Data API MCP Server
-  slug: drillr-public-data-api-mcp-server-2
+  name: drillr MCP Server
+  slug: data
 modified: '2026-09-14'
-name: drillr Public Data API
+name: drillr
 nav: Providers
 network: true
-overview: 'drillr Public Data API publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Analyst API, Company API, Contract API, and 8 more. Tagged areas include Financial Data, Stocks, SEC Filings, Fundamentals, and Earnings.
+overview: 'drillr publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Public Data API Analyst API, Public Data API Company API, Public Data API Contract API, and 9 more. Tagged areas include Financial Data, Stocks, SEC Filings, Fundamentals, and Earnings.
 
 
-  drillr Public Data API''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, changelog, authentication, and 20 more developer resources.'
+  drillr''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, changelog, authentication, and 20 more developer resources.'
 plans:
 - name: Drillr Plans Pricing
   plan_count: 4
@@ -247,10 +244,10 @@ rate_limits:
   name: Drillr Rate Limits
   slug: drillr-rate-limits
 score:
-  band: strong
-  composite: 55.3
+  band: developing
+  composite: 52.5
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 25
     catalog_earned: 55.0
     catalog_earned_first_party: 20.0
     catalog_gap: 60.0
@@ -260,11 +257,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 18.2
-    contract_quality: 59.7
+    contract_quality: 53.8
     developer_ergonomics: 58.9
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 55.3
+  previous_composite: 52.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -280,13 +277,14 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://raw.githubusercontent.com/api-evangelist/drillr/refs/heads/main/screenshots/drillr-2026-10-11T103916.png
 security:
 - kind: authentication
   name: Drillr Authentication
@@ -308,6 +306,6 @@ tags:
 - Analyst Ratings
 - news-signals
 - MCP
-- agent-native
+- Agent-Native
 website: https://drillr.ai
 ---

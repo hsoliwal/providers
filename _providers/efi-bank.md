@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 22.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -109,6 +109,10 @@ collections:
   name: Efí (formerly Gerencianet) Payments API
   slug: open-efi-bank
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://sejaefi.com.br/blog
 - group: commercial
   title: ''
   type: Pricing
@@ -163,19 +167,23 @@ common:
 created: '2026-07-12'
 description: Efí (formerly Gerencianet) is a Brazilian payment institution and digital bank that exposes well-documented public REST APIs for the Brazilian financial system - Pix (immediate and dated charges, send/receive, refunds, webhooks), Boletos and Charges (Cobranças), Carnê installment booklets, subscriptions and payment links, Pix via Open Finance, and account financial services. Pix and Open Finance APIs require OAuth2 client-credentials plus a mutual TLS (mTLS) client certificate as mandated by the Brazilian Central Bank; the Cobranças API uses OAuth2 without mTLS.
 finops:
-- name: Efi Bank Finops
+- has_sources: true
+  method: generated
+  name: Efi Bank Finops
+  primary_unit: ''
   service_category: Financial Services and Payments
   slug: efi-bank-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/efi-bank.png
 layout: provider
-modified: '2026-07-12'
+modified: '2026-10-06'
 name: Efí
 nav: Providers
 network: true
-overview: 'Efí publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Carnê API, Cobranças API, and 4 more. Tagged areas include Payments, Pix, Boleto, Banking, and Brazil.
+overview: 'Efí publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorization API, Carnê API, Cobranças API, and 4 more. Tagged areas include Payments, Pix, Boleto, Banking, and Brazil.
 
 
-  Efí''s developer surface includes pricing, authentication, documentation, and 8 more developer resources.'
+  Efí''s developer surface includes engineering blog, pricing, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Efi Bank Plans Pricing
   plan_count: 17
@@ -190,22 +198,22 @@ rate_limits:
   slug: efi-bank-rate-limits
 score:
   band: thin
-  composite: 37.8
+  composite: 32.7
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
+    artifact_dirs: 13
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 51.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: -3.8
   facets:
-    access_clarity: 50.0
+    access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 56.9
-    developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 31.6
+    contract_quality: 51.3
+    developer_ergonomics: 31.0
+    discoverability: 66.1
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -213,7 +221,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 35.7
+  previous_composite: 36.5
   provenance:
     agentic_access: derived
     contracts:
@@ -226,9 +234,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 15.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

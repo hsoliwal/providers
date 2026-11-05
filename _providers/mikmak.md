@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: MikMak Aura provides real-time intelligence, fueled by AI, to connect marketing spend across channels to actual sales performance at retailers.
@@ -101,7 +101,7 @@ apis:
   description: The Shoppable Recipe Reports API from MikMak — 4 operation(s) for shoppable recipe reports.
   name: MikMak Shoppable Recipe Reports API
   slug: mikmak-shoppable-recipe-reports-api
-artifact_total: 25
+artifact_total: 24
 collections:
 - collection_type: open
   name: Commerce API (v1)
@@ -110,6 +110,21 @@ collections:
   name: MikMak Insights API
   slug: open-mikmak-insights-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mikmak/refs/heads/main/plans/mikmak-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/mikmak-plans-pricing.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mikmak/refs/heads/main/finops/mikmak-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/mikmak-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mikmak/refs/heads/main/capabilities/mikmak-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mikmak-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -295,26 +310,27 @@ common:
 created: '2025-02-21'
 description: MikMak is an eCommerce enablement and analytics platform for multichannel brands, converting shoppers across social media, retail media, brand-owned websites, search, CTV, display and QR codes. The platform pairs a Headless Commerce API — product lookup, retailer availability, offers, carts and experience configuration across a global retailer network — with the MikMak Insights reporting API that pushes purchase-intent and attributable-sales data into data lakes and BI tools, and a hosted Model Context Protocol server that exposes the same commerce surface to AI agents. MikMak acquired the French shoppable-media company Swaven in 2021, whose where-to-buy tag technology still powers the brand.com widget and whose name persists in the platform's asset hosts.
 finops:
-- name: Mikmak Finops
+- has_sources: false
+  method: generated
+  name: Mikmak Finops
+  primary_unit: ''
   service_category: API
   slug: mikmak-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mikmak.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over streamable HTTP; 3 tools listed.
   name: MikMak Commerce MCP Server
   slug: mikmak-commerce-mcp-server
-- description: ''
-  name: MikMak MCP Server
-  slug: mikmak-mcp-server
 modified: '2026-09-16'
 name: MikMak
 nav: Providers
 network: true
-overview: 'MikMak publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Availabilities API, Cart API, and 8 more. Tagged areas include Analytics, Commerce, E-Commerce, Multi-Channel, and Retail Media.
+overview: 'MikMak publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Availabilities API, Cart API, and 11 more. Tagged areas include Analytics, Commerce, E-Commerce, Multi-Channel, and Retail Media.
 
 
-  MikMak''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 33 more developer resources.'
+  MikMak''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 36 more developer resources.'
 plans:
 - name: Mikmak Plans Pricing
   plan_count: 0
@@ -326,28 +342,28 @@ rate_limits:
   slug: mikmak-rate-limits
 scopes:
 - name: Mikmak Scopes
-  scope_count: 0
+  scope_count: 1
   slug: mikmak-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 46.3
+  composite: 47.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 50.0
+    artifact_dirs: 26
+    catalog_earned: 47.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 65.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 51.3
+    access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 41.1
-    discoverability: 72.2
+    discoverability: 68.3
     operational_transparency: 50.0
-  previous_composite: 46.3
+  previous_composite: 48.6
   provenance:
     conformance: derived
     contracts:
@@ -357,8 +373,14 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 43.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -388,8 +410,8 @@ tags:
 - Shoppable Media
 - Product Availability
 - MCP
-- agent-native
+- Agent-Native
 - Reporting
-- CPG
+- Consumer Packaged Goods
 website: https://www.mikmak.com
 ---

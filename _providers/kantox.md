@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.kantox.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -99,18 +103,18 @@ created: '2026-07-17'
 description: Kantox is a foreign-exchange (FX) risk management and Currency Management Automation software company, headquartered in London and Barcelona and part of BNP Paribas. Its flagship platform, Kantox Dynamic Hedging, automates the full pre-trade, trade and post-trade FX workflow — exposure collection, rules-based hedge execution, dynamic pricing with live mid-market rates across 130+ currencies, and end-to-end reporting. Companies connect their ERP, TMS or trading systems (SAP, Oracle, Microsoft Dynamics, NetSuite, 360T, FXall) to Kantox through a REST API or SFTP, using API calls and webhooks to submit forecasts, orders and invoices and to receive real-time FX and pricing updates. Kantox is authorised by the UK Financial Conduct Authority (FCA) and regulated by the Bank of Spain.
 image: https://cdn.prod.website-files.com/64edc13853bc14e5e1b0aa0b/64edc30eb8df7487049d6bbb_webclip.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kantox
 nav: Providers
 network: true
 overview: 'Kantox is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Currency Management, Foreign Exchange, FX Risk Management, and Treasury.
 
 
-  Kantox''s developer surface includes documentation, engineering blog, support, and 11 more developer resources.'
+  Kantox''s developer surface includes documentation, engineering blog, support, and 12 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 20.5
+  composite: 19.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -124,23 +128,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 20.5
+  previous_composite: 19.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -169,7 +175,7 @@ tags:
 - Treasury
 - Hedging
 - Fintech
-- Financial-Services
+- Financial Services
 - Payments
 website: https://www.kantox.com/
 ---

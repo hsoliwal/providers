@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Sensu Go backend REST API for managing observability resources: checks, events, entities, filters, handlers, mutators, hooks, pipelines, assets, silences, namespaces, roles, role bindings, cluster'
@@ -112,16 +112,16 @@ modified: '2026-07-21'
 name: Sensu
 nav: Providers
 network: true
-overview: 'Sensu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Monitoring, Observability, Infrastructure, and DevOps.
+overview: 'Sensu is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Monitoring, Observability, Infrastructure, and DevOps.
 
 
   Sensu''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 8 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 35.4
+  composite: 36.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -133,14 +133,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 35.4
+  previous_composite: 36.5
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

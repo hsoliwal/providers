@@ -34,40 +34,86 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 6
+- acting_count: 7
   human_in_the_loop: 0
   name: Google Search Console Agentic Access
-  operation_count: 10
+  operation_count: 13
   slug: google-search-console-agentic-access
-  summary_line: 10 operations · 6 acting
+  summary_line: 13 operations · 7 acting
 api_count: 5
 apis:
 - baseURL: https://searchconsole.googleapis.com
   baseurl_source: declared
   description: Query search traffic data for your site. Retrieve impressions, clicks, click-through rate, and average position grouped by dimensions such as query, page, country, device, search type, and date.
   name: Google Search Console Search Analytics API
+  phrasing_intents:
+  - id: querySearchAnalytics
+    intent: Query search traffic clicks and impressions
+    question: Which search queries brought the most clicks to my site last month?
+  phrasing_ops: 1
   slug: google-search-console-search-analytics-api
 - baseURL: https://searchconsole.googleapis.com
   baseurl_source: declared
   description: Submit and manage sitemaps and sitemap indexes for your site. List submitted sitemaps, check their processing status, submit new sitemaps, and delete previously submitted sitemaps.
   name: Google Search Console Sitemaps API
+  phrasing_intents:
+  - id: listSitemaps
+    intent: List the sitemaps submitted for a site
+    question: Which sitemaps has Google picked up for my site, including ones found through robots.txt?
+  - id: getSitemap
+    intent: Check the status of one sitemap
+    question: Did Google report errors or warnings when it processed my sitemap?
+  - id: submitSitemap
+    intent: Submit or resubmit a sitemap
+    question: How do I tell Google about a new sitemap for my site?
+  - id: deleteSitemap
+    intent: Remove a sitemap from Search Console
+    question: How do I remove an old sitemap from my Search Console list?
+  phrasing_ops: 4
   slug: google-search-console-sitemaps-api
 - baseURL: https://searchconsole.googleapis.com
   baseurl_source: declared
   description: Manage site-level access and verification. List verified sites, get details about a specific site, add new sites, and remove sites from your Search Console account.
   name: Google Search Console Sites API
+  phrasing_intents:
+  - id: listSites
+    intent: List my Search Console properties
+    question: Which websites do I have access to in Search Console?
+  - id: getSite
+    intent: Check my permission level on a site
+    question: What permission level do I have on a particular Search Console property?
+  - id: addSite
+    intent: Add a site to Search Console
+    question: How do I add a new website or domain property to my Search Console account?
+  - id: deleteSite
+    intent: Remove a site from Search Console
+    question: How can I take a property off my Search Console site list?
+  phrasing_ops: 4
   slug: google-search-console-sites-api
 - baseURL: https://searchconsole.googleapis.com
   baseurl_source: declared
   description: Inspect individual URLs to retrieve detailed indexing, crawling, and serving information. Check whether a URL is indexed, view crawl details, mobile usability status, and rich results eligibility.
   name: Google Search Console URL Inspection API
+  phrasing_intents:
+  - id: inspectUrl
+    intent: Inspect a URL's index status
+    question: Is a specific page on my site indexed by Google, and when was it last crawled?
+  phrasing_ops: 1
   slug: google-search-console-url-inspection-api
 - baseURL: https://searchconsole.googleapis.com
   baseurl_source: declared
   description: The urlNotifications API from Google Search Console — 2 operation(s) for urlnotifications.
   name: Google Search Console URL Notifications API
+  phrasing_intents:
+  - id: indexing_urlNotifications_publish
+    intent: Notify Google a URL was updated or deleted
+    question: How do I tell Google's Indexing API that a page on my site just changed?
+  - id: indexing_urlNotifications_getMetadata
+    intent: Get Indexing API notification metadata for a URL
+    question: What was the latest Indexing API notification Google received for my page?
+  phrasing_ops: 2
   slug: google-search-console-urlnotifications-api
 - baseURL: https://searchconsole.googleapis.com
   baseurl_source: declared
@@ -410,9 +456,13 @@ features:
 - description: Manage site ownership verification and access permissions for Search Console properties.
   name: Site Verification
 finops:
-- name: Google Search Console Finops
+- has_sources: true
+  method: generated
+  name: Google Search Console Finops
+  primary_unit: ''
   service_category: SEO / Search Tools
   slug: google-search-console-finops
+  template: false
 image: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
 integrations:
 - description: Combine Search Console data with Google Analytics for comprehensive website performance analysis.
@@ -566,7 +616,7 @@ modified: '2026-08-13'
 name: Google Search Console
 nav: Providers
 network: true
-overview: 'Google Search Console publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Search Analytics API, Sitemaps API, Sites API, and 3 more. Tagged areas include Analytics, Google, Indexing, Search, and Search Analytics.
+overview: 'Google Search Console publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Search Analytics API, Sitemaps API, Sites API, and 3 more. Tagged areas include Analytics, Google, Indexing, Search, and Search Analytics.
 
 
   The Google Search Console catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -583,9 +633,10 @@ rate_limits:
   name: Google Search Console Rate Limits
   slug: google-search-console-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Google Search Console API Rules
+  name: Google Search Console — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -593,7 +644,8 @@ rules:
     info: 2
     warn: 4
   slug: google-search-console-jsonschema-spectral-rules
-- effective_rule_count: 58
+- authorship: generated
+  effective_rule_count: 58
   extends:
   - spectral:oas
   name: Google Search Console API Rules
@@ -611,23 +663,23 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 66.8
+  composite: 67.2
   coverage:
     artifact_dirs: 32
-    catalog_earned: 78.5
+    catalog_earned: 74.9
     catalog_earned_first_party: 20.0
-    catalog_gap: 36.5
+    catalog_gap: 40.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 73.7
+    access_clarity: 65.8
     contract_governance: 18.2
-    contract_quality: 69.7
+    contract_quality: 63.4
     developer_ergonomics: 75.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 76.3
-  previous_composite: 66.8
+  previous_composite: 68.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -638,8 +690,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

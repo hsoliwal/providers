@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 4
@@ -170,6 +170,11 @@ collections:
   name: Border0 Audit Actions Users API
   slug: open-border0-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/border0/refs/heads/main/capabilities/border0-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/border0-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/border0/refs/heads/main/overlays/border0-openapi-overlay.yaml
   title: ''
@@ -319,30 +324,30 @@ modified: '2026-07-18'
 name: Border0
 nav: Providers
 network: true
-overview: 'Border0 publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Audit Actions API, Client API, Connect API, and 12 more. Tagged areas include Zero Trust, Network Access, Security, Identity and Access Management, and Infrastructure.
+overview: 'Border0 publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit Actions API, Client API, Connect API, and 12 more. Tagged areas include Zero Trust, Network Access, Security, Identity and Access Management, and Infrastructure.
 
 
-  Border0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 24 more developer resources.'
+  Border0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 25 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 45.3
+  composite: 46.0
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.7
+    contract_quality: 49.4
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 45.3
+  previous_composite: 45.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -353,8 +358,14 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

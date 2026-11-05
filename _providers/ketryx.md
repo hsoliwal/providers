@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -66,6 +66,10 @@ collections:
   name: Ketryx Build Artifacts Builds API
   slug: open-ketryx-builds-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.ketryx.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -181,20 +185,20 @@ created: '2026-07-17'
 description: Ketryx is an AI-native application lifecycle management (ALM) and compliance platform for regulated medical-device and life-sciences software teams. It integrates with developer tools such as Jira and GitHub to automate the documentation, traceability, and quality-management work required by FDA, EU MDR, ISO 13485, ISO 14971, and IEC 62304, keeping teams continuously audit-ready. Capabilities include automated Design and Development File generation, requirement-risk-code-test traceability, agentic AI for repetitive compliance tasks, ISO 14971 risk management, software bill-of-materials (SBOM) and vulnerability tracking, QMS enforcement, and change-impact assessment. Ketryx exposes a public Build API that lets CI/CD pipelines report builds, JUnit / Cucumber test results, build artifacts, and CycloneDX / SPDX SBOM documents into a project, via a first-party GitHub Action and Python utility. The company is backed by Lightspeed Venture Partners.
 image: https://www.ketryx.com/favicon.ico
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Ketryx
 nav: Providers
 network: true
-overview: 'Ketryx publishes 2 APIs on the [APIs.io](https://apis.io/) network: Artifacts API and Builds API. Tagged areas include Company, Medical Devices, Life Sciences, Compliance, and Regulatory.
+overview: 'Ketryx publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Artifacts API and Builds API. Tagged areas include Company, Medical Devices, Life Sciences, Compliance, and Regulatory.
 
 
-  Ketryx''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, authentication, and 18 more developer resources.'
+  Ketryx''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, authentication, and 19 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 35.5
+  composite: 33.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -206,9 +210,9 @@ score:
     contract_governance: 18.2
     contract_quality: 14.3
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 35.5
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -228,9 +232,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

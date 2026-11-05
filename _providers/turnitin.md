@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: RESTful API for integrating Turnitin's integrity services into third-party platforms — submit a document, generate a Similarity Report, and display it to users. Authenticates with an integration-insta
@@ -154,6 +154,10 @@ common:
   title: ''
   type: LLMsTxt
   url: llms/turnitin-llms.txt
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://developers.turnitin.com/turnitin-core-api/documentation
 created: '2026-07-17'
 description: Turnitin is an academic and research integrity company that for more than 20 years has provided plagiarism/similarity detection, AI-writing detection, online grading, and feedback tools for educators, researchers, and publishers. Its market-leading integrity services are exposed to third-party platforms through the RESTful Turnitin Core API (TCA), which lets an integrating product submit a document, generate a Similarity Report, and display it to users without leaving the host platform, plus a Learning Tools Interoperability (LTI) path for LMS integrations. TCA is SOC2 compliant and runs across international data centers. Turnitin was surfaced as a portfolio company of Norwest Venture Partners and enriched into the API Evangelist network from its public developer documentation.
 image: https://www.turnitin.com/themes/turnitin/img/turnitin-icon-rgb.jpg
@@ -162,30 +166,30 @@ modified: '2026-07-21'
 name: Turnitin
 nav: Providers
 network: true
-overview: 'Turnitin publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Academic Integrity, and Plagiarism Detection.
+overview: 'Turnitin is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Academic Integrity, and Plagiarism Detection.
 
 
-  Turnitin''s developer surface includes documentation, API reference, support, engineering blog, authentication, sandbox, and 18 more developer resources.'
+  Turnitin''s developer surface includes documentation, API reference, support, engineering blog, authentication, sandbox, and 19 more developer resources.'
 random_paper: 13
 score:
-  band: developing
-  composite: 40.5
+  band: thin
+  composite: 35.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 40.5
+  previous_composite: 35.8
   provenance:
     conformance: first-party
   regulatory:
@@ -193,9 +197,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 81.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -228,5 +232,6 @@ tags:
 - Research Integrity
 - Publishing
 - LTI
+- Grading
 website: https://www.turnitin.com
 ---

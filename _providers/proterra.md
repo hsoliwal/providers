@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://proterra.com/feed/
 - group: company
   title: ''
   type: Website
@@ -44,7 +48,7 @@ created: '2026-07-17'
 description: Proterra is a US-based manufacturer of high-energy lithium-ion battery systems for electric vehicles and commercial equipment, including transit buses, trucks, and off-highway EVs, with charging and fleet solutions. Originally an electric transit bus and powertrain manufacturer founded in 2004, the battery-systems business (Powered by Proterra) continues under the proterra.com domain following the 2023 restructuring. It is a physical hardware and energy-storage company backed by Obvious Ventures under its planetary-health thesis, and publishes no public developer portal, API, or machine-readable API surface as of this enrichment pass.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/proterra.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Proterra
 nav: Providers
 network: true
@@ -52,9 +56,9 @@ overview: Proterra is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 21
 score:
   band: minimal
-  composite: 2.1
+  composite: 2.8
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 3
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -66,7 +70,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -74,15 +78,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 2.1
+  previous_composite: 2.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

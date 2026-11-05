@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.2
-  scored_at: '2026-09-20'
+  score: 31.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 17
   slug: boost-agentic-access
   summary_line: 17 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api-v2.boost.xyz
   baseurl_source: declared
@@ -237,19 +237,19 @@ layout: provider
 mcp_servers:
 - description: An MCP server that provides AI-powered integration with the Boost V2 and RewardKit APIs.
   name: Boost MCP Server
-  slug: boost-mcp-server
+  slug: boost-api-mcp
 modified: '2026-09-16'
 name: Boost
 nav: Providers
 network: true
-overview: 'Boost publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Action API, Action Template API, Blocklist API, and 5 more. Tagged areas include Company, Crypto, Web3, Incentives, and Rewards.
+overview: 'Boost publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Action API, Action Template API, Blocklist API, and 5 more. Tagged areas include Company, Cryptocurrency, Web3, Incentives, and Rewards.
 
 
   Boost''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, CLI, authentication, and 18 more developer resources.'
 random_paper: 1
 score:
   band: thin
-  composite: 38.7
+  composite: 37.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -261,11 +261,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 53.6
+    contract_quality: 48.2
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 38.7
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -276,8 +276,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -296,7 +302,7 @@ security:
 slug: boost
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Web3
 - Incentives
 - Rewards
@@ -304,5 +310,6 @@ tags:
 - DeFi
 - Onchain
 - EVM
+- Loyalty & Incentives
 website: https://boost.xyz/
 ---

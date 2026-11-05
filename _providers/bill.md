@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -135,6 +135,11 @@ collections:
   name: BILL v3 API
   slug: open-bill
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bill/refs/heads/main/capabilities/bill-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bill-capability-edges.yml
 - group: company
   title: ''
   type: Blog
@@ -222,19 +227,20 @@ modified: '2026-05-30'
 name: BILL
 nav: Providers
 network: true
-overview: 'BILL publishes 10 APIs on the [APIs.io](https://apis.io/) network, including v3 API, Authentication API, Bills API, and 7 more. Tagged areas include Accounts Payable, Accounts Receivable, Spend Management, Expense Management, and Payments.
+overview: 'BILL publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including v3 API, Authentication API, Bills API, and 8 more. Tagged areas include Accounts Payable, Accounts Receivable, Spend Management, Expense Management, and Payments.
 
 
   The BILL catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  BILL''s developer surface includes engineering blog, sandbox, changelog, getting-started guide, authentication, documentation, API reference, and 12 more developer resources.'
+  BILL''s developer surface includes engineering blog, sandbox, changelog, getting-started guide, authentication, documentation, API reference, and 13 more developer resources.'
 random_paper: 1
 rules:
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: BILL API Rules
+  name: BILL — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -244,9 +250,9 @@ rules:
   slug: bill-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 41.3
+  composite: 39.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 36.5
     catalog_earned_first_party: 0.0
     catalog_gap: 78.5
@@ -256,11 +262,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 13.6
-    contract_quality: 56.5
+    contract_quality: 52.1
     developer_ergonomics: 46.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 11.8
-  previous_composite: 41.3
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     contracts:
@@ -273,9 +279,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -300,5 +306,6 @@ tags:
 - Bill Pay
 - Financial Operations
 - Fintech
+- Accounting
 website: https://www.bill.com
 ---

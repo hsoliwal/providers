@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.8
-  scored_at: '2026-09-20'
+  score: 47.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -100,7 +100,7 @@ apis:
   description: Manage reusable message templates.
   name: Textmagic Templates API
   slug: textmagic-templates-api
-artifact_total: 30
+artifact_total: 31
 collections:
 - collection_type: open
   name: API Collection
@@ -195,16 +195,24 @@ common:
 created: '2026-06-20'
 description: Textmagic is a business text-messaging platform offering two-way SMS, bulk messaging, SMS marketing, and team inboxes. Its REST API (v2) lets developers send and receive messages, manage contacts and lists, schedule and template messages, and administer sender IDs and dedicated numbers programmatically over HTTPS.
 finops:
-- name: Textmagic Finops
+- has_sources: true
+  method: generated
+  name: Textmagic Finops
+  primary_unit: ''
   service_category: Communications
   slug: textmagic-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/textmagic.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.textmagic.com over HTTP.
+  name: Textmagic MCP Server
+  slug: textmagic
 modified: '2026-06-20'
 name: Textmagic
 nav: Providers
 network: true
-overview: 'Textmagic publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Bulk API, Chats API, Contacts API, and 8 more. Tagged areas include SMS, Text Messaging, Messaging, Communications, and CPaaS.
+overview: 'Textmagic publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bulk API, Chats API, Contacts API, and 8 more. Tagged areas include SMS, Text Messaging, Messaging, Communications, and CPaaS.
 
 
   Textmagic''s developer surface includes authentication, engineering blog, documentation, and 8 more developer resources.'
@@ -218,24 +226,24 @@ rate_limits:
   name: Textmagic Rate Limits
   slug: textmagic-rate-limits
 score:
-  band: thin
-  composite: 36.4
+  band: emerging
+  composite: 26.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 53.8
+    contract_quality: 48.7
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 36.4
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -249,10 +257,10 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

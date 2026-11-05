@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 asyncapis:
@@ -156,7 +159,7 @@ modified: '2026-07-25'
 name: PSC Insurance
 nav: Providers
 network: true
-overview: 'PSC Insurance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Australia, Brokers, Insurance Brokerage, and Property and Casualty.
+overview: 'PSC Insurance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Australia, Brokerage, Insurance Brokerage, and Property and Casualty.
 
 
   The PSC Insurance catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -171,7 +174,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: thin
-  composite: 36.9
+  composite: 32.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -183,9 +186,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 61.1
+    discoverability: 58.9
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -194,7 +197,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 36.9
+  previous_composite: 32.6
   provenance:
     conformance: first-party
   regulatory:
@@ -202,9 +205,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 80.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -228,13 +231,11 @@ slug: psc-insurance
 tags:
 - Insurance
 - Australia
-- Brokers
+- Brokerage
 - Insurance Brokerage
 - Property and Casualty
 - Commercial Insurance
 - Cyber Insurance
 - Intermediary
-- Partner Gated
-- No Public API
 website: https://www.pscinsurance.com.au/
 ---

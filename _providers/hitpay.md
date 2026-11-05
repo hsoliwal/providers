@@ -25,26 +25,26 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.3
-  scored_at: '2026-09-20'
+  score: 39.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 50
+- acting_count: 49
   human_in_the_loop: 0
   name: Hitpay Agentic Access
   operation_count: 92
   slug: hitpay-agentic-access
-  summary_line: 92 operations · 50 acting
+  summary_line: 92 operations · 49 acting
 api_count: 2
 apis:
 - baseURL: https://api.hit-pay.com/v1
@@ -321,6 +321,11 @@ collections:
   name: HitPay Account Status Webhook Events API
   slug: open-hitpay-webhook-events-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hitpay/refs/heads/main/capabilities/hitpay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hitpay-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -500,26 +505,30 @@ common:
 created: '2026-07-17'
 description: HitPay is a Singapore-headquartered all-in-one payments platform for small and medium businesses across Asia-Pacific, unifying online checkout, point of sale, and B2B billing. Its REST API creates hosted Payment Requests, runs Recurring Billing on saved cards, and issues Refunds, with first-class Southeast Asian local methods (PayNow, GrabPay, WeChat Pay, Alipay, ShopeePay, Atome) alongside cards. Requests authenticate with the X-BUSINESS-API-KEY header.
 finops:
-- name: Hitpay Finops
+- has_sources: true
+  method: generated
+  name: Hitpay Finops
+  primary_unit: ''
   service_category: Financial Services
   slug: hitpay-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hitpay.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at hitpay-mcp.vercel.app over HTTP; 20 tools listed.
   name: HitPay MCP Server
-  slug: hitpay-mcp-server
+  slug: hitpay-api
 modified: '2026-07-17'
 name: HitPay
 nav: Providers
 network: true
-overview: 'HitPay publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Account Status API, Balances API, Beneficiaries API, and 21 more. Tagged areas include Payments, Fintech, PayNow, Southeast Asia, and SMB.
+overview: 'HitPay publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Status API, Balances API, Beneficiaries API, and 21 more. Tagged areas include Payments, Fintech, PayNow, Southeast Asia, and Small Business.
 
 
   The HitPay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  HitPay''s developer surface includes authentication, documentation, engineering blog, CLI, sandbox, changelog, getting-started guide, and 31 more developer resources.'
+  HitPay''s developer surface includes authentication, documentation, engineering blog, CLI, sandbox, changelog, getting-started guide, and 32 more developer resources.'
 plans:
 - name: Hitpay Plans Pricing
   plan_count: 3
@@ -530,29 +539,31 @@ rate_limits:
   name: Hitpay Rate Limits
   slug: hitpay-rate-limits
 score:
-  band: exemplar
-  composite: 67.6
+  band: strong
+  composite: 55.9
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 60.0
+    artifact_dirs: 29
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.5
   facets:
-    access_clarity: 78.9
+    access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 62.6
+    contract_quality: 57.5
     developer_ergonomics: 69.6
-    discoverability: 75.9
-    operational_transparency: 47.4
+    discoverability: 75.0
+    operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 67.6
+  previous_composite: 63.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -568,10 +579,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 60.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 34.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
@@ -599,6 +610,6 @@ tags:
 - Fintech
 - PayNow
 - Southeast Asia
-- SMB
+- Small Business
 website: https://www.hitpayapp.com/
 ---

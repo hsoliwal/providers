@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 19.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 5
   human_in_the_loop: 0
   name: Aloha Pos Agentic Access
   operation_count: 14
   slug: aloha-pos-agentic-access
-  summary_line: 14 operations · 8 acting
+  summary_line: 14 operations · 5 acting
 api_count: 1
 apis:
 - description: Aloha Cloud-specific endpoints including the In-Store API server (gRPC, default port 50051, 127.0.0.1) for local POS connectivity and the Business Services Layer (BSL) Order Service for routing online
@@ -107,7 +107,7 @@ common:
 - group: company
   title: ''
   type: Website
-  url: https://www.ncrvoyix.com/restaurants/aloha-cloud
+  url: https://www.alohapos.com/
 - group: other
   title: ''
   type: Developer
@@ -183,9 +183,13 @@ examples:
   name: Ncr Voyix Platform Put Item Price Example
   slug: ncr-voyix-platform-put-item-price-example
 finops:
-- name: Aloha Pos Finops
+- has_sources: true
+  method: generated
+  name: Aloha Pos Finops
+  primary_unit: ''
   service_category: Payments & POS
   slug: aloha-pos-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aloha-pos.png
 json_schemas:
 - name: ItemPrice
@@ -223,7 +227,7 @@ modified: '2026-06-02'
 name: Aloha POS
 nav: Providers
 network: true
-overview: 'Aloha POS publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Menu API, Order API, and 1 more. Tagged areas include Point-of-Sale, Restaurant, Hospitality, and NCR.
+overview: 'Aloha POS publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Menu API, Order API, and 2 more. Tagged areas include Point-of-Sale, Restaurant, Hospitality, and NCR.
 
 
   The Aloha POS catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -240,9 +244,10 @@ rate_limits:
   name: Aloha Pos Rate Limits
   slug: aloha-pos-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Aloha POS API Rules
+  name: Aloha POS — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -250,10 +255,11 @@ rules:
     info: 2
     warn: 3
   slug: aloha-pos-jsonschema-spectral-rules
-- effective_rule_count: 70
+- authorship: unmarked
+  effective_rule_count: 70
   extends:
   - spectral:oas
-  name: Aloha POS API Rules
+  name: Aloha POS — ncr voyix platform rules
   rule_count: 29
   severity_counts:
     error: 8
@@ -263,23 +269,23 @@ rules:
   slug: ncr-voyix-platform-rules
 score:
   band: thin
-  composite: 34.7
+  composite: 31.7
   coverage:
     artifact_dirs: 17
-    catalog_earned: 51.5
+    catalog_earned: 48.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.5
+    catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
-    contract_governance: 28.8
-    contract_quality: 63.4
+    access_clarity: 5.3
+    contract_governance: 27.3
+    contract_quality: 57.9
     developer_ergonomics: 26.2
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 34.7
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -287,8 +293,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -309,5 +321,5 @@ tags:
 - Restaurant
 - Hospitality
 - NCR
-website: https://www.ncrvoyix.com/restaurants/aloha-cloud
+website: https://www.alohapos.com/
 ---

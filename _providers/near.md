@@ -34,20 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 38
+- acting_count: 37
   human_in_the_loop: 0
   name: Near Agentic Access
   operation_count: 149
   slug: near-agentic-access
-  summary_line: 149 operations · 38 acting
-api_count: 4
+  summary_line: 149 operations · 37 acting
+api_count: 7
 apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The accounts API from NEAR Protocol — 1 operation(s) for accounts.
-  name: NEAR Protocol accounts API
+  name: NEAR Protocol Accounts API
   slug: near-accounts-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -182,7 +182,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The fungible-tokens API from NEAR Protocol — 3 operation(s) for fungible-tokens.
-  name: NEAR Protocol fungible-tokens API
+  name: NEAR Protocol Fungible Tokens API
   slug: near-fungible-tokens-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -302,12 +302,12 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The non-fungible-tokens API from NEAR Protocol — 2 operation(s) for non-fungible-tokens.
-  name: NEAR Protocol non-fungible-tokens API
+  name: NEAR Protocol Non Fungible Tokens API
   slug: near-non-fungible-tokens-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The public-key API from NEAR Protocol — 4 operation(s) for public-key.
-  name: NEAR Protocol public-key API
+  name: NEAR Protocol Public Key API
   slug: near-public-key-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -322,7 +322,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The staking API from NEAR Protocol — 2 operation(s) for staking.
-  name: NEAR Protocol staking API
+  name: NEAR Protocol Staking API
   slug: near-staking-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -332,7 +332,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The system API from NEAR Protocol — 2 operation(s) for system.
-  name: NEAR Protocol system API
+  name: NEAR Protocol System API
   slug: near-system-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -530,6 +530,25 @@ collections:
   name: FastNEAR accounts Validators API
   slug: open-near-validators-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/plans/fastnear-api.yml
+  title: ''
+  type: Plans
+  url: plans/fastnear-api.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/rate-limits/fastnear-api.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/fastnear-api.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/near/refs/heads/main/finops/nearblocks-api.yml
+  title: ''
+  type: FinOps
+  url: finops/nearblocks-api.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.near.org/blog
 - group: company
   title: ''
   type: Website
@@ -552,19 +571,23 @@ common:
 created: '2026-06-13'
 description: NEAR Protocol provides blockchain infrastructure with JSON-RPC 2.0 and REST APIs for querying accounts, transactions, tokens, NFTs, and staking data on the NEAR network. Developers can interact with the NEAR blockchain through the official RPC endpoints, the FASTNEAR indexed REST API, and the NearBlocks explorer API.
 finops:
-- name: Nearblocks Api
+- has_sources: false
+  method: generated
+  name: Nearblocks Api
+  primary_unit: ''
   service_category: ''
   slug: nearblocks-api
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/near.png
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: NEAR Protocol
 nav: Providers
 network: true
-overview: 'NEAR Protocol publishes 60 APIs on the [APIs.io](https://apis.io/) network, including accounts API, Block API, Block Effects API, and 57 more. Tagged areas include Blockchain, Web3, NEAR, NFT, and Tokens.
+overview: 'NEAR Protocol publishes 60 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Block API, Block Effects API, and 57 more. Tagged areas include Blockchain, Web3, NEAR, NFT, and Tokens.
 
 
-  NEAR Protocol''s developer surface includes authentication and 3 more developer resources.'
+  NEAR Protocol''s developer surface includes engineering blog, authentication, and 6 more developer resources.'
 plans:
 - name: Fastnear Api
   plan_count: 2
@@ -588,21 +611,21 @@ rate_limits:
   slug: nearblocks-api
 score:
   band: emerging
-  composite: 25.4
+  composite: 21.7
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 38.0
+    artifact_dirs: 12
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.7
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 44.0
-    developer_ergonomics: 21.4
-    discoverability: 50.0
+    contract_quality: 39.6
+    developer_ergonomics: 23.8
+    discoverability: 71.4
     operational_transparency: 0.0
   previous_composite: 25.4
   provenance:
@@ -612,8 +635,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 60
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -636,6 +665,6 @@ tags:
 - NFT
 - Tokens
 - Staking
-- Crypto
+- Cryptocurrency
 website: https://near.org
 ---

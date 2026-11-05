@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 30.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 12
   slug: agora-agentic-access
   summary_line: 12 operations · 4 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.agora.finance
   baseurl_source: declared
@@ -211,21 +211,21 @@ layout: provider
 mcp_servers:
 - description: Agora publishes a hosted MCP server over its developer documentation for AI clients (Claude Code, Cursor, etc.), advertised in llms.txt. It exposes the docs corpus (AUSD contract, Public API, stable s
   name: Agora MCP Server
-  slug: agora-mcp-server
+  slug: agora-docs
 modified: '2026-07-17'
 name: Agora
 nav: Providers
 network: true
-overview: 'Agora publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Auth API, Metrics API, and 2 more. Tagged areas include Company, Fintech, Stablecoins, Digital Dollar, and Payments.
+overview: 'Agora publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Auth API, Metrics API, and 2 more. Tagged areas include Company, Fintech, Stablecoins, Digital Dollar, and Payments.
 
 
   Agora''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 18 more developer resources.'
 random_paper: 16
 score:
   band: developing
-  composite: 43.0
+  composite: 40.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -235,11 +235,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 43.0
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -255,9 +255,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -282,5 +282,6 @@ tags:
 - Cryptocurrency
 - Blockchain
 - AUSD
+- Stablecoin Issuance
 website: https://www.agora.finance/
 ---

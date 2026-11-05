@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.autochilango.com/feed/
 - group: company
   title: ''
   type: Website
@@ -61,18 +65,18 @@ created: '2026-07-17'
 description: AutoChilango (Auto Chilango) is a Mexico City-based mobile application that consolidates the everyday services drivers in CDMX and the State of Mexico need into a single app. It covers the "Hoy No Circula" driving-restriction calendar, vehicular verification schedules, traffic fines (multas) lookup and payment, annual registration (tenencia), insurance, parking, gas stations, and mechanical services for private cars, motorcycles, taxis, and special plates. Backed by 500 Global and added to the API Evangelist network as a company profile; no public developer/API surface has been found, so this profile captures the provider's identity, information surface (blog, FAQs, privacy), and probed domain security.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/autochilango.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: AutoChilango
 nav: Providers
 network: true
 overview: 'AutoChilango is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automotive, Mobile App, Mexico, and Mexico City.
 
 
-  AutoChilango''s developer surface includes engineering blog and 4 more developer resources.'
+  AutoChilango''s developer surface includes engineering blog and 5 more developer resources.'
 random_paper: 2
 score:
   band: minimal
-  composite: 8.5
+  composite: 7.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -86,7 +90,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -95,9 +99,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 8.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

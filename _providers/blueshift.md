@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Official hosted remote MCP server, in public beta, exposing a catalogue of 131 tools (97 read, 34 write) across campaigns, segments, customer profiles, catalogs, templates, shared assets, tags, report
@@ -159,6 +159,15 @@ collections:
   name: Blueshift APIs
   slug: open-blueshift
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/blueshift/refs/heads/main/rate-limits/blueshift-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/blueshift-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blueshift.com/blog/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/blueshift/refs/heads/main/capabilities/blueshift-capability-edges.yml
   title: ''
@@ -301,18 +310,18 @@ layout: provider
 mcp_servers:
 - description: Blueshift operates an official hosted remote MCP server, in public beta, at https://app.getblueshift.com/mcp (US and rest of world) and https://app.eu.getblueshift.com/mcp (EU). Transport is streamabl
   name: Blueshift MCP Server
-  slug: blueshift-mcp-server
-modified: '2026-08-12'
+  slug: blueshift
+modified: '2026-10-06'
 name: Blueshift
 nav: Providers
 network: true
-overview: 'Blueshift publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Adapters API, Campaigns API, Catalog API, and 18 more. Tagged areas include Customer Data Platform, Customer Engagement, Marketing Automation, Cross-Channel Messaging, and Email.
+overview: 'Blueshift publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Adapters API, Campaigns API, Catalog API, and 19 more. Tagged areas include Customer Data Platform, Customer Engagement, Marketing Automation, Cross-Channel Messaging, and Email.
 
 
   The Blueshift catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Blueshift''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
+  Blueshift''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
 plans:
 - name: Blueshift Plans Pricing
   plan_count: 3
@@ -324,14 +333,14 @@ rate_limits:
   slug: blueshift-rate-limits
 scopes:
 - name: Blueshift Scopes
-  scope_count: 0
+  scope_count: 8
   slug: blueshift-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 8 scopes
 score:
-  band: exemplar
-  composite: 70.0
+  band: strong
+  composite: 65.9
   coverage:
-    artifact_dirs: 27
+    artifact_dirs: 28
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
@@ -341,11 +350,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 0.0
-    contract_quality: 65.8
+    contract_quality: 60.0
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 70.0
+  previous_composite: 65.9
   provenance:
     conformance: first-party
     contracts:
@@ -360,9 +369,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 65.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -397,6 +406,6 @@ tags:
 - Product Catalog
 - MarTech
 - MCP
-- agent-native
+- Agent-Native
 website: https://blueshift.com/
 ---

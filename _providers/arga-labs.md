@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Public REST API for Arga's testing infrastructure — provision digital twins, deploy branches/PRs into sandboxes, run browser-agent validations, save and replay tests, manage scenarios (seed data), and
@@ -158,21 +158,21 @@ description: Arga Labs provides testing infrastructure for AI agents and agent-f
 image: https://www.argalabs.com/logo_black.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.argalabs.com over HTTP; 19 tools listed.
   name: Arga Labs MCP Server
-  slug: arga-labs-mcp-server
+  slug: arga-context
 modified: '2026-07-18'
 name: Arga Labs
 nav: Providers
 network: true
-overview: 'Arga Labs publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, API Testing, Sandbox, Digital Twin, and AI Agents.
+overview: 'Arga Labs is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, API Testing, Sandbox, Digital Twin, and AI Agents.
 
 
   Arga Labs'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 18 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 17.3
+  composite: 16.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -180,20 +180,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 17.3
+  previous_composite: 16.6
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

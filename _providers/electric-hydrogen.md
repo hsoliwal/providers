@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://eh2.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/electric-hydrogen/refs/heads/main/security/electric-hydrogen-domain-security.yml
   title: ''
@@ -78,18 +82,18 @@ created: '2026-07-17'
 description: Electric Hydrogen (EH2) is a Massachusetts-based clean-energy company that designs, manufactures, and commissions the world's most powerful PEM electrolyzers, packaged into a fully-integrated 100MW HYPRPlant that turns water and renewable electricity into the lowest-cost green hydrogen. The complete plant solution bundles power conversion, gas processing, water treatment, and thermal management so heavy industry can decarbonize ammonia, e-fuels, steel, and refining at gigawatt scale. Founded in 2020 and led by CEO Raffi Garabedian, EH2 operates a 1.2GW gigafactory in Devens, Massachusetts, became green hydrogen's first unicorn with a $380M Series C, and is backed by Fifth Wall, Fortescue, Energy Impact Partners, bp Ventures, Temasek, and Microsoft's Climate Innovation Fund. This profile enriches the API Evangelist network stub with the company's real public web surface.
 image: https://eh2.com/wp-content/uploads/2024/12/ehydrogen-logo.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Electric Hydrogen
 nav: Providers
 network: true
 overview: 'Electric Hydrogen is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Climate, Clean Energy, Green Hydrogen, and Electrolyzers.
 
 
-  Electric Hydrogen''s developer surface includes engineering blog and 8 more developer resources.'
+  Electric Hydrogen''s developer surface includes engineering blog and 9 more developer resources.'
 random_paper: 14
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,22 +107,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.4
+  previous_composite: 10.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

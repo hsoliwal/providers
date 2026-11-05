@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.ummeedhfc.com/rss.xml
 - group: company
   title: ''
   type: Website
@@ -74,18 +78,18 @@ created: '2026-07-17'
 description: Ummeed Housing Finance Pvt. Ltd. is an Indian affordable-housing finance company registered with the National Housing Bank (NHB), providing home loans, loans against property, business loans, and MSME business loans to low- and middle-income households. Headquartered in Gurgaon, Haryana, it operates 130+ branches across 9 states and has served 45,000+ families. Backed by Norwest Venture Partners. Ummeed publishes no public developer portal or API surface; its digital channels are the customer website and a customer mobile app.
 image: https://www.ummeedhfc.com/themes/custom/ummeed/images/ummeedhfc-logo.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Ummeed Housing Finance
 nav: Providers
 network: true
-overview: 'Ummeed Housing Finance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Housing Finance, Home Loans, Lending, and Financial-Services.
+overview: 'Ummeed Housing Finance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Housing Finance, Home Loans, Lending, and Financial Services.
 
 
-  Ummeed Housing Finance''s developer surface includes support, engineering blog, and 6 more developer resources.'
+  Ummeed Housing Finance''s developer surface includes support, engineering blog, and 7 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 12.7
+  composite: 12.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -99,7 +103,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -108,9 +112,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 12.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -128,7 +138,7 @@ tags:
 - Housing Finance
 - Home Loans
 - Lending
-- Financial-Services
+- Financial Services
 - MSME
 - India
 website: https://ummeedhfc.com

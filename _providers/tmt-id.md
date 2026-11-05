@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 12
+- acting_count: 11
   human_in_the_loop: 0
   name: Tmt Id Agentic Access
   operation_count: 17
   slug: tmt-id-agentic-access
-  summary_line: 17 operations · 12 acting
+  summary_line: 17 operations · 11 acting
 api_count: 7
 apis:
 - baseURL: https://api.tmtverify.com
@@ -323,14 +323,14 @@ modified: '2026-07-25'
 name: TMT ID
 nav: Providers
 network: true
-overview: 'TMT ID publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authenticate API, HTTP API, HTTP API v1.3 API, and 5 more. Tagged areas include Telecommunications, United Kingdom, Identity Verification, Mobile Identity, and SIM Swap.
+overview: 'TMT ID publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authenticate API, HTTP API, HTTP API v1.3 API, and 5 more. Tagged areas include Telecommunications, United Kingdom, Identity Verification, Mobile Identity, and SIM Swap.
 
 
   TMT ID''s developer surface includes sandbox, authentication, documentation, developer portal, signup flow, engineering blog, support, and 38 more developer resources.'
 random_paper: 19
 score:
   band: developing
-  composite: 45.4
+  composite: 42.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -342,9 +342,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 49.9
+    contract_quality: 45.8
     developer_ergonomics: 54.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -354,7 +354,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.4
+  previous_composite: 42.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -370,9 +370,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -402,7 +402,7 @@ tags:
 - Identity Verification
 - Mobile Identity
 - SIM Swap
-- Anti-Fraud
+- Fraud Prevention
 - Number Intelligence
 - Silent Network Authentication
 - GSMA Open Gateway

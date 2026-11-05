@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.5
-  scored_at: '2026-09-20'
+  score: 42.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -569,9 +569,13 @@ features:
 - description: Authentication is standard OAuth 2.0 client-credentials grant; bearer tokens are scoped per Direct+ subscription.
   name: OAuth 2.0 Client Credentials
 finops:
-- name: Dun And Bradstreet Finops
+- has_sources: true
+  method: generated
+  name: Dun And Bradstreet Finops
+  primary_unit: ''
   service_category: ''
   slug: dun-and-bradstreet-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dun-and-bradstreet.png
 integrations:
 - description: D&B Hoovers and D&B Direct+ data flow into Salesforce CRM via D&B's managed packages and AppExchange listings.
@@ -611,12 +615,12 @@ layout: provider
 mcp_servers:
 - description: Dun & Bradstreet ships production Model Context Protocol servers as part of the D&B.AI suite. Two distinct servers were confirmed. The D&B Risk Analytics server is a remote, OAuth-protected Streamable
   name: Dun & Bradstreet MCP Server
-  slug: dun-bradstreet-mcp-server
+  slug: dun-and-bradstreet-mcp-yml
 modified: '2026-08-13'
 name: Dun & Bradstreet
 nav: Providers
 network: true
-overview: 'Dun & Bradstreet publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data File API, Enrich API, and 5 more. Tagged areas include Business Data, Company Data, D-U-N-S Number, Credit, and Risk.
+overview: 'Dun & Bradstreet publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Data File API, Enrich API, and 13 more. Tagged areas include Business Data, Company Data, D-U-N-S Number, Credit, and Risk Management.
 
 
   The Dun & Bradstreet catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -633,10 +637,11 @@ rate_limits:
   name: Dun And Bradstreet Rate Limits
   slug: dun-and-bradstreet-rate-limits
 rules:
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
-  name: Dun & Bradstreet API Rules
+  name: Dun & Bradstreet — dnb direct plus rules
   rule_count: 8
   severity_counts:
     error: 3
@@ -644,9 +649,10 @@ rules:
     info: 1
     warn: 4
   slug: dnb-direct-plus-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Dun & Bradstreet API Rules
+  name: Dun & Bradstreet — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -661,28 +667,30 @@ scopes:
   summary_line: 6 scopes · authorizationCode/clientCredentials
 score:
   band: strong
-  composite: 64.0
+  composite: 60.7
   coverage:
     artifact_dirs: 34
-    catalog_earned: 86.0
+    catalog_earned: 71.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 29.0
+    catalog_gap: 44.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.7
   facets:
-    access_clarity: 89.5
-    contract_governance: 87.9
-    contract_quality: 79.4
+    access_clarity: 81.6
+    contract_governance: 45.5
+    contract_quality: 73.1
     developer_ergonomics: 24.4
-    discoverability: 70.4
+    discoverability: 75.0
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 64.0
+  previous_composite: 66.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -693,9 +701,15 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -734,7 +748,7 @@ tags:
 - Company Data
 - D-U-N-S Number
 - Credit
-- Risk
+- Risk Management
 - Master Data
 - Data Enrichment
 - Identity Resolution

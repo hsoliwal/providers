@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 13
@@ -111,6 +111,15 @@ collections:
   name: Google Cloud Storage JSON BucketAccessControls Objects API
   slug: open-gcp-cloud-storage-objects-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/gcp-cloud-storage/refs/heads/main/finops/gcp-cloud-storage-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/gcp-cloud-storage-finops.yml
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://cloud.google.com/storage/pricing
 - group: operate
   href: https://raw.githubusercontent.com/api-evangelist/gcp-cloud-storage/refs/heads/main/rate-limits/gcp-cloud-storage-rate-limits.yml
   title: ''
@@ -273,9 +282,13 @@ features:
 - description: Lock retention policies to prevent object deletion for regulatory compliance.
   name: Retention Policies
 finops:
-- name: Gcp Cloud Storage Finops
+- has_sources: false
+  method: generated
+  name: Gcp Cloud Storage Finops
+  primary_unit: ''
   service_category: API
   slug: gcp-cloud-storage-finops
+  template: true
 image: https://cloud.google.com/images/social-icon-google-cloud-1200-630.png
 json_schemas:
 - name: Google Cloud Storage Bucket
@@ -362,13 +375,13 @@ modified: '2026-05-19'
 name: Google Cloud Storage
 nav: Providers
 network: true
-overview: 'Google Cloud Storage publishes 5 APIs on the [APIs.io](https://apis.io/) network, including BucketAccessControls API, Buckets API, DefaultObjectAccessControls API, and 2 more. Tagged areas include Archival, Backup, Blob Storage, Cloud Storage, and Data.
+overview: 'Google Cloud Storage publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including BucketAccessControls API, Buckets API, DefaultObjectAccessControls API, and 3 more. Tagged areas include Archival, Backup, Blob Storage, Cloud Storage, and Data.
 
 
   The Google Cloud Storage catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
 
 
-  Google Cloud Storage''s developer surface includes authentication, getting-started guide, developer console, engineering blog, changelog, API reference, CLI, and 18 more developer resources.'
+  Google Cloud Storage''s developer surface includes pricing, authentication, getting-started guide, developer console, engineering blog, changelog, API reference, and 20 more developer resources.'
 plans:
 - name: Gcp Cloud Storage Plans Pricing
   plan_count: 23
@@ -382,9 +395,10 @@ rate_limits:
   name: Gcp Cloud Storage Rate Limits
   slug: gcp-cloud-storage-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Google Cloud Storage API Rules
+  name: Google Cloud Storage — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -392,7 +406,8 @@ rules:
     info: 2
     warn: 4
   slug: gcp-cloud-storage-jsonschema-spectral-rules
-- effective_rule_count: 60
+- authorship: generated
+  effective_rule_count: 60
   extends:
   - spectral:oas
   name: Google Cloud Storage API Rules
@@ -410,23 +425,23 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: strong
-  composite: 63.2
+  composite: 63.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 83.5
+    artifact_dirs: 22
+    catalog_earned: 79.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 31.5
+    catalog_gap: 36.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 7.8
+  delta: -1.5
   facets:
-    access_clarity: 68.4
-    contract_governance: 28.8
-    contract_quality: 71.8
+    access_clarity: 60.5
+    contract_governance: 27.3
+    contract_quality: 65.3
     developer_ergonomics: 67.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 65.8
-  previous_composite: 55.4
+  previous_composite: 65.0
   provenance:
     agentic_access: derived
     contracts:
@@ -434,9 +449,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 0.0

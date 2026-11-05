@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.0
-  scored_at: '2026-09-20'
+  score: 40.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 5
@@ -85,7 +85,7 @@ apis:
   description: The Templates API from Scrive — 2 operation(s) for templates.
   name: Scrive Templates API
   slug: scrive-templates-api
-artifact_total: 25
+artifact_total: 26
 collections:
 - collection_type: open
   name: API Collection
@@ -118,6 +118,11 @@ collections:
   name: Scrive Document API
   slug: open-scrive
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/scrive/refs/heads/main/capabilities/scrive-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/scrive-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/scrive/refs/heads/main/agentic-access/scrive-agentic-access.yml
   title: ''
@@ -176,19 +181,27 @@ common:
 created: '2026-07-03'
 description: Scrive is a Nordic e-signature and digital identity (e-ID) platform for agreeing, signing, and verifying documents online. The Scrive Document API (eSign Online, Version 2) is a RESTful, JSON-over-HTTPS interface that creates, prepares, sends, and manages the full lifecycle of documents for electronic signing, with identity verification through Nordic and European e-ID methods including Swedish, Norwegian, and Finnish BankID, Danish MitID, Freja, and Smart-ID. Authentication uses OAuth2, OAuth 1.0, or personal access credentials; document status changes are delivered to consumers via HTTP callback (webhook) URLs. A separate Scrive eID Hub provides standalone identity authentication and signing.
 finops:
-- name: Scrive Finops
+- has_sources: true
+  method: generated
+  name: Scrive Finops
+  primary_unit: ''
   service_category: E-Signature and Digital Identity
   slug: scrive-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scrive.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.scrive.com over HTTP.
+  name: Scrive MCP Server
+  slug: scrive
 modified: '2026-07-03'
 name: Scrive
 nav: Providers
 network: true
-overview: 'Scrive publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Access Control API, Attachments API, Callbacks API, and 5 more. Tagged areas include E-Signature, Electronic Signing, Digital Identity, eID, and BankID.
+overview: 'Scrive publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Control API, Attachments API, Callbacks API, and 5 more. Tagged areas include E-Signature, Digital Identity, eID, BankID, and MitID.
 
 
-  Scrive''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  Scrive''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Scrive Plans Pricing
   plan_count: 4
@@ -205,29 +218,29 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: thin
-  composite: 35.9
+  composite: 27.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 60.0
+    artifact_dirs: 16
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 49.5
+    contract_quality: 44.5
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 23.7
+    discoverability: 68.3
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 35.9
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -236,9 +249,15 @@ score:
       marker_coverage: 0.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -255,7 +274,6 @@ security:
 slug: scrive
 tags:
 - E-Signature
-- Electronic Signing
 - Digital Identity
 - eID
 - BankID

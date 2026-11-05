@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 57.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -46,7 +46,7 @@ agentic_access:
   operation_count: 3
   slug: lacuna-agentic-access
   summary_line: 3 operations · 1 acting
-api_count: 2
+api_count: 3
 apis:
 - description: Hosted Model Context Protocol server (Streamable HTTP) at https://www.lacuna.fm/mcp, protocol 2025-06-18. initialize and tools/list answer anonymously and return real input schemas; tools/call require
   name: Lacuna MCP Server
@@ -302,12 +302,12 @@ layout: provider
 mcp_servers:
 - description: Generate AI music from a style description and optional lyrics. Submit a task, poll it, collect the rendered audio.
   name: Lacuna MCP Server
-  slug: lacuna-mcp-server
+  slug: lacuna
 modified: '2026-09-11'
 name: Lacuna
 nav: Providers
 network: true
-overview: 'Lacuna publishes 3 APIs on the [APIs.io](https://apis.io/) network: Music API Events, Music API, and Account API. Tagged areas include AI Music, Music Generation, AI Song Generator, AI Lyrics Generator, and Audio.
+overview: 'Lacuna publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Music API Events, Music API, Account API, and 2 more. Tagged areas include AI Music, Music Generation, AI Song Generator, AI Lyrics Generator, and Audio.
 
 
   The Lacuna catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -330,23 +330,23 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: strong
-  composite: 63.0
+  composite: 65.0
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 61.0
+    artifact_dirs: 29
+    catalog_earned: 64.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 58.8
+    contract_quality: 53.8
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 63.2
-  previous_composite: 63.0
+  previous_composite: 64.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -357,8 +357,14 @@ score:
       total: 3
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 37.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

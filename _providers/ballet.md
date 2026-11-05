@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://store.ballet.com/blogs/ballet-blogs
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://store.ballet.com/blogs/ballet-blogs.atom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ballet/refs/heads/main/security/ballet-domain-security.yml
   title: ''
@@ -65,18 +73,18 @@ created: '2026-07-17'
 description: Ballet is a consumer cryptocurrency cold-storage company founded by Bobby Lee that makes physical, non-electronic wallet cards based on the BIP38 open-source standard, letting people store Bitcoin, Ethereum, XRP and 1,000+ coins and NFTs safe from electronic hacking and preventable user error. The physical REAL Series card holds the keys; a companion mobile app, Ballet Crypto, lets holders check balances and market value and add assets. Backed by Ribbit Capital, Ballet is a hardware/consumer product rather than a developer platform, so it publishes no public API — this profile captures its identity, security posture, and open-source footprint.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ballet.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Ballet
 nav: Providers
 network: true
-overview: 'Ballet is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto, Cryptocurrency, Wallets, and Cold Storage.
+overview: 'Ballet is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Wallets, Cold Storage, and Bitcoin.
 
 
-  Ballet''s developer surface includes engineering blog and 5 more developer resources.'
+  Ballet''s developer surface includes engineering blog and 7 more developer resources.'
 random_paper: 12
 score:
   band: minimal
-  composite: 2.4
+  composite: 3.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,17 +98,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 2.4
+  previous_composite: 3.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -115,7 +123,6 @@ security:
 slug: ballet
 tags:
 - Company
-- Crypto
 - Cryptocurrency
 - Wallets
 - Cold Storage

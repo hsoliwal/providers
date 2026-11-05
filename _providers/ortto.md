@@ -34,45 +34,90 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 11
+- acting_count: 6
   human_in_the_loop: 0
   name: Ortto Agentic Access
   operation_count: 11
   slug: ortto-agentic-access
-  summary_line: 11 operations · 11 acting
+  summary_line: 11 operations · 6 acting
 api_count: 1
 apis:
 - baseURL: https://api.ap3api.com/v1
   baseurl_source: declared
   description: Create, update, retrieve, and manage accounts (organizations).
   name: Ortto Accounts API
+  phrasing_intents:
+  - id: mergeAccounts
+    intent: Create or update company accounts
+    question: How do I add or update organizations (accounts) in Ortto from my CRM?
+  phrasing_ops: 1
   slug: ortto-accounts-api
 - baseURL: https://api.ap3api.com/v1
   baseurl_source: declared
   description: Send custom activity events and manage activity definitions.
   name: Ortto Activities API
+  phrasing_intents:
+  - id: createActivities
+    intent: Record custom activity events for people
+    question: How do I send custom events like 'signed up for webinar' into Ortto?
+  phrasing_ops: 1
   slug: ortto-activities-api
 - baseURL: https://api.ap3api.com/v1
   baseurl_source: declared
   description: Retrieve campaigns, reports, and assets.
   name: Ortto Campaigns API
+  phrasing_intents:
+  - id: getCampaignCalendar
+    intent: List campaigns scheduled in a time period
+    question: Which journeys and campaigns are running on my marketing calendar this month?
+  - id: getCampaignReport
+    intent: Get performance report for a campaign or asset
+    question: How did my email campaign perform in Ortto?
+  phrasing_ops: 2
   slug: ortto-campaigns-api
 - baseURL: https://api.ap3api.com/v1
   baseurl_source: declared
   description: Create, update, retrieve, and manage people (contacts).
   name: Ortto People API
+  phrasing_intents:
+  - id: mergePeople
+    intent: Create or update contacts
+    question: How do I sync contacts from my app into Ortto without creating duplicates?
+  - id: getPeople
+    intent: Search contacts with a filter
+    question: How can I find all contacts matching a condition, like a certain city or tag?
+  - id: getPeopleByIds
+    intent: Look up contacts by their contact IDs
+    question: I already have Ortto contact IDs; how do I fetch those exact people?
+  - id: deletePeople
+    intent: Delete contacts
+    question: How do I permanently remove contacts from my Ortto account?
+  phrasing_ops: 4
   slug: ortto-people-api
 - baseURL: https://api.ap3api.com/v1
   baseurl_source: declared
   description: Retrieve account tags.
   name: Ortto Tags API
+  phrasing_intents:
+  - id: getTags
+    intent: List tags on the account
+    question: What tags exist in my Ortto account?
+  phrasing_ops: 1
   slug: ortto-tags-api
 - baseURL: https://api.ap3api.com/v1
   baseurl_source: declared
   description: Send transactional email and SMS.
   name: Ortto Transactional API
+  phrasing_intents:
+  - id: sendTransactionalEmail
+    intent: Send a transactional email
+    question: How do I send a password reset or receipt email through Ortto?
+  - id: sendTransactionalSms
+    intent: Send a transactional SMS
+    question: How do I text a one-time code or order update to a customer via Ortto?
+  phrasing_ops: 2
   slug: ortto-transactional-api
 artifact_total: 24
 asyncapis:
@@ -313,9 +358,13 @@ common:
 created: '2026-06-25'
 description: Ortto (formerly Autopilot) is a marketing automation, customer data platform (CDP), and analytics product. Its REST API at https://api.ap3api.com/v1 lets applications create and update people/contacts and accounts, send custom activity events, manage tags, retrieve campaign reports, and send transactional email and SMS, all authenticated with a custom API key via the X-Api-Key header, with EU and AU service endpoints for accounts in those data-residency regions. Ortto also runs a first-party hosted MCP server, released in version 1.27 (December 2025), giving agents a read-heavy surface over campaigns, contacts, audiences, reports, schema and knowledge-base content. Ortto publishes no machine-readable OpenAPI; the specifications here are scaffolded from its help-center API reference. Ortto announced in April 2026 that it is joining Canva.
 finops:
-- name: Ortto Finops
+- has_sources: true
+  method: generated
+  name: Ortto Finops
+  primary_unit: ''
   service_category: Marketing and Customer Engagement
   slug: ortto-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ortto.png
 layout: provider
 mcp_servers:
@@ -326,7 +375,7 @@ modified: '2026-08-13'
 name: Ortto
 nav: Providers
 network: true
-overview: 'Ortto publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Activities API, Campaigns API, and 3 more. Tagged areas include Marketing Automation, CDP, Customer Data Platform, Analytics, and Email.
+overview: 'Ortto publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Activities API, Campaigns API, and 3 more. Tagged areas include Marketing Automation, CDP, Customer Data Platform, Analytics, and Email.
 
 
   The Ortto catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -343,24 +392,24 @@ rate_limits:
   name: Ortto Rate Limits
   slug: ortto-rate-limits
 score:
-  band: exemplar
-  composite: 70.5
+  band: strong
+  composite: 65.9
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 64.0
+    artifact_dirs: 27
+    catalog_earned: 61.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 89.5
+    access_clarity: 81.6
     contract_governance: 18.2
-    contract_quality: 61.4
+    contract_quality: 56.1
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 89.5
-  previous_composite: 70.5
+  previous_composite: 67.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -382,9 +431,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

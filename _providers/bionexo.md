@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'Partner integration API for exchanging supply-chain and procurement data (purchase quotations, orders, catalog) between customer and supplier ERP systems and the Bionexo marketplace. Documented via a '
@@ -43,6 +43,10 @@ apis:
   slug: bionexo-data-receiving-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://bionexo.com/feed/
 - group: company
   title: ''
   type: Website
@@ -95,18 +99,18 @@ created: '2026-07-17'
 description: Bionexo is Latin America's largest B2B healthcare supply-chain technology platform, founded in 2000 in Sao Paulo, Brazil. It connects hospitals, clinics, laboratories, health-plan operators, distributors, suppliers and industry through an integrated cloud suite spanning e-procurement and marketplace, the Tasy hospital ERP, Clinica nas Nuvens clinic management, and the Brasindice drug-price reference, covering supply-chain, clinical and financial operations end to end. The platform serves more than 11,000 clients and roughly 90 million patients a year across Brazil, Argentina, Colombia and Mexico, running the largest healthcare B2B marketplace in the region. For system-to-system integration Bionexo exposes a partner Integration API documented via Swagger/OpenAPI and a Data Receiving API for EDI-style exchange of purchase quotations and supply-chain data between customer and supplier ERP systems and the Bionexo marketplace.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bionexo.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Bionexo
 nav: Providers
 network: true
-overview: 'Bionexo publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Supply Chain, Procurement, and Marketplace.
+overview: 'Bionexo is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Supply Chain, Procurement, and Marketplace.
 
 
-  Bionexo''s developer surface includes documentation, API reference, engineering blog, support, and 8 more developer resources.'
+  Bionexo''s developer surface includes documentation, API reference, engineering blog, support, and 9 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 19.7
+  composite: 19.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -114,13 +118,13 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -129,15 +133,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 19.7
+  previous_composite: 19.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

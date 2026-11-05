@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 2
@@ -134,6 +134,29 @@ collections:
   name: Supermicro Redfish API
   slug: open-supermicro-redfish
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/super-micro-computer/refs/heads/main/plans/super-micro-computer-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/super-micro-computer-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/super-micro-computer/refs/heads/main/rate-limits/super-micro-computer-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/super-micro-computer-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/super-micro-computer/refs/heads/main/finops/super-micro-computer-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/super-micro-computer-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://learn-more.supermicro.com/data-center-stories
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://learn-more.supermicro.com/data-center-stories/rss.xml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/super-micro-computer/refs/heads/main/capabilities/super-micro-computer-capability-edges.yml
   title: ''
@@ -207,9 +230,13 @@ examples:
   name: Supermicro Reset System Example
   slug: supermicro-reset-system-example
 finops:
-- name: Super Micro Computer Finops
+- has_sources: false
+  method: generated
+  name: Super Micro Computer Finops
+  primary_unit: ''
   service_category: API
   slug: super-micro-computer-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/super-micro-computer.png
 json_schemas:
 - name: Supermicro Computer System
@@ -225,17 +252,17 @@ jsonld:
   property_count: 14
   slug: super-micro-computer-context
 layout: provider
-modified: '2026-05-19'
+modified: '2026-10-06'
 name: Super Micro Computer
 nav: Providers
 network: true
-overview: 'Super Micro Computer publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Chassis API, Event Service API, and 7 more. Tagged areas include Servers, Data-Center, Hardware, Server Management, and Redfish.
+overview: 'Super Micro Computer publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Chassis API, Event Service API, and 7 more. Tagged areas include Servers, Data Center, Hardware, Server Management, and Redfish.
 
 
   The Super Micro Computer catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Super Micro Computer''s developer surface includes authentication, documentation, engineering blog, support, pricing, and 9 more developer resources.'
+  Super Micro Computer''s developer surface includes engineering blog, authentication, documentation, support, pricing, and 14 more developer resources.'
 plans:
 - name: Super Micro Computer Plans Pricing
   plan_count: 3
@@ -246,9 +273,10 @@ rate_limits:
   name: Super Micro Computer Rate Limits
   slug: super-micro-computer-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Super Micro Computer API Rules
+  name: Super Micro Computer — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -256,9 +284,10 @@ rules:
     info: 1
     warn: 4
   slug: super-micro-computer-jsonschema-spectral-rules
-- effective_rule_count: 10
+- authorship: unmarked
+  effective_rule_count: 10
   extends: []
-  name: Super Micro Computer API Rules
+  name: Super Micro Computer — supermicro redfish rules
   rule_count: 10
   severity_counts:
     error: 4
@@ -268,26 +297,26 @@ rules:
   slug: supermicro-redfish-rules
 score:
   band: thin
-  composite: 29.6
+  composite: 26.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 71.3
+    artifact_dirs: 19
+    catalog_earned: 67.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.8
+    catalog_gap: 47.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
-    contract_governance: 25.0
-    contract_quality: 67.7
+    access_clarity: 7.9
+    contract_governance: 23.5
+    contract_quality: 62.3
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 29.6
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     contracts:
@@ -295,8 +324,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -314,7 +349,7 @@ security:
 slug: super-micro-computer
 tags:
 - Servers
-- Data-Center
+- Data Center
 - Hardware
 - Server Management
 - Redfish

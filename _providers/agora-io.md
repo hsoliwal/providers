@@ -21,7 +21,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 15.0
+  scored_at: '2026-10-17'
 api_count: 11
 apis:
 - description: The Agora Video Calling API enables real-time, interactive video communication with sub-200ms global latency. Supports one-to-one calls, group calls, and multi-host scenarios across mobile, web, deskt
@@ -68,7 +68,7 @@ apis:
 - description: The Agora Analytics API surfaces quality, performance, and usage metrics for all RTC, signaling, chat, and recording sessions. Provides call inspector, real-time dashboards, geographic performance, an
   name: Agora Analytics API
   slug: agora-analytics-api
-artifact_total: 42
+artifact_total: 43
 common:
 - group: operate
   title: ''
@@ -280,38 +280,48 @@ integrations:
 - description: Native engine plugins for in-game voice, video, and signaling.
   name: Unity and Unreal Engine
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.agora.io over HTTP; 4 tools listed.
+  name: Agora MCP Server
+  slug: agora-io
 modified: '2026-05-25'
 name: Agora
 nav: Providers
 network: true
-overview: 'Agora publishes 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Time Engagement, Voice, Video, Signaling, and Conversational AI.
+overview: 'Agora is listed with 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Time Engagement, Voice, Video, Signaling, and Conversational AI.
 
 
   Agora''s developer surface includes developer portal, documentation, API reference, developer console, signup flow, pricing, authentication, and 35 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 30.6
+  composite: 30.3
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
   previous_composite: 30.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -348,6 +358,7 @@ tags:
 - Cloud Recording
 - WebRTC
 - Communications Platform
+- Real-Time
 use_cases:
 - description: HIPAA-aligned video visits, secure messaging, and AI-assisted clinical workflows between patients and providers.
   name: Telehealth and Remote Care

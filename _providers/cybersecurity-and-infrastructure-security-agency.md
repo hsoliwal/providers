@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -49,12 +49,12 @@ apis:
 - description: 'CISA publishes Cybersecurity Advisories (CSAs), Industrial Control Systems Advisories (ICSAs), and Common Security Advisory Framework (CSAF) JSON documents describing tactics, techniques, indicators, '
   name: CISA Cybersecurity Advisories
   slug: advisories
-- baseURL: https://www.cisa.gov
+- baseURL: https://raw.githubusercontent.com/cisagov/kev-data/develop
   baseurl_source: declared
   description: Known Exploited Vulnerabilities catalog feed
   name: Cybersecurity and Infrastructure Security Agency KEV API
   slug: cybersecurity-and-infrastructure-security-agency-kev-api
-- baseURL: https://www.cisa.gov
+- baseURL: https://raw.githubusercontent.com/cisagov/kev-data/develop
   baseurl_source: declared
   description: JSON Schema for the KEV catalog
   name: Cybersecurity and Infrastructure Security Agency Schema API
@@ -74,6 +74,21 @@ collections:
   name: CISA Known Exploited Vulnerabilities () Catalog KEV Schema API
   slug: open-cybersecurity-and-infrastructure-security-agency-schema-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cybersecurity-and-infrastructure-security-agency/refs/heads/main/plans/cybersecurity-and-infrastructure-security-agency-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cybersecurity-and-infrastructure-security-agency-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/cybersecurity-and-infrastructure-security-agency/refs/heads/main/rate-limits/cybersecurity-and-infrastructure-security-agency-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/cybersecurity-and-infrastructure-security-agency-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cybersecurity-and-infrastructure-security-agency/refs/heads/main/finops/cybersecurity-and-infrastructure-security-agency-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/cybersecurity-and-infrastructure-security-agency-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/cybersecurity-and-infrastructure-security-agency/refs/heads/main/capabilities/cybersecurity-and-infrastructure-security-agency-capability-edges.yml
   title: ''
@@ -165,9 +180,13 @@ common:
 created: '2024-12-03'
 description: The Cybersecurity and Infrastructure Security Agency (CISA) is the United States federal civilian cybersecurity agency, part of the Department of Homeland Security. CISA reduces cybersecurity and physical security risk for the nation, coordinates federal civilian cyber defense, and partners with state, local, tribal, and territorial governments and the private sector. CISA publishes a number of public, unauthenticated machine-readable feeds, including the Known Exploited Vulnerabilities (KEV) catalog (mandatorily remediated by federal civilian agencies under Binding Operational Directive 22-01), Cybersecurity Advisories, and Common Security Advisory Framework (CSAF) advisories. CISA also operates an Automated Indicator Sharing (AIS) TAXII 2.1 server that delivers STIX cyber threat indicators to vetted partners under a Terms of Use and Interconnection Agreement.
 finops:
-- name: Cybersecurity And Infrastructure Security Agency Finops
+- has_sources: false
+  method: generated
+  name: Cybersecurity And Infrastructure Security Agency Finops
+  primary_unit: ''
   service_category: API
   slug: cybersecurity-and-infrastructure-security-agency-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cybersecurity-and-infrastructure-security-agency.png
 json_schemas:
 - name: KevVulnerability
@@ -183,13 +202,13 @@ modified: '2026-05-19'
 name: Cybersecurity and Infrastructure Security Agency
 nav: Providers
 network: true
-overview: 'Cybersecurity and Infrastructure Security Agency publishes 2 APIs on the [APIs.io](https://apis.io/) network: KEV API and Schema API. Tagged areas include Advisories, AIS, Binding Operational Directive, CSAF, and CVE.
+overview: 'Cybersecurity and Infrastructure Security Agency publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including KEV API, Schema API, and 2 more. Tagged areas include Advisories, AIS, Binding Operational Directive, CSAF, and CVE.
 
 
   The Cybersecurity and Infrastructure Security Agency catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Cybersecurity and Infrastructure Security Agency''s developer surface includes engineering blog and 19 more developer resources.'
+  Cybersecurity and Infrastructure Security Agency''s developer surface includes engineering blog and 22 more developer resources.'
 plans:
 - name: Cybersecurity And Infrastructure Security Agency Plans Pricing
   plan_count: 3
@@ -200,10 +219,11 @@ rate_limits:
   name: Cybersecurity And Infrastructure Security Agency Rate Limits
   slug: cybersecurity-and-infrastructure-security-agency-rate-limits
 rules:
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
-  name: Cybersecurity and Infrastructure Security Agency API Rules
+  name: Cybersecurity and Infrastructure Security Agency — cisa kev rules
   rule_count: 5
   severity_counts:
     error: 2
@@ -211,9 +231,10 @@ rules:
     info: 0
     warn: 3
   slug: cisa-kev-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Cybersecurity and Infrastructure Security Agency API Rules
+  name: Cybersecurity and Infrastructure Security Agency — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -222,24 +243,29 @@ rules:
     warn: 3
   slug: cybersecurity-and-infrastructure-security-agency-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 30.7
   coverage:
     artifact_dirs: 15
-    catalog_earned: 72.0
+    catalog_earned: 60.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.0
-    catalog_max: 100.0
+    catalog_gap: 54.6
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.3
   facets:
-    access_clarity: 28.6
-    contract_governance: 69.7
-    contract_quality: 57.8
+    access_clarity: 18.4
+    contract_governance: 27.3
+    contract_quality: 52.6
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 40.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -252,10 +278,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 38.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
@@ -279,7 +305,7 @@ tags:
 - CVE
 - CWE
 - Cybersecurity
-- Federal-Government
+- Federal Government
 - Government
 - ICS-CERT
 - Information Sharing

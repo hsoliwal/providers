@@ -12,7 +12,6 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -29,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.3
-  scored_at: '2026-09-20'
+  score: 38.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -140,7 +139,7 @@ apis:
   description: Webhook subscriptions delivering real-time event notifications (timer.start, timer.stop, task.create, shift.late, etc.).
   name: Hubstaff Webhooks API
   slug: hubstaff-webhooks-api
-artifact_total: 47
+artifact_total: 48
 collections:
 - collection_type: open
   name: API Collection
@@ -206,6 +205,11 @@ collections:
   name: Hubstaff API
   slug: open-hubstaff
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hubstaff/refs/heads/main/capabilities/hubstaff-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hubstaff-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hubstaff/refs/heads/main/agentic-access/hubstaff-agentic-access.yml
   title: ''
@@ -272,19 +276,27 @@ common:
 created: '2026-07-11'
 description: Hubstaff is a time tracking and workforce analytics platform for remote, hybrid, and field teams. The Hubstaff API v2 provides read and write access to tracked time (10-minute activity blocks and daily aggregates), time entries, timesheets and approvals, time off, attendance schedules and shifts, organizations, members, teams, projects, tasks, clients, invoices, team payments, screenshots, app and URL usage, and webhooks - authenticated with OAuth 2.0 / OpenID Connect or personal access tokens.
 finops:
-- name: Hubstaff Finops
+- has_sources: true
+  method: generated
+  name: Hubstaff Finops
+  primary_unit: ''
   service_category: Business Applications
   slug: hubstaff-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hubstaff.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.hubstaff.com over HTTP.
+  name: Hubstaff MCP Server
+  slug: hubstaff
 modified: '2026-07-11'
 name: Hubstaff
 nav: Providers
 network: true
-overview: 'Hubstaff publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Activities API, App & URL Tracking API, Attendance API, and 16 more. Tagged areas include Time Tracking, Timesheets, Workforce Management, Productivity, and Employee Monitoring.
+overview: 'Hubstaff publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, App & URL Tracking API, Attendance API, and 16 more. Tagged areas include Time Tracking, Timesheets, Workforce Management, Productivity, and Employee Monitoring.
 
 
-  Hubstaff''s developer surface includes authentication, documentation, pricing, support, engineering blog, and 9 more developer resources.'
+  Hubstaff''s developer surface includes authentication, documentation, pricing, support, engineering blog, and 10 more developer resources.'
 plans:
 - name: Hubstaff Plans Pricing
   plan_count: 6
@@ -295,24 +307,24 @@ rate_limits:
   name: Hubstaff Rate Limits
   slug: hubstaff-rate-limits
 score:
-  band: developing
-  composite: 41.7
+  band: thin
+  composite: 30.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
+    artifact_dirs: 15
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 35.7
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 41.7
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     contracts:
@@ -321,9 +333,15 @@ score:
       marker_coverage: 0.0
       total: 19
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

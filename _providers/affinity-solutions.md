@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol server that Affinity Solutions serves from its own corporate site at www.affinity.solutions, advertised by an RFC 8414 authorization-server document and an RF
@@ -121,14 +121,14 @@ description: Affinity Solutions is a New York consumer purchase data and insight
 image: https://www.affinity.solutions/wp-content/uploads/2026/06/header-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.affinity.solutions requiring OAuth.
   name: Affinity Solutions MCP Server
   slug: affinity-solutions-mcp-server
 modified: '2026-09-12'
 name: Affinity Solutions
 nav: Providers
 network: true
-overview: 'Affinity Solutions publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data, Analytics, Consumer Purchase Data, and Transaction Data.
+overview: 'Affinity Solutions is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data, Analytics, Consumer Purchase Data, and Transaction Data.
 
 
   Affinity Solutions'' developer surface includes engineering blog, authentication, and 16 more developer resources.'
@@ -143,38 +143,45 @@ rate_limits:
   slug: affinity-solutions-rate-limits
 scopes:
 - name: Affinity Solutions Scopes
-  scope_count: 0
+  scope_count: 1
   slug: affinity-solutions-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 18.8
+  composite: 22.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 18.8
+  previous_composite: 22.2
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/affinity-solutions/refs/heads/main/screenshots/affinity-solutions-2026-10-11T093032.png
 security:
 - kind: authentication
   name: Affinity Solutions Authentication
@@ -194,7 +201,7 @@ tags:
 - Marketing
 - Advertising
 - Measurements
-- Financial-Services
+- Financial Services
 - Retail
 - MCP
 website: https://www.affinity.solutions/

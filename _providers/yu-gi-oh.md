@@ -21,7 +21,7 @@ agent_readiness:
     dry_run_mode: na
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: na
     mcp_server: false
     openapi_examples: verified
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-09-20'
+  score: 30.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -91,6 +91,10 @@ collections:
   name: YGOPRODeck Yu-Gi-Oh! Card Database API
   slug: open-yu-gi-oh-ygoprodeck
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://ygoprodeck.com/category/format-article/news
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/agentic-access/yu-gi-oh-agentic-access.yml
   title: ''
@@ -311,22 +315,23 @@ jsonld:
   property_count: 73
   slug: yu-gi-oh-ygoprodeck-context
 layout: provider
-modified: '2026-05-30'
+modified: '2026-10-06'
 name: YGOPRODeck
 nav: Providers
 network: true
-overview: 'YGOPRODeck publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Archetypes API, Card Sets API, Cards API, and 2 more. Tagged areas include Games, Trading Card Games, Yu Gi Oh, Card Database, and Open Data.
+overview: 'YGOPRODeck is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Archetypes API, Card Sets API, Cards API, and 2 more. Tagged areas include Games, Trading Card Games, Yu Gi Oh, Card Database, and Open Data.
 
 
   The YGOPRODeck catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  YGOPRODeck''s developer surface includes documentation, pricing, tooling, and 14 more developer resources.'
+  YGOPRODeck''s developer surface includes engineering blog, documentation, pricing, tooling, and 14 more developer resources.'
 random_paper: 3
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: YGOPRODeck API Rules
+  name: YGOPRODeck — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -334,7 +339,8 @@ rules:
     info: 1
     warn: 4
   slug: yu-gi-oh-jsonschema-spectral-rules
-- effective_rule_count: 84
+- authorship: unmarked
+  effective_rule_count: 84
   extends:
   - spectral:oas
   name: YGOPRODeck API Rules
@@ -347,23 +353,23 @@ rules:
   slug: yu-gi-oh-rules
 score:
   band: thin
-  composite: 28.3
+  composite: 28.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 60.5
+    artifact_dirs: 13
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 28.8
+    contract_governance: 27.3
     contract_quality: 23.4
-    developer_ergonomics: 26.2
-    discoverability: 81.5
+    developer_ergonomics: 28.6
+    discoverability: 78.6
     operational_transparency: 7.9
-  previous_composite: 28.3
+  previous_composite: 28.1
   provenance:
     agentic_access: derived
     contracts:
@@ -376,9 +382,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

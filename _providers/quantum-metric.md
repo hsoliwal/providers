@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: Quantum Metric is a continuous product design and digital experience intelligence platform that captures and quantifies every user session across web and mobile, replaying interactions and surfacing friction, errors, and conversion opportunities in real time so that product, engineering, and customer-experience teams can prioritize work by quantified business impact. The platform exposes data-export and integration APIs to customers within their authenticated instance; during enrichment no public, unauthenticated developer portal or OpenAPI definition was discoverable (developer.quantummetric.com and docs.quantummetric.com redirect to the marketing site and the help center returns a maintenance page).
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quantum-metric.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.quantummetric.com over HTTP.
+  name: Quantum Metric MCP Server
+  slug: quantum-metric
 modified: '2026-07-20'
 name: Quantum Metric
 nav: Providers
@@ -94,28 +98,42 @@ overview: 'Quantum Metric is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 16
 score:
   band: minimal
-  composite: 10.2
+  composite: 9.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 10.2
+  previous_composite: 9.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hitrust
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

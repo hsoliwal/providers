@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Aramis Group publishes the machine-readable contracts behind the Aramisauto vehicle catalog as ten JSON Schema 2020-12 documents at https://schemas.aramis.group/ — a search request envelope (criteria/
@@ -210,7 +210,7 @@ modified: '2026-08-17'
 name: AramisAuto
 nav: Providers
 network: true
-overview: 'AramisAuto publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Automotive, E-Commerce, and Used Cars.
+overview: 'AramisAuto is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Automotive, E-Commerce, and Used Cars.
 
 
   AramisAuto''s developer surface includes code examples, support, engineering blog, YouTube channel, and 21 more developer resources.'
@@ -225,9 +225,9 @@ rate_limits:
   slug: aramisauto-rate-limits
 score:
   band: emerging
-  composite: 18.2
+  composite: 18.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 44.3
     catalog_earned_first_party: 6.0
     catalog_gap: 70.8
@@ -237,9 +237,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 8.3
-    contract_quality: 14.7
+    contract_quality: 14.5
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -249,11 +249,17 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 18.2
+  previous_composite: 18.4
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -281,6 +287,6 @@ tags:
 - Retail
 - Auto Finance
 - France
-- JSON-Schema
+- JSON Schema
 website: https://www.aramisauto.com/
 ---

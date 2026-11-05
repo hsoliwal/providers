@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API enabling independent insurance agencies to generate homeowners insurance quotes, bind policies, manage endorsements, and process renewals programmatically. Agencies can build custom interface
@@ -96,16 +96,20 @@ common:
 created: '2026-06-13'
 description: Openly is an independent agent home insurance platform founded in 2017 and headquartered in Boston, Massachusetts. The company provides REST APIs for generating homeowners insurance quotes, binding policies, managing endorsements, and processing renewals. Openly operates as a general agency and program administrator, enabling tech-savvy independent agencies to build custom interfaces and plug into the Openly platform on the backend. The platform leverages actuarial science, machine learning, and advanced technology to provide fully underwritten quotes in seconds, supporting primary residences, secondary and seasonal homes, and landlord (rented-to-others) policies with coverage up to $5M guaranteed replacement cost.
 finops:
-- name: Openly Finops
+- has_sources: false
+  method: generated
+  name: Openly Finops
+  primary_unit: ''
   service_category: ''
   slug: openly-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openly.png
 layout: provider
 modified: '2026-06-13'
 name: Openly
 nav: Providers
 network: true
-overview: 'Openly publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Homeowners Insurance, Home Insurance, Quotes, and Bind.
+overview: 'Openly is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Home Insurance, Quotes, Bind, and Policy.
 
 
   Openly''s developer surface includes documentation, engineering blog, pricing, and 9 more developer resources.'
@@ -120,36 +124,38 @@ rate_limits:
   slug: openly-rate-limits
 score:
   band: emerging
-  composite: 19.9
+  composite: 15.3
   coverage:
     artifact_dirs: 8
-    catalog_earned: 48.0
+    catalog_earned: 39.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 67.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.9
+  previous_composite: 19.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 18.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +170,6 @@ security:
 slug: openly
 tags:
 - Insurance
-- Homeowners Insurance
 - Home Insurance
 - Quotes
 - Bind

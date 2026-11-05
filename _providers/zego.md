@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.zego.com
@@ -143,7 +143,7 @@ modified: '2026-07-21'
 name: Zego
 nav: Providers
 network: true
-overview: 'Zego publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Customer Integration API, Customers API, Occupations API, and 2 more. Tagged areas include Company, Insurance, Insurtech, Motor Insurance, and Gig Economy.
+overview: 'Zego publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Customer Integration API, Customers API, Occupations API, and 2 more. Tagged areas include Company, Insurance, Insurtech, Auto Insurance, and Gig Economy.
 
 
   The Zego catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -153,7 +153,7 @@ overview: 'Zego publishes 5 APIs on the [APIs.io](https://apis.io/) network, inc
 random_paper: 19
 score:
   band: thin
-  composite: 27.9
+  composite: 26.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -167,9 +167,9 @@ score:
     contract_governance: 0.0
     contract_quality: 20.8
     developer_ergonomics: 30.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 27.9
+  previous_composite: 26.8
   provenance:
     contracts:
       callable: 100.0
@@ -183,9 +183,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 39.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -203,13 +203,13 @@ security:
 - kind: vulnerability-disclosure
   name: Zego Vulnerability Disclosure
   slug: zego-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: zego
 tags:
 - Company
 - Insurance
 - Insurtech
-- Motor Insurance
+- Auto Insurance
 - Gig Economy
 - Telematics
 - Fleet Insurance

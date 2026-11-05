@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -107,16 +107,16 @@ modified: '2026-07-21'
 name: Top Hat
 nav: Providers
 network: true
-overview: 'Top Hat is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, EdTech, Education, Higher Education, and Learning Management.
+overview: 'Top Hat is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, EdTech, Education, Higher Education, and LMS.
 
 
   Top Hat''s developer surface includes engineering blog, pricing, support, signup flow, and 11 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 25.1
+  composite: 23.0
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -128,22 +128,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.1
+  previous_composite: 23.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -158,7 +158,7 @@ security:
 - kind: vulnerability-disclosure
   name: Top Hat Vulnerability Disclosure
   slug: top-hat-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Top Hat Trust Center
   slug: top-hat-trust-center
@@ -169,7 +169,7 @@ tags:
 - EdTech
 - Education
 - Higher Education
-- Learning Management
+- LMS
 - Student Engagement
 - Interactive Learning
 - Courseware

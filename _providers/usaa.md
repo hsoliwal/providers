@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 11
 common:
@@ -110,9 +110,13 @@ common:
 created: '2024-12-03'
 description: USAA (United Services Automobile Association) is a Fortune 100 financial services group offering banking, investing, and insurance products exclusively to people and families who serve, or have served, in the United States military. USAA does not publish a first-party public developer portal or downloadable API specifications. Third-party access to member financial data is delivered through consumer-permissioned open-banking aggregators — Plaid, Mastercard Open Banking (formerly Flinks), and BankSync — using OAuth 2.0 tokenized authorization rather than shared credentials. USAA is an active member and board participant of the Financial Data Exchange (FDX) and helps shape the FDX API standard for secure open finance data sharing in the US.
 finops:
-- name: Usaa Finops
+- has_sources: true
+  method: generated
+  name: Usaa Finops
+  primary_unit: ''
   service_category: Financial Services
   slug: usaa-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/usaa.png
 json_schemas:
 - name: USAA Bank Account
@@ -135,7 +139,7 @@ modified: '2026-07-25'
 name: USAA
 nav: Providers
 network: true
-overview: 'USAA is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Insurance, Military Finance, and Open Banking.
+overview: 'USAA is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Insurance, Military Finance, and Open Banking.
 
 
   The USAA catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -168,9 +172,10 @@ rate_limits:
   name: Usaa Rate Limits
   slug: usaa-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: USAA API Rules
+  name: USAA — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -180,21 +185,21 @@ rules:
   slug: usaa-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 18.9
+  composite: 17.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 45.3
+    artifact_dirs: 19
+    catalog_earned: 42.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.8
+    catalog_gap: 72.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 28.0
     contract_quality: 10.7
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -203,7 +208,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.9
+  previous_composite: 18.6
   provenance:
     conformance: first-party
   regulatory:
@@ -211,9 +216,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 29.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -235,7 +240,7 @@ security:
   summary_line: Bugcrowd · security.txt · contact published
 slug: usaa
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Insurance
 - Military Finance

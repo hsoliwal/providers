@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.4
-  scored_at: '2026-09-20'
+  score: 3.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Labstep REST API exposes the same generic entity surface the Labstep application uses — experiments, protocols, resources, resource items, locations, devices, device data, orders, metadata, files,
@@ -178,14 +178,14 @@ modified: '2026-07-19'
 name: Labstep
 nav: Providers
 network: true
-overview: 'Labstep publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Electronic Lab Notebook, Life Sciences, Laboratory, and Research Data Management.
+overview: 'Labstep is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Electronic Lab Notebook, Life Sciences, Laboratory, and Research Data Management.
 
 
   Labstep''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 38.4
+  composite: 37.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -199,9 +199,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 38.4
+  previous_composite: 37.0
   provenance:
     conformance: first-party
   regulatory:
@@ -209,9 +209,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -235,7 +235,7 @@ tags:
 - Laboratory
 - Research Data Management
 - Scientific Software
-- Inventory Management
+- Inventory
 - Biotechnology
 - Chemistry
 - Compliance

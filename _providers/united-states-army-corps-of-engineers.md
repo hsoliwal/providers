@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -134,6 +134,21 @@ collections:
   name: CWMS Data Basins Version API
   slug: open-united-states-army-corps-of-engineers-version-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-army-corps-of-engineers/refs/heads/main/plans/united-states-army-corps-of-engineers-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/united-states-army-corps-of-engineers-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-army-corps-of-engineers/refs/heads/main/rate-limits/united-states-army-corps-of-engineers-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/united-states-army-corps-of-engineers-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-army-corps-of-engineers/refs/heads/main/finops/united-states-army-corps-of-engineers-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/united-states-army-corps-of-engineers-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -210,9 +225,13 @@ examples:
   name: Cwms Data Api Gettimeseries Example
   slug: cwms-data-api-getTimeSeries-example
 finops:
-- name: United States Army Corps Of Engineers Finops
+- has_sources: false
+  method: generated
+  name: United States Army Corps Of Engineers Finops
+  primary_unit: ''
   service_category: API
   slug: united-states-army-corps-of-engineers-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/united-states-army-corps-of-engineers.png
 json_schemas:
 - name: CWMS Location
@@ -238,13 +257,13 @@ modified: '2026-05-19'
 name: United States Army Corps of Engineers
 nav: Providers
 network: true
-overview: 'United States Army Corps of Engineers publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Basins API, Catalog API, Forecasts API, and 7 more. Tagged areas include Engineering, Federal-Government, Water Resources, Hydrology, and Civil Engineering.
+overview: 'United States Army Corps of Engineers publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Basins API, Catalog API, Forecasts API, and 7 more. Tagged areas include Engineering, Federal Government, Water Resources, Hydrology, and Civil Engineering.
 
 
   The United States Army Corps of Engineers catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  United States Army Corps of Engineers'' developer surface includes authentication, GitHub presence, and 13 more developer resources.'
+  United States Army Corps of Engineers'' developer surface includes authentication, GitHub presence, and 16 more developer resources.'
 plans:
 - name: United States Army Corps Of Engineers Plans Pricing
   plan_count: 3
@@ -255,10 +274,11 @@ rate_limits:
   name: United States Army Corps Of Engineers Rate Limits
   slug: united-states-army-corps-of-engineers-rate-limits
 rules:
-- effective_rule_count: 50
+- authorship: unmarked
+  effective_rule_count: 50
   extends:
   - spectral:oas
-  name: United States Army Corps of Engineers API Rules
+  name: United States Army Corps of Engineers — cwms data api rules
   rule_count: 9
   severity_counts:
     error: 1
@@ -266,9 +286,10 @@ rules:
     info: 1
     warn: 7
   slug: cwms-data-api-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: United States Army Corps of Engineers API Rules
+  name: United States Army Corps of Engineers — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -277,27 +298,32 @@ rules:
     warn: 3
   slug: united-states-army-corps-of-engineers-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 41.9
+  band: thin
+  composite: 33.7
   coverage:
     artifact_dirs: 16
-    catalog_earned: 72.0
+    catalog_earned: 55.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.3
   facets:
-    access_clarity: 15.8
-    contract_governance: 54.5
-    contract_quality: 62.2
+    access_clarity: 7.9
+    contract_governance: 13.6
+    contract_quality: 56.9
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 41.9
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     contracts:
@@ -310,10 +336,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -330,7 +356,7 @@ security:
 slug: united-states-army-corps-of-engineers
 tags:
 - Engineering
-- Federal-Government
+- Federal Government
 - Water Resources
 - Hydrology
 - Civil Engineering

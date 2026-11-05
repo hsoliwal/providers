@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.mooncard.co/fr/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.mooncard.co/fr/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/mooncard/refs/heads/main/security/mooncard-domain-security.yml
   title: ''
@@ -69,18 +77,18 @@ created: '2026-07-17'
 description: Mooncard is a French corporate expense-management platform that pairs a smart payment card, a mobile app, and accounting-automation software so finance teams can handle business spending end to end without manual data entry. It automates expense reports, VAT recovery, and mileage and per-diem calculations, then syncs transactions into accounting systems such as Sage, Cegid, SAP, Microsoft Dynamics, Exact Online, and Agicap. Mooncard also runs a developer program that offers API access plus a sandbox environment, though the API reference and OpenAPI are gated behind a developer-portal login and are not publicly discoverable.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mooncard.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Mooncard
 nav: Providers
 network: true
-overview: 'Mooncard is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Expense Management, Corporate Cards, and Fintech.
+overview: 'Mooncard is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Expense Management, Corporate Cards, and Fintech.
 
 
-  Mooncard''s developer surface includes signup flow, support, engineering blog, and 4 more developer resources.'
+  Mooncard''s developer surface includes engineering blog, signup flow, support, and 6 more developer resources.'
 random_paper: 15
 score:
-  band: minimal
-  composite: 10.5
+  band: emerging
+  composite: 11.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,17 +102,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 10.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 11.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 15.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -119,7 +132,7 @@ security:
 slug: mooncard
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Expense Management
 - Corporate Cards
 - Fintech

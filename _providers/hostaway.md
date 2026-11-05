@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -148,6 +148,11 @@ collections:
   name: Hostaway Calendar Webhooks API
   slug: open-hostaway-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hostaway/refs/heads/main/capabilities/hostaway-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hostaway-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -296,9 +301,13 @@ features:
 - Standard envelope response with status, result, and pagination (limit, offset, count, page, totalPages)
 - HTTPS-only, JSON request/response, UTC timestamps, ISO 3166-2 country codes, booleans as 0/1
 finops:
-- name: Hostaway Finops
+- has_sources: true
+  method: generated
+  name: Hostaway Finops
+  primary_unit: listing
   service_category: Software as a Service
   slug: hostaway-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hostaway.png
 integrations:
 - Pricelabs, Wheelhouse, Beyond, DPGO — revenue management
@@ -326,13 +335,13 @@ modified: '2026-05-25'
 name: Hostaway
 nav: Providers
 network: true
-overview: 'Hostaway publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Listings API, Reservations API, Calendar API, and 7 more. Tagged areas include Vacation Rentals, Short-Term Rental, Property Management, Channel Manager, and Airbnb.
+overview: 'Hostaway is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Listings API, Reservations API, Calendar API, and 13 more. Tagged areas include Vacation Rentals, Short-Term Rental, Property Management, Channel Manager, and Airbnb.
 
 
   The Hostaway catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Hostaway''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, getting-started guide, engineering blog, and 21 more developer resources.'
+  Hostaway''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, getting-started guide, engineering blog, and 22 more developer resources.'
 plans:
 - name: Hostaway Plans Pricing
   plan_count: 2
@@ -343,9 +352,10 @@ rate_limits:
   name: Hostaway Rate Limits
   slug: hostaway-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Hostaway API Rules
+  name: Hostaway — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -360,23 +370,23 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 50.5
+  composite: 46.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 68.3
+    artifact_dirs: 17
+    catalog_earned: 55.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.8
+    catalog_gap: 59.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.5
   facets:
-    access_clarity: 73.7
+    access_clarity: 57.9
     contract_governance: 9.8
-    contract_quality: 61.4
+    contract_quality: 56.0
     developer_ergonomics: 50.0
-    discoverability: 64.8
-    operational_transparency: 26.3
-  previous_composite: 50.5
+    discoverability: 62.5
+    operational_transparency: 10.5
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     contracts:
@@ -384,8 +394,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

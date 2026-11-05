@@ -33,14 +33,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Guildcode REST API for creating workspace-scoped agent sessions, posting events, and reading session events and tasks. HTTP Basic authentication; no public OpenAPI spec.
   name: Guild REST API
   slug: guild-rest-api
-artifact_total: 4
+artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/guildai/refs/heads/main/plans/guildai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/guildai-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -132,21 +137,25 @@ layout: provider
 mcp_servers:
 - description: The Guild CLI ships an MCP server that exposes Guild control-plane operations as tools for MCP clients, so client agents can list and inspect workspaces, agents, sessions, triggers, credentials, and i
   name: Guild.ai MCP Server
-  slug: guildai-mcp-server
+  slug: guild
 modified: '2026-07-19'
 name: Guild.ai
 nav: Providers
 network: true
-overview: 'Guild.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Control Plane, and Agent Runtime.
+overview: 'Guild.ai is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Control Plane, and Agent Runtime.
 
 
-  Guild.ai''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 12 more developer resources.'
+  Guild.ai''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 13 more developer resources.'
+plans:
+- name: Guildai Plans Pricing
+  plan_count: 0
+  slug: guildai-plans-pricing
 random_paper: 9
 score:
   band: thin
   composite: 28.2
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -158,13 +167,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
   previous_composite: 28.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

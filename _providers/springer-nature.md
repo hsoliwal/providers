@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.9
-  scored_at: '2026-09-20'
+  score: 26.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -79,6 +79,16 @@ collections:
   name: Springer Nature Meta Open Access Search API
   slug: open-springer-nature-search-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/springer-nature/refs/heads/main/plans/springer-nature-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/springer-nature-plans-pricing.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/springer-nature/refs/heads/main/finops/springer-nature-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/springer-nature-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/springer-nature/refs/heads/main/agentic-access/springer-nature-agentic-access.yml
   title: ''
@@ -141,9 +151,13 @@ examples:
   name: Springer Nature Search Publications Example
   slug: springer-nature-search-publications-example
 finops:
-- name: Springer Nature Finops
+- has_sources: true
+  method: generated
+  name: Springer Nature Finops
+  primary_unit: ''
   service_category: Content / Publishing
   slug: springer-nature-finops
+  template: false
 image: https://resource-cms.springernature.com/springer-cms/rest/v1/content/26613678/data/Springer_Nature_Logo_April21.png
 json_schemas:
 - name: Springer Nature Publication Record
@@ -167,13 +181,13 @@ modified: '2026-05-19'
 name: Springer Nature
 nav: Providers
 network: true
-overview: 'Springer Nature publishes 2 APIs on the [APIs.io](https://apis.io/) network: Open Access API and Search API. Tagged areas include Academic Publishing, Open Access, Research, Scholarly Content, and Scientific Publishing.
+overview: 'Springer Nature publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Open Access API, Search API, and 2 more. Tagged areas include Scholarly Publishing, Open Access, Research, Scholarly Content, and Publishing.
 
 
   The Springer Nature catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Springer Nature''s developer surface includes authentication, developer portal, signup flow, engineering blog, and 9 more developer resources.'
+  Springer Nature''s developer surface includes authentication, developer portal, signup flow, engineering blog, and 11 more developer resources.'
 plans:
 - name: Springer Nature Plans Pricing
   plan_count: 1
@@ -184,9 +198,10 @@ rate_limits:
   name: Springer Nature Rate Limits
   slug: springer-nature-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Springer Nature API Rules
+  name: Springer Nature — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -194,7 +209,8 @@ rules:
     info: 2
     warn: 3
   slug: springer-nature-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: Springer Nature API Rules
@@ -206,24 +222,24 @@ rules:
     warn: 3
   slug: springer-nature-rules
 score:
-  band: developing
-  composite: 40.5
+  band: thin
+  composite: 36.3
   coverage:
     artifact_dirs: 17
-    catalog_earned: 59.5
+    catalog_earned: 56.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.5
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 13.6
-    contract_quality: 64.3
+    contract_quality: 58.6
     developer_ergonomics: 45.2
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 7.9
-  previous_composite: 40.5
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -236,9 +252,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -256,10 +272,10 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: springer-nature
 tags:
-- Academic Publishing
+- Scholarly Publishing
 - Open Access
 - Research
 - Scholarly Content
-- Scientific Publishing
+- Publishing
 website: https://www.springernature.com/
 ---

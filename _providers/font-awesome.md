@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Public GraphQL API for programmatically querying Font Awesome releases, searching icons and their metadata (family-styles, unicode, aliases, SVG path data), and — with an access token — reading accoun
@@ -43,6 +43,10 @@ apis:
   slug: font-awesome-graphql-api
 artifact_total: 8
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.fontawesome.com/feed/
 - group: company
   title: ''
   type: Website
@@ -175,14 +179,14 @@ created: '2026-07-17'
 description: Font Awesome is the web's most popular icon library and toolkit, providing thousands of SVG, font, and CSS icons across multiple styles and families for web, desktop, and mobile projects. Beyond the icon sets and framework components (React, Vue, Angular, Ember, Svelte, React Native, WordPress), Font Awesome operates a public GraphQL API at api.fontawesome.com that lets developers programmatically query releases, search icons and their metadata, resolve family-styles and unicode values, and — with an authenticated access token — read account Kits, entitlements, and download subsets. The API uses a token-exchange endpoint that resolves an account API token into a short-lived bearer access token scoped by permission (public, kits_read, svg_icons_free, svg_icons_pro, and more). Font Awesome also ships a first-party `fa` CLI and official AI agent skills for icon discovery and setup.
 image: https://fontawesome.com/images/open-graph/default.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Font Awesome
 nav: Providers
 network: true
-overview: 'Font Awesome publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Icons, SVG, Fonts, Web Design, and Developer Tools.
+overview: 'Font Awesome is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Icons, SVG, Fonts, Web Design, and Developer Tools.
 
 
-  Font Awesome''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 21 more developer resources.'
+  Font Awesome''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 22 more developer resources.'
 random_paper: 5
 scopes:
 - name: Font Awesome Scopes
@@ -191,9 +195,9 @@ scopes:
   summary_line: 8 scopes
 score:
   band: developing
-  composite: 49.8
+  composite: 45.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -203,11 +207,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 41.5
+    contract_quality: 39.4
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 49.8
+  previous_composite: 45.8
   provenance:
     conformance: derived
     mcp: derived
@@ -217,9 +221,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -11,7 +11,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -22,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: false
@@ -33,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.9
-  scored_at: '2026-09-20'
+  score: 46.8
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 1
   name: Healthsherpa Agentic Access
   operation_count: 15
   slug: healthsherpa-agentic-access
-  summary_line: 15 operations · 8 acting · 1 human-in-the-loop
+  summary_line: 15 operations · 7 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.one.healthsherpa.com
@@ -217,7 +218,7 @@ modified: '2026-07-19'
 name: HealthSherpa
 nav: Providers
 network: true
-overview: 'HealthSherpa publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Enrollment Sessions API, Enrollments API, Quotes API, and 2 more. Tagged areas include Company, Health Insurance, Healthcare, ACA, and Enrollment.
+overview: 'HealthSherpa publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Enrollment Sessions API, Enrollments API, Quotes API, and 2 more. Tagged areas include Company, Health Insurance, Healthcare, ACA, and Enrollment.
 
 
   The HealthSherpa catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -226,8 +227,8 @@ overview: 'HealthSherpa publishes 5 APIs on the [APIs.io](https://apis.io/) netw
   HealthSherpa''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 19 more developer resources.'
 random_paper: 19
 score:
-  band: developing
-  composite: 40.1
+  band: thin
+  composite: 37.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -239,11 +240,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 65.1
+    contract_quality: 59.4
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 40.1
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -259,9 +260,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

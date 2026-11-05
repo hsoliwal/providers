@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 33
-  human_in_the_loop: 33
+- acting_count: 32
+  human_in_the_loop: 32
   name: Weld Agentic Access
   operation_count: 65
   slug: weld-agentic-access
-  summary_line: 65 operations · 33 acting · 33 human-in-the-loop
+  summary_line: 65 operations · 32 acting · 32 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://connect.weld.app
@@ -155,6 +155,11 @@ collections:
   name: Weld REST Connection Bridge Transforms API
   slug: open-weld-transforms-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/weld/refs/heads/main/capabilities/weld-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/weld-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/weld/refs/heads/main/security/weld-trust-center.yml
   title: ''
@@ -288,41 +293,43 @@ layout: provider
 mcp_servers:
 - description: 'Official hosted Weld MCP server. Lets AI assistants (Claude Desktop, claude.ai, Claude Code, Cursor, GitHub Copilot, Windsurf, and other MCP clients) interact directly with a Weld workspace — listing '
   name: Weld MCP Server
-  slug: weld-mcp-server
+  slug: weld
 modified: '2026-07-21'
 name: Weld
 nav: Providers
 network: true
-overview: 'Weld publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Connection Bridge API, Connections API, Custom Reports API, and 10 more. Tagged areas include Company, Data, ETL, ELT, and Reverse ETL.
+overview: 'Weld publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connection Bridge API, Connections API, Custom Reports API, and 10 more. Tagged areas include Company, Data, ETL, ELT, and Reverse ETL.
 
 
-  Weld''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, support, and 21 more developer resources.'
+  Weld''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, support, and 22 more developer resources.'
 random_paper: 10
 score:
   band: developing
-  composite: 44.7
+  composite: 45.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - denmark
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 44.7
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -333,8 +340,18 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

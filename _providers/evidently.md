@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 10
+- acting_count: 9
   human_in_the_loop: 0
   name: Evidently Agentic Access
   operation_count: 26
   slug: evidently-agentic-access
-  summary_line: 26 operations · 10 acting
+  summary_line: 26 operations · 9 acting
 api_count: 1
 apis:
 - baseURL: https://app.evidently.cloud
@@ -83,6 +83,11 @@ collections:
   name: Evidently Platform REST Dashboards Snapshots API
   slug: open-evidently-snapshots-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/evidently/refs/heads/main/capabilities/evidently-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/evidently-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -170,9 +175,13 @@ common:
 created: '2026-06-13'
 description: Evidently AI is an open-source ML and LLM observability framework licensed under Apache 2.0 that enables teams to evaluate, test, and monitor AI-powered systems and data pipelines in production. The platform provides over 100 built-in metrics for tracking data drift, data quality, and model performance across both tabular data and generative AI workloads. Developers can integrate evaluations programmatically via the Python SDK or through the Evidently Platform REST API, which exposes endpoints for managing projects, uploading traces, running evaluations, and storing results. Evidently supports self-hosted deployments and previously offered Evidently Cloud (now discontinued as SaaS) so teams can run the full platform within their own infrastructure.
 finops:
-- name: Evidently Finops
+- has_sources: false
+  method: generated
+  name: Evidently Finops
+  primary_unit: ''
   service_category: ''
   slug: evidently-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/evidently.png
 jsonld:
 - class_count: 0
@@ -184,13 +193,13 @@ modified: '2026-06-13'
 name: Evidently AI
 nav: Providers
 network: true
-overview: 'Evidently AI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Dashboards API, Projects API, Service API, and 1 more. Tagged areas include ML Monitoring, LLM Observability, Data Drift, Model Performance, and AI Evaluation.
+overview: 'Evidently AI publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dashboards API, Projects API, Service API, and 1 more. Tagged areas include ML Monitoring, LLM Observability, Data Drift, Model Performance, and AI Evaluation.
 
 
   The Evidently AI catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Evidently AI''s developer surface includes authentication, documentation, engineering blog, pricing, and 15 more developer resources.'
+  Evidently AI''s developer surface includes authentication, documentation, engineering blog, pricing, and 16 more developer resources.'
 plans:
 - name: Evidently Plans Pricing
   plan_count: 3
@@ -201,27 +210,27 @@ rate_limits:
   name: Evidently Rate Limits
   slug: evidently-rate-limits
 score:
-  band: developing
-  composite: 42.4
+  band: thin
+  composite: 34.9
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 65.0
+    artifact_dirs: 14
+    catalog_earned: 52.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.4
   facets:
-    access_clarity: 50.0
-    contract_governance: 15.2
-    contract_quality: 59.0
+    access_clarity: 18.4
+    contract_governance: 13.6
+    contract_quality: 54.0
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 42.4
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     contracts:
@@ -229,9 +238,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -253,7 +268,7 @@ tags:
 - Model Performance
 - AI Evaluation
 - Data Quality
-- Open-Source
+- Open Source
 - MLOps
 - LLMOps
 - Generative AI

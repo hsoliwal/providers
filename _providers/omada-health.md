@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.omadahealth.com/resource-center/tag/articles
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.omadahealth.com/resource-center/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/omada-health/refs/heads/main/security/omada-health-trust-center.yml
   title: ''
@@ -102,18 +110,18 @@ description: Omada Health is a virtual-first healthcare company founded in 2011 
   pages.
 image: https://www.omadahealth.com/hs-fs/hubfs/omada_logo_horizontal.png?name=omada_logo_horizontal.png
 layout: provider
-modified: '2026-08-08'
+modified: '2026-10-06'
 name: Omada Health
 nav: Providers
 network: true
 overview: 'Omada Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Digital Health, Virtual Care, Chronic Disease Management, and Diabetes.
 
 
-  Omada Health''s developer surface includes support, engineering blog, and 12 more developer resources.'
+  Omada Health''s developer surface includes engineering blog, support, and 14 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 20.8
+  composite: 19.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -127,14 +135,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.8
+  previous_composite: 19.9
   provenance:
     conformance: first-party
   regulatory:
@@ -146,9 +156,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

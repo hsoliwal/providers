@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://kestrl.io/newsroom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/kestrl-muslim-money-app/refs/heads/main/security/kestrl-muslim-money-app-domain-security.yml
   title: ''
@@ -65,42 +69,47 @@ created: '2026-07-17'
 description: Kestrl is a UK-based, FCA-regulated ethical fintech offering a values-aligned money app for Muslim and ethically-minded consumers. In partnership with Maybank Islamic, it provides interest-free (Sharia-compliant) banking, a Mastercard debit card with values filtering, goal-based sub-accounts, interest purification and Zakat calculation, transaction monitoring that alerts users to payments toward ethically questionable companies, and security features such as card freezing and biometric authentication. Kestrl is a consumer mobile application on iOS and Android; it does not currently publish a public developer API, SDK, or developer portal. This profile was surfaced as a Techstars portfolio company and enriched from public web sources.
 image: https://framerusercontent.com/images/1e1bojrtBFw4okK5e6fAdfRk.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: 'Kestrl: Muslim Money App'
 nav: Providers
 network: true
 overview: 'Kestrl: Muslim Money App is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Islamic Finance, Ethical Banking, and Personal Finance.
 
 
-  Kestrl: Muslim Money App''s developer surface includes support, signup flow, and 4 more developer resources.'
+  Kestrl: Muslim Money App''s developer surface includes engineering blog, support, signup flow, and 4 more developer resources.'
 random_paper: 0
 score:
   band: emerging
-  composite: 11.2
+  composite: 12.0
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 11.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

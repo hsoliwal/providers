@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Paperless Post Party Shop storefront is the only machine-callable surface on any paperlesspost.com host. It is Shopify-hosted and implements the Universal Commerce Protocol (UCP) for agent-driven '
@@ -145,14 +145,14 @@ description: Paperless Post is a New York City based digital and print stationer
 image: https://avatars.githubusercontent.com/u/282691?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at partyshop.paperlesspost.com over HTTP; 5 tools listed.
   name: Paperless Post MCP Server
-  slug: paperless-post-mcp-server
+  slug: paperless-post-party-shop
 modified: '2026-08-04'
 name: Paperless Post
 nav: Providers
 network: true
-overview: 'Paperless Post publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Invitations, Event, Greeting Cards, and Stationery.
+overview: 'Paperless Post is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Invitations, Event, Greeting Cards, and Stationery.
 
 
   Paperless Post''s developer surface includes pricing, signup flow, support, engineering blog, authentication, and 17 more developer resources.'
@@ -164,9 +164,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.2
+  composite: 28.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -178,20 +178,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 30.2
+  previous_composite: 28.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

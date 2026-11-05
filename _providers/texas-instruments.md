@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-09-20'
+  score: 25.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -104,6 +104,21 @@ collections:
   name: Texas Instruments Store API
   slug: open-texas-instruments-store
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/texas-instruments/refs/heads/main/plans/texas-instruments-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/texas-instruments-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/texas-instruments/refs/heads/main/rate-limits/texas-instruments-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/texas-instruments-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/texas-instruments/refs/heads/main/finops/texas-instruments-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/texas-instruments-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/texas-instruments/refs/heads/main/capabilities/texas-instruments-capability-edges.yml
   title: ''
@@ -196,9 +211,13 @@ examples:
   name: Texas Instruments Store Get Product Example
   slug: texas-instruments-store-get-product-example
 finops:
-- name: Texas Instruments Finops
+- has_sources: false
+  method: generated
+  name: Texas Instruments Finops
+  primary_unit: ''
   service_category: API
   slug: texas-instruments-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/texas-instruments.png
 json_schemas:
 - name: TI Product
@@ -218,13 +237,13 @@ modified: '2026-05-19'
 name: Texas Instruments
 nav: Providers
 network: true
-overview: 'Texas Instruments publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Financial API, Orders API, Product Information API, and 3 more. Tagged areas include Electronics, Ordering, Semiconductors, Supply Chain, and Fortune 500.
+overview: 'Texas Instruments publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Financial API, Orders API, Product Information API, and 3 more. Tagged areas include Electronics, Ordering, Semiconductors, Supply Chain, and Fortune 500.
 
 
   The Texas Instruments catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Texas Instruments'' developer surface includes authentication, documentation, getting-started guide, support, FAQ, and 13 more developer resources.'
+  Texas Instruments'' developer surface includes authentication, documentation, getting-started guide, support, FAQ, and 16 more developer resources.'
 plans:
 - name: Texas Instruments Plans Pricing
   plan_count: 3
@@ -251,9 +270,10 @@ rate_limits:
   name: Texas Instruments Rate Limits
   slug: texas-instruments-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Texas Instruments API Rules
+  name: Texas Instruments — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -261,7 +281,8 @@ rules:
     info: 2
     warn: 3
   slug: texas-instruments-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: Texas Instruments API Rules
@@ -279,23 +300,28 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 38.9
+  composite: 37.2
   coverage:
     artifact_dirs: 21
-    catalog_earned: 63.5
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 60.9
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 55.3
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 38.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     contracts:
@@ -303,8 +329,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

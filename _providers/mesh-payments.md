@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: RESTful API for the Mesh spend management platform. Documented capabilities include connectivity verification, virtual card lifecycle management (issuance, suspension, cancellation), merchant and cate
@@ -51,6 +51,10 @@ asyncapis:
   name: Mesh Payments Webhooks
   slug: mesh-payments-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://meshpayments.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/mesh-payments/refs/heads/main/security/mesh-payments-domain-security.yml
   title: ''
@@ -186,20 +190,20 @@ description: Mesh Payments is a global travel and expense (T&E) and spend manage
 image: https://meshpayments.com/wp-content/uploads/2026/05/meshpayments.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.meshpayments.com over HTTP.
   name: Mesh Payments MCP Server
-  slug: mesh-payments-mcp-server
-modified: '2026-08-04'
+  slug: mesh-payments
+modified: '2026-10-06'
 name: Mesh Payments
 nav: Providers
 network: true
-overview: 'Mesh Payments publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Spend Management, Expense Management, and Corporate Cards.
+overview: 'Mesh Payments is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Spend Management, Expense Management, and Corporate Cards.
 
 
   The Mesh Payments catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Mesh Payments'' developer surface includes documentation, support, engineering blog, pricing, signup flow, changelog, authentication, and 22 more developer resources.'
+  Mesh Payments'' developer surface includes documentation, support, engineering blog, pricing, signup flow, changelog, authentication, and 23 more developer resources.'
 random_paper: 13
 scopes:
 - name: Mesh Payments Scopes
@@ -208,7 +212,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials/deviceCode
 score:
   band: developing
-  composite: 51.5
+  composite: 47.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -220,11 +224,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 51.5
+  previous_composite: 47.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -239,9 +243,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 84.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

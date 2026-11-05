@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.5
-  scored_at: '2026-09-20'
+  score: 51.3
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Hosted, remote, streamable-HTTP MCP server exposing seven Brandfetch tools — brand_search, get_brand, get_brand_context, enrich_transaction, build_logo_urls, get_asset_base64 and send_feedback — to an
@@ -278,20 +278,24 @@ common:
 created: '2024-03-30'
 description: Brandfetch provides programmatic access to brand assets and company data through a suite of APIs. The Brand API retrieves logos, color schemes, fonts, images, and firmographic information for any company via domain, stock ticker, ISIN code, or crypto symbol. The Logo Link API serves logos via CDN with support for multiple formats, themes, and sizes. The Brand Search API enables autocomplete experiences by matching brand names to their domains and identifiers. The Brand Context API returns an LLM-ready narrative profile — identity, positioning, voice and visual style — for grounding agents, and the Transaction API resolves raw payment descriptors into merchant identity. A hosted MCP server at mcp.brandfetch.io exposes the same capabilities as seven agent tools over OAuth, and an Enterprise GraphQL endpoint carries the account, webhook and brand-monitoring plane. REST authenticates with Bearer API keys; the Logo and Search APIs use a public, embeddable Client ID.
 finops:
-- name: Brand Api Finops
+- has_sources: true
+  method: generated
+  name: Brand Api Finops
+  primary_unit: ''
   service_category: Brand Data API
   slug: brand-api-finops
+  template: false
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/brand-api-create-branded-experiences.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.brandfetch.io over HTTP requiring OAuth; 7 tools listed.
   name: Brand API (Brandfetch) MCP Server
-  slug: brand-api-brandfetch-mcp-server
+  slug: brandfetch
 modified: '2026-08-14'
 name: Brand API (Brandfetch)
 nav: Providers
 network: true
-overview: 'Brand API (Brandfetch) publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Brands API, Context API, Search API, and 1 more. Tagged areas include Brands, Logo, Brand Assets, Company Data, and Firmographics.
+overview: 'Brand API (Brandfetch) publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Brands API, Context API, Search API, and 5 more. Tagged areas include Brands, Logo, Brand Assets, Company Data, and Firmographics.
 
 
   The Brand API (Brandfetch) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -313,24 +317,24 @@ scopes:
   slug: brand-api-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: exemplar
-  composite: 66.5
+  band: strong
+  composite: 61.9
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 58.0
+    artifact_dirs: 30
+    catalog_earned: 55.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 57.0
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 65.8
+    access_clarity: 57.9
     contract_governance: 18.2
-    contract_quality: 69.4
+    contract_quality: 64.3
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 66.5
+  previous_composite: 63.4
   provenance:
     conformance: first-party
     contracts:
@@ -345,9 +349,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -376,5 +380,6 @@ tags:
 - Brand Context
 - Merchant Enrichment
 - Agent Tools
+- A2A
 website: https://www.brandfetch.com/
 ---

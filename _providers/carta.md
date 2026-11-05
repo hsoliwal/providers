@@ -26,14 +26,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 12.9
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - description: Enables incorporation partners and law firms to programmatically onboard new companies onto the Carta platform, streamlining the company formation and cap table initialisation workflow.
@@ -51,7 +51,7 @@ apis:
 - description: Facilitates deal and fundraising relationship management across investment processes for fund operators, providing structured access to CRM data within the Carta platform.
   name: Carta CRM API
   slug: crm-api
-artifact_total: 11
+artifact_total: 12
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/carta/refs/heads/main/security/carta-trust-center.yml
@@ -113,9 +113,13 @@ common:
 created: '2026-06-13'
 description: Carta is an equity management platform offering a REST API for cap table management, 409A valuations, fund administration, employee equity plans, and investor portfolio management. Carta's Developer Platform exposes four API suites — Launch, Investor, Issuer, and Portfolio — authenticated via OAuth 2.0 (Authorization Code and Client Credentials flows). Partner access is invite-only and requires SOC 2 Type 2 certification; Carta customers may request access to their own data on demand. A mock API environment at mock-api.carta.com is provided for sandbox development.
 finops:
-- name: Carta Finops
+- has_sources: false
+  method: generated
+  name: Carta Finops
+  primary_unit: ''
   service_category: ''
   slug: carta-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/carta.png
 jsonld:
 - class_count: 10
@@ -123,11 +127,15 @@ jsonld:
   property_count: 0
   slug: carta-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.app.carta.com over HTTP.
+  name: Carta MCP Server
+  slug: carta
 modified: '2026-06-13'
 name: Carta
 nav: Providers
 network: true
-overview: 'Carta publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Equity Management, Cap Table, 409A Valuations, Fund Administration, and Employee Equity.
+overview: 'Carta is listed with 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Equity Management, Cap Table, 409A Valuations, Fund Administration, and Employee Equity.
 
 
   The Carta catalog on APIs.io includes 1 JSON-LD context.
@@ -145,28 +153,34 @@ rate_limits:
   slug: carta-rate-limits
 score:
   band: emerging
-  composite: 25.8
+  composite: 19.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 63.0
+    artifact_dirs: 10
+    catalog_earned: 51.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    catalog_gap: 64.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 57.9
+    access_clarity: 26.3
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 7.1
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 21.1
-  previous_composite: 25.8
+  previous_composite: 25.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -191,5 +205,6 @@ tags:
 - Investor Portfolio
 - Private Markets
 - Fintech
+- Startups
 website: https://carta.com
 ---

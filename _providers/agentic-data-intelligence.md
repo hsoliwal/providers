@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://agentic-data.com/blog/
 - group: company
   title: ''
   type: Website
@@ -94,20 +98,20 @@ created: '2026-07-17'
 description: 'Agentic Data Intelligence SA (ADI) is a Swiss-headquartered startup building the control plane for AI data analytics: a thin semantics-and-control layer that sits between AI agents and data. ADI automatically generates machine-readable semantics and an enforceable contract (rules) that governs how copilots and agents conduct data analysis, improving governance, accuracy, and consistency while lowering inference cost. It never sees the underlying data, generating the contract from schema and context and running analysis locally. The Starter Edition targets coding agents and IDEs (Claude Code, Cursor, Manus) delivered via SKILL.md files, plugins, and MCP Servers; the Enterprise Edition extends cloud data warehouses (Snowflake, Databricks, dbt). Backed by Electric Capital and supporting the Open Semantic Interchange (OSI) initiative. Currently in limited alpha, accepting first partners via a waitlist.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/agentic-data-intelligence.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Agentic Data Intelligence
 nav: Providers
 network: true
 overview: 'Agentic Data Intelligence is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Data Analytics, Agents, and MCP.
 
 
-  Agentic Data Intelligence''s developer surface includes engineering blog, signup flow, and 10 more developer resources.'
+  Agentic Data Intelligence''s developer surface includes engineering blog, signup flow, and 11 more developer resources.'
 random_paper: 12
 score:
   band: minimal
-  composite: 10.6
+  composite: 9.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -119,11 +123,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 10.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - switzerland
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 9.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

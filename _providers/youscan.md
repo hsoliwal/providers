@@ -36,8 +36,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.0
-  scored_at: '2026-09-20'
-api_count: 1
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.youscan.io/api/external
   baseurl_source: declared
@@ -113,6 +113,11 @@ collections:
   name: YouScan Data Import Webhook API
   slug: open-youscan-webhook-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/capabilities/youscan-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/youscan-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-trust-center.yml
   title: ''
@@ -273,13 +278,13 @@ modified: '2026-08-13'
 name: YouScan
 nav: Providers
 network: true
-overview: 'YouScan publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Data Import API, History API, Mentions API, and 5 more. Tagged areas include Company, Social Media Listening, Social Intelligence, Consumer Insights, and Sentiment Analysis.
+overview: 'YouScan publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Import API, History API, Mentions API, and 5 more. Tagged areas include Company, Social Media Listening, Social Intelligence, Consumer Insights, and Sentiment Analysis.
 
 
   The YouScan catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  YouScan''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 26 more developer resources.'
+  YouScan''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 27 more developer resources.'
 plans:
 - name: Youscan Plans Pricing
   plan_count: 2
@@ -291,23 +296,23 @@ rate_limits:
   slug: youscan-rate-limits
 score:
   band: strong
-  composite: 56.9
+  composite: 57.8
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 53.0
     catalog_earned_first_party: 16.0
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 66.2
+    contract_quality: 60.4
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 56.9
+  previous_composite: 57.7
   provenance:
     conformance: first-party
     contracts:
@@ -317,8 +322,18 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

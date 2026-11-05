@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.1
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -91,7 +91,7 @@ apis:
   description: The Workflows API from Extend — 2 operation(s) for workflows.
   name: Extend Workflows API
   slug: extend-ai-workflows-api
-artifact_total: 27
+artifact_total: 28
 collections:
 - collection_type: open
   name: API Collection
@@ -177,16 +177,24 @@ common:
 created: '2026-06-20'
 description: Extend is an intelligent document processing platform that turns documents into high quality, structured data. Its REST API at api.extend.ai exposes parsing, extraction, classification, and splitting processors, durable multi-step workflows, evaluation sets, and batch processing for automating document-heavy operations.
 finops:
-- name: Extend Ai Finops
+- has_sources: true
+  method: generated
+  name: Extend Ai Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: extend-ai-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/extend-ai.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.extend.ai over HTTP.
+  name: Extend MCP Server
+  slug: extend-ai
 modified: '2026-06-20'
 name: Extend
 nav: Providers
 network: true
-overview: 'Extend publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Batch API, Classify API, Evaluations API, and 6 more. Tagged areas include Document Processing, Document AI, Intelligent Document Processing, OCR, and Extraction.
+overview: 'Extend publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch API, Classify API, Evaluations API, and 6 more. Tagged areas include Document Processing, Document AI, Intelligent Document Processing, OCR, and Extraction.
 
 
   Extend''s developer surface includes authentication, documentation, and 8 more developer resources.'
@@ -201,23 +209,23 @@ rate_limits:
   slug: extend-ai-rate-limits
 score:
   band: thin
-  composite: 38.3
+  composite: 27.9
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 13
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.2
   facets:
-    access_clarity: 47.4
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 50.5
+    contract_quality: 45.4
     developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 38.3
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 36.1
   provenance:
     agentic_access: derived
     contracts:
@@ -226,9 +234,15 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

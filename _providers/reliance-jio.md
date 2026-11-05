@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 19
+- acting_count: 18
   human_in_the_loop: 1
   name: Reliance Jio Agentic Access
   operation_count: 29
   slug: reliance-jio-agentic-access
-  summary_line: 29 operations · 19 acting · 1 human-in-the-loop
+  summary_line: 29 operations · 18 acting · 1 human-in-the-loop
 api_count: 6
 apis:
 - description: In-app purchase and digital content payment API for applications published on the Jio set-top box, distributed by Jio Platforms as a downloadable PDF API specification (v1.1) from the JioDevelopers se
@@ -289,7 +289,7 @@ modified: '2026-09-16'
 name: Reliance Jio
 nav: Providers
 network: true
-overview: 'Reliance Jio publishes 2 APIs on the [APIs.io](https://apis.io/) network: Events Cpaas Platform API and Meet Cpaas Platform API. Tagged areas include Telecommunications, India, Mobile Network Operator, Network APIs, and CAMARA.
+overview: 'Reliance Jio publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events Cpaas Platform API, Meet Cpaas Platform API, and 1 more. Tagged areas include Telecommunications, India, Mobile Network Operator, Network APIs, and CAMARA.
 
 
   Reliance Jio''s developer surface includes authentication, code examples, documentation, signup flow, support, getting-started guide, API reference, and 39 more developer resources.'
@@ -300,10 +300,10 @@ scopes:
   slug: reliance-jio-scopes
   summary_line: 6 scopes · authorizationCode
 score:
-  band: strong
-  composite: 56.7
+  band: developing
+  composite: 50.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -313,9 +313,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 58.2
+    contract_quality: 52.8
     developer_ergonomics: 63.7
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -324,7 +324,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 56.7
+  previous_composite: 50.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -340,9 +340,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 100.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 60.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

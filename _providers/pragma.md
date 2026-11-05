@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Public external REST API for FirstLook, Pragma's playtest and community platform. Uses scoped API tokens to query players, look up or find-or-create a player, record analytics events (sessions, counte
@@ -44,6 +44,10 @@ apis:
   slug: pragma-connect
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://pragma.gg/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -152,17 +156,17 @@ description: Pragma is a backend infrastructure company for game developers, use
 image: https://pragma.gg/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.firstlook.gg over HTTP requiring OAuth; 5 tools listed.
   name: Pragma MCP Server
-  slug: pragma-mcp-server
-modified: '2026-07-20'
+  slug: firstlook
+modified: '2026-10-06'
 name: Pragma
 nav: Providers
 network: true
-overview: 'Pragma publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure, Gaming, Game Backend, and Live Operations.
+overview: 'Pragma is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure, Gaming, Game Backend, and Live Operations.
 
 
-  Pragma''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 16 more developer resources.'
+  Pragma''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 17 more developer resources.'
 random_paper: 16
 scopes:
 - name: Pragma Scopes
@@ -171,7 +175,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: thin
-  composite: 31.3
+  composite: 34.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -179,20 +183,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 31.3
+  previous_composite: 34.0
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

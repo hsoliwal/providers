@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The Bloomberg Open API (BLPAPI) provides programmatic access to Bloomberg's market data, reference data, historical data and intraday tick data. It is an event-driven session protocol rather than an H
@@ -190,16 +190,20 @@ common:
 created: '2024-01-01'
 description: Bloomberg L.P. delivers financial market data, reference data, pricing, regulatory and alternative data to financial professionals through two machine-facing surfaces. The Bloomberg Open API (BLPAPI) is a native session protocol with first-party SDKs in C++, Java, C# (.NET) and Python, covering real-time market data, reference data, historical data and intraday tick data across the Desktop API, Server API and B-PIPE products. Bloomberg Data License adds bulk and per-security delivery of the same content catalogue over a JWT-authenticated hypermedia REST API at api.bloomberg.com/eap, over SFTP, and natively in the major cloud providers. Bloomberg publishes no OpenAPI, AsyncAPI, GraphQL schema or MCP server; its API reference for the REST surface sits behind the Bloomberg Enterprise Console, while the BLPAPI SDK reference, downloads and version archive are fully public.
 finops:
-- name: Bloomberg Data Sets Finops
+- has_sources: false
+  method: generated
+  name: Bloomberg Data Sets Finops
+  primary_unit: ''
   service_category: API
   slug: bloomberg-data-sets-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bloomberg-data-sets.png
 layout: provider
 modified: '2026-09-16'
 name: Bloomberg Data Sets
 nav: Providers
 network: true
-overview: 'Bloomberg Data Sets publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Datasets, Financial-Services, Market Data, and Reference Data.
+overview: 'Bloomberg Data Sets is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Datasets, Financial Services, Market Data, and Reference Data.
 
 
   Bloomberg Data Sets'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, CLI, authentication, and 24 more developer resources.'
@@ -218,24 +222,24 @@ scopes:
   slug: bloomberg-data-sets-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 34.7
   coverage:
     artifact_dirs: 19
-    catalog_earned: 35.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 21.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 31.6
-  previous_composite: 39.5
+  previous_composite: 36.2
   provenance:
     conformance: first-party
     mcp: derived
@@ -244,9 +248,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -270,7 +274,7 @@ slug: bloomberg-data-sets
 tags:
 - Analytics
 - Datasets
-- Financial-Services
+- Financial Services
 - Market Data
 - Reference Data
 - Historical Data

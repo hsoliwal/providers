@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -95,6 +95,21 @@ collections:
   name: Jelly Belly Wiki API
   slug: open-jelly-belly
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/jelly-belly/refs/heads/main/plans/jelly-belly-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/jelly-belly-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/jelly-belly/refs/heads/main/rate-limits/jelly-belly-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/jelly-belly-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/jelly-belly/refs/heads/main/finops/jelly-belly-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/jelly-belly-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/jelly-belly/refs/heads/main/agentic-access/jelly-belly-agentic-access.yml
   title: ''
@@ -144,16 +159,20 @@ common:
 created: '2024-11-14'
 description: Jelly Belly is the iconic American gourmet jelly bean candy company, owned by Ferrara Candy Company, known for its signature flavor assortments, themed collections, and historical association with American culture. This repository indexes the company's web properties and the community Jelly Belly Wiki API which catalogs Jelly Belly beans, flavors, recipes, facts, and milestones.
 finops:
-- name: Jelly Belly Finops
+- has_sources: false
+  method: generated
+  name: Jelly Belly Finops
+  primary_unit: ''
   service_category: API
   slug: jelly-belly-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jelly-belly.png
 layout: provider
 modified: '2026-04-28'
 name: Jelly Belly
 nav: Providers
 network: true
-overview: Jelly Belly publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Beans API, Combinations API, Facts API, and 2 more. Tagged areas include Beans, Candy, Confectionery, Food, and Jelly Beans.
+overview: Jelly Belly publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Beans API, Combinations API, Facts API, and 3 more. Tagged areas include Beans, Candy, Confectionery, Food, and Jelly Beans.
 plans:
 - name: Jelly Belly Plans Pricing
   plan_count: 3
@@ -165,23 +184,28 @@ rate_limits:
   slug: jelly-belly-rate-limits
 score:
   band: emerging
-  composite: 26.1
+  composite: 21.9
   coverage:
     artifact_dirs: 10
-    catalog_earned: 35.0
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.0
-    catalog_max: 100.0
+    catalog_gap: 77.0
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.0
   facets:
-    access_clarity: 28.6
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 46.1
+    contract_quality: 41.5
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 26.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 23.9
   provenance:
     agentic_access: derived
     contracts:
@@ -189,8 +213,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

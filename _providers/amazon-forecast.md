@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -133,6 +133,26 @@ collections:
   name: Amazon Forecast API
   slug: open-amazon-forecast
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-forecast/refs/heads/main/plans/amazon-forecast-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/amazon-forecast-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-forecast/refs/heads/main/rate-limits/amazon-forecast-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/amazon-forecast-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-forecast/refs/heads/main/finops/amazon-forecast-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/amazon-forecast-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-forecast/refs/heads/main/capabilities/amazon-forecast-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-forecast-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/amazon-forecast/refs/heads/main/agentic-access/amazon-forecast-agentic-access.yml
   title: ''
@@ -308,9 +328,13 @@ features:
 - description: Export forecast results to Amazon S3 in CSV format for downstream consumption.
   name: S3 Export
 finops:
-- name: Amazon Forecast Finops
+- has_sources: false
+  method: generated
+  name: Amazon Forecast Finops
+  primary_unit: ''
   service_category: API
   slug: amazon-forecast-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-forecast.png
 json_schemas:
 - name: DatasetGroup
@@ -354,13 +378,13 @@ modified: '2026-05-19'
 name: Amazon Forecast
 nav: Providers
 network: true
-overview: 'Amazon Forecast publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Dataset Groups API, Datasets API, Export Jobs API, and 3 more. Tagged areas include Forecasting, Machine-Learning, Predictive Analytics, and Time Series.
+overview: 'Amazon Forecast publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dataset Groups API, Datasets API, Export Jobs API, and 3 more. Tagged areas include Forecasting, Machine Learning, Predictive Analytics, and Time Series.
 
 
   The Amazon Forecast catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Forecast''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 24 more developer resources.'
+  Amazon Forecast''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 28 more developer resources.'
 plans:
 - name: Amazon Forecast Plans Pricing
   plan_count: 3
@@ -371,9 +395,10 @@ rate_limits:
   name: Amazon Forecast Rate Limits
   slug: amazon-forecast-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Amazon Forecast API Rules
+  name: Amazon Forecast — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -381,7 +406,8 @@ rules:
     info: 1
     warn: 4
   slug: amazon-forecast-jsonschema-spectral-rules
-- effective_rule_count: 76
+- authorship: generated
+  effective_rule_count: 76
   extends:
   - spectral:oas
   name: Amazon Forecast API Rules
@@ -394,23 +420,23 @@ rules:
   slug: amazon-forecast-spectral-rules
 score:
   band: strong
-  composite: 55.7
+  composite: 54.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 71.5
+    artifact_dirs: 20
+    catalog_earned: 67.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.5
+    catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 68.4
-    contract_governance: 28.8
-    contract_quality: 77.0
+    access_clarity: 60.5
+    contract_governance: 27.3
+    contract_quality: 70.3
     developer_ergonomics: 53.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 55.7
+  previous_composite: 56.2
   provenance:
     agentic_access: derived
     contracts:
@@ -418,8 +444,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -445,7 +477,7 @@ security:
 slug: amazon-forecast
 tags:
 - Forecasting
-- Machine-Learning
+- Machine Learning
 - Predictive Analytics
 - Time Series
 use_cases:

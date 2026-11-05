@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The Klue Content API returns an organization's published Klue cards and battlecards to external tools and agents, filterable by competitor, battlecard, tag and date range. Access is authenticated with
@@ -185,14 +185,14 @@ description: Klue is a Vancouver, BC based B2B SaaS company founded in 2015 that
 image: https://avatars.githubusercontent.com/u/5720878?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.klue.com over HTTP; 18 tools listed.
   name: Klue MCP Server
-  slug: klue-mcp-server
+  slug: klue
 modified: '2026-08-14'
 name: Klue
 nav: Providers
 network: true
-overview: 'Klue publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Software-as-a-Service, Competitive Intelligence, Competitive Enablement, and Sales Enablement.
+overview: 'Klue is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Software-as-a-Service, Competitive Intelligence, Competitive Enablement, and Sales Enablement.
 
 
   Klue''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
@@ -212,29 +212,43 @@ scopes:
   summary_line: 23 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.5
+  composite: 34.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 30.5
+  previous_composite: 34.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: CA
+      standard: pipeda
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 3
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

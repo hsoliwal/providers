@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Pico API let developers build custom workflows and integrations on the Pico creator platform — including searching and managing contacts across an account. Every request authenticated with an X-Ap
@@ -41,6 +41,16 @@ apis:
   slug: pico-api
 artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pico/refs/heads/main/plans/pico-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/pico-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/pico/refs/heads/main/rate-limits/pico-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/pico-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -96,10 +106,10 @@ modified: '2026-08-13'
 name: Pico
 nav: Providers
 network: true
-overview: 'Pico publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Creator Economy, CRM, Membership, and Payments.
+overview: 'Pico is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Creator Economy, CRM, Membership, and Payments.
 
 
-  Pico''s developer surface includes support, authentication, and 5 more developer resources.'
+  Pico''s developer surface includes support, authentication, and 7 more developer resources.'
 plans:
 - name: Pico Plans Pricing
   plan_count: 0
@@ -110,10 +120,10 @@ rate_limits:
   name: Pico Rate Limits
   slug: pico-rate-limits
 score:
-  band: emerging
-  composite: 14.2
+  band: minimal
+  composite: 0.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -121,21 +131,22 @@ score:
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
-    discoverability: 68.5
+    developer_ergonomics: 0.0
+    discoverability: 0.0
     operational_transparency: 0.0
-  previous_composite: 14.2
+  lifecycle: defunct
+  previous_composite: 0.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.1
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -96,7 +96,7 @@ apis:
   description: Catalog of AI voices and accents.
   name: Creatify Voices API
   slug: creatify-voices-api
-artifact_total: 28
+artifact_total: 29
 collections:
 - collection_type: open
   name: API Collection
@@ -135,6 +135,11 @@ collections:
   name: Creatify API
   slug: open-creatify
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/creatify/refs/heads/main/capabilities/creatify-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/creatify-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/creatify/refs/heads/main/agentic-access/creatify-agentic-access.yml
   title: ''
@@ -184,19 +189,27 @@ common:
 created: '2026-07-11'
 description: Creatify is an AI avatar and marketing-video generation platform that turns product URLs, scripts, images, and text into short-form video ads narrated by ultra-realistic AI avatars. The Creatify API (base https://api.creatify.ai/api, authenticated with X-API-ID / X-API-KEY headers) exposes AI Avatar (Lipsync v1/v2 and Aurora image-to-avatar), Link-to-Video, AI Shorts and Custom Template video generation, Text-to-Speech and voice cloning, a 1500+ Persona/avatar catalog, a voice catalog, and a music library. Generation is asynchronous - create a job, then poll the job by id or receive a webhook - with billing metered in credits.
 finops:
-- name: Creatify Finops
+- has_sources: true
+  method: generated
+  name: Creatify Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: creatify-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/creatify.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.creatify.ai over HTTP.
+  name: Creatify MCP Server
+  slug: creatify
 modified: '2026-07-11'
 name: Creatify
 nav: Providers
 network: true
-overview: 'Creatify publishes 10 APIs on the [APIs.io](https://apis.io/) network, including AI Avatar API, AI Editing API, AI Shorts API, and 7 more. Tagged areas include AI Avatars, Video Generation, AI Video, Generative AI, and Marketing Video.
+overview: 'Creatify publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Avatar API, AI Editing API, AI Shorts API, and 7 more. Tagged areas include AI Avatars, Video Generation, AI Video, Generative AI, and Marketing Video.
 
 
-  Creatify''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  Creatify''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Creatify Plans Pricing
   plan_count: 6
@@ -207,24 +220,24 @@ rate_limits:
   name: Creatify Rate Limits
   slug: creatify-rate-limits
 score:
-  band: thin
-  composite: 37.7
+  band: emerging
+  composite: 26.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.6
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 52.7
+    contract_quality: 47.4
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 37.7
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -233,9 +246,15 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

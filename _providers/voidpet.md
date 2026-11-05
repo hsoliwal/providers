@@ -33,16 +33,16 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
-api_count: 2
+  scored_at: '2026-10-17'
+api_count: 4
 apis:
 - baseURL: https://voidpet.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Discovery API from Voidpet — 1 operation(s) for discovery.
   name: Voidpet Discovery API
   slug: voidpet-discovery-api
 - baseURL: https://voidpet.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Health API from Voidpet — 1 operation(s) for health.
   name: Voidpet Health API
   slug: voidpet-health-api
@@ -134,35 +134,35 @@ layout: provider
 mcp_servers:
 - description: Read-only, public MCP server exposing Voidpet's public products, pages, and legal-document discovery metadata. No authentication; no account or game-state access.
   name: Voidpet MCP Server
-  slug: voidpet-mcp-server
+  slug: voidpet-public-site
 modified: '2026-07-21'
 name: Voidpet
 nav: Providers
 network: true
-overview: 'Voidpet publishes 2 APIs on the [APIs.io](https://apis.io/) network: Discovery API and Health API. Tagged areas include Company, Games, Gaming, Mental Health, and Wellness.
+overview: 'Voidpet publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Discovery API and Health API. Tagged areas include Company, Games, Gaming, Mental Health, and Wellness.
 
 
   Voidpet''s developer surface includes authentication, documentation, API reference, engineering blog, and 11 more developer resources.'
 random_paper: 15
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 37.5
   coverage:
     artifact_dirs: 16
-    catalog_earned: 37.0
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 65.0
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 57.1
     contract_governance: 4.5
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 39.8
+  previous_composite: 37.0
   provenance:
     conformance: derived
     contracts:
@@ -177,9 +177,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

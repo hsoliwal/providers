@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://mainnet.auto-drive.autonomys.xyz
@@ -59,6 +59,10 @@ collections:
   name: Auto Drive APIs Auto Drive API Auto Drive Download Gateway API
   slug: open-autonomys-auto-drive-download-gateway-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://medium.com/feed/@autonomysnetwork
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/autonomys/refs/heads/main/mcp/autonomys-mcp.yml
   title: ''
@@ -181,14 +185,14 @@ created: '2026-07-17'
 description: Autonomys is a decentralized infrastructure network providing permanent, verifiable, content-addressed data storage and AI-ready blockchain services, secured by a Proof-of-Archival-Storage consensus. Its developer surface centers on Auto Drive — permanent storage exposed through a REST API where objects are addressed by IPFS-style CIDs — and the Auto SDK, a TypeScript toolkit (@autonomys/* npm packages) for consensus, storage, cross-domain messaging, and DAG data. The broader stack adds Auto EVM (an Ethereum- compatible execution domain), Auto Agents (a framework for autonomous on-chain AI agents), and Auto ID (self-sovereign identity). Storage is paid in native AI3 via an on-chain Intents flow. Autonomys was surfaced as a portfolio company of Pantera Capital and has now been enriched from its public developer surface.
 image: https://www.autonomys.xyz/favicon.ico
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Autonomys
 nav: Providers
 network: true
-overview: 'Autonomys publishes 2 APIs on the [APIs.io](https://apis.io/) network: Auto Drive API and Auto Drive Download Gateway API. Tagged areas include Company, Crypto, Blockchain, Web3, and Decentralized Storage.
+overview: 'Autonomys publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Auto Drive API and Auto Drive Download Gateway API. Tagged areas include Company, Cryptocurrency, Blockchain, Web3, and Decentralized Storage.
 
 
-  Autonomys'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 19 more developer resources.'
+  Autonomys'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 20 more developer resources.'
 random_paper: 17
 score:
   band: developing
@@ -204,9 +208,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 43.2
+    contract_quality: 38.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   previous_composite: 40.7
   provenance:
@@ -218,8 +222,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -237,7 +247,7 @@ security:
 slug: autonomys
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Blockchain
 - Web3
 - Decentralized Storage

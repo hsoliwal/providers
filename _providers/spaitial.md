@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -49,22 +49,22 @@ apis:
 - baseURL: https://api.spaitial.ai
   baseurl_source: declared
   description: File upload endpoints
-  name: SpAItial files API
+  name: SpAItial Files API
   slug: spaitial-files-api
 - baseURL: https://api.spaitial.ai
   baseurl_source: declared
   description: Model discovery endpoints
-  name: SpAItial models API
+  name: SpAItial Models API
   slug: spaitial-models-api
 - baseURL: https://api.spaitial.ai
   baseurl_source: declared
   description: The panoramas API from SpAItial — 4 operation(s) for panoramas.
-  name: SpAItial panoramas API
+  name: SpAItial Panoramas API
   slug: spaitial-panoramas-api
 - baseURL: https://api.spaitial.ai
   baseurl_source: declared
   description: World generation endpoints
-  name: SpAItial worlds API
+  name: SpAItial Worlds API
   slug: spaitial-worlds-api
 artifact_total: 15
 asyncapis:
@@ -247,7 +247,7 @@ modified: '2026-07-21'
 name: SpAItial
 nav: Providers
 network: true
-overview: 'SpAItial publishes 4 APIs on the [APIs.io](https://apis.io/) network, including files API, models API, panoramas API, and 1 more. Tagged areas include Company, Spatial AI, World Models, 3D, and Gaussian Splatting.
+overview: 'SpAItial publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Files API, Models API, Panoramas API, and 1 more. Tagged areas include Company, Spatial AI, World Models, 3D, and Gaussian Splatting.
 
 
   The SpAItial catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -257,12 +257,12 @@ overview: 'SpAItial publishes 4 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 19
 scopes:
 - name: Spaitial Scopes
-  scope_count: 0
+  scope_count: 5
   slug: spaitial-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes
 score:
   band: developing
-  composite: 46.5
+  composite: 47.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -270,15 +270,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 55.0
+    contract_quality: 50.3
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 46.5
+  previous_composite: 47.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -289,8 +289,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

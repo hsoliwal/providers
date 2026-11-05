@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.hqo.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/security/hqo-vulnerability-disclosure.yml
   title: ''
@@ -123,18 +127,18 @@ created: '2026-07-17'
 description: HqO is a Boston-based proptech company whose Real Estate Experience (REX) Platform helps commercial real estate owners, operators, and asset managers bridge the "experience gap" for the tenants and employees who occupy their buildings. The platform spans six integrated suites — Intelligence, Experience, Tenant, Operations, Leasing, and Vendor — covering AI-powered portfolio analytics, mobile tenant apps, amenity and space booking, access control, a cloud building management system, leasing engagement, and vendor management. HqO manages more than 150 million square feet of real estate for landlords such as JLL, Hines, Vornado, Gecina, and Alexandria Real Estate. Programmatic integration is available through APIs and SDKs offered under an Enterprise Development engagement rather than a self-serve public developer portal; the platform also supports SSO (SAML), webview, deep-link, and native integrations.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hqo.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: HqO
 nav: Providers
 network: true
 overview: 'HqO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Commercial Real Estate, Workplace Experience, and Tenant Experience.
 
 
-  HqO''s developer surface includes support, documentation, engineering blog, signup flow, and 15 more developer resources.'
+  HqO''s developer surface includes support, documentation, engineering blog, signup flow, and 16 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 22.3
+  composite: 24.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -148,18 +152,34 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 22.3
+  previous_composite: 24.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: CA
+      standard: pipeda
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 3
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

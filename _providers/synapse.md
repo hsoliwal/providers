@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 1
@@ -121,6 +121,16 @@ collections:
   name: Synapse Admin Federation Users API
   slug: open-synapse-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/synapse/refs/heads/main/plans/synapse-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/synapse-plans-pricing.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/synapse/refs/heads/main/finops/synapse-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/synapse-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/synapse/refs/heads/main/capabilities/synapse-capability-edges.yml
   title: ''
@@ -205,9 +215,13 @@ examples:
   name: Synapse List Users Example
   slug: synapse-list-users-example
 finops:
-- name: Synapse Finops
+- has_sources: true
+  method: generated
+  name: Synapse Finops
+  primary_unit: ''
   service_category: Open-Source Messaging Infrastructure
   slug: synapse-finops
+  template: false
 image: https://matrix.org/images/matrix-logo.svg
 json_schemas:
 - name: Synapse User
@@ -227,13 +241,13 @@ modified: '2026-05-19'
 name: Synapse
 nav: Providers
 network: true
-overview: 'Synapse publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Federation API, Media API, Registration API, and 5 more. Tagged areas include Chat, Collaboration, Decentralized, Federation, and Matrix.
+overview: 'Synapse publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Federation API, Media API, Registration API, and 6 more. Tagged areas include Chat, Collaboration, Decentralized, Federation, and Matrix.
 
 
   The Synapse catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Synapse''s developer surface includes authentication, GitHub presence, documentation, getting-started guide, changelog, engineering blog, and 12 more developer resources.'
+  Synapse''s developer surface includes authentication, GitHub presence, documentation, getting-started guide, changelog, engineering blog, and 14 more developer resources.'
 plans:
 - name: Synapse Plans Pricing
   plan_count: 2
@@ -244,9 +258,10 @@ rate_limits:
   name: Synapse Rate Limits
   slug: synapse-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Synapse API Rules
+  name: Synapse — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -254,7 +269,8 @@ rules:
     info: 1
     warn: 4
   slug: synapse-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Synapse API Rules
@@ -267,23 +283,23 @@ rules:
   slug: synapse-rules
 score:
   band: thin
-  composite: 35.9
+  composite: 33.9
   coverage:
     artifact_dirs: 17
-    catalog_earned: 57.5
+    catalog_earned: 54.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 57.5
+    catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 13.6
-    contract_quality: 58.3
+    contract_quality: 53.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 35.9
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -291,8 +307,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -319,6 +341,6 @@ tags:
 - Federation
 - Matrix
 - Messaging
-- Open-Source
+- Open Source
 - Real-Time
 ---

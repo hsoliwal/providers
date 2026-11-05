@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.8
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -85,6 +85,11 @@ collections:
   name: Fonoa E-Invoicing Lookup V2 Transactions API
   slug: open-fonoa-transactions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/fonoa/refs/heads/main/capabilities/fonoa-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fonoa-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/fonoa/refs/heads/main/agentic-access/fonoa-agentic-access.yml
   title: ''
@@ -177,9 +182,13 @@ common:
 created: '2026-06-12'
 description: Fonoa is a global indirect tax automation platform that connects the full indirect tax lifecycle on one platform, serving enterprises across 100+ countries and jurisdictions. The platform provides APIs for real-time tax ID validation across 120+ countries, VAT/GST and sales tax calculation, e-invoicing compliance with local mandates, transaction reporting, and automated multi-country tax return filing. Companies such as Zoom, Uber, Booking.com, and Remote.com rely on Fonoa to automate and manage their global indirect tax obligations through a single API integration.
 finops:
-- name: Fonoa Finops
+- has_sources: false
+  method: generated
+  name: Fonoa Finops
+  primary_unit: ''
   service_category: ''
   slug: fonoa-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fonoa.png
 jsonld:
 - class_count: 46
@@ -191,13 +200,13 @@ modified: '2026-06-12'
 name: Fonoa
 nav: Providers
 network: true
-overview: 'Fonoa publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Lookup V2 API, Onboarding API, Tax API, and 1 more. Tagged areas include Tax, VAT, GST, E-Invoicing, and Tax Automation.
+overview: 'Fonoa publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Lookup V2 API, Onboarding API, Tax API, and 2 more. Tagged areas include Tax, VAT, GST, E-Invoicing, and Tax Automation.
 
 
   The Fonoa catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Fonoa''s developer surface includes authentication, documentation, getting-started guide, changelog, engineering blog, and 15 more developer resources.'
+  Fonoa''s developer surface includes authentication, documentation, getting-started guide, changelog, engineering blog, and 16 more developer resources.'
 plans:
 - name: Fonoa Plans Pricing
   plan_count: 1
@@ -208,24 +217,24 @@ rate_limits:
   name: Fonoa Rate Limits
   slug: fonoa-rate-limits
 score:
-  band: developing
-  composite: 44.0
+  band: thin
+  composite: 36.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 71.0
+    artifact_dirs: 14
+    catalog_earned: 53.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.0
+    catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 36.8
+    access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 62.3
+    contract_quality: 56.6
     developer_ergonomics: 23.8
-    discoverability: 74.1
-    operational_transparency: 52.6
-  previous_composite: 44.0
+    discoverability: 71.4
+    operational_transparency: 28.9
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     contracts:
@@ -233,9 +242,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
@@ -252,7 +267,7 @@ security:
 - kind: vulnerability-disclosure
   name: Fonoa Vulnerability Disclosure
   slug: fonoa-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Fonoa Trust Center
   slug: fonoa-trust-center

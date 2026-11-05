@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -51,19 +51,13 @@ apis:
 - description: Discover pizzerias (shops) in the Slice network.
   name: Slice Shops API
   slug: slice-shops-api
-- description: Logical, modeled grouping for the pizzeria (shop) records that anchor the Slice platform - profile, address, hours, service areas, and pickup/delivery availability. Reflected in the Owner's Portal sho
-  name: Slice Shops API (Modeled)
-  slug: slice-shops-api
 - description: Logical, modeled grouping for a shop's menu - categories, items, sizes, toppings, and pricing (the Owner's Portal exposes shop menu items at owners.slicelife.com/shops/{id}/menu/items). No public endp
   name: Slice Menu API (Modeled)
   slug: slice-menu-api
-- description: Logical, modeled grouping for online orders placed for pickup or delivery - cart, checkout, order status, and fulfillment. Central to Slice's per-order commercial model (a flat per-order fee to the sh
-  name: Slice Orders API (Modeled)
-  slug: slice-orders-api
 - description: 'Logical, modeled grouping for the diner accounts, order history, and marketing/loyalty relationships that Slice manages on behalf of shops (consumer identity is handled via Auth0). No public endpoint '
   name: Slice Customers API (Modeled)
   slug: slice-customers-api
-artifact_total: 19
+artifact_total: 17
 collections:
 - collection_type: open
   name: API Collection
@@ -160,9 +154,13 @@ common:
 created: '2026-06-02'
 description: Slice is an online ordering and management platform built specifically for independent local pizzerias, giving small shops digital ordering, marketing, loyalty, and back-office tools that compete with large delivery marketplaces at a low flat per-order fee. For technology partners, Slice publishes a Slice Public API documented on a Stoplight developer portal, exposing pizzeria-oriented resources such as shops and orders over a RESTful HTTP interface in two versions (v1 and v2). The platform serves pizzeria owners and the partners that integrate ordering, POS, and operations into the Slice network across thousands of locations.
 finops:
-- name: Slice Finops
+- has_sources: true
+  method: generated
+  name: Slice Finops
+  primary_unit: ''
   service_category: ''
   slug: slice-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/slice.png
 jsonld:
 - class_count: 4
@@ -174,7 +172,7 @@ modified: '2026-06-03'
 name: Slice
 nav: Providers
 network: true
-overview: 'Slice publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Orders API, Shops API, Shops API (Modeled), and 1 more. Tagged areas include Restaurant, Pizza, Online Ordering, Local Commerce, and Menus.
+overview: 'Slice publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Orders API, Shops API, and 2 more. Tagged areas include Restaurant, Pizza, Online Ordering, Local Commerce, and Menus.
 
 
   The Slice catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -191,7 +189,8 @@ rate_limits:
   name: Slice Rate Limits
   slug: slice-rate-limits
 rules:
-- effective_rule_count: 55
+- authorship: unmarked
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: Slice API Rules
@@ -203,24 +202,24 @@ rules:
     warn: 11
   slug: slice-rules
 score:
-  band: developing
-  composite: 45.6
+  band: thin
+  composite: 31.7
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 80.0
+    artifact_dirs: 15
+    catalog_earned: 50.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.0
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -10.9
   facets:
-    access_clarity: 50.0
-    contract_governance: 60.6
-    contract_quality: 57.1
+    access_clarity: 18.4
+    contract_governance: 25.0
+    contract_quality: 52.1
     developer_ergonomics: 28.6
-    discoverability: 59.3
-    operational_transparency: 23.7
-  previous_composite: 45.6
+    discoverability: 57.1
+    operational_transparency: 7.9
+  previous_composite: 42.6
   provenance:
     agentic_access: derived
     contracts:
@@ -228,9 +227,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

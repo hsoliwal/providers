@@ -27,16 +27,31 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/linux-foundation-europe/refs/heads/main/plans/linux-foundation-europe-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/linux-foundation-europe-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/linux-foundation-europe/refs/heads/main/rate-limits/linux-foundation-europe-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/linux-foundation-europe-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/linux-foundation-europe/refs/heads/main/finops/linux-foundation-europe-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/linux-foundation-europe-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/linux-foundation-europe/refs/heads/main/security/linux-foundation-europe-domain-security.yml
   title: ''
@@ -57,19 +72,23 @@ common:
 created: '2026-03-16'
 description: Linux Foundation Europe is a regional hub under the Linux Foundation for European open source projects, governance, and collaboration. It hosts OpenWallet Foundation, Servo, NeoNephos, and other projects, providing a European framework for open source innovation and digital sovereignty.
 finops:
-- name: Linux Foundation Europe Finops
+- has_sources: false
+  method: generated
+  name: Linux Foundation Europe Finops
+  primary_unit: ''
   service_category: API
   slug: linux-foundation-europe-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/linux-foundation-europe.png
 layout: provider
 modified: '2026-07-25'
 name: Linux Foundation Europe
 nav: Providers
 network: true
-overview: 'Linux Foundation Europe is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Europe, Governance, Linux Foundation, and Open-Source.
+overview: 'Linux Foundation Europe is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Europe, Governance, Linux Foundation, and Open Source.
 
 
-  Linux Foundation Europe''s developer surface includes documentation and 3 more developer resources.'
+  Linux Foundation Europe''s developer surface includes documentation and 6 more developer resources.'
 plans:
 - name: Linux Foundation Europe Plans Pricing
   plan_count: 3
@@ -81,30 +100,36 @@ rate_limits:
   slug: linux-foundation-europe-rate-limits
 score:
   band: minimal
-  composite: 10.8
+  composite: 7.7
   coverage:
     artifact_dirs: 5
-    catalog_earned: 31.0
+    catalog_earned: 28.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 84.0
+    catalog_gap: 87.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 10.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -121,5 +146,5 @@ tags:
 - Europe
 - Governance
 - Linux Foundation
-- Open-Source
+- Open Source
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: The Kuaishou Open Platform (快手开放平台) exposes a JSON HTTP API for third-party applications, mini programs and merchant tools built on Kuaishou. Access is granted through a standard OAuth 2.0 authorizati
@@ -191,14 +191,14 @@ description: 'Kuaishou Technology (快手) is a Beijing-based short-video and li
 image: https://s2-11031.kwimgs.com/kos/nlav11031/assets/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over streamable HTTP; 8 tools listed.
   name: Kling AI MCP Server
   slug: kling-ai-mcp-server
 modified: '2026-08-12'
 name: Kuaishou
 nav: Providers
 network: true
-overview: 'Kuaishou publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Social, Video, and Short Video.
+overview: 'Kuaishou is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Social, Video, and Short Video.
 
 
   Kuaishou''s developer surface includes support, authentication, CLI, changelog, documentation, API reference, getting-started guide, and 23 more developer resources.'
@@ -218,7 +218,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 28.0
+  composite: 29.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -226,13 +226,13 @@ score:
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -241,13 +241,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 28.0
+  previous_composite: 30.0
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -273,12 +279,12 @@ tags:
 - Live Streaming
 - Advertising
 - Marketing
-- Social-Media
+- Social Media
 - Content
 - China
 - Artificial Intelligence
 - Generative AI
-- Machine-Learning
+- Machine Learning
 - MCP
 website: https://www.kuaishou.com/
 ---

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 0
   name: Cesanta Agentic Access
   operation_count: 12
   slug: cesanta-agentic-access
-  summary_line: 12 operations · 8 acting
+  summary_line: 12 operations · 7 acting
 api_count: 1
 apis:
 - baseURL: https://dash.mongoose-os.com/api/v2
@@ -82,6 +82,10 @@ collections:
   name: Cesanta mDash REST Data Logs API
   slug: open-cesanta-logs-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://cesanta.com/blog/
 - group: docs
   href: https://raw.githubusercontent.com/api-evangelist/cesanta/refs/heads/main/openapi/_original/cesanta-mdash-openapi.yml
   title: ''
@@ -205,34 +209,34 @@ created: '2026-07-17'
 description: Cesanta is an embedded software and IoT company, established in 2013 to develop and support the Mongoose embedded web server and networking library (HTTP, WebSocket, MQTT, CoAP, TCP/IP) that ships in over 100 million devices from vendors such as Siemens, Bosch, Samsung, Schneider Electric, Broadcom, Google, and Caterpillar — and even runs aboard the International Space Station. Alongside the Mongoose library, Cesanta builds Mongoose OS (an IoT firmware development framework for ESP32, ESP8266, STM32 and other microcontrollers with AWS/Azure/Google Cloud integration), VCON.io (remote firmware update and automated firmware testing), and mDash — a managed IoT device cloud offering device management, over-the-air (OTA) updates, a device database/shadow, remote RPC, access control, and a documented REST API for programmatic fleet management.
 image: https://cesanta.com/images/logo1.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Cesanta
 nav: Providers
 network: true
-overview: 'Cesanta publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Data API, Devices API, Keys API, and 1 more. Tagged areas include Company, IoT, Embedded, Device Management, and Firmware.
+overview: 'Cesanta publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Devices API, Keys API, and 1 more. Tagged areas include Company, IoT, Embedded, Device Management, and Firmware.
 
 
-  Cesanta''s developer surface includes authentication, documentation, API reference, getting-started guide, support, pricing, and 20 more developer resources.'
+  Cesanta''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, support, pricing, and 20 more developer resources.'
 random_paper: 9
 score:
   band: developing
-  composite: 40.2
+  composite: 40.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 32.9
     contract_governance: 4.5
-    contract_quality: 58.2
-    developer_ergonomics: 56.5
-    discoverability: 75.9
+    contract_quality: 52.7
+    developer_ergonomics: 58.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 40.2
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -243,8 +247,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

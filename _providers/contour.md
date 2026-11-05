@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -52,33 +52,33 @@ apis:
 - description: Contour's ContourConfiguration Custom Resource Definition (v1alpha1) that provides cluster-scoped configuration of a Contour instance, including ingress settings, TLS defaults, timeouts, and feature g
   name: Contour Configuration API
   slug: contour-configuration-api
-- baseURL: https://projectcontour.io
-  baseurl_source: declared
+- baseURL_template: https://{kubernetes-api-server}
+  baseurl_source: spec_template
   description: Namespace-scoped resources that describe network infrastructure instances that route traffic. Each Gateway is associated with a GatewayClass and defines listeners for inbound traffic.
   name: Contour Gateway API
   slug: contour-gateway-api
-- baseURL: https://projectcontour.io
-  baseurl_source: declared
+- baseURL_template: https://{kubernetes-api-server}
+  baseurl_source: spec_template
   description: Cluster-scoped resources that define the controller responsible for managing Gateways of a particular class. GatewayClass is analogous to IngressClass in the legacy Ingress API.
   name: Contour GatewayClass API
   slug: contour-gatewayclass-api
-- baseURL: https://projectcontour.io
-  baseurl_source: declared
+- baseURL_template: https://{kubernetes-api-server}
+  baseurl_source: spec_template
   description: Operations for managing Contour HTTPProxy custom resources in a Kubernetes cluster. HTTPProxy resources define ingress routing rules for HTTP and HTTPS traffic.
   name: Contour HTTPProxy API
   slug: contour-httpproxy-api
-- baseURL: https://projectcontour.io
-  baseurl_source: declared
+- baseURL_template: https://{kubernetes-api-server}
+  baseurl_source: spec_template
   description: Namespace-scoped resources that define HTTP routing rules, mapping HTTP/HTTPS requests to backend Kubernetes services based on host, path, headers, and other criteria.
   name: Contour HTTPRoute API
   slug: contour-httproute-api
-- baseURL: https://projectcontour.io
-  baseurl_source: declared
+- baseURL_template: https://{kubernetes-api-server}
+  baseurl_source: spec_template
   description: Operations for managing TLSCertificateDelegation resources that allow certificates in one namespace to be used by HTTPProxy resources in other namespaces.
   name: Contour TLSCertificateDelegation API
   slug: contour-tlscertificatedelegation-api
-- baseURL: https://projectcontour.io
-  baseurl_source: declared
+- baseURL_template: https://{kubernetes-api-server}
+  baseurl_source: spec_template
   description: Namespace-scoped resources that define TLS routing rules for routing TLS connections based on SNI hostname to backend services.
   name: Contour TLSRoute API
   slug: contour-tlsroute-api
@@ -112,6 +112,21 @@ collections:
   name: Contour Gateway TLSRoute API
   slug: open-contour-tlsroute-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/contour/refs/heads/main/plans/contour-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/contour-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/contour/refs/heads/main/rate-limits/contour-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/contour-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/contour/refs/heads/main/finops/contour-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/contour-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/contour/refs/heads/main/capabilities/contour-capability-edges.yml
   title: ''
@@ -215,9 +230,13 @@ common:
 created: '2025-01-01'
 description: A Kubernetes ingress controller using Envoy proxy that provides dynamic configuration updates and advanced routing capabilities for managing external access to services in a cluster.
 finops:
-- name: Contour Finops
+- has_sources: true
+  method: generated
+  name: Contour Finops
+  primary_unit: ''
   service_category: Open Source Networking
   slug: contour-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/contour.png
 json_schemas:
 - name: AuthorizationServer
@@ -363,13 +382,13 @@ modified: '2026-05-19'
 name: Contour
 nav: Providers
 network: true
-overview: 'Contour publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Gateway API, GatewayClass API, HTTPProxy API, and 3 more. Tagged areas include Envoy, Ingress Controller, Kubernetes, Networking, and Proxy.
+overview: 'Contour publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Gateway API, GatewayClass API, HTTPProxy API, and 6 more. Tagged areas include Envoy, Ingress Controller, Kubernetes, Networking, and Proxy.
 
 
   The Contour catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Contour''s developer surface includes getting-started guide, documentation, support, changelog, and 19 more developer resources.'
+  Contour''s developer surface includes getting-started guide, documentation, support, changelog, and 22 more developer resources.'
 plans:
 - name: Contour Plans Pricing
   plan_count: 1
@@ -380,10 +399,11 @@ rate_limits:
   name: Contour Rate Limits
   slug: contour-rate-limits
 rules:
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
-  name: Contour API Rules
+  name: Contour — gateway rules
   rule_count: 5
   severity_counts:
     error: 4
@@ -391,10 +411,11 @@ rules:
     info: 0
     warn: 1
   slug: contour-gateway-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
-  name: Contour API Rules
+  name: Contour — httpproxy rules
   rule_count: 5
   severity_counts:
     error: 3
@@ -402,9 +423,10 @@ rules:
     info: 0
     warn: 2
   slug: contour-httpproxy-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Contour API Rules
+  name: Contour — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -414,26 +436,26 @@ rules:
   slug: contour-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 48.9
+  composite: 40.0
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 77.0
+    artifact_dirs: 17
+    catalog_earned: 54.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.0
+    catalog_gap: 60.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.2
   facets:
-    access_clarity: 13.2
-    contract_governance: 69.7
-    contract_quality: 59.5
+    access_clarity: 5.3
+    contract_governance: 27.3
+    contract_quality: 54.1
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 55.4
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 48.9
+  previous_composite: 45.2
   provenance:
     agentic_access: derived
     contracts:
@@ -441,9 +463,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

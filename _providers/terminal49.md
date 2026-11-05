@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -81,7 +81,7 @@ apis:
   description: The Webhooks API from Terminal49 — 5 operation(s) for webhooks.
   name: Terminal49 Webhooks API
   slug: terminal49-webhooks-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -169,16 +169,24 @@ common:
 created: '2026-06-21'
 description: Terminal49 is an automated container and ocean-freight tracking platform. Its v2 REST API (JSON:API) lets shippers, forwarders, and logistics software track Bills of Lading, bookings, and container numbers across global ocean carriers and North American rail, returning normalized milestones, ETAs, terminal availability, holds, demurrage fees, and last free day, with webhooks for real-time updates.
 finops:
-- name: Terminal49 Finops
+- has_sources: true
+  method: generated
+  name: Terminal49 Finops
+  primary_unit: ''
   service_category: Supply Chain and Logistics
   slug: terminal49-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/terminal49.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.terminal49.com over HTTP.
+  name: Terminal49 MCP Server
+  slug: terminal49
 modified: '2026-06-21'
 name: Terminal49
 nav: Providers
 network: true
-overview: 'Terminal49 publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Containers API, Shipments API, Shipping Lines API, and 4 more. Tagged areas include Container Tracking, Ocean Freight, Supply Chain, Logistics, and Shipping.
+overview: 'Terminal49 publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Containers API, Shipments API, Shipping Lines API, and 4 more. Tagged areas include Container Tracking, Ocean Freight, Supply Chain, Logistics, and Shipping.
 
 
   Terminal49''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
@@ -193,23 +201,23 @@ rate_limits:
   slug: terminal49-rate-limits
 score:
   band: thin
-  composite: 38.4
+  composite: 27.2
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 64.0
+    artifact_dirs: 15
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 53.8
+    contract_quality: 48.8
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 38.4
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 35.5
   provenance:
     agentic_access: derived
     contracts:
@@ -218,9 +226,15 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -241,5 +255,6 @@ tags:
 - Supply Chain
 - Logistics
 - Shipping
+- Freight
 website: https://www.terminal49.com
 ---

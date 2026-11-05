@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 2
@@ -76,6 +76,26 @@ collections:
   name: Netflix Eureka REST Applications VIP API
   slug: open-netflix-eureka-vip-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/plans/netflix-eureka-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/netflix-eureka-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/rate-limits/netflix-eureka-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/netflix-eureka-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/finops/netflix-eureka-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/netflix-eureka-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/capabilities/netflix-eureka-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/netflix-eureka-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/agentic-access/netflix-eureka-agentic-access.yml
   title: ''
@@ -108,19 +128,23 @@ common:
 created: '2026-03-26'
 description: Netflix Eureka is a RESTful service registry used for service discovery, load balancing, and failover of middle-tier servers in microservice and cloud-native architectures, originally built for the AWS cloud.
 finops:
-- name: Netflix Eureka Finops
+- has_sources: false
+  method: generated
+  name: Netflix Eureka Finops
+  primary_unit: ''
   service_category: API
   slug: netflix-eureka-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/netflix-eureka.png
 layout: provider
 modified: '2026-05-19'
 name: Netflix Eureka
 nav: Providers
 network: true
-overview: 'Netflix Eureka publishes 3 APIs on the [APIs.io](https://apis.io/) network: Applications API, Instances API, and VIP API. Tagged areas include Cloud-Native, Failover, Java, Load Balancing, and Microservices.
+overview: 'Netflix Eureka publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Applications API, Instances API, and VIP API. Tagged areas include Cloud-Native, Failover, Java, Load Balancing, and Microservices.
 
 
-  Netflix Eureka''s developer surface includes documentation, getting-started guide, FAQ, and 4 more developer resources.'
+  Netflix Eureka''s developer surface includes documentation, getting-started guide, FAQ, and 8 more developer resources.'
 plans:
 - name: Netflix Eureka Plans Pricing
   plan_count: 3
@@ -132,23 +156,23 @@ rate_limits:
   slug: netflix-eureka-rate-limits
 score:
   band: emerging
-  composite: 25.9
+  composite: 20.7
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 41.0
+    artifact_dirs: 9
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 46.0
+    contract_quality: 41.4
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 25.9
+  previous_composite: 22.2
   provenance:
     agentic_access: derived
     contracts:
@@ -156,8 +180,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

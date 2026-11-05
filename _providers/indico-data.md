@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://app.indico.io/restapi
@@ -62,7 +62,7 @@ apis:
   description: Document processing workflows
   name: Indico Data Workflows API
   slug: indico-data-workflows-api
-artifact_total: 14
+artifact_total: 15
 collections:
 - collection_type: open
   name: API Collection
@@ -83,6 +83,15 @@ collections:
   name: Indico REST Authentication Workflows API
   slug: open-indico-data-workflows-api
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://indicodata.ai/
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/indico-data/refs/heads/main/plans/indico-data-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/indico-data-plans-pricing.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/indico-data/refs/heads/main/overlays/indico-data-openapi-overlay.yaml
   title: ''
@@ -203,30 +212,34 @@ modified: '2026-07-19'
 name: Indico Data
 nav: Providers
 network: true
-overview: 'Indico Data publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Datasets API, Storage API, and 2 more. Tagged areas include Company, Intelligent Document Processing, Intelligent Process Automation, Document AI, and Machine-Learning.
+overview: 'Indico Data publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Datasets API, Storage API, and 2 more. Tagged areas include Company, Intelligent Document Processing, Intelligent Process Automation, Document AI, and Machine Learning.
 
 
-  Indico Data''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, authentication, and 19 more developer resources.'
+  Indico Data''s developer surface includes pricing, documentation, API reference, getting-started guide, engineering blog, changelog, authentication, and 20 more developer resources.'
+plans:
+- name: Indico Data Plans Pricing
+  plan_count: 0
+  slug: indico-data-plans-pricing
 random_paper: 7
 score:
   band: developing
-  composite: 43.1
+  composite: 42.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.1
   facets:
-    access_clarity: 43.4
+    access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 43.1
+  previous_composite: 40.0
   provenance:
     conformance: derived
     contracts:
@@ -241,9 +254,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -268,7 +281,7 @@ tags:
 - Intelligent Document Processing
 - Intelligent Process Automation
 - Document AI
-- Machine-Learning
+- Machine Learning
 - Unstructured Data
 - Data Extraction
 - Insurance

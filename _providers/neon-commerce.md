@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -325,14 +325,14 @@ description: Neon Commerce (Neon) is the direct-to-consumer commerce and payment
 image: https://www.neonpay.com/api/media/file/meta-image-1200x630.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 48 tools listed. A candidate, not confirmed as published by the provider.
   name: Neon Commerce MCP Server
-  slug: neon-commerce-mcp-server
+  slug: neon-commerce
 modified: '2026-07-20'
 name: Neon Commerce
 nav: Providers
 network: true
-overview: 'Neon Commerce publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Account API, Assets API, Auth API, and 10 more. Tagged areas include Commerce, Payments, Gaming, Checkout, and Storefront.
+overview: 'Neon Commerce publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Assets API, Auth API, and 10 more. Tagged areas include Commerce, Payments, Gaming, Checkout, and Storefront.
 
 
   The Neon Commerce catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -342,9 +342,9 @@ overview: 'Neon Commerce publishes 13 APIs on the [APIs.io](https://apis.io/) ne
 random_paper: 0
 score:
   band: developing
-  composite: 52.9
+  composite: 49.9
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -354,11 +354,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 61.5
+    contract_quality: 56.2
     developer_ergonomics: 64.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 52.9
+  previous_composite: 49.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -374,9 +374,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

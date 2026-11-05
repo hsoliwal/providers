@@ -25,18 +25,18 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.6
-  scored_at: '2026-09-20'
+  score: 48.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -82,7 +82,7 @@ apis:
   description: The Workspaces API from Tally — 2 operation(s) for workspaces.
   name: Tally Workspaces API
   slug: tally-workspaces-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -109,6 +109,15 @@ collections:
   name: Tally REST API
   slug: open-tally
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.tally.so/rss/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/capabilities/tally-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tally-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/tally/refs/heads/main/agentic-access/tally-agentic-access.yml
   title: ''
@@ -170,19 +179,27 @@ common:
 created: '2026-05-08'
 description: Tally is a Notion-style form and survey builder offering unlimited forms and submissions on its free plan. The Tally API exposes forms, submissions and webhooks programmatically and is free to use across all plans (including Free). Tally also publishes a JS embed library and an MCP server for AI integration.
 finops:
-- name: Tally Finops
+- has_sources: true
+  method: generated
+  name: Tally Finops
+  primary_unit: ''
   service_category: Forms / Surveys
   slug: tally-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tally.png
 layout: provider
-modified: '2026-05-08'
+mcp_servers:
+- description: Remote MCP server at mcp.tally.so over HTTP.
+  name: Tally MCP Server
+  slug: tally
+modified: '2026-10-06'
 name: Tally
 nav: Providers
 network: true
-overview: 'Tally publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Forms API, Organization API, Submissions API, and 3 more. Tagged areas include Forms, Surveys, No-Code, Free, and Notion-style.
+overview: 'Tally publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Forms API, Organization API, Submissions API, and 5 more. Tagged areas include Forms, Surveys, No-Code, Free, and Notion-style.
 
 
-  Tally''s developer surface includes authentication, documentation, pricing, and 10 more developer resources.'
+  Tally''s developer surface includes authentication, documentation, pricing, and 12 more developer resources.'
 plans:
 - name: Tally Plans Pricing
   plan_count: 3
@@ -194,23 +211,23 @@ rate_limits:
   slug: tally-rate-limits
 score:
   band: thin
-  composite: 31.7
+  composite: 28.3
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 45.0
+    artifact_dirs: 16
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 53.0
+    contract_quality: 48.1
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 31.7
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     contracts:
@@ -219,8 +236,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -244,5 +267,6 @@ tags:
 - Notion-style
 - Webhook
 - MCP
+- Accounting
 website: https://tally.so/
 ---

@@ -12,6 +12,7 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,21 +28,21 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.4
-  scored_at: '2026-09-20'
+  score: 40.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 376
-  human_in_the_loop: 13
+- acting_count: 192
+  human_in_the_loop: 9
   name: Keboola Agentic Access
-  operation_count: 631
+  operation_count: 327
   slug: keboola-agentic-access
-  summary_line: 631 operations · 376 acting · 13 human-in-the-loop
+  summary_line: 327 operations · 192 acting · 9 human-in-the-loop
 api_count: 14
 apis:
 - baseURL: https://connection.keboola.com/v2/storage
@@ -87,7 +88,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The configuration API from Keboola — 26 operation(s) for configuration.
-  name: Keboola configuration API
+  name: Keboola Configuration API
   slug: keboola-configuration-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -137,12 +138,12 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The health API from Keboola — 1 operation(s) for health.
-  name: Keboola health API
+  name: Keboola Health API
   slug: keboola-health-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: Import operations
-  name: Keboola import API
+  name: Keboola Import API
   slug: keboola-import-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -152,7 +153,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The jobs API from Keboola — 13 operation(s) for jobs.
-  name: Keboola jobs API
+  name: Keboola Jobs API
   slug: keboola-jobs-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -212,7 +213,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The queries API from Keboola — 1 operation(s) for queries.
-  name: Keboola queries API
+  name: Keboola Queries API
   slug: keboola-queries-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -222,12 +223,12 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The schedules API from Keboola — 4 operation(s) for schedules.
-  name: Keboola schedules API
+  name: Keboola Schedules API
   slug: keboola-schedules-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The service API from Keboola — 1 operation(s) for service.
-  name: Keboola service API
+  name: Keboola Service API
   slug: keboola-service-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -267,7 +268,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The test API from Keboola — 1 operation(s) for test.
-  name: Keboola test API
+  name: Keboola Test API
   slug: keboola-test-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -289,7 +290,7 @@ apis:
   description: Vendor membership and service accounts.
   name: Keboola Vendor API
   slug: keboola-vendor-api
-artifact_total: 527
+artifact_total: 528
 collections:
 - collection_type: open
   name: API Collection
@@ -709,9 +710,13 @@ examples:
   name: Vault Api Healthcheck Response 200
   slug: vault-api-healthCheck-response-200
 finops:
-- name: Keboola Finops
+- has_sources: false
+  method: generated
+  name: Keboola Finops
+  primary_unit: ''
   service_category: ''
   slug: keboola-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/keboola.png
 json_schemas:
 - name: AddMaintainerAdministratorRequest
@@ -1812,11 +1817,15 @@ jsonld:
   property_count: 42
   slug: keboola-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.keboola.com over HTTP.
+  name: Keboola MCP Server
+  slug: keboola
 modified: '2026-09-16'
 name: Keboola
 nav: Providers
 network: true
-overview: 'Keboola publishes 49 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Admin Apps API, Admin Stacks API, and 46 more. Tagged areas include Data Platform, ETL, ELT, Data Pipeline, and Data Storage.
+overview: 'Keboola publishes 49 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, Admin Apps API, Admin Stacks API, and 46 more. Tagged areas include Data Platform, ETL, ELT, Data Pipeline, and Data Storage.
 
 
   The Keboola catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -1833,9 +1842,10 @@ rate_limits:
   name: Keboola Rate Limits
   slug: keboola-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Keboola API Rules
+  name: Keboola — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1845,23 +1855,23 @@ rules:
   slug: keboola-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 42.2
+  composite: 41.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 62.3
+    artifact_dirs: 19
+    catalog_earned: 59.3
     catalog_earned_first_party: 8.0
-    catalog_gap: 52.8
+    catalog_gap: 55.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 47.4
+    access_clarity: 39.5
     contract_governance: 9.8
-    contract_quality: 59.2
+    contract_quality: 54.0
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 21.1
-  previous_composite: 42.2
+  previous_composite: 42.6
   provenance:
     agentic_access: derived
     contracts:
@@ -1870,8 +1880,14 @@ score:
       marker_coverage: 0.0
       total: 79
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

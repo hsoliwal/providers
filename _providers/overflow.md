@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-09-20'
+  score: 30.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 8
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 38
   slug: overflow-agentic-access
   summary_line: 38 operations · 8 acting · 8 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://server.overflow.co
   baseurl_source: declared
@@ -159,6 +159,11 @@ collections:
   name: Overflow Open Campaigns Webhooks API
   slug: open-overflow-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/overflow/refs/heads/main/capabilities/overflow-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/overflow-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -289,19 +294,19 @@ modified: '2026-07-20'
 name: Overflow
 nav: Providers
 network: true
-overview: 'Overflow publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Chargebacks API, Contributions API, and 10 more. Tagged areas include Company, Fintech, Payments, Donations, and Fundraising.
+overview: 'Overflow publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Chargebacks API, Contributions API, and 10 more. Tagged areas include Company, Fintech, Payments, Donations, and Fundraising.
 
 
   The Overflow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Overflow''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, signup flow, sandbox, and 20 more developer resources.'
+  Overflow''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, signup flow, sandbox, and 21 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 46.1
+  composite: 43.9
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -311,11 +316,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 60.5
+    contract_quality: 55.3
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 46.1
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,9 +336,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -93,7 +93,7 @@ apis:
   description: Transaction outcome labeling for machine-learning feedback.
   name: SEON Labels API
   slug: seon-tech-labels-api
-artifact_total: 28
+artifact_total: 29
 collections:
 - collection_type: open
   name: API Collection
@@ -126,6 +126,11 @@ collections:
   name: SEON REST API
   slug: open-seon
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/seon-tech/refs/heads/main/capabilities/seon-tech-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/seon-tech-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/seon-tech/refs/heads/main/agentic-access/seon-tech-agentic-access.yml
   title: ''
@@ -260,19 +265,27 @@ common:
 created: '2026-05-25'
 description: SEON is a Budapest-headquartered fraud prevention, AML compliance, and digital footprint analysis platform that exposes a modular REST API for fraud scoring, identity verification, email enrichment, phone enrichment, IP intelligence, BIN lookup, AML screening, device intelligence, and identity verification (IDV). SEON combines real-time enrichment of email, phone, IP, BIN, and device signals with customer-defined rules and machine learning to score risk and prevent fraud, account takeover, multi-accounting, and money laundering across digital channels.
 finops:
-- name: Seon Tech Finops
+- has_sources: false
+  method: generated
+  name: Seon Tech Finops
+  primary_unit: ''
   service_category: API
   slug: seon-tech-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/seon-tech.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.seon.io over HTTP.
+  name: SEON MCP Server
+  slug: seon-tech
 modified: '2026-08-08'
 name: SEON
 nav: Providers
 network: true
-overview: 'SEON publishes 7 APIs on the [APIs.io](https://apis.io/) network, including AML API, BIN API, Email API, and 4 more. Tagged areas include AML Compliance, Device Intelligence, Digital Footprint, Fraud Prevention, and Identity Verification.
+overview: 'SEON is listed with 11 APIs on the [APIs.io](https://apis.io/) network, including AML API, BIN API, Email API, and 8 more. Tagged areas include AML Compliance, Device Intelligence, Digital Footprint, Fraud Prevention, and Identity Verification.
 
 
-  SEON''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 24 more developer resources.'
+  SEON''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 25 more developer resources.'
 plans:
 - name: Seon Tech Plans Pricing
   plan_count: 3
@@ -284,21 +297,21 @@ rate_limits:
   slug: seon-tech-rate-limits
 score:
   band: developing
-  composite: 46.0
+  composite: 43.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 44.0
+    artifact_dirs: 15
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 51.3
+    access_clarity: 43.4
     contract_governance: 0.0
-    contract_quality: 52.5
+    contract_quality: 47.2
     developer_ergonomics: 61.9
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -306,7 +319,7 @@ score:
     regions:
     - cee
     - europe
-  previous_composite: 46.0
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     contracts:
@@ -315,8 +328,14 @@ score:
       marker_coverage: 0.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

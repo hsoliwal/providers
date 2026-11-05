@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - description: Cosmos is Tetra Tech's mobile data collection platform designed for field data capture, project management, and reporting. The Cosmos API and webhook system enables integration with third-party enterp
@@ -53,6 +53,21 @@ apis:
   slug: waternet-water-network-management-api
 artifact_total: 17
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tetra-tech/refs/heads/main/plans/tetra-tech-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tetra-tech-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tetra-tech/refs/heads/main/rate-limits/tetra-tech-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tetra-tech-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tetra-tech/refs/heads/main/finops/tetra-tech-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tetra-tech-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tetra-tech/refs/heads/main/security/tetra-tech-domain-security.yml
   title: ''
@@ -108,9 +123,13 @@ examples:
   name: Tetra Tech Water Quality Sample Example
   slug: tetra-tech-water-quality-sample-example
 finops:
-- name: Tetra Tech Finops
+- has_sources: false
+  method: generated
+  name: Tetra Tech Finops
+  primary_unit: ''
   service_category: API
   slug: tetra-tech-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tetra-tech.png
 json_schemas:
 - name: Tetra Tech Project
@@ -136,13 +155,13 @@ modified: '2026-05-03'
 name: Tetra Tech
 nav: Providers
 network: true
-overview: 'Tetra Tech publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Consulting, Data Management, Engineering, and Environment.
+overview: 'Tetra Tech is listed with 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Consulting, Data Management, Engineering, and Environment.
 
 
   The Tetra Tech catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Tetra Tech''s developer surface includes engineering blog and 10 more developer resources.'
+  Tetra Tech''s developer surface includes engineering blog and 13 more developer resources.'
 plans:
 - name: Tetra Tech Plans Pricing
   plan_count: 3
@@ -169,9 +188,10 @@ rate_limits:
   name: Tetra Tech Rate Limits
   slug: tetra-tech-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Tetra Tech API Rules
+  name: Tetra Tech — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -181,30 +201,38 @@ rules:
   slug: tetra-tech-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 21.5
+  composite: 18.0
   coverage:
     artifact_dirs: 15
-    catalog_earned: 65.3
+    catalog_earned: 56.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.8
+    catalog_gap: 58.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
-    contract_governance: 25.0
+    access_clarity: 7.9
+    contract_governance: 23.5
     contract_quality: 14.7
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

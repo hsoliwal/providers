@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Management and orchestration REST API of the Versa Director control plane — SD-WAN workflows, appliance/device management, templates and device groups, dashboard/live status, health, assets, audit log
@@ -44,6 +44,10 @@ apis:
   slug: versa-analytics-rest-api
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://versa-networks.com/blog/feed/
 - group: company
   title: ''
   type: Website
@@ -155,21 +159,21 @@ layout: provider
 mcp_servers:
 - description: First-party Model Context Protocol server published by Versa Networks that exposes a read-only subset of the Versa Director / Concerto REST API as MCP tools. It authenticates to a Versa Director using
   name: Versa API MCP Server
-  slug: versa-api-mcp-server
-modified: '2026-07-21'
+  slug: versa-api-server
+modified: '2026-10-06'
 name: Versa Networks
 nav: Providers
 network: true
-overview: 'Versa Networks publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, Security, SASE, and SD-WAN.
+overview: 'Versa Networks is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, Security, SASE, and SD-WAN.
 
 
-  Versa Networks'' developer surface includes documentation, API reference, support, engineering blog, signup flow, authentication, and 17 more developer resources.'
+  Versa Networks'' developer surface includes documentation, API reference, support, engineering blog, signup flow, authentication, and 18 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 28.9
+  composite: 30.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -181,15 +185,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.9
+  previous_composite: 30.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

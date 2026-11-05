@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -366,7 +366,7 @@ modified: '2026-08-12'
 name: FinditParts
 nav: Providers
 network: true
-overview: 'FinditParts publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, Carts API, Orders API, and 8 more. Tagged areas include Company, E-Commerce, Marketplace, Automotive, and Parts.
+overview: 'FinditParts publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Addresses API, Carts API, Orders API, and 8 more. Tagged areas include Company, E-Commerce, Marketplace, Automotive, and Parts.
 
 
   FinditParts'' developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, code examples, and 23 more developer resources.'
@@ -381,9 +381,9 @@ rate_limits:
   slug: finditparts-rate-limits
 score:
   band: developing
-  composite: 40.2
+  composite: 39.9
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -393,16 +393,18 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 61.0
+    contract_quality: 55.3
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.2
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -413,8 +415,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

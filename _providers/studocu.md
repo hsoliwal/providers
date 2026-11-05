@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.studocu.com/blog/en/feed
 - group: company
   title: ''
   type: Website
@@ -88,20 +92,24 @@ created: '2026-07-17'
 description: Studocu (operated by StudeerSnel B.V., Amsterdam) is a global online learning platform and study-materials marketplace where students access, share, and upload course documents, lecture notes, summaries, and exam prep across thousands of institutions and subjects. The platform layers AI study tools on top of its crowdsourced document library — an Ask AI chat, AI Notes generation, and an AI Quiz Generator — alongside course organization, study lists, and a Premium subscription for unlimited downloads and full document access. Backed by Partech and Point Nine, Studocu was added to the API Evangelist network as a portfolio company. It exposes no public developer API; this profile captures its public security, trust, and web-property surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/studocu.png
 layout: provider
-modified: '2026-07-21'
+mcp_servers:
+- description: Remote MCP server at agent-os-mcp.alpha.studocu.com over HTTP; 1 tool listed.
+  name: Studocu MCP Server
+  slug: studocu
+modified: '2026-10-06'
 name: Studocu
 nav: Providers
 network: true
 overview: 'Studocu is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Education, EdTech, and Study Materials.
 
 
-  Studocu''s developer surface includes engineering blog, support, pricing, and 8 more developer resources.'
+  Studocu''s developer surface includes engineering blog, support, pricing, and 9 more developer resources.'
 random_paper: 5
 score:
   band: minimal
-  composite: 7.0
+  composite: 6.8
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -113,9 +121,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 7.0
+  previous_composite: 6.8
   provenance:
     mcp: first-party
   regulatory:
@@ -123,14 +131,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/studocu/refs/heads/main/screenshots/studocu-2026-10-11T192926.png
 security:
 - kind: domain-security
   name: Studocu Domain Security

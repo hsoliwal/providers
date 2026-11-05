@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 52.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -50,22 +50,22 @@ apis:
 - baseURL: https://api.pioneer.ai
   baseurl_source: declared
   description: Anthropic-compatible endpoints. Use with the Anthropic SDK by setting base_url=https://api.pioneer.ai.
-  name: Fastino Labs anthropic-compat API
+  name: Fastino Labs Anthropic Compat API
   slug: fastino-labs-anthropic-compat-api
 - baseURL: https://api.pioneer.ai
   baseurl_source: declared
   description: Pioneer-native inference endpoint (encoder NER/classification/extraction and decoder text generation).
-  name: Fastino Labs inference API
+  name: Fastino Labs Inference API
   slug: fastino-labs-inference-api
 - baseURL: https://api.pioneer.ai
   baseurl_source: declared
   description: List and retrieve past inference records.
-  name: Fastino Labs inference-history API
+  name: Fastino Labs Inference History API
   slug: fastino-labs-inference-history-api
 - baseURL: https://api.pioneer.ai
   baseurl_source: declared
   description: OpenAI-compatible endpoints. Use with the OpenAI SDK by setting base_url=https://api.pioneer.ai/v1.
-  name: Fastino Labs openai-compat API
+  name: Fastino Labs Openai Compat API
   slug: fastino-labs-openai-compat-api
 artifact_total: 16
 collections:
@@ -85,6 +85,11 @@ collections:
   name: Pioneer Inference anthropic-compat openai-compat API
   slug: open-fastino-labs-openai-compat-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/fastino-labs/refs/heads/main/capabilities/fastino-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fastino-labs-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/fastino-labs/refs/heads/main/overlays/fastino-labs-pioneer-overlay.yaml
   title: ''
@@ -243,15 +248,15 @@ layout: provider
 mcp_servers:
 - description: Mintlify-hosted documentation MCP server for the Pioneer docs.
   name: Fastino Labs MCP Server
-  slug: fastino-labs-mcp-server
+  slug: pioneer-docs
 modified: '2026-07-19'
 name: Fastino Labs
 nav: Providers
 network: true
-overview: 'Fastino Labs publishes 4 APIs on the [APIs.io](https://apis.io/) network, including anthropic-compat API, inference API, inference-history API, and 1 more. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Small Language Models, and Fine-Tuning.
+overview: 'Fastino Labs publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Anthropic Compat API, Inference API, Inference History API, and 1 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Small Language Models, and Fine-Tuning.
 
 
-  Fastino Labs'' developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, engineering blog, and 26 more developer resources.'
+  Fastino Labs'' developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, engineering blog, and 27 more developer resources.'
 random_paper: 9
 rate_limits:
 - limit_count: 7
@@ -264,23 +269,23 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 47.7
+  composite: 47.6
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 61.1
+    contract_quality: 55.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 55.3
-  previous_composite: 47.7
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -291,8 +296,14 @@ score:
       total: 4
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -315,7 +326,7 @@ slug: fastino-labs
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Small Language Models
 - Fine-Tuning
 - Inference
@@ -325,5 +336,6 @@ tags:
 - Agents
 - PII Detection
 - Model Training
+- Foundation Models
 website: https://www.fastino.ai/
 ---

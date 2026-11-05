@@ -33,10 +33,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://geltor.com/insights/articles/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://geltor.com/insights/articles/feed/
 - group: company
   title: ''
   type: Website
@@ -128,18 +136,18 @@ created: '2026-08-01'
 description: Geltor is a biodesign company founded in 2015 by Alex Lorestani and Nick Ouzounov that engineers animal-free designer proteins, peptides and polypeptides and manufactures them through precision fermentation. Its Biodesigner AI computational biology platform is used to imagine, screen and optimize novel protein sequences, which are then scaled commercially as ingredients for beauty and personal care, specialty nutrition and medical/life-science applications. The portfolio includes HumaColl 21 (biomimetic human collagen), HumaColl 21 Select (a matrikine peptide complex), Elastapure (biomimetic human elastin), Collume and Caviance (vegan collagens) and PrimaColl, a Type XXI signaling collagen and the first biotech-derived collagen to receive an FDA GRAS "no questions" letter for ingestible use. Geltor sells business-to-business to brand formulators and manufacturers; it publishes no public developer API, SDK or machine-readable API contract.
 image: https://geltor.com/wp-content/themes/_geltor/img/logo.svg
 layout: provider
-modified: '2026-08-01'
+modified: '2026-10-06'
 name: Geltor
 nav: Providers
 network: true
 overview: 'Geltor is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Life Sciences, Proteins, and Peptides.
 
 
-  Geltor''s developer surface includes engineering blog, support, and 19 more developer resources.'
+  Geltor''s developer surface includes engineering blog, support, and 21 more developer resources.'
 random_paper: 15
 score:
   band: minimal
-  composite: 10.7
+  composite: 10.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -153,17 +161,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 10.7
+  previous_composite: 10.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

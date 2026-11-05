@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -258,7 +258,7 @@ modified: '2026-07-27'
 name: Energy Queensland
 nav: Providers
 network: true
-overview: 'Energy Queensland publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Grid.
+overview: 'Energy Queensland publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Grid.
 
 
   Energy Queensland''s developer surface includes authentication, changelog, API reference, status page, documentation, and 27 more developer resources.'
@@ -273,8 +273,8 @@ scopes:
   slug: energy-queensland-scopes
   summary_line: 13 scopes · authorizationCode
 score:
-  band: developing
-  composite: 42.3
+  band: thin
+  composite: 38.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -286,9 +286,9 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 30.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 65.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -297,7 +297,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 42.3
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -313,9 +313,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 52.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

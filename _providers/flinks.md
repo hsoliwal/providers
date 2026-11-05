@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-09-20'
+  score: 25.8
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 11
+- acting_count: 5
   human_in_the_loop: 0
   name: Flinks Agentic Access
   operation_count: 12
   slug: flinks-agentic-access
-  summary_line: 12 operations · 11 acting
+  summary_line: 12 operations · 5 acting
 api_count: 1
 apis:
 - baseURL: https://{instance}-api.private.fin.ag/v3/{customerId}/BankingServices
@@ -75,7 +75,7 @@ apis:
   description: The Score API from Flinks — 2 operation(s) for score.
   name: Flinks Score API
   slug: flinks-score-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -166,16 +166,24 @@ common:
 created: '2026-07-01'
 description: Flinks is a Canadian financial data platform (owned by National Bank of Canada) that lets businesses connect to consumer and business bank accounts to aggregate account, transaction, and statement data, verify identity, and derive income, credit-risk, and fraud analytics. Access begins with a Flinks Connect authentication session and a multi-step /Authorize (MFA) call, after which banking, enrichment, and analytics endpoints are invoked with the returned RequestId.
 finops:
-- name: Flinks Finops
+- has_sources: true
+  method: generated
+  name: Flinks Finops
+  primary_unit: ''
   service_category: Financial Data and Analytics
   slug: flinks-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flinks.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.flinks.com over HTTP; 3 tools listed.
+  name: Flinks MCP Server
+  slug: flinks
 modified: '2026-07-01'
 name: Flinks
 nav: Providers
 network: true
-overview: 'Flinks publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authorize API, Connect API, Enrich API, and 3 more. Tagged areas include Financial Data, Open Banking, Bank Aggregation, Fintech, and Canada.
+overview: 'Flinks publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorize API, Connect API, Enrich API, and 3 more. Tagged areas include Financial Data, Open Banking, Bank Aggregation, Fintech, and Canada.
 
 
   Flinks'' developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
@@ -190,22 +198,22 @@ rate_limits:
   slug: flinks-rate-limits
 score:
   band: thin
-  composite: 36.7
+  composite: 27.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 60.0
+    artifact_dirs: 14
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 36.8
+    access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 52.0
+    contract_quality: 46.8
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
+    discoverability: 68.3
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -213,7 +221,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.7
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -227,10 +235,10 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 29.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 18.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -247,7 +255,7 @@ security:
 - kind: vulnerability-disclosure
   name: Flinks Vulnerability Disclosure
   slug: flinks-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Flinks Trust Center
   slug: flinks-trust-center

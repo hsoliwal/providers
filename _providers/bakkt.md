@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 30
+- acting_count: 28
   human_in_the_loop: 0
   name: Bakkt Agentic Access
   operation_count: 54
   slug: bakkt-agentic-access
-  summary_line: 54 operations · 30 acting
+  summary_line: 54 operations · 28 acting
 api_count: 1
 apis:
 - baseURL: https://api.bakkt.com
@@ -334,7 +334,7 @@ modified: '2026-07-18'
 name: Bakkt
 nav: Providers
 network: true
-overview: 'Bakkt publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Authorization API, Block Trade & Allocate API, and 14 more. Tagged areas include Company, Crypto Web3, Cryptocurrency, Digital Assets, and Trading.
+overview: 'Bakkt publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authorization API, Block Trade & Allocate API, and 14 more. Tagged areas include Company, Web3, Cryptocurrency, Digital Assets, and Trading.
 
 
   The Bakkt catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -343,10 +343,10 @@ overview: 'Bakkt publishes 17 APIs on the [APIs.io](https://apis.io/) network, i
   Bakkt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 22 more developer resources.'
 random_paper: 19
 score:
-  band: developing
-  composite: 41.4
+  band: thin
+  composite: 39.2
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -356,11 +356,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 60.6
+    contract_quality: 55.3
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 41.4
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -376,9 +376,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -396,7 +396,7 @@ security:
 slug: bakkt
 tags:
 - Company
-- Crypto Web3
+- Web3
 - Cryptocurrency
 - Digital Assets
 - Trading

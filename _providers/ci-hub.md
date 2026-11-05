@@ -39,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The other direction of the CI HUB platform. A DAM, MAM, PIM, CMS, stock or cloud-storage vendor writes an integration that translates its own proprietary API into CI HUB's handler format using defineI
@@ -69,6 +69,15 @@ collections:
   name: CI HUB Access SDK API
   slug: open-ci-hub-access
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ci-hub/refs/heads/main/rate-limits/ci-hub-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ci-hub-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://ci-hub.com/blog/rss.xml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/ci-hub/refs/heads/main/overlays/ci-hub-access-overlay.yaml
   title: ''
@@ -190,14 +199,14 @@ mcp_servers:
 - description: A hosted, remote MCP server that gives an AI client governed access to whichever DAM, PIM, CMS or cloud-storage systems the end user has connected through CI HUB. The pitch is a governance layer rathe
   name: CI HUB MCP Server
   slug: ci-hub-mcp-server
-modified: '2026-08-12'
+modified: '2026-10-06'
 name: CI HUB
 nav: Providers
 network: true
-overview: 'CI HUB publishes 3 APIs on the [APIs.io](https://apis.io/) network: Assets API, Auth API, and System API. Tagged areas include Company, Digital Asset Management, Content Management, Product Information Management, and Integration.
+overview: 'CI HUB publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Auth API, System API, and 2 more. Tagged areas include Company, Digital Asset Management, Content Management, Product Information Management, and Integration.
 
 
-  CI HUB''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 18 more developer resources.'
+  CI HUB''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
 plans:
 - name: Ci Hub Plans Pricing
   plan_count: 12
@@ -209,26 +218,26 @@ rate_limits:
   slug: ci-hub-rate-limits
 scopes:
 - name: Ci Hub Scopes
-  scope_count: 0
+  scope_count: 1
   slug: ci-hub-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: strong
-  composite: 60.2
+  composite: 61.5
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 58.6
+    contract_quality: 52.7
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -238,7 +247,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 60.2
+  previous_composite: 61.4
   provenance:
     conformance: first-party
     contracts:
@@ -248,8 +257,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

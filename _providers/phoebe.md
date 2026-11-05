@@ -32,10 +32,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/phoebe/refs/heads/main/plans/phoebe-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/phoebe-plans-pricing.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://withcoral.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/phoebe/refs/heads/main/security/phoebe-vulnerability-disclosure.yml
   title: ''
@@ -156,44 +165,58 @@ description: Coral is a local-first SQL runtime that gives AI agents governed, r
 image: https://withcoral.com/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Coral is itself an MCP server: the same local SQL runtime that the CLI drives is exposed to agents over MCP via `coral mcp-stdio`. A separate hosted MCP server (Mintlify) provides documentation search'
   name: Coral MCP Server
-  slug: coral-mcp-server
-modified: '2026-07-20'
+  slug: phoebe-mcp-yml
+modified: '2026-10-06'
 name: Coral
 nav: Providers
 network: true
 overview: 'Coral is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Agents, MCP, and SQL.
 
 
-  Coral''s developer surface includes documentation, getting-started guide, engineering blog, pricing, support, CLI, changelog, and 18 more developer resources.'
+  Coral''s developer surface includes documentation, getting-started guide, engineering blog, pricing, support, CLI, changelog, and 20 more developer resources.'
+plans:
+- name: Phoebe Plans Pricing
+  plan_count: 3
+  slug: phoebe-plans-pricing
 random_paper: 11
 score:
   band: thin
-  composite: 30.1
+  composite: 38.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 15
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 71.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 28.9
-  previous_composite: 30.1
+  previous_composite: 31.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -218,6 +241,6 @@ tags:
 - Data Access
 - Data Integration
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://withcoral.com
 ---

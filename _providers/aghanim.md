@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 110
   human_in_the_loop: 1
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 170
   slug: aghanim-agentic-access
   summary_line: 170 operations · 110 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.aghanim.com/s2s
   baseurl_source: declared
@@ -408,7 +408,7 @@ modified: '2026-07-17'
 name: Aghanim
 nav: Providers
 network: true
-overview: 'Aghanim publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Achievements API, Coupons API, Creators API, and 24 more. Tagged areas include Company, Mobile Games, Game Publishing, Direct to Consumer, and Payments.
+overview: 'Aghanim publishes 27 API contracts indexed on the [APIs.io](https://apis.io/) network, including Achievements API, Coupons API, Creators API, and 24 more. Tagged areas include Company, Mobile Games, Game Publishing, Direct to Consumer, and Payments.
 
 
   The Aghanim catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -418,9 +418,9 @@ overview: 'Aghanim publishes 27 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 21
 score:
   band: developing
-  composite: 48.5
+  composite: 46.3
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -430,11 +430,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 68.0
+    contract_quality: 62.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 48.5
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -454,9 +454,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -126,6 +126,26 @@ collections:
   name: OptScale REST API
   slug: open-optscale
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/optscale/refs/heads/main/plans/optscale-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/optscale-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/optscale/refs/heads/main/rate-limits/optscale-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/optscale-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/optscale/refs/heads/main/finops/optscale-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/optscale-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/optscale/refs/heads/main/capabilities/optscale-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/optscale-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -192,19 +212,23 @@ common:
 created: '2026-03-27'
 description: OptScale is an open-source FinOps and cloud cost optimization platform by Hystax supporting AWS, Azure, GCP, Alibaba Cloud, and Kubernetes.
 finops:
-- name: Optscale Finops
+- has_sources: false
+  method: generated
+  name: Optscale Finops
+  primary_unit: ''
   service_category: API
   slug: optscale-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/optscale.png
 layout: provider
 modified: '2026-05-19'
 name: OptScale
 nav: Providers
 network: true
-overview: 'OptScale publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Cloud Accounts API, Employees API, and 6 more. Tagged areas include FinOps, Cost Optimization, Cloud, Kubernetes, and Open-Source.
+overview: 'OptScale publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Cloud Accounts API, Employees API, and 6 more. Tagged areas include FinOps, Cost Optimization, Cloud, Kubernetes, and Open Source.
 
 
-  OptScale''s developer surface includes authentication, documentation, engineering blog, and 12 more developer resources.'
+  OptScale''s developer surface includes authentication, documentation, engineering blog, and 16 more developer resources.'
 plans:
 - name: Optscale Plans Pricing
   plan_count: 3
@@ -215,27 +239,27 @@ rate_limits:
   name: Optscale Rate Limits
   slug: optscale-rate-limits
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 36.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 13
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 39.4
+  previous_composite: 37.6
   provenance:
     agentic_access: derived
     contracts:
@@ -243,8 +267,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -265,6 +295,6 @@ tags:
 - Cost Optimization
 - Cloud
 - Kubernetes
-- Open-Source
+- Open Source
 website: https://hystax.com/optscale/
 ---

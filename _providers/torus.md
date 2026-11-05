@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://usetorus.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/torus/refs/heads/main/security/torus-domain-security.yml
   title: ''
@@ -58,7 +62,7 @@ created: '2026-07-17'
 description: Torus is a Y Combinator (Summer 2026) startup building an AI-powered engineering intelligence platform for capital projects. Its agents analyze engineering documents such as P&IDs, datasheets, specification sheets, and drawings to extract parameters, flag cross-document inconsistencies across 50+ categories, and automate workflow deliverables like procurement approvals and RFIs for infrastructure, data center, and energy projects. Torus runs as a managed cloud or a sovereign in-VPC deployment and publishes no public API or developer surface as of July 2026.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/torus.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Torus
 nav: Providers
 network: true
@@ -66,9 +70,9 @@ overview: Torus is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 1
 score:
   band: minimal
-  composite: 8.4
+  composite: 6.7
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -80,11 +84,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 8.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

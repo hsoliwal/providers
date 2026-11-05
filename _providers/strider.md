@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Strider's hosted Model Context Protocol server, published at app.striderintel.com/app-api/mcp. It advertises itself by name ("Strider MCP") in an RFC 9728 protected-resource metadata document and is p
@@ -45,6 +45,14 @@ apis:
   slug: strider-shield-api
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://striderintel.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://striderintel.com/blog/feed/
 - group: company
   title: ''
   type: Website
@@ -146,21 +154,21 @@ description: Strider Technologies is a Salt Lake City, Utah strategic intelligen
 image: https://content.striderintel.com/wp-content/uploads/2025/03/1600x900-Site-Twitter-Thumbnail.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.striderintel.com over HTTP.
   name: Strider MCP
   slug: strider-mcp
-modified: '2026-08-05'
+modified: '2026-10-06'
 name: Strider
 nav: Providers
 network: true
-overview: 'Strider publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Strategic Intelligence, Threat Intelligence, Risk Management, and Security.
+overview: 'Strider is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Strategic Intelligence, Threat Intelligence, Risk Management, and Security.
 
 
-  Strider''s developer surface includes documentation, signup flow, support, engineering blog, authentication, and 17 more developer resources.'
+  Strider''s developer surface includes engineering blog, documentation, signup flow, support, authentication, and 19 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 23.9
+  composite: 25.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -174,14 +182,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 0.0
-  previous_composite: 23.9
+  previous_composite: 25.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

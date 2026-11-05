@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 58.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 22
+- acting_count: 21
   human_in_the_loop: 0
   name: Nimbleway Agentic Access
   operation_count: 42
   slug: nimbleway-agentic-access
-  summary_line: 42 operations · 22 acting
+  summary_line: 42 operations · 21 acting
 api_count: 1
 apis:
 - baseURL: https://sdk.nimbleway.com/v1
@@ -302,12 +302,12 @@ layout: provider
 mcp_servers:
 - description: Official Nimble MCP Server. Exposes Nimble's full web data platform (search, extract, map, crawl, structured-data agents) as MCP tools to any compatible AI client. Listed on Azure MCP Center, Databric
   name: Nimbleway MCP Server
-  slug: nimbleway-mcp-server
+  slug: nimble-mcp-server
 modified: '2026-07-20'
 name: Nimbleway
 nav: Providers
 network: true
-overview: 'Nimbleway publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Crawl API, Domain Knowledge API, and 8 more. Tagged areas include Company, Web Data, Web Scraping, Data Extraction, and Web Search.
+overview: 'Nimbleway publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Crawl API, Domain Knowledge API, and 8 more. Tagged areas include Company, Web Data, Web Scraping, Data Extraction, and Web Search.
 
 
   Nimbleway''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, CLI, engineering blog, and 27 more developer resources.'
@@ -318,9 +318,9 @@ rate_limits:
   slug: nimbleway-rate-limits
 score:
   band: strong
-  composite: 55.1
+  composite: 55.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -330,11 +330,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 47.4
-  previous_composite: 55.1
+  previous_composite: 55.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -345,8 +345,20 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: OBIE Read/Write Account and Transaction Information (AIS) API providing consented access to Nationwide account, balance, and transaction data for authorised third-party providers. FAPI-secured (OAuth2
@@ -233,7 +233,7 @@ modified: '2026-07-23'
 name: Nationwide Building Society
 nav: Providers
 network: true
-overview: 'Nationwide Building Society publishes 3 APIs on the [APIs.io](https://apis.io/) network: ATM API, Branch API, and PCA API. Tagged areas include Financial-Services, Banking, Building Society, Open Banking, and PSD2.
+overview: 'Nationwide Building Society publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including ATM API, Branch API, PCA API, and 4 more. Tagged areas include Financial Services, Banking, Building Society, Open Banking, and PSD2.
 
 
   Nationwide Building Society''s developer surface includes documentation, getting-started guide, support, signup flow, authentication, and 27 more developer resources.'
@@ -245,21 +245,21 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 43.6
+  composite: 40.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 13.2
     contract_governance: 18.2
-    contract_quality: 40.4
+    contract_quality: 36.3
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -269,7 +269,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 43.6
+  previous_composite: 40.5
   provenance:
     conformance: first-party
     contracts:
@@ -284,9 +284,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 58.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -308,7 +308,7 @@ security:
   summary_line: security.txt · contact published
 slug: nationwide-building-society
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Building Society
 - Open Banking

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API behind the Tractian platform, used for ERP, BI, and business-system integrations alongside native SQL access and prebuilt connectors. The API host is live (public health endpoint reporting v1
@@ -136,14 +136,14 @@ modified: '2026-07-21'
 name: Tractian
 nav: Providers
 network: true
-overview: 'Tractian publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Condition Monitoring, Predictive Maintenance, CMMS, Asset Management, and Industrial IoT.
+overview: 'Tractian is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Condition Monitoring, Predictive Maintenance, CMMS, Asset Management, and Industrial IoT.
 
 
   Tractian''s developer surface includes engineering blog, changelog, support, pricing, and 16 more developer resources.'
 random_paper: 18
 score:
-  band: thin
-  composite: 27.3
+  band: emerging
+  composite: 26.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -157,9 +157,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 27.3
+  previous_composite: 26.1
   provenance:
     conformance: first-party
   regulatory:
@@ -167,9 +167,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

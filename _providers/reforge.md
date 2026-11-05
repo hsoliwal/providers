@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Reforge Launch delivers feature flags, live configuration, dynamic log levels, and experiments through first-party SDKs and a CLI. SDKs fetch configuration from a global delivery network and evaluate '
@@ -143,19 +143,19 @@ layout: provider
 mcp_servers:
 - description: 'The Reforge CLI ships an MCP server that connects an AI assistant to a Reforge workspace. `reforge mcp` configures the server for a supported editor/assistant (e.g. Claude Code, Codeium), letting the '
   name: Reforge MCP Server
-  slug: reforge-mcp-server
+  slug: reforge
 modified: '2026-07-21'
 name: Reforge
 nav: Providers
 network: true
-overview: 'Reforge publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Feature Flags, Feature Management, Dynamic Configuration, and Live Config.
+overview: 'Reforge is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Feature Flags, Feature Management, Dynamic Configuration, and Live Config.
 
 
   Reforge''s developer surface includes documentation, getting-started guide, engineering blog, pricing, CLI, authentication, and 15 more developer resources.'
 random_paper: 20
 score:
   band: thin
-  composite: 29.0
+  composite: 30.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -169,14 +169,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 29.0
+  previous_composite: 30.0
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

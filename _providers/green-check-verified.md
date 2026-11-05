@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://prod-api.greencheckverified.com
@@ -133,6 +133,10 @@ apis:
   slug: green-check-verified-trace-api
 artifact_total: 24
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://greencheckverified.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/green-check-verified/refs/heads/main/capabilities/green-check-verified-capability-edges.yml
   title: ''
@@ -277,17 +281,17 @@ description: Green Check Verified (Green Check) is a New Haven, Connecticut spec
 image: https://greencheckverified.com/wp-content/uploads/2021/06/Feature-Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Green Check runs a live, anonymously reachable remote MCP server on its developer-portal host. It is the Redocly-portal documentation MCP: six tools that let an agent enumerate the APIs, list endpoint'
   name: Green Check Verified MCP Server
-  slug: green-check-verified-mcp-server
-modified: '2026-08-22'
+  slug: green-check-verified-mcp-yml
+modified: '2026-10-06'
 name: Green Check Verified
 nav: Providers
 network: true
-overview: 'Green Check Verified publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, CRB API, CRB Customers API, and 15 more. Tagged areas include Company, Cannabis, Compliance, Banking, and Financial-Services.
+overview: 'Green Check Verified publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, CRB API, CRB Customers API, and 15 more. Tagged areas include Company, Cannabis, Compliance, Banking, and Financial Services.
 
 
-  Green Check Verified''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 23 more developer resources.'
+  Green Check Verified''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 24 more developer resources.'
 plans:
 - name: Green Check Verified Plans Pricing
   plan_count: 0
@@ -299,14 +303,14 @@ rate_limits:
   slug: green-check-verified-rate-limits
 scopes:
 - name: Green Check Verified Scopes
-  scope_count: 0
+  scope_count: 10
   slug: green-check-verified-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 10 scopes · client_credentials
 score:
   band: developing
-  composite: 45.2
+  composite: 42.4
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -316,11 +320,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 56.3
+    contract_quality: 51.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 45.2
+  previous_composite: 42.4
   provenance:
     conformance: derived
     contracts:
@@ -335,9 +339,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 53.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -358,9 +362,9 @@ tags:
 - Cannabis
 - Compliance
 - Banking
-- Financial-Services
+- Financial Services
 - BSA/AML
-- Regulatory Technology
+- RegTech
 - Point-of-Sale
 - Onboarding
 - Due Diligence

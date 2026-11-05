@@ -11,7 +11,7 @@ access_model:
   trial: true
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: platform
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://api.bevz.com/integrator-service
@@ -88,6 +88,11 @@ asyncapis:
   name: Bevz Webhooks
   slug: bevz-webhooks
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/bevz/refs/heads/main/rate-limits/bevz-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/bevz-rate-limits.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/bevz/refs/heads/main/capabilities/bevz-capability-edges.yml
   title: ''
@@ -187,20 +192,20 @@ description: 'Bevz is a delivery-management platform built for liquor stores and
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bevz.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Bevz serves a live, anonymous, remote MCP endpoint from its own domain at https://www.bevz.com/_api/mcp, advertised in its own llms.txt. It is a Wix Site MCP server — platform-provided tooling that ex
   name: Bevz MCP Server
-  slug: bevz-mcp-server
+  slug: bevz-mcp-yml
 modified: '2026-08-13'
 name: Bevz
 nav: Providers
 network: true
-overview: 'Bevz publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Integrator Users API, Integrators API, Lotto Scratcher Games API, and 6 more. Tagged areas include Company, Delivery Management, Liquor Retail, Convenience Stores, and Point-of-Sale.
+overview: 'Bevz publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Integrator Users API, Integrators API, Lotto Scratcher Games API, and 6 more. Tagged areas include Company, Delivery Management, Liquor Retail, Convenience Stores, and Point-of-Sale.
 
 
   The Bevz catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Bevz''s developer surface includes documentation, API reference, getting-started guide, changelog, pricing, signup flow, engineering blog, and 14 more developer resources.'
+  Bevz''s developer surface includes documentation, API reference, getting-started guide, changelog, pricing, signup flow, engineering blog, and 15 more developer resources.'
 plans:
 - name: Bevz Plans Pricing
   plan_count: 3
@@ -224,9 +229,9 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 58.8
+    contract_quality: 53.7
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
   previous_composite: 52.5
   provenance:
@@ -236,10 +241,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

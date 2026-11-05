@@ -27,96 +27,96 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 29
-  human_in_the_loop: 29
+- acting_count: 27
+  human_in_the_loop: 27
   name: Predictive Oncology Model And Data Clearinghouse Agentic Access
   operation_count: 37
   slug: predictive-oncology-model-and-data-clearinghouse-agentic-access
-  summary_line: 37 operations · 29 acting · 29 human-in-the-loop
-api_count: 1
+  summary_line: 37 operations · 27 acting · 27 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The asset-details-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for asset-details-controller.
-  name: Predictive Oncology Model and Data Clearinghouse asset-details-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Asset Details Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-asset-details-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The delete-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for delete-collection-controller.
-  name: Predictive Oncology Model and Data Clearinghouse delete-collection-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Delete Collection Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-delete-collection-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The delete-data-file-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for delete-data-file-controller.
-  name: Predictive Oncology Model and Data Clearinghouse delete-data-file-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Delete Data File Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-delete-data-file-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The delete-predictions-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for delete-predictions-controller.
-  name: Predictive Oncology Model and Data Clearinghouse delete-predictions-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Delete Predictions Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-delete-predictions-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-collection-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-collection-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Collection Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-collection-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-create-bulk-datafile-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-create-bulk-datafile-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-create-bulk-datafile-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Create Bulk Datafile Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-create-bulk-datafile-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-create-collection-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-create-collection-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-create-collection-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Create Collection Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-create-collection-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-create-datafile-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-create-datafile-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-create-datafile-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Create Datafile Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-create-datafile-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-download-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-download-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Download Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-download-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-download-files-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-download-files-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-download-files-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Download Files Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-download-files-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-retry-download-task-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-retry-download-task-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-retry-download-task-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Retry Download Task Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-retry-download-task-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-retry-uploadtask-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-retry-uploadtask-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-retry-uploadtask-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Retry Uploadtask Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-retry-uploadtask-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The doe-sync-download-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for doe-sync-download-controller.
-  name: Predictive Oncology Model and Data Clearinghouse doe-sync-download-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Doe Sync Download Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-doe-sync-download-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The home-controller API from Predictive Oncology Model and Data Clearinghouse — 1 operation(s) for home-controller.
-  name: Predictive Oncology Model and Data Clearinghouse home-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Home Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-home-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The perform-inferencing-controller API from Predictive Oncology Model and Data Clearinghouse — 2 operation(s) for perform-inferencing-controller.
-  name: Predictive Oncology Model and Data Clearinghouse perform-inferencing-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Perform Inferencing Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-perform-inferencing-controller-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
@@ -126,7 +126,7 @@ apis:
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The rest-api-common-controller API from Predictive Oncology Model and Data Clearinghouse — 17 operation(s) for rest-api-common-controller.
-  name: Predictive Oncology Model and Data Clearinghouse rest-api-common-controller API
+  name: Predictive Oncology Model and Data Clearinghouse Rest API Common Controller API
   slug: predictive-oncology-model-and-data-clearinghouse-rest-api-common-controller-api
 artifact_total: 41
 collections:
@@ -188,6 +188,16 @@ collections:
   name: MoDaC API
   slug: open-predictive-oncology-model-and-data-clearinghouse
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/rate-limits/predictive-oncology-model-and-data-clearinghouse-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/predictive-oncology-model-and-data-clearinghouse-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/predictive-oncology-model-and-data-clearinghouse/refs/heads/main/finops/predictive-oncology-model-and-data-clearinghouse-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/predictive-oncology-model-and-data-clearinghouse-finops.yml
 - group: commercial
   title: ''
   type: Pricing
@@ -239,19 +249,23 @@ common:
 created: '2024-11-07'
 description: The Predictive Oncology Model and Data Clearinghouse (MoDaC) is a National Cancer Institute platform that supports cancer research through advanced algorithms and machine learning techniques to analyze complex datasets, including genetic information, clinical data, and imaging studies. MoDaC serves as a centralized hub for storing, sharing, and discovering cancer research datasets and trained models, fostering collaboration among researchers and accelerating the advancement of cancer therapies.
 finops:
-- name: Predictive Oncology Model And Data Clearinghouse Finops
+- has_sources: false
+  method: generated
+  name: Predictive Oncology Model And Data Clearinghouse Finops
+  primary_unit: ''
   service_category: API
   slug: predictive-oncology-model-and-data-clearinghouse-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/predictive-oncology-model-and-data-clearinghouse.png
 layout: provider
 modified: '2026-05-19'
 name: Predictive Oncology Model and Data Clearinghouse
 nav: Providers
 network: true
-overview: 'Predictive Oncology Model and Data Clearinghouse publishes 17 APIs on the [APIs.io](https://apis.io/) network, including asset-details-controller API, delete-collection-controller API, delete-data-file-controller API, and 14 more. Tagged areas include Cancer Research, Clinical Data, Datasets, Machine-Learning, and Oncology.
+overview: 'Predictive Oncology Model and Data Clearinghouse publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset Details Controller API, Delete Collection Controller API, Delete Data File Controller API, and 14 more. Tagged areas include Cancer Research, Clinical Data, Datasets, Machine Learning, and Oncology.
 
 
-  Predictive Oncology Model and Data Clearinghouse''s developer surface includes pricing, developer portal, and 9 more developer resources.'
+  Predictive Oncology Model and Data Clearinghouse''s developer surface includes pricing, developer portal, and 11 more developer resources.'
 plans:
 - name: Predictive Oncology Model And Data Clearinghouse Plans Pricing
   plan_count: 26
@@ -263,23 +277,23 @@ rate_limits:
   slug: predictive-oncology-model-and-data-clearinghouse-rate-limits
 score:
   band: thin
-  composite: 28.8
+  composite: 26.6
   coverage:
     artifact_dirs: 10
-    catalog_earned: 50.0
+    catalog_earned: 47.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 65.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.8
+  delta: -1.6
   facets:
-    access_clarity: 56.6
+    access_clarity: 48.7
     contract_governance: 0.0
-    contract_quality: 36.4
+    contract_quality: 32.8
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 22.0
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     contracts:
@@ -292,10 +306,10 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 4.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -310,7 +324,7 @@ tags:
 - Cancer Research
 - Clinical Data
 - Datasets
-- Machine-Learning
+- Machine Learning
 - Oncology
 website: https://www.cancer.gov/
 ---

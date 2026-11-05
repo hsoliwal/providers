@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Jetstar API is Jetstar's direct-connect distribution channel for Registered Travel Agents and partners. It is a Navitaire New Skies (NSK) SOAP / WCF web service, not a REST product and not IATA ND
@@ -191,16 +191,16 @@ modified: '2026-07-28'
 name: Jetstar
 nav: Providers
 network: true
-overview: 'Jetstar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Travel, Australia, Aviation, Airlines, and Low Cost Carrier.
+overview: 'Jetstar is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Travel, Australia, Aviation, Airlines, and Low Cost Carrier.
 
 
   Jetstar''s developer surface includes developer portal, documentation, API reference, getting-started guide, signup flow, support, FAQ, and 25 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 23.9
+  composite: 22.8
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -212,7 +212,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -221,7 +221,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 23.9
+  previous_composite: 22.8
   provenance:
     conformance: derived
   regulatory:
@@ -229,9 +229,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -33,15 +33,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 29
+- acting_count: 25
   human_in_the_loop: 0
   name: Holidu Agentic Access
-  operation_count: 58
+  operation_count: 57
   slug: holidu-agentic-access
-  summary_line: 58 operations · 29 acting
-api_count: 5
+  summary_line: 57 operations · 25 acting
+api_count: 6
 apis:
 - baseURL: https://external-api.holidu.com
   baseurl_source: declared
@@ -405,7 +405,7 @@ modified: '2026-09-16'
 name: Holidu
 nav: Providers
 network: true
-overview: 'Holidu publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Apartment API, Availabilities API, Availability API, and 20 more. Tagged areas include Company, Travel And Leisure, Vacation Rentals, Short-Term Rental, and Hospitality.
+overview: 'Holidu publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Apartment API, Availabilities API, Availability API, and 20 more. Tagged areas include Company, Travel And Leisure, Vacation Rentals, Short-Term Rental, and Hospitality.
 
 
   The Holidu catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -420,7 +420,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 41.8
+  composite: 42.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -432,29 +432,37 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 62.6
+    contract_quality: 56.9
     developer_ergonomics: 42.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 48.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 41.8
+  previous_composite: 42.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 91.3
       derived: 0
       marker_coverage: 0.0
       total: 23
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

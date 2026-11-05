@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-09-20'
+  score: 34.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 85
+- acting_count: 84
   human_in_the_loop: 3
   name: Langwatch Agentic Access
   operation_count: 133
   slug: langwatch-agentic-access
-  summary_line: 133 operations · 85 acting · 3 human-in-the-loop
+  summary_line: 133 operations · 84 acting · 3 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://app.langwatch.ai
@@ -492,9 +492,13 @@ features:
 - '`better-agents` standards repository for agent project scaffolding'
 - SOC 2 / ISO 27001 reports and forward-deployed engineering available under Enterprise tier
 finops:
-- name: Langwatch Finops
+- has_sources: true
+  method: generated
+  name: Langwatch Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: langwatch-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/langwatch.png
 jsonld:
 - class_count: 56
@@ -506,7 +510,7 @@ modified: '2026-09-16'
 name: LangWatch
 nav: Providers
 network: true
-overview: 'LangWatch publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Analytics API, Annotations API, and 25 more. Tagged areas include Artificial Intelligence, LLM, LLM Observability, LLM Evaluation, and Agent Testing.
+overview: 'LangWatch publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Analytics API, Annotations API, and 25 more. Tagged areas include Artificial Intelligence, LLM, LLM Observability, LLM Evaluation, and Agent Testing.
 
 
   The LangWatch catalog on APIs.io includes 1 JSON-LD context.
@@ -515,7 +519,7 @@ overview: 'LangWatch publishes 28 APIs on the [APIs.io](https://apis.io/) networ
   LangWatch''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 39 more developer resources.'
 plans:
 - name: Langwatch Plans Pricing
-  plan_count: 4
+  plan_count: 3
   slug: langwatch-plans-pricing
 random_paper: 7
 rate_limits:
@@ -524,23 +528,23 @@ rate_limits:
   slug: langwatch-rate-limits
 score:
   band: developing
-  composite: 47.9
+  composite: 43.0
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    artifact_dirs: 13
+    catalog_earned: 55.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.6
   facets:
-    access_clarity: 60.5
+    access_clarity: 52.6
     contract_governance: 0.0
-    contract_quality: 62.7
+    contract_quality: 57.3
     developer_ergonomics: 42.9
-    discoverability: 53.7
-    operational_transparency: 44.7
-  previous_composite: 47.9
+    discoverability: 57.1
+    operational_transparency: 21.1
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     contracts:
@@ -548,8 +552,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 28
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -583,7 +593,7 @@ tags:
 - AI Gateway
 - DSPy
 - LangChain
-- Open-Source
+- Open Source
 - MCP
 - FinOps
 website: https://www.langwatch.ai/

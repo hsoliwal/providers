@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://blog.amboss.com/us
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.amboss.com/us/rss.xml
 - group: company
   title: ''
   type: Website
@@ -96,48 +104,50 @@ created: '2026-07-17'
 description: AMBOSS is a Berlin-based (AMBOSS SE) digital medical knowledge platform used by medical students, physicians, educators, and healthcare institutions worldwide. It combines a physician-authored medical library, exam-style Qbanks with AI-powered analytics, and a point-of-care clinical reference tool, plus AI features (LiSA) for evidence-based clinical decision support. AMBOSS sells consumer memberships and institutional licenses to medical schools, residency programs, and hospitals. It is a Partech portfolio company. This profile was enriched from AMBOSS' public web and security surface; the medical platform publishes no public developer API (its amboss-mededu GitHub org hosts internal tooling), so this repo carries identity and security artifacts rather than API specifications.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amboss.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: AMBOSS
 nav: Providers
 network: true
 overview: 'AMBOSS is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Medical Education, Medical Knowledge, and Clinical Reference.
 
 
-  AMBOSS''s developer surface includes pricing, signup flow, support, and 10 more developer resources.'
+  AMBOSS''s developer surface includes engineering blog, pricing, signup flow, support, and 11 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 17.6
+  composite: 17.4
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 17.6
+  previous_composite: 16.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

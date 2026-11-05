@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.5
-  scored_at: '2026-09-20'
+  score: 27.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -175,7 +175,7 @@ modified: '2026-07-21'
 name: Scratchpay
 nav: Providers
 network: true
-overview: 'Scratchpay publishes 2 APIs on the [APIs.io](https://apis.io/) network: Borrower application API and Borrower application result API. Tagged areas include Company, Financing, Payments, Lending, and Veterinary.
+overview: 'Scratchpay publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Borrower application API and Borrower application result API. Tagged areas include Company, Financing, Payments, Lending, and Veterinary.
 
 
   The Scratchpay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -185,7 +185,7 @@ overview: 'Scratchpay publishes 2 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 18
 score:
   band: thin
-  composite: 36.5
+  composite: 34.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -197,11 +197,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 52.3
+    contract_quality: 47.9
     developer_ergonomics: 33.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 36.5
+  previous_composite: 34.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

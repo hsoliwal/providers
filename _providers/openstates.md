@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.7
-  scored_at: '2026-09-20'
+  score: 24.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 12
   slug: openstates-agentic-access
   summary_line: 12 operations
-api_count: 1
+api_count: 2
 apis:
 - description: Legacy GraphQL API providing access to Open States legislative data. This API has been deprecated in favour of API v3. Existing integrations should migrate to the REST v3 API.
   name: Open States GraphQL API (v2 - Deprecated)
@@ -49,22 +49,22 @@ apis:
 - baseURL: https://v3.openstates.org/
   baseurl_source: declared
   description: The bills API from Open States — 3 operation(s) for bills.
-  name: Open States bills API
+  name: Open States Bills API
   slug: openstates-bills-api
 - baseURL: https://v3.openstates.org/
   baseurl_source: declared
   description: The committees API from Open States — 2 operation(s) for committees.
-  name: Open States committees API
+  name: Open States Committees API
   slug: openstates-committees-api
 - baseURL: https://v3.openstates.org/
   baseurl_source: declared
   description: The events API from Open States — 2 operation(s) for events.
-  name: Open States events API
+  name: Open States Events API
   slug: openstates-events-api
 - baseURL: https://v3.openstates.org/
   baseurl_source: declared
   description: The jurisdictions API from Open States — 2 operation(s) for jurisdictions.
-  name: Open States jurisdictions API
+  name: Open States Jurisdictions API
   slug: openstates-jurisdictions-api
 - baseURL: https://v3.openstates.org/
   baseurl_source: declared
@@ -74,7 +74,7 @@ apis:
 - baseURL: https://v3.openstates.org/
   baseurl_source: declared
   description: The people API from Open States — 2 operation(s) for people.
-  name: Open States people API
+  name: Open States People API
   slug: openstates-people-api
 artifact_total: 28
 collections:
@@ -100,6 +100,14 @@ collections:
   name: Open States API v3 bills people API
   slug: open-openstates-people-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://pluralpolicy.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://pluralpolicy.com/blog/feed/
 - group: operate
   title: ''
   type: IssueTracker
@@ -174,9 +182,13 @@ examples:
   name: People Geo
   slug: people-geo
 finops:
-- name: Openstates Finops
+- has_sources: false
+  method: generated
+  name: Openstates Finops
+  primary_unit: ''
   service_category: ''
   slug: openstates-finops
+  template: true
 graphqls:
 - description: 'The Open States GraphQL API (v2) provides programmatic access to US state legislative data through a flexible GraphQL interface. The API exposes data covering all 50 states, Washington DC, and Puerto '
   name: Open States GraphQL API
@@ -198,17 +210,17 @@ jsonld:
   property_count: 0
   slug: openstates-context
 layout: provider
-modified: '2026-06-13'
+modified: '2026-10-06'
 name: Open States
 nav: Providers
 network: true
-overview: 'Open States publishes 6 APIs on the [APIs.io](https://apis.io/) network, including bills API, committees API, events API, and 3 more. Tagged areas include Government, Legislative Data, Civic Technology, State Legislature, and Bills.
+overview: 'Open States publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bills API, Committees API, Events API, and 4 more. Tagged areas include Government, Legislative Data, Civic Technology, State Legislature, and Bills.
 
 
   The Open States catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Open States'' developer surface includes documentation, engineering blog, pricing, and 11 more developer resources.'
+  Open States'' developer surface includes engineering blog, documentation, pricing, and 13 more developer resources.'
 plans:
 - name: Openstates Plans Pricing
   plan_count: 4
@@ -219,9 +231,10 @@ rate_limits:
   name: Openstates Rate Limits
   slug: openstates-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Open States API Rules
+  name: Open States — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -230,27 +243,27 @@ rules:
     warn: 5
   slug: openstates-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 31.9
+  band: emerging
+  composite: 25.0
   coverage:
     artifact_dirs: 16
-    catalog_earned: 63.3
+    catalog_earned: 51.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.1
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 51.7
+    contract_quality: 47.9
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
   open_source:
     applies: true
     score: 15.0
-  previous_composite: 31.9
+  previous_composite: 30.1
   provenance:
     agentic_access: derived
     contracts:
@@ -263,10 +276,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.9
-  scored_at: '2026-09-20'
+  score: 5.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The TraderOnline REST API is the integration surface behind Trader Interactive's marketplace network. It is an OAuth 2.0 protected, JSON, offset/limit paginated REST API served from api.traderonline.c
@@ -154,7 +154,7 @@ modified: '2026-08-30'
 name: Trader Interactive
 nav: Providers
 network: true
-overview: 'Trader Interactive publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Classifieds, Automotive, and Power-Sports.
+overview: 'Trader Interactive is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Classifieds, Automotive, and Power-Sports.
 
 
   Trader Interactive''s developer surface includes engineering blog, support, authentication, and 20 more developer resources.'
@@ -169,7 +169,7 @@ rate_limits:
   slug: trader-interactive-rate-limits
 score:
   band: emerging
-  composite: 21.4
+  composite: 20.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -183,9 +183,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 2.6
-  previous_composite: 21.4
+  previous_composite: 20.1
   provenance:
     conformance: derived
     mcp: derived
@@ -194,9 +194,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

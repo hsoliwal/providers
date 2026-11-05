@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.7
-  scored_at: '2026-09-20'
+  score: 14.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'A flexible, powerful standard gRPC / Protocol Buffers API for neural interface devices. The SynapseDevice service exposes device discovery, info, configuration of on-device signal chains, start/stop, '
@@ -93,16 +93,16 @@ modified: '2026-07-21'
 name: Science Corporation
 nav: Providers
 network: true
-overview: 'Science Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Neurotechnology, Brain-Computer Interface, Neural Interface, and Medical Devices.
+overview: 'Science Corporation is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Neurotechnology, Brain-Computer Interface, Neural Interface, and Medical Devices.
 
 
   Science Corporation''s developer surface includes engineering blog, documentation, getting-started guide, changelog, support, and 6 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 34.4
+  composite: 33.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -112,11 +112,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 34.4
+  previous_composite: 33.1
   provenance:
     conformance: derived
     mcp: derived
@@ -126,9 +126,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

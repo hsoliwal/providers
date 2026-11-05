@@ -13,7 +13,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -24,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
@@ -35,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.5
-  scored_at: '2026-09-20'
+  score: 43.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The primary protocol for KurrentDB. The published protocol buffer definitions cover the v2 streams service (multi-stream appends, reads), the schema registry service, the secondary index service, and '
@@ -140,6 +141,10 @@ collections:
   name: KurrentDB HTTP Admin Users API
   slug: open-kurrent-users-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://kurrentdb.kurrent.io/rss.xml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -362,17 +367,17 @@ mcp_servers:
 - description: Official Kurrent MCP server that lets an agent explore data in KurrentDB by reading streams, writing events, and building, creating, updating and testing projections.
   name: KurrentDB
   slug: kurrentdb
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kurrent
 nav: Providers
 network: true
-overview: 'Kurrent publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Gossip API, Info API, and 5 more. Tagged areas include Company, Database, Event Sourcing, Event Streaming, and Event-Driven Architecture.
+overview: 'Kurrent publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Gossip API, Info API, and 6 more. Tagged areas include Company, Database, Event Sourcing, Event Streaming, and Event-Driven Architecture.
 
 
   The Kurrent catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Kurrent''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 40 more developer resources.'
+  Kurrent''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 41 more developer resources.'
 random_paper: 9
 scopes:
 - name: Kurrent Scopes
@@ -381,23 +386,23 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: developing
-  composite: 44.3
+  composite: 46.8
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
     contract_quality: 21.4
     developer_ergonomics: 86.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 44.3
+  previous_composite: 46.7
   provenance:
     conformance: derived
     contracts:
@@ -407,8 +412,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -438,8 +449,8 @@ tags:
 - Data Infrastructure
 - Developer Tools
 - Cloud
-- Open-Source
+- Open Source
 - gRPC
-- Agentic AI
+- AI Agents
 website: https://www.kurrent.io/
 ---

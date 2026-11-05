@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -33,16 +33,16 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 68
+- acting_count: 63
   human_in_the_loop: 1
   name: Authlete Agentic Access
   operation_count: 86
   slug: authlete-agentic-access
-  summary_line: 86 operations · 68 acting · 1 human-in-the-loop
-api_count: 1
+  summary_line: 86 operations · 63 acting · 1 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://us.authlete.com
   baseurl_source: declared
@@ -218,6 +218,11 @@ collections:
   name: Authlete Authorization Endpoint Verifiable Credential Issuer API
   slug: open-authlete-verifiable-credential-issuer-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/authlete/refs/heads/main/capabilities/authlete-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/authlete-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -385,30 +390,30 @@ modified: '2026-07-18'
 name: Authlete
 nav: Providers
 network: true
-overview: 'Authlete publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Authorization Endpoint API, CIBA API, Client Management API, and 18 more. Tagged areas include Company, Authentication, OpenID Connect, Authorization, and Identity.
+overview: 'Authlete publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorization Endpoint API, CIBA API, Client Management API, and 18 more. Tagged areas include Company, Authentication, OpenID Connect, Authorization, and Identity.
 
 
-  Authlete''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
+  Authlete''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
 random_paper: 2
 score:
   band: developing
-  composite: 48.3
+  composite: 48.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 56.0
+    contract_quality: 50.4
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 48.3
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -419,8 +424,14 @@ score:
       total: 21
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

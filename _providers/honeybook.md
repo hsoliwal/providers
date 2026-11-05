@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -85,7 +85,7 @@ apis:
   description: Modeled event subscription surface mirroring HoneyBook's Zapier triggers.
   name: HoneyBook Webhooks API
   slug: honeybook-webhooks-api
-artifact_total: 25
+artifact_total: 26
 collections:
 - collection_type: open
   name: API Collection
@@ -118,6 +118,11 @@ collections:
   name: HoneyBook API (Modeled)
   slug: open-honeybook
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/honeybook/refs/heads/main/capabilities/honeybook-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/honeybook-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/honeybook/refs/heads/main/agentic-access/honeybook-agentic-access.yml
   title: ''
@@ -177,19 +182,27 @@ created: '2026-07-04'
 description: HoneyBook is an all-in-one clientflow management platform for independent, service-based businesses - photographers, event planners, designers, consultants, coaches, and similar creative entrepreneurs. It combines CRM/lead capture, proposals, contracts and e-signature, invoicing and payments, scheduling, automations, and client communication in one product. HoneyBook does not publish a self-serve public developer API or a developer portal; third-party connectivity is offered through a limited set of native integrations (QuickBooks Online, Zoom, Calendly, Flodesk, Canva, Meta Leads, Slack, Asana, monday.com) and, most broadly, through Zapier. An internal API host (api.honeybook.com) is live and clearly powers the Zapier integration and native connectors, but HoneyBook has never published a self-serve technical reference, OAuth client registration flow, or endpoint documentation for outside developers, and community requests for direct API access date back to at least January
   2024 with no roadmap commitment as of this review.
 finops:
-- name: Honeybook Finops
+- has_sources: true
+  method: generated
+  name: Honeybook Finops
+  primary_unit: ''
   service_category: Business Applications - Clientflow / CRM
   slug: honeybook-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/honeybook.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.api.honeybook.com over HTTP.
+  name: HoneyBook MCP Server
+  slug: honeybook
 modified: '2026-07-04'
 name: HoneyBook
 nav: Providers
 network: true
-overview: 'HoneyBook publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Clients API, Contracts API, Invoices API, and 5 more. Tagged areas include CRM, Clientflow, Proposals, Contracts, and Invoicing.
+overview: 'HoneyBook publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clients API, Contracts API, Invoices API, and 5 more. Tagged areas include CRM, Clientflow, Proposals, Contracts, and Invoicing.
 
 
-  HoneyBook''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  HoneyBook''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Honeybook Plans Pricing
   plan_count: 4
@@ -205,24 +218,24 @@ scopes:
   slug: honeybook-scopes
   summary_line: 14 scopes · authorizationCode
 score:
-  band: thin
-  composite: 31.6
+  band: emerging
+  composite: 21.1
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 64.0
+    artifact_dirs: 17
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 32.3
+    contract_quality: 29.1
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 31.6
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 29.4
   provenance:
     agentic_access: derived
     contracts:
@@ -236,10 +249,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

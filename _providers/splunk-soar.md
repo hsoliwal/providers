@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Splunk SOAR REST API creates, updates, queries and selectively removes the objects the platform automates against — containers, artifacts, playbooks, action runs, apps, assets, CEF fields, indicat
@@ -213,7 +213,7 @@ modified: '2026-08-19'
 name: Splunk SOAR
 nav: Providers
 network: true
-overview: 'Splunk SOAR publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Security, SOAR, Automation, Orchestration, and Incident Response.
+overview: 'Splunk SOAR is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Security, SOAR, Automation, Orchestration, and Incident Response.
 
 
   Splunk SOAR''s developer surface includes developer portal, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 29 more developer resources.'
@@ -228,7 +228,7 @@ rate_limits:
   slug: splunk-soar-rate-limits
 score:
   band: developing
-  composite: 42.0
+  composite: 44.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -242,14 +242,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 42.0
+  previous_composite: 44.7
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -26,8 +26,8 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.7
-  scored_at: '2026-09-20'
+  score: 21.0
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Kizik's Universal Commerce Protocol surface, exposed over MCP at https://kizik.com/api/ucp/mcp. An unauthenticated tools/list returns thirteen tools covering catalog search and lookup, cart create/upd
@@ -47,6 +47,15 @@ apis:
   slug: kizik-storefront-product-data
 artifact_total: 8
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/kizik/refs/heads/main/rate-limits/kizik-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/kizik-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://kizik.com/blogs/news.atom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/kizik/refs/heads/main/security/kizik-domain-security.yml
   title: ''
@@ -137,14 +146,14 @@ mcp_servers:
 - description: Kizik's Universal Commerce Protocol (UCP) shopping service, exposed over MCP on Kizik's own domain. An unauthenticated JSON-RPC tools/list returns 13 tools with full JSON Schema 2020-12 inputSchemas c
   name: Kizik UCP Commerce MCP Server
   slug: kizik-ucp-commerce-mcp-server
-modified: '2026-08-23'
+modified: '2026-10-06'
 name: Kizik
 nav: Providers
 network: true
-overview: 'Kizik publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Retail, E-Commerce, Footwear, and Consumer Goods.
+overview: 'Kizik is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Retail, E-Commerce, Footwear, and Consumer Goods.
 
 
-  Kizik''s developer surface includes documentation, engineering blog, support, signup flow, and 14 more developer resources.'
+  Kizik''s developer surface includes documentation, engineering blog, support, signup flow, and 16 more developer resources.'
 plans:
 - name: Kizik Plans Pricing
   plan_count: 0
@@ -156,34 +165,40 @@ rate_limits:
   slug: kizik-rate-limits
 scopes:
 - name: Kizik Scopes
-  scope_count: 0
+  scope_count: 4
   slug: kizik-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: emerging
-  composite: 22.7
+  composite: 24.7
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 37.0
+    artifact_dirs: 18
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 66.7
     operational_transparency: 0.0
-  previous_composite: 22.7
+  previous_composite: 24.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -40,7 +40,7 @@ agentic_access:
   operation_count: 2
   slug: preply-agentic-access
   summary_line: 2 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://preply.com/api/chatgpt_openapi
   baseurl_source: declared
@@ -147,16 +147,16 @@ modified: '2026-07-20'
 name: Preply
 nav: Providers
 network: true
-overview: 'Preply publishes 1 API on the [APIs.io](https://apis.io/) network: Chatgpt Openapi API. Tagged areas include Company, Education, Language Learning, Tutoring, and Marketplace.
+overview: 'Preply publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Chatgpt Openapi API. Tagged areas include Company, Education, Language Learning, Tutoring, and Marketplace.
 
 
   Preply''s developer surface includes engineering blog, support, and 16 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 37.8
+  composite: 34.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 63.0
@@ -166,11 +166,11 @@ score:
   facets:
     access_clarity: 57.1
     contract_governance: 4.5
-    contract_quality: 43.5
+    contract_quality: 39.2
     developer_ergonomics: 8.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 37.8
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -186,14 +186,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://raw.githubusercontent.com/api-evangelist/preply/refs/heads/main/screenshots/preply-2026-10-11T191642.png
 security:
 - kind: domain-security
   name: Preply Domain Security

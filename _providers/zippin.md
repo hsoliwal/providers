@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Zippin Gateway is Zippin's integration/API framework for its checkout-free store platform — the surface retailers and partners use to connect payment gateways, loyalty and gift providers, campus c
@@ -138,7 +138,7 @@ modified: '2026-09-05'
 name: Zippin
 nav: Providers
 network: true
-overview: 'Zippin publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Retail, Retail Technology, Checkout-Free, and Cashierless.
+overview: 'Zippin is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Retail, Retail Technology, Checkout-Free, and Cashierless.
 
 
   Zippin''s developer surface includes support, engineering blog, and 17 more developer resources.'
@@ -153,9 +153,9 @@ rate_limits:
   slug: zippin-rate-limits
 score:
   band: emerging
-  composite: 14.9
+  composite: 15.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -167,27 +167,30 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.9
+  previous_composite: 15.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/zippin/refs/heads/main/screenshots/zippin-2026-10-11T195129.png
 security:
 - kind: domain-security
   name: Zippin Domain Security
@@ -200,9 +203,9 @@ tags:
 - Retail Technology
 - Checkout-Free
 - Cashierless
-- Computer-Vision
+- Computer Vision
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Point-of-Sale
 - Payments
 - Loyalty

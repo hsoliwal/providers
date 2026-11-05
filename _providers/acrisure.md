@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Hosted Model Context Protocol server operated by Acrisure at https://api.acrisure.com/v1/mcp. Production and live, protected by Microsoft Entra ID via an authorization-code + PKCE flow carrying the si
@@ -154,12 +154,12 @@ layout: provider
 mcp_servers:
 - description: Acrisure operates a hosted, production Model Context Protocol server at https://api.acrisure.com/v1/mcp, protected by Microsoft Entra ID. It is not announced in any Acrisure documentation, press relea
   name: Acrisure MCP Server
-  slug: acrisure-mcp-server
+  slug: acrisure
 modified: '2026-08-06'
 name: Acrisure
 nav: Providers
 network: true
-overview: 'Acrisure publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Insurance Brokerage, Fintech, Employee Benefits, and payroll-hr.
+overview: 'Acrisure is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Insurance Brokerage, Fintech, Employee Benefits, and payroll-hr.
 
 
   Acrisure''s developer surface includes engineering blog, product news, support, signup flow, authentication, and 14 more developer resources.'
@@ -171,9 +171,9 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.3
+  composite: 22.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -185,14 +185,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.3
+  previous_composite: 22.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -201,9 +203,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 72.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

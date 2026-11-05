@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 23.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,6 +68,25 @@ collections:
   name: OpenFEMA Fire Data Datasets Disaster Declarations API
   slug: open-united-states-fire-administration-disaster-declarations-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-fire-administration/refs/heads/main/plans/united-states-fire-administration-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/united-states-fire-administration-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-fire-administration/refs/heads/main/rate-limits/united-states-fire-administration-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/united-states-fire-administration-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-fire-administration/refs/heads/main/finops/united-states-fire-administration-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/united-states-fire-administration-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.fema.gov/about/news-multimedia/blog
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/united-states-fire-administration/refs/heads/main/capabilities/united-states-fire-administration-capability-edges.yml
   title: ''
@@ -97,9 +116,13 @@ examples:
   name: Openfema List Datasets Example
   slug: openfema-list-datasets-example
 finops:
-- name: United States Fire Administration Finops
+- has_sources: false
+  method: generated
+  name: United States Fire Administration Finops
+  primary_unit: ''
   service_category: API
   slug: united-states-fire-administration-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/united-states-fire-administration.png
 json_schemas:
 - name: FEMA Disaster Declaration
@@ -118,14 +141,17 @@ jsonld:
   property_count: 13
   slug: united-states-fire-administration-context
 layout: provider
-modified: '2026-05-19'
+modified: '2026-10-06'
 name: United States Fire Administration
 nav: Providers
 network: true
-overview: 'United States Fire Administration publishes 2 APIs on the [APIs.io](https://apis.io/) network: Datasets API and Disaster Declarations API. Tagged areas include Federal-Government, Fire Safety, Emergency Management, Public Safety, and FEMA.
+overview: 'United States Fire Administration publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Datasets API and Disaster Declarations API. Tagged areas include Federal Government, Fire Safety, Emergency Management, Public Safety, and FEMA.
 
 
-  The United States Fire Administration catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
+  The United States Fire Administration catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+
+
+  United States Fire Administration''s developer surface includes engineering blog and 7 more developer resources.'
 plans:
 - name: United States Fire Administration Plans Pricing
   plan_count: 3
@@ -136,9 +162,10 @@ rate_limits:
   name: United States Fire Administration Rate Limits
   slug: united-states-fire-administration-rate-limits
 rules:
-- effective_rule_count: 7
+- authorship: unmarked
+  effective_rule_count: 7
   extends: []
-  name: United States Fire Administration API Rules
+  name: United States Fire Administration — openfema fire data rules
   rule_count: 7
   severity_counts:
     error: 2
@@ -146,9 +173,10 @@ rules:
     info: 0
     warn: 5
   slug: openfema-fire-data-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: United States Fire Administration API Rules
+  name: United States Fire Administration — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -158,23 +186,28 @@ rules:
   slug: united-states-fire-administration-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 30.3
+  composite: 27.1
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 61.0
+    artifact_dirs: 16
+    catalog_earned: 54.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 39.0
-    catalog_max: 100.0
+    catalog_gap: 60.8
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.1
   facets:
-    access_clarity: 0.0
-    contract_governance: 39.4
-    contract_quality: 56.5
-    developer_ergonomics: 19.0
-    discoverability: 68.5
+    access_clarity: 7.9
+    contract_governance: 9.8
+    contract_quality: 51.4
+    developer_ergonomics: 21.4
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 30.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     contracts:
@@ -187,9 +220,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -203,7 +236,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: united-states-fire-administration
 tags:
-- Federal-Government
+- Federal Government
 - Fire Safety
 - Emergency Management
 - Public Safety

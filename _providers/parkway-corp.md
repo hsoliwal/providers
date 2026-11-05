@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.parkwaycorp.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/parkway-corp/refs/heads/main/security/parkway-corp-domain-security.yml
   title: ''
@@ -53,17 +57,17 @@ created: '2026-05-05'
 description: A Philadelphia-based real estate and parking infrastructure company that develops, owns, and manages parking facilities and mixed-use properties across the greater Philadelphia region. Parkway operates one of the largest privately held portfolios of urban parking and structured real estate assets in the Mid-Atlantic, providing on-street and off-street parking, monthly parking programs, validation services, and selective property development. The company does not publish a public developer API or partner integration portal.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/parkway-corp.png
 layout: provider
-modified: '2026-05-09'
+modified: '2026-10-06'
 name: Parkway Corp
 nav: Providers
 network: true
-overview: Parkway Corp is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Parking, Infrastructure, Philadelphia, and Mid-Atlantic.
+overview: Parkway Corp is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Parking, Infrastructure, Philadelphia, and Mid-Atlantic.
 random_paper: 16
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.4
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -75,11 +79,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -93,7 +103,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: parkway-corp
 tags:
-- Real-Estate
+- Real Estate
 - Parking
 - Infrastructure
 - Philadelphia

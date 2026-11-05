@@ -32,10 +32,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ebbo/refs/heads/main/plans/ebbo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ebbo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ebbo/refs/heads/main/rate-limits/ebbo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ebbo-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ebbo/refs/heads/main/security/ebbo-domain-security.yml
   title: ''
@@ -95,7 +105,7 @@ network: true
 overview: 'Ebbo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Loyalty, Marketing Technology, Promotions, and Customer Engagement.
 
 
-  Ebbo''s developer surface includes engineering blog, support, and 6 more developer resources.'
+  Ebbo''s developer surface includes engineering blog, support, and 8 more developer resources.'
 plans:
 - name: Ebbo Plans Pricing
   plan_count: 0
@@ -107,7 +117,7 @@ rate_limits:
   slug: ebbo-rate-limits
 score:
   band: minimal
-  composite: 9.6
+  composite: 8.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -121,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 3.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 9.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -146,5 +162,6 @@ tags:
 - Customer Engagement
 - Rewards
 - Sweepstakes
+- Loyalty & Incentives
 website: https://ebbo.com
 ---

@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -82,6 +82,11 @@ collections:
   name: Cloverly Account Purchases API
   slug: open-cloverly-purchases-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cloverly/refs/heads/main/capabilities/cloverly-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cloverly-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -228,9 +233,13 @@ examples:
   name: Cloverly Purchase Conversion Example
   slug: cloverly-purchase-conversion-example
 finops:
-- name: Cloverly Finops
+- has_sources: true
+  method: generated
+  name: Cloverly Finops
+  primary_unit: kilogram-co2e
   service_category: Sustainability and Carbon Markets
   slug: cloverly-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cloverly.png
 json_schemas:
 - name: Cloverly Estimate
@@ -253,13 +262,13 @@ modified: '2026-05-24'
 name: Cloverly
 nav: Providers
 network: true
-overview: 'Cloverly publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Estimates API, Purchases API, Offset Types API, and 1 more. Tagged areas include Carbon, Carbon Credits, Carbon Offsets, Catalyst, and Climate.
+overview: 'Cloverly is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Estimates API, Purchases API, Offset Types API, and 1 more. Tagged areas include Carbon, Carbon Credits, Carbon Offsets, Catalyst, and Climate.
 
 
   The Cloverly catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Cloverly''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, YouTube channel, API reference, and 24 more developer resources.'
+  Cloverly''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, YouTube channel, API reference, and 25 more developer resources.'
 plans:
 - name: Cloverly Plans Pricing
   plan_count: 3
@@ -270,9 +279,10 @@ rate_limits:
   name: Cloverly Rate Limits
   slug: cloverly-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Cloverly API Rules
+  name: Cloverly — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -280,7 +290,8 @@ rules:
     info: 1
     warn: 4
   slug: cloverly-jsonschema-spectral-rules
-- effective_rule_count: 45
+- authorship: unmarked
+  effective_rule_count: 45
   extends:
   - spectral:oas
   name: Cloverly API Rules
@@ -293,28 +304,30 @@ rules:
   slug: cloverly-rules
 score:
   band: developing
-  composite: 49.9
+  composite: 40.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 83.5
+    artifact_dirs: 19
+    catalog_earned: 67.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.5
+    catalog_gap: 47.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.9
   facets:
-    access_clarity: 52.6
-    contract_governance: 28.8
-    contract_quality: 62.9
+    access_clarity: 28.9
+    contract_governance: 27.3
+    contract_quality: 57.0
     developer_ergonomics: 47.6
-    discoverability: 74.1
-    operational_transparency: 26.3
+    discoverability: 71.4
+    operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 49.9
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     contracts:
@@ -327,10 +340,10 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 23.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 13.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

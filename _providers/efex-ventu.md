@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.efex.com/rss/
 - group: company
   title: ''
   type: Website
@@ -69,20 +73,20 @@ created: '2026-07-17'
 description: EFEX (efex.com, formerly efexpay.com) is a cross-border payments and treasury fintech serving businesses across the Americas. It enables international transfers to 140+ countries, bulk and mass payouts for payroll and multi-beneficiary disbursement, multi-currency business accounts (USD, MXN, EUR, GBP, CAD, JPY), international collections in local currency across 24+ countries, and FX and currency management for treasury optimization. Headquartered in Palo Alto, California with operations across Mexico (Mexico City, Monterrey, Tijuana, Queretaro, Guadalajara) and Colombia, EFEX is authorized by Mexico's CNBV as a money transmitter (registration 22469) and regulated by FinCEN in the United States. Backed by 500 Global. As of this profile the company exposes a business web/app product but no public developer API, developer portal, or API documentation.
 image: https://efex.com/favicon.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: EFEX (Ventu)
 nav: Providers
 network: true
 overview: 'EFEX (Ventu) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Foreign Exchange, and Fintech.
 
 
-  EFEX (Ventu)''s developer surface includes support, YouTube channel, and 5 more developer resources.'
+  EFEX (Ventu)''s developer surface includes support, YouTube channel, and 6 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 3.8
+  composite: 5.0
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -94,25 +98,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - mexico
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
     - north-america
-  previous_composite: 3.8
+  previous_composite: 5.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

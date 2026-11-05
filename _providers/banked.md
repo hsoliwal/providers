@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Account-to-account payments over open banking — create payment sessions (checkout), payouts, refunds, and webhooks. The Partner API onboards businesses on behalf of platforms. OAuth 2.0 client-credent
@@ -174,14 +174,14 @@ description: Banked is a global account-to-account (A2A) payments network built 
 image: https://images.prismic.io/banked/dc1e104e-b397-4f26-ba16-0b64aee7daea_page-og-2.png?auto=compress,format&w=1200&h=627
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.banked.com over HTTP; 3 tools listed.
   name: Banked MCP Server
-  slug: banked-mcp-server
+  slug: banked
 modified: '2026-07-18'
 name: Banked
 nav: Providers
 network: true
-overview: 'Banked publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Open Banking, Account-to-Account, and Pay by Bank.
+overview: 'Banked is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Open Banking, Account-to-Account, and Pay by Bank.
 
 
   The Banked catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -191,9 +191,9 @@ overview: 'Banked publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 19
 score:
   band: thin
-  composite: 38.9
+  composite: 37.8
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -203,11 +203,11 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 38.9
+  previous_composite: 37.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 34.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

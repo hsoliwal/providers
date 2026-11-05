@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.7
-  scored_at: '2026-09-20'
+  score: 49.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -64,7 +64,7 @@ apis:
   description: An organization's transactions and donations.
   name: Zeffy Payments API
   slug: zeffy-payments-api
-artifact_total: 14
+artifact_total: 15
 collections:
 - collection_type: open
   name: API Collection
@@ -79,6 +79,11 @@ collections:
   name: Zeffy Public Campaigns Payments API
   slug: open-zeffy-payments-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zeffy/refs/heads/main/capabilities/zeffy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zeffy-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/zeffy/refs/heads/main/agentic-access/zeffy-agentic-access.yml
   title: ''
@@ -128,19 +133,27 @@ common:
 created: '2026-07-05'
 description: Zeffy is a 100% free fundraising platform for nonprofits - donation forms, event ticketing, peer-to-peer campaigns, memberships, e-commerce, and donor management - with no platform, transaction, or credit-card fees, funded entirely by optional tips from donors. Zeffy exposes a free public REST API that gives organization admins read-only access to their Payments, Contacts, and Campaigns data (base https://api.zeffy.com/api/v1), authenticated with a per-organization API key sent as a Bearer token, plus outbound webhooks that POST payment details to a configured URL when a payment is completed. Zeffy also integrates via Zapier, QuickBooks, and WordPress.
 finops:
-- name: Zeffy Finops
+- has_sources: true
+  method: generated
+  name: Zeffy Finops
+  primary_unit: ''
   service_category: Fundraising and Payments
   slug: zeffy-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zeffy.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.zeffy.com over HTTP.
+  name: Zeffy MCP Server
+  slug: zeffy
 modified: '2026-07-05'
 name: Zeffy
 nav: Providers
 network: true
-overview: 'Zeffy publishes 3 APIs on the [APIs.io](https://apis.io/) network: Campaigns API, Contacts API, and Payments API. Tagged areas include Fundraising, Non-Profit, Donations, Payments, and Donor Management.
+overview: 'Zeffy publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Contacts API, Payments API, and 1 more. Tagged areas include Fundraising, Non-Profit, Donations, Payments, and Donor Management.
 
 
-  Zeffy''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  Zeffy''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Zeffy Plans Pricing
   plan_count: 1
@@ -152,22 +165,22 @@ rate_limits:
   slug: zeffy-rate-limits
 score:
   band: emerging
-  composite: 19.0
+  composite: 13.0
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 56.0
+    artifact_dirs: 15
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 21.1
+    discoverability: 68.3
+    operational_transparency: 5.3
   previous_composite: 19.0
   provenance:
     agentic_access: derived
@@ -182,10 +195,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

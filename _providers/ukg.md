@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -167,6 +167,21 @@ collections:
   name: UKG Pro HCM Accruals Timekeeping API
   slug: open-ukg-timekeeping-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ukg/refs/heads/main/plans/ukg-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ukg-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ukg/refs/heads/main/rate-limits/ukg-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ukg-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ukg/refs/heads/main/finops/ukg-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/ukg-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ukg/refs/heads/main/agentic-access/ukg-agentic-access.yml
   title: ''
@@ -383,9 +398,13 @@ features:
 - description: Unified data platform connecting HCM and WFM data across all UKG products via modern APIs.
   name: People Fabric
 finops:
-- name: Ukg Finops
+- has_sources: true
+  method: generated
+  name: Ukg Finops
+  primary_unit: ''
   service_category: HCM / Workforce Management
   slug: ukg-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ukg.png
 integrations:
 - description: Sync employee data between UKG and Salesforce for HR-CRM alignment.
@@ -524,13 +543,13 @@ modified: '2026-05-19'
 name: UKG
 nav: Providers
 network: true
-overview: 'UKG publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accruals API, Benefits API, Employees API, and 5 more. Tagged areas include HCM, Workforce Management, Human Resources, Payroll, and Time and Attendance.
+overview: 'UKG is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Accruals API, Benefits API, Employees API, and 6 more. Tagged areas include HCM, Workforce Management, Human Resources, Payroll, and Time and Attendance.
 
 
   The UKG catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
 
 
-  UKG''s developer surface includes authentication, documentation, developer portal, engineering blog, pricing, support, getting-started guide, and 24 more developer resources.'
+  UKG''s developer surface includes authentication, documentation, developer portal, engineering blog, pricing, support, getting-started guide, and 27 more developer resources.'
 plans:
 - name: Ukg Plans Pricing
   plan_count: 1
@@ -541,9 +560,10 @@ rate_limits:
   name: Ukg Rate Limits
   slug: ukg-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: UKG API Rules
+  name: UKG — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -551,7 +571,8 @@ rules:
     info: 2
     warn: 3
   slug: ukg-jsonschema-spectral-rules
-- effective_rule_count: 75
+- authorship: generated
+  effective_rule_count: 75
   extends:
   - spectral:oas
   name: UKG API Rules
@@ -564,32 +585,38 @@ rules:
   slug: ukg-spectral-rules
 score:
   band: thin
-  composite: 32.6
+  composite: 30.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 74.5
+    artifact_dirs: 20
+    catalog_earned: 73.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.5
+    catalog_gap: 42.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 26.3
-    contract_governance: 28.8
-    contract_quality: 31.6
+    access_clarity: 18.4
+    contract_governance: 27.3
+    contract_quality: 30.5
     developer_ergonomics: 44.0
-    discoverability: 68.5
+    discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 32.6
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
-      callable: 50.0
+      callable: 0.0
       derived: 10
       marker_coverage: 100.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -622,6 +649,7 @@ tags:
 - Time and Attendance
 - Benefits
 - Scheduling
+- Employee Benefits
 use_cases:
 - description: Sync employee pay data, deductions, and tax information with third-party payroll processors and ERP systems.
   name: Payroll Integration

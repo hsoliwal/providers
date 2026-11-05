@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - baseURL: https://us-east-1-aic.leena.ai
@@ -82,6 +82,10 @@ collections:
   name: Leena AI External AOP Analytics Knowledge Articles API
   slug: open-leena-ai-knowledge-articles-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://leena.ai/blog
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/leena-ai/refs/heads/main/overlays/leena-ai-aop-overlay.yaml
   title: ''
@@ -241,17 +245,17 @@ description: 'Leena AI is an enterprise Agentic AI platform that deploys "AI Col
 image: https://assets.leena.ai/images/og/homepage_OG_image.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at leena.ai over HTTP; 3 tools listed.
   name: Leena AI MCP Server
-  slug: leena-ai-mcp-server
-modified: '2026-07-19'
+  slug: leena-ai
+modified: '2026-10-06'
 name: Leena AI
 nav: Providers
 network: true
-overview: 'Leena AI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, AOP API, Audit Logs API, and 2 more. Tagged areas include Company, Ai Ml, Agentic AI, Artificial Intelligence, and Enterprise Software.
+overview: 'Leena AI is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, AOP API, Audit Logs API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Enterprise Software, and Human Resources.
 
 
-  Leena AI''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, changelog, authentication, and 26 more developer resources.'
+  Leena AI''s developer surface includes engineering blog, documentation, API reference, getting-started guide, quickstart, support, changelog, and 27 more developer resources.'
 random_paper: 16
 rate_limits:
 - limit_count: 1
@@ -259,28 +263,28 @@ rate_limits:
   slug: leena-ai-rate-limits
 scopes:
 - name: Leena Ai Scopes
-  scope_count: 0
+  scope_count: 1
   slug: leena-ai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 33.4
+  composite: 37.2
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
     contract_quality: 13.8
-    developer_ergonomics: 37.5
-    discoverability: 81.5
+    developer_ergonomics: 39.9
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 33.4
+  previous_composite: 36.7
   provenance:
     conformance: first-party
     contracts:
@@ -290,8 +294,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 41.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -317,16 +327,15 @@ security:
 slug: leena-ai
 tags:
 - Company
-- Ai Ml
-- Agentic AI
 - Artificial Intelligence
+- AI Agents
 - Enterprise Software
 - Human Resources
 - ITSM
 - Employee Experience
-- Workflow-Automation
+- Workflow Automation
 - Conversational AI
 - MCP
-- Knowledge-Management
+- Knowledge Management
 website: https://leena.ai
 ---

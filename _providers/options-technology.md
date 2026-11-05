@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: WebSocket-based (WebAssembly) JavaScript/TypeScript market data API for browser and Node.js, installed as npm package '@activfinancial/one-api' (latest 1.1.4). Supports snapshots, real-time subscripti
@@ -41,6 +41,10 @@ apis:
   slug: activ-web-one-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.options-it.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/security/options-technology-domain-security.yml
   title: ''
@@ -148,18 +152,18 @@ created: '2026-07-21'
 description: Options Technology (Options IT) is a capital markets managed services and trading infrastructure provider founded in 1993, backed by private equity firm Abry Partners since 2019, serving over 550 firms globally. Its market data business, built on the 2021 acquisition of ACTIV Financial, sells low-latency raw and normalized exchange feeds delivered over colocated multicast and TCP, real-time streaming into AWS, GCP, and Azure, tickerplant snapshot and time-series services, and lossless data capture with raw .pcap files. The commercial relationship is sales-gated and entitlement-managed, but the ACTIV Web One API - a WebSocket plus WebAssembly JavaScript API distributed via npm - has genuinely public developer documentation, tutorials, and an in-browser playground at weboneapi.activfinancial.com.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/options-technology.png
 layout: provider
-modified: '2026-07-22'
+modified: '2026-10-06'
 name: Options Technology
 nav: Providers
 network: true
-overview: 'Options Technology publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Market Data, Real-Time, Streaming, and Trading Infrastructure.
+overview: 'Options Technology is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Market Data, Real-Time, Streaming, and Trading Infrastructure.
 
 
-  Options Technology''s developer surface includes developer portal, documentation, engineering blog, support, API reference, getting-started guide, authentication, and 16 more developer resources.'
+  Options Technology''s developer surface includes developer portal, documentation, engineering blog, support, API reference, getting-started guide, authentication, and 17 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 30.5
+  composite: 30.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -173,17 +177,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 30.5
+  previous_composite: 30.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 35.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -205,7 +209,7 @@ security:
   summary_line: trust center published
 slug: options-technology
 tags:
-- Financial
+- Finance
 - Market Data
 - Real-Time
 - Streaming

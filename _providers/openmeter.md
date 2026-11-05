@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -94,7 +94,7 @@ apis:
   description: Subjects that usage is metered against.
   name: OpenMeter Subjects API
   slug: openmeter-subjects-api
-artifact_total: 29
+artifact_total: 30
 collections:
 - collection_type: open
   name: API Collection
@@ -133,6 +133,19 @@ collections:
   name: OpenMeter API
   slug: open-openmeter
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://openmeter.io/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://openmeter.io/blog/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/capabilities/openmeter-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/openmeter-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/openmeter/refs/heads/main/agentic-access/openmeter-agentic-access.yml
   title: ''
@@ -184,22 +197,33 @@ common:
   title: ''
   type: FinOps
   url: finops/openmeter-finops.yml
+- group: design
+  title: ''
+  type: SpectralRules
+  url: https://github.com/openmeterio/openmeter/blob/e00163c4b8a0726198c95a9ccb158d38ea8c05b8/.spectral.yaml
 created: '2026-07-01'
 description: OpenMeter is open-source usage metering and billing for AI and API products. It ingests usage events as CloudEvents, aggregates them through meters, answers usage queries, and turns that usage into entitlements, balances, grants, usage-driven notifications, and Stripe-backed billing. Available as an open-source project and as OpenMeter Cloud with a Bearer-token REST API at https://openmeter.cloud/api/v1.
 finops:
-- name: Openmeter Finops
+- has_sources: true
+  method: generated
+  name: Openmeter Finops
+  primary_unit: ''
   service_category: Analytics and Metering
   slug: openmeter-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openmeter.png
 layout: provider
-modified: '2026-07-01'
+modified: '2026-10-06'
 name: OpenMeter
 nav: Providers
 network: true
-overview: 'OpenMeter publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Billing API, Customers API, Entitlements API, and 7 more. Tagged areas include Usage Metering, Billing, Entitlements, CloudEvents, and Open-Source.
+overview: 'OpenMeter publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Customers API, Entitlements API, and 7 more. Tagged areas include Usage Metering, Billing, Entitlements, CloudEvents, and Open Source.
 
 
-  OpenMeter''s developer surface includes authentication, documentation, and 9 more developer resources.'
+  The OpenMeter catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  OpenMeter''s developer surface includes engineering blog, authentication, documentation, and 12 more developer resources.'
 plans:
 - name: Openmeter Plans Pricing
   plan_count: 4
@@ -209,25 +233,38 @@ rate_limits:
 - limit_count: 3
   name: Openmeter Rate Limits
   slug: openmeter-rate-limits
+rules:
+- authorship: provider
+  effective_rule_count: 41
+  extends:
+  - spectral:oas
+  name: OpenMeter — openmeter rules
+  rule_count: 0
+  severity_counts:
+    error: 0
+    hint: 0
+    info: 0
+    warn: 0
+  slug: openmeter-openmeter-spectral-rules
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 31.7
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 64.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    artifact_dirs: 13
+    catalog_earned: 48.0
+    catalog_earned_first_party: 5.0
+    catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 47.4
-    contract_governance: 0.0
-    contract_quality: 47.9
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 40.2
+    access_clarity: 15.8
+    contract_governance: 15.2
+    contract_quality: 43.1
+    developer_ergonomics: 32.1
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -235,9 +272,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -261,7 +304,8 @@ tags:
 - Billing
 - Entitlements
 - CloudEvents
-- Open-Source
+- Open Source
 - Artificial Intelligence
+- Usage-Based Billing
 website: https://openmeter.io/
 ---

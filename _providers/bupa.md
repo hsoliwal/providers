@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The Bupa Australia API estate, published through an Azure API Management managed developer portal at portal.api.bupa.com.au and served from the api.bupa.com.au gateway host. The portal is publicly rea
@@ -146,14 +149,14 @@ modified: '2026-07-25'
 name: Bupa
 nav: Providers
 network: true
-overview: 'Bupa publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Health Insurance, Life and Health, and Carrier.
+overview: 'Bupa is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Health Insurance, Life and Health, and Carrier.
 
 
   Bupa''s developer surface includes engineering blog, documentation, getting-started guide, API reference, changelog, signup flow, support, and 14 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 31.7
+  composite: 30.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -167,7 +170,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -177,7 +180,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 31.7
+  previous_composite: 30.5
   provenance:
     conformance: first-party
   regulatory:
@@ -185,9 +188,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 40.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -218,6 +221,5 @@ tags:
 - Aged Care
 - Claims
 - Policy Administration
-- Partner Gated
 website: https://www.bupa.com/
 ---

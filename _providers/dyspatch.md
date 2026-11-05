@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.4
-  scored_at: '2026-09-20'
+  score: 34.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 73
   human_in_the_loop: 0
@@ -218,6 +218,10 @@ collections:
 common:
 - group: company
   title: ''
+  type: BlogRSS
+  url: https://www.dyspatch.io/feed/
+- group: company
+  title: ''
   type: Website
   url: https://www.dyspatch.io/
 - group: start
@@ -387,20 +391,20 @@ description: Dyspatch is an email template management and production platform th
 image: https://www.dyspatch.io/wp-content/uploads/2025/04/fb-share-1.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 35 tools listed.
   name: Dyspatch MCP Server
-  slug: dyspatch-mcp-server
-modified: '2026-08-13'
+  slug: dyspatch
+modified: '2026-10-06'
 name: Dyspatch
 nav: Providers
 network: true
-overview: 'Dyspatch publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Blocks API, Customer Profiles API, Drafts API, and 17 more. Tagged areas include Company, Email, Email Templates, Marketing, and Messaging.
+overview: 'Dyspatch publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Blocks API, Customer Profiles API, Drafts API, and 17 more. Tagged areas include Company, Email, Email Templates, Marketing, and Messaging.
 
 
   The Dyspatch catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Dyspatch''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 29 more developer resources.'
+  Dyspatch''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 30 more developer resources.'
 plans:
 - name: Dyspatch Plans Pricing
   plan_count: 3
@@ -412,7 +416,7 @@ rate_limits:
   slug: dyspatch-rate-limits
 score:
   band: strong
-  composite: 61.4
+  composite: 58.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -424,11 +428,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 68.0
+    contract_quality: 62.3
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 52.6
-  previous_composite: 61.4
+  previous_composite: 58.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -444,9 +448,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 43.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

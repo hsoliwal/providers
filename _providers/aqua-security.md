@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-09-20'
+  score: 31.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -148,6 +148,21 @@ collections:
   name: Aqua Security REST Authentication Users API
   slug: open-aqua-security-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/aqua-security/refs/heads/main/plans/aqua-security-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/aqua-security-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/aqua-security/refs/heads/main/rate-limits/aqua-security-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/aqua-security-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/aqua-security/refs/heads/main/finops/aqua-security-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/aqua-security-finops.yml
 - group: company
   title: ''
   type: Website
@@ -376,9 +391,13 @@ features:
 - description: Visualize and enforce container network connectivity and micro-segmentation policies.
   name: Network Policy
 finops:
-- name: Aqua Security Finops
+- has_sources: true
+  method: generated
+  name: Aqua Security Finops
+  primary_unit: ''
   service_category: Security
   slug: aqua-security-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aqua-security.png
 integrations:
 - description: Native integrations with AWS ECS, EKS, Lambda, ECR, Security Hub, and other AWS services.
@@ -519,13 +538,13 @@ modified: '2026-05-19'
 name: Aqua Security
 nav: Providers
 network: true
-overview: 'Aqua Security publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Containers API, Images API, and 3 more. Tagged areas include Cloud-Native, Containers, Kubernetes, Runtime Protection, and Security.
+overview: 'Aqua Security is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Containers API, Images API, and 5 more. Tagged areas include Cloud-Native, Containers, Kubernetes, Runtime Protection, and Security.
 
 
   The Aqua Security catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Aqua Security''s developer surface includes authentication, developer portal, documentation, engineering blog, pricing, signup flow, support, and 29 more developer resources.'
+  Aqua Security''s developer surface includes authentication, developer portal, documentation, engineering blog, pricing, signup flow, support, and 32 more developer resources.'
 plans:
 - name: Aqua Security Plans Pricing
   plan_count: 1
@@ -536,9 +555,10 @@ rate_limits:
   name: Aqua Security Rate Limits
   slug: aqua-security-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Aqua Security API Rules
+  name: Aqua Security — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -546,7 +566,8 @@ rules:
     info: 1
     warn: 4
   slug: aqua-security-jsonschema-spectral-rules
-- effective_rule_count: 77
+- authorship: generated
+  effective_rule_count: 77
   extends:
   - spectral:oas
   name: Aqua Security API Rules
@@ -559,26 +580,26 @@ rules:
   slug: aqua-security-spectral-rules
 score:
   band: developing
-  composite: 41.6
+  composite: 40.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 68.5
+    artifact_dirs: 20
+    catalog_earned: 64.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.5
+    catalog_gap: 50.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 36.8
-    contract_governance: 28.8
-    contract_quality: 26.6
+    access_clarity: 28.9
+    contract_governance: 27.3
+    contract_quality: 26.2
     developer_ergonomics: 27.4
-    discoverability: 64.8
+    discoverability: 61.7
     operational_transparency: 50.0
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 41.6
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     contracts:
@@ -586,8 +607,14 @@ score:
       derived: 7
       marker_coverage: 100.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

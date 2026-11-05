@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 60
   human_in_the_loop: 0
@@ -242,6 +242,11 @@ collections:
   name: 3D Secure 3DS Authentication Transactions API
   slug: open-verifone-transactions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/verifone/refs/heads/main/capabilities/verifone-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/verifone-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -467,9 +472,13 @@ examples:
   name: Reporting Api Get_The_List_Of_All_Reports_Get
   slug: reporting-api-get_the_list_of_all_reports_get
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/verifone.png
 json_schemas:
 - name: AuthenticationResult
@@ -1841,13 +1850,13 @@ modified: '2026-09-16'
 name: Verifone
 nav: Providers
 network: true
-overview: 'Verifone publishes 22 APIs on the [APIs.io](https://apis.io/) network, including 3DS Authentication API, Batch API, Billing Agreement API, and 19 more. Tagged areas include Payments, Point-of-Sale, Terminal Management, E-Commerce, and Fintech.
+overview: 'Verifone publishes 27 API contracts indexed on the [APIs.io](https://apis.io/) network, including 3DS Authentication API, Batch API, Billing Agreement API, and 24 more. Tagged areas include Payments, Point-of-Sale, Terminal Management, E-Commerce, and Fintech.
 
 
   The Verifone catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Verifone''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, sandbox, engineering blog, and 7 more developer resources.'
+  Verifone''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, sandbox, engineering blog, and 8 more developer resources.'
 plans:
 - name: Plans
   plan_count: 4
@@ -1858,9 +1867,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Verifone API Rules
+  name: Verifone — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1869,28 +1879,28 @@ rules:
     warn: 4
   slug: verifone-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 43.0
+  band: thin
+  composite: 35.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 69.3
+    artifact_dirs: 18
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.8
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.7
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 59.7
+    contract_quality: 53.6
     developer_ergonomics: 50.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 15.8
-  previous_composite: 43.0
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 72.7
       derived: 0
       marker_coverage: 0.0
       total: 22
@@ -1899,10 +1909,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 11.1

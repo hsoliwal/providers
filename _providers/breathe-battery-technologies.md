@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: API-delivered battery simulation service for predicting performance and degradation with validated physics-based cell models, and for retrieving and designing battery cell formats. Accessed through th
@@ -130,14 +130,14 @@ modified: '2026-07-18'
 name: Breathe Battery Technologies
 nav: Providers
 network: true
-overview: 'Breathe Battery Technologies publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Battery, Battery Simulation, Electric Vehicles, and Energy Storage.
+overview: 'Breathe Battery Technologies is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Battery, Battery Simulation, Electric Vehicles, and Energy Storage.
 
 
   Breathe Battery Technologies'' developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, support, authentication, and 11 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 18.7
+  composite: 18.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -151,17 +151,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 15.8
-  previous_composite: 18.7
+  previous_composite: 18.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

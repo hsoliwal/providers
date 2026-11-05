@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-09-20'
+  score: 28.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -137,6 +137,19 @@ collections:
   name: Kadence Public Bookable Day Visitor API
   slug: open-kadence-visitor-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://kadence.co/newsroom/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://kadence.co/feed/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kadence/refs/heads/main/capabilities/kadence-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kadence-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/kadence/refs/heads/main/overlays/kadence-public-api-overlay.yaml
   title: ''
@@ -281,14 +294,14 @@ created: '2026-07-17'
 description: Kadence is a workplace management platform for hybrid work, helping organizations coordinate people, spaces, and workplace strategy through desk and room booking, visitor management, space management, and workplace analytics. Its Public API (OpenAPI 3.1, v1.2.0) lets applications read and manage buildings, floors, neighborhoods, spaces, bookings, check-ins and check-outs, users, visits, and visitors. The API is an API Platform (Hydra / JSON-LD) service secured with OAuth 2.0 client-credentials (scope "public"), with production hosts at api.onkadence.co and api.us.onkadence.co. Kadence was surfaced as a Techstars portfolio company and enriched into the API Evangelist network from its public developer surface.
 image: https://kadence.co/wp-content/uploads/2025/05/kadence-social-share-image.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kadence
 nav: Providers
 network: true
-overview: 'Kadence publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Bookable Day API, Bookable Onsite Pass API, Bookable Space API, and 8 more. Tagged areas include Company, Workplace, Hybrid Work, Desk Booking, and Room Booking.
+overview: 'Kadence publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bookable Day API, Bookable Onsite Pass API, Bookable Space API, and 8 more. Tagged areas include Company, Workplace, Hybrid Work, Desk Booking, and Room Booking.
 
 
-  Kadence''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+  Kadence''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 27 more developer resources.'
 random_paper: 11
 scopes:
 - name: Kadence Scopes
@@ -297,23 +310,23 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 39.9
+  composite: 41.8
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 57.5
+    contract_quality: 51.8
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 39.9
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -324,8 +337,20 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

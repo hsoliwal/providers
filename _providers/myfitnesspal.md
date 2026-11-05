@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.myfitnesspal.com/v2
@@ -47,6 +47,10 @@ asyncapis:
   name: MyFitnessPal Subscription Notifications
   slug: myfitnesspal-notifications-asyncapi
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.myfitnesspal.com/feed/
 - group: company
   title: ''
   type: Website
@@ -125,17 +129,17 @@ created: '2026-07-17'
 description: MyFitnessPal is a nutrition and fitness tracking platform built around a food diary, calorie counting, a large branded-food and barcode database, exercise logging, weight and body measurements, and goal setting. Its partner-facing REST API (v2, hosted at api.myfitnesspal.com) lets approved applications read and write a consenting user's diary (food and exercise), body measurements, and profile, and subscribe to webhook notifications when that data changes. Access uses OAuth 2.0 authorization-code grants with the diary, measurements, private-exercises, and subscriptions scopes. The developer program is currently closed to new applicants. This profile was surfaced as a portfolio lead and enriched by the API Evangelist pipeline.
 image: https://www.myfitnesspal.com/favicon.ico
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: MyFitnessPal
 nav: Providers
 network: true
-overview: 'MyFitnessPal publishes 1 API on the [APIs.io](https://apis.io/) network: API v2. Tagged areas include Company, Consumer, Health and Fitness, Nutrition, and Fitness Tracking.
+overview: 'MyFitnessPal is listed with 1 API on the [APIs.io](https://apis.io/) network: API v2. Tagged areas include Company, Consumer, Health and Fitness, Nutrition, and Fitness Tracking.
 
 
   The MyFitnessPal catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  MyFitnessPal''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, and 11 more developer resources.'
+  MyFitnessPal''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, and 12 more developer resources.'
 random_paper: 13
 scopes:
 - name: Myfitnesspal Scopes
@@ -144,9 +148,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 45.5
+  composite: 42.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -156,11 +160,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 45.5
+  previous_composite: 42.3
   provenance:
     conformance: derived
     mcp: derived
@@ -170,9 +174,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

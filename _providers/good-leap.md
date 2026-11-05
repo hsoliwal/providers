@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -320,14 +320,14 @@ modified: '2026-07-19'
 name: Good Leap
 nav: Providers
 network: true
-overview: 'Good Leap publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Authorization & Elevation Management API, Calculate Payments API, Case (loan stipulations) Management API, and 15 more. Tagged areas include Company, Fintech, Financing, Lending, and Solar.
+overview: 'Good Leap is listed with 18 APIs on the [APIs.io](https://apis.io/) network, including Authorization & Elevation Management API, Calculate Payments API, Case (loan stipulations) Management API, and 15 more. Tagged areas include Company, Fintech, Financing, Lending, and Solar.
 
 
   Good Leap''s developer surface includes documentation, API reference, engineering blog, support, authentication, sandbox, and 18 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 30.5
+  composite: 29.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -341,9 +341,9 @@ score:
     contract_governance: 4.5
     contract_quality: 12.9
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 30.5
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -359,9 +359,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

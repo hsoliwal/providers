@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 65.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 63
+- acting_count: 62
   human_in_the_loop: 1
   name: Meow Agentic Access
   operation_count: 119
   slug: meow-agentic-access
-  summary_line: 119 operations · 63 acting · 1 human-in-the-loop
+  summary_line: 119 operations · 62 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.meow.com/v1
@@ -264,6 +264,10 @@ collections:
   name: Meow Accounts Webhooks API
   slug: open-meow-webhooks-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.meow.com/blog
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/capabilities/meow-capability-edges.yml
   title: ''
@@ -297,17 +301,20 @@ created: '2026-07-17'
 description: 'Meow is a company surfaced as a portfolio company of qed-investors and added to the API Evangelist network as a stub for enrichment. Sector: banking. This profile is a lead awaiting the enrichment pipeline.'
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.meow.com over HTTP; 47 tools listed.
   name: Meow MCP Server
-  slug: meow-mcp-server
-modified: '2026-07-17'
+  slug: meow
+modified: '2026-10-06'
 name: Meow
 nav: Providers
 network: true
-overview: 'Meow publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, API Keys API, Approvals API, and 23 more. Tagged areas include Company and Banking.
+overview: 'Meow publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, API Keys API, Approvals API, and 23 more. Tagged areas include Company, Banking, and A2A.
 
 
-  The Meow catalog on APIs.io includes 1 event-driven AsyncAPI specification.'
+  The Meow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+
+
+  Meow''s developer surface includes engineering blog and 6 more developer resources.'
 random_paper: 0
 scopes:
 - name: Meow Scopes
@@ -316,23 +323,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 25.8
+  composite: 24.4
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 20.0
     catalog_earned_first_party: 0.0
     catalog_gap: 95.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 68.7
-    developer_ergonomics: 1.8
-    discoverability: 44.4
+    contract_quality: 62.9
+    developer_ergonomics: 4.2
+    discoverability: 46.7
     operational_transparency: 0.0
-  previous_composite: 25.8
+  previous_composite: 23.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,9 +355,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -369,5 +376,6 @@ slug: meow
 tags:
 - Company
 - Banking
+- A2A
 website: http://www.meow.com
 ---

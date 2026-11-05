@@ -24,7 +24,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -33,9 +33,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 22.9
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.openstock.sh
   baseurl_source: declared
@@ -189,21 +189,21 @@ layout: provider
 mcp_servers:
 - description: OpenStock by Checkmate — "the world's largest MCP for ecommerce." A single Model Context Protocol server that exposes catalogues, offers, and merchant-backed discount-code generation across the entire
   name: Checkmate MCP Server
-  slug: checkmate-mcp-server
+  slug: openstock
 modified: '2026-07-18'
 name: Checkmate
 nav: Providers
 network: true
-overview: 'Checkmate publishes 3 APIs on the [APIs.io](https://apis.io/) network: Health API, Merchants API, and Shoppers API. Tagged areas include Company, Consumer, Commerce, E-Commerce, and Shopping.
+overview: 'Checkmate publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Health API, Merchants API, and Shoppers API. Tagged areas include Company, Consumer, Commerce, E-Commerce, and Shopping.
 
 
   Checkmate''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 19 more developer resources.'
 random_paper: 9
 score:
   band: developing
-  composite: 43.1
+  composite: 40.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -213,11 +213,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 51.5
+    contract_quality: 46.3
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 43.1
+  previous_composite: 40.3
   provenance:
     conformance: derived
     contracts:
@@ -232,9 +232,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

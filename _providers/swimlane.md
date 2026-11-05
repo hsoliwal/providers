@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -205,9 +205,13 @@ examples:
   name: Swimlane Search Records Example
   slug: swimlane-search-records-example
 finops:
-- name: Swimlane Finops
+- has_sources: false
+  method: generated
+  name: Swimlane Finops
+  primary_unit: ''
   service_category: ''
   slug: swimlane-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/swimlane.png
 json_schemas:
 - name: Swimlane Application
@@ -229,7 +233,7 @@ modified: '2026-06-13'
 name: Swimlane
 nav: Providers
 network: true
-overview: 'Swimlane publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Authentication API, Groups API, and 6 more. Tagged areas include SOAR, Security Orchestration, Automation, Incident Response, and Playbooks.
+overview: 'Swimlane publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Authentication API, Groups API, and 8 more. Tagged areas include SOAR, Security Orchestration, Automation, Incident Response, and Playbooks.
 
 
   The Swimlane catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -246,9 +250,10 @@ rate_limits:
   name: Swimlane Rate Limits
   slug: swimlane-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Swimlane API Rules
+  name: Swimlane — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -258,23 +263,23 @@ rules:
   slug: swimlane-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 38.9
+  composite: 31.7
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 70.3
+    artifact_dirs: 17
+    catalog_earned: 55.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.8
+    catalog_gap: 59.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 62.1
+    contract_quality: 56.7
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 26.3
-  previous_composite: 38.9
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -282,9 +287,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -311,6 +322,6 @@ tags:
 - Playbooks
 - Case Management
 - Security Operations
-- Agentic AI
+- AI Agents
 website: https://swimlane.com
 ---

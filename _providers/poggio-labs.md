@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 2
@@ -79,8 +79,13 @@ apis:
   description: Service status endpoints.
   name: Poggio Labs System API
   slug: poggio-labs-system-api
-artifact_total: 17
+artifact_total: 16
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/poggio-labs/refs/heads/main/capabilities/poggio-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/poggio-labs-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -264,20 +269,17 @@ description: Poggio (Poggio Labs) is an AI revenue intelligence platform for ent
 image: https://poggio.io/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.poggio.io over HTTP requiring OAuth; 5 tools listed.
   name: Poggio Labs MCP Server
-  slug: poggio-labs-mcp-server
-- description: ''
-  name: Poggio Labs MCP Server
-  slug: poggio-labs-mcp-server-2
+  slug: poggio
 modified: '2026-09-16'
 name: Poggio Labs
 nav: Providers
 network: true
-overview: 'Poggio Labs publishes 5 APIs on the [APIs.io](https://apis.io/) network, including API Tokens API, Authentication API, Goals API, and 2 more. Tagged areas include Company, Artificial Intelligence, Revenue Intelligence, Sales, and Account Intelligence.
+overview: 'Poggio Labs publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Tokens API, Authentication API, Goals API, and 5 more. Tagged areas include Company, Artificial Intelligence, Revenue Intelligence, Sales, and Account Intelligence.
 
 
-  Poggio Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 32 more developer resources.'
+  Poggio Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 33 more developer resources.'
 plans:
 - name: Poggio Labs Plans Pricing
   plan_count: 3
@@ -294,23 +296,23 @@ scopes:
   summary_line: 6 scopes
 score:
   band: strong
-  composite: 54.3
+  composite: 55.6
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 48.8
+    contract_quality: 44.1
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 54.3
+  previous_composite: 55.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -321,8 +323,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -353,7 +361,7 @@ tags:
 - MCP
 - AI Agents
 - Enterprise
-- Open-Source
+- Open Source
 - Goals
 - Gong
 - Slack

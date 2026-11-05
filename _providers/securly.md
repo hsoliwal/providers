@@ -34,17 +34,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Credential-gated MDM API that lets an approved third-party asset or device-management system pull an inventory list of devices (iPads, Macs, Apple TVs) managed in Securly MDM. Access is provisioned pe
   name: Securly MDM Device Inventory API
+  provenance: modeled
   slug: securly-mdm-device-inventory-api
 - description: Credential-gated MDM API that lets an approved third-party system assign or unassign students to and from devices managed in Securly MDM. Uses the same per-tenant API connection credentials (Client ID
   name: Securly MDM Student Assignment API
+  provenance: modeled
   slug: securly-mdm-student-assignment-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.securly.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/securly/refs/heads/main/security/securly-vulnerability-disclosure.yml
   title: ''
@@ -80,14 +86,14 @@ created: '2026-07-04'
 description: Securly is a K-12 student safety company whose platform spans web filtering, device management (MDM), classroom management, and student wellness/self-harm and threat monitoring across the web, email, and cloud drives. Securly is deployed by school districts and integrates with the school technology stack - Google Workspace, Microsoft 365/Entra, Apple School Manager, and Student Information Systems via the OneRoster and rostering standards. Securly's public developer surface is limited and access-gated - it primarily CONSUMES rostering and identity APIs from external systems rather than exposing a documented public developer API. The one provider-exposed API is a credential-gated Securly MDM API used by third-party device/asset systems to pull device inventory and assign or unassign students to devices; its endpoints and base URL are provisioned per tenant and are not publicly documented as a reference.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/securly.png
 layout: provider
-modified: '2026-07-04'
+modified: '2026-10-06'
 name: Securly
 nav: Providers
 network: true
-overview: 'Securly publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include K-12, Education, EdTech, Student Safety, and Web Filtering.
+overview: 'Securly is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include K-12, Education, EdTech, Student Safety, and Web Filtering.
 
 
-  Securly''s developer surface includes documentation, support, and 5 more developer resources.'
+  Securly''s developer surface includes documentation, support, and 6 more developer resources.'
 plans:
 - name: Securly Plans Pricing
   plan_count: 0
@@ -95,9 +101,9 @@ plans:
 random_paper: 5
 score:
   band: minimal
-  composite: 8.0
+  composite: 7.6
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -109,17 +115,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 8.0
+  previous_composite: 7.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

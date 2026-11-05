@@ -27,17 +27,22 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 14.7
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ux-magic-ai/refs/heads/main/plans/ux-magic-ai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ux-magic-ai-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -121,9 +126,9 @@ description: UXMagic (UX Magic AI) is an AI UI/UX design platform that turns tex
 image: https://uxmagic.ai/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.uxmagic.ai over HTTP; 19 tools listed.
   name: UX Magic AI MCP Server
-  slug: ux-magic-ai-mcp-server
+  slug: uxmagic
 modified: '2026-07-21'
 name: UX Magic AI
 nav: Providers
@@ -131,32 +136,42 @@ network: true
 overview: 'UX Magic AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Design, Artificial Intelligence, UI Design, and UX Design.
 
 
-  UX Magic AI''s developer surface includes documentation, getting-started guide, API reference, support, engineering blog, pricing, authentication, and 11 more developer resources.'
+  UX Magic AI''s developer surface includes documentation, getting-started guide, API reference, support, engineering blog, pricing, authentication, and 12 more developer resources.'
+plans:
+- name: Ux Magic Ai Plans Pricing
+  plan_count: 4
+  slug: ux-magic-ai-plans-pricing
 random_paper: 8
 score:
-  band: emerging
-  composite: 23.2
+  band: thin
+  composite: 30.1
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 11
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 38.2
+    access_clarity: 69.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 23.2
+  previous_composite: 23.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

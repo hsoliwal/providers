@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.synaptics.com/blog/feed
 - group: company
   title: ''
   type: Website
@@ -61,36 +65,42 @@ created: '2026-07-17'
 description: DisplayLink, a brand of Synaptics Incorporated, develops USB-based virtual graphics technology that pairs host driver software with a device-side decoder SoC to act as a virtual graphics card. Its adaptive-compression technology powers universal docking stations, USB monitors, adapters, and multi-display setups over USB-C, USB, and Ethernet, spanning products from the entry-level DL-3000/4000 series to the quad-display DL-7000 professional series. DisplayLink is a hardware/semiconductor and driver-software product line rather than a public web-API provider; its developer surface consists of chip SDKs, firmware tooling, and host driver software.
 image: https://cdn.bfldr.com/ZU41R0OK/at/3959gc83qpgpbssgschqg8s/3D-DisplayLink-8-Devices-v2-Shadows-FGX.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: DisplayLink
 nav: Providers
 network: true
 overview: 'DisplayLink is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Semiconductors, USB Graphics, Docking Stations, and Displays.
 
 
-  DisplayLink''s developer surface includes support and 4 more developer resources.'
+  DisplayLink''s developer surface includes support and 5 more developer resources.'
 random_paper: 0
 score:
   band: minimal
-  composite: 8.9
+  composite: 6.5
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 8.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

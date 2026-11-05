@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 2
-  human_in_the_loop: 2
+- acting_count: 1
+  human_in_the_loop: 1
   name: Brainbase Agentic Access
   operation_count: 4
   slug: brainbase-agentic-access
-  summary_line: 4 operations · 2 acting · 2 human-in-the-loop
+  summary_line: 4 operations · 1 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.brainbase.com
@@ -133,14 +133,14 @@ modified: '2026-07-18'
 name: Brainbase
 nav: Providers
 network: true
-overview: 'Brainbase publishes 2 APIs on the [APIs.io](https://apis.io/) network: ApiContract API and General API. Tagged areas include Company, Cloud, Intellectual Property, Brand Licensing, and Licensing Management.
+overview: 'Brainbase publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: ApiContract API and General API. Tagged areas include Company, Cloud, Intellectual Property, Brand Licensing, and Licensing Management.
 
 
   Brainbase''s developer surface includes authentication and 11 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 22.3
+  composite: 20.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -152,11 +152,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 0.0
-    contract_quality: 39.8
+    contract_quality: 35.8
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 22.3
+  previous_composite: 20.5
   provenance:
     agentic_access: derived
     contracts:
@@ -166,8 +166,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

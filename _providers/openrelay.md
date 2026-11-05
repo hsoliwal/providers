@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'OpenAI-compatible chat completions API (POST /v1/chat/completions) and, for supporting models, an Anthropic-compatible Messages API (POST /v1/messages). Drop-in: point the official OpenAI SDKs at the '
@@ -194,6 +194,10 @@ collections:
   name: OpenRelay Account Webhooks API
   slug: open-openrelay-webhooks-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://openrelay.inc/blog/feed.xml
 - group: commercial
   href: https://raw.githubusercontent.com/api-evangelist/openrelay/refs/heads/main/plans/openrelay-plans-pricing.yml
   title: ''
@@ -359,41 +363,41 @@ mcp_servers:
 - description: 'Official Model Context Protocol server shipped inside the OpenRelay CLI (orl). It exposes the entire OpenRelay control-plane REST API to Claude and other MCP clients as tools, executing "as you" with '
   name: OpenRelay MCP Server
   slug: openrelay-mcp-server
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: OpenRelay
 nav: Providers
 network: true
-overview: 'OpenRelay publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Account API, API Keys API, Batches API, and 15 more. Tagged areas include Company, GPU, Inference, Artificial Intelligence, and Machine-Learning.
+overview: 'OpenRelay publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, API Keys API, Batches API, and 16 more. Tagged areas include Company, GPU, Inference, Artificial Intelligence, and Machine Learning.
 
 
   The OpenRelay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  OpenRelay''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 27 more developer resources.'
+  OpenRelay''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 28 more developer resources.'
 plans:
 - name: Openrelay Plans Pricing
   plan_count: 4
   slug: openrelay-plans-pricing
 random_paper: 7
 score:
-  band: developing
-  composite: 54.2
+  band: strong
+  composite: 55.2
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.1
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 57.8
+    contract_quality: 52.8
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 52.6
-  previous_composite: 47.9
+  previous_composite: 55.1
   provenance:
     conformance: derived
     contracts:
@@ -403,9 +407,21 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -429,7 +445,7 @@ tags:
 - GPU
 - Inference
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Cloud Compute
 - Infrastructure
 - OpenAI-Compatible

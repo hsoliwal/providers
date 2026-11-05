@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://coteach.ai/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/coteach/refs/heads/main/security/coteach-domain-security.yml
   title: ''
@@ -109,17 +113,17 @@ description: CoTeach is an AI-powered curriculum co-planning assistant for K-12 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coteach.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.coteach.ai over HTTP.
   name: Coteach Claude connector
   slug: coteach-claude-connector
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: CoTeach
 nav: Providers
 network: true
 overview: 'CoTeach is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Mathematics, and K-12.
 
 
-  CoTeach''s developer surface includes pricing, engineering blog, support, authentication, and 11 more developer resources.'
+  CoTeach''s developer surface includes pricing, engineering blog, support, authentication, and 12 more developer resources.'
 random_paper: 1
 scopes:
 - name: Coteach Scopes
@@ -128,7 +132,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.6
+  composite: 22.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -142,9 +146,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 5.3
-  previous_composite: 25.6
+  previous_composite: 22.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -153,9 +157,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

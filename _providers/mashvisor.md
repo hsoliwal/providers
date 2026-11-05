@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -91,6 +91,10 @@ collections:
   name: Mashvisor Data Investment Analysis Trends API
   slug: open-mashvisor-trends-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.mashvisor.com/blog/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/mashvisor/refs/heads/main/overlays/mashvisor-overlay.yaml
   title: ''
@@ -200,18 +204,18 @@ created: '2026-07-17'
 description: Mashvisor is a real estate investment analytics platform for the US housing market. Its Data API gives investors, agents, property managers, and developers programmatic access to short-term (Airbnb) and long-term (traditional) rental performance, MLS listings and property records, neighborhood and city analytics, rental-rate estimates, investment ROI and cash-flow breakdowns, predictive scores, and market trends. All API operations are read-only GET requests authenticated with an x-api-key header and scoped by US state; responses are JSON. Plans range from a free developer trial to Enterprise. Mashvisor was surfaced as a 500 Global portfolio company and enriched by the API Evangelist pipeline from its public developer documentation.
 image: https://www.mashvisor.com/favicon-32x32.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Mashvisor
 nav: Providers
 network: true
-overview: 'Mashvisor publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Investment Analysis API, Property Info API, Rental Rates API, and 2 more. Tagged areas include Company, Real-Estate, Property Data, Analytics, and Rentals.
+overview: 'Mashvisor publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Investment Analysis API, Property Info API, Rental Rates API, and 2 more. Tagged areas include Company, Real Estate, Property Data, Analytics, and Rentals.
 
 
-  Mashvisor''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, support, and 16 more developer resources.'
+  Mashvisor''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, support, and 17 more developer resources.'
 random_paper: 20
 score:
   band: thin
-  composite: 34.3
+  composite: 33.5
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -219,15 +223,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 34.3
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -238,8 +242,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -258,7 +268,7 @@ security:
 slug: mashvisor
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Property Data
 - Analytics
 - Rentals

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-09-20'
+  score: 31.5
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 38
+- acting_count: 37
   human_in_the_loop: 1
   name: Ki Insurance Agentic Access
   operation_count: 109
   slug: ki-insurance-agentic-access
-  summary_line: 109 operations · 38 acting · 1 human-in-the-loop
+  summary_line: 109 operations · 37 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://app.ki-insurance.com
@@ -290,7 +290,7 @@ modified: '2026-07-25'
 name: Ki Insurance
 nav: Providers
 network: true
-overview: 'Ki Insurance publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Administration API, Broking Houses API, Classes of Business API, and 15 more. Tagged areas include Insurance, United Kingdom, Lloyd''s of London, Specialty Insurance, and Property and Casualty.
+overview: 'Ki Insurance publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Administration API, Broking Houses API, Classes of Business API, and 15 more. Tagged areas include Insurance, United Kingdom, Lloyd''s of London, Specialty Insurance, and Property and Casualty.
 
 
   Ki Insurance''s developer surface includes engineering blog, signup flow, authentication, and 26 more developer resources.'
@@ -302,7 +302,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode
 score:
   band: emerging
-  composite: 24.2
+  composite: 21.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -316,7 +316,7 @@ score:
     contract_governance: 4.5
     contract_quality: 14.3
     developer_ergonomics: 16.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -326,7 +326,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 24.2
+  previous_composite: 21.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -342,9 +342,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -368,7 +368,7 @@ tags:
 - Property and Casualty
 - Underwriting
 - Insurtech
-- Brokers
+- Brokerage
 - Algorithmic Underwriting
 - Reinsurance
 website: https://ki-insurance.com/

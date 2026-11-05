@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.wenspiredata.com/press
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.wenspiredata.com/press/rss.xml
 - group: company
   title: ''
   type: Website
@@ -70,18 +78,18 @@ created: '2026-07-17'
 description: Wenspiredata is an enterprise cybersecurity vendor delivering all-in-one, zero-trust Privileged Remote Access Management (RPAM) for high-risk access. Its platform secures and governs remote privileged access for IT, OT, and third-party vendors, including air-gapped and industrial (OT) environments, and pairs with OsecT for OT-native intrusion detection and continuous visibility. Wenspiredata also offers security assessment services (external attack surface and internal vulnerability assessments) and helps organizations across manufacturing, telecom, finance, and healthcare meet regulatory compliance requirements. It was surfaced as a Techstars portfolio company and added to the API Evangelist network as a lead for enrichment; the company markets a demo-led enterprise product and does not publish a public developer API.
 image: https://asm.so/logo4.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Wenspiredata
 nav: Providers
 network: true
 overview: 'Wenspiredata is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Zero Trust, Privileged Access Management, and Remote Access.
 
 
-  Wenspiredata''s developer surface includes engineering blog, support, and 5 more developer resources.'
+  Wenspiredata''s developer surface includes engineering blog, support, and 7 more developer resources.'
 random_paper: 14
 score:
   band: emerging
-  composite: 11.7
+  composite: 11.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -95,11 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

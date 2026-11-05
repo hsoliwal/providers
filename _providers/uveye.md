@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 7
+- acting_count: 4
   human_in_the_loop: 0
   name: Uveye Agentic Access
   operation_count: 8
   slug: uveye-agentic-access
-  summary_line: 8 operations · 7 acting
+  summary_line: 8 operations · 4 acting
 api_count: 1
 apis:
 - baseURL: https://api.uveye.dev/v1
@@ -264,7 +264,7 @@ modified: '2026-08-02'
 name: UVeye
 nav: Providers
 network: true
-overview: 'UVeye publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Appraisal API, Inspections API, Media API, and 2 more. Tagged areas include Automotive, Vehicle Inspection, Artificial Intelligence, Computer-Vision, and Dealership.
+overview: 'UVeye publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Appraisal API, Inspections API, Media API, and 2 more. Tagged areas include Automotive, Vehicle Inspection, Artificial Intelligence, Computer Vision, and Dealership.
 
 
   The UVeye catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -278,7 +278,7 @@ rate_limits:
   slug: uveye-rate-limits
 score:
   band: strong
-  composite: 56.2
+  composite: 57.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -286,20 +286,22 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 66.8
+    contract_quality: 61.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 68.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 56.2
+  previous_composite: 57.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -310,8 +312,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -339,7 +347,7 @@ tags:
 - Automotive
 - Vehicle Inspection
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Dealership
 - Fleet Management
 - Auctions and Remarketing

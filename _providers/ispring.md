@@ -24,126 +24,126 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-09-20'
+  score: 30.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 90
+- acting_count: 81
   human_in_the_loop: 3
   name: Ispring Agentic Access
-  operation_count: 141
+  operation_count: 142
   slug: ispring-agentic-access
-  summary_line: 141 operations · 90 acting · 3 human-in-the-loop
-api_count: 1
+  summary_line: 142 operations · 81 acting · 3 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Assignment operations
-  name: iSpring Learn assignments API
+  name: iSpring Learn Assignments API
   slug: ispring-assignments-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Certificate operations
-  name: iSpring Learn certificate API
+  name: iSpring Learn Certificate API
   slug: ispring-certificate-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Content operations
-  name: iSpring Learn content API
+  name: iSpring Learn Content API
   slug: ispring-content-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Department operations
-  name: iSpring Learn department API
+  name: iSpring Learn Department API
   slug: ispring-department-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The departments API from iSpring Learn — 1 operation(s) for departments.
-  name: iSpring Learn departments API
+  name: iSpring Learn Departments API
   slug: ispring-departments-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Enrollment operations
-  name: iSpring Learn enrollment API
+  name: iSpring Learn Enrollment API
   slug: ispring-enrollment-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Gamification operations
-  name: iSpring Learn gamification API
+  name: iSpring Learn Gamification API
   slug: ispring-gamification-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Group operations
-  name: iSpring Learn group API
+  name: iSpring Learn Group API
   slug: ispring-group-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The jobtraining API from iSpring Learn — 4 operation(s) for jobtraining.
-  name: iSpring Learn jobtraining API
+  name: iSpring Learn Jobtraining API
   slug: ispring-jobtraining-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Learning track operations
-  name: iSpring Learn learning_track API
+  name: iSpring Learn Learning Track API
   slug: ispring-learning-track-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The performance-management API from iSpring Learn — 37 operation(s) for performance-management.
-  name: iSpring Learn performance-management API
+  name: iSpring Learn Performance Management API
   slug: ispring-performance-management-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The quizzes API from iSpring Learn — 2 operation(s) for quizzes.
-  name: iSpring Learn quizzes API
+  name: iSpring Learn Quizzes API
   slug: ispring-quizzes-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The report API from iSpring Learn — 2 operation(s) for report.
-  name: iSpring Learn report API
+  name: iSpring Learn Report API
   slug: ispring-report-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: User result data operations
-  name: iSpring Learn results API
+  name: iSpring Learn Results API
   slug: ispring-results-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The statistics API from iSpring Learn — 2 operation(s) for statistics.
-  name: iSpring Learn statistics API
+  name: iSpring Learn Statistics API
   slug: ispring-statistics-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Async method operations
-  name: iSpring Learn task API
+  name: iSpring Learn Task API
   slug: ispring-task-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Retrieve access tokens
-  name: iSpring Learn token API
+  name: iSpring Learn Token API
   slug: ispring-token-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: Training operations
-  name: iSpring Learn training API
+  name: iSpring Learn Training API
   slug: ispring-training-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: User operations
-  name: iSpring Learn user API
+  name: iSpring Learn User API
   slug: ispring-user-api
 - baseURL: https://api-learn.ispringlearn.com
   baseurl_source: declared
   description: The webhook API from iSpring Learn — 11 operation(s) for webhook.
-  name: iSpring Learn webhook API
+  name: iSpring Learn Webhook API
   slug: ispring-webhook-api
 artifact_total: 242
 collections:
@@ -297,9 +297,13 @@ common:
 created: '2026-06-13'
 description: iSpring Learn is an eLearning platform and LMS that provides a REST API for managing courses, users, groups, departments, enrollments, learning paths, and accessing detailed learner progress reports. The API supports content management, assignment grading, 360-degree performance reviews, on-the-job training, and event-driven webhooks. API access requires a Business subscription.
 finops:
-- name: Ispring Finops
+- has_sources: false
+  method: generated
+  name: Ispring Finops
+  primary_unit: ''
   service_category: ''
   slug: ispring-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ispring.png
 json_schemas:
 - name: ActiveUsersByPeriod
@@ -889,7 +893,7 @@ modified: '2026-09-16'
 name: iSpring Learn
 nav: Providers
 network: true
-overview: 'iSpring Learn publishes 20 APIs on the [APIs.io](https://apis.io/) network, including assignments API, certificate API, content API, and 17 more. Tagged areas include E-Learning, LMS, Learning Management System, Training, and Courses.
+overview: 'iSpring Learn publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assignments API, Certificate API, Content API, and 17 more. Tagged areas include E-Learning, LMS, Training, Courses, and Enrollment.
 
 
   The iSpring Learn catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -906,9 +910,10 @@ rate_limits:
   name: Ispring Rate Limits
   slug: ispring-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: iSpring Learn API Rules
+  name: iSpring Learn — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -917,24 +922,24 @@ rules:
     warn: 3
   slug: ispring-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 50.2
+  band: thin
+  composite: 38.1
   coverage:
     artifact_dirs: 17
-    catalog_earned: 67.3
+    catalog_earned: 46.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.8
+    catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 60.5
+    access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 50.6
+    contract_quality: 45.6
     developer_ergonomics: 47.6
-    discoverability: 68.5
-    operational_transparency: 55.3
-  previous_composite: 50.2
+    discoverability: 66.1
+    operational_transparency: 31.6
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     contracts:
@@ -944,13 +949,13 @@ score:
       total: 20
   regulatory:
     applies: true
-    matched_via: tags
+    matched_via: weak_tags
     regime: Education & Research
     regime_id: education
-    score: 37.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -968,7 +973,6 @@ slug: ispring
 tags:
 - E-Learning
 - LMS
-- Learning Management System
 - Training
 - Courses
 - Enrollment

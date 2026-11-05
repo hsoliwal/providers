@@ -23,10 +23,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://abre.com/resources/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://abre.com/resources/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/abre/refs/heads/main/security/abre-domain-security.yml
   title: ''
@@ -145,14 +153,14 @@ description: 'Abre is a K-12 education data platform, founded in 2017 in Cincinn
   OneRoster 1.1 REST API sync authenticated with OAuth 2.0 — and sign in through OAuth 2.0 SSO with Google, Microsoft, Apple, ClassLink, Clever, GG4L or Facebook. As of this profiling pass Abre publishes no developer portal, no API reference, no OpenAPI or other machine-readable contract, no SDKs and no public MCP or agent surface; its public technical surface is a Zendesk help center of integration guides for the APIs it ingests.'
 image: https://abre.com/wp-content/uploads/2021/09/abre_logo_light.svg
 layout: provider
-modified: '2026-09-06'
+modified: '2026-10-06'
 name: Abre
 nav: Providers
 network: true
 overview: 'Abre is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, K-12, EdTech, and Education Data.
 
 
-  Abre''s developer surface includes support, engineering blog, pricing, and 18 more developer resources.'
+  Abre''s developer surface includes engineering blog, support, pricing, and 20 more developer resources.'
 plans:
 - name: Abre Plans Pricing
   plan_count: 0
@@ -164,9 +172,9 @@ rate_limits:
   slug: abre-rate-limits
 score:
   band: emerging
-  composite: 21.4
+  composite: 19.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -178,9 +186,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 21.4
+  previous_composite: 19.5
   provenance:
     conformance: first-party
   regulatory:
@@ -188,14 +196,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 44.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/abre/refs/heads/main/screenshots/abre-2026-10-11T092442.png
 security:
 - kind: domain-security
   name: Abre Domain Security

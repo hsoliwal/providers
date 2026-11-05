@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: platform
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.8
-  scored_at: '2026-09-20'
+  score: 38.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -239,14 +239,14 @@ description: 'Renesas Electronics Corporation (TYO: 6723) is a global semiconduc
 image: https://www.renesas.com/themes/kachow/images/renesas-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.renesas.com over HTTP; 6 tools listed.
   name: Renesas Web Data API docs MCP
   slug: renesas-web-data-api-docs-mcp
 modified: '2026-07-20'
 name: Renesas
 nav: Providers
 network: true
-overview: 'Renesas publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Board & Kit API, Document API, Package API, and 3 more. Tagged areas include Company, Semiconductors, Microcontrollers, Electronics, and Hardware.
+overview: 'Renesas publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Board & Kit API, Document API, Package API, and 3 more. Tagged areas include Company, Semiconductors, Microcontrollers, Electronics, and Hardware.
 
 
   Renesas'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 22 more developer resources.'
@@ -255,21 +255,21 @@ score:
   band: developing
   composite: 43.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.3
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 43.5
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -280,8 +280,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -304,7 +310,6 @@ tags:
 - Electronics
 - Hardware
 - Product Data
-- Developer Portal
 - Automotive
 - Industrial
 - Embedded

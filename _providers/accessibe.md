@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 7
   slug: accessibe-agentic-access
   summary_line: 7 operations · 4 acting
-api_count: 1
+api_count: 2
 apis:
 - description: The accessFlow Model Context Protocol server connects AI clients such as GitHub Copilot and Cursor directly to accessFlow accessibility data. It exposes three tools — getMostUrgentIssues, getIssueReme
   name: accessFlow MCP Server
@@ -52,8 +52,18 @@ apis:
   description: The Accounts API from accessiBe — 5 operation(s) for accounts.
   name: accessiBe Accounts API
   slug: accessibe-accounts-api
-artifact_total: 7
+artifact_total: 8
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/accessibe/refs/heads/main/plans/accessibe-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/accessibe-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/accessibe/refs/heads/main/capabilities/accessibe-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/accessibe-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/accessibe/refs/heads/main/agentic-access/accessibe-agentic-access.yml
   title: ''
@@ -214,37 +224,41 @@ description: accessiBe is a web accessibility technology company whose products 
 image: https://accessibe.com/wp-content/uploads/2026/01/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at flow-mcp.accessibe.com; 3 tools listed.
   name: accessiBe MCP Server
-  slug: accessibe-mcp-server
+  slug: flow-mcp
 modified: '2026-07-31'
 name: accessiBe
 nav: Providers
 network: true
-overview: 'accessiBe publishes 1 API on the [APIs.io](https://apis.io/) network: Accounts API. Tagged areas include Company, Accessibility, Web Accessibility, WCAG, and ADA Compliance.
+overview: 'accessiBe publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, and 1 more. Tagged areas include Company, Accessibility, Web Accessibility, WCAG, and ADA Compliance.
 
 
-  accessiBe''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
+  accessiBe''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
+plans:
+- name: Accessibe Plans Pricing
+  plan_count: 7
+  slug: accessibe-plans-pricing
 random_paper: 6
 score:
   band: developing
-  composite: 45.4
+  composite: 52.1
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 23
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 53.9
+    access_clarity: 85.5
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 45.4
+  previous_composite: 45.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -255,9 +269,15 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

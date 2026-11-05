@@ -28,14 +28,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: documented
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-09-20'
+  score: 37.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 0
@@ -106,7 +106,7 @@ apis:
   description: Users represent the people in your workspace. With these APIs, you can retrieve user profile information.
   name: Felt Users API
   slug: felt-users-api
-artifact_total: 43
+artifact_total: 44
 collections:
 - collection_type: open
   name: API Collection
@@ -234,9 +234,13 @@ examples:
   name: Felt Api Examples
   slug: felt-api-examples
 finops:
-- name: Felt Finops
+- has_sources: false
+  method: generated
+  name: Felt Finops
+  primary_unit: ''
   service_category: ''
   slug: felt-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/felt.png
 json_schemas:
 - name: EmbedToken
@@ -266,11 +270,15 @@ jsonld:
   property_count: 9
   slug: felt-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at felt.com over HTTP.
+  name: Felt MCP Server
+  slug: felt
 modified: '2026-06-12'
 name: Felt
 nav: Providers
 network: true
-overview: 'Felt publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Comments API, Elements API, Embed Tokens API, and 8 more. Tagged areas include Maps, GIS, Geospatial, Collaborative, and Mapping.
+overview: 'Felt publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Comments API, Elements API, Embed Tokens API, and 10 more. Tagged areas include Maps, GIS, Geospatial, Collaborative, and Mapping.
 
 
   The Felt catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -287,9 +295,10 @@ rate_limits:
   name: Felt Rate Limits
   slug: felt-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Felt API Rules
+  name: Felt — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -299,23 +308,23 @@ rules:
   slug: felt-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 52.0
+  composite: 41.5
   coverage:
     artifact_dirs: 17
-    catalog_earned: 90.3
+    catalog_earned: 62.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 24.8
+    catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 72.1
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 65.7
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 36.8
-  previous_composite: 52.0
+    discoverability: 60.0
+    operational_transparency: 13.2
+  previous_composite: 49.8
   provenance:
     agentic_access: derived
     contracts:
@@ -324,9 +333,15 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -343,7 +358,7 @@ security:
 - kind: vulnerability-disclosure
   name: Felt Vulnerability Disclosure
   slug: felt-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Felt Trust Center
   slug: felt-trust-center

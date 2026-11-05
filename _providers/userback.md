@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,14 +27,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 29.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -62,7 +62,7 @@ apis:
   description: Userback projects (workspaces grouping feedback widgets).
   name: Userback Projects API
   slug: userback-projects-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -80,6 +80,11 @@ collections:
   name: Userback REST API
   slug: open-userback
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/userback/refs/heads/main/capabilities/userback-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/userback-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/userback/refs/heads/main/agentic-access/userback-agentic-access.yml
   title: ''
@@ -131,34 +136,38 @@ created: '2026-05-11'
 description: Userback is a customer feedback platform that captures visual feedback, screenshots, screen recordings, and bug reports directly from in-product widgets installed on websites and web applications. The platform offers feedback boards, session replays, and integrations with project management and developer tools to streamline customer-driven product development. Userback's REST API uses Bearer token authentication for managing feedback, projects, users, and account data.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/userback.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.userback.io over HTTP.
+  name: Userback MCP Server
+  slug: userback
 modified: '2026-05-11'
 name: Userback
 nav: Providers
 network: true
-overview: 'Userback publishes 3 APIs on the [APIs.io](https://apis.io/) network: Feedback API, Feedback Comments API, and Projects API. Tagged areas include Customer Feedback, Bug Reporting, Visual Feedback, Session Replay, and Product Management.
+overview: 'Userback publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Feedback API, Feedback Comments API, Projects API, and 1 more. Tagged areas include Customer Feedback, Bug Reporting, Visual Feedback, Session Replay, and Product Management.
 
 
-  Userback''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 6 more developer resources.'
+  Userback''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 7 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 29.7
+  composite: 27.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 60.5
+    contract_quality: 54.8
     developer_ergonomics: 13.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 29.7
+  previous_composite: 27.6
   provenance:
     agentic_access: derived
     contracts:
@@ -167,8 +176,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.4
-  scored_at: '2026-09-20'
+  score: 51.3
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 9
+- acting_count: 7
   human_in_the_loop: 0
   name: Ezoic Agentic Access
   operation_count: 19
   slug: ezoic-agentic-access
-  summary_line: 19 operations · 9 acting
+  summary_line: 19 operations · 7 acting
 api_count: 2
 apis:
 - baseURL: https://api-gateway.ezoic.com/subscriptions/v1
@@ -298,14 +298,14 @@ description: 'Ezoic is a website monetization and audience-growth platform for p
 image: https://www.ezoic.com/wp-content/uploads/2021/03/ezoic-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at analytics-mcp.ezoic.com.
   name: ezoic MCP Server
-  slug: ezoic-mcp-server
+  slug: ezoic-mcp-yml
 modified: '2026-08-13'
 name: ezoic
 nav: Providers
 network: true
-overview: 'ezoic publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Access API, Products API, Purchases API, and 5 more. Tagged areas include Company, Advertising, AdTech, Publisher Monetization, and Analytics.
+overview: 'ezoic publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access API, Products API, Purchases API, and 5 more. Tagged areas include Company, Advertising, AdTech, Publisher Monetization, and Analytics.
 
 
   ezoic''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 35 more developer resources.'
@@ -320,14 +320,14 @@ rate_limits:
   slug: ezoic-rate-limits
 scopes:
 - name: Ezoic Scopes
-  scope_count: 0
+  scope_count: 2
   slug: ezoic-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: developing
-  composite: 50.0
+  composite: 53.1
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -337,11 +337,11 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 18.2
-    contract_quality: 29.3
+    contract_quality: 27.2
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 50.0
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -352,8 +352,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -371,7 +377,7 @@ security:
 - kind: vulnerability-disclosure
   name: Ezoic Vulnerability Disclosure
   slug: ezoic-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: ezoic
 tags:
 - Company

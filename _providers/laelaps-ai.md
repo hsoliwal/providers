@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -67,11 +67,11 @@ common:
   type: LLMsTxt
   url: llms/laelaps-ai-llms.txt
 created: '2026-07-17'
-description: Laelaps AI is a Zurich- and UK-based autonomous security company building what it calls "the brain behind security" — a hardware-agnostic, fail-safe autonomy layer that unifies aerial, ground, and stationary robots together with a site's existing fixed cameras into a single coordinated monitoring force. The platform pairs field foundational models and visual intelligence with multi-agent coordination so that critical infrastructure and commercial and defense sites can be watched continuously, incidents detected and triaged automatically, and robots dispatched to observe and deter without a human operator watching every screen. Founded by Dr. Sophia Belser (CEO), Dr. Maria "Mania" Stamatopoulou (CRO), and Rokas Bendikas (CTO), the company is backed by Speedinvest, Expeditions Fund, Florent Venture Partners, Fund F, ESA BIC Switzerland, and NVIDIA Inception. As of this profile Laelaps AI publishes a three-page corporate website and no public developer surface — no documentation,
-  API reference, SDKs, or machine-readable API artifacts were found.
+description: Laelaps AI builds field intelligence for critical assets. Its system, LEA, combines autonomous embodied agents (AI-powered robots for site perimeter coverage), video monitoring agents that work on existing camera infrastructure, and fixed and mobile sensing systems under a control center layer that fuses their data into actionable intelligence for human operators; the company says one operator can then protect and operate multiple sites 24/7. Target sites include military bases, power grids, data centers, factories and hospitals, and the control layer supports encrypted, air-gapped on-premises hosting. Founded in 2025 by Dr. Sophia Belser (CEO), Dr. Mania Stamatopoulou (CRO) and Rokas Bendikas (CTO), Laelaps AI is based in Switzerland and operates across Europe; its site lists Speedinvest, Expeditions Fund, Florent Venture Partners, Fund F, ESA BIC and NVIDIA Inception as backers. It publishes a corporate website and an llms.txt but no public developer surface - no documentation,
+  API reference, SDKs or machine-readable API artifacts.
 image: https://laelaps.ai/favicon.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Laelaps AI
 nav: Providers
 network: true
@@ -79,7 +79,7 @@ overview: Laelaps AI is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 17
 score:
   band: minimal
-  composite: 10.3
+  composite: 9.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -93,11 +93,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 10.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 9.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -117,7 +128,7 @@ tags:
 - Autonomous Systems
 - Security
 - Surveillance
-- Computer-Vision
+- Computer Vision
 - Defense
 - Physical Security
 website: https://laelaps.ai/

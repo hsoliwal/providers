@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-17'
 api_count: 12
 apis:
 - baseURL: https://a7.deutsche-boerse.com/api/v1
@@ -331,7 +331,7 @@ modified: '2026-07-22'
 name: Deutsche Börse
 nav: Providers
 network: true
-overview: 'Deutsche Börse publishes 12 APIs on the [APIs.io](https://apis.io/) network, including A7 Analytics Platform - Order Book API, A7 Analytics Platform - Market Data API (EOBI), A7 Analytics Platform - CME Market Data API (MDP), and 9 more. Tagged areas include Financial, Market Data, Stocks, Derivatives, and Trading.
+overview: 'Deutsche Börse publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including A7 Analytics Platform - Order Book API, A7 Analytics Platform - Market Data API (EOBI), A7 Analytics Platform - CME Market Data API (MDP), and 10 more. Tagged areas include Finance, Market Data, Stocks, Derivatives, and Trading.
 
 
   The Deutsche Börse catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -341,9 +341,9 @@ overview: 'Deutsche Börse publishes 12 APIs on the [APIs.io](https://apis.io/) 
 random_paper: 20
 score:
   band: developing
-  composite: 52.0
+  composite: 49.4
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -353,17 +353,19 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 61.1
+    contract_quality: 57.0
     developer_ergonomics: 66.1
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 52.0
+  previous_composite: 49.4
   provenance:
     conformance: derived
     contracts:
@@ -378,9 +380,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -401,7 +403,7 @@ security:
   summary_line: security.txt · contact published
 slug: deutsche-boerse
 tags:
-- Financial
+- Finance
 - Market Data
 - Stocks
 - Derivatives

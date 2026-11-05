@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 58.3
-  scored_at: '2026-09-20'
+  score: 56.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -59,6 +59,10 @@ collections:
   name: Sitefire Book-a-Demo Book Demo API
   slug: open-sitefire-book-demo-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://sitefire.ai/feed.xml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/sitefire/refs/heads/main/agentic-access/sitefire-agentic-access.yml
   title: ''
@@ -202,17 +206,17 @@ description: Sitefire is a Generative Engine Optimization (GEO) platform — the
 image: https://sitefire.ai/og-default.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.sitefire.ai over HTTP requiring OAuth; 10 tools listed.
   name: Sitefire MCP (Spark)
-  slug: sitefire-mcp-spark
-modified: '2026-08-13'
+  slug: sitefire
+modified: '2026-10-06'
 name: Sitefire
 nav: Providers
 network: true
-overview: 'Sitefire publishes 1 API on the [APIs.io](https://apis.io/) network: Book Demo API. Tagged areas include Company, Generative Engine Optimization, AI Visibility, Marketing, and SEO.
+overview: 'Sitefire publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Book Demo API. Tagged areas include Company, Generative Engine Optimization, AI Visibility, Marketing, and SEO.
 
 
-  Sitefire''s developer surface includes changelog, documentation, quickstart, engineering blog, pricing, signup flow, support, and 23 more developer resources.'
+  Sitefire''s developer surface includes changelog, documentation, quickstart, engineering blog, pricing, signup flow, support, and 24 more developer resources.'
 plans:
 - name: Sitefire Plans Pricing
   plan_count: 3
@@ -229,7 +233,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 51.7
+  composite: 53.5
   coverage:
     artifact_dirs: 23
     catalog_earned: 61.0
@@ -241,11 +245,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 51.7
+  previous_composite: 53.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -256,8 +260,14 @@ score:
       total: 1
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

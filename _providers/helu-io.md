@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.helu.io/press
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/helu-io/refs/heads/main/security/helu-io-domain-security.yml
   title: ''
@@ -65,36 +69,42 @@ created: '2026-07-17'
 description: helu.io is a financial management, controlling, and reporting platform for startups and small-to-medium businesses. It connects directly to DATEV accounting data (via a certified DATEVconnect interface) to produce automated, real-time financial reports, customizable dashboards and KPIs, budget vs. actuals comparisons, multi-entity consolidation, and planning, so finance teams can analyze, plan, and collaborate without manual spreadsheet work. The company is a portfolio company of Speedinvest and hosts data on German servers in compliance with DSGVO/GDPR. helu.io is a SaaS product; it does not currently publish a public developer API, developer portal, SDKs, or OpenAPI — its integrations are product-level (DATEV, plus data upload from HubSpot, Salesforce, Google Sheets, Excel, and Personio).
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/helu-io.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Helu Io
 nav: Providers
 network: true
-overview: 'Helu Io is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial, Controlling, Reporting, and Analytics.
+overview: 'Helu Io is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Finance, Controlling, Reporting, and Analytics.
 
 
-  Helu Io''s developer surface includes pricing, support, and 4 more developer resources.'
+  Helu Io''s developer surface includes engineering blog, pricing, support, and 4 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 12.3
+  composite: 12.4
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 12.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -109,7 +119,7 @@ security:
 slug: helu-io
 tags:
 - Company
-- Financial
+- Finance
 - Controlling
 - Reporting
 - Analytics
@@ -117,6 +127,6 @@ tags:
 - DATEV
 - Fintech
 - Business Intelligence
-- SME
+- Small Business
 website: https://helu.io
 ---

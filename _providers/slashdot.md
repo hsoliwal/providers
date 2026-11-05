@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,6 +78,21 @@ collections:
   name: Slashdot RSS/Atom Feeds Apple Science API
   slug: open-slashdot-science-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/plans/slashdot-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/slashdot-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/rate-limits/slashdot-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/slashdot-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/finops/slashdot-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/slashdot-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/agentic-access/slashdot-agentic-access.yml
   title: ''
@@ -170,9 +185,13 @@ examples:
   name: Slashdot Rss Feed Example
   slug: slashdot-rss-feed-example
 finops:
-- name: Slashdot Finops
+- has_sources: false
+  method: generated
+  name: Slashdot Finops
+  primary_unit: ''
   service_category: API
   slug: slashdot-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/slashdot.png
 jsonld:
 - class_count: 0
@@ -184,13 +203,13 @@ modified: '2026-05-19'
 name: Slashdot
 nav: Providers
 network: true
-overview: 'Slashdot publishes 1 API on the [APIs.io](https://apis.io/) network: Feeds API. Tagged areas include Media, Open-Source, Technology News, and RSS.
+overview: 'Slashdot publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Feeds API. Tagged areas include Media, Open Source, Technology News, and RSS.
 
 
   The Slashdot catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Slashdot''s developer surface includes FAQ and 19 more developer resources.'
+  Slashdot''s developer surface includes FAQ and 22 more developer resources.'
 plans:
 - name: Slashdot Plans Pricing
   plan_count: 3
@@ -201,7 +220,8 @@ rate_limits:
   name: Slashdot Rate Limits
   slug: slashdot-rate-limits
 rules:
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
   name: Slashdot API Rules
@@ -213,24 +233,24 @@ rules:
     warn: 4
   slug: slashdot-rules
 score:
-  band: thin
-  composite: 27.8
+  band: emerging
+  composite: 23.0
   coverage:
     artifact_dirs: 15
-    catalog_earned: 55.0
+    catalog_earned: 46.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.0
-    catalog_max: 100.0
+    catalog_gap: 68.8
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.9
   facets:
-    access_clarity: 0.0
-    contract_governance: 60.6
-    contract_quality: 55.1
+    access_clarity: 7.9
+    contract_governance: 25.0
+    contract_quality: 49.9
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 27.8
+  previous_composite: 24.9
   provenance:
     agentic_access: derived
     contracts:
@@ -238,8 +258,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -254,7 +280,7 @@ security:
 slug: slashdot
 tags:
 - Media
-- Open-Source
+- Open Source
 - Technology News
 - RSS
 website: https://slashdot.org/

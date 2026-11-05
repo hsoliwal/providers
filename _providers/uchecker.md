@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.uchecker.net
@@ -55,7 +55,7 @@ apis:
   description: 'Программный интерфейс для ESP-провайдеров: расчёт стоимости и автоматическое создание аккаунтов с зачислением кредитов'
   name: uChecker ESP Провайдеры API
   slug: uchecker-esp-api
-artifact_total: 10
+artifact_total: 9
 asyncapis:
 - description: ''
   name: Uchecker Webhooks
@@ -197,15 +197,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: uChecker MCP Server
-  slug: uchecker-mcp-server
-- description: 'First-party hosted MCP server for uChecker email validation. Streamable HTTP transport, authenticated with the same uChecker API key used by the REST API (x-api-key header, or Authorization: Bearer <k'
-  name: uChecker MCP Server
-  slug: uchecker-mcp-server-2
+  slug: mcp
 modified: '2026-08-16'
 name: uChecker
 nav: Providers
 network: true
-overview: 'uChecker publishes 3 APIs on the [APIs.io](https://apis.io/) network: Аутентификация API, Валидация Email API, and ESP Провайдеры API. Tagged areas include Email Verification, Email, SMTP, DNS, and Deliverability.
+overview: 'uChecker publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Аутентификация API, Валидация Email API, and ESP Провайдеры API. Tagged areas include Email Verification, Email, SMTP, DNS, and Deliverability.
 
 
   The uChecker catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -231,15 +228,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 60.0
+    contract_quality: 54.8
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 47.8
+  previous_composite: 47.7
   provenance:
     conformance: derived
     contracts:
@@ -249,8 +246,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -277,7 +280,7 @@ tags:
 - DKIM
 - DMARC
 - MCP
-- agent-native
+- Agent-Native
 - Data Quality
 website: https://www.uchecker.net/
 ---

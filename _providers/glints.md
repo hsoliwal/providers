@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,13 +53,13 @@ modified: '2026-07-19'
 name: Glints
 nav: Providers
 network: true
-overview: Glints is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Recruitment, Talent, and Job.
+overview: Glints is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Recruiting, Talent, and Job.
 random_paper: 19
 score:
   band: minimal
-  composite: 5.0
+  composite: 2.9
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 3
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,21 +71,30 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 2.9
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/glints/refs/heads/main/screenshots/glints-2026-10-11T185450.png
 security:
 - kind: domain-security
   name: Glints Domain Security
@@ -95,7 +104,7 @@ slug: glints
 tags:
 - Company
 - Enterprise
-- Recruitment
+- Recruiting
 - Talent
 - Job
 - Human Resources

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The API powering the Unison Share web application, including the APIs for syncing code with UCM and browsing projects, branches, and definitions. Unison Share also acts as the OAuth2 (with PKCE) and O
@@ -167,21 +167,21 @@ description: Unison Computing, PBC is a public benefit corporation building the 
 image: https://github.com/unisonweb.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 16 tools listed.
   name: Unison Computing MCP Server
-  slug: unison-computing-mcp-server
+  slug: unison
 modified: '2026-07-21'
 name: Unison Computing
 nav: Providers
 network: true
-overview: 'Unison Computing publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Programming Language, Cloud Computing, Developer Tools, and Functional Programming.
+overview: 'Unison Computing is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Programming Language, Cloud Computing, Developer Tools, and Functional Programming.
 
 
   Unison Computing''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, authentication, and 20 more developer resources.'
 random_paper: 1
 score:
   band: thin
-  composite: 30.7
+  composite: 31.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -195,18 +195,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 30.7
+  previous_composite: 31.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 54.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://data.useplinth.com/api
@@ -66,8 +66,13 @@ apis:
   description: Ad-hoc read-only SQL over the warehouse. Paid keys only.
   name: Plinth US Grants Data SQL API
   slug: plinth-us-grants-data-sql-api
-artifact_total: 14
+artifact_total: 13
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/plinth-us-grants-data/refs/heads/main/rate-limits/plinth-us-grants-data-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/plinth-us-grants-data-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -207,21 +212,18 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Plinth US Grants Data MCP Server
-  slug: plinth-us-grants-data-mcp-server
-- description: ''
-  name: Plinth
-  slug: plinth
+  slug: mcp
 modified: '2026-08-14'
 name: Plinth US Grants Data
 nav: Providers
 network: true
-overview: 'Plinth US Grants Data publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analyze API, Grants API, Organizations API, and 2 more. Tagged areas include Philanthropy, Grants, Non-Profit, Foundations, and IRS 990.
+overview: 'Plinth US Grants Data publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analyze API, Grants API, Organizations API, and 2 more. Tagged areas include Philanthropy, Grants, Non-Profit, Foundations, and IRS 990.
 
 
   The Plinth US Grants Data catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Plinth US Grants Data''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 22 more developer resources.'
+  Plinth US Grants Data''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 23 more developer resources.'
 plans:
 - name: Plinth Us Grants Data Plans Pricing
   plan_count: 4
@@ -232,10 +234,11 @@ rate_limits:
   name: Plinth Us Grants Data Rate Limits
   slug: plinth-us-grants-data-rate-limits
 rules:
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
-  name: Plinth US Grants Data API Rules
+  name: Plinth US Grants Data — spectral rules
   rule_count: 10
   severity_counts:
     error: 9
@@ -245,28 +248,28 @@ rules:
   slug: plinth-us-grants-data-spectral
 scopes:
 - name: Plinth Us Grants Data Scopes
-  scope_count: 0
+  scope_count: 1
   slug: plinth-us-grants-data-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: exemplar
-  composite: 66.7
+  band: strong
+  composite: 57.0
   coverage:
     artifact_dirs: 21
-    catalog_earned: 69.0
+    catalog_earned: 57.8
     catalog_earned_first_party: 17.0
-    catalog_gap: 46.0
+    catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.5
   facets:
     access_clarity: 76.3
-    contract_governance: 78.8
-    contract_quality: 57.1
+    contract_governance: 44.7
+    contract_quality: 51.4
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 66.7
+  previous_composite: 60.5
   provenance:
     conformance: first-party
     contracts:
@@ -281,9 +284,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 75.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

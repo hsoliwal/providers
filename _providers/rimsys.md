@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Enterprise API for the Rimsys Regulatory Information Management platform, used to integrate regulatory submissions, product registrations, UDI data, standards, and regulatory intelligence with PLM, ER
@@ -140,14 +140,14 @@ modified: '2026-07-21'
 name: Rimsys
 nav: Providers
 network: true
-overview: 'Rimsys publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Vertical Software, Regulatory, Medical Devices, and MedTech.
+overview: 'Rimsys is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Vertical Software, Regulatory, Medical Devices, and Medical Technology.
 
 
   Rimsys'' developer surface includes documentation, API reference, pricing, support, engineering blog, signup flow, authentication, and 14 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 36.1
+  composite: 34.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -161,9 +161,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 36.1
+  previous_composite: 34.7
   provenance:
     conformance: first-party
   regulatory:
@@ -175,9 +175,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -203,7 +203,7 @@ tags:
 - Vertical Software
 - Regulatory
 - Medical Devices
-- MedTech
+- Medical Technology
 - Regulatory Information Management
 - UDI
 - Compliance

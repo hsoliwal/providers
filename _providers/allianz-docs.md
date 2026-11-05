@@ -33,14 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 6
+- acting_count: 5
   human_in_the_loop: 0
   name: Allianz Docs Agentic Access
   operation_count: 9
   slug: allianz-docs-agentic-access
-  summary_line: 9 operations · 6 acting
+  summary_line: 9 operations · 5 acting
 api_count: 6
 apis:
 - description: The Allianz Partners API Management portal provides insurance and assistance product APIs covering the full customer journey. APIs support policy purchase, change, and cancellation operations in XML a
@@ -351,7 +351,7 @@ modified: '2026-06-20'
 name: Allianz
 nav: Providers
 network: true
-overview: 'Allianz publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Certificates API, Leads API, Policy Details API, and 1 more. Tagged areas include Financial-Services, Insurance, and Asset Management.
+overview: 'Allianz is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Certificates API, Leads API, Policy Details API, and 3 more. Tagged areas include Financial Services, Insurance, and Asset Management.
 
 
   The Allianz catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -360,9 +360,10 @@ overview: 'Allianz publishes 4 APIs on the [APIs.io](https://apis.io/) network, 
   Allianz''s developer surface includes authentication, support, engineering blog, and 11 more developer resources.'
 random_paper: 7
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Allianz API Rules
+  name: Allianz — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -370,7 +371,8 @@ rules:
     info: 1
     warn: 4
   slug: allianz-docs-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: generated
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: Allianz API Rules
@@ -388,23 +390,23 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: thin
-  composite: 33.6
+  composite: 31.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 65.5
+    artifact_dirs: 22
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 33.3
-    contract_quality: 32.2
+    contract_governance: 31.8
+    contract_quality: 31.5
     developer_ergonomics: 57.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 5.3
-  previous_composite: 33.6
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -419,9 +421,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 51.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -438,7 +440,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: allianz-docs
 tags:
-- Financial-Services
+- Financial Services
 - Insurance
 - Asset Management
 use_cases:

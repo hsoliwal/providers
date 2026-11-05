@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://api.godiligent.ai
@@ -96,6 +96,11 @@ collections:
   name: Diligent CDD Webhooks API
   slug: open-diligent-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/diligent/refs/heads/main/capabilities/diligent-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/diligent-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/diligent/refs/heads/main/overlays/diligent-api-overlay.yaml
   title: ''
@@ -239,33 +244,33 @@ modified: '2026-07-18'
 name: Diligent
 nav: Providers
 network: true
-overview: 'Diligent publishes 6 APIs on the [APIs.io](https://apis.io/) network, including CDD API, Company API, Instant Screening (experimental) API, and 3 more. Tagged areas include Company, Compliance, RegTech, KYC, and AML.
+overview: 'Diligent publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including CDD API, Company API, Instant Screening (experimental) API, and 3 more. Tagged areas include Company, Compliance, RegTech, KYC, and AML.
 
 
   The Diligent catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Diligent''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, sandbox, and 23 more developer resources.'
+  Diligent''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, sandbox, and 24 more developer resources.'
 random_paper: 12
 score:
   band: developing
-  composite: 49.4
+  composite: 49.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 61.1
+    contract_quality: 55.8
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 49.4
+  previous_composite: 49.6
   provenance:
     conformance: derived
     contracts:
@@ -275,8 +280,18 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

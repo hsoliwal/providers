@@ -21,19 +21,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 21.1
+  scored_at: '2026-10-17'
 api_count: 11
 apis:
 - description: FDX-aligned REST endpoints returning the list of a consumer's permissioned accounts and detailed account information (account identifiers, type, status, nickname, and product details) for the accounts
@@ -75,6 +75,14 @@ asyncapis:
   name: Akoya Notifications Webhooks
   slug: akoya-notifications-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://akoya.com/news
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://akoya.com/news/rss.xml
 - group: company
   title: ''
   type: Website
@@ -216,22 +224,26 @@ created: '2026-05-08'
 description: Akoya operates a tokenized, consumer-permissioned data-access network for US open finance, reaching 4,500+ financial institutions and powering 7,500+ apps and data recipients. It implements the Financial Data Exchange (FDX) API standard to replace screen-scraping with token-permissioned, OAuth 2.0 access to consumer financial data. The Akoya API surface is a 100% API-driven catalog organized into consumer data-access products — Accounts, Balances, Transactions, Investments (holdings and tax lots), Statements, Customers, Tax forms, and Payments (ACH/RTP payment networks) — plus a set of platform/service APIs for Consent, Apps Management, and Notifications. Consumers authenticate at their own financial institution's authorization server; data recipients exchange authorization codes for access tokens and call FDX-aligned REST endpoints. Documentation is published as OpenAPI 3.1.0 (rendered via the docs.akoya.com reference hub); Akoya's GitHub org ships Go code samples for the OAuth
   client-credentials, auth-code, and account-fetch flows. There is no publicly downloadable OpenAPI/Postman artifact — production access requires a network membership agreement.
 finops:
-- name: Akoya Finops
+- has_sources: true
+  method: generated
+  name: Akoya Finops
+  primary_unit: ''
   service_category: Open Banking
   slug: akoya-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akoya.png
 layout: provider
-modified: '2026-07-23'
+modified: '2026-10-06'
 name: Akoya
 nav: Providers
 network: true
-overview: 'Akoya publishes 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Open Banking, Open Finance, Aggregator, and Data Access Network.
+overview: 'Akoya is listed with 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Open Banking, Open Finance, Aggregator, and Data Access Network.
 
 
   The Akoya catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Akoya''s developer surface includes developer portal, documentation, support, pricing, engineering blog, API reference, getting-started guide, and 24 more developer resources.'
+  Akoya''s developer surface includes engineering blog, developer portal, documentation, support, pricing, API reference, getting-started guide, and 26 more developer resources.'
 plans:
 - name: Akoya Plans Pricing
   plan_count: 2
@@ -243,21 +255,21 @@ rate_limits:
   slug: akoya-rate-limits
 score:
   band: developing
-  composite: 53.5
+  composite: 50.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 47.0
+    artifact_dirs: 17
+    catalog_earned: 44.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.0
+    catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 67.1
+    access_clarity: 59.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -266,7 +278,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.5
+  previous_composite: 52.0
   provenance:
     conformance: first-party
   regulatory:
@@ -274,9 +286,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -308,5 +320,6 @@ tags:
 - FDX
 - Account Aggregation
 - United States
+- Data Aggregation
 website: https://akoya.com/
 ---

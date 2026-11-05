@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 66
+- acting_count: 62
   human_in_the_loop: 0
   name: Genius Sports Agentic Access
   operation_count: 227
   slug: genius-sports-agentic-access
-  summary_line: 227 operations · 66 acting
+  summary_line: 227 operations · 62 acting
 api_count: 3
 apis:
 - description: Query information regarding matches, players, statistics etc. both past and future. Covers basketball, 3x3, football (soccer), volleyball, American football, and ice hockey.
@@ -83,17 +83,17 @@ apis:
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
   description: Groups the operations related to competitors of type Player
-  name: Genius Sports competitors/players API
+  name: Genius Sports Competitors/players API
   slug: genius-sports-competitors-players-api
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
   description: Groups the operations related to to-be-determined competitors.
-  name: Genius Sports competitors/tbds API
+  name: Genius Sports Competitors/tbds API
   slug: genius-sports-competitors-tbds-api
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
   description: Groups the operations related to competitors of type Team
-  name: Genius Sports competitors/teams API
+  name: Genius Sports Competitors/teams API
   slug: genius-sports-competitors-teams-api
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
@@ -283,6 +283,25 @@ collections:
   name: Genius Sports Data Warehouse REST API
   slug: open-genius-sports
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/genius-sports/refs/heads/main/plans/genius-sports-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/genius-sports-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/genius-sports/refs/heads/main/rate-limits/genius-sports-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/genius-sports-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/genius-sports/refs/heads/main/finops/genius-sports-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/genius-sports-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.geniussports.com/newsroom/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/genius-sports/refs/heads/main/agentic-access/genius-sports-agentic-access.yml
   title: ''
@@ -317,19 +336,23 @@ common:
 created: '2025-03-01'
 description: Genius Sports provides APIs to query information regarding matches, players, statistics etc. both past and future across multiple sports including basketball, football (soccer), volleyball, American football, and ice hockey.
 finops:
-- name: Genius Sports Finops
+- has_sources: false
+  method: generated
+  name: Genius Sports Finops
+  primary_unit: ''
   service_category: API
   slug: genius-sports-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/genius-sports.png
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Genius Sports
 nav: Providers
 network: true
-overview: 'Genius Sports publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Competitions API, Competitors API, competitors/doubles API, and 23 more. Tagged areas include Sports, Statistics, Live Data, and Fixtures.
+overview: 'Genius Sports publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Competitions API, Competitors API, competitors/doubles API, and 28 more. Tagged areas include Sports, Statistics, Live Data, and Fixtures.
 
 
-  Genius Sports'' developer surface includes authentication, documentation, and 5 more developer resources.'
+  Genius Sports'' developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Genius Sports Plans Pricing
   plan_count: 3
@@ -341,23 +364,23 @@ rate_limits:
   slug: genius-sports-rate-limits
 score:
   band: thin
-  composite: 29.7
+  composite: 26.6
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 39.0
+    artifact_dirs: 11
+    catalog_earned: 36.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 76.0
+    catalog_gap: 79.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.0
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 55.2
-    developer_ergonomics: 21.4
-    discoverability: 55.6
+    contract_quality: 50.0
+    developer_ergonomics: 23.8
+    discoverability: 53.6
     operational_transparency: 10.5
-  previous_composite: 29.7
+  previous_composite: 27.6
   provenance:
     agentic_access: derived
     contracts:
@@ -365,8 +388,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 26
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

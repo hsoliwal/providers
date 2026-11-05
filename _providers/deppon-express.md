@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Deppon Open Platform (德邦开放平台) is Deppon''s enterprise integration hub, exposing logistics system-integration APIs to contracted partners: order service (下单/订单) interfaces, standard track/tracking ('
@@ -40,6 +40,10 @@ apis:
   slug: deppon-open-platform
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.deppon.com/blog/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/deppon-express/refs/heads/main/security/deppon-express-domain-security.yml
   title: ''
@@ -66,32 +70,32 @@ created: '2026-07-17'
 description: Deppon Express (德邦快递), operated by Deppon Logistics Co., Ltd., is a major Chinese express delivery and logistics provider specializing in large-parcel (heavy/bulky) express, less-than-truckload freight, full-truckload, air freight, warehousing, supply chain, and cross-border services. Founded from Cui's Freight Company (1996) and incorporated in 2009, it became part of the JD Logistics group in 2022 and ranks among China's largest express carriers by market share. For developers and enterprise partners, Deppon runs the Deppon Open Platform (德邦开放平台, established 2015) at dpopen.deppon.com, offering system-integration APIs for order creation, standard track/tracking queries, and electronic waybill (面单) printing, with access granted to contracted monthly-settlement customers.
 image: https://www.deppon.com/cms/console/sites/favicon.ico
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Deppon Express
 nav: Providers
 network: true
-overview: 'Deppon Express publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Logistics, Express Delivery, and Shipping.
+overview: 'Deppon Express is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Logistics, Express Delivery, and Shipping.
 
 
-  Deppon Express'' developer surface includes documentation and 4 more developer resources.'
+  Deppon Express'' developer surface includes engineering blog, documentation, and 4 more developer resources.'
 random_paper: 17
 score:
-  band: emerging
-  composite: 11.4
+  band: minimal
+  composite: 10.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
-    discoverability: 75.9
+    developer_ergonomics: 21.4
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -100,9 +104,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 11.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

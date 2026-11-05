@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -87,16 +87,16 @@ modified: '2026-07-20'
 name: Medwing
 nav: Providers
 network: true
-overview: 'Medwing is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Recruitment, Staffing, and Nursing.
+overview: 'Medwing is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Recruiting, Staffing, and Nursing.
 
 
   Medwing''s developer surface includes engineering blog, pricing, signup flow, and 7 more developer resources.'
 random_paper: 21
 score:
   band: minimal
-  composite: 8.0
+  composite: 8.4
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -108,7 +108,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -118,20 +118,21 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 8.0
+  previous_composite: 8.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/medwing/refs/heads/main/screenshots/medwing-2026-10-11T191412.png
 security:
 - kind: domain-security
   name: Medwing Domain Security
@@ -141,7 +142,7 @@ slug: medwing
 tags:
 - Company
 - Healthcare
-- Recruitment
+- Recruiting
 - Staffing
 - Nursing
 - Human Resources

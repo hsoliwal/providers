@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Instrumentl's authenticated remote Model Context Protocol (MCP) server, exposing the grant-management platform to AI agents. Access is gated by OAuth 2.0 (authorization code + PKCE, dynamic client reg
@@ -140,14 +140,14 @@ description: Instrumentl is the all-in-one grant management platform for nonprof
 image: https://static-assets.instrumentl.com/assets/open-graph-image-7aeb77fce8b2e99a998345583d30006a4f24546304a720cb2a2c7c97372f6212.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.instrumentl.com over HTTP.
   name: Instrumentl MCP Server
-  slug: instrumentl-mcp-server
+  slug: instrumentl
 modified: '2026-07-19'
 name: Instrumentl
 nav: Providers
 network: true
-overview: 'Instrumentl publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Grants, Non-Profit, Fundraising, and Grant Management.
+overview: 'Instrumentl is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Grants, Non-Profit, Fundraising, and Grant Management.
 
 
   Instrumentl''s developer surface includes authentication, support, engineering blog, pricing, signup flow, and 16 more developer resources.'
@@ -159,27 +159,33 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.4
+  composite: 25.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 22.4
+  previous_composite: 25.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

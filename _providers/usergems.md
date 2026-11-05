@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 59.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -49,16 +49,37 @@ apis:
   baseurl_source: declared
   description: Add and remove accounts UserGems should source prospects against.
   name: UserGems Accounts API
+  phrasing_intents:
+  - id: addAccount
+    intent: Add a target account to source prospects for
+    question: How do I get UserGems to start finding prospects at a target company?
+  - id: deleteAccount
+    intent: Remove a target account from prospecting
+    question: How can I stop getting prospects for a company I added as a target account?
+  phrasing_ops: 2
   slug: usergems-accounts-api
 - baseURL: https://api.usergems.com/v1
   baseurl_source: declared
   description: Add and remove contacts UserGems should track for job changes.
   name: UserGems Contacts API
+  phrasing_intents:
+  - id: addContact
+    intent: Track a contact for job changes
+    question: How do I get alerted when a champion or customer contact changes jobs?
+  - id: deleteContact
+    intent: Stop tracking a contact for job changes
+    question: How do I stop watching a person for job changes?
+  phrasing_ops: 2
   slug: usergems-contacts-api
 - baseURL: https://api.usergems.com/v1
   baseurl_source: declared
   description: Honor data-subject deletion requests for tracked contacts.
   name: UserGems Privacy API
+  phrasing_intents:
+  - id: privacyDelete
+    intent: Erase a person's data for a privacy request
+    question: How do I handle a GDPR right-to-erasure request for someone in UserGems?
+  phrasing_ops: 1
   slug: usergems-privacy-api
 - description: Hosted remote MCP server that lets an agent in Claude, ChatGPT or any MCP-compatible client work against the customer's own UserGems workspace — searching accounts and prospects, pulling signal and sc
   name: UserGems MCP
@@ -94,6 +115,11 @@ collections:
   name: UserGems Accounts Privacy API
   slug: open-usergems-privacy-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/usergems/refs/heads/main/capabilities/usergems-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/usergems-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -357,9 +383,13 @@ features:
 - SOC 2 Type 2, GDPR, and CCPA compliance posture
 - Money-back ROI guarantee — $100K spend tied to $100K pipeline
 finops:
-- name: Usergems Finops
+- has_sources: true
+  method: generated
+  name: Usergems Finops
+  primary_unit: seat
   service_category: Sales Intelligence and ABM
   slug: usergems-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/usergems.png
 integrations:
 - category: CRM
@@ -407,13 +437,13 @@ modified: '2026-08-13'
 name: UserGems
 nav: Providers
 network: true
-overview: 'UserGems publishes 3 APIs on the [APIs.io](https://apis.io/) network: Accounts API, Contacts API, and Privacy API. Tagged areas include Sales Intelligence, Outbound, Account Based Marketing, Champion Tracking, and Job Changes.
+overview: 'UserGems publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Contacts API, Privacy API, and 1 more. Tagged areas include Sales Intelligence, Outbound, Account Based Marketing, Champion Tracking, and Job Changes.
 
 
   The UserGems catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  UserGems'' developer surface includes authentication, API reference, getting-started guide, developer portal, documentation, signup flow, pricing, and 46 more developer resources.'
+  UserGems'' developer surface includes authentication, API reference, getting-started guide, developer portal, documentation, signup flow, pricing, and 47 more developer resources.'
 plans:
 - name: Usergems Plans Pricing
   plan_count: 1
@@ -424,9 +454,10 @@ rate_limits:
   name: Usergems Rate Limits
   slug: usergems-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: UserGems API Rules
+  name: UserGems — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -434,7 +465,8 @@ rules:
     info: 2
     warn: 3
   slug: usergems-jsonschema-spectral-rules
-- effective_rule_count: 74
+- authorship: unmarked
+  effective_rule_count: 74
   extends:
   - spectral:oas
   - spectral:asyncapi
@@ -453,28 +485,30 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: exemplar
-  composite: 67.4
+  composite: 70.2
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 79.5
+    artifact_dirs: 31
+    catalog_earned: 78.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 35.5
+    catalog_gap: 36.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 89.5
     contract_governance: 31.8
-    contract_quality: 79.9
+    contract_quality: 73.3
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 67.4
+  previous_composite: 70.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -485,8 +519,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

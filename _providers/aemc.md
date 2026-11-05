@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.2
-  scored_at: '2026-09-20'
+  score: 27.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -236,7 +236,7 @@ modified: '2026-09-16'
 name: Australian Energy Market Commission
 nav: Providers
 network: true
-overview: 'Australian Energy Market Commission publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Glossary API, Rule Content API, Rule Versions API, and 2 more. Tagged areas include Energy, Australia, Energy Markets, Electricity, and Gas.
+overview: 'Australian Energy Market Commission publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Glossary API, Rule Content API, Rule Versions API, and 2 more. Tagged areas include Energy, Australia, Energy Markets, Electricity, and Gas.
 
 
   Australian Energy Market Commission''s developer surface includes support, documentation, engineering blog, authentication, code examples, changelog, and 22 more developer resources.'
@@ -247,9 +247,9 @@ rate_limits:
   slug: aemc-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 28.1
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -261,7 +261,7 @@ score:
     contract_governance: 4.5
     contract_quality: 15.7
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -270,7 +270,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 30.1
+  previous_composite: 28.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -286,9 +286,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 44.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

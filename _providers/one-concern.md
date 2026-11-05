@@ -35,8 +35,8 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 27.5
-  scored_at: '2026-09-20'
-api_count: 1
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.oneconcern.com
   baseurl_source: declared
@@ -45,6 +45,16 @@ apis:
   slug: one-concern-location-api
 artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/plans/one-concern-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/one-concern-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/rate-limits/one-concern-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/one-concern-rate-limits.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/one-concern/refs/heads/main/capabilities/one-concern-capability-edges.yml
   title: ''
@@ -145,10 +155,10 @@ modified: '2026-08-26'
 name: One Concern
 nav: Providers
 network: true
-overview: 'One Concern publishes 1 API on the [APIs.io](https://apis.io/) network: Location API. Tagged areas include Climate Risk, Catastrophe Modeling, Resilience, Insurance, and Reinsurance.
+overview: 'One Concern publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Location API. Tagged areas include Climate Risk, Catastrophe Modeling, Resilience, Insurance, and Reinsurance.
 
 
-  One Concern''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, and 16 more developer resources.'
+  One Concern''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, and 18 more developer resources.'
 plans:
 - name: One Concern Plans Pricing
   plan_count: 0
@@ -160,7 +170,7 @@ rate_limits:
   slug: one-concern-rate-limits
 score:
   band: thin
-  composite: 36.2
+  composite: 33.8
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -172,11 +182,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 36.2
+  previous_composite: 33.8
   provenance:
     conformance: derived
     contracts:
@@ -191,9 +201,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -218,8 +228,8 @@ tags:
 - Risk Analytics
 - Geospatial
 - Business Interruption
-- Real-Estate
-- Financial-Services
+- Real Estate
+- Financial Services
 - Artificial Intelligence
 website: https://oneconcern.com/en/
 ---

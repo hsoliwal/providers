@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.greencanopynode.com/blog?format=rss
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/green-canopy-node/refs/heads/main/security/green-canopy-node-domain-security.yml
   title: ''
@@ -57,18 +61,18 @@ created: '2026-07-17'
 description: 'Green Canopy NODE is a Seattle- and Portland-based sustainable real estate development and construction technology company that designs and builds all-electric, low-carbon homes. The business operates across three lines: prefabricated "Building Kits" (including mass-timber panelized systems), full development services for multi-unit and infill housing projects, and impact investment funds that finance green housing. The company reports 300+ all-electric homes built, five real estate investment funds, and roughly 35K metric tons of greenhouse-gas emissions mitigated since inception. Green Canopy NODE was surfaced as a Techstars portfolio company and added to the API Evangelist network. It publishes a marketing and investor website but no public developer program, API, or machine-readable API surface at this time.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/green-canopy-node.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Green Canopy NODE
 nav: Providers
 network: true
-overview: 'Green Canopy NODE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Construction Technology, Sustainability, and Prefab Housing.
+overview: 'Green Canopy NODE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Construction Technology, Sustainability, and Prefab Housing.
 
 
-  Green Canopy NODE''s developer surface includes engineering blog, support, and 2 more developer resources.'
+  Green Canopy NODE''s developer surface includes engineering blog, support, and 3 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 4.7
+  composite: 5.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -82,22 +86,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 4.7
+  previous_composite: 5.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -112,7 +118,7 @@ security:
 slug: green-canopy-node
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Construction Technology
 - Sustainability
 - Prefab Housing

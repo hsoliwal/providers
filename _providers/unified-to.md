@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 830
   human_in_the_loop: 0
@@ -54,147 +54,147 @@ apis:
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The accounting API from Unified.to — 38 operation(s) for accounting.
-  name: Unified.to accounting API
+  name: Unified.to Accounting API
   slug: unified-to-accounting-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The ads API from Unified.to — 17 operation(s) for ads.
-  name: Unified.to ads API
+  name: Unified.to Ads API
   slug: unified-to-ads-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The assessment API from Unified.to — 3 operation(s) for assessment.
-  name: Unified.to assessment API
+  name: Unified.to Assessment API
   slug: unified-to-assessment-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The ats API from Unified.to — 17 operation(s) for ats.
-  name: Unified.to ats API
+  name: Unified.to Ats API
   slug: unified-to-ats-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The auth API from Unified.to — 2 operation(s) for auth.
-  name: Unified.to auth API
+  name: Unified.to Auth API
   slug: unified-to-auth-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The calendar API from Unified.to — 11 operation(s) for calendar.
-  name: Unified.to calendar API
+  name: Unified.to Calendar API
   slug: unified-to-calendar-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The commerce API from Unified.to — 17 operation(s) for commerce.
-  name: Unified.to commerce API
+  name: Unified.to Commerce API
   slug: unified-to-commerce-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The crm API from Unified.to — 12 operation(s) for crm.
-  name: Unified.to crm API
+  name: Unified.to CRM API
   slug: unified-to-crm-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The enrich API from Unified.to — 2 operation(s) for enrich.
-  name: Unified.to enrich API
+  name: Unified.to Enrich API
   slug: unified-to-enrich-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The forms API from Unified.to — 4 operation(s) for forms.
-  name: Unified.to forms API
+  name: Unified.to Forms API
   slug: unified-to-forms-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The genai API from Unified.to — 4 operation(s) for genai.
-  name: Unified.to genai API
+  name: Unified.to Genai API
   slug: unified-to-genai-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The hris API from Unified.to — 22 operation(s) for hris.
-  name: Unified.to hris API
+  name: Unified.to Hris API
   slug: unified-to-hris-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The kms API from Unified.to — 6 operation(s) for kms.
-  name: Unified.to kms API
+  name: Unified.to Kms API
   slug: unified-to-kms-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The lms API from Unified.to — 14 operation(s) for lms.
-  name: Unified.to lms API
+  name: Unified.to Lms API
   slug: unified-to-lms-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The martech API from Unified.to — 7 operation(s) for martech.
-  name: Unified.to martech API
+  name: Unified.to Martech API
   slug: unified-to-martech-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The messaging API from Unified.to — 5 operation(s) for messaging.
-  name: Unified.to messaging API
+  name: Unified.to Messaging API
   slug: unified-to-messaging-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The metadata API from Unified.to — 2 operation(s) for metadata.
-  name: Unified.to metadata API
+  name: Unified.to Metadata API
   slug: unified-to-metadata-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The passthrough API from Unified.to — 1 operation(s) for passthrough.
-  name: Unified.to passthrough API
+  name: Unified.to Passthrough API
   slug: unified-to-passthrough-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The payment API from Unified.to — 10 operation(s) for payment.
-  name: Unified.to payment API
+  name: Unified.to Payment API
   slug: unified-to-payment-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The repo API from Unified.to — 10 operation(s) for repo.
-  name: Unified.to repo API
+  name: Unified.to Repo API
   slug: unified-to-repo-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The scim API from Unified.to — 4 operation(s) for scim.
-  name: Unified.to scim API
+  name: Unified.to SCIM API
   slug: unified-to-scim-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The shipping API from Unified.to — 8 operation(s) for shipping.
-  name: Unified.to shipping API
+  name: Unified.to Shipping API
   slug: unified-to-shipping-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The signing API from Unified.to — 6 operation(s) for signing.
-  name: Unified.to signing API
+  name: Unified.to Signing API
   slug: unified-to-signing-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The storage API from Unified.to — 2 operation(s) for storage.
-  name: Unified.to storage API
+  name: Unified.to Storage API
   slug: unified-to-storage-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The task API from Unified.to — 8 operation(s) for task.
-  name: Unified.to task API
+  name: Unified.to Task API
   slug: unified-to-task-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The ticketing API from Unified.to — 8 operation(s) for ticketing.
-  name: Unified.to ticketing API
+  name: Unified.to Ticketing API
   slug: unified-to-ticketing-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The uc API from Unified.to — 8 operation(s) for uc.
-  name: Unified.to uc API
+  name: Unified.to Uc API
   slug: unified-to-uc-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The unified API from Unified.to — 14 operation(s) for unified.
-  name: Unified.to unified API
+  name: Unified.to Unified API
   slug: unified-to-unified-api
 - baseURL: https://api.unified.to
   baseurl_source: spec
   description: The verification API from Unified.to — 4 operation(s) for verification.
-  name: Unified.to verification API
+  name: Unified.to Verification API
   slug: unified-to-verification-api
 arazzos:
 - description: Create an accounting contact (customer), bill them with an invoice, and read the invoice back.
@@ -1055,6 +1055,21 @@ collections:
   name: Unified.to account webinar API
   slug: open-unified-to-webinar-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/unified-to/refs/heads/main/plans/unified-to-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/unified-to-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/unified-to/refs/heads/main/rate-limits/unified-to-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/unified-to-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/unified-to/refs/heads/main/finops/unified-to-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/unified-to-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/unified-to/refs/heads/main/capabilities/unified-to-capability-edges.yml
   title: ''
@@ -1312,9 +1327,13 @@ features:
 - SOC 2 Type 2
 - Self-hosted option (Enterprise)
 finops:
-- name: Unified To Finops
+- has_sources: true
+  method: generated
+  name: Unified To Finops
+  primary_unit: ''
   service_category: Unified API
   slug: unified-to-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unified-to.png
 integrations:
 - description: CRM integration for contacts, companies, and deals via unified CRM API
@@ -4668,18 +4687,18 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Unified.to MCP Server
-  slug: unifiedto-mcp-server
+  slug: unified-to-mcp-server
 modified: '2026-05-19'
 name: Unified.to
 nav: Providers
 network: true
-overview: 'Unified.to publishes 29 APIs on the [APIs.io](https://apis.io/) network, including accounting API, ads API, assessment API, and 26 more. Tagged areas include Integration and Unified-API.
+overview: 'Unified.to publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounting API, Ads API, Assessment API, and 28 more. Tagged areas include Integration and Unified API.
 
 
   The Unified.to catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Unified.to''s developer surface includes authentication, engineering blog, changelog, pricing, documentation, getting-started guide, signup flow, and 46 more developer resources.'
+  Unified.to''s developer surface includes authentication, engineering blog, changelog, pricing, documentation, getting-started guide, signup flow, and 49 more developer resources.'
 plans:
 - name: Unified To Plans Pricing
   plan_count: 4
@@ -4690,9 +4709,10 @@ rate_limits:
   name: Unified To Rate Limits
   slug: unified-to-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Unified.to API Rules
+  name: Unified.to — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -4700,7 +4720,8 @@ rules:
     info: 1
     warn: 4
   slug: unified-to-jsonschema-spectral-rules
-- effective_rule_count: 80
+- authorship: generated
+  effective_rule_count: 80
   extends:
   - spectral:oas
   name: Unified.to API Rules
@@ -4713,23 +4734,23 @@ rules:
   slug: unified-to-spectral-rules
 score:
   band: strong
-  composite: 63.8
+  composite: 63.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 63.5
+    artifact_dirs: 22
+    catalog_earned: 62.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.5
+    catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 68.4
-    contract_governance: 28.8
-    contract_quality: 71.4
+    access_clarity: 60.5
+    contract_governance: 27.3
+    contract_quality: 65.7
     developer_ergonomics: 69.0
-    discoverability: 57.4
+    discoverability: 60.0
     operational_transparency: 55.3
-  previous_composite: 63.8
+  previous_composite: 65.4
   provenance:
     agentic_access: derived
     contracts:
@@ -4737,8 +4758,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 29
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -4756,7 +4783,7 @@ security:
 - kind: vulnerability-disclosure
   name: Unified To Vulnerability Disclosure
   slug: unified-to-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Unified To Trust Center
   slug: unified-to-trust-center
@@ -4764,7 +4791,7 @@ security:
 slug: unified-to
 tags:
 - Integration
-- Unified-API
+- Unified API
 use_cases:
 - description: Sync contacts, companies, and deals across 47 CRM platforms with a single API integration.
   name: CRM Integration

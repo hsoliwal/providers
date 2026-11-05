@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Interac Hub is an HTTP API that simplifies digital identity verification. Relying parties obtain verified identity data through financial-institution authentication (Interac Verification Service, '
@@ -44,6 +44,10 @@ apis:
   slug: interac-hub-verification-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.interac.ca/en/content-category/news/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/interac/refs/heads/main/security/interac-domain-security.yml
   title: ''
@@ -144,14 +148,14 @@ description: Interac Corp. is Canada's domestic payments and digital verificatio
   2.0 and OpenID Connect (Authorization Code Grant with Pushed Authorization Requests); a self-serve sandbox is available through the Hub Verification developer portal, while full production access and other products (Business Request Money, Interac Direct) are partner-gated behind a commercial relationship with an issuing financial institution.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-23'
+modified: '2026-10-06'
 name: Interac
 nav: Providers
 network: true
-overview: 'Interac publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Payments, Canada, Interac, and Digital Identity.
+overview: 'Interac is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Payments, Canada, Interac, and Digital Identity.
 
 
-  Interac''s developer surface includes documentation, engineering blog, getting-started guide, support, authentication, sandbox, and 15 more developer resources.'
+  Interac''s developer surface includes documentation, engineering blog, getting-started guide, support, authentication, sandbox, and 16 more developer resources.'
 random_paper: 16
 scopes:
 - name: Interac Scopes
@@ -160,9 +164,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 29.1
+  composite: 27.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -174,7 +178,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -183,7 +187,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 29.1
+  previous_composite: 27.0
   provenance:
     conformance: first-party
     skills: derived
@@ -192,9 +196,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +216,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: interac
 tags:
-- Financial-Services
+- Financial Services
 - Payments
 - Canada
 - Interac

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 3
@@ -337,9 +337,13 @@ common:
 created: '2026-06-13'
 description: 'Planable is a collaboration-first social media management platform used by agencies, multi-location brands, multi-brand companies and in-house marketing teams to create, plan, collaborate on, approve, schedule, publish and analyze content across Facebook, Instagram, X (Twitter), LinkedIn, TikTok, YouTube, Pinterest, Threads and Google Business Profile. It exposes three programmable surfaces: a REST Public API v1 at https://api.planable.io/api/v1 with 51 operations over workspaces, pages, posts, comments, campaigns, labels, media, members, stories, competitor analytics and social listening; a remote OAuth-protected MCP server at https://mcp.planable.io/mcp for Claude, ChatGPT and Gemini; and twelve MIT-licensed Agent Skills published as a Claude Code plugin. Agent- and API-created content always lands as a draft and passes through Planable''s normal approval workflow.'
 finops:
-- name: Planable Finops
+- has_sources: false
+  method: generated
+  name: Planable Finops
+  primary_unit: ''
   service_category: ''
   slug: planable-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/planable.png
 json_schemas:
 - name: Delete_Campaigns_{Id} Response 401
@@ -804,7 +808,7 @@ modified: '2026-08-13'
 name: Planable
 nav: Providers
 network: true
-overview: 'Planable publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Competitors API, Labels API, and 8 more. Tagged areas include Social-Media, Content Collaboration, Approval Workflows, Social Media Management, and Content Publishing.
+overview: 'Planable publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Competitors API, Labels API, and 9 more. Tagged areas include Social Media, Content Collaboration, Approval Workflows, Social Media Management, and Content Publishing.
 
 
   The Planable catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -821,9 +825,10 @@ rate_limits:
   name: Planable Rate Limits
   slug: planable-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Planable API Rules
+  name: Planable — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -838,23 +843,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 59.9
+  composite: 59.5
   coverage:
-    artifact_dirs: 30
-    catalog_earned: 68.3
+    artifact_dirs: 31
+    catalog_earned: 64.8
     catalog_earned_first_party: 20.0
-    catalog_gap: 46.8
+    catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 77.6
-    contract_governance: 29.5
-    contract_quality: 57.4
+    access_clarity: 69.7
+    contract_governance: 28.0
+    contract_quality: 51.9
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 55.3
-  previous_composite: 59.9
+  previous_composite: 61.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -865,8 +870,14 @@ score:
       total: 11
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -883,7 +894,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: planable
 tags:
-- Social-Media
+- Social Media
 - Content Collaboration
 - Approval Workflows
 - Social Media Management

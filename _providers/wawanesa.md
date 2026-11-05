@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Broker-facing commercial small business API announced by Wawanesa on 2022-03-30, built with HUB International and described by Wawanesa as "fully aligned with CSIO data standards". Per the company ann
@@ -151,7 +154,7 @@ modified: '2026-07-25'
 name: Wawanesa Insurance
 nav: Providers
 network: true
-overview: 'Wawanesa Insurance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Canada, Property and Casualty, Carrier, and Mutual Insurer.
+overview: 'Wawanesa Insurance is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Canada, Property and Casualty, Carrier, and Mutual Insurer.
 
 
   Wawanesa Insurance''s developer surface includes authentication, engineering blog, product news, support, YouTube channel, and 18 more developer resources.'
@@ -162,8 +165,8 @@ scopes:
   slug: wawanesa-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 28.3
+  band: emerging
+  composite: 25.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 32.0
@@ -177,7 +180,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 66.7
+    discoverability: 65.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -186,7 +189,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.3
+  previous_composite: 25.2
   provenance:
     conformance: first-party
   regulatory:
@@ -194,9 +197,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -219,13 +222,11 @@ tags:
 - Property and Casualty
 - Carrier
 - Mutual Insurer
-- Brokers
 - Commercial Lines
 - Personal Lines
 - Underwriting
 - Claims
 - Policy Administration
 - CSIO
-- Partner Gated
 website: https://www.wawanesa.com/canada/
 ---

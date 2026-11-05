@@ -14,7 +14,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: false
@@ -36,15 +37,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.6
-  scored_at: '2026-09-20'
+  score: 41.5
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 75
+- acting_count: 76
   human_in_the_loop: 0
   name: Fixflo Agentic Access
-  operation_count: 165
+  operation_count: 168
   slug: fixflo-agentic-access
-  summary_line: 165 operations · 75 acting
+  summary_line: 168 operations · 76 acting
 api_count: 1
 apis:
 - baseURL: https://api-sandbox.fixflo.com/api/v2
@@ -177,6 +178,10 @@ collections:
   name: Fixflo
   slug: open-fixflo-api-v2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.fixflo.com/blog/rss.xml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/fixflo/refs/heads/main/capabilities/fixflo-capability-edges.yml
   title: ''
@@ -359,17 +364,17 @@ description: Fixflo (a trading name of Tactile Limited, London, United Kingdom, 
   in, but actually calling it is licensed. Every use of the API is subject to the signed Fixflo Application Developer and API Licence Agreement, keys are issued by support after a review of the use case, and the runtime base URL is the customer's own per-tenant subdomain. Read the contract freely; sign an agreement to use it.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fixflo.png
 layout: provider
-modified: '2026-07-26'
+modified: '2026-10-06'
 name: Fixflo
 nav: Providers
 network: true
-overview: 'Fixflo publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Agency API, Agent API, Asset API, and 21 more. Tagged areas include Real-Estate, United Kingdom, Property Management, PropTech, and Repairs and Maintenance.
+overview: 'Fixflo publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agency API, Agent API, Asset API, and 21 more. Tagged areas include Real Estate, United Kingdom, Property Management, PropTech, and Repairs and Maintenance.
 
 
   The Fixflo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Fixflo''s developer surface includes authentication, sandbox, documentation, getting-started guide, API reference, engineering blog, support, and 32 more developer resources.'
+  Fixflo''s developer surface includes authentication, sandbox, documentation, getting-started guide, API reference, engineering blog, support, and 33 more developer resources.'
 random_paper: 10
 rate_limits:
 - limit_count: 1
@@ -382,21 +387,21 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 39.4
+  composite: 43.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 32.0
+    artifact_dirs: 25
+    catalog_earned: 45.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 83.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 58.7
+    contract_quality: 53.6
     developer_ergonomics: 32.7
-    discoverability: 44.4
+    discoverability: 66.1
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -406,7 +411,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 39.4
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -417,8 +422,14 @@ score:
       total: 24
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -435,7 +446,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: fixflo
 tags:
-- Real-Estate
+- Real Estate
 - United Kingdom
 - Property Management
 - PropTech

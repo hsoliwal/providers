@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The Employee Navigator OpenID Connect / OAuth 2.0 authorization server that fronts every Employee Navigator API service. Its discovery document is served anonymously and advertises authorization code,
@@ -123,7 +123,7 @@ modified: '2026-08-06'
 name: Employee Navigator
 nav: Providers
 network: true
-overview: 'Employee Navigator publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Benefits Administration, Human Resources, Insurance, and Employee Benefits.
+overview: 'Employee Navigator is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Benefits Administration, Human Resources, Insurance, and Employee Benefits.
 
 
   Employee Navigator''s developer surface includes engineering blog, pricing, support, authentication, and 11 more developer resources.'
@@ -134,10 +134,10 @@ scopes:
   slug: employeenavigator-scopes
   summary_line: 66 scopes · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 25.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -149,9 +149,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 28.0
+  previous_composite: 25.1
   provenance:
     conformance: first-party
   regulatory:
@@ -169,9 +169,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 65.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -204,6 +204,5 @@ tags:
 - Open Enrollment
 - ACA Compliance
 - Identity
-- OpenID Connect
 website: https://www.employeenavigator.com/
 ---

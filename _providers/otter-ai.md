@@ -26,20 +26,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 14.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Otter.ai REST API enables Enterprise customers to programmatically upload audio and video files for transcription, retrieve speaker-identified transcripts, receive webhook notifications when speec
   name: Otter.ai API
   slug: otter-ai-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/otter-ai/refs/heads/main/security/otter-ai-trust-center.yml
@@ -109,9 +109,13 @@ common:
 created: '2026-06-13'
 description: Otter.ai is an AI-powered meeting transcription and conversational intelligence platform that automatically records, transcribes, and summarizes meetings across Zoom, Google Meet, Microsoft Teams, and other video conferencing services. The platform provides a REST API for Enterprise customers to programmatically retrieve speech-to-text transcripts, speaker-identified conversation segments, and AI-generated meeting summaries. Developers can upload audio files, retrieve processed transcripts via webhooks, and integrate meeting intelligence into their own applications using bearer token authentication. Otter.ai also offers an MCP Server integration enabling AI assistants like Claude and ChatGPT to query meeting knowledge directly.
 finops:
-- name: Otter Ai Finops
+- has_sources: false
+  method: generated
+  name: Otter Ai Finops
+  primary_unit: ''
   service_category: ''
   slug: otter-ai-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/otter-ai.png
 jsonld:
 - class_count: 14
@@ -119,11 +123,15 @@ jsonld:
   property_count: 0
   slug: otter-ai-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.otter.ai over HTTP.
+  name: Otter.ai MCP Server
+  slug: otter-ai
 modified: '2026-06-13'
 name: Otter.ai
 nav: Providers
 network: true
-overview: 'Otter.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Transcription, Meeting Notes, Speech-to-Text, and Speaker Identification.
+overview: 'Otter.ai is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Transcription, Meeting Notes, Speech-to-Text, and Speaker Identification.
 
 
   The Otter.ai catalog on APIs.io includes 1 JSON-LD context.
@@ -140,29 +148,35 @@ rate_limits:
   name: Otter Ai Rate Limits
   slug: otter-ai-rate-limits
 score:
-  band: thin
-  composite: 28.4
+  band: emerging
+  composite: 18.9
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 72.0
+    artifact_dirs: 10
+    catalog_earned: 51.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    catalog_gap: 64.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 57.9
+    access_clarity: 26.3
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 2.4
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 28.4
+    discoverability: 68.3
+    operational_transparency: 28.9
+  previous_composite: 27.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

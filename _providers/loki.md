@@ -27,20 +27,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.0
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 0
   name: Loki Agentic Access
   operation_count: 27
   slug: loki-agentic-access
-  summary_line: 27 operations · 8 acting
+  summary_line: 27 operations · 7 acting
 api_count: 5
 apis:
 - baseURL: http://localhost:3100
@@ -92,6 +92,26 @@ collections:
   name: Loki HTTP API
   slug: open-loki
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/plans/loki-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/loki-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/rate-limits/loki-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/loki-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/finops/loki-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/loki-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/capabilities/loki-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/loki-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -146,19 +166,23 @@ common:
 created: '2026-03-25'
 description: Loki is an open source log aggregation system from Grafana Labs designed to store and query logs efficiently using labels instead of full-text indexing.
 finops:
-- name: Loki Finops
+- has_sources: false
+  method: generated
+  name: Loki Finops
+  primary_unit: ''
   service_category: API
   slug: loki-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/loki.png
 layout: provider
 modified: '2026-09-16'
 name: Loki
 nav: Providers
 network: true
-overview: 'Loki publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Config API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Open-Source, and Grafana.
+overview: 'Loki is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Config API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Open Source, and Grafana.
 
 
-  Loki''s developer surface includes documentation, engineering blog, and 10 more developer resources.'
+  Loki''s developer surface includes documentation, engineering blog, and 14 more developer resources.'
 plans:
 - name: Loki Plans Pricing
   plan_count: 3
@@ -170,26 +194,26 @@ rate_limits:
   slug: loki-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 27.0
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 34.0
+    artifact_dirs: 11
+    catalog_earned: 31.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 81.0
+    catalog_gap: 84.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 23.7
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 11.9
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 30.1
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -197,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -217,7 +247,7 @@ slug: loki
 tags:
 - Logging
 - Observability
-- Open-Source
+- Open Source
 - Grafana
 website: https://grafana.com/oss/loki/
 ---

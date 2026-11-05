@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -80,6 +80,21 @@ collections:
   name: Apache Spark Monitoring REST API
   slug: open-apache-spark
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-spark/refs/heads/main/plans/apache-spark-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apache-spark-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apache-spark/refs/heads/main/rate-limits/apache-spark-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apache-spark-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-spark/refs/heads/main/finops/apache-spark-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apache-spark-finops.yml
 - group: company
   title: ''
   type: Website
@@ -181,9 +196,13 @@ features:
 - description: Native Kubernetes scheduling for cloud-native deployment of Spark workloads.
   name: Kubernetes Native
 finops:
-- name: Apache Spark Finops
+- has_sources: false
+  method: generated
+  name: Apache Spark Finops
+  primary_unit: ''
   service_category: API
   slug: apache-spark-finops
+  template: true
 image: https://spark.apache.org/images/spark-logo-trademark.png
 integrations:
 - description: HDFS storage, YARN cluster manager, and Hadoop ecosystem integration.
@@ -205,10 +224,10 @@ modified: '2026-05-19'
 name: Apache Spark
 nav: Providers
 network: true
-overview: 'Apache Spark publishes 2 APIs on the [APIs.io](https://apis.io/) network: Applications API and Version API. Tagged areas include Analytics, Big Data, Distributed Computing, Machine-Learning, and Open-Source.
+overview: 'Apache Spark is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Version API, and 4 more. Tagged areas include Analytics, Big Data, Distributed Computing, Machine Learning, and Open Source.
 
 
-  Apache Spark''s developer surface includes developer portal, documentation, getting-started guide, engineering blog, support, Stack Overflow tag, and 14 more developer resources.'
+  Apache Spark''s developer surface includes developer portal, documentation, getting-started guide, engineering blog, support, Stack Overflow tag, and 17 more developer resources.'
 plans:
 - name: Apache Spark Plans Pricing
   plan_count: 3
@@ -219,27 +238,27 @@ rate_limits:
   name: Apache Spark Rate Limits
   slug: apache-spark-rate-limits
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 36.6
   coverage:
     artifact_dirs: 10
-    catalog_earned: 38.0
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 62.0
-    catalog_max: 100.0
+    catalog_gap: 74.0
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.7
   facets:
-    access_clarity: 28.6
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 54.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 23.7
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 39.5
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -247,8 +266,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -269,8 +294,8 @@ tags:
 - Analytics
 - Big Data
 - Distributed Computing
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - Streaming
 use_cases:
 - description: Extract, transform, and load petabytes of data across distributed clusters.

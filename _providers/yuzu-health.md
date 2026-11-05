@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 34
-  human_in_the_loop: 34
+- acting_count: 33
+  human_in_the_loop: 33
   name: Yuzu Health Agentic Access
   operation_count: 76
   slug: yuzu-health-agentic-access
-  summary_line: 76 operations · 34 acting · 34 human-in-the-loop
+  summary_line: 76 operations · 33 acting · 33 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.yuzu.health
@@ -270,14 +270,14 @@ modified: '2026-07-21'
 name: Yuzu Health
 nav: Providers
 network: true
-overview: 'Yuzu Health publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Accumulator (Experimental) API, Benefits API, Coverage API, and 7 more. Tagged areas include Company, Health, Healthcare, Insurance, and Health Plans.
+overview: 'Yuzu Health publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accumulator (Experimental) API, Benefits API, Coverage API, and 7 more. Tagged areas include Company, Health, Healthcare, Insurance, and Health Plans.
 
 
   Yuzu Health''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 22 more developer resources.'
 random_paper: 8
 score:
   band: developing
-  composite: 41.7
+  composite: 39.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -289,11 +289,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 45.0
+    contract_quality: 40.5
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 41.7
+  previous_composite: 39.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -309,9 +309,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

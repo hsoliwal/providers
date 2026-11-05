@@ -28,20 +28,20 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 3
+- acting_count: 2
   human_in_the_loop: 0
   name: Shufti Pro Agentic Access
   operation_count: 3
   slug: shufti-pro-agentic-access
-  summary_line: 3 operations · 3 acting
+  summary_line: 3 operations · 2 acting
 api_count: 1
 apis:
 - description: 'REST API for end-to-end identity verification including document verification, facial biometrics with liveness detection, address verification, AML screening against 1700+ watchlists, phone and email '
@@ -66,7 +66,7 @@ apis:
   description: The Verification API from Shufti Pro — 1 operation(s) for verification.
   name: Shufti Pro Verification API
   slug: shufti-pro-verification-api
-artifact_total: 17
+artifact_total: 18
 collections:
 - collection_type: open
   name: API Collection
@@ -150,9 +150,13 @@ common:
 created: '2026-06-13'
 description: Shufti Pro is an AI-powered identity verification platform offering a REST API for document verification, face biometrics, AML screening, business verification (KYB), and address verification. The platform supports 10,000+ document types across 230+ countries and territories, integrates with 1700+ AML watchlists, and provides mobile SDKs for Android, iOS, Flutter, and React Native.
 finops:
-- name: Shufti Pro Finops
+- has_sources: false
+  method: generated
+  name: Shufti Pro Finops
+  primary_unit: ''
   service_category: ''
   slug: shufti-pro-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/shufti-pro.png
 jsonld:
 - class_count: 18
@@ -160,11 +164,15 @@ jsonld:
   property_count: 27
   slug: shufti-pro-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at ai.shuftipro.com over HTTP.
+  name: Shufti Pro MCP Server
+  slug: shufti-pro
 modified: '2026-08-08'
 name: Shufti Pro
 nav: Providers
 network: true
-overview: 'Shufti Pro publishes 2 APIs on the [APIs.io](https://apis.io/) network: Status API and Verification API. Tagged areas include Identity Verification, KYC, AML, KYB, and Face Biometrics.
+overview: 'Shufti Pro publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Status API, Verification API, and 4 more. Tagged areas include Identity Verification, KYC, AML, KYB, and Face Biometrics.
 
 
   The Shufti Pro catalog on APIs.io includes 1 JSON-LD context.
@@ -181,24 +189,24 @@ rate_limits:
   name: Shufti Pro Rate Limits
   slug: shufti-pro-rate-limits
 score:
-  band: developing
-  composite: 43.1
+  band: thin
+  composite: 32.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 75.0
+    artifact_dirs: 16
+    catalog_earned: 54.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.0
+    catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.8
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 62.9
+    contract_quality: 57.4
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 43.1
+    discoverability: 68.3
+    operational_transparency: 26.3
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
@@ -207,9 +215,15 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 16.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

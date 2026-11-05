@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://actiobiosciences.com/category/press-releases/feed/
 - group: company
   title: ''
   type: Website
@@ -60,20 +64,20 @@ created: '2026-07-17'
 description: Actio Biosciences is a San Diego-based clinical-stage biotechnology company developing precision medicines that translate insights from Mendelian (single-gene) genetics into treatments for both rare and common diseases. Its pipeline targets genetically defined conditions including KCNT1-related epilepsy and TRPV4-related Charcot-Marie-Tooth disease type 2C (CMT2C), following a strategy of expanding from rare indications into more prevalent diseases that share the same underlying biology. The company is backed by Canaan Partners. Actio publishes no developer or API surface; this profile captures its public identity and corporate web properties.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/actio-biosciences.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Actio Biosciences
 nav: Providers
 network: true
 overview: 'Actio Biosciences is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Precision Medicine, Genetics, and Rare Disease.
 
 
-  Actio Biosciences'' developer surface includes engineering blog and 4 more developer resources.'
+  Actio Biosciences'' developer surface includes engineering blog and 5 more developer resources.'
 random_paper: 16
 score:
   band: minimal
-  composite: 9.7
+  composite: 8.4
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -85,10 +89,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
@@ -98,9 +104,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 9.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

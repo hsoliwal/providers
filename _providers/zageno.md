@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://go.zageno.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -68,20 +72,24 @@ created: '2026-07-17'
 description: ZAGENO is a multi-supplier e-commerce marketplace and procurement platform for pharma and life-science R&D labs. It lets scientists search, compare, and order more than 50 million SKUs from over 6,000 global suppliers through a single consolidated catalog and checkout, with real-time availability, spend visibility, and automated approval workflows. ZAGENO connects into enterprise procure-to-pay and ERP systems (Coupa, SAP Ariba, Jaggaer, Procurify, NetSuite, QuickBooks and more) through a single PunchOut/cXML catalog integration rather than a public developer API. Founded in 2015 and headquartered in Cambridge, Massachusetts, it is backed by General Catalyst, Grazia Equity, and Capnamic Ventures.
 image: https://production-lib.zageno.com/static/img/favicons/android-icon-192x192.png
 layout: provider
-modified: '2026-07-21'
+mcp_servers:
+- description: Remote MCP server at zageno.com over HTTP.
+  name: Zageno MCP Server
+  slug: zageno
+modified: '2026-10-06'
 name: Zageno
 nav: Providers
 network: true
 overview: 'Zageno is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Procurement, Marketplace, and E-Commerce.
 
 
-  Zageno''s developer surface includes engineering blog, support, and 5 more developer resources.'
+  Zageno''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 6
 score:
-  band: minimal
-  composite: 10.6
+  band: emerging
+  composite: 11.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -93,14 +101,16 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.6
+  previous_composite: 11.2
   provenance:
     mcp: first-party
   regulatory:
@@ -108,9 +118,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 6.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -125,7 +135,7 @@ tags:
 - Marketplace
 - E-Commerce
 - Lab Supplies
-- Biotech
+- Biotechnology
 - Punchout
 website: https://go.zageno.com/
 ---

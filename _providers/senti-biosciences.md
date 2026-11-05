@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.sentibio.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/senti-biosciences/refs/heads/main/security/senti-biosciences-domain-security.yml
   title: ''
@@ -57,17 +61,17 @@ created: '2026-07-17'
 description: 'Senti Biosciences (Nasdaq: SNTI) is a clinical-stage biotechnology company based in South San Francisco, California that engineers programmable "Gene Circuits" into cell and gene therapies to treat cancer with greater precision and control. Its lead candidate, SENTI-202, is an off-the-shelf logic-gated CAR NK cell therapy in clinical trials for acute myeloid leukemia and other hematologic malignancies. The company was surfaced as a portfolio company of lux-capital and menlo-ventures. As a therapeutics company it exposes no public developer API, SDK, or documentation surface; this profile captures its identity and probed domain-security posture.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/senti-biosciences.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Senti Biosciences
 nav: Providers
 network: true
-overview: Senti Biosciences is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotech, Biotechnology, Cell and Gene Therapy, and Gene Circuits.
+overview: Senti Biosciences is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Cell and Gene Therapy, Gene Circuits, and Oncology.
 random_paper: 13
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -79,22 +83,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 3.3
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -109,7 +115,6 @@ security:
 slug: senti-biosciences
 tags:
 - Company
-- Biotech
 - Biotechnology
 - Cell and Gene Therapy
 - Gene Circuits

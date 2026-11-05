@@ -22,18 +22,18 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 9.4
-  scored_at: '2026-09-20'
+  score: 7.0
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: REST-based interface for integrating external systems with Absorb LMS. Supports user management, course management, enrollment processing, certificate tracking, department administration, and e-learni
@@ -102,16 +102,20 @@ common:
 created: '2026-06-13'
 description: Absorb LMS is a cloud-based learning management system with a REST API for managing learners, courses, certificates, departments, enrollments, and tracking e-learning completion data. The Integration API provides a REST-based interface for integrating external systems with Absorb LMS, supporting user and enrollment management, course administration, and reporting.
 finops:
-- name: Absorb Finops
+- has_sources: false
+  method: generated
+  name: Absorb Finops
+  primary_unit: ''
   service_category: ''
   slug: absorb-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/absorb.png
 layout: provider
 modified: '2026-06-13'
 name: Absorb LMS
 nav: Providers
 network: true
-overview: 'Absorb LMS publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include LMS, Learning Management, E-Learning, Training, and Courses.
+overview: 'Absorb LMS is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include LMS, E-Learning, Training, Courses, and Enrollment.
 
 
   Absorb LMS''s developer surface includes documentation, support, engineering blog, changelog, release notes, getting-started guide, and 6 more developer resources.'
@@ -125,33 +129,33 @@ rate_limits:
   name: Absorb Rate Limits
   slug: absorb-rate-limits
 score:
-  band: thin
-  composite: 28.4
+  band: emerging
+  composite: 19.6
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 63.0
+    artifact_dirs: 8
+    catalog_earned: 45.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 74.1
-    operational_transparency: 44.7
-  previous_composite: 28.4
+    discoverability: 71.4
+    operational_transparency: 28.9
+  previous_composite: 27.0
   regulatory:
     applies: true
-    matched_via: tags
+    matched_via: weak_tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -165,7 +169,6 @@ security:
 slug: absorb
 tags:
 - LMS
-- Learning Management
 - E-Learning
 - Training
 - Courses

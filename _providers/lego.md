@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.lego.com/en-us/aboutus/newsroom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/lego/refs/heads/main/security/lego-vulnerability-disclosure.yml
   title: ''
@@ -90,42 +94,47 @@ created: '2026-05-05'
 description: The LEGO Group is a Danish toy company and the world's largest manufacturer of interlocking plastic building bricks. The company extends its brand across video games, theme parks, movies, educational products, and licensed sets for children and adults. LEGO does not currently publish a public developer API or developer portal; consumer-facing systems and partner integrations are closed. A public GitHub organization hosts internal engineering tooling and open-source contributions.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lego.png
 layout: provider
-modified: '2026-05-16'
+modified: '2026-10-06'
 name: Lego
 nav: Providers
 network: true
 overview: 'Lego is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Children, Education, Entertainment, Games, and Toys.
 
 
-  Lego''s developer surface includes product news and 11 more developer resources.'
+  Lego''s developer surface includes engineering blog, product news, and 11 more developer resources.'
 random_paper: 5
 score:
   band: minimal
-  composite: 5.3
+  composite: 5.5
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
-    discoverability: 57.4
+    developer_ergonomics: 2.4
+    discoverability: 56.3
     operational_transparency: 2.6
-  previous_composite: 5.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - denmark
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 4.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

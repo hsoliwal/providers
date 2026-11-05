@@ -23,10 +23,10 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: verified
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,9 +34,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.4
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 44.8
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.goethena.com
   baseurl_source: declared
@@ -91,6 +91,14 @@ collections:
   name: Ethena Learner Training Campaigns Webhooks API
   slug: open-goethena-webhooks-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.goethena.com/blog/categories/articles/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.goethena.com/blog/categories/articles/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/goethena/refs/heads/main/capabilities/goethena-capability-edges.yml
   title: ''
@@ -219,29 +227,37 @@ common:
   title: ''
   type: AgentSkill
   url: skills/_index.yml
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://help.goethena.com/hc/en-us/articles/28796851013773-Ethena-s-API
+- group: company
+  title: ''
+  type: Website
+  url: https://www.goethena.com
 created: '2026-07-17'
 description: Ethena (goethena.com) is an AI-powered compliance training and ethics platform used by 2,000+ organizations to run harassment prevention, code of conduct, data privacy, anti-bribery, and regulatory compliance programs across their workforce. Its Agentic Compliance product line pairs AI agents (Training, Disclosure, Policy, and Third-Party Risk) with a 200+ course library, an employee ethics hotline, HR case management, assignment automation, and reporting — with a human always approving what the agents draft. Ethena exposes a REST API (api.goethena.com) for managing learners, training campaigns, learner training campaigns and modules, and webhooks, so customers can sync roster and training-completion data with their HRIS and downstream systems. Backed by Felicis.
 image: https://www.goethena.com/wp-content/uploads/2025/12/Ethenas-Featured-Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.goethena.com over HTTP.
   name: Goethena MCP Server
-  slug: goethena-mcp-server
-modified: '2026-07-19'
+  slug: goethena-wordpress
+modified: '2026-10-06'
 name: Goethena
 nav: Providers
 network: true
-overview: 'Goethena publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Learner Training Campaigns API, Learner Training Modules API, Learners API, and 2 more. Tagged areas include Company, Compliance, Training, Human Resources, and Ethics.
+overview: 'Goethena publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Learner Training Campaigns API, Learner Training Modules API, Learners API, and 2 more. Tagged areas include Company, Compliance, Training, Human Resources, and Ethics.
 
 
   The Goethena catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
 
 
-  Goethena''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, authentication, and 21 more developer resources.'
+  Goethena''s developer surface includes engineering blog, documentation, API reference, support, pricing, signup flow, authentication, and 25 more developer resources.'
 random_paper: 7
 score:
   band: developing
-  composite: 48.7
+  composite: 45.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -253,11 +269,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 70.5
+    contract_quality: 64.6
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 48.7
+  previous_composite: 45.3
   provenance:
     conformance: derived
     contracts:
@@ -265,16 +281,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
-    matched_via: tags
+    matched_via: weak_tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -296,9 +312,12 @@ tags:
 - Training
 - Human Resources
 - Ethics
-- Learning Management
+- LMS
 - AI Agents
 - Governance
 - Workforce
+- Governance Risk and Compliance
+- Workflows
+- Webhook
 website: https://goethena.com
 ---

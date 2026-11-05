@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 1
+- acting_count: 0
   human_in_the_loop: 0
   name: Ubiquiti Agentic Access
   operation_count: 9
   slug: ubiquiti-agentic-access
-  summary_line: 9 operations · 1 acting
+  summary_line: 9 operations
 api_count: 1
 apis:
 - description: 'The UniFi Network Controller API is the local HTTP API exposed by every UniFi Network controller (UDM, UDM Pro, UDR, Cloud Key, self-hosted controller, UniFi OS consoles). Endpoints are prefixed with '
@@ -266,7 +266,7 @@ modified: '2026-05-25'
 name: Ubiquiti
 nav: Providers
 network: true
-overview: 'Ubiquiti publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Devices API, Hosts API, ISP Metrics API, and 2 more. Tagged areas include Networking, Wi-Fi, Switching, Routing, and Surveillance.
+overview: 'Ubiquiti publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Devices API, Hosts API, ISP Metrics API, and 5 more. Tagged areas include Networking, Wi-Fi, Switching, Routing, and Surveillance.
 
 
   Ubiquiti''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, engineering blog, support, and 27 more developer resources.'
@@ -281,23 +281,28 @@ rate_limits:
   slug: ubiquiti-rate-limits
 score:
   band: developing
-  composite: 51.9
+  composite: 44.1
   coverage:
     artifact_dirs: 10
-    catalog_earned: 56.0
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.7
   facets:
-    access_clarity: 65.8
+    access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 55.2
+    contract_quality: 49.7
     developer_ergonomics: 52.4
-    discoverability: 59.3
-    operational_transparency: 65.8
-  previous_composite: 51.9
+    discoverability: 57.1
+    operational_transparency: 42.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 50.8
   provenance:
     agentic_access: derived
     contracts:
@@ -305,9 +310,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

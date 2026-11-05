@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: TypeScript and Rust SDKs plus a CLI for creating and operating Squads multisigs (smart accounts) on Solana — creating multisigs, proposing, approving and executing transactions, and managing program-u
@@ -171,14 +171,14 @@ modified: '2026-07-21'
 name: Squads
 nav: Providers
 network: true
-overview: 'Squads publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure, Blockchain, Solana, and Multisig.
+overview: 'Squads is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure, Blockchain, Solana, and Multisig.
 
 
   Squads'' developer surface includes documentation, getting-started guide, API reference, engineering blog, pricing, signup flow, support, and 20 more developer resources.'
 random_paper: 19
 score:
-  band: developing
-  composite: 41.2
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -192,12 +192,12 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
   open_source:
     applies: true
     score: 35.0
-  previous_composite: 41.2
+  previous_composite: 39.2
   provenance:
     conformance: first-party
   regulatory:
@@ -205,9 +205,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

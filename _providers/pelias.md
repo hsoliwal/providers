@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,6 +81,21 @@ collections:
   name: Pelias Geocoding Autocomplete Reverse Geocoding API
   slug: open-pelias-reverse-geocoding-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pelias/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/pelias/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pelias/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: build
   title: ''
   type: CodeOfConduct
@@ -143,9 +158,13 @@ examples:
   name: Structured
   slug: structured
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://pelias.io/images/pelias-logo.png
 json_schemas:
 - name: Pelias Geocoding Response
@@ -156,13 +175,13 @@ modified: '2026-06-13'
 name: Pelias
 nav: Providers
 network: true
-overview: 'Pelias publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Autocomplete API, Forward Geocoding API, Place Lookup API, and 1 more. Tagged areas include Geocoding, Reverse Geocoding, Geospatial, Open-Source, and Elasticsearch.
+overview: 'Pelias publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Autocomplete API, Forward Geocoding API, Place Lookup API, and 1 more. Tagged areas include Geocoding, Reverse Geocoding, Geospatial, Open Source, and Elasticsearch.
 
 
   The Pelias catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Pelias'' developer surface includes documentation, status page, support, and 8 more developer resources.'
+  Pelias'' developer surface includes documentation, status page, support, and 11 more developer resources.'
 plans:
 - name: Plans
   plan_count: 5
@@ -173,9 +192,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Pelias API Rules
+  name: Pelias — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -184,24 +204,27 @@ rules:
     warn: 4
   slug: pelias-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 31.4
+  band: emerging
+  composite: 23.8
   coverage:
     artifact_dirs: 14
-    catalog_earned: 55.3
+    catalog_earned: 43.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.8
+    catalog_gap: 71.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.1
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 31.4
+  open_source:
+    applies: true
+    score: 40.0
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     contracts:
@@ -209,9 +232,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
@@ -227,7 +256,7 @@ tags:
 - Geocoding
 - Reverse Geocoding
 - Geospatial
-- Open-Source
+- Open Source
 - Elasticsearch
 - OpenStreetMap
 - Addresses

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: First-party in-world scripting API for IMVU Live Rooms. Room scripts are single-file Lua programs executed server-side in a Luau sandbox; the engine calls event functions (event_start, event_begin_ite
@@ -47,6 +47,10 @@ apis:
   slug: imvu-rest-api
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://togetherlabs.com/press/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/imvu/refs/heads/main/security/imvu-domain-security.yml
   title: ''
@@ -142,14 +146,14 @@ created: '2026-08-23'
 description: 'Together Labs (Palo Alto, California) is the company behind IMVU, the 3D avatar-based social network and virtual-goods marketplace, alongside MetaJuice, its blockchain arm, and the VCOIN transferable digital currency. Its developer surface is unusual for a consumer platform: the public developer program that once issued API keys was retired, but api.imvu.com remains a live, publicly readable hypermedia REST API — a "denormalized" node envelope over users, products, rooms and derivation relationships — and Together Labs publishes a genuinely documented, first-party in-world scripting API for IMVU rooms in Lua/Luau on GitHub, complete with an event model, an imvu.* method surface, a persistent key/value data module and published resource limits. Neither surface ships an OpenAPI, an AsyncAPI, an MCP server, an agent card or an llms.txt.'
 image: https://togetherlabs.com/wp-content/uploads/2021/01/together-labs-logo.png
 layout: provider
-modified: '2026-08-23'
+modified: '2026-10-06'
 name: Together Labs
 nav: Providers
 network: true
-overview: 'Together Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Social Networking, Virtual Worlds, Metaverse, and Gaming.
+overview: 'Together Labs is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Social Network, Virtual Worlds, Metaverse, and Gaming.
 
 
-  Together Labs'' developer surface includes documentation, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
+  Together Labs'' developer surface includes engineering blog, documentation, support, pricing, signup flow, and 16 more developer resources.'
 plans:
 - name: Imvu Plans Pricing
   plan_count: 5
@@ -161,7 +165,7 @@ rate_limits:
   slug: imvu-rate-limits
 score:
   band: thin
-  composite: 30.3
+  composite: 30.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 51.0
@@ -169,20 +173,26 @@ score:
     catalog_gap: 64.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 34.2
-  previous_composite: 30.3
+  previous_composite: 30.5
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -201,7 +211,7 @@ security:
 slug: imvu
 tags:
 - Company
-- Social Networking
+- Social Network
 - Virtual Worlds
 - Metaverse
 - Gaming

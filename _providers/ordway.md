@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -218,6 +218,11 @@ collections:
   name: Ordway REST Billing Runs Webhooks API
   slug: open-ordway-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ordway/refs/heads/main/capabilities/ordway-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ordway-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ordway/refs/heads/main/agentic-access/ordway-agentic-access.yml
   title: ''
@@ -295,9 +300,13 @@ examples:
   name: Usage Example
   slug: usage-example
 finops:
-- name: Ordway Finops
+- has_sources: false
+  method: generated
+  name: Ordway Finops
+  primary_unit: ''
   service_category: ''
   slug: ordway-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ordway.png
 json_schemas:
 - name: Customer
@@ -322,13 +331,13 @@ modified: 2026-06-13
 name: Ordway
 nav: Providers
 network: true
-overview: 'Ordway publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Billing Runs API, Billing Schedules API, Chart of Accounts API, and 18 more. Tagged areas include Billing, Revenue Automation, Subscription, Invoicing, and Payments.
+overview: 'Ordway publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing Runs API, Billing Schedules API, Chart of Accounts API, and 18 more. Tagged areas include Billing, Revenue Automation, Subscription, Invoicing, and Payments.
 
 
   The Ordway catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Ordway''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
+  Ordway''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Ordway Plans Pricing
   plan_count: 1
@@ -339,9 +348,10 @@ rate_limits:
   name: Ordway Rate Limits
   slug: ordway-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Ordway API Rules
+  name: Ordway — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -351,23 +361,23 @@ rules:
   slug: ordway-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 34.4
+  composite: 28.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 59.3
+    artifact_dirs: 17
+    catalog_earned: 50.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.8
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 58.8
+    contract_quality: 53.6
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 34.4
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     contracts:
@@ -380,9 +390,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

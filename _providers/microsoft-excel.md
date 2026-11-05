@@ -22,19 +22,19 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-09-20'
+  score: 29.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -192,6 +192,21 @@ collections:
   name: Microsoft Graph Excel Charts Worksheets API
   slug: open-microsoft-excel-worksheets-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-excel/refs/heads/main/plans/microsoft-excel-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/microsoft-excel-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-excel/refs/heads/main/rate-limits/microsoft-excel-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/microsoft-excel-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-excel/refs/heads/main/finops/microsoft-excel-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/microsoft-excel-finops.yml
 - group: operate
   title: ''
   type: StatusPage
@@ -440,9 +455,13 @@ features:
 - description: Define and manage named ranges for reusable cell references.
   name: Named Ranges
 finops:
-- name: Microsoft Excel Finops
+- has_sources: true
+  method: generated
+  name: Microsoft Excel Finops
+  primary_unit: ''
   service_category: Productivity
   slug: microsoft-excel-finops
+  template: false
 image: https://learn.microsoft.com/en-us/graph/images/excel-logo.png
 json_schemas:
 - name: Chart
@@ -498,13 +517,13 @@ modified: '2026-06-20'
 name: Microsoft Excel
 nav: Providers
 network: true
-overview: 'Microsoft Excel publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Charts API, Functions API, Named Items API, and 6 more. Tagged areas include Automation, Data Analysis, Microsoft, Microsoft-365, and Office.
+overview: 'Microsoft Excel is listed with 11 APIs on the [APIs.io](https://apis.io/) network, including Charts API, Functions API, Named Items API, and 8 more. Tagged areas include Automation, Data Analysis, Microsoft, Microsoft 365, and Office.
 
 
   The Microsoft Excel catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Microsoft Excel''s developer surface includes authentication, changelog, CLI, sandbox, support, pricing, engineering blog, and 37 more developer resources.'
+  Microsoft Excel''s developer surface includes authentication, changelog, CLI, sandbox, support, pricing, engineering blog, and 40 more developer resources.'
 plans:
 - name: Microsoft Excel Plans Pricing
   plan_count: 5
@@ -515,9 +534,10 @@ rate_limits:
   name: Microsoft Excel Rate Limits
   slug: microsoft-excel-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Microsoft Excel API Rules
+  name: Microsoft Excel — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -525,7 +545,8 @@ rules:
     info: 2
     warn: 3
   slug: microsoft-excel-jsonschema-spectral-rules
-- effective_rule_count: 70
+- authorship: generated
+  effective_rule_count: 70
   extends:
   - spectral:oas
   name: Microsoft Excel API Rules
@@ -543,23 +564,23 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: developing
-  composite: 48.2
+  composite: 50.5
   coverage:
-    artifact_dirs: 33
-    catalog_earned: 74.5
+    artifact_dirs: 34
+    catalog_earned: 70.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.5
+    catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 50.0
-    contract_governance: 33.3
-    contract_quality: 31.9
+    access_clarity: 42.1
+    contract_governance: 31.8
+    contract_quality: 31.2
     developer_ergonomics: 79.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 34.2
-  previous_composite: 48.2
+  previous_composite: 52.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -569,8 +590,14 @@ score:
       marker_coverage: 100.0
       total: 10
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -598,7 +625,7 @@ tags:
 - Automation
 - Data Analysis
 - Microsoft
-- Microsoft-365
+- Microsoft 365
 - Office
 - Spreadsheets
 use_cases:

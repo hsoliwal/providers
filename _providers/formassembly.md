@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.4
-  scored_at: '2026-09-20'
+  score: 48.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 1
@@ -80,7 +80,7 @@ apis:
   description: OAuth2 authorization code flow for obtaining access tokens
   name: FormAssembly O Auth2 API
   slug: formassembly-oauth2-api
-artifact_total: 41
+artifact_total: 42
 collections:
 - collection_type: postman
   name: FormAssembly REST Admin API
@@ -233,9 +233,13 @@ examples:
   name: Formassembly Response Export Example
   slug: formassembly-response-export-example
 finops:
-- name: Formassembly Finops
+- has_sources: false
+  method: generated
+  name: Formassembly Finops
+  primary_unit: ''
   service_category: ''
   slug: formassembly-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/formassembly.png
 json_schemas:
 - name: FormAssembly Connector
@@ -256,11 +260,15 @@ jsonld:
   property_count: 34
   slug: formassembly-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.formassembly.com over HTTP.
+  name: FormAssembly MCP Server
+  slug: formassembly
 modified: 2026-06-13
 name: FormAssembly
 nav: Providers
 network: true
-overview: 'FormAssembly publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Aggregates API, Connectors API, Form Elements API, and 4 more. Tagged areas include Forms, Data Collection, Salesforce, Enterprise, and HIPAA.
+overview: 'FormAssembly publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aggregates API, Connectors API, Form Elements API, and 4 more. Tagged areas include Forms, Data Collection, Salesforce, Enterprise, and HIPAA.
 
 
   The FormAssembly catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -277,9 +285,10 @@ rate_limits:
   name: Formassembly Rate Limits
   slug: formassembly-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: FormAssembly API Rules
+  name: FormAssembly — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -294,23 +303,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 53.9
+  composite: 40.1
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 83.3
+    artifact_dirs: 21
+    catalog_earned: 61.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.8
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 60.1
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 54.8
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 53.9
+    discoverability: 68.3
+    operational_transparency: 28.9
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     contracts:
@@ -324,10 +333,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 59.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 31.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

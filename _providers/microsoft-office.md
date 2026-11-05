@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.2
-  scored_at: '2026-09-20'
+  score: 30.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -123,6 +123,21 @@ collections:
   name: Microsoft Graph API (Office 365 subset)
   slug: open-microsoft-office
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/plans/microsoft-office-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/microsoft-office-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/rate-limits/microsoft-office-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/microsoft-office-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/finops/microsoft-office-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/microsoft-office-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/agentic-access/microsoft-office-agentic-access.yml
   title: ''
@@ -310,9 +325,13 @@ common:
 created: '2024-01-01'
 description: A collection of APIs for Microsoft Office applications and services, providing programmatic access to Word, Excel, PowerPoint, Outlook, OneDrive, and Teams through Microsoft Graph and Office JavaScript APIs.
 finops:
-- name: Microsoft Office Finops
+- has_sources: false
+  method: generated
+  name: Microsoft Office Finops
+  primary_unit: ''
   service_category: API
   slug: microsoft-office-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-office.png
 layout: provider
 mcp_servers:
@@ -323,10 +342,10 @@ modified: '2026-06-20'
 name: Microsoft Office
 nav: Providers
 network: true
-overview: 'Microsoft Office publishes 3 APIs on the [APIs.io](https://apis.io/) network: Drive API, Mail API, and Teams API. Tagged areas include Collaboration, Documents, Microsoft, Office, and Productivity.
+overview: 'Microsoft Office is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Drive API, Mail API, Teams API, and 7 more. Tagged areas include Collaboration, Documents, Microsoft, Office, and Productivity.
 
 
-  Microsoft Office''s developer surface includes changelog, CLI, sandbox, authentication, developer portal, documentation, engineering blog, and 32 more developer resources.'
+  Microsoft Office''s developer surface includes changelog, CLI, sandbox, authentication, developer portal, documentation, engineering blog, and 35 more developer resources.'
 plans:
 - name: Microsoft Office Plans Pricing
   plan_count: 3
@@ -343,23 +362,23 @@ scopes:
   summary_line: 16 scopes · authorizationCode
 score:
   band: developing
-  composite: 51.8
+  composite: 53.4
   coverage:
     artifact_dirs: 27
-    catalog_earned: 49.0
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 55.3
+    access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 50.3
+    contract_quality: 45.6
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 51.8
+  previous_composite: 54.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -369,8 +388,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

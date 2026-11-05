@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -51,16 +51,40 @@ apis:
   baseurl_source: declared
   description: Synchronous (v1) and asynchronous (v2) model inference. v2 is the current contract — submit a job, poll a lightweight status endpoint, fetch the result — and reports cost, remaining credits and timing
   name: Segmind Inference API
+  phrasing_intents:
+  - id: invokeModelSync
+    intent: Run a model and wait for the output
+    question: How do I call a model like fast-flux-schnell and get the result back in the same response?
+  - id: invokeModelAsync
+    intent: Queue a model request to run in the background
+    question: How do I submit a long-running model job and get a request ID to check on later?
+  - id: getRequestStatus
+    intent: Check whether an async request has finished
+    question: Is my queued model request still processing or has it completed?
+  - id: getRequestResult
+    intent: Get the full output of an async request
+    question: Where do I fetch the generated output once my async model request completes?
+  phrasing_ops: 4
   slug: segmind-inference-api
 - baseURL: https://api.segmind.com
   baseurl_source: declared
   description: Read the account's spendable and free credit balance. Runs no model and costs nothing, and is the documented way to verify that an API key works.
   name: Segmind Account API
+  phrasing_intents:
+  - id: getUserCredits
+    intent: Check my remaining credit balance
+    question: How many Segmind credits do I have left on my account?
+  phrasing_ops: 1
   slug: segmind-account-api
 - baseURL: https://workflows-api.segmind.com
   baseurl_source: declared
   description: Upload a file to Segmind Storage and get a reusable URL to pass as an image input to any model, instead of re-uploading the same file. Served from the workflows host.
   name: Segmind Storage API
+  phrasing_intents:
+  - id: uploadAsset
+    intent: Upload a file as a reusable asset
+    question: How do I upload an image so I can reuse it as an input across model requests?
+  phrasing_ops: 1
   slug: segmind-storage-api
 - description: Call a published PixelFlow workflow over REST. Submit to POST /workflows/v2/{slug} with the key names given to the workflow's input nodes, poll the status URL, and fetch the result — the same async co
   name: Segmind PixelFlow Workflow API
@@ -72,6 +96,26 @@ apis:
   baseurl_source: declared
   description: DEPRECATED. Fine-tuning request management and data handling. Segmind's fine-tuning service no longer accepts new training jobs; existing fine-tuned models remain available for inference until further
   name: Segmind Fine-tuning API
+  phrasing_intents:
+  - id: submitFinetune
+    intent: Start a fine-tuning job
+    question: How do I kick off fine-tuning a model on my own training data?
+  - id: getFinetuneDetails
+    intent: Get details of a fine-tuning request
+    question: What is the progress and configuration of one specific fine-tune request?
+  - id: listFinetuneRequests
+    intent: List my fine-tuning requests
+    question: Which fine-tuning jobs have I submitted so far?
+  - id: updateFinetuneAccess
+    intent: Make a fine-tuned model public or private
+    question: How do I make my fine-tuned model public so others can use it?
+  - id: getFinetuneUploadUrl
+    intent: Get a pre-signed URL to upload training data
+    question: Where do I upload my training images before starting a fine-tune?
+  - id: downloadFinetuneFile
+    intent: Download trained model weights
+    question: How do I download the weights of a model I fine-tuned?
+  phrasing_ops: 6
   slug: segmind-fine-tuning-api
 artifact_total: 21
 asyncapis:
@@ -271,16 +315,20 @@ common:
 created: '2025-03-01'
 description: Segmind is a serverless GPU inference platform that puts 200+ generative AI models — image, video, audio, 3D and LLM — behind one REST gateway with a single API key. Calls are metered per GPU-second or per generation against a prepaid credit balance, with the cost of every request reported inline on the response. The v2 asynchronous API is a submit-poll-fetch job contract built for long-running video and upscaling work, while the v1 synchronous route remains for fast models. Alongside the gateway, PixelFlow is a visual workflow builder that chains models on a canvas and publishes any workflow as its own production REST API, and dedicated endpoints run a chosen model on reserved GPUs with autoscaling. A first-party Python SDK, a browser playground, media-editing endpoints and a weekly dated changelog round out the developer surface.
 finops:
-- name: Segmind Finops
+- has_sources: false
+  method: generated
+  name: Segmind Finops
+  primary_unit: ''
   service_category: API
   slug: segmind-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/segmind.png
 layout: provider
 modified: '2026-08-27'
 name: Segmind
 nav: Providers
 network: true
-overview: 'Segmind publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Inference API, Account API, Storage API, and 1 more. Tagged areas include Artificial Intelligence, Machine-Learning, Generative AI, Inference, and Image-Generation.
+overview: 'Segmind publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Inference API, Account API, Storage API, and 4 more. Tagged areas include Artificial Intelligence, Machine Learning, Generative AI, Inference, and Image Generation.
 
 
   The Segmind catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -303,23 +351,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: exemplar
-  composite: 67.2
+  composite: 66.9
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 64.0
+    artifact_dirs: 28
+    catalog_earned: 61.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.9
   facets:
-    access_clarity: 92.1
+    access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 57.7
+    contract_quality: 52.8
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 67.2
+  previous_composite: 68.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -330,8 +378,14 @@ score:
       total: 4
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -349,13 +403,11 @@ security:
 slug: segmind
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Generative AI
 - Inference
-- Image-Generation
+- Image Generation
 - Video Generation
-- Text-to-Image
-- Text-to-Video
 - Serverless
 - GPU
 - Workflows

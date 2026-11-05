@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -55,36 +55,125 @@ apis:
   baseurl_source: declared
   description: Comment management and moderation
   name: Instagram Comments API
+  phrasing_intents:
+  - id: getMediaComments
+    intent: List the comments on a post
+    question: How do I pull all the comments people left on one of my Instagram posts?
+  - id: createComment
+    intent: Post a new comment on a media item
+    question: Can I leave a top-level comment on an Instagram post through the API?
+  - id: getComment
+    intent: Look up a single comment
+    question: How do I fetch the details of one specific comment by its ID?
+  - id: hideComment
+    intent: Hide or unhide a comment on my media
+    question: Can I hide an abusive comment on my post without deleting it?
+  - id: deleteComment
+    intent: Delete a comment from my media
+    question: How do I permanently remove a spam comment from one of my posts?
+  - id: getCommentReplies
+    intent: List the replies to a comment
+    question: How can I see the threaded replies under a particular comment?
+  - id: createCommentReply
+    intent: Reply to a comment
+    question: Can I respond directly to a follower's comment instead of posting a new top-level one?
+  phrasing_ops: 7
   slug: instagram-comments-api
 - baseURL: https://graph.facebook.com
   baseurl_source: declared
   description: Hashtag search and media discovery
   name: Instagram Hashtags API
+  phrasing_intents:
+  - id: searchHashtag
+    intent: Find a hashtag's ID by name
+    question: 'How do I get the ID for a hashtag like #travel so I can look up its posts?'
+  - id: getHashtagTopMedia
+    intent: Get the most popular posts for a hashtag
+    question: What are the top-performing posts tagged with a given hashtag?
+  - id: getHashtagRecentMedia
+    intent: Get the latest posts for a hashtag
+    question: How do I monitor the newest posts that use a campaign hashtag?
+  phrasing_ops: 3
   slug: instagram-hashtags-api
 - baseURL: https://graph.instagram.com
   baseurl_source: declared
   description: Account and media level analytics
   name: Instagram Insights API
+  phrasing_intents:
+  - id: getUserInsights
+    intent: Get engagement metrics for my account
+    question: How do I see account-level reach and impressions for my Instagram business profile?
+  - id: getMediaInsights
+    intent: Get engagement metrics for one post
+    question: How many people engaged with a single post or reel I published?
+  phrasing_ops: 2
   slug: instagram-insights-api
 - baseURL: https://graph.instagram.com
   baseurl_source: declared
   description: Photos, videos, stories, reels, and carousels
   name: Instagram Media API
+  phrasing_intents:
+  - id: getUserMedia
+    intent: List the posts published on an account
+    question: How do I list everything an Instagram account has posted?
+  - id: getUserStories
+    intent: List an account's stories
+    question: How can I fetch the stories currently on my Instagram account?
+  - id: getMedia
+    intent: Get details of a photo, video, reel or album
+    question: How do I look up the caption, type and permalink of a single post by its media ID?
+  - id: updateMedia
+    intent: Turn comments on or off for a post
+    question: Can I disable commenting on a post that's attracting trolls?
+  - id: deleteMedia
+    intent: Delete a post, story, reel or carousel
+    question: How do I take down a post I published by mistake?
+  - id: getMediaChildren
+    intent: List the items inside a carousel album
+    question: How do I get the individual photos and videos inside a carousel post?
+  phrasing_ops: 6
   slug: instagram-media-api
 - baseURL: https://graph.instagram.com
   baseurl_source: declared
   description: Content where account was mentioned
   name: Instagram Mentions API
+  phrasing_intents:
+  - id: getUserTags
+    intent: List posts where an account was tagged
+    question: How do I find posts where other people tagged my Instagram account?
+  phrasing_ops: 1
   slug: instagram-mentions-api
 - baseURL: https://graph.instagram.com
   baseurl_source: declared
   description: Content creation and publishing workflow
   name: Instagram Publishing API
+  phrasing_intents:
+  - id: createMediaContainer
+    intent: Prepare a photo or video for publishing
+    question: What's the first step to post a photo to Instagram through the API?
+  - id: publishMedia
+    intent: Publish a prepared media container
+    question: Once my container is ready, how do I actually make the post go live?
+  - id: getContentPublishingLimit
+    intent: Check how many posts I can still publish
+    question: How close am I to the publishing rate limit on my account?
+  - id: getContainer
+    intent: Check the status of a media container
+    question: Is my uploaded video container finished processing and ready to publish?
+  phrasing_ops: 4
   slug: instagram-publishing-api
 - baseURL: https://graph.instagram.com
   baseurl_source: declared
   description: Instagram Business and Creator account profiles
   name: Instagram Users API
+  phrasing_intents:
+  - id: getUser
+    intent: Get my business or creator profile
+    question: How do I read the follower count and bio of my own Instagram business account?
+  - id: getBusinessDiscovery
+    intent: Look up another business or creator account
+    question: Can I see public stats for another brand's Instagram business account?
+  phrasing_ops: 2
   slug: instagram-users-api
 artifact_total: 97
 asyncapis:
@@ -138,6 +227,10 @@ collections:
   name: Instagram Graph Comments Users API
   slug: open-instagram-users-api
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://developers.facebook.com/docs/graph-api/overview/access-levels
 - group: company
   title: ''
   type: Website
@@ -449,9 +542,13 @@ features:
 - description: Send private direct messages in response to public comments on your Instagram media.
   name: Private Replies
 finops:
-- name: Instagram Finops
+- has_sources: true
+  method: generated
+  name: Instagram Finops
+  primary_unit: ''
   service_category: Social Media APIs
   slug: instagram-finops
+  template: false
 image: /assets/icons/instagram.png
 integrations:
 - description: Unified management of Instagram and Facebook content, messaging, and advertising through the Meta platform.
@@ -540,13 +637,13 @@ modified: '2026-08-29'
 name: Instagram
 nav: Providers
 network: true
-overview: 'Instagram publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Comments API, Hashtags API, Insights API, and 4 more. Tagged areas include Instagram, Meta, Photos, Social-Media, and Video.
+overview: 'Instagram publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Comments API, Hashtags API, Insights API, and 6 more. Tagged areas include Instagram, Meta, Photos, Social Media, and Video.
 
 
   The Instagram catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Instagram''s developer surface includes authentication, developer portal, changelog, support, engineering blog, getting-started guide, documentation, and 46 more developer resources.'
+  Instagram''s developer surface includes pricing, authentication, developer portal, changelog, support, engineering blog, getting-started guide, and 47 more developer resources.'
 plans:
 - name: Instagram Plans Pricing
   plan_count: 2
@@ -557,9 +654,10 @@ rate_limits:
   name: Instagram Rate Limits
   slug: instagram-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Instagram API Rules
+  name: Instagram — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -567,7 +665,8 @@ rules:
     info: 1
     warn: 4
   slug: instagram-jsonschema-spectral-rules
-- effective_rule_count: 65
+- authorship: generated
+  effective_rule_count: 65
   extends:
   - spectral:oas
   name: Instagram API Rules
@@ -584,24 +683,24 @@ scopes:
   slug: instagram-scopes
   summary_line: 19 scopes · authorizationCode
 score:
-  band: strong
-  composite: 65.4
+  band: exemplar
+  composite: 67.4
   coverage:
     artifact_dirs: 35
-    catalog_earned: 80.5
+    catalog_earned: 77.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 34.5
+    catalog_gap: 38.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
-    access_clarity: 52.6
-    contract_governance: 47.0
-    contract_quality: 70.3
+    access_clarity: 55.3
+    contract_governance: 45.5
+    contract_quality: 65.1
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 76.3
-  previous_composite: 65.4
+  previous_composite: 66.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -612,8 +711,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -646,9 +751,10 @@ tags:
 - Instagram
 - Meta
 - Photos
-- Social-Media
+- Social Media
 - Video
 - Content Publishing
+- Social
 use_cases:
 - description: Automate content publishing, scheduling, and media management across Instagram accounts.
   name: Social Media Management

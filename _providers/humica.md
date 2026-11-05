@@ -22,7 +22,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.8
-  scored_at: '2026-09-20'
+  score: 6.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for the Employment Hero platform (behind humi.ca) — employees, organisations, payroll, leave, timesheets, rostering, documents, and webhooks. OAuth 2.0 authorization-code with PKCE; Bearer to
@@ -41,6 +41,14 @@ apis:
   slug: employment-hero-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://employmenthero.com/en-ca/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://employmenthero.com/en-ca/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/humica/refs/heads/main/security/humica-vulnerability-disclosure.yml
   title: ''
@@ -159,14 +167,14 @@ created: '2026-07-17'
 description: humi.ca is the Canadian HR, payroll, benefits, and hiring platform originally built as Humi and now operating as Employment Hero Canada (humi.ca redirects to employmenthero.com/en-ca). The platform is an all-in-one Employment Operating System covering HR management, payroll processing, applicant tracking (ATS), employee experience, learning, and Employer-of-Record hiring across 180+ countries. Employment Hero exposes a public REST API at api.employmenthero.com, secured with OAuth 2.0 authorization-code plus PKCE (mandatory from 2026-09-14), with documented resources spanning employees, organisations, payroll, leave, timesheets, rostering, documents, and webhooks, plus a partner integration marketplace (Xero, QuickBooks, Slack, Google Workspace, Microsoft 365, Square, Indeed, LinkedIn and more).
 image: https://employmenthero.com/favicon.ico
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: humi.ca
 nav: Providers
 network: true
-overview: 'humi.ca publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Human Resources, Payroll, Benefits, and Applicant Tracking.
+overview: 'humi.ca is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Human Resources, Payroll, Benefits, and Applicant Tracking.
 
 
-  humi.ca''s developer surface includes documentation, API reference, authentication, changelog, support, engineering blog, and 19 more developer resources.'
+  humi.ca''s developer surface includes engineering blog, documentation, API reference, authentication, changelog, support, and 21 more developer resources.'
 random_paper: 15
 scopes:
 - name: Humica Scopes
@@ -175,7 +183,7 @@ scopes:
   summary_line: 2 scopes
 score:
   band: thin
-  composite: 28.8
+  composite: 31.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -189,7 +197,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -198,12 +206,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.8
+  previous_composite: 31.8
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -233,5 +247,6 @@ tags:
 - Employer of Record
 - Canada
 - Software-as-a-Service
+- Employee Benefits
 website: https://employmenthero.com/en-ca/
 ---

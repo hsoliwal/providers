@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: documented
@@ -22,17 +22,21 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 30.7
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.latchkey.dev
   baseurl_source: declared
   description: Create, submit, observe and cancel runner jobs.
   name: Latchkey Jobs API Jobs API
   slug: latchkey-jobs-api
-artifact_total: 8
+artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://latchkey.dev/blog/rss.xml
 - group: agent
   title: ''
   type: MCPServer
@@ -178,18 +182,15 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Latchkey Jobs API MCP Server
-  slug: latchkey-jobs-api-mcp-server
-- description: ''
-  name: Latchkey Jobs API MCP Server
-  slug: latchkey-jobs-api-mcp-server-2
-modified: '2026-09-07'
+  slug: mcp
+modified: '2026-10-06'
 name: Latchkey Jobs API
 nav: Providers
 network: true
-overview: 'Latchkey Jobs API publishes 1 API on the [APIs.io](https://apis.io/) network: Jobs API. Tagged areas include CI/CD, DevOps, GitHub Actions, Ephemeral Compute, and Build & Test Infrastructure.
+overview: 'Latchkey Jobs API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Jobs API. Tagged areas include CI/CD, DevOps, GitHub Actions, Ephemeral Compute, and Build & Test Infrastructure.
 
 
-  Latchkey Jobs API''s developer surface includes authentication, CLI, documentation, getting-started guide, support, engineering blog, pricing, and 23 more developer resources.'
+  Latchkey Jobs API''s developer surface includes authentication, CLI, documentation, getting-started guide, support, engineering blog, pricing, and 24 more developer resources.'
 plans:
 - name: Latchkey Plans Pricing
   plan_count: 4
@@ -201,23 +202,23 @@ rate_limits:
   slug: latchkey-rate-limits
 score:
   band: developing
-  composite: 51.6
+  composite: 52.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 59.2
+    contract_quality: 53.3
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 51.6
+  previous_composite: 52.2
   provenance:
     conformance: derived
     contracts:
@@ -227,12 +228,19 @@ score:
       total: 1
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://raw.githubusercontent.com/api-evangelist/latchkey/refs/heads/main/screenshots/latchkey-2026-10-11T110327.png
 security:
 - kind: authentication
   name: Latchkey Authentication
@@ -253,7 +261,7 @@ tags:
 - GitHub Actions
 - Ephemeral Compute
 - Build & Test Infrastructure
-- agent-native
+- Agent-Native
 - AI Coding Agents
 - Developer Tools
 website: https://latchkey.dev/

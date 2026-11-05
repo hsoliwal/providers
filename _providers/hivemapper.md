@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - baseURL: https://beemaps.com/api/developer
@@ -63,7 +63,7 @@ apis:
   description: ML-detected road objects and features.
   name: Hivemapper Map Features API
   slug: hivemapper-map-features-api
-artifact_total: 14
+artifact_total: 15
 collections:
 - collection_type: open
   name: API Collection
@@ -84,6 +84,11 @@ collections:
   name: Bee Maps (Hivemapper) Developer Account Map Features API
   slug: open-hivemapper-map-features-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/hivemapper/refs/heads/main/plans/hivemapper-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/hivemapper-plans-pricing.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/hivemapper/refs/heads/main/overlays/hivemapper-beemaps-overlay.yaml
   title: ''
@@ -201,35 +206,39 @@ layout: provider
 mcp_servers:
 - description: Bee Maps exposes an MCP Streamable HTTP endpoint on the Developer API that accepts JSON-RPC messages. Authentication is via the apiKey parameter (the same API key used for the REST Developer API).
   name: Hivemapper MCP Server
-  slug: hivemapper-mcp-server
+  slug: bee-maps
 modified: '2026-07-19'
 name: Hivemapper
 nav: Providers
 network: true
-overview: 'Hivemapper publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI Events API, Bursts API, and 2 more. Tagged areas include Company, Logistics, Mapping, Geospatial, and Imagery.
+overview: 'Hivemapper is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI Events API, Bursts API, and 2 more. Tagged areas include Company, Logistics, Mapping, Geospatial, and Imagery.
 
 
-  Hivemapper''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, support, and 18 more developer resources.'
+  Hivemapper''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, support, and 19 more developer resources.'
+plans:
+- name: Hivemapper Plans Pricing
+  plan_count: 6
+  slug: hivemapper-plans-pricing
 random_paper: 17
 score:
-  band: thin
-  composite: 36.9
+  band: developing
+  composite: 44.1
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    artifact_dirs: 21
+    catalog_earned: 52.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 76.3
     contract_governance: 4.5
     contract_quality: 14.2
     developer_ergonomics: 80.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 36.9
+  previous_composite: 37.7
   provenance:
     conformance: derived
     contracts:
@@ -239,9 +248,15 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -265,7 +280,7 @@ tags:
 - Location
 - Street View
 - Mobility
-- Machine-Learning
+- Machine Learning
 - Web3
 website: https://hivemapper.com
 ---

@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/level-frames/refs/heads/main/security/level-frames-domain-security.yml
@@ -86,6 +86,10 @@ created: '2026-07-17'
 description: Level Frames is a New York City based online custom framing company founded in 2014 by Josh Hubball and Damian Sowers and backed by Y Combinator (Winter 2015). The company lets customers design and order handcrafted, made-to-order picture frames from home, either by uploading a digital photo for printing and framing or by shipping in physical artwork, posters and prints. Its catalog covers custom frames, framed canvas prints, framed vinyl records, collage frames, gallery walls, personalized framed photos, and framed chalkboards, whiteboards and corkboards, alongside at-home and in-studio framing services. Level Frames operates a direct-to-consumer web storefront and publishes no public developer program, API, or SDK surface as of this profile.
 image: https://d29mtkonxnc5fw.cloudfront.net/site_assets/level-twitter-image.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at www.levelframes.com over HTTP.
+  name: Level Frames MCP Server
+  slug: level-frames
 modified: '2026-07-19'
 name: Level Frames
 nav: Providers
@@ -97,27 +101,33 @@ overview: 'Level Frames is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 9
 score:
   band: emerging
-  composite: 16.1
+  composite: 16.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 16.1
+  previous_composite: 15.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

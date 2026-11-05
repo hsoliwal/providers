@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 113
+- acting_count: 124
   human_in_the_loop: 0
   name: Seekr Agentic Access
-  operation_count: 212
+  operation_count: 248
   slug: seekr-agentic-access
-  summary_line: 212 operations · 113 acting
+  summary_line: 248 operations · 124 acting
 api_count: 8
 apis:
 - description: A hosted, anonymous, read-only MCP server that gives an AI assistant direct access to the SeekrFlow documentation and the four SeekrFlow OpenAPI specs, so the assistant can generate working authentica
@@ -325,6 +325,10 @@ collections:
   name: SeekrFlow Wake Up API
   slug: open-seekr-wake-up-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.seekr.com/feed/
 - group: commercial
   href: https://raw.githubusercontent.com/api-evangelist/seekr/refs/heads/main/plans/seekr-plans-pricing.yml
   title: ''
@@ -526,17 +530,17 @@ description: Seekr Technologies builds explainable, auditable, sovereign AI for 
 image: https://s48368.pcdn.co/wp-content/uploads/2025/10/Seekr-Thumbnail-OG-Image-1.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.seekr.com over HTTP; 3 tools listed.
   name: Seekr
   slug: seekr
-modified: '2026-08-05'
+modified: '2026-10-06'
 name: Seekr
 nav: Providers
 network: true
-overview: 'Seekr publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Agents v1 - legacy API, Alignment API, and 31 more. Tagged areas include Artificial Intelligence, Generative AI, Agents, LLM, and Fine-Tuning.
+overview: 'Seekr publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Agents v1 - legacy API, Alignment API, and 32 more. Tagged areas include Artificial Intelligence, Generative AI, Agents, LLM, and Fine-Tuning.
 
 
-  Seekr''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 36 more developer resources.'
+  Seekr''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
 plans:
 - name: Seekr Plans Pricing
   plan_count: 19
@@ -546,24 +550,24 @@ plans:
   slug: seekr-price-estimates
 random_paper: 10
 score:
-  band: exemplar
-  composite: 67.7
+  band: strong
+  composite: 63.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 24
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: -0.1
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 53.8
+    contract_quality: 48.5
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 76.7
     operational_transparency: 39.5
-  previous_composite: 61.3
+  previous_composite: 63.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -583,10 +587,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
@@ -613,7 +617,6 @@ tags:
 - Fine-Tuning
 - Inference
 - RAG
-- Vector Database
 - Explainability
 - AI Governance
 - Model Evaluation
@@ -623,6 +626,7 @@ tags:
 - Government
 - Regulated Industries
 - MCP
-- agent-native
+- Agent-Native
+- A2A
 website: https://www.seekr.com/
 ---

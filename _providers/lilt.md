@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -36,9 +36,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.1
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 53.0
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.lilt.com
   baseurl_source: declared
@@ -154,6 +154,11 @@ collections:
   name: LILT Create Workflows API
   slug: open-lilt-workflows-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lilt/refs/heads/main/capabilities/lilt-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lilt-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/lilt/refs/heads/main/security/lilt-trust-center.yml
   title: ''
@@ -322,13 +327,13 @@ modified: '2026-07-19'
 name: Lilt
 nav: Providers
 network: true
-overview: 'Lilt publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Create API, Documents API, Domains API, and 10 more. Tagged areas include Company, Artificial Intelligence, Translation, Localization, and Machine Translation.
+overview: 'Lilt publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Create API, Documents API, Domains API, and 10 more. Tagged areas include Company, Artificial Intelligence, Translation, Localization, and Machine Translation.
 
 
   The Lilt catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lilt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
+  Lilt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
 random_paper: 19
 rate_limits:
 - limit_count: 3
@@ -341,9 +346,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode/deviceCode/refreshToken
 score:
   band: strong
-  composite: 59.0
+  composite: 60.8
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 25
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -353,11 +358,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 62.3
+    contract_quality: 57.2
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 59.0
+  previous_composite: 60.8
   provenance:
     conformance: derived
     contracts:
@@ -367,8 +372,14 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

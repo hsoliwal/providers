@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.8
-  scored_at: '2026-09-20'
+  score: 34.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Nursa's OpenID Connect / OAuth 2.0 authorization server. Issues the JWT access tokens the Nursa Public API requires, supports the authorization code (with and without PKCE), resource owner password, i
@@ -157,6 +157,10 @@ collections:
   name: Nursa Public API V2 Webhook logs API
   slug: open-nursa-webhook-logs-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://nursa.com/blog/rss.xml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nursa/refs/heads/main/mcp/nursa-mcp.yml
   title: ''
@@ -325,17 +329,17 @@ description: Nursa is a healthcare staffing marketplace, founded in Salt Lake Ci
   4,500 facilities and 500,000 clinicians nationwide.
 image: https://cdn.prod.website-files.com/636e7f8063d6538dea5ca1e4/63e3d5253bcbd6e2b35efeee_logo-horizontal-color.svg
 layout: provider
-modified: '2026-08-04'
+modified: '2026-10-06'
 name: Nursa
 nav: Providers
 network: true
-overview: 'Nursa publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Clinicians API, Downloads API, Facilities API, and 10 more. Tagged areas include Company, Healthcare, Health, Staffing, and Nursing.
+overview: 'Nursa publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clinicians API, Downloads API, Facilities API, and 11 more. Tagged areas include Company, Healthcare, Health, Staffing, and Nursing.
 
 
   The Nursa catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Nursa''s developer surface includes developer portal, documentation, API reference, getting-started guide, signup flow, pricing, support, and 29 more developer resources.'
+  Nursa''s developer surface includes developer portal, documentation, API reference, getting-started guide, signup flow, pricing, support, and 30 more developer resources.'
 random_paper: 3
 rate_limits:
 - limit_count: 1
@@ -348,7 +352,7 @@ scopes:
   summary_line: 26 scopes · authorizationCode/clientCredentials
 score:
   band: strong
-  composite: 59.7
+  composite: 55.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -360,11 +364,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 67.4
+    contract_quality: 61.7
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 59.7
+  previous_composite: 55.7
   provenance:
     conformance: derived
     contracts:
@@ -379,9 +383,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

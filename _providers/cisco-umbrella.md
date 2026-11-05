@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 52
 apis:
 - baseURL: https://api.umbrella.com/admin/v2
@@ -791,7 +791,7 @@ modified: '2026-08-19'
 name: Cisco Umbrella
 nav: Providers
 network: true
-overview: 'Cisco Umbrella publishes 85 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Activity API, API Keys API, and 82 more. Tagged areas include Security, DNS, Secure Web Gateway, Cloud Security, and Zero Trust.
+overview: 'Cisco Umbrella publishes 85 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, Activity API, API Keys API, and 82 more. Tagged areas include Security, DNS, Secure Web Gateway, Cloud Security, and Zero Trust.
 
 
   Cisco Umbrella''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, support, engineering blog, and 60 more developer resources.'
@@ -811,23 +811,23 @@ scopes:
   summary_line: 61 scopes
 score:
   band: strong
-  composite: 59.3
+  composite: 62.7
   coverage:
     artifact_dirs: 23
-    catalog_earned: 49.0
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 61.7
+    contract_quality: 55.9
     developer_ergonomics: 70.8
-    discoverability: 68.5
+    discoverability: 71.4
     operational_transparency: 84.2
-  previous_composite: 59.3
+  previous_composite: 62.6
   provenance:
     conformance: derived
     contracts:
@@ -837,8 +837,14 @@ score:
       total: 85
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

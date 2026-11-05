@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 14
+- acting_count: 9
   human_in_the_loop: 0
   name: Myfatoorah Agentic Access
   operation_count: 14
   slug: myfatoorah-agentic-access
-  summary_line: 14 operations · 14 acting
+  summary_line: 14 operations · 9 acting
 api_count: 1
 apis:
 - baseURL: https://api.myfatoorah.com/v2
@@ -126,6 +126,11 @@ collections:
   name: MyFatoorah API
   slug: open-myfatoorah
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/myfatoorah/refs/heads/main/capabilities/myfatoorah-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/myfatoorah-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/myfatoorah/refs/heads/main/agentic-access/myfatoorah-agentic-access.yml
   title: ''
@@ -175,19 +180,23 @@ common:
 created: '2026-07-12'
 description: MyFatoorah is a Kuwait-based online payment gateway and invoicing platform serving merchants across the GCC and wider MENA region (Kuwait, Saudi Arabia, UAE, Qatar, Egypt, Bahrain, Oman, and Jordan). Its REST API lets businesses create invoices and payment links, execute and direct-charge card payments, run embedded checkout sessions, issue refunds, manage recurring payments, onboard marketplace suppliers, calculate shipping, and receive webhook notifications. MyFatoorah aggregates regional and international payment methods including KNET, mada, Benefit, Meeza, OmanNet, Visa, Mastercard, American Express, Apple Pay, Google Pay, and STC Pay. The API is region-scoped - a shared test host plus per-country live hosts - and authenticated with a Bearer API token.
 finops:
-- name: Myfatoorah Finops
+- has_sources: true
+  method: generated
+  name: Myfatoorah Finops
+  primary_unit: ''
   service_category: Payments and Financial Services
   slug: myfatoorah-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/myfatoorah.png
 layout: provider
 modified: '2026-07-12'
 name: MyFatoorah
 nav: Providers
 network: true
-overview: 'MyFatoorah publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Invoicing API, Payment Status API, Payments API, and 6 more. Tagged areas include Payments, Payment Gateway, Kuwait, GCC, and MENA.
+overview: 'MyFatoorah publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Invoicing API, Payment Status API, Payments API, and 6 more. Tagged areas include Payments, Payment Gateway, Kuwait, GCC, and MENA.
 
 
-  MyFatoorah''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  MyFatoorah''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Myfatoorah Plans Pricing
   plan_count: 3
@@ -198,29 +207,30 @@ rate_limits:
   name: Myfatoorah Rate Limits
   slug: myfatoorah-rate-limits
 score:
-  band: thin
-  composite: 34.3
+  band: emerging
+  composite: 25.0
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 60.0
+    artifact_dirs: 11
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.5
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 56.0
+    contract_quality: 50.4
     developer_ergonomics: 26.2
-    discoverability: 68.5
-    operational_transparency: 23.7
+    discoverability: 66.1
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
+    - mena
     - middle-east
-  previous_composite: 34.3
+  previous_composite: 32.5
   provenance:
     agentic_access: derived
     contracts:
@@ -233,10 +243,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -259,7 +269,6 @@ tags:
 - MENA
 - KNET
 - mada
-- Benefits
 - Invoices
 - Cards
 - Fintech

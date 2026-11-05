@@ -11,10 +11,10 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: negotiable
@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.7
-  scored_at: '2026-09-20'
+  score: 27.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -94,6 +94,21 @@ collections:
   name: Microsoft 365 Copilot (Microsoft Graph)
   slug: open-microsoft-365-copilot
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-365-copilot/refs/heads/main/plans/microsoft-365-copilot-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/microsoft-365-copilot-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-365-copilot/refs/heads/main/rate-limits/microsoft-365-copilot-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/microsoft-365-copilot-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-365-copilot/refs/heads/main/finops/microsoft-365-copilot-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/microsoft-365-copilot-finops.yml
 - group: company
   title: ''
   type: Website
@@ -161,19 +176,23 @@ common:
 created: '2024-01-15'
 description: Microsoft 365 Copilot is an AI-powered productivity tool that combines large language models (LLMs) with Microsoft 365 apps and business data to enhance creativity, productivity, and skills across Microsoft 365 applications.
 finops:
-- name: Microsoft 365 Copilot Finops
+- has_sources: false
+  method: generated
+  name: Microsoft 365 Copilot Finops
+  primary_unit: ''
   service_category: API
   slug: microsoft-365-copilot-finops
+  template: true
 image: https://www.microsoft.com/en-us/microsoft-365/copilot/copilot-logo.png
 layout: provider
 modified: '2026-05-19'
 name: Microsoft 365 Copilot
 nav: Providers
 network: true
-overview: 'Microsoft 365 Copilot publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Connectors API, External Items API, Search API, and 1 more. Tagged areas include Artificial Intelligence, Copilot, Enterprise, LLM, and Microsoft-365.
+overview: 'Microsoft 365 Copilot publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connectors API, External Items API, Search API, and 4 more. Tagged areas include Artificial Intelligence, Copilot, Enterprise, LLM, and Microsoft 365.
 
 
-  Microsoft 365 Copilot''s developer surface includes authentication, developer portal, support, engineering blog, and 11 more developer resources.'
+  Microsoft 365 Copilot''s developer surface includes authentication, developer portal, support, engineering blog, and 14 more developer resources.'
 plans:
 - name: Microsoft 365 Copilot Plans Pricing
   plan_count: 3
@@ -190,21 +209,21 @@ scopes:
   summary_line: 7 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 51.8
+  composite: 50.3
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 46.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 47.4
+    access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 53.7
-    developer_ergonomics: 71.4
-    discoverability: 75.9
+    contract_quality: 48.6
+    developer_ergonomics: 70.7
+    discoverability: 73.2
     operational_transparency: 42.1
   previous_composite: 51.8
   provenance:
@@ -214,8 +233,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -286,7 +311,7 @@ tags:
 - Copilot
 - Enterprise
 - LLM
-- Microsoft-365
+- Microsoft 365
 - Natural Language Processing
 - Productivity
 website: https://www.microsoft.com/

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Archipelago's customer-facing API is a GraphQL API that lets customers access and use their property and SOV data in custom applications. Access is credential-based; Archipelago provisions credentials
@@ -42,6 +42,10 @@ apis:
   slug: archipelago-graphql-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.onarchipelago.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -130,18 +134,18 @@ created: '2026-07-17'
 description: Archipelago is a San Francisco-based insurtech company, founded in 2018, that operates an AI-powered platform and agent for property and casualty (P&C) insurance risk data. Its software helps commercial property owners, brokers, and insurance underwriters ingest, remediate, enrich, and centralize Statement of Values (SOV) data and property documents, making risk information model-ready for submission to insurance markets. Archipelago exposes a customer-facing GraphQL API so customers can use their property data in custom applications, and the platform holds a SOC 2 Type 2 attestation. The company is backed by Canaan Partners, Scale Venture Partners, Ignition Partners, Prologis Ventures, Stone Point Capital, and Zigg Capital.
 image: https://platform.onarchipelago.com/android-chrome-256x256.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Archipelago
 nav: Providers
 network: true
-overview: 'Archipelago publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Property Risk, and Underwriting.
+overview: 'Archipelago is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Property Risk, and Underwriting.
 
 
-  Archipelago''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 13 more developer resources.'
+  Archipelago''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 14 more developer resources.'
 random_paper: 7
 score:
   band: thin
-  composite: 31.4
+  composite: 29.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -155,14 +159,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.4
+  previous_composite: 29.9
   provenance:
     conformance: first-party
   regulatory:
@@ -170,9 +176,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

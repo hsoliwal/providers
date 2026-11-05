@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.1
-  scored_at: '2026-09-20'
+  score: 53.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 11
+- acting_count: 9
   human_in_the_loop: 1
   name: Domaintools Agentic Access
-  operation_count: 53
+  operation_count: 52
   slug: domaintools-agentic-access
-  summary_line: 53 operations · 11 acting · 1 human-in-the-loop
+  summary_line: 52 operations · 9 acting · 1 human-in-the-loop
 api_count: 4
 apis:
 - baseURL: https://api.domaintools.com
@@ -147,6 +147,14 @@ collections:
   name: dnsdb Flex search Siebatchd API
   slug: open-domaintools-siebatchd-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.domaintools.com/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.domaintools.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -295,37 +303,37 @@ description: DomainTools is a domain and DNS intelligence company whose APIs pow
 image: https://www.domaintools.com/wp-content/uploads/dt-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.domaintools.com over HTTP.
   name: DomainTools MCP Server
-  slug: domaintools-mcp-server
-modified: '2026-07-18'
+  slug: domaintools-mcp
+modified: '2026-10-06'
 name: DomainTools
 nav: Providers
 network: true
-overview: 'DomainTools publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Flex search API, Information API, Iris Detect API, and 9 more. Tagged areas include Company, Threat Intelligence, Domain Intelligence, DNS, and WHOIS.
+overview: 'DomainTools publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Flex search API, Information API, Iris Detect API, and 9 more. Tagged areas include Company, Threat Intelligence, Domain Intelligence, DNS, and WHOIS.
 
 
-  DomainTools'' developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, signup flow, and 24 more developer resources.'
+  DomainTools'' developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, support, signup flow, and 26 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 48.5
+  composite: 48.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.1
+    contract_quality: 48.8
     developer_ergonomics: 73.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 48.5
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -336,8 +344,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

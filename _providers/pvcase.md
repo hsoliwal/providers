@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://core-v1.carbon.prod.andersonopt.com
@@ -187,7 +187,7 @@ modified: '2026-08-26'
 name: PVcase
 nav: Providers
 network: true
-overview: 'PVcase publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Asset API, Company API, Project API, and 1 more. Tagged areas include Solar, Energy, Renewable Energy, Photovoltaics, and Geospatial.
+overview: 'PVcase publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset API, Company API, Project API, and 1 more. Tagged areas include Solar, Energy, Renewable Energy, Photovoltaics, and Geospatial.
 
 
   PVcase''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 19 more developer resources.'
@@ -202,7 +202,7 @@ rate_limits:
   slug: pvcase-rate-limits
 score:
   band: developing
-  composite: 48.4
+  composite: 44.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -214,15 +214,15 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 0.0
-    contract_quality: 54.2
+    contract_quality: 45.8
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 48.4
+  previous_composite: 44.9
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 4
@@ -233,9 +233,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 35.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -253,7 +253,7 @@ security:
 - kind: vulnerability-disclosure
   name: Pvcase Vulnerability Disclosure
   slug: pvcase-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Pvcase Trust Center
   slug: pvcase-trust-center

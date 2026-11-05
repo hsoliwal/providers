@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -63,6 +63,11 @@ collections:
   name: Google Cloud AutoML API
   slug: open-openapi
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-automl/refs/heads/main/finops/google-cloud-automl-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/google-cloud-automl-finops.yml
 - group: operate
   href: https://raw.githubusercontent.com/api-evangelist/google-cloud-automl/refs/heads/main/rate-limits/google-cloud-automl-rate-limits.yml
   title: ''
@@ -153,9 +158,13 @@ common:
 created: '2026-03-13'
 description: Google Cloud AutoML enables developers with limited machine learning expertise to train high-quality custom models. It provides a suite of products for training custom ML models for translation, natural language, vision, video intelligence, and tabular data using transfer learning and neural architecture search.
 finops:
-- name: Google Cloud Automl Finops
+- has_sources: false
+  method: generated
+  name: Google Cloud Automl Finops
+  primary_unit: ''
   service_category: API
   slug: google-cloud-automl-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-automl.png
 json_schemas:
 - name: AutoML Model
@@ -171,13 +180,13 @@ modified: '2026-05-19'
 name: Google Cloud AutoML
 nav: Providers
 network: true
-overview: 'Google Cloud AutoML publishes 1 API on the [APIs.io](https://apis.io/) network: Projects API. Tagged areas include AutoML, Custom Models, Google Cloud, Machine-Learning, and Training.
+overview: 'Google Cloud AutoML publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Projects API. Tagged areas include AutoML, Custom Models, Google Cloud, Machine Learning, and Training.
 
 
   The Google Cloud AutoML catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Google Cloud AutoML''s developer surface includes developer portal, getting-started guide, documentation, authentication, pricing, support, engineering blog, and 13 more developer resources.'
+  Google Cloud AutoML''s developer surface includes developer portal, getting-started guide, documentation, authentication, pricing, support, engineering blog, and 14 more developer resources.'
 plans:
 - name: Google Cloud Automl Plans Pricing
   plan_count: 7
@@ -191,9 +200,10 @@ rate_limits:
   name: Google Cloud Automl Rate Limits
   slug: google-cloud-automl-rate-limits
 rules:
-- effective_rule_count: 4
+- authorship: generated
+  effective_rule_count: 4
   extends: []
-  name: Google Cloud AutoML API Rules
+  name: Google Cloud AutoML — jsonschema rules
   rule_count: 4
   severity_counts:
     error: 0
@@ -203,23 +213,23 @@ rules:
   slug: google-cloud-automl-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 53.1
+  composite: 51.9
   coverage:
     artifact_dirs: 15
-    catalog_earned: 81.3
+    catalog_earned: 77.7
     catalog_earned_first_party: 24.0
-    catalog_gap: 33.8
+    catalog_gap: 37.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 7.8
+  delta: -1.5
   facets:
-    access_clarity: 71.1
+    access_clarity: 63.2
     contract_governance: 9.8
-    contract_quality: 59.2
+    contract_quality: 53.8
     developer_ergonomics: 51.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 50.0
-  previous_composite: 45.3
+  previous_composite: 53.4
   provenance:
     agentic_access: derived
     contracts:
@@ -227,9 +237,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -248,7 +264,8 @@ tags:
 - AutoML
 - Custom Models
 - Google Cloud
-- Machine-Learning
+- Machine Learning
 - Training
+- Model Training
 website: https://www.google.com/
 ---

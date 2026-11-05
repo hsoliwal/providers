@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.0
-  scored_at: '2026-09-20'
+  score: 44.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 313
   human_in_the_loop: 4
@@ -131,7 +131,7 @@ apis:
   description: The Webhooks API from Bitmovin — 21 operation(s) for webhooks.
   name: Bitmovin Webhooks API
   slug: bitmovin-webhooks-api
-artifact_total: 42
+artifact_total: 43
 collections:
 - collection_type: open
   name: API Collection
@@ -265,9 +265,13 @@ common:
 created: '2026-06-12'
 description: Bitmovin is an Emmy Award-winning video streaming infrastructure platform providing REST APIs for cloud video encoding (VOD and live), adaptive bitrate packaging (HLS, MPEG-DASH), DRM integration, an HTML5 player, and analytics for quality-of-experience observability. Its encoding pipeline covers 800+ endpoints and ships open-source SDKs in Java, JavaScript, Python, Go, PHP, and C#.
 finops:
-- name: Bitmovin Finops
+- has_sources: false
+  method: generated
+  name: Bitmovin Finops
+  primary_unit: ''
   service_category: ''
   slug: bitmovin-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bitmovin.png
 jsonld:
 - class_count: 4
@@ -275,11 +279,15 @@ jsonld:
   property_count: 15
   slug: bitmovin-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bitmovin.com over HTTP.
+  name: Bitmovin MCP Server
+  slug: bitmovin
 modified: '2026-06-12'
 name: Bitmovin
 nav: Providers
 network: true
-overview: 'Bitmovin publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Config API, Configurations API, Emails API, and 13 more. Tagged areas include Video, Encoding, Streaming, Live Streaming, and VOD.
+overview: 'Bitmovin publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Config API, Configurations API, Emails API, and 15 more. Tagged areas include Video, Encoding, Streaming, Live Streaming, and VOD.
 
 
   The Bitmovin catalog on APIs.io includes 1 JSON-LD context.
@@ -297,23 +305,23 @@ rate_limits:
   slug: bitmovin-rate-limits
 score:
   band: thin
-  composite: 35.7
+  composite: 29.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 56.0
+    artifact_dirs: 16
+    catalog_earned: 47.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 57.2
+    contract_quality: 52.1
     developer_ergonomics: 14.3
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 13.2
-  previous_composite: 35.7
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     contracts:
@@ -322,8 +330,14 @@ score:
       marker_coverage: 0.0
       total: 16
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

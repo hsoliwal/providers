@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The GraphQL API behind the Adventus.io recruiter and student applications. Exposes 47 queries and 30 mutations across students, student documents, academic achievements, notes, activities, messaging t
@@ -128,14 +128,14 @@ description: 'Adventus.io operates an international student recruitment marketpl
 image: https://adventus.io/wp-content/uploads/2026/07/adv_favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Adventus.io ships NO MCP server. This is a DERIVED CANDIDATE tool list showing what an MCP server over the existing GraphQL contract could expose. Nothing here is published by the provider and no endp
   name: Adventus.io MCP Server
-  slug: adventusio-mcp-server
+  slug: adventusio-mcp-yml
 modified: '2026-09-09'
 name: Adventus.io
 nav: Providers
 network: true
-overview: 'Adventus.io publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, International Education, Student Recruitment, and Marketplace.
+overview: 'Adventus.io is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, International Education, Student Recruitment, and Marketplace.
 
 
   Adventus.io''s developer surface includes signup flow, pricing, support, engineering blog, and 17 more developer resources.'
@@ -150,9 +150,9 @@ rate_limits:
   slug: adventusio-rate-limits
 score:
   band: thin
-  composite: 29.7
+  composite: 28.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -162,11 +162,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 16.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 29.7
+  previous_composite: 28.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -176,14 +176,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/adventusio/refs/heads/main/screenshots/adventusio-2026-10-11T092904.png
 security:
 - kind: authentication
   name: Adventusio Authentication

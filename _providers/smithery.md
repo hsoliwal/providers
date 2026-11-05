@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.9
-  scored_at: '2026-09-20'
+  score: 51.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 60
   human_in_the_loop: 12
@@ -44,12 +44,12 @@ agentic_access:
   operation_count: 107
   slug: smithery-agentic-access
   summary_line: 107 operations · 60 acting · 12 human-in-the-loop
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: The connect API from Smithery — 12 operation(s) for connect.
-  name: Smithery connect API
+  name: Smithery Connect API
   slug: smithery-connect-api
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
@@ -59,7 +59,7 @@ apis:
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: The domains API from Smithery — 2 operation(s) for domains.
-  name: Smithery domains API
+  name: Smithery Domains API
   slug: smithery-domains-api
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
@@ -69,29 +69,29 @@ apis:
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: The namespaces API from Smithery — 3 operation(s) for namespaces.
-  name: Smithery namespaces API
+  name: Smithery Namespaces API
   slug: smithery-namespaces-api
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: The organizations API from Smithery — 2 operation(s) for organizations.
-  name: Smithery organizations API
+  name: Smithery Organizations API
   slug: smithery-organizations-api
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: Browse the MCP server registry, manage server configuration, and handle deployments
-  name: Smithery servers API
+  name: Smithery Servers API
   slug: smithery-servers-api
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: Discover and search reusable prompt-based skills for MCP servers
-  name: Smithery skills API
+  name: Smithery Skills API
   slug: smithery-skills-api
 - baseURL: https://api.smithery.ai
   baseurl_source: declared
   description: The tokens API from Smithery — 1 operation(s) for tokens.
-  name: Smithery tokens API
+  name: Smithery Tokens API
   slug: smithery-tokens-api
-artifact_total: 42
+artifact_total: 43
 collections:
 - collection_type: open
   name: API Collection
@@ -130,6 +130,26 @@ collections:
   name: Smithery Platform API
   slug: open-smithery
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/smithery/refs/heads/main/plans/smithery-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/smithery-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/smithery/refs/heads/main/rate-limits/smithery-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/smithery-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/smithery/refs/heads/main/finops/smithery-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/smithery-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/smithery/refs/heads/main/vendor-facets/smithery-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/smithery-vendor-facets.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -278,9 +298,13 @@ examples:
   name: Smithery Mcp Endpoint Example
   slug: smithery-mcp-endpoint-example
 finops:
-- name: Smithery Finops
+- has_sources: false
+  method: generated
+  name: Smithery Finops
+  primary_unit: ''
   service_category: API
   slug: smithery-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/smithery.png
 json_schemas:
 - name: Smithery MCP Server
@@ -302,21 +326,24 @@ layout: provider
 mcp_servers:
 - description: Hosted MCP gateway endpoint that bundles all connections in a namespace behind a single URL
   name: Smithery MCP Server (mcp.smithery.run)
-  slug: smithery-mcp-server-mcpsmitheryrun
+  slug: smithery-mcp-server-mcp-smithery-run
 - description: 'Smithery-built tool: Rust MCP server for macOS desktop control'
   name: mouseless
   slug: mouseless
+- description: Remote MCP server at mcp.smithery.ai over HTTP.
+  name: Smithery MCP Server
+  slug: smithery
 modified: '2026-05-22'
 name: Smithery
 nav: Providers
 network: true
-overview: 'Smithery publishes 9 APIs on the [APIs.io](https://apis.io/) network, including connect API, connect.mcp API, domains API, and 6 more. Tagged areas include Artificial Intelligence, LLM, MCP, AI Agents, and Developer Tools.
+overview: 'Smithery publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connect API, connect.mcp API, Domains API, and 6 more. Tagged areas include Artificial Intelligence, LLM, MCP, AI Agents, and Developer Tools.
 
 
   The Smithery catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Smithery''s developer surface includes authentication, documentation, CLI, engineering blog, tooling, and 25 more developer resources.'
+  Smithery''s developer surface includes authentication, documentation, CLI, engineering blog, tooling, and 29 more developer resources.'
 plans:
 - name: Smithery Plans Pricing
   plan_count: 3
@@ -327,9 +354,10 @@ rate_limits:
   name: Smithery Rate Limits
   slug: smithery-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Smithery API Rules
+  name: Smithery — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -337,7 +365,8 @@ rules:
     info: 2
     warn: 3
   slug: smithery-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Smithery API Rules
@@ -350,23 +379,23 @@ rules:
   slug: smithery-rules
 score:
   band: developing
-  composite: 45.9
+  composite: 43.0
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 73.5
+    artifact_dirs: 21
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 41.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.0
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 70.9
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 64.7
     developer_ergonomics: 53.6
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 13.2
-  previous_composite: 45.9
+  previous_composite: 44.0
   provenance:
     agentic_access: derived
     contracts:
@@ -375,8 +404,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

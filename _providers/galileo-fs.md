@@ -30,20 +30,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 19
+- acting_count: 13
   human_in_the_loop: 1
   name: Galileo Fs Agentic Access
   operation_count: 19
   slug: galileo-fs-agentic-access
-  summary_line: 19 operations · 19 acting · 1 human-in-the-loop
+  summary_line: 19 operations · 13 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - description: 'REST API for managing accounts and cards: account creation, KYC/CIP verification, balance/funding, card issuance (physical, digital, virtual, instant-issue), authorization controls.'
@@ -196,16 +196,20 @@ common:
 created: '2026-05-08'
 description: Galileo Financial Technologies (a SoFi company) is a card-issuing and banking platform powering many fintechs. Provides Program API (accounts, cards), Config API, Dispute API 3.0, Loan API, Payment Hub API, Risk API, Auth API (authorization controller webhook), Events API webhooks, and External Transactions API.
 finops:
-- name: Galileo Fs Finops
+- has_sources: true
+  method: generated
+  name: Galileo Fs Finops
+  primary_unit: ''
   service_category: FinTech
   slug: galileo-fs-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/galileo-fs.png
 layout: provider
 modified: '2026-05-08'
 name: Galileo Financial Technologies
 nav: Providers
 network: true
-overview: 'Galileo Financial Technologies publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Config API, Dispute API, Events API, and 5 more. Tagged areas include Fintech, Backend-as-a-Service, Card Issuing, Banking, and Payments.
+overview: 'Galileo Financial Technologies publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Config API, Dispute API, Events API, and 14 more. Tagged areas include Fintech, Banking as a Service, Card Issuing, Banking, and Payments.
 
 
   Galileo Financial Technologies'' developer surface includes authentication and 9 more developer resources.'
@@ -220,23 +224,23 @@ rate_limits:
   slug: galileo-fs-rate-limits
 score:
   band: emerging
-  composite: 24.1
+  composite: 21.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 44.0
+    artifact_dirs: 13
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
-  previous_composite: 24.1
+  previous_composite: 23.3
   provenance:
     agentic_access: derived
     contracts:
@@ -249,9 +253,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -269,7 +273,7 @@ security:
 slug: galileo-fs
 tags:
 - Fintech
-- Backend-as-a-Service
+- Banking as a Service
 - Card Issuing
 - Banking
 - Payments

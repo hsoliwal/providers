@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-09-20'
+  score: 31.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://wdk-api.tether.io
@@ -85,6 +85,10 @@ collections:
   name: WDK Indexer Token Transfers API
   slug: open-tether-token-transfers-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://tether.io/feed/
 - group: company
   title: ''
   type: Website
@@ -248,17 +252,17 @@ description: Tether Operations Limited is the issuer of USD₮ (USDT), the large
 image: https://tether.io/wp-content/themes/tether-io-theme/assets/images/logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 35 tools listed.
   name: Tether MCP Server
-  slug: tether-mcp-server
-modified: '2026-08-05'
+  slug: wdk
+modified: '2026-10-06'
 name: Tether
 nav: Providers
 network: true
-overview: 'Tether publishes 5 APIs on the [APIs.io](https://apis.io/) network, including API Keys API, Chains API, Health API, and 2 more. Tagged areas include Company, Stablecoins, Cryptocurrency, Blockchain, and Wallets.
+overview: 'Tether publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Keys API, Chains API, Health API, and 2 more. Tagged areas include Company, Stablecoins, Cryptocurrency, Blockchain, and Wallets.
 
 
-  Tether''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 27 more developer resources.'
+  Tether''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 28 more developer resources.'
 random_paper: 14
 rate_limits:
 - limit_count: 6
@@ -266,7 +270,7 @@ rate_limits:
   slug: tether-rate-limits
 score:
   band: developing
-  composite: 53.2
+  composite: 50.5
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -274,15 +278,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 60.5
-  previous_composite: 53.2
+  previous_composite: 50.4
   provenance:
     conformance: derived
     contracts:
@@ -297,9 +301,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -331,6 +335,7 @@ tags:
 - Multi-Chain
 - Agents
 - MCP
-- Open-Source
+- Open Source
+- Stablecoin Issuance
 website: https://tether.io/
 ---

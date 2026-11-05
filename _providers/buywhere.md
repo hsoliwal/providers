@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -60,7 +60,7 @@ apis:
   description: Product search, lookup, comparison, deals, and price history.
   name: BuyWhere Products API
   slug: buywhere-products-api
-artifact_total: 32
+artifact_total: 33
 collections:
 - collection_type: open
   name: API Collection
@@ -78,6 +78,11 @@ collections:
   name: BuyWhere Product Catalog API
   slug: open-buywhere
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/capabilities/buywhere-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/buywhere-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/buywhere/refs/heads/main/a2a/buywhere-a2a.yml
   title: ''
@@ -194,9 +199,13 @@ examples:
   name: Buywhere Searchproducts Example
   slug: buywhere-searchProducts-example
 finops:
-- name: Buywhere Finops
+- has_sources: true
+  method: generated
+  name: Buywhere Finops
+  primary_unit: ''
   service_category: Commerce / Product Catalog
   slug: buywhere-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 json_schemas:
 - name: BuyWhere Category
@@ -224,17 +233,21 @@ jsonld:
   property_count: 4
   slug: buywhere-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.buywhere.ai over HTTP; 13 tools listed.
+  name: BuyWhere MCP Server
+  slug: buywhere
 modified: '2026-05-19'
 name: BuyWhere
 nav: Providers
 network: true
-overview: 'BuyWhere publishes 3 APIs on the [APIs.io](https://apis.io/) network: Authentication API, Categories API, and Products API. Tagged areas include E-Commerce, Shopping, Price Comparison, SEA, and Southeast Asia.
+overview: 'BuyWhere publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Authentication API, Categories API, and Products API. Tagged areas include E-Commerce, Shopping, Price Comparison, SEA, and Southeast Asia.
 
 
   The BuyWhere catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  BuyWhere''s developer surface includes authentication, documentation, GitHub presence, and 16 more developer resources.'
+  BuyWhere''s developer surface includes authentication, documentation, GitHub presence, and 17 more developer resources.'
 plans:
 - name: Buywhere Plans Pricing
   plan_count: 3
@@ -245,9 +258,10 @@ rate_limits:
   name: Buywhere Rate Limits
   slug: buywhere-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: BuyWhere API Rules
+  name: BuyWhere — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -255,7 +269,8 @@ rules:
     info: 1
     warn: 4
   slug: buywhere-jsonschema-spectral-rules
-- effective_rule_count: 55
+- authorship: unmarked
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: BuyWhere API Rules
@@ -267,29 +282,29 @@ rules:
     warn: 9
   slug: buywhere-rules
 score:
-  band: developing
-  composite: 45.5
+  band: thin
+  composite: 34.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 91.5
+    artifact_dirs: 21
+    catalog_earned: 69.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 23.5
+    catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 72.7
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 66.2
     developer_ergonomics: 21.4
-    discoverability: 75.9
-    operational_transparency: 36.8
+    discoverability: 75.0
+    operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 45.5
+  previous_composite: 42.7
   provenance:
     agentic_access: derived
     contracts:
@@ -298,9 +313,15 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -323,5 +344,6 @@ tags:
 - Southeast Asia
 - AI Agents
 - Product Catalog
+- A2A
 website: https://api.buywhere.ai/
 ---

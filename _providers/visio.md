@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 19.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -137,6 +137,21 @@ collections:
   name: Visio JavaScript Application Shapes API
   slug: open-visio-shapes-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/visio/refs/heads/main/plans/visio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/visio-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/visio/refs/heads/main/rate-limits/visio-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/visio-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/visio/refs/heads/main/finops/visio-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/visio-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/visio/refs/heads/main/scopes/visio-scopes.yml
   title: ''
@@ -251,9 +266,13 @@ examples:
   name: Visio Javascript Listshapes Example
   slug: visio-javascript-listShapes-example
 finops:
-- name: Visio Finops
+- has_sources: false
+  method: generated
+  name: Visio Finops
+  primary_unit: ''
   service_category: API
   slug: visio-finops
+  template: true
 image: https://www.microsoft.com/en-us/microsoft-365/visio/visio-logo.png
 json_schemas:
 - name: Visio Page
@@ -276,13 +295,13 @@ modified: '2026-05-19'
 name: Microsoft Visio API
 nav: Providers
 network: true
-overview: 'Microsoft Visio API publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Application API, Comments API, Documents API, and 4 more. Tagged areas include Business Process, Collaboration, Diagrams, Enterprise, and Flowcharts.
+overview: 'Microsoft Visio API publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Application API, Comments API, Documents API, and 6 more. Tagged areas include Business Process, Collaboration, Diagramming, Enterprise, and Flowcharts.
 
 
   The Microsoft Visio API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Microsoft Visio API''s developer surface includes support, authentication, pricing, engineering blog, changelog, and 18 more developer resources.'
+  Microsoft Visio API''s developer surface includes support, authentication, pricing, engineering blog, changelog, and 21 more developer resources.'
 plans:
 - name: Visio Plans Pricing
   plan_count: 3
@@ -293,9 +312,10 @@ rate_limits:
   name: Visio Rate Limits
   slug: visio-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Microsoft Visio API API Rules
+  name: Microsoft Visio API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -303,7 +323,8 @@ rules:
     info: 2
     warn: 3
   slug: visio-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: Microsoft Visio API API Rules
@@ -321,23 +342,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 48.8
+  composite: 49.1
   coverage:
     artifact_dirs: 19
-    catalog_earned: 63.5
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 47.4
-    contract_governance: 28.8
-    contract_quality: 66.6
+    access_clarity: 39.5
+    contract_governance: 27.3
+    contract_quality: 60.7
     developer_ergonomics: 53.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 48.8
+  previous_composite: 50.6
   provenance:
     agentic_access: derived
     contracts:
@@ -345,8 +366,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -369,10 +396,10 @@ slug: visio
 tags:
 - Business Process
 - Collaboration
-- Diagrams
+- Diagramming
 - Enterprise
 - Flowcharts
-- Microsoft-365
+- Microsoft 365
 - Visualization
 website: https://www.microsoft.com/
 ---

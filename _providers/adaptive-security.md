@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.7
-  scored_at: '2026-09-20'
+  score: 35.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -94,6 +94,16 @@ collections:
   name: Adaptive Audit Logs Users API
   slug: open-adaptive-security-users-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/adaptive-security/refs/heads/main/rate-limits/adaptive-security-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/adaptive-security-rate-limits.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/adaptive-security/refs/heads/main/capabilities/adaptive-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/adaptive-security-capability-edges.yml
 - group: start
   title: ''
   type: Login
@@ -255,13 +265,13 @@ modified: '2026-07-17'
 name: Adaptive Security
 nav: Providers
 network: true
-overview: 'Adaptive Security publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Groups API, Phishing API, and 2 more. Tagged areas include Company, Security, Cybersecurity, Security Awareness Training, and Phishing Simulation.
+overview: 'Adaptive Security publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit Logs API, Groups API, Phishing API, and 2 more. Tagged areas include Company, Security, Cybersecurity, Security Awareness Training, and Phishing Simulation.
 
 
   The Adaptive Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Adaptive Security''s developer surface includes changelog, documentation, API reference, getting-started guide, engineering blog, support, pricing, and 27 more developer resources.'
+  Adaptive Security''s developer surface includes changelog, documentation, API reference, getting-started guide, engineering blog, support, pricing, and 29 more developer resources.'
 plans:
 - name: Adaptive Security Plans Pricing
   plan_count: 0
@@ -273,9 +283,9 @@ rate_limits:
   slug: adaptive-security-rate-limits
 score:
   band: developing
-  composite: 44.1
+  composite: 44.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -285,11 +295,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 66.4
+    contract_quality: 60.6
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 44.1
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -300,8 +310,20 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

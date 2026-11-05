@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.3
-  scored_at: '2026-09-20'
+  score: 44.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -75,7 +75,7 @@ apis:
   description: Recurring subscriptions and payment plans.
   name: SamCart Subscriptions API
   slug: samcart-subscriptions-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -102,6 +102,11 @@ collections:
   name: SamCart Public API
   slug: open-samcart
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/samcart/refs/heads/main/capabilities/samcart-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/samcart-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/samcart/refs/heads/main/agentic-access/samcart-agentic-access.yml
   title: ''
@@ -151,19 +156,27 @@ common:
 created: '2026-07-05'
 description: SamCart is a checkout and e-commerce platform for selling digital products, courses, memberships, and physical goods directly to customers, built around a high-converting CheckoutOS checkout, one-click upsells, subscriptions, and a courses/members area. The SamCart Public API (v1) is a REST API at https://api.samcart.com/v1 that gives programmatic read access to a marketplace's orders, products, customers, subscriptions, charges, and refunds, plus write actions to cancel or schedule cancellation of subscriptions, refund charges, and update order custom fields. Authentication is via an sc-api API key header, and API access is provisioned by the SamCart Support team rather than fully self-serve.
 finops:
-- name: Samcart Finops
+- has_sources: true
+  method: generated
+  name: Samcart Finops
+  primary_unit: ''
   service_category: E-Commerce and Checkout
   slug: samcart-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/samcart.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.samcart.com over HTTP.
+  name: SamCart MCP Server
+  slug: samcart
 modified: '2026-07-05'
 name: SamCart
 nav: Providers
 network: true
-overview: 'SamCart publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Charges API, Customers API, Orders API, and 3 more. Tagged areas include E-Commerce, Checkout, Payments, Subscription, and Digital Products.
+overview: 'SamCart publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Charges API, Customers API, Orders API, and 3 more. Tagged areas include E-Commerce, Checkout, Payments, Subscription, and Digital Products.
 
 
-  SamCart''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  SamCart''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Samcart Plans Pricing
   plan_count: 6
@@ -174,24 +187,24 @@ rate_limits:
   name: Samcart Rate Limits
   slug: samcart-rate-limits
 score:
-  band: thin
-  composite: 34.6
+  band: emerging
+  composite: 25.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 60.0
+    artifact_dirs: 15
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 34.6
+    discoverability: 68.3
+    operational_transparency: 5.3
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -205,10 +218,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

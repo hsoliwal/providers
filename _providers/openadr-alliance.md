@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -342,7 +342,7 @@ modified: '2026-07-27'
 name: OpenADR Alliance
 nav: Providers
 network: true
-overview: 'OpenADR Alliance publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Events API, MQTT Notifier API, and 6 more. Tagged areas include Energy, United States, Utilities, Electricity, and Demand Response.
+overview: 'OpenADR Alliance publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Events API, MQTT Notifier API, and 6 more. Tagged areas include Energy, United States, Utilities, Electricity, and Demand Response.
 
 
   The OpenADR Alliance catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -361,7 +361,7 @@ scopes:
   summary_line: 9 scopes · clientCredentials
 score:
   band: strong
-  composite: 58.4
+  composite: 54.5
   coverage:
     artifact_dirs: 28
     catalog_earned: 54.3
@@ -373,9 +373,9 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 22.0
-    contract_quality: 71.4
+    contract_quality: 66.3
     developer_ergonomics: 66.1
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -387,7 +387,7 @@ score:
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 58.4
+  previous_composite: 54.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -403,9 +403,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 60.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -434,5 +434,6 @@ tags:
 - Smart Grid
 - EV Charging
 - Certification
+- Real-Time
 website: https://www.openadr.org/
 ---

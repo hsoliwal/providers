@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 19.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -45,11 +45,6 @@ agentic_access:
   summary_line: 32 operations · 16 acting
 api_count: 2
 apis:
-- baseURL: https://api.d-id.com
-  baseurl_source: declared
-  description: API for translating existing videos into 100+ languages using AI-driven speech translation, voice cloning, and lip-sync technology. Enables brands and content creators to localize video content at sca
-  name: D-ID Translations API
-  slug: d-id-translations-api
 - baseURL: https://api.d-id.com
   baseurl_source: declared
   description: Create and manage AI agent definitions
@@ -82,7 +77,7 @@ apis:
   slug: d-id-talks-api
 - baseURL: https://api.d-id.com
   baseurl_source: declared
-  description: Translate existing videos into 100+ languages with lip-sync
+  description: API for translating existing videos into 100+ languages using AI-driven speech translation, voice cloning, and lip-sync technology. Enables brands and content creators to localize video content at sca
   name: D-ID Translations API
   slug: d-id-translations-api
 - baseURL: https://api.d-id.com
@@ -95,7 +90,7 @@ apis:
   description: List available TTS voices
   name: D-ID Voices API
   slug: d-id-voices-api
-artifact_total: 43
+artifact_total: 42
 collections:
 - collection_type: postman
   name: D-ID Agents API
@@ -257,9 +252,13 @@ examples:
   name: D Id Create Translation Example
   slug: d-id-create-translation-example
 finops:
-- name: D Id Finops
+- has_sources: false
+  method: generated
+  name: D Id Finops
+  primary_unit: ''
   service_category: ''
   slug: d-id-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/d-id.png
 json_schemas:
 - name: D-ID Agent
@@ -278,7 +277,7 @@ modified: '2026-06-12'
 name: D-ID
 nav: Providers
 network: true
-overview: 'D-ID publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Translations API, Agents API, Chat API, and 7 more. Tagged areas include Avatars, DID, AI Video, Digital Humans, and Talking Head.
+overview: 'D-ID publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Chat API, Credits API, and 6 more. Tagged areas include Avatars, DID, AI Video, Digital Humans, and Talking Head.
 
 
   The D-ID catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -295,9 +294,10 @@ rate_limits:
   name: D Id Rate Limits
   slug: d-id-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: D-ID API Rules
+  name: D-ID — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -307,23 +307,23 @@ rules:
   slug: d-id-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 52.0
+  composite: 40.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 93.3
+    artifact_dirs: 18
+    catalog_earned: 70.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 21.8
+    catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.8
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 76.4
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 70.1
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 52.0
+    discoverability: 66.1
+    operational_transparency: 26.3
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     contracts:
@@ -331,9 +331,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 19.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -361,7 +367,6 @@ tags:
 - Generative AI
 - Video Generation
 - Real-Time Streaming
-- Text-to-Video
 - Video Translation
 - Voice Cloning
 website: https://www.d-id.com

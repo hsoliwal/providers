@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.2
-  scored_at: '2026-09-20'
+  score: 35.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -124,6 +124,11 @@ collections:
   name: Account Account API SEO Research API API
   slug: open-spyfu-seo-research-api-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spyfu/refs/heads/main/capabilities/spyfu-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spyfu-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/spyfu/refs/heads/main/agentic-access/spyfu-agentic-access.yml
   title: ''
@@ -324,9 +329,13 @@ examples:
   name: Spyfu Seo Research Serp Examples
   slug: spyfu-seo-research-serp-examples
 finops:
-- name: Spyfu Finops
+- has_sources: true
+  method: searched
+  name: Spyfu Finops
+  primary_unit: ''
   service_category: ''
   slug: spyfu-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/spyfu.png
 json_schemas:
 - name: SpyFu Account API Schemas
@@ -368,18 +377,18 @@ layout: provider
 mcp_servers:
 - description: SpyFu serves a remote Model Context Protocol endpoint from its own developer portal host at https://developer.spyfu.com/mcp. A GET returns HTTP 200 with the plain-text body "This URL can only be acces
   name: SpyFu MCP Server
-  slug: spyfu-mcp-server
+  slug: spyfu-developer-docs
 modified: '2026-09-16'
 name: SpyFu
 nav: Providers
 network: true
-overview: 'SpyFu publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account API, Ad History Research API, Competitors API, and 6 more. Tagged areas include SEO, PPC, Competitive Intelligence, Keyword Research, and Ad History.
+overview: 'SpyFu publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Ad History Research API, Competitors API, and 6 more. Tagged areas include SEO, PPC, Competitive Intelligence, Keyword Research, and Ad History.
 
 
   The SpyFu catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  SpyFu''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, API reference, support, and 30 more developer resources.'
+  SpyFu''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, API reference, support, and 31 more developer resources.'
 plans:
 - name: Spyfu Plans Pricing
   plan_count: 3
@@ -390,9 +399,10 @@ rate_limits:
   name: Spyfu Rate Limits
   slug: spyfu-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: SpyFu API Rules
+  name: SpyFu — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -402,23 +412,23 @@ rules:
   slug: spyfu-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 56.3
+  composite: 54.3
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 89.3
+    artifact_dirs: 29
+    catalog_earned: 85.2
     catalog_earned_first_party: 24.0
-    catalog_gap: 25.8
+    catalog_gap: 29.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 77.6
-    contract_governance: 29.5
-    contract_quality: 66.0
+    access_clarity: 69.7
+    contract_governance: 28.0
+    contract_quality: 60.2
     developer_ergonomics: 33.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 50.0
-  previous_composite: 56.3
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -429,8 +439,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

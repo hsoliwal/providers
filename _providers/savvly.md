@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 39.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 12
   slug: savvly-agentic-access
   summary_line: 12 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.savvly.com
   baseurl_source: spec
@@ -103,18 +103,18 @@ layout: provider
 mcp_servers:
 - description: First-party Savvly MCP server exposing the Savvly Public API (product data, projections, comparisons, eligibility, FAQ) to AI agents. No authentication; rate-limited. Also distributed as npm @savvly/m
   name: Savvly MCP Server
-  slug: savvly-mcp-server
+  slug: savvly
 modified: '2026-07-17'
 name: Savvly
 nav: Providers
 network: true
-overview: 'Savvly publishes 3 APIs on the [APIs.io](https://apis.io/) network: Comparisons API, Product API, and Projections API. Tagged areas include Company.'
+overview: 'Savvly publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Comparisons API, Product API, and Projections API. Tagged areas include Company and A2A.'
 random_paper: 17
 score:
   band: emerging
-  composite: 16.6
+  composite: 13.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 15.0
     catalog_earned_first_party: 0.0
     catalog_gap: 85.0
@@ -124,11 +124,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 43.9
     developer_ergonomics: 1.8
-    discoverability: 35.2
+    discoverability: 38.3
     operational_transparency: 0.0
-  previous_composite: 16.6
+  previous_composite: 13.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -139,8 +139,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -155,5 +161,6 @@ security:
 slug: savvly
 tags:
 - Company
+- A2A
 website: https://savvly.com/
 ---

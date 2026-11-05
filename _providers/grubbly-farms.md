@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The machine-consumable surface of the Grubbly Farms Shopify storefront: a hosted Storefront MCP server for agentic product discovery and cart/checkout, plus a Customer Account OpenID Connect / OAuth 2'
@@ -41,6 +41,10 @@ apis:
   slug: grubbly-farms-storefront-shopify-mcp-customer-account
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://grubblyfarms.com/blogs/the-flyer.atom
 - group: company
   title: ''
   type: Website
@@ -109,17 +113,17 @@ description: 'Grubbly Farms is a direct-to-consumer backyard-poultry brand that 
 image: https://cdn.shopify.com/s/files/1/1407/3744/files/MicrosoftTeams-image_5.png?v=1743713875
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at grubblyfarms.com over HTTP; 5 tools listed.
   name: Grubbly Farms MCP Server
-  slug: grubbly-farms-mcp-server
-modified: '2026-07-19'
+  slug: grubbly-farms-storefront
+modified: '2026-10-06'
 name: Grubbly Farms
 nav: Providers
 network: true
-overview: 'Grubbly Farms publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Retail, Consumer Packaged Goods, and Pet & Animal.
+overview: 'Grubbly Farms is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Retail, Consumer Packaged Goods, and Pet & Animal.
 
 
-  Grubbly Farms'' developer surface includes support, engineering blog, signup flow, authentication, and 10 more developer resources.'
+  Grubbly Farms'' developer surface includes support, engineering blog, signup flow, authentication, and 11 more developer resources.'
 random_paper: 21
 scopes:
 - name: Grubbly Farms Scopes
@@ -128,9 +132,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.7
+  composite: 22.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -142,14 +146,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 19.7
+  previous_composite: 22.5
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

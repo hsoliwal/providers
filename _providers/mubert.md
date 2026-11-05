@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -28,21 +28,21 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.4
-  scored_at: '2026-09-20'
+  score: 31.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 18
+- acting_count: 23
   human_in_the_loop: 0
   name: Mubert Agentic Access
-  operation_count: 37
+  operation_count: 50
   slug: mubert-agentic-access
-  summary_line: 37 operations · 18 acting
-api_count: 1
+  summary_line: 50 operations · 23 acting
+api_count: 2
 apis:
 - baseURL: https://music-api.mubert.com
   baseurl_source: declared
@@ -101,6 +101,11 @@ collections:
   name: Mubert AI Music API v3 Price Subscription API
   slug: open-mubert-subscription-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mubert/refs/heads/main/capabilities/mubert-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mubert-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mubert/refs/heads/main/agentic-access/mubert-agentic-access.yml
   title: ''
@@ -233,9 +238,13 @@ features:
 - AI-optimized documentation: llms.txt and llms-full.txt published alongside Swagger UI
 - Official MubertAI/skills repo of Agent Skills (setup, generate, streaming, library, manage)
 finops:
-- name: Mubert Finops
+- has_sources: false
+  method: generated
+  name: Mubert Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: mubert-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mubert.png
 integrations:
 - Picsart — generative music in UGC content tooling
@@ -275,13 +284,13 @@ modified: '2026-05-25'
 name: Mubert
 nav: Providers
 network: true
-overview: 'Mubert publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Price API, Public API, Public Service API, and 3 more. Tagged areas include AI Music, Generative, Royalty-Free, Streaming, and Text-to-Music.
+overview: 'Mubert publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Price API, Public API, Public Service API, and 3 more. Tagged areas include AI Music, Generative, Royalty-Free, Streaming, and Text-to-Music.
 
 
   The Mubert catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Mubert''s developer surface includes authentication, documentation, code examples, engineering blog, and 19 more developer resources.'
+  Mubert''s developer surface includes authentication, documentation, code examples, engineering blog, and 20 more developer resources.'
 plans:
 - name: Mubert Plans Pricing
   plan_count: 4
@@ -292,9 +301,10 @@ rate_limits:
   name: Mubert Rate Limits
   slug: mubert-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Mubert API Rules
+  name: Mubert — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -302,7 +312,8 @@ rules:
     info: 1
     warn: 4
   slug: mubert-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: Mubert API Rules
@@ -314,24 +325,24 @@ rules:
     warn: 2
   slug: mubert-rules
 score:
-  band: developing
-  composite: 42.9
+  band: thin
+  composite: 34.2
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 82.5
+    artifact_dirs: 19
+    catalog_earned: 69.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 32.5
+    catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 75.3
-    developer_ergonomics: 31.0
-    discoverability: 68.5
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 68.9
+    developer_ergonomics: 30.2
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 42.9
+  previous_composite: 40.2
   provenance:
     agentic_access: derived
     contracts:
@@ -339,9 +350,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -363,7 +380,7 @@ tags:
 - Streaming
 - Text-to-Music
 - Image-to-Music
-- STEM
+- Stems
 - B2B
 use_cases:
 - Apps embedding adaptive background music

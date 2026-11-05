@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.metycle.com/blog
 - group: company
   title: ''
   type: Website
@@ -77,18 +81,18 @@ created: '2026-07-17'
 description: METYCLE is a Cologne, Germany-based digital B2B marketplace and AI-powered trading platform for the international secondary (scrap) metal industry, connecting suppliers and buyers of recycled metals - copper, aluminum, zinc, nickel, lead and magnesium - across borders. Operated by METYCLE GmbH and led by managing directors Rafael Suchan and Sebastian Brenner, the company raised a 14.1M euro Series A round to expand its platform for transparent, sustainable global metal trade and to advance circular-economy sourcing of secondary metals. Its customer platform supports biddable listings, product discovery and trade execution. This profile was added to the API Evangelist network as a company/provider record; METYCLE currently exposes no public developer API.
 image: https://cdn.sanity.io/images/d0g1j20z/production/658777bff13558ec3ff2cc4b7cdab20b0238d347-1249x980.webp
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: METYCLE
 nav: Providers
 network: true
 overview: 'METYCLE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Metals, Recycling, and Scrap Metal.
 
 
-  METYCLE''s developer surface includes signup flow, engineering blog, support, and 6 more developer resources.'
+  METYCLE''s developer surface includes engineering blog, signup flow, support, and 7 more developer resources.'
 random_paper: 7
 score:
   band: minimal
-  composite: 10.2
+  composite: 10.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -102,7 +106,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -112,15 +116,15 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 10.2
+  previous_composite: 10.6
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

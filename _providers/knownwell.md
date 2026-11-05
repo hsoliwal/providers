@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 1
@@ -44,57 +44,57 @@ agentic_access:
   operation_count: 25
   slug: knownwell-agentic-access
   summary_line: 25 operations · 2 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The alignment API from Knownwell — 2 operation(s) for alignment. Returns the Red/Amber/Green alignment read a client team files by hand each week, alongside the machine-computed Knownwell score, so th
-  name: Knownwell alignment API
+  name: Knownwell Alignment API
   slug: knownwell-alignment-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The api-keys API from Knownwell — 2 operation(s) for api-keys.
-  name: Knownwell api-keys API
+  name: Knownwell API Keys API
   slug: knownwell-api-keys-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The clients API from Knownwell — 14 operation(s) for clients.
-  name: Knownwell clients API
+  name: Knownwell Clients API
   slug: knownwell-clients-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The documentation API from Knownwell — 1 operation(s) for documentation.
-  name: Knownwell documentation API
+  name: Knownwell Documentation API
   slug: knownwell-documentation-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The health API from Knownwell — 1 operation(s) for health.
-  name: Knownwell health API
+  name: Knownwell Health API
   slug: knownwell-health-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The portfolios API from Knownwell — 2 operation(s) for portfolios.
-  name: Knownwell portfolios API
+  name: Knownwell Portfolios API
   slug: knownwell-portfolios-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The root API from Knownwell — 1 operation(s) for root.
-  name: Knownwell root API
+  name: Knownwell Root API
   slug: knownwell-root-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The status API from Knownwell — 1 operation(s) for status.
-  name: Knownwell status API
+  name: Knownwell Status API
   slug: knownwell-status-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The streams API from Knownwell — 1 operation(s) for streams.
-  name: Knownwell streams API
+  name: Knownwell Streams API
   slug: knownwell-streams-api
 - baseURL: https://api.knownwell.com/ci/v1
   baseurl_source: declared
   description: The topics API from Knownwell — 1 operation(s) for topics.
-  name: Knownwell topics API
+  name: Knownwell Topics API
   slug: knownwell-topics-api
 artifact_total: 27
 collections:
@@ -129,6 +129,10 @@ collections:
   name: Knownwell api-keys topics API
   slug: open-knownwell-topics-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://knownwell.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/knownwell/refs/heads/main/overlays/knownwell-ci-overlay.yaml
   title: ''
@@ -288,14 +292,14 @@ description: Knownwell is an AI-powered commercial intelligence platform for B2B
   rather than named tiers, with a 30-day trial and no per-seat charge. Knownwell was acquired by 2X to form a human-agentic GTM services company.
 image: https://knownwell.com/wp-content/uploads/2023/08/favicon21.svg
 layout: provider
-modified: '2026-08-13'
+modified: '2026-10-06'
 name: Knownwell
 nav: Providers
 network: true
-overview: 'Knownwell publishes 10 APIs on the [APIs.io](https://apis.io/) network, including alignment API, api-keys API, clients API, and 7 more. Tagged areas include Company, Commercial Intelligence, Client Intelligence, Customer Success, and Revenue Operations.
+overview: 'Knownwell publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alignment API, API Keys API, Clients API, and 7 more. Tagged areas include Company, Commercial Intelligence, Client Intelligence, Customer Success, and Revenue Operations.
 
 
-  Knownwell''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 27 more developer resources.'
+  Knownwell''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 28 more developer resources.'
 plans:
 - name: Knownwell Plans Pricing
   plan_count: 0
@@ -306,24 +310,24 @@ rate_limits:
   name: Knownwell Rate Limits
   slug: knownwell-rate-limits
 score:
-  band: developing
-  composite: 54.2
+  band: strong
+  composite: 55.4
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 49.4
+    contract_quality: 44.7
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 54.2
+  previous_composite: 55.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -334,8 +338,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

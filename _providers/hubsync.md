@@ -34,10 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://hubsync.com/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hubsync/refs/heads/main/security/hubsync-domain-security.yml
   title: ''
@@ -122,17 +126,17 @@ description: 'HubSync is an AI-powered, end-to-end tax and accounting workflow p
 image: https://hubsync.com/hubfs/HubSync_primary-logo-white-color.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'HubSync publicly states, in its own llms.txt and on its AI product page, that it operates an MCP server that third-party assistants (Microsoft Copilot, Claude, ChatGPT) connect to. The server is real '
   name: HubSync MCP Server
-  slug: hubsync-mcp-server
-modified: '2026-08-22'
+  slug: hubsync-mcp-yml
+modified: '2026-10-06'
 name: HubSync
 nav: Providers
 network: true
-overview: 'HubSync is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Tax, Accounting, Workflow-Automation, and Document-Management.
+overview: 'HubSync is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Tax, Accounting, Workflow Automation, and Document Management.
 
 
-  HubSync''s developer surface includes engineering blog, support, and 12 more developer resources.'
+  HubSync''s developer surface includes engineering blog, support, and 13 more developer resources.'
 plans:
 - name: Hubsync Plans Pricing
   plan_count: 0
@@ -144,7 +148,7 @@ rate_limits:
   slug: hubsync-rate-limits
 score:
   band: emerging
-  composite: 15.5
+  composite: 16.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -158,14 +162,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 2.6
-  previous_composite: 15.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 16.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -182,9 +197,9 @@ tags:
 - Company
 - Tax
 - Accounting
-- Workflow-Automation
-- Document-Management
-- Electronic Signature
+- Workflow Automation
+- Document Management
+- E-Signature
 - Professional Services
 - Artificial Intelligence
 - MCP

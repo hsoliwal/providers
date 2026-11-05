@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/epic-bio/refs/heads/main/plans/epic-bio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/epic-bio-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/epic-bio/refs/heads/main/rate-limits/epic-bio-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/epic-bio-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -105,7 +115,7 @@ network: true
 overview: 'Epic Bio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Genetic Medicine, Gene Editing, and CRISPR.
 
 
-  Epic Bio''s developer surface includes engineering blog, support, and 8 more developer resources.'
+  Epic Bio''s developer surface includes engineering blog, support, and 10 more developer resources.'
 plans:
 - name: Epic Bio Plans Pricing
   plan_count: 0
@@ -117,7 +127,7 @@ rate_limits:
   slug: epic-bio-rate-limits
 score:
   band: minimal
-  composite: 8.3
+  composite: 8.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -131,17 +141,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 8.3
+  previous_composite: 8.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

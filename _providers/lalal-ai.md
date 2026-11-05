@@ -37,33 +37,33 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 15
+- acting_count: 14
   human_in_the_loop: 2
   name: Lalal Ai Agentic Access
   operation_count: 15
   slug: lalal-ai-agentic-access
-  summary_line: 15 operations · 15 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 15 operations · 14 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://www.lalal.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Batch Stem Separation API from LALAL.AI — 3 operation(s) for batch stem separation.
   name: LALAL.AI Batch Stem Separation API
   slug: lalal-ai-batch-stem-separation-api
 - baseURL: https://www.lalal.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Common API from LALAL.AI — 6 operation(s) for common.
   name: LALAL.AI Common API
   slug: lalal-ai-common-api
 - baseURL: https://www.lalal.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Stem Separation API from LALAL.AI — 4 operation(s) for stem separation.
   name: LALAL.AI Stem Separation API
   slug: lalal-ai-stem-separation-api
 - baseURL: https://www.lalal.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Voice Change API from LALAL.AI — 2 operation(s) for voice change.
   name: LALAL.AI Voice Change API
   slug: lalal-ai-voice-change-api
@@ -306,9 +306,13 @@ features:
 - Official Python example client maintained at github.com/OmniSaleGmbH/lalalai
 - API access included on Pro and higher plans, with custom enterprise pricing available
 finops:
-- name: Lalal Ai Finops
+- has_sources: false
+  method: generated
+  name: Lalal Ai Finops
+  primary_unit: ''
   service_category: ''
   slug: lalal-ai-finops
+  template: true
 image: https://www.lalal.ai/static/images/og/preview.png
 json_schemas:
 - name: LALAL.AI Split Task Result
@@ -330,7 +334,7 @@ modified: '2026-08-13'
 name: LALAL.AI
 nav: Providers
 network: true
-overview: 'LALAL.AI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Batch Stem Separation API, Common API, Stem Separation API, and 1 more. Tagged areas include Artificial Intelligence, Audio, Audio Processing, Stem Separation, and Vocal Removal.
+overview: 'LALAL.AI publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch Stem Separation API, Common API, Stem Separation API, and 1 more. Tagged areas include Artificial Intelligence, Audio, Audio Processing, Stem Separation, and Vocal Removal.
 
 
   The LALAL.AI catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -347,9 +351,10 @@ rate_limits:
   name: Lalal Ai Rate Limits
   slug: lalal-ai-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: LALAL.AI API Rules
+  name: LALAL.AI — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -357,7 +362,8 @@ rules:
     info: 1
     warn: 4
   slug: lalal-ai-jsonschema-spectral-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
   name: LALAL.AI API Rules
@@ -370,23 +376,23 @@ rules:
   slug: lalal-ai-rules
 score:
   band: strong
-  composite: 64.0
+  composite: 60.1
   coverage:
     artifact_dirs: 30
-    catalog_earned: 79.5
+    catalog_earned: 70.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 35.5
+    catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.0
   facets:
-    access_clarity: 71.1
-    contract_governance: 33.3
-    contract_quality: 71.1
+    access_clarity: 63.2
+    contract_governance: 31.8
+    contract_quality: 64.8
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 64.0
+  previous_composite: 62.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -397,8 +403,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 21.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -424,7 +436,7 @@ tags:
 - Voice Cloning
 - Voice Changer
 - Music
-- Machine-Learning
-- DSP
+- Machine Learning
+- Digital Signal Processing
 website: https://www.lalal.ai/
 ---

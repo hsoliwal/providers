@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Resul (Resulticks) Web API is a JSON REST API served from the https://apis.resu.io base domain, documented publicly at gud.resulticks.com. Its call surface is grouped into six documented categorie
@@ -151,7 +151,7 @@ modified: '2026-08-13'
 name: Resulticks
 nav: Providers
 network: true
-overview: 'Resulticks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Marketing Automation, Omnichannel, and Customer Engagement.
+overview: 'Resulticks is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Marketing Automation, Omnichannel, and Customer Engagement.
 
 
   Resulticks'' developer surface includes support, documentation, API reference, getting-started guide, engineering blog, authentication, and 16 more developer resources.'
@@ -166,7 +166,7 @@ rate_limits:
   slug: resulticks-rate-limits
 score:
   band: emerging
-  composite: 25.3
+  composite: 24.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -180,9 +180,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 25.3
+  previous_composite: 24.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -191,9 +191,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 34.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

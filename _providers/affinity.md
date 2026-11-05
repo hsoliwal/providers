@@ -13,6 +13,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -28,14 +29,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.0
-  scored_at: '2026-09-20'
+  score: 39.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -51,54 +52,54 @@ apis:
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about auths
-  name: Affinity auth API
+  name: Affinity Auth API
   slug: affinity-auth-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about companies
-  name: Affinity companies API
+  name: Affinity Companies API
   slug: affinity-companies-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about company merges
-  name: Affinity companyMerges API
+  name: Affinity Company Merges API
   slug: affinity-companymerges-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about emails
-  name: Affinity emails API
+  name: Affinity Emails API
   slug: affinity-emails-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about lists
-  name: Affinity lists API
+  name: Affinity Lists API
   slug: affinity-lists-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about meetings
-  name: Affinity meetings API
+  name: Affinity Meetings API
   slug: affinity-meetings-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about notes
-  name: Affinity notes API
+  name: Affinity Notes API
   slug: affinity-notes-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about opportunities
-  name: Affinity opportunities API
+  name: Affinity Opportunities API
   slug: affinity-opportunities-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about person merges
-  name: Affinity personMerges API
+  name: Affinity Person Merges API
   slug: affinity-personmerges-api
 - baseURL: https://api.affinity.co
   baseurl_source: declared
   description: Operations about persons
-  name: Affinity persons API
+  name: Affinity Persons API
   slug: affinity-persons-api
-artifact_total: 46
+artifact_total: 47
 collections:
 - collection_type: open
   name: API Collection
@@ -134,6 +135,11 @@ collections:
   name: Affinity API v2 auth persons API
   slug: open-affinity-persons-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/affinity/refs/heads/main/capabilities/affinity-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/affinity-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/affinity/refs/heads/main/agentic-access/affinity-agentic-access.yml
   title: ''
@@ -218,9 +224,13 @@ examples:
   name: Affinity V2 Examples
   slug: affinity-v2-examples
 finops:
-- name: Affinity Finops
+- has_sources: false
+  method: generated
+  name: Affinity Finops
+  primary_unit: ''
   service_category: ''
   slug: affinity-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/affinity.png
 json_schemas:
 - name: Attendee
@@ -271,17 +281,21 @@ jsonld:
   property_count: 14
   slug: affinity-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.affinity.co over HTTP.
+  name: Affinity MCP Server
+  slug: affinity
 modified: '2026-06-12'
 name: Affinity
 nav: Providers
 network: true
-overview: 'Affinity publishes 10 APIs on the [APIs.io](https://apis.io/) network, including auth API, companies API, companyMerges API, and 7 more. Tagged areas include CRM, Relationship Intelligence, Private Equity, Venture Capital, and Contacts.
+overview: 'Affinity publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Companies API, Company Merges API, and 8 more. Tagged areas include CRM, Relationship Intelligence, Private Equity, Venture Capital, and Contacts.
 
 
   The Affinity catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Affinity''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
+  Affinity''s developer surface includes authentication, documentation, engineering blog, pricing, and 14 more developer resources.'
 plans:
 - name: Affinity Plans Pricing
   plan_count: 4
@@ -292,9 +306,10 @@ rate_limits:
   name: Affinity Rate Limits
   slug: affinity-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Affinity API Rules
+  name: Affinity — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -303,24 +318,24 @@ rules:
     warn: 3
   slug: affinity-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 48.5
+  band: thin
+  composite: 38.5
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 83.3
+    artifact_dirs: 19
+    catalog_earned: 61.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.8
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 64.8
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 59.1
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 48.5
+    discoverability: 68.3
+    operational_transparency: 28.9
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     contracts:
@@ -329,9 +344,15 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

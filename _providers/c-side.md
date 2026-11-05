@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 asyncapis:
@@ -40,6 +40,10 @@ asyncapis:
   name: C Side Webhooks
   slug: c-side-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://cside.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -175,8 +179,8 @@ layout: provider
 mcp_servers:
 - description: cside operates a public, read-only remote MCP (Model Context Protocol) server at https://mcp.cside.com that exposes cside.com marketing-site and docs.cside.com documentation content (not the cside pro
   name: c/side MCP Server
-  slug: cside-mcp-server
-modified: '2026-07-18'
+  slug: cside
+modified: '2026-10-06'
 name: c/side
 nav: Providers
 network: true
@@ -186,11 +190,11 @@ overview: 'c/side is profiled on the [APIs.io](https://apis.io/) network. Tagged
   The c/side catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  c/side''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, CLI, changelog, and 21 more developer resources.'
+  c/side''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, CLI, changelog, and 22 more developer resources.'
 random_paper: 15
 score:
   band: developing
-  composite: 44.2
+  composite: 43.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -202,11 +206,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 52.6
-  previous_composite: 44.2
+  previous_composite: 43.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -223,9 +227,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 40.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

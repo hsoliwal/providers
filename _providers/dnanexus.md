@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The DNAnexus Platform API is a JSON-over-HTTPS API of roughly 206 documented methods. Each method is invoked with an HTTP POST to a route of the form /class-xxxx/method (for example /file-xxxx/describ
@@ -236,7 +236,7 @@ modified: '2026-08-04'
 name: DNAnexus
 nav: Providers
 network: true
-overview: 'DNAnexus publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Genomics, Bioinformatics, Life Sciences, and Healthcare.
+overview: 'DNAnexus is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Genomics, Bioinformatics, Life Sciences, and Healthcare.
 
 
   DNAnexus'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, developer console, pricing, and 33 more developer resources.'
@@ -252,9 +252,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 51.8
+  composite: 48.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -266,9 +266,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 51.8
+  previous_composite: 48.8
   provenance:
     conformance: first-party
     skills: derived
@@ -277,9 +277,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 66.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.trlyr.com/insights/
 - group: company
   title: ''
   type: Website
@@ -92,14 +96,14 @@ created: '2026-07-17'
 description: terralayr is a German energy-flexibility company that develops, owns and operates utility-scale battery energy storage systems (BESS) and runs LAYR, a cloud platform that aggregates heterogeneous storage assets and makes their flexibility available as bookable capacity to utilities, grid operators, power traders, aggregators and asset owners. The platform lets customers buy and sell dispatchable capacity to balance renewable generation against fluctuating grid demand, with storage bookable via API and no complex hardware onboarding. terralayr is backed by Creandum and Earlybird. Its LAYR product API is B2B/private and publishes no public OpenAPI, SDKs or developer documentation; this profile captures the public well-known discovery, security and operational surface.
 image: https://www.trlyr.com/media-kit
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: terralayr
 nav: Providers
 network: true
 overview: 'terralayr is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Climate, Energy, Battery Energy Storage, and Grid Flexibility.
 
 
-  terralayr''s developer surface includes authentication and 10 more developer resources.'
+  terralayr''s developer surface includes engineering blog, authentication, and 10 more developer resources.'
 random_paper: 14
 scopes:
 - name: Terralayr Scopes
@@ -108,23 +112,28 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 16.9
+  composite: 15.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 11.9
-    discoverability: 57.4
+    developer_ergonomics: 14.3
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 16.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 14.6
   provenance:
     conformance: derived
   regulatory:
@@ -132,9 +141,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

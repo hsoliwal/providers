@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://oceanshealthcare.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://oceanshealthcare.com/blog/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/oceans/refs/heads/main/security/oceans-domain-security.yml
   title: ''
@@ -65,18 +73,18 @@ created: '2026-07-17'
 description: Oceans Healthcare is a behavioral health system operating a network of psychiatric hospitals and outpatient programs across the southern United States. Founded in 2010 and backed by General Catalyst, the company delivers inpatient and outpatient mental health treatment for adolescents, adults, older adults, and veterans and first responders, spanning acute inpatient psychiatry, partial hospitalization, intensive outpatient, and virtual telehealth care. Oceans Healthcare is a care-delivery operator focused on safety, stability, and lasting healing; it does not publish a public developer API, developer portal, or OpenAPI definition at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oceans.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Oceans
 nav: Providers
 network: true
 overview: 'Oceans is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Behavioral Health, Mental Health, and Psychiatric Hospitals.
 
 
-  Oceans'' developer surface includes engineering blog and 5 more developer resources.'
+  Oceans'' developer surface includes engineering blog and 7 more developer resources.'
 random_paper: 17
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,17 +98,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 9.5
+  previous_composite: 9.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

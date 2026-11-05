@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: platform
@@ -33,16 +33,16 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-09-20'
+  score: 42.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 145
+- acting_count: 115
   human_in_the_loop: 2
   name: Spotnana Agentic Access
-  operation_count: 211
+  operation_count: 210
   slug: spotnana-agentic-access
-  summary_line: 211 operations · 145 acting · 2 human-in-the-loop
-api_count: 11
+  summary_line: 210 operations · 115 acting · 2 human-in-the-loop
+api_count: 14
 apis:
 - baseURL: https://apis.spotnana.com
   baseurl_source: declared
@@ -318,6 +318,14 @@ collections:
   name: Air Users API
   slug: open-spotnana-users-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.spotnana.com/newsroom/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.spotnana.com/newsroom/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/spotnana/refs/heads/main/capabilities/spotnana-capability-edges.yml
   title: ''
@@ -460,40 +468,40 @@ description: Spotnana is a travel-as-a-service platform that powers corporate tr
 image: https://developer.spotnana.com/img/logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.spotnana.com over HTTP; 6 tools listed.
   name: Spotnana MCP Server
-  slug: spotnana-mcp-server
-modified: '2026-07-21'
+  slug: spotnana-developer-docs
+modified: '2026-10-06'
 name: Spotnana
 nav: Providers
 network: true
-overview: 'Spotnana publishes 33 APIs on the [APIs.io](https://apis.io/) network, including Air API, Air Credits API, API User API, and 30 more. Tagged areas include Company, Travel, Corporate Travel, Travel Management, and Booking.
+overview: 'Spotnana publishes 33 API contracts indexed on the [APIs.io](https://apis.io/) network, including Air API, Air Credits API, API User API, and 30 more. Tagged areas include Company, Travel, Corporate Travel, Travel Management, and Booking.
 
 
   The Spotnana catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Spotnana''s developer surface includes documentation, API reference, getting-started guide, changelog, authentication, sandbox, and 24 more developer resources.'
+  Spotnana''s developer surface includes engineering blog, documentation, API reference, getting-started guide, changelog, authentication, sandbox, and 25 more developer resources.'
 random_paper: 10
 score:
   band: developing
-  composite: 48.7
+  composite: 48.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 63.7
-    developer_ergonomics: 58.9
-    discoverability: 75.9
+    contract_quality: 58.2
+    developer_ergonomics: 61.3
+    discoverability: 80.0
     operational_transparency: 50.0
-  previous_composite: 48.7
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -509,9 +517,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

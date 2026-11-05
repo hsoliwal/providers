@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -98,31 +98,97 @@ apis:
   baseurl_source: declared
   description: Operations on Automate access keys.
   name: BrowserStack AccessKey API
+  phrasing_intents:
+  - id: recycleAccessKey
+    intent: Rotate the Automate access key
+    question: How do I rotate my BrowserStack Automate access key if it leaked?
+  phrasing_ops: 1
   slug: browserstack-accesskey-api
 - baseURL: https://api.browserstack.com
   baseurl_source: declared
   description: Operations describing supported browsers and devices.
   name: BrowserStack Browsers API
+  phrasing_intents:
+  - id: getBrowsers
+    intent: List supported browsers, OS and real devices
+    question: Which browsers and operating systems can I run Automate tests on in BrowserStack?
+  phrasing_ops: 1
   slug: browserstack-browsers-api
 - baseURL: https://api.browserstack.com
   baseurl_source: declared
   description: Operations on Automate builds.
   name: BrowserStack Builds API
+  phrasing_intents:
+  - id: listBuilds
+    intent: List recent test builds
+    question: How do I see my recent BrowserStack Automate builds?
+  - id: updateBuild
+    intent: Rename a test build
+    question: Can I rename a build after its tests have run?
+  - id: deleteBuild
+    intent: Delete a test build
+    question: How do I delete an old build from my Automate dashboard?
+  phrasing_ops: 3
   slug: browserstack-builds-api
 - baseURL: https://api.browserstack.com
   baseurl_source: declared
   description: Operations describing the current Automate subscription plan and capacity.
   name: BrowserStack Plan API
+  phrasing_intents:
+  - id: getPlan
+    intent: Check Automate plan capacity and usage
+    question: How many parallel sessions does my BrowserStack Automate plan allow?
+  phrasing_ops: 1
   slug: browserstack-plan-api
 - baseURL: https://api.browserstack.com
   baseurl_source: declared
   description: Operations on Automate projects.
   name: BrowserStack Projects API
+  phrasing_intents:
+  - id: listProjects
+    intent: List Automate projects
+    question: What projects do I have in BrowserStack Automate?
+  - id: getProject
+    intent: Get details of one project
+    question: How do I look up the details of a single Automate project?
+  - id: updateProject
+    intent: Rename a project
+    question: Can I rename an existing Automate project?
+  - id: deleteProject
+    intent: Delete an empty project
+    question: How do I delete an Automate project?
+  - id: getProjectBadgeKey
+    intent: Get a project's status badge key
+    question: How do I get the status badge key to show build status in my README?
+  phrasing_ops: 5
   slug: browserstack-projects-api
 - baseURL: https://api.browserstack.com
   baseurl_source: declared
   description: Operations on Automate sessions.
   name: BrowserStack Sessions API
+  phrasing_intents:
+  - id: listBuildSessions
+    intent: List the test sessions in a build
+    question: How do I see all the test sessions that ran in one build?
+  - id: getSession
+    intent: Get details of one test session
+    question: How do I look up a single Automate session's details and status?
+  - id: updateSession
+    intent: Mark a session passed or failed
+    question: How do I mark a BrowserStack session as passed or failed from my test script?
+  - id: deleteSession
+    intent: Delete a test session
+    question: How do I delete a single test session and its recordings?
+  - id: getSessionLogs
+    intent: Download a session's Selenium logs
+    question: Where can I get the Selenium command logs for a test run?
+  - id: getSessionNetworkLogs
+    intent: Download a session's network logs (HAR)
+    question: How do I get the HAR file of network traffic from a test session?
+  - id: getSessionConsoleLogs
+    intent: Download a session's browser console logs
+    question: What JavaScript errors showed up in the browser console during my test?
+  phrasing_ops: 7
   slug: browserstack-sessions-api
 artifact_total: 39
 collections:
@@ -151,6 +217,16 @@ collections:
   name: BrowserStack Automate REST API
   slug: open-browserstack
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/browserstack/refs/heads/main/finops/browserstack-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/browserstack-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/browserstack/refs/heads/main/capabilities/browserstack-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/browserstack-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/browserstack/refs/heads/main/agentic-access/browserstack-agentic-access.yml
   title: ''
@@ -348,9 +424,13 @@ common:
 created: '2025-02-17'
 description: BrowserStack provides instant access to 3,500+ real desktop browsers and 30,000+ real mobile device units for manual and automated software testing. Its products span cross-browser testing (Live, Automate), mobile app testing (App Live, App Automate), visual regression testing (Percy, App Percy), accessibility testing, test management, test reporting and analytics, and low-code automation. Each product exposes its own REST API on its own host, and BrowserStack ships an official Model Context Protocol server — hosted at mcp.browserstack.com and distributed as an npm package — carrying 44 tools across those products.
 finops:
-- name: Browserstack Finops
+- has_sources: false
+  method: generated
+  name: Browserstack Finops
+  primary_unit: ''
   service_category: API
   slug: browserstack-finops
+  template: true
 image: https://www.browserstack.com/images/browserstack-logo.svg
 layout: provider
 mcp_servers:
@@ -361,10 +441,10 @@ modified: '2026-09-04'
 name: BrowserStack
 nav: Providers
 network: true
-overview: 'BrowserStack publishes 6 APIs on the [APIs.io](https://apis.io/) network, including AccessKey API, Browsers API, Builds API, and 3 more. Tagged areas include Accessibility, Appium, Application, Automation, and CI/CD.
+overview: 'BrowserStack publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including AccessKey API, Browsers API, Builds API, and 19 more. Tagged areas include Accessibility, Appium, Application, Automation, and CI/CD.
 
 
-  BrowserStack''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, pricing, signup flow, support, and 36 more developer resources.'
+  BrowserStack''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, pricing, signup flow, support, and 38 more developer resources.'
 plans:
 - name: Browserstack Plans Pricing
   plan_count: 17
@@ -376,23 +456,23 @@ rate_limits:
   slug: browserstack-rate-limits
 score:
   band: strong
-  composite: 66.1
+  composite: 66.3
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 59.0
+    artifact_dirs: 26
+    catalog_earned: 56.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 56.0
+    catalog_gap: 59.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 100.0
+    access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 73.2
     discoverability: 66.7
     operational_transparency: 78.9
-  previous_composite: 66.1
+  previous_composite: 67.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -403,8 +483,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -422,7 +508,7 @@ security:
 - kind: vulnerability-disclosure
   name: Browserstack Vulnerability Disclosure
   slug: browserstack-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Browserstack Trust Center
   slug: browserstack-trust-center

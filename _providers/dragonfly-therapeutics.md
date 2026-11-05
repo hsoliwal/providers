@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Model Context Protocol endpoint served from the Dragonfly Therapeutics website host. This is a platform-provided surface automatically provisioned by Wix for every site it builds — not a first-party D
@@ -43,6 +43,16 @@ apis:
   slug: dragonfly-therapeutics-site-mcp
 artifact_total: 6
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/dragonfly-therapeutics/refs/heads/main/plans/dragonfly-therapeutics-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/dragonfly-therapeutics-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/dragonfly-therapeutics/refs/heads/main/rate-limits/dragonfly-therapeutics-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/dragonfly-therapeutics-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -119,17 +129,17 @@ description: 'Dragonfly Therapeutics is a clinical-stage biotechnology company b
   by its Wix website platform.'
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.dragonflytx.com over HTTP; 9 tools listed.
   name: Dragonfly Therapeutics MCP Server
-  slug: dragonfly-therapeutics-mcp-server
+  slug: dragonfly-therapeutics-site-mcp
 modified: '2026-08-12'
 name: Dragonfly Therapeutics
 nav: Providers
 network: true
-overview: 'Dragonfly Therapeutics publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Pharmaceuticals, Immunotherapy, and Oncology.
+overview: 'Dragonfly Therapeutics is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Pharmaceuticals, Immunotherapy, and Oncology.
 
 
-  Dragonfly Therapeutics'' developer surface includes engineering blog, product news, authentication, and 9 more developer resources.'
+  Dragonfly Therapeutics'' developer surface includes engineering blog, product news, authentication, and 11 more developer resources.'
 plans:
 - name: Dragonfly Therapeutics Plans Pricing
   plan_count: 0
@@ -141,7 +151,7 @@ rate_limits:
   slug: dragonfly-therapeutics-rate-limits
 score:
   band: emerging
-  composite: 15.5
+  composite: 15.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 35.0
@@ -155,25 +165,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 72.2
+    discoverability: 72.5
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.5
+  previous_composite: 15.0
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

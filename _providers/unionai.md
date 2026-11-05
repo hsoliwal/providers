@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -120,6 +120,15 @@ collections:
   name: Union FlyteAdmin Control Plane API (HTTP/JSON Gateway)
   slug: open-unionai
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.union.ai/pricing
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/capabilities/unionai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/unionai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/unionai/refs/heads/main/agentic-access/unionai-agentic-access.yml
   title: ''
@@ -183,26 +192,30 @@ common:
 created: '2026-06-20'
 description: Union.ai is the commercial AI/ML orchestration platform built on the open-source Flyte project. It exposes the Flyte/Union control plane (the FlyteAdmin service) for registering and running strongly-typed workflows, tasks, and launch plans, plus Union Serverless, Actors, and Artifacts. The control plane is primarily a gRPC API (FlyteIDL AdminService) with an auto-generated HTTP/JSON gateway exposed under /api/v1/, driven by the union / pyflyte CLI and Flytekit / Union SDKs.
 finops:
-- name: Unionai Finops
+- has_sources: true
+  method: generated
+  name: Unionai Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: unionai-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unionai.png
 layout: provider
 modified: '2026-06-20'
 name: Union.ai
 nav: Providers
 network: true
-overview: 'Union.ai publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Domains API, Executions API, Launch Plans API, and 5 more. Tagged areas include Artificial Intelligence, Machine-Learning, Orchestration, Workflows, and MLOps.
+overview: 'Union.ai publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Domains API, Executions API, Launch Plans API, and 6 more. Tagged areas include Artificial Intelligence, Machine Learning, Orchestration, Workflows, and MLOps.
 
 
-  Union.ai''s developer surface includes authentication, documentation, and 11 more developer resources.'
+  Union.ai''s developer surface includes pricing, authentication, documentation, and 12 more developer resources.'
 plans:
 - name: Unionai Plans Pricing
-  plan_count: 3
+  plan_count: 9
   slug: unionai-plans-pricing
 random_paper: 7
 rate_limits:
-- limit_count: 4
+- limit_count: 0
   name: Unionai Rate Limits
   slug: unionai-rate-limits
 scopes:
@@ -212,23 +225,23 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 38.7
+  composite: 35.0
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    artifact_dirs: 13
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.5
   facets:
-    access_clarity: 47.4
+    access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 50.5
+    contract_quality: 45.6
     developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 38.7
+    discoverability: 66.1
+    operational_transparency: 2.6
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     contracts:
@@ -236,8 +249,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -259,7 +278,7 @@ security:
 slug: unionai
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Orchestration
 - Workflows
 - MLOps

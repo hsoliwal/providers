@@ -1,0 +1,914 @@
+{
+  "schema": "PROVIDERS_PR7_INERT_DELETION_CUSTODY_V1",
+  "repository": "hsoliwal/providers",
+  "pullRequest": 7,
+  "scope": "DATA_ONLY_EXACT_PREIMAGE_CUSTODY; inactive bytes only, never active provider/taxonomy input",
+  "archiveRoot": ".m3/custody/pr-7-upstream-81bb1a00",
+  "originalBase": {
+    "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+    "tree": "6d99167c25ed6f4b57a72b52b4cd0562f689ff19"
+  },
+  "incoming": {
+    "upstreamRepository": "api-evangelist/providers",
+    "head": "81bb1a00f58648801a9a66d920bbdd1a5e909453",
+    "tree": "582810dec28a5c6005c39827d48e13fc2b79c461",
+    "sourceBranch": "m3/upstream-main-20261031",
+    "commonAncestor": "e0a342a8fd78b11c68ad3306cfb06e05d83f454d"
+  },
+  "sourceAuditDataBlob": "cb6a5b21f76efc7c9a7a3694638f1eb879d714c6",
+  "counts": {
+    "originalPaths": 50,
+    "uniqueGitBlobs": 50,
+    "providerDocuments": 49,
+    "retiredIndustryDataFiles": 1,
+    "originalBytes": 2637590,
+    "activePathsRestored": 0,
+    "generatedImplementations": 0
+  },
+  "disposition": {
+    "activeIncomingDeletionsPreserved": true,
+    "reuseExistingBlobObjectIds": true,
+    "blobBytesModesAndTypesUnmodified": true,
+    "archiveFilesUseOpaqueShaNamesAndBlobExtension": true,
+    "automaticallyRestored": false,
+    "loadedAsData": false,
+    "providerCollectionMember": false,
+    "curationOrDelistingPolicyOverridden": false,
+    "oldVentureCapitalTaxonomyReactivated": false,
+    "sourceHistoryAndNoticePreserved": true
+  },
+  "currentInputBindings": {
+    "config": {
+      "path": "_config.yml",
+      "gitBlob": "183e0818f16593d3b2bb03bf980be8fee35a0e5c"
+    },
+    "activeDataTree": "4a894c114ddaa50444a0bd179fc2c00cb35edc11",
+    "activeProviderTree": "92404ddced878155cf860f4889c5eca7fd66fb6d",
+    "industryTree": "30b25f7d061ccad54dc2eedb297d9faad9485d72",
+    "builders": [
+      {
+        "path": "scripts/build-listing.py",
+        "sha1": "9d9593036c955f96d8514ef7be2906487897296f",
+        "sha256": "92a8ab2e64b79272d9881e086e5912deee311d51a4cae914f5c18288e05fe237",
+        "bytes": 32002,
+        "gitBlob": "c077dd7c6dfe73da62ce3cf4d90f9a05e6d9cd15"
+      },
+      {
+        "path": "scripts/build-sections.py",
+        "sha1": "050367628a03031d94cc3c8e488e7111db3ff6c3",
+        "sha256": "fcddd28fa00b956e86d60b891876f60221f7b05a1b0e4616a4468e4f47a56f4c",
+        "bytes": 219316,
+        "gitBlob": "8f1dc9b36fddfd33af41f61975bd7bf871c86831"
+      }
+    ],
+    "checker": {
+      "path": "scripts/check-data.rb",
+      "gitBlob": "274b3018ed1c1799c5bcd84d4dd129b0652be625"
+    },
+    "existingForkM3": {
+      "path": ".m3/atomize-patternize",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6e04e1b7e367438653e8823684de515d660a208"
+    }
+  },
+  "inertnessContract": {
+    "jekyll": {
+      "guardedInclude": [
+        ".well-known"
+      ],
+      "archiveRootStartsWithDot": true,
+      "entryFilterReference": "jekyll/jekyll v3.10.0 lib/jekyll/entry_filter.rb",
+      "actualSiteRuntimeVersion": "UNVERIFIED",
+      "scope": "Under the pinned config, .m3 is not explicitly included and dot paths are excluded. Collections read only configured _providers; data reader starts at _data."
+    },
+    "generators": {
+      "listingAndSections": "Read external ALL/all/* and api-search/providers/_providers; do not discover this archive.",
+      "providerBuilder": "Reads ALL/*/apis.yml and writes only active _providers; archive has neither descriptor paths nor .md filenames.",
+      "sectionTools": "os.walk(SITE) explicitly prunes directories starting with dot; only index.html files opt in.",
+      "m3Analysis": "Archive filenames end .blob or MANIFEST.json, never *.java or pom.xml. Existing Java/POM content roots and production owners are not introduced; bootstrap inspected-file counts would change if explicitly rerun."
+    },
+    "revisitRequiredIf": "Any include/collection/data_dir/source configuration or generator discovery contract changes."
+  },
+  "rightsAndProvenance": {
+    "repositoryWideUpstreamLicense": "NOT_DECLARED; no root LICENSE observed by existing CONTRIBUTING.",
+    "existingNotice": "M3-SYNEXIA-RIGHTS.md e67200aa56d289e7014433882fab8a4d6916b671",
+    "sourcePayloadRights": "Original provider/upstream rights, attributions and notices remain unchanged inside exact source blobs. This manifest adds no license grant or first-party authorship claim over provider data.",
+    "newUse": "Retention inside the same existing fork; no publication reactivation or generator input admission."
+  },
+  "qualification": {
+    "rubyPsychHeadRun": {
+      "id": 42029224849,
+      "event": "workflow_dispatch",
+      "head": "81bb1a00f58648801a9a66d920bbdd1a5e909453",
+      "status": "completed",
+      "conclusion": "success",
+      "scope": "Existing _data/_config parser job; root reads actual job logs. Does not qualify this archive or Python/Liquid behavior."
+    },
+    "archiveProof": "Exact IDs/path isolation/Merkle validation only; receiving commit not created.",
+    "fullJekyllRender": "NOT_RUN",
+    "generatorExecution": "NOT_RUN"
+  },
+  "rows": [
+    {
+      "originalPath": "_data/providers-industry-venture-capital.json",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "a50d7aa41ef2f4b07526fbe76f3c6711bff53b3e",
+      "bytes": 2236426,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/a50d7aa41ef2f4b07526fbe76f3c6711bff53b3e.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_data/providers-industry-venture-capital.json",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_data/providers-industry-venture-capital.json"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/aervik-labs.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "57ed455a4c8fd10d024352461f28d7e0a8421d23",
+      "bytes": 7808,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/57ed455a4c8fd10d024352461f28d7e0a8421d23.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/aervik-labs.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/aervik-labs.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/aldermore.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "b0cc856e212133c2eef76481858978e0d126032d",
+      "bytes": 19951,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/b0cc856e212133c2eef76481858978e0d126032d.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/aldermore.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/aldermore.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/api-evangelist-spotlight-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "a624f2741af4630dbaae3cc85c60eaeb9925506e",
+      "bytes": 274,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/a624f2741af4630dbaae3cc85c60eaeb9925506e.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/api-evangelist-spotlight-rules.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/api-evangelist-spotlight-rules.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/channelseal.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "003aec346b8f4837e12b0e3d69a8b0126eb8ca7c",
+      "bytes": 12763,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/003aec346b8f4837e12b0e3d69a8b0126eb8ca7c.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/channelseal.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/channelseal.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/compare-flight-prices.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "b27a4bf73e76a7e5930d38718d88bdd6fc196a61",
+      "bytes": 3762,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/b27a4bf73e76a7e5930d38718d88bdd6fc196a61.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/compare-flight-prices.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/compare-flight-prices.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/demo-ckan-org.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "cd32d9cea45d2be316a00b26789dcbd14b2c818d",
+      "bytes": 5747,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/cd32d9cea45d2be316a00b26789dcbd14b2c818d.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/demo-ckan-org.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/demo-ckan-org.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/device-specs-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "5e8190a236786297ca3750f6ec2d647086aa5ad5",
+      "bytes": 11375,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/5e8190a236786297ca3750f6ec2d647086aa5ad5.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/device-specs-api.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/device-specs-api.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/empatica.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "9d847aabc1f0c4b63f223ae747b31efcd3576311",
+      "bytes": 10162,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/9d847aabc1f0c4b63f223ae747b31efcd3576311.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/empatica.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/empatica.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/encurate.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "bbd0fea2c2b5afd5e5b57c59720da483bc4eedca",
+      "bytes": 9321,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/bbd0fea2c2b5afd5e5b57c59720da483bc4eedca.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/encurate.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/encurate.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/faturapdf-brazilian-invoice-receipt-pdf-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "4350dedcac4453d6e98dc065efd75f083bd4ff75",
+      "bytes": 14950,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/4350dedcac4453d6e98dc065efd75f083bd4ff75.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/faturapdf-brazilian-invoice-receipt-pdf-api.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/faturapdf-brazilian-invoice-receipt-pdf-api.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/flash-app.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "2151a6459de941075910e7e42ed182c4712d40b2",
+      "bytes": 9958,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/2151a6459de941075910e7e42ed182c4712d40b2.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/flash-app.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/flash-app.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/football.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "1c53e0b6ed3d02afb74e7978feb0ef65f6dfb701",
+      "bytes": 3602,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/1c53e0b6ed3d02afb74e7978feb0ef65f6dfb701.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/football.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/football.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/hiring-index.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "89b4ad32e9b0832c7708bd6c5dfb3b3e9a12891c",
+      "bytes": 8211,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/89b4ad32e9b0832c7708bd6c5dfb3b3e9a12891c.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/hiring-index.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/hiring-index.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/humble-bundle.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "76f827e8c27d1e5c1ff324a60a2a706381d94a20",
+      "bytes": 3547,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/76f827e8c27d1e5c1ff324a60a2a706381d94a20.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/humble-bundle.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/humble-bundle.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/inferdo.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "9d32bf778fd083735e4e40cd3a1cff51ff087adc",
+      "bytes": 3547,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/9d32bf778fd083735e4e40cd3a1cff51ff087adc.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/inferdo.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/inferdo.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/knight-frank.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "7d1b96130f7810b287c2cf5e7a952840f18b8303",
+      "bytes": 14524,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/7d1b96130f7810b287c2cf5e7a952840f18b8303.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/knight-frank.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/knight-frank.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/lecto-translation.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "70285a7f5212b03955a68e36cfd29724536e62a7",
+      "bytes": 3669,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/70285a7f5212b03955a68e36cfd29724536e62a7.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/lecto-translation.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/lecto-translation.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/linguatools.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "f0ca163ae67cacde36f679b927fa76376836507c",
+      "bytes": 6429,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/f0ca163ae67cacde36f679b927fa76376836507c.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/linguatools.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/linguatools.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/maia-analytics.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "5f2a04a4ff467afd43b5a55a202881a014572475",
+      "bytes": 19421,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/5f2a04a4ff467afd43b5a55a202881a014572475.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/maia-analytics.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/maia-analytics.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/mangapi.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "9fcadd4a23df18d1c21d6513ee85398a32a01637",
+      "bytes": 3508,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/9fcadd4a23df18d1c21d6513ee85398a32a01637.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/mangapi.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/mangapi.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/moon-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "5d371c4438c91097487aa6d2619ad15d7e32978d",
+      "bytes": 8020,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/5d371c4438c91097487aa6d2619ad15d7e32978d.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/moon-api.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/moon-api.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/nba-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "56796f14438129763a108cb449ce95c4a64162e1",
+      "bytes": 3538,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/56796f14438129763a108cb449ce95c4a64162e1.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/nba-data.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/nba-data.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/newsx.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "a7e5f4bb7f72f94951500b3c30fbf0f9e8742069",
+      "bytes": 3521,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/a7e5f4bb7f72f94951500b3c30fbf0f9e8742069.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/newsx.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/newsx.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/nokia-network-as-code.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "1d3b097aabd4399feb9e9b497c1fa7e3dc2b63e2",
+      "bytes": 26781,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/1d3b097aabd4399feb9e9b497c1fa7e3dc2b63e2.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/nokia-network-as-code.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/nokia-network-as-code.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/nophishy.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "d027399aa8d76d8ba885a6efde14c532d804f18b",
+      "bytes": 3535,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/d027399aa8d76d8ba885a6efde14c532d804f18b.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/nophishy.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/nophishy.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/outscraper.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "1c0f4d45365e6bdb6520324ce6d5803f5454c1e8",
+      "bytes": 5065,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/1c0f4d45365e6bdb6520324ce6d5803f5454c1e8.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/outscraper.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/outscraper.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/peakmetrics.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "8566bfb42fc4325623d19e40a66e60f69725aace",
+      "bytes": 3784,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/8566bfb42fc4325623d19e40a66e60f69725aace.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/peakmetrics.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/peakmetrics.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/premier-league-standings.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "23275a02f50011a2f05338064cfb82fd4ad0f161",
+      "bytes": 3765,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/23275a02f50011a2f05338064cfb82fd4ad0f161.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/premier-league-standings.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/premier-league-standings.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/pushpress.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "cb0a75eb962cbe46ba52bcd1e3c4a4ea0759e6cf",
+      "bytes": 235,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/cb0a75eb962cbe46ba52bcd1e3c4a4ea0759e6cf.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/pushpress.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/pushpress.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/realtymole.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "efb0f0ec9dbb59716be68ee5ed1a20d767d04f53",
+      "bytes": 8172,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/efb0f0ec9dbb59716be68ee5ed1a20d767d04f53.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/realtymole.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/realtymole.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/rwanda-locations.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "4874e9629b904301ee1dd5eac6a006e0e010cbc2",
+      "bytes": 3683,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/4874e9629b904301ee1dd5eac6a006e0e010cbc2.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/rwanda-locations.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/rwanda-locations.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/saml.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "bc256f395e7a0e0f82d4e90ca6da2ac9bbe6b823",
+      "bytes": 8743,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/bc256f395e7a0e0f82d4e90ca6da2ac9bbe6b823.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/saml.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/saml.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/spotlight-rules.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "dbb7b347471eab6f54452ea08c40631d0786f770",
+      "bytes": 259,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/dbb7b347471eab6f54452ea08c40631d0786f770.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/spotlight-rules.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/spotlight-rules.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/sso.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "22ae62bc87f458671e2db4535395146fd69b4efe",
+      "bytes": 10200,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/22ae62bc87f458671e2db4535395146fd69b4efe.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/sso.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/sso.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/state-street.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "5b355684b59af29582bca8757d7d7ca93648c6c3",
+      "bytes": 16703,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/5b355684b59af29582bca8757d7d7ca93648c6c3.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/state-street.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/state-street.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/tasty.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "6699086ba368588dcde7b36db50af494f6a0df5d",
+      "bytes": 3461,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/6699086ba368588dcde7b36db50af494f6a0df5d.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/tasty.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/tasty.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/telefon.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "4f3c2b45d9fd1be54a5bf6bf8768e1eb35c5656e",
+      "bytes": 11015,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/4f3c2b45d9fd1be54a5bf6bf8768e1eb35c5656e.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/telefon.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/telefon.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/telefonie.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "576cda4175b3ec73379fa6fdc28acfc3c2b436ce",
+      "bytes": 10518,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/576cda4175b3ec73379fa6fdc28acfc3c2b436ce.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/telefonie.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/telefonie.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/telefono.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "9fcf40ba9e6d031b8ce5cf78e6f76264ebecbfd6",
+      "bytes": 9330,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/9fcf40ba9e6d031b8ce5cf78e6f76264ebecbfd6.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/telefono.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/telefono.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/telefoon.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "e2d56ae15e8ce492ff175d5a6d6a17871f9016dc",
+      "bytes": 9464,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/e2d56ae15e8ce492ff175d5a6d6a17871f9016dc.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/telefoon.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/telefoon.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/telize.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "1794fbd0e473366bdffffc56f62d76a70fe3e390",
+      "bytes": 3468,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/1794fbd0e473366bdffffc56f62d76a70fe3e390.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/telize.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/telize.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/test-catalogodatos-gub-uy.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "80a496c2fb491265d7ef57d6de256e4cdb514c00",
+      "bytes": 5496,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/80a496c2fb491265d7ef57d6de256e4cdb514c00.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/test-catalogodatos-gub-uy.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/test-catalogodatos-gub-uy.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/tgatlas.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "c7191bac62c32f05efe8012e3cdf123b8f42bc0f",
+      "bytes": 11709,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/c7191bac62c32f05efe8012e3cdf123b8f42bc0f.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/tgatlas.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/tgatlas.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/traveljoy.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "4a0531dd39ed65ac5220f47bc6d69b919422f137",
+      "bytes": 4897,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/4a0531dd39ed65ac5220f47bc6d69b919422f137.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/traveljoy.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/traveljoy.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/unogs.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "02266f51e08c52858bff31cd1e3e80aa1d19eb65",
+      "bytes": 3502,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/02266f51e08c52858bff31cd1e3e80aa1d19eb65.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/unogs.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/unogs.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/uspto-trademark-search-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "1f341b0ffe2a23553664ada961420ea06e85c528",
+      "bytes": 12555,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/1f341b0ffe2a23553664ada961420ea06e85c528.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/uspto-trademark-search-api.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/uspto-trademark-search-api.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/virtuagym.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "06133445427f5c2de48ecb23fa594230250d9148",
+      "bytes": 9352,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/06133445427f5c2de48ecb23fa594230250d9148.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/virtuagym.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/virtuagym.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/whatsapp-data.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "ea12ed313fe960cbe2f0265415dc588d1f54e6d1",
+      "bytes": 3378,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/ea12ed313fe960cbe2f0265415dc588d1f54e6d1.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/whatsapp-data.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/whatsapp-data.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    },
+    {
+      "originalPath": "_providers/words.md",
+      "mode": "100644",
+      "type": "blob",
+      "gitBlob": "10fa3690301e31fca38379359085ee602ec54950",
+      "bytes": 24486,
+      "carrierPath": ".m3/custody/pr-7-upstream-81bb1a00/blobs/10fa3690301e31fca38379359085ee602ec54950.blob",
+      "source": {
+        "repository": "hsoliwal/providers",
+        "commit": "ffe46fefbafc86a7580e7ccbc7f257578c11d03a",
+        "path": "_providers/words.md",
+        "url": "https://github.com/hsoliwal/providers/blob/ffe46fefbafc86a7580e7ccbc7f257578c11d03a/_providers/words.md"
+      },
+      "incomingHeadDisposition": "ABSENT",
+      "receivingDisposition": "INERT_EXACT_PREIMAGE_ONLY"
+    }
+  ]
+}

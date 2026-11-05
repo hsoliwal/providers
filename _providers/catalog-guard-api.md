@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://catalogguard.noahcortezj-c.workers.dev
@@ -169,7 +169,7 @@ modified: '2026-08-09'
 name: Catalog Guard API
 nav: Providers
 network: true
-overview: 'Catalog Guard API publishes 1 API on the [APIs.io](https://apis.io/) network: Catalog API. Tagged areas include E-Commerce, catalog-validation, Shopify, Data Quality, and CSV validation.
+overview: 'Catalog Guard API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Catalog API. Tagged areas include E-Commerce, catalog-validation, Shopify, Data Quality, and CSV validation.
 
 
   Catalog Guard API''s developer surface includes documentation, API reference, getting-started guide, pricing, authentication, code examples, and 17 more developer resources.'
@@ -182,7 +182,7 @@ score:
   band: thin
   composite: 35.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 42.0
     catalog_earned_first_party: 8.0
     catalog_gap: 73.0
@@ -192,9 +192,9 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 49.0
+    contract_quality: 44.4
     developer_ergonomics: 42.3
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 21.1
   previous_composite: 35.9
   provenance:
@@ -206,8 +206,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

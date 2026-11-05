@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 2
+- acting_count: 0
   human_in_the_loop: 0
   name: The Graph Agentic Access
   operation_count: 2
   slug: the-graph-agentic-access
-  summary_line: 2 operations · 2 acting
+  summary_line: 2 operations
 api_count: 1
 apis:
 - description: Per-subgraph GraphQL endpoints served by the decentralized network of Indexers. Each subgraph defines its own schema; queries are billed in GRT or via a hosted gateway in USD.
@@ -131,9 +131,13 @@ common:
 created: '2026-05-08'
 description: The Graph is a decentralized blockchain data indexing protocol. It exposes Subgraphs (GraphQL APIs over indexed on-chain data), Substreams (parallel streaming dataflows), the Token API (REST/MCP for token data), and supports 80+ chains. Self-hosted Graph Node and Firehose are open-source.
 finops:
-- name: The Graph Finops
+- has_sources: true
+  method: generated
+  name: The Graph Finops
+  primary_unit: ''
   service_category: Web3
   slug: the-graph-finops
+  template: false
 graphqls:
 - description: Per-subgraph GraphQL endpoints served by the decentralized network of Indexers. Each subgraph defines its own schema; queries are billed in GRT or via a hosted gateway in USD.
   name: The Graph GraphQL API
@@ -144,7 +148,7 @@ modified: '2026-05-08'
 name: The Graph
 nav: Providers
 network: true
-overview: 'The Graph publishes 1 API on the [APIs.io](https://apis.io/) network: Subgraphs API. Tagged areas include Web3, Indexing, GraphQL, Subgraph, and Multi-Chain.
+overview: 'The Graph publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Subgraphs API, and 5 more. Tagged areas include Web3, Indexing, GraphQL, Subgraph, and Multi-Chain.
 
 
   The Graph''s developer surface includes authentication, engineering blog, and 9 more developer resources.'
@@ -158,24 +162,24 @@ rate_limits:
   name: The Graph Rate Limits
   slug: the-graph-rate-limits
 score:
-  band: thin
-  composite: 28.1
+  band: emerging
+  composite: 25.3
   coverage:
     artifact_dirs: 13
-    catalog_earned: 45.0
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
-  previous_composite: 28.1
+  previous_composite: 26.8
   provenance:
     agentic_access: derived
     contracts:
@@ -183,8 +187,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -202,7 +212,7 @@ security:
 - kind: vulnerability-disclosure
   name: The Graph Vulnerability Disclosure
   slug: the-graph-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: the-graph
 tags:
 - Web3
@@ -210,5 +220,6 @@ tags:
 - GraphQL
 - Subgraph
 - Multi-Chain
+- Ethereum
 website: https://thegraph.com/
 ---

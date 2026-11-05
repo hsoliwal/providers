@@ -34,15 +34,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 2
   name: Tidelift Agentic Access
-  operation_count: 66
+  operation_count: 72
   slug: tidelift-agentic-access
-  summary_line: 66 operations · 33 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 72 operations · 33 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://api.tidelift.com/external-api
   baseurl_source: declared
@@ -178,6 +178,11 @@ collections:
   name: Tidelift External Alignments Vulnerabilities API
   slug: open-tidelift-vulnerabilities-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tidelift/refs/heads/main/capabilities/tidelift-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tidelift-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -334,33 +339,33 @@ modified: '2026-09-16'
 name: Tidelift
 nav: Providers
 network: true
-overview: 'Tidelift publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Alignments API, Attestations API, Authentication API, and 12 more. Tagged areas include Company, Open-Source, Software Supply Chain, Dependency Management, and Application Security.
+overview: 'Tidelift publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alignments API, Attestations API, Authentication API, and 12 more. Tagged areas include Company, Open Source, Software Supply Chain, Dependency Management, and Application Security.
 
 
   The Tidelift catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Tidelift''s developer surface includes documentation, API reference, getting-started guide, support, pricing, authentication, CLI, and 25 more developer resources.'
+  Tidelift''s developer surface includes documentation, API reference, getting-started guide, support, pricing, authentication, CLI, and 26 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 38.5
+  composite: 38.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 58.0
+    contract_quality: 53.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 38.5
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -371,8 +376,14 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -394,7 +405,7 @@ security:
 slug: tidelift
 tags:
 - Company
-- Open-Source
+- Open Source
 - Software Supply Chain
 - Dependency Management
 - Application Security

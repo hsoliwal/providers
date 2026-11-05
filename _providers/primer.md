@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-09-20'
+  score: 34.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -90,6 +90,11 @@ collections:
   name: Primer Client Session API Payments API API
   slug: open-primer-payments-api-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/primer/refs/heads/main/capabilities/primer-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/primer-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/primer/refs/heads/main/agentic-access/primer-agentic-access.yml
   title: ''
@@ -286,9 +291,13 @@ examples:
   name: Primer Post Payments Response 400 Metadatacontainsemptykey
   slug: primer-post-payments-response-400-metadatacontainsemptykey
 finops:
-- name: Primer Finops
+- has_sources: false
+  method: generated
+  name: Primer Finops
+  primary_unit: ''
   service_category: ''
   slug: primer-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/primer.png
 json_schemas:
 - name: ClientSessionAPIRequest
@@ -316,13 +325,13 @@ modified: '2026-09-16'
 name: Primer
 nav: Providers
 network: true
-overview: 'Primer publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Client Session API, Dispute & Chargebacks Webhooks API, Payment Methods API, and 2 more. Tagged areas include Payments, Payment Orchestration, Payment Processing, Fintech, and Fraud Detection.
+overview: 'Primer publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Client Session API, Dispute & Chargebacks Webhooks API, Payment Methods API, and 2 more. Tagged areas include Payments, Payment Orchestration, Payment Processing, Fintech, and Fraud Prevention.
 
 
   The Primer catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Primer''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 19 more developer resources.'
+  Primer''s developer surface includes authentication, documentation, engineering blog, pricing, changelog, and 20 more developer resources.'
 plans:
 - name: Primer Plans Pricing
   plan_count: 2
@@ -333,9 +342,10 @@ rate_limits:
   name: Primer Rate Limits
   slug: primer-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Primer API Rules
+  name: Primer — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -345,23 +355,23 @@ rules:
   slug: primer-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 50.2
+  composite: 39.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 79.3
+    artifact_dirs: 17
+    catalog_earned: 60.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.8
+    catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 47.4
-    contract_governance: 25.0
-    contract_quality: 60.5
+    access_clarity: 23.7
+    contract_governance: 23.5
+    contract_quality: 55.2
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 65.8
-  previous_composite: 50.2
+    discoverability: 66.1
+    operational_transparency: 42.1
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     contracts:
@@ -374,10 +384,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 25.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -394,7 +404,7 @@ security:
 - kind: vulnerability-disclosure
   name: Primer Vulnerability Disclosure
   slug: primer-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Primer Trust Center
   slug: primer-trust-center
@@ -405,7 +415,7 @@ tags:
 - Payment Orchestration
 - Payment Processing
 - Fintech
-- Fraud Detection
+- Fraud Prevention
 - Smart Routing
 - Checkout
 - Payment Methods

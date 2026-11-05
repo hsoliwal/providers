@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.xairos.com/blog-feed.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/xairos/refs/heads/main/security/xairos-domain-security.yml
   title: ''
@@ -68,10 +72,10 @@ description: Xairos Systems is a Techstars-backed company building quantum time 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/xairos.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.xairos.com over HTTP; 9 tools listed.
   name: Xairos MCP Server
-  slug: xairos-mcp-server
-modified: '2026-07-21'
+  slug: xairos-site
+modified: '2026-10-06'
 name: Xairos
 nav: Providers
 network: true
@@ -79,27 +83,33 @@ overview: Xairos is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 2
 score:
   band: minimal
-  composite: 5.7
+  composite: 4.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 5.7
+  previous_composite: 4.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

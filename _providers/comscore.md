@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/comscore/refs/heads/main/security/comscore-trust-center.yml
@@ -93,6 +93,10 @@ created: '2026-07-17'
 description: Comscore is a cross-platform media measurement and audience analytics company that provides a trusted, independent currency for planning, transacting, and evaluating media across digital, social, television, streaming/CTV, movies, and programmatic advertising. Its products measure audiences, brands, and consumer behavior for media buyers and sellers, spanning advertising effectiveness, CTV and video measurement, programmatic targeting (Proximic by Comscore), social intelligence, and box-office tracking. Comscore publishes first-party audience- measurement SDKs for Android, iOS/tvOS, and Flutter used to instrument content and apps, and maintains an ISO/IEC 27001-certified trust and security program. It does not currently expose a public self-serve REST API or developer portal.
 image: https://logo.clearbit.com/comscore.com
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.comscore.com over HTTP.
+  name: Comscore MCP Server
+  slug: comscore
 modified: '2026-07-18'
 name: Comscore
 nav: Providers
@@ -104,27 +108,33 @@ overview: 'Comscore is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 1
 score:
   band: emerging
-  composite: 16.3
+  composite: 16.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 16.3
+  previous_composite: 16.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

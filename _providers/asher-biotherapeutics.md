@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://asherbio.com/feed/
 - group: company
   title: ''
   type: Website
@@ -100,18 +104,18 @@ created: '2026-08-06'
 description: 'Asher Biotherapeutics (Asher Bio) is a privately held, clinical-stage biotechnology company founded in 2019 and headquartered at 650 Gateway Blvd. in South San Francisco, California. The company develops cis-targeted immunotherapies — engineered biologics that simultaneously engage an immunomodulatory receptor and a cell-type-specific target on the same immune cell, so a cytokine is only activated on the intended cell population rather than acting indiscriminately across immune subsets. Its lead candidate, etakafusp alfa (AB248), is a cis-targeted IL-2 directed at CD8+ effector T cells and is in Phase 1a/1b clinical development in cancer, alongside earlier-stage programs AB821 and AB359 and a cis-targeted cytokine augmentation program for cell therapies. Asher Bio is a therapeutics developer, not a software or platform company: it publishes no developer program, public API, SDK, or machine-readable interface.'
 image: https://asherbio.com/wp-content/uploads/2021/03/home-page-card-Asher-032221.jpg
 layout: provider
-modified: '2026-08-06'
+modified: '2026-10-06'
 name: Asher Biotherapeutics
 nav: Providers
 network: true
 overview: 'Asher Biotherapeutics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Immunotherapy, Oncology, and Therapeutics.
 
 
-  Asher Biotherapeutics'' developer surface includes engineering blog and 9 more developer resources.'
+  Asher Biotherapeutics'' developer surface includes engineering blog and 10 more developer resources.'
 random_paper: 9
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -125,17 +129,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 9.5
+  previous_composite: 9.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -33,14 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 79
+- acting_count: 61
   human_in_the_loop: 0
   name: Depict Agentic Access
   operation_count: 146
   slug: depict-agentic-access
-  summary_line: 146 operations · 79 acting
+  summary_line: 146 operations · 61 acting
 api_count: 3
 apis:
 - baseURL: https://api.depict.ai
@@ -106,12 +106,12 @@ apis:
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The merchant API from Depict — 6 operation(s) for merchant.
-  name: Depict merchant API
+  name: Depict Merchant API
   slug: depict-merchant-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The merchant-create API from Depict — 1 operation(s) for merchant-create.
-  name: Depict merchant-create API
+  name: Depict Merchant Create API
   slug: depict-merchant-create-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
@@ -121,7 +121,7 @@ apis:
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The multi-store API from Depict — 7 operation(s) for multi-store.
-  name: Depict multi-store API
+  name: Depict Multi Store API
   slug: depict-multi-store-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
@@ -201,12 +201,12 @@ apis:
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The tracking API from Depict — 2 operation(s) for tracking.
-  name: Depict tracking API
+  name: Depict Tracking API
   slug: depict-tracking-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The translations API from Depict — 1 operation(s) for translations.
-  name: Depict translations API
+  name: Depict Translations API
   slug: depict-translations-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
@@ -218,7 +218,7 @@ apis:
   description: The Vitals API from Depict — 1 operation(s) for vitals.
   name: Depict Vitals API
   slug: depict-vitals-api
-artifact_total: 75
+artifact_total: 76
 collections:
 - collection_type: open
   name: API Collection
@@ -329,6 +329,11 @@ collections:
   name: Depict Lite Ab Test Vitals API
   slug: open-depict-vitals-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/plans/depict-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/depict-plans-pricing.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/capabilities/depict-capability-edges.yml
   title: ''
@@ -483,10 +488,14 @@ modified: '2026-07-18'
 name: Depict
 nav: Providers
 network: true
-overview: 'Depict publishes 35 APIs on the [APIs.io](https://apis.io/) network, including Ab Test API, Analytics API, Boost Bury API, and 32 more. Tagged areas include Company, E-Commerce, Merchandising, Product Recommendations, and Search.
+overview: 'Depict publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ab Test API, Analytics API, Boost Bury API, and 32 more. Tagged areas include Company, E-Commerce, Merchandising, Product Recommendations, and Search.
 
 
-  Depict''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 25 more developer resources.'
+  Depict''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 26 more developer resources.'
+plans:
+- name: Depict Plans Pricing
+  plan_count: 6
+  slug: depict-plans-pricing
 random_paper: 17
 scopes:
 - name: Depict Scopes
@@ -494,30 +503,32 @@ scopes:
   slug: depict-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: developing
-  composite: 47.4
+  band: strong
+  composite: 54.6
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    artifact_dirs: 25
+    catalog_earned: 52.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 49.5
+    contract_quality: 44.5
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 47.4
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -528,9 +539,15 @@ score:
       total: 35
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 50.0

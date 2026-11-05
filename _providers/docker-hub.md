@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.8
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -48,52 +48,52 @@ apis:
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The Personal Access Token endpoints lets you manage personal access tokens. For more information, see [Access Tokens](https://docs.docker.com/security/access-tokens/). You can use a personal access to
-  name: Docker Hub access-tokens API
+  name: Docker Hub Access Tokens API
   slug: docker-hub-access-tokens-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The Audit Logs API endpoints allow you to query audit log events across a namespace. For more information, see [Audit Logs](https://docs.docker.com/admin/activity-logs/).
-  name: Docker Hub audit-logs API
+  name: Docker Hub Audit Logs API
   slug: docker-hub-audit-logs-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The authentication endpoints allow you to authenticate with Docker Hub APIs. For more information, see [Authentication](#tag/authentication).
-  name: Docker Hub authentication-api
+  name: Docker Hub Authentication API
   slug: docker-hub-authentication-api-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The groups endpoints allow you to manage your organization's teams and their members. For more information, see [Create and manage a team](https://docs.docker.com/admin/organization/manage/manage-a-te
-  name: Docker Hub groups API
+  name: Docker Hub Groups API
   slug: docker-hub-groups-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The invites endpoints allow you to manage invites for users to join your Docker organization. For more information, see [Invite members](https://docs.docker.com/admin/organization/manage/members/#invi
-  name: Docker Hub invites API
+  name: Docker Hub Invites API
   slug: docker-hub-invites-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The organization access token endpoints allow you to manage organization access tokens (OATs). See [Organization access tokens](https://docs.docker.com/security/for-admins/access-tokens/) for more inf
-  name: Docker Hub org-access-tokens API
+  name: Docker Hub Org Access Tokens API
   slug: docker-hub-org-access-tokens-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The Org Settings API endpoints allow you to manage your organization's settings.
-  name: Docker Hub org-settings API
+  name: Docker Hub Org Settings API
   slug: docker-hub-org-settings-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The organization endpoints allow you to interact with and manage your organizations. For more information, see [Organization administration overview](https://docs.docker.com/admin/organization/).
-  name: Docker Hub orgs API
+  name: Docker Hub Orgs API
   slug: docker-hub-orgs-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: The repository endpoints allow you to access your repository's tags.
-  name: Docker Hub repositories API
+  name: Docker Hub Repositories API
   slug: docker-hub-repositories-api
 - baseURL: https://hub.docker.com/v2
   baseurl_source: declared
   description: SCIM is a provisioning system that lets you manage users within your identity provider (IdP). For more information, see [System for Cross-domain Identity management](https://docs.docker.com/security/f
-  name: Docker Hub scim API
+  name: Docker Hub SCIM API
   slug: docker-hub-scim-api
 artifact_total: 29
 collections:
@@ -134,6 +134,26 @@ collections:
   name: Docker HUB API
   slug: open-docker-hub
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/plans/docker-hub-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/docker-hub-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/rate-limits/docker-hub-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/docker-hub-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/finops/docker-hub-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/docker-hub-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/capabilities/docker-hub-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/docker-hub-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/docker-hub/refs/heads/main/agentic-access/docker-hub-agentic-access.yml
   title: ''
@@ -225,19 +245,23 @@ common:
 created: '2024-01-01'
 description: Docker Hub is the world's largest container image registry, providing a cloud-based service for finding, storing, sharing, and managing container images. It offers public and private repositories, automated builds, webhooks, and integrations with Docker tooling and CI/CD pipelines.
 finops:
-- name: Docker Hub Finops
+- has_sources: false
+  method: generated
+  name: Docker Hub Finops
+  primary_unit: ''
   service_category: API
   slug: docker-hub-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/docker-hub.png
 layout: provider
 modified: '2026-09-16'
 name: Docker Hub
 nav: Providers
 network: true
-overview: 'Docker Hub publishes 10 APIs on the [APIs.io](https://apis.io/) network, including access-tokens API, audit-logs API, authentication-api, and 7 more. Tagged areas include Containers, DevOps, Docker, and Registry.
+overview: 'Docker Hub publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Tokens API, Audit Logs API, Authentication API, and 7 more. Tagged areas include Containers, DevOps, Docker, and Registry.
 
 
-  Docker Hub''s developer surface includes authentication, documentation, signup flow, pricing, changelog, engineering blog, support, and 14 more developer resources.'
+  Docker Hub''s developer surface includes authentication, documentation, signup flow, pricing, changelog, engineering blog, support, and 18 more developer resources.'
 plans:
 - name: Docker Hub Plans Pricing
   plan_count: 3
@@ -249,23 +273,23 @@ rate_limits:
   slug: docker-hub-rate-limits
 score:
   band: developing
-  composite: 43.7
+  composite: 42.1
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 38.0
+    artifact_dirs: 15
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 60.5
+    access_clarity: 52.6
     contract_governance: 0.0
-    contract_quality: 58.5
+    contract_quality: 53.1
     developer_ergonomics: 28.6
-    discoverability: 61.1
+    discoverability: 58.9
     operational_transparency: 44.7
-  previous_composite: 43.7
+  previous_composite: 43.6
   provenance:
     agentic_access: derived
     contracts:
@@ -273,8 +297,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

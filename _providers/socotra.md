@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 419
+- acting_count: 408
   human_in_the_loop: 12
   name: Socotra Agentic Access
   operation_count: 722
   slug: socotra-agentic-access
-  summary_line: 722 operations · 419 acting · 12 human-in-the-loop
+  summary_line: 722 operations · 408 acting · 12 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.sandbox.socotra.com
@@ -198,6 +198,10 @@ collections:
   name: Socotra Insurance Suite OpenAPI Definition Work Management API
   slug: open-socotra-work-management-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.socotra.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/socotra/refs/heads/main/capabilities/socotra-capability-edges.yml
   title: ''
@@ -356,26 +360,26 @@ description: Socotra is a cloud-native insurance core platform that lets carrier
 image: https://www.socotra.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp-sandbox.socotra.com over HTTP; 27 tools listed.
   name: Socotra
   slug: socotra
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Socotra
 nav: Providers
 network: true
-overview: 'Socotra publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Auxdata API, Billing API, and 15 more. Tagged areas include Company, Insurtech, Insurance, Core Platform, and Policy Administration.
+overview: 'Socotra publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Auxdata API, Billing API, and 15 more. Tagged areas include Company, Insurtech, Insurance, Core Platform, and Policy Administration.
 
 
   The Socotra catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Socotra''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 26 more developer resources.'
+  Socotra''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 27 more developer resources.'
 random_paper: 15
 score:
   band: developing
-  composite: 53.2
+  composite: 50.9
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -385,11 +389,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 4.5
-    contract_quality: 48.7
+    contract_quality: 44.8
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 53.2
+  previous_composite: 50.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -405,9 +409,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -437,5 +441,6 @@ tags:
 - Claims
 - Underwriting
 - MCP
+- Invoicing
 website: https://socotra.com
 ---

@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://life-is-tech.com/news/feed
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/life-is-tech/refs/heads/main/security/life-is-tech-domain-security.yml
   title: ''
@@ -119,18 +123,18 @@ created: '2026-08-25'
 description: Life is Tech, Inc. (ライフイズテック株式会社) is a Tokyo-based education technology company founded on 6 July 2010 by Yusuke Mizuno, delivering digital, programming and AI education to Japanese teenagers, schools, municipalities and employers. Its products are "Life is Tech !" IT camps and year-round schools for junior and senior high school students, "Life is Tech ! Lesson" — a cloud-based information and programming curriculum used by roughly 4,000 public and private schools across some 600 municipalities — "Life is Tech ! Leaders" for university students, "Life is Tech ! Career" digital job-hunting support, and DX Readiness corporate digital-skills training. The company is a certified B Corporation (October 2022, the first Japanese EdTech to certify) and holds the PrivacyMark. Life is Tech sells finished learning products to schools and consumers; it publishes no public developer program, API, SDK or machine-readable contract.
 image: https://life-is-tech.com/assets/meta/ogp.png
 layout: provider
-modified: '2026-08-25'
+modified: '2026-10-06'
 name: Life is Tech
 nav: Providers
 network: true
 overview: 'Life is Tech is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Learning, and Training.
 
 
-  Life is Tech''s developer surface includes engineering blog, product news, support, and 12 more developer resources.'
+  Life is Tech''s developer surface includes engineering blog, product news, support, and 13 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 12.0
+  composite: 11.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -144,7 +148,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -153,15 +157,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 12.0
+  previous_composite: 11.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

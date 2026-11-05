@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Publicly served SOAP 1.1 / 1.2 web service behind the USADATA Leads Portal and Leads Module. The WSDL is served anonymously from the production API host and declares 24 operations covering the full li
@@ -40,6 +40,15 @@ apis:
   slug: leads-engine
 artifact_total: 6
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/usadata-inc/refs/heads/main/rate-limits/usadata-inc-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/usadata-inc-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.usadata.com/resources/news?format=rss
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/usadata-inc/refs/heads/main/security/usadata-inc-domain-security.yml
   title: ''
@@ -158,14 +167,14 @@ mcp_servers:
 - description: USADATA ships no MCP server. Searched the docs, npm, and the MCP registries on 2026-08-13 and found nothing first-party. What follows is a CANDIDATE tool set derived one-for-one from the 24 operations
   name: MCP Server (candidate, derived from the Leads Engine WSDL)
   slug: mcp-server-candidate-derived-from-the-leads-engine-wsdl
-modified: '2026-08-13'
-name: USADATA, Inc.
+modified: '2026-10-06'
+name: USADATA
 nav: Providers
 network: true
-overview: 'USADATA, Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data, Marketing, Data Enrichment, and Audience Targeting.
+overview: 'USADATA is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data, Marketing, Data Enrichment, and Audience Targeting.
 
 
-  USADATA, Inc.''s developer surface includes authentication, signup flow, API reference, engineering blog, support, sandbox, and 18 more developer resources.'
+  USADATA''s developer surface includes authentication, signup flow, API reference, engineering blog, support, sandbox, and 20 more developer resources.'
 plans:
 - name: Usadata Inc Plans Pricing
   plan_count: 0
@@ -177,34 +186,48 @@ rate_limits:
   slug: usadata-inc-rate-limits
 score:
   band: thin
-  composite: 31.0
+  composite: 31.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.0
+  previous_composite: 31.4
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

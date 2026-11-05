@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://api.lifen.fr/fhir/v3
@@ -295,7 +295,7 @@ modified: '2026-07-19'
 name: Lifen
 nav: Providers
 network: true
-overview: 'Lifen publishes 7 APIs on the [APIs.io](https://apis.io/) network, including CommunicationRequest API, Coverage API, Encounter API, and 4 more. Tagged areas include Company, Healthcare, FHIR, Interoperability, and Health Data.
+overview: 'Lifen publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including CommunicationRequest API, Coverage API, Encounter API, and 4 more. Tagged areas include Company, Healthcare, FHIR, Interoperability, and Health Data.
 
 
   The Lifen catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -313,8 +313,8 @@ scopes:
   slug: lifen-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 57.0
+  band: developing
+  composite: 52.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -326,9 +326,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 60.6
+    contract_quality: 55.3
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -338,7 +338,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 57.0
+  previous_composite: 52.7
   provenance:
     conformance: first-party
     contracts:
@@ -357,9 +357,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 65.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

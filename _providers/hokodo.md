@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Hokodo's B2B Buy Now, Pay Later REST API. Create companies and customers, request credit offers, place orders, and manage deferred payment plans and trade accounts. Versioned at /v1/; authenticated wi
@@ -43,6 +43,14 @@ apis:
   slug: hokodo-bnpl-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.hokodo.co/resources
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.hokodo.co/resources/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hokodo/refs/heads/main/security/hokodo-domain-security.yml
   title: ''
@@ -131,18 +139,18 @@ created: '2026-07-17'
 description: Hokodo is a London-based B2B payments and embedded trade-credit fintech that lets merchants and B2B marketplaces offer digital trade accounts and Buy Now, Pay Later at checkout. Buyers get instant credit decisions and flexible terms (30/60/90-day payment terms, instalments, and consolidated trade accounts) while Hokodo underwrites the credit risk, finances the invoice, and protects the merchant against non-payment. The platform is delivered through a versioned REST API (https://api.hokodo.co/v1/) covering companies, customers, credit offers, orders and payment plans, plus prebuilt Magento modules and a JavaScript SDK. Hokodo is backed by Anthemis and other investors and operates across the UK and Europe.
 image: https://cdn.prod.website-files.com/5c80a8f7065a7b1940eb8538/684bf894db503831d2c72284_Home.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Hokodo
 nav: Providers
 network: true
-overview: 'Hokodo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, B2B Payments, Buy Now Pay Later, and Trade Credit.
+overview: 'Hokodo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, B2B Payments, Buy Now Pay Later, and Trade Credit.
 
 
-  Hokodo''s developer surface includes documentation, API reference, signup flow, sandbox, support, engineering blog, authentication, and 12 more developer resources.'
+  Hokodo''s developer surface includes engineering blog, documentation, API reference, signup flow, sandbox, support, authentication, and 14 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 22.9
+  composite: 22.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -156,23 +164,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 41.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 22.9
+  previous_composite: 22.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

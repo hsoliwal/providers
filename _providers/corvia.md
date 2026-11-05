@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://corviamedical.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/corvia/refs/heads/main/security/corvia-domain-security.yml
   title: ''
@@ -77,18 +81,18 @@ created: '2026-07-17'
 description: Corvia Medical, Inc. is a medical device company headquartered in Tewksbury, Massachusetts that develops interventional cardiology solutions for heart failure. Its lead product is the Corvia Atrial Shunt System (IASD), a transcatheter implant indicated for improving quality of life and reducing heart-failure symptoms in patients with elevated left atrial pressures who remain symptomatic despite guideline-directed medical therapy. The company has been backed by General Catalyst since 2009. Corvia Medical publishes no public API, developer portal, or machine-readable interface; its web presence is clinical, patient, and regulatory information only.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/corvia.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Corvia Medical
 nav: Providers
 network: true
 overview: 'Corvia Medical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Health, Cardiology, and Heart Failure.
 
 
-  Corvia Medical''s developer surface includes support, engineering blog, YouTube channel, and 6 more developer resources.'
+  Corvia Medical''s developer surface includes support, engineering blog, YouTube channel, and 7 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 7.6
+  composite: 7.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -102,22 +106,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 7.6
+  previous_composite: 7.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -137,6 +143,6 @@ tags:
 - Cardiology
 - Heart Failure
 - Interventional Cardiology
-- MedTech
+- Medical Technology
 website: https://corviamedical.com/
 ---

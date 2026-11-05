@@ -25,17 +25,21 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.alassio.fr/blog/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/alassio/refs/heads/main/security/alassio-domain-security.yml
   title: ''
@@ -53,29 +57,36 @@ created: '2026-07-17'
 description: Alassio is a French financial-technology company building a next-generation payroll software platform (logiciel de paie nouvelle generation) for businesses. Alassio positions itself as offering the functional depth expected of a specialist payroll and HR tool, with added transparency and control for finance and people teams. The company is backed by venture-capital firm Partech and operates from France, serving the French and European payroll, compensation, and human-resources market. As of this profile the company publishes only a marketing landing page and a legal notice; no public API, developer documentation, SDK, or integration surface has been located. This profile is maintained in the API Evangelist network as a portfolio-lead stub awaiting a public developer surface to enrich.
 image: https://www.alassio.fr/og-image.png
 layout: provider
-modified: '2026-07-17'
+mcp_servers:
+- description: Remote MCP server at docs.alassio.fr over HTTP.
+  name: Alassio MCP Server
+  slug: alassio
+modified: '2026-10-06'
 name: Alassio
 nav: Providers
 network: true
-overview: Alassio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Payroll, Human Resources, and Payroll Software.
+overview: 'Alassio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Payroll, Human Resources, and Payroll Software.
+
+
+  Alassio''s developer surface includes engineering blog and 3 more developer resources.'
 random_paper: 0
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.7
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
-    discoverability: 50.0
+    developer_ergonomics: 2.4
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -85,11 +96,17 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 5.0
+  previous_composite: 3.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -104,7 +121,7 @@ security:
 slug: alassio
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Payroll
 - Human Resources
 - Payroll Software

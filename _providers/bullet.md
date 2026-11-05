@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -283,14 +283,14 @@ modified: '2026-07-18'
 name: Bullet
 nav: Providers
 network: true
-overview: 'Bullet publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account API, Address API, Health API, and 6 more. Tagged areas include Company, DeFi, Solana, Cryptocurrency, and Derivatives.
+overview: 'Bullet publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Address API, Health API, and 6 more. Tagged areas include Company, DeFi, Solana, Cryptocurrency, and Derivatives.
 
 
   Bullet''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, support, pricing, and 26 more developer resources.'
 random_paper: 10
 score:
   band: developing
-  composite: 45.2
+  composite: 43.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -302,11 +302,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 49.4
+    contract_quality: 44.5
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 45.2
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -322,9 +322,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

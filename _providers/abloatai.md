@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 2
@@ -45,7 +45,7 @@ agentic_access:
   operation_count: 32
   slug: abloatai-agentic-access
   summary_line: 32 operations · 19 acting · 2 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - description: A public, anonymous, stateless Streamable-HTTP MCP server Ablo runs on its own domain so an AI coding assistant writing an Ablo integration can search the real docs, inspect the actual SDK export surf
   name: Ablo Integration-Helper MCP Server
@@ -85,7 +85,7 @@ apis:
   description: The schema API from Ablo — 1 operation(s) for schema.
   name: Ablo Schema API
   slug: ablo-schema-api
-artifact_total: 16
+artifact_total: 15
 asyncapis:
 - description: ''
   name: Abloatai Webhooks
@@ -274,17 +274,14 @@ description: 'Ablo is collaboration infrastructure for AI agents: one API that l
 image: https://www.abloatai.com/logo-black.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.abloatai.com; 17 tools listed.
   name: Ablo MCP Server
-  slug: ablo-mcp-server
-- description: ''
-  name: Ablo MCP Server
-  slug: ablo-mcp-server-2
+  slug: abloatai-mcp-yml
 modified: '2026-08-19'
 name: Ablo
 nav: Providers
 network: true
-overview: 'Ablo publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Branches API, Claims API, Commits API, and 4 more. Tagged areas include Agent Infrastructure, multi-agent-coordination, concurrency-control, State Management, and Database.
+overview: 'Ablo publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Branches API, Claims API, Commits API, and 5 more. Tagged areas include Agent Infrastructure, multi-agent-coordination, concurrency-control, State Management, and Database.
 
 
   The Ablo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -302,21 +299,21 @@ rate_limits:
   slug: abloatai-rate-limits
 score:
   band: strong
-  composite: 59.9
+  composite: 60.0
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 57.4
+    contract_quality: 52.5
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
   previous_composite: 59.9
   provenance:
@@ -329,8 +326,14 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -352,7 +355,7 @@ tags:
 - concurrency-control
 - State Management
 - Database
-- Postgres
+- PostgreSQL
 - real-time-sync
 - MCP
 - Developer Tools

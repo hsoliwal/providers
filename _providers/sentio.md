@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 31
+- acting_count: 27
   human_in_the_loop: 0
   name: Sentio Agentic Access
   operation_count: 81
   slug: sentio-agentic-access
-  summary_line: 81 operations · 31 acting
+  summary_line: 81 operations · 27 acting
 api_count: 1
 apis:
 - baseURL: https://api.sentio.xyz
@@ -142,6 +142,11 @@ collections:
   name: Sentio AI Web API
   slug: open-sentio-web-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sentio/refs/heads/main/capabilities/sentio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sentio-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -301,26 +306,26 @@ description: Sentio is a developer-first, AI-powered Web3 data and observability
 image: https://www.sentio.xyz/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Sentio MCP Server
-  slug: sentio-mcp-server
+  slug: sentio
 modified: '2026-07-21'
 name: Sentio
 nav: Providers
 network: true
-overview: 'Sentio publishes 11 APIs on the [APIs.io](https://apis.io/) network, including AI API, Alerts API, Data API, and 8 more. Tagged areas include Web3, Blockchain, Observability, Analytics, and Data.
+overview: 'Sentio publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI API, Alerts API, Data API, and 8 more. Tagged areas include Web3, Blockchain, Observability, Analytics, and Data.
 
 
   The Sentio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Sentio''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, and 27 more developer resources.'
+  Sentio''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, and 28 more developer resources.'
 random_paper: 20
 score:
   band: developing
-  composite: 44.8
+  composite: 44.6
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -330,11 +335,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 54.5
+    contract_quality: 49.9
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 44.8
+  previous_composite: 44.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -345,8 +350,14 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -371,6 +382,6 @@ tags:
 - Indexing
 - Monitoring
 - Developer Tools
-- Crypto
+- Cryptocurrency
 website: https://www.sentio.xyz/
 ---

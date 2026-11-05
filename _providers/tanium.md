@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 1
@@ -262,6 +262,26 @@ collections:
   name: Tanium Threat Response API
   slug: open-tanium-threat-response-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tanium/refs/heads/main/plans/tanium-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tanium-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tanium/refs/heads/main/rate-limits/tanium-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tanium-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tanium/refs/heads/main/finops/tanium-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tanium-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tanium/refs/heads/main/capabilities/tanium-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tanium-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/tanium/refs/heads/main/agentic-access/tanium-agentic-access.yml
   title: ''
@@ -465,9 +485,13 @@ examples:
   name: Tanium Deploy Action Example
   slug: tanium-deploy-action-example
 finops:
-- name: Tanium Finops
+- has_sources: true
+  method: generated
+  name: Tanium Finops
+  primary_unit: ''
   service_category: Endpoint Management
   slug: tanium-finops
+  template: false
 graphqls:
 - description: The Tanium API Gateway is a GraphQL interface for querying data and taking action in Tanium. It is the preferred method for integrating with Tanium, supporting asset queries, endpoint actions, and dat
   name: Tanium GraphQL API
@@ -512,13 +536,13 @@ modified: '2026-05-19'
 name: Tanium
 nav: Providers
 network: true
-overview: 'Tanium publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Alerts API, Authentication API, and 18 more. Tagged areas include Compliance, Endpoint Management, Patch Management, Security, and Threat Detection.
+overview: 'Tanium publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, Alerts API, Authentication API, and 19 more. Tagged areas include Compliance, Endpoint Management, Patch Management, Security, and Threat Detection.
 
 
   The Tanium catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Tanium''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, signup flow, and 35 more developer resources.'
+  Tanium''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, signup flow, and 39 more developer resources.'
 plans:
 - name: Tanium Plans Pricing
   plan_count: 1
@@ -529,9 +553,10 @@ rate_limits:
   name: Tanium Rate Limits
   slug: tanium-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Tanium API Rules
+  name: Tanium — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -539,7 +564,8 @@ rules:
     info: 2
     warn: 3
   slug: tanium-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Tanium API Rules
@@ -552,23 +578,23 @@ rules:
   slug: tanium-rules
 score:
   band: developing
-  composite: 47.3
+  composite: 45.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 59.5
+    artifact_dirs: 23
+    catalog_earned: 56.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.5
+    catalog_gap: 59.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 40.8
-    contract_governance: 28.8
-    contract_quality: 61.4
+    access_clarity: 32.9
+    contract_governance: 27.3
+    contract_quality: 56.1
     developer_ergonomics: 53.6
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 23.7
-  previous_composite: 47.3
+  previous_composite: 46.9
   provenance:
     agentic_access: derived
     contracts:
@@ -576,8 +602,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 21
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -600,5 +632,6 @@ tags:
 - Security
 - Threat Detection
 - Unified Endpoint Management
+- Endpoint Security
 website: https://www.tanium.com/
 ---

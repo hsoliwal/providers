@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -71,7 +71,7 @@ apis:
   description: Donor records (Fundraise Up calls donors "supporters").
   name: Fundraise Up Supporters API
   slug: fundraiseup-supporters-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -95,6 +95,11 @@ collections:
   name: Fundraise Up REST API
   slug: open-fundraiseup
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/capabilities/fundraiseup-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fundraiseup-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/agentic-access/fundraiseup-agentic-access.yml
   title: ''
@@ -149,19 +154,27 @@ common:
 created: '2026-07-05'
 description: Fundraise Up is an online donation and fundraising platform for nonprofits that optimizes the digital giving experience to increase conversion and recurring revenue. Its REST API gives programmatic access to fundraising data - donations, recurring plans, supporters (donors), and an events audit log - so organizations can process offline and non-digital donations through their Fundraise Up account, combine them with online giving, and sync everything to CRMs, BI tools, and data warehouses. The API is resource-oriented, uses JSON-encoded request bodies, and authenticates with an API key over HTTP Bearer. Base URL is https://api.fundraiseup.com/v1.
 finops:
-- name: Fundraiseup Finops
+- has_sources: true
+  method: generated
+  name: Fundraiseup Finops
+  primary_unit: ''
   service_category: Fundraising and Payments
   slug: fundraiseup-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fundraiseup.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.fundraiseup.com over HTTP.
+  name: Fundraise Up MCP Server
+  slug: fundraiseup
 modified: '2026-07-05'
 name: Fundraise Up
 nav: Providers
 network: true
-overview: 'Fundraise Up publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Donations API, Donor Portal API, Events API, and 2 more. Tagged areas include Fundraising, Donations, Non-Profit, Payments, and Recurring Giving.
+overview: 'Fundraise Up publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Donations API, Donor Portal API, Events API, and 2 more. Tagged areas include Fundraising, Donations, Non-Profit, Payments, and Recurring Giving.
 
 
-  Fundraise Up''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Fundraise Up''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Fundraiseup Plans Pricing
   plan_count: 2
@@ -172,24 +185,24 @@ rate_limits:
   name: Fundraiseup Rate Limits
   slug: fundraiseup-rate-limits
 score:
-  band: thin
-  composite: 34.3
+  band: emerging
+  composite: 25.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 60.0
+    artifact_dirs: 16
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 34.3
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 32.8
   provenance:
     agentic_access: derived
     contracts:
@@ -203,10 +216,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

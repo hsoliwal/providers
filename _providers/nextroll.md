@@ -39,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 9
 apis:
 - description: The core REST service behind the AdRoll and AdRoll ABM dashboards. Create and manage organizations, advertisables, campaigns, ad groups, ads, pixels, rules, segments, product feeds, marketplace deals,
@@ -280,14 +280,14 @@ graphqls:
 image: https://www.nextroll.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at services.adroll.com over HTTP.
   name: NextRoll MCP Server
-  slug: nextroll-mcp-server
+  slug: adroll
 modified: '2026-08-14'
 name: NextRoll
 nav: Providers
 network: true
-overview: 'NextRoll publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, AdTech, Marketing, and Account Based Marketing.
+overview: 'NextRoll is listed with 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, AdTech, Marketing, and Account Based Marketing.
 
 
   The NextRoll catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -310,9 +310,9 @@ scopes:
   summary_line: 2 scopes · authorizationCode/implicit/password
 score:
   band: strong
-  composite: 56.1
+  composite: 59.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 56.0
     catalog_earned_first_party: 16.0
     catalog_gap: 59.0
@@ -322,22 +322,30 @@ score:
   facets:
     access_clarity: 81.6
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 49.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 56.1
+  previous_composite: 59.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

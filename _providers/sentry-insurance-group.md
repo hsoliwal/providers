@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
@@ -156,7 +156,7 @@ modified: '2026-08-29'
 name: Sentry Insurance
 nav: Providers
 network: true
-overview: 'Sentry Insurance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 1000, Insurance, Property and Casualty Insurance, Commercial Insurance, and Workers Compensation.
+overview: 'Sentry Insurance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 1000, Insurance, Property and Casualty, Commercial Insurance, and Workers Compensation.
 
 
   Sentry Insurance''s developer surface includes support, engineering blog, authentication, and 18 more developer resources.'
@@ -187,12 +187,12 @@ rate_limits:
   slug: sentry-insurance-group-rate-limits
 scopes:
 - name: Sentry Insurance Group Scopes
-  scope_count: 0
+  scope_count: 25
   slug: sentry-insurance-group-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 25 scopes
 score:
   band: emerging
-  composite: 23.0
+  composite: 20.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -206,7 +206,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -215,7 +215,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.0
+  previous_composite: 20.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -224,14 +224,15 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/sentry-insurance-group/refs/heads/main/screenshots/sentry-insurance-group-2026-10-11T125715.png
 security:
 - kind: authentication
   name: Sentry Insurance Group Authentication
@@ -245,14 +246,14 @@ slug: sentry-insurance-group
 tags:
 - Fortune 1000
 - Insurance
-- Property and Casualty Insurance
+- Property and Casualty
 - Commercial Insurance
 - Workers Compensation
 - Auto Insurance
 - Retirement
 - Annuities
 - Mutual Insurance
-- Financial-Services
+- Financial Services
 - Trucking
 - Wisconsin
 - United States

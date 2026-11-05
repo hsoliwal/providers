@@ -35,15 +35,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 106
+- acting_count: 105
   human_in_the_loop: 4
   name: Bentoml Agentic Access
   operation_count: 222
   slug: bentoml-agentic-access
-  summary_line: 222 operations · 106 acting · 4 human-in-the-loop
-api_count: 1
+  summary_line: 222 operations · 105 acting · 4 human-in-the-loop
+api_count: 2
 apis:
 - description: Auto-generated REST API endpoints produced when BentoML services are deployed. Each decorated service method becomes an HTTP POST endpoint. Supports custom routes, path prefixes, adaptive batching, as
   name: BentoML Service REST API
@@ -82,7 +82,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: auth api
-  name: BentoML auth API
+  name: BentoML Auth API
   slug: bentoml-auth-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -107,7 +107,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: bentos
-  name: BentoML bentos API
+  name: BentoML Bentos API
   slug: bentoml-bentos-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -132,7 +132,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: clusters
-  name: BentoML clusters API
+  name: BentoML Clusters API
   slug: bentoml-clusters-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -152,7 +152,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: customers api
-  name: BentoML customers API
+  name: BentoML Customers API
   slug: bentoml-customers-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -202,17 +202,17 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: host_clusters
-  name: BentoML host_clusters API
+  name: BentoML Host Clusters API
   slug: bentoml-host-clusters-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: instance_types
-  name: BentoML instance_types API
+  name: BentoML Instance Types API
   slug: bentoml-instance-types-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: labels
-  name: BentoML labels API
+  name: BentoML Labels API
   slug: bentoml-labels-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -257,7 +257,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: models
-  name: BentoML models API
+  name: BentoML Models API
   slug: bentoml-models-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -287,7 +287,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: plans
-  name: BentoML plans API
+  name: BentoML Plans API
   slug: bentoml-plans-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -322,7 +322,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: usage resource
-  name: BentoML usage API
+  name: BentoML Usage API
   slug: bentoml-usage-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -332,7 +332,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: users api
-  name: BentoML users API
+  name: BentoML Users API
   slug: bentoml-users-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -619,9 +619,13 @@ common:
 created: 2026-06-12
 description: BentoML is an open-source unified inference platform for building, packaging, and deploying machine learning models as scalable REST API services. Developers define services using Python class decorators that automatically expose model inference logic as HTTP endpoints. BentoCloud, the managed cloud offering, provides autoscaling infrastructure, GPU instance provisioning, scale-to-zero cost optimization, and a control-plane API for programmatic deployment lifecycle management. The platform supports all major ML frameworks including PyTorch, TensorFlow, Transformers, ONNX, XGBoost, and Scikit-Learn, and is licensed under Apache 2.0.
 finops:
-- name: Bentoml Finops
+- has_sources: false
+  method: generated
+  name: Bentoml Finops
+  primary_unit: ''
   service_category: ''
   slug: bentoml-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bentoml.png
 json_schemas:
 - name: BentoML / BentoCloud API Schemas
@@ -637,7 +641,7 @@ modified: 2026-06-12
 name: BentoML
 nav: Providers
 network: true
-overview: 'BentoML publishes 59 APIs on the [APIs.io](https://apis.io/) network, including admin api v1 API, admin deployment resource API, api token resource API, and 56 more. Tagged areas include Machine-Learning, Model Serving, Inference, Artificial Intelligence, and REST API.
+overview: 'BentoML publishes 62 API contracts indexed on the [APIs.io](https://apis.io/) network, including admin api v1 API, admin deployment resource API, api token resource API, and 59 more. Tagged areas include Machine Learning, Model Serving, Inference, Artificial Intelligence, and REST API.
 
 
   The BentoML catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -654,9 +658,10 @@ rate_limits:
   name: Bentoml Rate Limits
   slug: bentoml-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: BentoML API Rules
+  name: BentoML — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -665,24 +670,24 @@ rules:
     warn: 5
   slug: bentoml-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 42.8
+  band: thin
+  composite: 32.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 75.3
+    artifact_dirs: 18
+    catalog_earned: 56.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 39.8
+    catalog_gap: 58.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.2
   facets:
-    access_clarity: 44.7
-    contract_governance: 25.0
-    contract_quality: 54.1
+    access_clarity: 13.2
+    contract_governance: 23.5
+    contract_quality: 50.1
     developer_ergonomics: 31.0
-    discoverability: 53.7
-    operational_transparency: 50.0
-  previous_composite: 42.8
+    discoverability: 57.1
+    operational_transparency: 26.3
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -690,9 +695,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 59
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -708,7 +719,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: bentoml
 tags:
-- Machine-Learning
+- Machine Learning
 - Model Serving
 - Inference
 - Artificial Intelligence

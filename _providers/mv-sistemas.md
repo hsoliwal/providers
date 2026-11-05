@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 5
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 79
   slug: mv-sistemas-agentic-access
   summary_line: 79 operations · 40 acting · 5 human-in-the-loop
-api_count: 18
+api_count: 31
 apis:
 - baseURL: https://api.globalhealth.mv/available-appointments/api
   baseurl_source: declared
@@ -446,7 +446,7 @@ modified: '2026-07-20'
 name: MV sistemas
 nav: Providers
 network: true
-overview: 'MV sistemas publishes 35 APIs on the [APIs.io](https://apis.io/) network, including Agendamento API, Agendamento de performance API, Atendimento API, and 32 more. Tagged areas include Company, Healthcare, Health IT, Hospitals, and Clinics.
+overview: 'MV sistemas publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agendamento API, Agendamento de performance API, Atendimento API, and 32 more. Tagged areas include Company, Healthcare, Health IT, Hospitals, and Clinics.
 
 
   The MV sistemas catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -456,7 +456,7 @@ overview: 'MV sistemas publishes 35 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 1
 score:
   band: developing
-  composite: 42.4
+  composite: 39.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -468,9 +468,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 61.7
+    contract_quality: 56.4
     developer_ergonomics: 53.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -479,7 +479,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 42.4
+  previous_composite: 39.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -495,9 +495,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 35.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

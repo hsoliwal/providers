@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: REST API for accepting and managing card and BNPL payments — create and pay orders, capture or void authorised (pre-auth) transactions, issue refunds, save cards as payment sources, and run 3-D Secure
@@ -119,16 +119,16 @@ modified: '2026-07-24'
 name: Limepay
 nav: Providers
 network: true
-overview: 'Limepay publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, Australia, Buy Now Pay Later, Payment Gateway, and Checkout.
+overview: 'Limepay is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, Australia, Buy Now Pay Later, Payment Gateway, and Checkout.
 
 
   Limepay''s developer surface includes authentication, documentation, API reference, and 10 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 11.7
+  composite: 11.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -140,7 +140,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -149,7 +149,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 11.7
+  previous_composite: 11.1
   provenance:
     conformance: derived
     skills: derived
@@ -158,9 +158,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 35.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

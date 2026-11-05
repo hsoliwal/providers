@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.0
-  scored_at: '2026-09-20'
+  score: 34.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 1
@@ -103,7 +103,7 @@ apis:
   description: The Weekend API from NASCAR — 3 operation(s) for weekend.
   name: NASCAR Weekend API
   slug: nascar-weekend-api
-artifact_total: 31
+artifact_total: 32
 collections:
 - collection_type: open
   name: API Collection
@@ -148,6 +148,21 @@ collections:
   name: NASCAR Feed API
   slug: open-nascar
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nascar/refs/heads/main/plans/nascar-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/nascar-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/nascar/refs/heads/main/rate-limits/nascar-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/nascar-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nascar/refs/heads/main/finops/nascar-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/nascar-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nascar/refs/heads/main/agentic-access/nascar-agentic-access.yml
   title: ''
@@ -181,19 +196,27 @@ common:
 created: '2025-02-06'
 description: NASCAR, the National Association for Stock Car Auto Racing, is a professional auto racing organization that sanctions and governs multiple racing series, including the popular NASCAR Cup Series. NASCAR exposes a feed API documented via Swagger that delivers race results, standings, schedules, driver and team information, and other motorsport data for partners, broadcasters, and fans.
 finops:
-- name: Nascar Finops
+- has_sources: false
+  method: generated
+  name: Nascar Finops
+  primary_unit: ''
   service_category: API
   slug: nascar-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nascar.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.nascar.com over HTTP.
+  name: NASCAR MCP Server
+  slug: nascar
 modified: '2026-05-19'
 name: NASCAR
 nav: Providers
 network: true
-overview: 'NASCAR publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Drivers API, EntryList API, and 9 more. Tagged areas include Auto Racing, Sports, Stock Cars, Motorsports, and Race Results.
+overview: 'NASCAR is listed with 12 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Drivers API, EntryList API, and 9 more. Tagged areas include Auto Racing, Sports, Stock Cars, Motorsports, and Race Results.
 
 
-  NASCAR''s developer surface includes documentation and 6 more developer resources.'
+  NASCAR''s developer surface includes documentation and 9 more developer resources.'
 plans:
 - name: Nascar Plans Pricing
   plan_count: 3
@@ -205,23 +228,23 @@ rate_limits:
   slug: nascar-rate-limits
 score:
   band: thin
-  composite: 28.9
+  composite: 26.9
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 44.0
+    artifact_dirs: 11
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 36.8
+    access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 16.7
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 7.9
-  previous_composite: 28.9
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -230,8 +253,14 @@ score:
       marker_coverage: 0.0
       total: 13
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: Token-authenticated REST API behind the AccuKnox SaaS console, serving asset inventory, security findings, AI/ML model risk (ModelKnox) and tenant configuration under an /api/v1/ path prefix. Served p
@@ -188,14 +188,14 @@ description: AccuKnox is a cloud-native application protection platform (CNAPP) 
 image: https://accuknox.com/wp-content/uploads/accuknox-logo-2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server requiring an API key; 7 tools listed.
   name: AccuKnox Asset Manager
   slug: accuknox-asset-manager
 modified: '2026-09-06'
 name: AccuKnox
 nav: Providers
 network: true
-overview: 'AccuKnox publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Cloud Security, Cloud Native Application Protection Platform, and Kubernetes Security.
+overview: 'AccuKnox is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Cloud Security, Cloud Native Application Protection Platform, and Kubernetes Security.
 
 
   The AccuKnox catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -218,9 +218,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 47.0
+  composite: 49.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -230,21 +230,28 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 72.2
+    discoverability: 68.3
     operational_transparency: 52.6
-  previous_composite: 47.0
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/accuknox/refs/heads/main/screenshots/accuknox-2026-10-11T092545.png
 security:
 - kind: authentication
   name: Accuknox Authentication

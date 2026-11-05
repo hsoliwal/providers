@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/swiftmile/refs/heads/main/plans/swiftmile-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/swiftmile-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/swiftmile/refs/heads/main/rate-limits/swiftmile-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/swiftmile-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/swiftmile/refs/heads/main/security/swiftmile-domain-security.yml
   title: ''
@@ -81,7 +91,7 @@ modified: '2026-08-29'
 name: Swiftmile
 nav: Providers
 network: true
-overview: Swiftmile is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Micromobility, Electric Vehicle Charging, Transportation, and IoT.
+overview: Swiftmile is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Micromobility, EV Charging, Transportation, and IoT.
 plans:
 - name: Swiftmile Plans Pricing
   plan_count: 0
@@ -93,7 +103,7 @@ rate_limits:
   slug: swiftmile-rate-limits
 score:
   band: minimal
-  composite: 5.4
+  composite: 3.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 25.0
@@ -107,16 +117,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 5.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.9
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Energy & Utilities
+    regime_id: energy_utilities
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +150,7 @@ slug: swiftmile
 tags:
 - Company
 - Micromobility
-- Electric Vehicle Charging
+- EV Charging
 - Transportation
 - IoT
 - Hardware

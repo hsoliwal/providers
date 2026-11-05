@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-09-20'
+  score: 30.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 113
   human_in_the_loop: 0
@@ -443,7 +443,7 @@ modified: '2026-07-20'
 name: MaintainX
 nav: Providers
 network: true
-overview: 'MaintainX publishes 29 APIs on the [APIs.io](https://apis.io/) network, including Asset Criticalities API, Asset Custom Statuses API, Asset Statuses API, and 26 more. Tagged areas include Company, Physical AI, Maintenance, CMMS, and Asset Management.
+overview: 'MaintainX publishes 29 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset Criticalities API, Asset Custom Statuses API, Asset Statuses API, and 26 more. Tagged areas include Company, Physical AI, Maintenance, CMMS, and Asset Management.
 
 
   The MaintainX catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -457,23 +457,23 @@ rate_limits:
   slug: maintainx-rate-limits
 score:
   band: strong
-  composite: 55.3
+  composite: 55.8
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 65.3
+    contract_quality: 59.9
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 76.3
-  previous_composite: 55.3
+  previous_composite: 55.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -484,8 +484,18 @@ score:
       total: 29
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

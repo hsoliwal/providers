@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -117,6 +117,10 @@ collections:
   name: MailerSend API
   slug: open-mailersend
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.mailersend.com/blog
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mailersend/refs/heads/main/agentic-access/mailersend-agentic-access.yml
   title: ''
@@ -274,26 +278,30 @@ common:
 created: '2026-05-08'
 description: MailerSend is a transactional email and SMS platform built for developers. Its v1 REST API covers email sending (single, bulk to 500 objects per request, and scheduled up to 72 hours out), SMTP relay, templates, sending domains and DNS verification, sender identities, recipients and five suppression lists, inbound routing, activity and analytics, email verification, DMARC and blocklist monitoring, SMS, and account/token administration. Authentication is a domain-scoped bearer token drawn from a 30-value scope vocabulary. MailerSend ships six official SDKs, an official Laravel driver, a Go CLI with an interactive TUI, a remote OAuth-protected MCP server exposing 127 tools, and its own published Agent Skill — but no machine-readable API contract and no idempotency guarantee.
 finops:
-- name: Mailersend Finops
+- has_sources: true
+  method: generated
+  name: Mailersend Finops
+  primary_unit: ''
   service_category: Email
   slug: mailersend-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mailersend.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.mailersend.com over streamable HTTP requiring OAuth; 127 tools listed.
   name: MailerSend MCP Server
-  slug: mailersend-mcp-server
-modified: '2026-08-13'
+  slug: mailersend
+modified: '2026-10-06'
 name: MailerSend
 nav: Providers
 network: true
-overview: 'MailerSend publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Bulk Email API, Domains API, Email API, and 4 more. Tagged areas include Email, Transactional Email, SMTP, Marketing, and Communications.
+overview: 'MailerSend publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bulk Email API, Domains API, Email API, and 5 more. Tagged areas include Email, Transactional Email, SMTP, Marketing, and Communications.
 
 
   The MailerSend catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  MailerSend''s developer surface includes authentication, documentation, API reference, getting-started guide, support, pricing, CLI, and 26 more developer resources.'
+  MailerSend''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, support, pricing, and 27 more developer resources.'
 plans:
 - name: Mailersend Plans Pricing
   plan_count: 5
@@ -310,23 +318,23 @@ scopes:
   summary_line: 30 scopes
 score:
   band: strong
-  composite: 60.6
+  composite: 56.3
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 64.0
+    artifact_dirs: 26
+    catalog_earned: 61.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.1
   facets:
-    access_clarity: 60.5
+    access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 59.1
-    developer_ergonomics: 76.2
-    discoverability: 75.9
+    contract_quality: 54.0
+    developer_ergonomics: 78.6
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 60.6
+  previous_composite: 57.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -342,9 +350,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 52.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

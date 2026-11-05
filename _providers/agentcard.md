@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 68.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -295,7 +295,7 @@ modified: '2026-07-17'
 name: Agentcard
 nav: Providers
 network: true
-overview: 'Agentcard publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Connect API, Identity verification API, and 2 more. Tagged areas include Company, Payments, Virtual Cards, Card Issuing, and AI Agents.
+overview: 'Agentcard publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Connect API, Identity verification API, and 2 more. Tagged areas include Company, Payments, Virtual Cards, Card Issuing, and AI Agents.
 
 
   The Agentcard catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -304,10 +304,10 @@ overview: 'Agentcard publishes 5 APIs on the [APIs.io](https://apis.io/) network
   Agentcard''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, pricing, and 32 more developer resources.'
 random_paper: 13
 score:
-  band: strong
-  composite: 55.1
+  band: developing
+  composite: 53.0
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -317,11 +317,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 64.8
+    contract_quality: 59.2
     developer_ergonomics: 90.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 55.1
+  previous_composite: 53.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -337,9 +337,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -366,5 +366,6 @@ tags:
 - Fintech
 - Wallets
 - Visa
+- A2A
 website: https://www.agentcard.sh
 ---

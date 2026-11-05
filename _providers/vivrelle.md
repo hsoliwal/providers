@@ -23,10 +23,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/vivrelle/refs/heads/main/rate-limits/vivrelle-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/vivrelle-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -104,7 +109,7 @@ network: true
 overview: 'Vivrelle is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fashion, Luxury, Retail, and E-Commerce.
 
 
-  Vivrelle''s developer surface includes pricing, signup flow, support, and 7 more developer resources.'
+  Vivrelle''s developer surface includes pricing, signup flow, support, and 8 more developer resources.'
 plans:
 - name: Vivrelle Plans Pricing
   plan_count: 6
@@ -116,9 +121,9 @@ rate_limits:
   slug: vivrelle-rate-limits
 score:
   band: emerging
-  composite: 21.2
+  composite: 20.8
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -130,16 +135,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/vivrelle/refs/heads/main/screenshots/vivrelle-2026-10-11T133101.png
 security:
 - kind: domain-security
   name: Vivrelle Domain Security

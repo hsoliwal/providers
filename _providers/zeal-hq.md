@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -134,6 +134,11 @@ collections:
   name: Zeal API
   slug: open-zeal-hq
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zeal-hq/refs/heads/main/capabilities/zeal-hq-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zeal-hq-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/zeal-hq/refs/heads/main/agentic-access/zeal-hq-agentic-access.yml
   title: ''
@@ -183,19 +188,23 @@ common:
 created: '2026-07-01'
 description: Zeal is an embedded, payroll-as-a-service platform. Its API lets software companies build their own payroll products - onboarding companies, employees, and 1099 contractors, running pay runs, disbursing pay, and handling tax calculation, filing, and compliance across all US jurisdictions - without becoming a payroll company themselves.
 finops:
-- name: Zeal Hq Finops
+- has_sources: true
+  method: generated
+  name: Zeal Hq Finops
+  primary_unit: ''
   service_category: Payroll and Human Resources
   slug: zeal-hq-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zeal-hq.png
 layout: provider
 modified: '2026-07-01'
 name: Zeal
 nav: Providers
 network: true
-overview: 'Zeal publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Contractor Payments API, Contractors API, and 7 more. Tagged areas include Payroll, Embedded Finance, Fintech, Tax Compliance, and Contractors.
+overview: 'Zeal publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Companies API, Contractor Payments API, Contractors API, and 7 more. Tagged areas include Payroll, Embedded Finance, Fintech, Tax Compliance, and Contractors.
 
 
-  Zeal''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  Zeal''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Zeal Hq Plans Pricing
   plan_count: 4
@@ -206,24 +215,24 @@ rate_limits:
   name: Zeal Hq Rate Limits
   slug: zeal-hq-rate-limits
 score:
-  band: thin
-  composite: 37.3
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
+    artifact_dirs: 12
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 50.9
+    contract_quality: 46.0
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 37.3
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -231,9 +240,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

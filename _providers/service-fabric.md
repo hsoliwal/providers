@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.5
-  scored_at: '2026-09-20'
+  score: 16.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -95,6 +95,26 @@ collections:
   name: Service Fabric Cluster Management Applications Services API
   slug: open-service-fabric-services-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/service-fabric/refs/heads/main/plans/service-fabric-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/service-fabric-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/service-fabric/refs/heads/main/rate-limits/service-fabric-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/service-fabric-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/service-fabric/refs/heads/main/finops/service-fabric-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/service-fabric-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/service-fabric/refs/heads/main/capabilities/service-fabric-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/service-fabric-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/service-fabric/refs/heads/main/agentic-access/service-fabric-agentic-access.yml
   title: ''
@@ -183,9 +203,13 @@ examples:
   name: Service Fabric Get Cluster Health Example
   slug: service-fabric-get-cluster-health-example
 finops:
-- name: Service Fabric Finops
+- has_sources: false
+  method: generated
+  name: Service Fabric Finops
+  primary_unit: ''
   service_category: API
   slug: service-fabric-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/service-fabric.png
 json_schemas:
 - name: Service Fabric Application
@@ -205,13 +229,13 @@ modified: '2026-05-19'
 name: Service Fabric
 nav: Providers
 network: true
-overview: 'Service Fabric publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Cluster API, Health API, and 2 more. Tagged areas include Distributed Systems, Microservices, Containers, Cloud-Native, and Kubernetes.
+overview: 'Service Fabric publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Cluster API, Health API, and 3 more. Tagged areas include Distributed Systems, Microservices, Containers, Cloud-Native, and Kubernetes.
 
 
   The Service Fabric catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Service Fabric''s developer surface includes GitHub presence, documentation, getting-started guide, changelog, code examples, and 12 more developer resources.'
+  Service Fabric''s developer surface includes GitHub presence, documentation, getting-started guide, changelog, code examples, and 16 more developer resources.'
 plans:
 - name: Service Fabric Plans Pricing
   plan_count: 3
@@ -222,9 +246,10 @@ rate_limits:
   name: Service Fabric Rate Limits
   slug: service-fabric-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Service Fabric API Rules
+  name: Service Fabric — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -232,7 +257,8 @@ rules:
     info: 1
     warn: 4
   slug: service-fabric-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Service Fabric API Rules
@@ -245,23 +271,23 @@ rules:
   slug: service-fabric-rules
 score:
   band: thin
-  composite: 37.1
+  composite: 34.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 64.5
+    artifact_dirs: 17
+    catalog_earned: 60.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 54.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 63.1
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 57.6
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 28.9
-  previous_composite: 37.1
+  previous_composite: 35.5
   provenance:
     agentic_access: derived
     contracts:
@@ -269,8 +295,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -292,7 +324,7 @@ tags:
 - Containers
 - Cloud-Native
 - Kubernetes
-- Azure
-- Open-Source
+- Microsoft Azure
+- Open Source
 website: https://docs.microsoft.com/en-us/azure/service-fabric/
 ---

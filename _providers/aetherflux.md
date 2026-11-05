@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.cowboyspace.com/news
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/aetherflux/refs/heads/main/security/aetherflux-domain-security.yml
   title: ''
@@ -94,32 +98,32 @@ description: 'Cowboy Space Corporation is an American orbital-infrastructure com
   rocket, sized between Falcon 9 and Starship at roughly 20,000-25,000 kg of payload, whose upper stage is itself the payload - each one intended to become a one-megawatt orbital data center - with a first launch targeted for the end of 2028. It has raised roughly USD 365 million to date, including a USD 50 million Series A in April 2025 and a USD 275 million Series B in May 2026 at a USD 2 billion valuation, led by Index Ventures with IVP, Blossom Capital, SAIC, Breakthrough Energy Ventures, Construct Capital, Andreessen Horowitz, NEA and Interlagos participating. Cowboy Space is a space hardware and energy infrastructure company, not a software vendor: as of August 2026 it publishes no developer portal, no API documentation, no SDK, no public GitHub organization and no machine-readable API contract of any kind. Its entire public web presence is a four-page Framer-hosted marketing site (home, terms, privacy, media terms of use) plus an Ashby-hosted careers board.'
 image: https://framerusercontent.com/images/0329Z2COjkiHgcW28b3reMPgXg.png
 layout: provider
-modified: '2026-08-02'
+modified: '2026-10-06'
 name: Cowboy Space Corporation (formerly Aetherflux)
 nav: Providers
 network: true
 overview: 'Cowboy Space Corporation (formerly Aetherflux) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Aerospace, Space, Satellite, and Launch Vehicles.
 
 
-  Cowboy Space Corporation (formerly Aetherflux)''s developer surface includes legal docs and 11 more developer resources.'
+  Cowboy Space Corporation (formerly Aetherflux)''s developer surface includes engineering blog, legal docs, and 11 more developer resources.'
 random_paper: 2
 score:
   band: minimal
-  composite: 10.9
+  composite: 10.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
-    discoverability: 57.4
+    developer_ergonomics: 2.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -128,7 +132,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.9
+  previous_composite: 10.0
   provenance:
     conformance: first-party
   regulatory:
@@ -136,9 +140,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 25.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -157,7 +161,7 @@ tags:
 - Space
 - Satellite
 - Launch Vehicles
-- Data-Center
+- Data Center
 - Artificial Intelligence
 - Energy
 - Solar Power

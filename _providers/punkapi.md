@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -215,7 +215,7 @@ modified: '2026-05-29'
 name: Punk API
 nav: Providers
 network: true
-overview: 'Punk API publishes 1 API on the [APIs.io](https://apis.io/) network: Beers API. Tagged areas include Food And Drink, Beer, BrewDog, DIY Dog, and Recipes.
+overview: 'Punk API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Beers API. Tagged areas include Food and Beverage, Beer, BrewDog, DIY Dog, and Recipes.
 
 
   The Punk API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
@@ -229,9 +229,10 @@ rate_limits:
   name: Punkapi Rate Limits
   slug: punkapi-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Punk API API Rules
+  name: Punk API — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -239,7 +240,8 @@ rules:
     info: 1
     warn: 5
   slug: punkapi-jsonschema-spectral-rules
-- effective_rule_count: 77
+- authorship: unmarked
+  effective_rule_count: 77
   extends:
   - spectral:oas
   name: Punk API API Rules
@@ -251,24 +253,25 @@ rules:
     warn: 21
   slug: punkapi-rules
 score:
-  band: developing
-  composite: 40.4
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 14
-    catalog_earned: 87.5
+    catalog_earned: 71.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 27.5
+    catalog_gap: 44.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -37.0
   facets:
-    access_clarity: 21.1
-    contract_governance: 28.8
-    contract_quality: 65.5
-    developer_ergonomics: 21.4
-    discoverability: 75.9
-    operational_transparency: 34.2
-  previous_composite: 40.4
+    access_clarity: 0.0
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -276,9 +279,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
@@ -297,15 +306,16 @@ solutions:
 - description: For purely read use cases, host data.json on a CDN and serve clients directly.
   name: Static JSON Mirror
 tags:
-- Food And Drink
+- Food and Beverage
 - Beer
 - BrewDog
 - DIY Dog
 - Recipes
-- Open-Source
+- Open Source
 - Public APIs
 - REST
 - Deprecated
+- Defunct
 use_cases:
 - description: Look up a recipe by ABV, hop, or malt to replicate or adapt a BrewDog beer at home-batch scale.
   name: Homebrewing Reference

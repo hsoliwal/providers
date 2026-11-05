@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -98,6 +98,11 @@ collections:
   name: Gradient Labs API
   slug: open-gradient-labs
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/capabilities/gradient-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gradient-labs-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/gradient-labs/refs/heads/main/agentic-access/gradient-labs-agentic-access.yml
   title: ''
@@ -151,19 +156,23 @@ common:
 created: '2026-07-01'
 description: Gradient Labs builds "Otto", an AI customer support agent that autonomously handles complex, end-to-end support conversations for regulated and financial services businesses. The API lets you start and drive conversations, stream customer messages, hand off to human agents, execute business actions/tools, and manage the knowledge base the agent reasons over, with signed webhooks delivering the agent's outbound messages and events.
 finops:
-- name: Gradient Labs Finops
+- has_sources: true
+  method: generated
+  name: Gradient Labs Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: gradient-labs-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gradient-labs.png
 layout: provider
 modified: '2026-07-01'
 name: Gradient Labs
 nav: Providers
 network: true
-overview: 'Gradient Labs publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Actions & Tools API, Conversations API, Hand-off API, and 3 more. Tagged areas include Artificial Intelligence, Customer-Support, AI Agents, Conversations, and Financial-Services.
+overview: 'Gradient Labs publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions & Tools API, Conversations API, Hand-off API, and 3 more. Tagged areas include Artificial Intelligence, Customer Service, AI Agents, Conversations, and Financial Services.
 
 
-  Gradient Labs'' developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Gradient Labs'' developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Gradient Labs Plans Pricing
   plan_count: 1
@@ -174,24 +183,24 @@ rate_limits:
   name: Gradient Labs Rate Limits
   slug: gradient-labs-rate-limits
 score:
-  band: thin
-  composite: 34.2
+  band: emerging
+  composite: 25.2
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 56.0
+    artifact_dirs: 12
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 55.4
+    contract_quality: 49.9
     developer_ergonomics: 15.5
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 34.2
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 31.2
   provenance:
     agentic_access: derived
     contracts:
@@ -199,9 +208,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -218,10 +233,10 @@ security:
 slug: gradient-labs
 tags:
 - Artificial Intelligence
-- Customer-Support
+- Customer Service
 - AI Agents
 - Conversations
-- Financial-Services
+- Financial Services
 - Regulated
 website: https://www.gradient-labs.ai
 ---

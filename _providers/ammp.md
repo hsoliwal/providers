@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ammp/refs/heads/main/security/ammp-trust-center.yml
@@ -86,6 +86,10 @@ created: '2026-07-17'
 description: AMMP (AMMP OS) is a distributed energy monitoring and operations platform for operators of commercial and industrial (C&I) solar and battery-storage portfolios. It unifies visibility across multi-vendor fleets, pulling data directly from more than 30 manufacturer cloud platforms and its own AMMP Edge data logger, and layers on monitoring, alerting, stakeholder reporting, commercial (SLA/cost) tracking, and customizable dashboards. AMMP OS monitors over 10,000 sites across 35+ countries and emphasizes vendor independence and ISO/IEC 27001:2022 certified security. Surfaced as a portfolio company of point-nine and enriched by the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ammp.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ammp.io over HTTP.
+  name: AMMP MCP Server
+  slug: ammp
 modified: '2026-07-17'
 name: AMMP
 nav: Providers
@@ -105,15 +109,15 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 46.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.6
+  previous_composite: 15.5
   provenance:
     mcp: first-party
   regulatory:
@@ -121,9 +125,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -34,73 +34,73 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The account API from Lighter — 26 operation(s) for account.
-  name: Lighter account API
+  name: Lighter Account API
   slug: lighter-account-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The announcement API from Lighter — 1 operation(s) for announcement.
-  name: Lighter announcement API
+  name: Lighter Announcement API
   slug: lighter-announcement-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The block API from Lighter — 3 operation(s) for block.
-  name: Lighter block API
+  name: Lighter Block API
   slug: lighter-block-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The bridge API from Lighter — 6 operation(s) for bridge.
-  name: Lighter bridge API
+  name: Lighter Bridge API
   slug: lighter-bridge-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The candlestick API from Lighter — 2 operation(s) for candlestick.
-  name: Lighter candlestick API
+  name: Lighter Candlestick API
   slug: lighter-candlestick-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The funding API from Lighter — 1 operation(s) for funding.
-  name: Lighter funding API
+  name: Lighter Funding API
   slug: lighter-funding-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The info API from Lighter — 5 operation(s) for info.
-  name: Lighter info API
+  name: Lighter Info API
   slug: lighter-info-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The notification API from Lighter — 1 operation(s) for notification.
-  name: Lighter notification API
+  name: Lighter Notification API
   slug: lighter-notification-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The order API from Lighter — 12 operation(s) for order.
-  name: Lighter order API
+  name: Lighter Order API
   slug: lighter-order-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The referral API from Lighter — 6 operation(s) for referral.
-  name: Lighter referral API
+  name: Lighter Referral API
   slug: lighter-referral-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The root API from Lighter — 2 operation(s) for root.
-  name: Lighter root API
+  name: Lighter Root API
   slug: lighter-root-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The tokenlist API from Lighter — 1 operation(s) for tokenlist.
-  name: Lighter tokenlist API
+  name: Lighter Tokenlist API
   slug: lighter-tokenlist-api
 - baseURL: https://mainnet.zklighter.elliot.ai
   baseurl_source: declared
   description: The transaction API from Lighter — 12 operation(s) for transaction.
-  name: Lighter transaction API
+  name: Lighter Transaction API
   slug: lighter-transaction-api
 artifact_total: 33
 asyncapis:
@@ -151,6 +151,10 @@ collections:
   name: Lighter account transaction API
   slug: open-lighter-transaction-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://lighter.xyz/blog
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/lighter/refs/heads/main/overlays/lighter-zklighter-overlay.yaml
   title: ''
@@ -304,17 +308,17 @@ description: 'Lighter is a decentralized perpetual futures exchange built on zkL
   rate limits, and a vulnerability disclosure policy.'
 image: https://files.readme.io/2bd11e7-lighter_logo.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Lighter
 nav: Providers
 network: true
-overview: 'Lighter publishes 13 APIs on the [APIs.io](https://apis.io/) network, including account API, announcement API, block API, and 10 more. Tagged areas include Company, Trading, Cryptocurrency, Decentralized Finance, and Perpetual Futures.
+overview: 'Lighter publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Announcement API, Block API, and 10 more. Tagged areas include Company, Trading, Cryptocurrency, Decentralized Finance, and Perpetual Futures.
 
 
   The Lighter catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lighter''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, authentication, and 25 more developer resources.'
+  Lighter''s developer surface includes engineering blog, documentation, API reference, getting-started guide, signup flow, pricing, support, and 26 more developer resources.'
 plans:
 - name: Lighter Plans
   plan_count: 4
@@ -326,23 +330,23 @@ rate_limits:
   slug: lighter-rate-limits
 score:
   band: developing
-  composite: 54.0
+  composite: 51.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 59.6
-    developer_ergonomics: 56.5
-    discoverability: 75.9
+    contract_quality: 54.5
+    developer_ergonomics: 58.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 54.0
+  previous_composite: 50.9
   provenance:
     conformance: derived
     contracts:
@@ -357,9 +361,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -390,5 +394,6 @@ tags:
 - Zero Knowledge
 - Market Data
 - WebSocket
+- Real-Time
 website: https://lighter.xyz
 ---

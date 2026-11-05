@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The collections service of the CIONIC research platform. Path-versioned REST endpoints under /c/v{version}/{org}/ covering studies, protocols and protocol versions, collections and their files, stream
@@ -163,14 +163,14 @@ modified: '2026-08-09'
 name: CIONIC
 nav: Providers
 network: true
-overview: 'CIONIC publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Medical Devices, Wearables, and Neurotechnology.
+overview: 'CIONIC is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Medical Devices, Wearables, and Neurotechnology.
 
 
   CIONIC''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, CLI, authentication, and 18 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 30.6
+  composite: 29.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -184,9 +184,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 30.6
+  previous_composite: 29.5
   provenance:
     conformance: first-party
   regulatory:
@@ -202,9 +202,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

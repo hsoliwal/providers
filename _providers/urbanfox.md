@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -73,7 +73,7 @@ apis:
   description: OAuth token generation for machine-to-machine authentication.
   name: UrbanFox O Auth API
   slug: urbanfox-oauth-api
-artifact_total: 17
+artifact_total: 18
 collections:
 - collection_type: open
   name: API Collection
@@ -97,6 +97,11 @@ collections:
   name: UrbanFox Customer Cases Tenants API
   slug: open-urbanfox-tenants-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/urbanfox/refs/heads/main/plans/urbanfox-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/urbanfox-plans-pricing.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/urbanfox/refs/heads/main/overlays/urbanfox-customer-api-overlay.yaml
   title: ''
@@ -216,10 +221,14 @@ modified: '2026-07-21'
 name: UrbanFox
 nav: Providers
 network: true
-overview: 'UrbanFox publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Cases API, End User Accounts API, Metrics API, and 3 more. Tagged areas include Fraud Detection, Payment Fraud, Account Takeover, Bot Detection, and Risk Management.
+overview: 'UrbanFox publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cases API, End User Accounts API, Metrics API, and 3 more. Tagged areas include Fraud Prevention, Payment Fraud, Account Takeover, Bot Detection, and Risk Management.
 
 
-  UrbanFox''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 17 more developer resources.'
+  UrbanFox''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 18 more developer resources.'
+plans:
+- name: Urbanfox Plans Pricing
+  plan_count: 0
+  slug: urbanfox-plans-pricing
 random_paper: 11
 scopes:
 - name: Urbanfox Scopes
@@ -227,10 +236,10 @@ scopes:
   slug: urbanfox-scopes
   summary_line: 13 scopes · clientCredentials
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 37.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -240,11 +249,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 61.2
+    contract_quality: 55.1
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 40.2
+  previous_composite: 37.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -260,9 +269,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -279,7 +288,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: urbanfox
 tags:
-- Fraud Detection
+- Fraud Prevention
 - Payment Fraud
 - Account Takeover
 - Bot Detection

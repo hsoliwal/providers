@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for the Polycom RealPresence Platform (RealPresence Resource Manager / Distributed Media Application, later Poly Clariti). Integrates the platform into business processes such as resource mon
@@ -70,16 +70,16 @@ modified: '2026-07-20'
 name: Polycom
 nav: Providers
 network: true
-overview: 'Polycom publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video Conferencing, Unified Communications, Collaboration, and Telepresence.
+overview: 'Polycom is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video Conferencing, Unified Communications, Collaboration, and Telepresence.
 
 
   Polycom''s developer surface includes documentation, support, and 3 more developer resources.'
 random_paper: 1
 score:
   band: minimal
-  composite: 9.7
+  composite: 8.1
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -91,11 +91,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 9.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

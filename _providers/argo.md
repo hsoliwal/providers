@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 2
@@ -163,6 +163,26 @@ collections:
   name: Argo Workflows API
   slug: open-argo-workflows
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/plans/argo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/argo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/rate-limits/argo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/argo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/finops/argo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/argo-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/argo/refs/heads/main/capabilities/argo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/argo-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -414,9 +434,13 @@ features:
 - description: All tools are implemented as Kubernetes CRDs and controllers, integrating natively with the platform.
   name: Kubernetes-Native
 finops:
-- name: Argo Finops
+- has_sources: false
+  method: generated
+  name: Argo Finops
+  primary_unit: ''
   service_category: API
   slug: argo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/argo.png
 integrations:
 - description: Argo CD natively renders Helm charts; Argo Workflows can execute Helm operations as steps.
@@ -755,13 +779,13 @@ modified: '2026-05-19'
 name: Argo
 nav: Providers
 network: true
-overview: 'Argo publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Events API, Applications API, Clusters API, and 10 more. Tagged areas include CNCF, CI/CD, GitOps, Kubernetes, and Open-Source.
+overview: 'Argo publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Applications API, Clusters API, and 11 more. Tagged areas include CNCF, CI/CD, GitOps, Kubernetes, and Open Source.
 
 
   The Argo catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Argo''s developer surface includes authentication, documentation, engineering blog, support, and 14 more developer resources.'
+  Argo''s developer surface includes authentication, documentation, engineering blog, support, and 18 more developer resources.'
 plans:
 - name: Argo Plans Pricing
   plan_count: 3
@@ -772,10 +796,11 @@ rate_limits:
   name: Argo Rate Limits
   slug: argo-rate-limits
 rules:
-- effective_rule_count: 34
+- authorship: generated
+  effective_rule_count: 34
   extends:
   - spectral:asyncapi
-  name: Argo API Rules
+  name: Argo — asyncapi rules
   rule_count: 7
   severity_counts:
     error: 0
@@ -783,9 +808,10 @@ rules:
     info: 0
     warn: 7
   slug: argo-asyncapi-spectral-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Argo API Rules
+  name: Argo — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -793,7 +819,8 @@ rules:
     info: 2
     warn: 4
   slug: argo-jsonschema-spectral-rules
-- effective_rule_count: 57
+- authorship: generated
+  effective_rule_count: 57
   extends:
   - spectral:oas
   name: Argo API Rules
@@ -806,26 +833,26 @@ rules:
   slug: argo-spectral-rules
 score:
   band: developing
-  composite: 48.9
+  composite: 46.3
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 61.5
+    artifact_dirs: 19
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.5
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 68.2
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 63.4
     developer_ergonomics: 47.6
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 85.0
-  previous_composite: 48.9
+  previous_composite: 47.6
   provenance:
     agentic_access: derived
     contracts:
@@ -833,8 +860,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -855,9 +888,11 @@ tags:
 - CI/CD
 - GitOps
 - Kubernetes
-- Open-Source
+- Open Source
 - Progressive Delivery
 - Workflow Engine
+- Cloud-Native
+- Graduated
 use_cases:
 - description: Combine Argo CD and Argo Workflows for a complete Git-driven DevOps platform on Kubernetes.
   name: GitOps Platform

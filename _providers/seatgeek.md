@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-09-20'
+  score: 32.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -70,7 +70,7 @@ apis:
   description: The Venues API from SeatGeek — 2 operation(s) for venues.
   name: SeatGeek Venues API
   slug: seatgeek-venues-api
-artifact_total: 30
+artifact_total: 31
 collections:
 - collection_type: postman
   name: SeatGeek Platform Events API
@@ -109,6 +109,21 @@ collections:
   name: SeatGeek Platform Events Venues API
   slug: open-seatgeek-venues-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/plans/seatgeek-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/seatgeek-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/rate-limits/seatgeek-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/seatgeek-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/finops/seatgeek-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/seatgeek-finops.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -201,9 +216,13 @@ examples:
   name: Seatgeek List Events Example
   slug: seatgeek-list-events-example
 finops:
-- name: Seatgeek Finops
+- has_sources: false
+  method: generated
+  name: Seatgeek Finops
+  primary_unit: ''
   service_category: API
   slug: seatgeek-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/seatgeek.png
 json_schemas:
 - name: SeatGeek Event
@@ -223,17 +242,20 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at api.seatgeek.com over HTTP; 3 tools listed.
+  name: SeatGeek MCP Server
+  slug: seatgeek
 modified: '2026-05-19'
 name: SeatGeek
 nav: Providers
 network: true
-overview: 'SeatGeek publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Events API, Performers API, Recommendations API, and 2 more. Tagged areas include Event, Tickets, Live Events, Concerts, and Sports.
+overview: 'SeatGeek publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Performers API, Recommendations API, and 2 more. Tagged areas include Event, Ticketing, Live Events, Concerts, and Sports.
 
 
   The SeatGeek catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  SeatGeek''s developer surface includes authentication, developer portal, documentation, support, code examples, and 14 more developer resources.'
+  SeatGeek''s developer surface includes authentication, developer portal, documentation, support, code examples, and 17 more developer resources.'
 plans:
 - name: Seatgeek Plans Pricing
   plan_count: 3
@@ -244,9 +266,10 @@ rate_limits:
   name: Seatgeek Rate Limits
   slug: seatgeek-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: SeatGeek API Rules
+  name: SeatGeek — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -254,7 +277,8 @@ rules:
     info: 1
     warn: 4
   slug: seatgeek-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: SeatGeek API Rules
@@ -267,23 +291,23 @@ rules:
   slug: seatgeek-rules
 score:
   band: developing
-  composite: 41.6
+  composite: 39.3
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 63.5
+    artifact_dirs: 18
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 26.3
-    contract_governance: 28.8
-    contract_quality: 61.9
+    access_clarity: 18.4
+    contract_governance: 27.3
+    contract_quality: 56.5
     developer_ergonomics: 44.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 13.2
-  previous_composite: 41.6
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
@@ -292,8 +316,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -312,11 +342,10 @@ security:
 slug: seatgeek
 tags:
 - Event
-- Tickets
+- Ticketing
 - Live Events
 - Concerts
 - Sports
 - Venues
-- Ticketing
 website: https://seatgeek.com
 ---

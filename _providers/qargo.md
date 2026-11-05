@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 7
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 114
   slug: qargo-agentic-access
   summary_line: 114 operations · 64 acting · 7 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - description: Fleet dispatch and subcontractor-specific endpoints for transportation management.
   name: Qargo Subcontractor API
@@ -375,14 +375,14 @@ description: Qargo is an intelligent transport management platform (TMS) for roa
 image: https://app.qargo.com/assets/Qargo_Icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api-docs.qargo.com over HTTP; 6 tools listed.
   name: Qargo API documentation
   slug: qargo-api-documentation
 modified: '2026-07-20'
 name: Qargo
 nav: Providers
 network: true
-overview: 'Qargo publishes 20 APIs on the [APIs.io](https://apis.io/) network, including API / Accounting API, API / Authentication API, API / Company API, and 17 more. Tagged areas include Company, Transport Management, Logistics, Supply Chain, and Freight.
+overview: 'Qargo publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including API / Accounting API, API / Authentication API, API / Company API, and 19 more. Tagged areas include Company, Transport Management, Logistics, Supply Chain, and Freight.
 
 
   The Qargo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -392,9 +392,9 @@ overview: 'Qargo publishes 20 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 10
 score:
   band: developing
-  composite: 47.1
+  composite: 48.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -404,11 +404,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 60.9
+    contract_quality: 55.7
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 31.6
-  previous_composite: 47.1
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -419,8 +419,14 @@ score:
       total: 20
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

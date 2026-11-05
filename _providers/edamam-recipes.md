@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 14
   slug: edamam-recipes-agentic-access
   summary_line: 14 operations · 7 acting
-api_count: 4
+api_count: 5
 apis:
 - baseURL: https://api.edamam.com/api/recipes/v2
   baseurl_source: declared
@@ -77,7 +77,7 @@ apis:
 - baseURL: https://api.edamam.com/api/recipes/v2
   baseurl_source: declared
   description: Meal planning
-  name: Edamam planner API
+  name: Edamam Planner API
   slug: edamam-recipes-planner-api
 - baseURL: https://api.edamam.com/api/recipes/v2
   baseurl_source: declared
@@ -92,7 +92,7 @@ apis:
 - baseURL: https://api.edamam.com/api/recipes/v2
   baseurl_source: declared
   description: Daily values
-  name: Edamam values API
+  name: Edamam Values API
   slug: edamam-recipes-values-api
 artifact_total: 78
 collections:
@@ -142,6 +142,19 @@ collections:
   name: Food Database Food Nutrition Request - AI Vision (Beta) Food Nutrition Request - AI Vision (Beta) values API
   slug: open-edamam-recipes-values-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/finops/edamam-recipes-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/edamam-recipes-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.edamam.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.edamam.com/blog/feed/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/edamam-recipes/refs/heads/main/agentic-access/edamam-recipes-agentic-access.yml
   title: ''
@@ -276,9 +289,13 @@ features:
 - description: _links.next on paged responses; _links.self on individual hits.
   name: HATEOAS Pagination
 finops:
-- name: Edamam Recipes Finops
+- has_sources: false
+  method: generated
+  name: Edamam Recipes Finops
+  primary_unit: ''
   service_category: ''
   slug: edamam-recipes-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/edamam-recipes.png
 integrations:
 - description: Meal Planner Enterprise tiers integrate with Instacart for grocery fulfillment.
@@ -321,17 +338,17 @@ jsonld:
   property_count: 18
   slug: edamam-recipes-context
 layout: provider
-modified: '2026-05-30'
+modified: '2026-10-06'
 name: Edamam
 nav: Providers
 network: true
-overview: 'Edamam publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Food Nutrition Request - AI Vision (Beta) API, Food Request Step 1 - Parser API, Food Request Step 2 - Nutrients API, and 7 more. Tagged areas include Food And Drink, Recipes, Nutrition, Diet, and Allergens.
+overview: 'Edamam publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Food Nutrition Request - AI Vision (Beta) API, Food Request Step 1 - Parser API, Food Request Step 2 - Nutrients API, and 7 more. Tagged areas include Food and Beverage, Recipes, Nutrition, Diet, and Allergens.
 
 
   The Edamam catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Edamam''s developer surface includes authentication, documentation, signup flow, FAQ, support, tooling, and 13 more developer resources.'
+  Edamam''s developer surface includes engineering blog, authentication, documentation, signup flow, FAQ, support, tooling, and 15 more developer resources.'
 plans:
 - name: Edamam Recipes Plans Pricing
   plan_count: 0
@@ -342,9 +359,10 @@ rate_limits:
   name: Edamam Recipes Rate Limits
   slug: edamam-recipes-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Edamam API Rules
+  name: Edamam — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -352,7 +370,8 @@ rules:
     info: 2
     warn: 4
   slug: edamam-recipes-jsonschema-spectral-rules
-- effective_rule_count: 56
+- authorship: unmarked
+  effective_rule_count: 56
   extends:
   - spectral:oas
   name: Edamam API Rules
@@ -364,24 +383,24 @@ rules:
     warn: 6
   slug: edamam-recipes-rules
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 37.9
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 70.5
+    artifact_dirs: 17
+    catalog_earned: 69.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.5
+    catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.0
   facets:
-    access_clarity: 25.0
-    contract_governance: 28.8
-    contract_quality: 67.0
-    developer_ergonomics: 38.1
-    discoverability: 75.9
+    access_clarity: 17.1
+    contract_governance: 27.3
+    contract_quality: 61.3
+    developer_ergonomics: 40.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 40.0
+  previous_composite: 38.9
   provenance:
     agentic_access: derived
     contracts:
@@ -389,8 +408,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -426,7 +451,7 @@ solutions:
 - description: $300/mo, 1,000 MAU, 30 meal-plan calls/day, 5,000 recipe calls/min, Instacart integration.
   name: Meal Planner Enterprise Core
 tags:
-- Food And Drink
+- Food and Beverage
 - Recipes
 - Nutrition
 - Diet

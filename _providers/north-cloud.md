@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -62,6 +62,26 @@ collections:
   name: North.Cloud Public API
   slug: open-north-cloud
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/north-cloud/refs/heads/main/plans/north-cloud-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/north-cloud-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/north-cloud/refs/heads/main/rate-limits/north-cloud-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/north-cloud-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/north-cloud/refs/heads/main/finops/north-cloud-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/north-cloud-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/north-cloud/refs/heads/main/capabilities/north-cloud-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/north-cloud-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/north-cloud/refs/heads/main/agentic-access/north-cloud-agentic-access.yml
   title: ''
@@ -104,19 +124,23 @@ common:
 created: '2026-01-02'
 description: North.Cloud delivers real-time savings, automated FinOps, and dynamic optimization across AWS and GCP. The platform's public API enables programmatic ingestion and retrieval of cost unit data so teams can integrate unit economics, allocation, and chargeback reporting into their own systems.
 finops:
-- name: North Cloud Finops
+- has_sources: false
+  method: generated
+  name: North Cloud Finops
+  primary_unit: ''
   service_category: API
   slug: north-cloud-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/north-cloud.png
 layout: provider
 modified: '2026-05-19'
 name: North.Cloud
 nav: Providers
 network: true
-overview: 'North.Cloud publishes 1 API on the [APIs.io](https://apis.io/) network: Cost Units API. Tagged areas include FinOps, Cloud Cost Management, GCP, Cost Optimization, and Cost Units.
+overview: 'North.Cloud publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Cost Units API. Tagged areas include FinOps, Cloud Cost Management, GCP, Cost Optimization, and Cost Units.
 
 
-  North.Cloud''s developer surface includes authentication, documentation, engineering blog, and 6 more developer resources.'
+  North.Cloud''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: North Cloud Plans Pricing
   plan_count: 3
@@ -128,23 +152,23 @@ rate_limits:
   slug: north-cloud-rate-limits
 score:
   band: thin
-  composite: 31.3
+  composite: 27.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 46.0
+    artifact_dirs: 12
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 59.2
+    contract_quality: 53.3
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 31.3
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -152,8 +176,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

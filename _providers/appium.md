@@ -10,10 +10,10 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: false
@@ -27,20 +27,20 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.4
-  scored_at: '2026-09-20'
+  score: 26.8
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 18
+- acting_count: 16
   human_in_the_loop: 1
   name: Appium Agentic Access
   operation_count: 32
   slug: appium-agentic-access
-  summary_line: 32 operations · 18 acting · 1 human-in-the-loop
+  summary_line: 32 operations · 16 acting · 1 human-in-the-loop
 api_count: 13
 apis:
 - description: Standalone GUI inspector for mobile apps that communicates with an Appium server, enabling visual element inspection and XPath generation for test authoring.
@@ -138,6 +138,21 @@ collections:
   name: Appium Server Actions Sessions API
   slug: open-appium-sessions-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/appium/refs/heads/main/plans/appium-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/appium-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/appium/refs/heads/main/rate-limits/appium-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/appium-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/appium/refs/heads/main/finops/appium-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/appium-finops.yml
 - group: company
   title: ''
   type: Website
@@ -279,9 +294,13 @@ features:
 - description: Visual app inspector for element discovery and XPath/accessibility ID generation
   name: Inspector GUI
 finops:
-- name: Appium Finops
+- has_sources: true
+  method: generated
+  name: Appium Finops
+  primary_unit: ''
   service_category: Test Automation / WebDriver
   slug: appium-finops
+  template: false
 image: https://appium.io/docs/en/latest/assets/images/appium-logo.png
 integrations:
 - description: Cloud device farm integration for running Appium tests on real devices
@@ -350,13 +369,13 @@ modified: '2026-09-16'
 name: Appium
 nav: Providers
 network: true
-overview: 'Appium publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Alerts API, Device API, and 7 more. Tagged areas include Appium, Android, Cross-Platform, iOS, and Mobile Testing.
+overview: 'Appium is listed with 13 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Alerts API, Device API, and 10 more. Tagged areas include Appium, Android, Cross-Platform, iOS, and Mobile Testing.
 
 
   The Appium catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Appium''s developer surface includes getting-started guide, documentation, support, Stack Overflow tag, YouTube channel, changelog, tooling, and 18 more developer resources.'
+  Appium''s developer surface includes getting-started guide, documentation, support, Stack Overflow tag, YouTube channel, changelog, tooling, and 21 more developer resources.'
 plans:
 - name: Appium Plans Pricing
   plan_count: 1
@@ -367,9 +386,10 @@ rate_limits:
   name: Appium Rate Limits
   slug: appium-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Appium API Rules
+  name: Appium — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -377,7 +397,8 @@ rules:
     info: 2
     warn: 3
   slug: appium-jsonschema-spectral-rules
-- effective_rule_count: 71
+- authorship: generated
+  effective_rule_count: 71
   extends:
   - spectral:oas
   name: Appium API Rules
@@ -390,26 +411,26 @@ rules:
   slug: appium-spectral-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 33.8
   coverage:
     artifact_dirs: 16
-    catalog_earned: 72.5
+    catalog_earned: 68.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 42.5
+    catalog_gap: 47.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 13.2
-    contract_governance: 28.8
-    contract_quality: 26.1
-    developer_ergonomics: 57.1
-    discoverability: 72.2
+    access_clarity: 5.3
+    contract_governance: 27.3
+    contract_quality: 25.4
+    developer_ergonomics: 56.4
+    discoverability: 68.3
     operational_transparency: 23.7
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 36.7
+  previous_composite: 35.2
   provenance:
     agentic_access: derived
     contracts:
@@ -417,8 +438,14 @@ score:
       derived: 11
       marker_coverage: 100.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -458,10 +485,11 @@ tags:
 - Cross-Platform
 - iOS
 - Mobile Testing
-- Open-Source
+- Open Source
 - OpenJS Foundation
 - Test Automation
 - WebDriver
+- Testing
 use_cases:
 - description: Automated functional and regression testing of iOS and Android native apps
   name: Mobile App Testing

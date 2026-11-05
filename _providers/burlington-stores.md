@@ -33,17 +33,23 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'Burlington''s consumer storefront: shopping, store locator, gift cards, loyalty and credit card servicing. No public API is published behind it. Every /.well-known/ path, /openapi.json and /llms.txt on'
   name: Burlington Stores
+  provenance: unpublished
   slug: burlington-stores-website
 - description: Burlington's ASC X12 version 4010 EDI trading-partner interface — the company's only documented machine-to-machine surface. Seventeen implementation guides are published as public PDFs with sample int
   name: Burlington Stores EDI
   slug: burlington-stores-edi
 artifact_total: 6
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/burlington-stores/refs/heads/main/finops/burlington-stores-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/burlington-stores-finops.yml
 - group: company
   title: ''
   type: Website
@@ -114,19 +120,23 @@ coverage:
 created: '2026-03-21'
 description: 'Burlington Stores, Inc. (NYSE: BURL) is a US national off-price department store retailer offering brand-name clothing, footwear, accessories, baby products and home decor at everyday low prices across more than 1,200 stores. Burlington operates no public developer program: no OpenAPI, GraphQL, gRPC, SOAP or event contract is served on any host it controls. Its one documented machine-to-machine surface is ASC X12 version 4010 EDI for merchandise vendors and freight carriers, and unusually for a retailer of this size the implementation guides are fully public — seventeen transaction-set PDFs plus a GS1-128 shipping label companion report, readable without a login at burlington.com/vendors/edi. The runtime behind them, the Gateway Vendor Management Suite, is invite-only.'
 finops:
-- name: Burlington Stores Finops
+- has_sources: true
+  method: generated
+  name: Burlington Stores Finops
+  primary_unit: ''
   service_category: Retail / Off-Price Department Store
   slug: burlington-stores-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/burlington-stores.png
 layout: provider
 modified: '2026-09-05'
 name: Burlington Stores
 nav: Providers
 network: true
-overview: 'Burlington Stores publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Retail, Company, E-Commerce, Apparel, and Home Decor.
+overview: 'Burlington Stores is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Retail, Company, E-Commerce, Apparel, and Home Decor.
 
 
-  Burlington Stores'' developer surface includes support and 10 more developer resources.'
+  Burlington Stores'' developer surface includes support and 11 more developer resources.'
 plans:
 - name: Burlington Stores Plans Pricing
   plan_count: 0
@@ -154,27 +164,33 @@ rate_limits:
   slug: burlington-stores-rate-limits
 score:
   band: minimal
-  composite: 10.4
+  composite: 8.0
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 35.0
+    artifact_dirs: 13
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 7.9
+    access_clarity: 0.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 10.4
+  previous_composite: 9.5
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

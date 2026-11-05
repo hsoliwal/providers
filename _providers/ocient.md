@@ -34,8 +34,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
-api_count: 1
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://docs.ocient.com/api-playgrounds/ocient-http-query-api
   baseurl_source: declared
@@ -47,7 +47,7 @@ apis:
   description: The System Information REST Endpoints API from Ocient — 6 operation(s) for system information rest endpoints.
   name: Ocient System Information REST Endpoints API
   slug: ocient-system-information-rest-endpoints-api
-artifact_total: 9
+artifact_total: 10
 collections:
 - collection_type: open
   name: API Collection
@@ -59,6 +59,11 @@ collections:
   name: Generated API methods System Information REST Endpoints API
   slug: open-ocient-system-information-rest-endpoints-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ocient/refs/heads/main/plans/ocient-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ocient-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ocient/refs/heads/main/security/ocient-trust-center.yml
   title: ''
@@ -233,42 +238,48 @@ description: Ocient is a Chicago-based data platform company founded in 2016 tha
 image: https://ocient.com/wp-content/uploads/2024/03/logo_adjust-2r.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.ocient.com over HTTP; 3 tools listed.
   name: Ocient Documentation
   slug: ocient-documentation
 modified: '2026-09-16'
 name: Ocient
 nav: Providers
 network: true
-overview: 'Ocient publishes 2 APIs on the [APIs.io](https://apis.io/) network: HTTP Query API and System Information REST Endpoints API. Tagged areas include Company, Data, Analytics, Data Warehouse, and Database.
+overview: 'Ocient publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: HTTP Query API and System Information REST Endpoints API. Tagged areas include Company, Data, Analytics, Data Warehouse, and Database.
 
 
-  Ocient''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, CLI, and 30 more developer resources.'
+  Ocient''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, CLI, and 31 more developer resources.'
+plans:
+- name: Ocient Plans Pricing
+  plan_count: 3
+  slug: ocient-plans-pricing
 random_paper: 4
 score:
-  band: developing
-  composite: 48.2
+  band: strong
+  composite: 55.1
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 24
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 47.4
+    access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.2
+  previous_composite: 48.7
   provenance:
     conformance: first-party
     contracts:
@@ -278,9 +289,15 @@ score:
       total: 2
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -307,8 +324,9 @@ tags:
 - Database
 - SQL
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Big Data
 - Geospatial
+- A2A
 website: https://ocient.com/
 ---

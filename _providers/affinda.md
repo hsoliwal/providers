@@ -16,7 +16,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -25,26 +25,26 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.0
-  scored_at: '2026-09-20'
+  score: 52.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 146
+- acting_count: 81
   human_in_the_loop: 0
   name: Affinda Agentic Access
-  operation_count: 244
+  operation_count: 141
   slug: affinda-agentic-access
-  summary_line: 244 operations · 146 acting
-api_count: 4
+  summary_line: 141 operations · 81 acting
+api_count: 5
 apis:
 - baseURL_template: https://{region}.affinda.com
   baseurl_source: spec_template
@@ -208,7 +208,7 @@ arazzos:
 - description: List an organization's workspaces, then pull a daily credit-consumption report scoped to the first workspace.
   name: Affinda Workspace Usage Report
   slug: affinda-workspace-usage-report-workflow
-artifact_total: 123
+artifact_total: 124
 collections:
 - collection_type: postman
   name: Affinda Annotations API
@@ -671,9 +671,13 @@ features:
 - Official Python, TypeScript, .NET, and Java client libraries
 - skill.md file for AI agents (Claude Code, Cursor) describing the full API surface
 finops:
-- name: Affinda Finops
+- has_sources: true
+  method: generated
+  name: Affinda Finops
+  primary_unit: credit
   service_category: AI and Machine Learning
   slug: affinda-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/affinda.png
 json_schemas:
 - name: Affinda Annotation
@@ -694,11 +698,15 @@ jsonld:
   property_count: 10
   slug: affinda-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.affinda.com over HTTP.
+  name: Affinda MCP Server
+  slug: affinda
 modified: '2026-05-25'
 name: Affinda
 nav: Providers
 network: true
-overview: 'Affinda publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Document Types API, Workspaces API, and 13 more. Tagged areas include Artificial Intelligence, Document Processing, Intelligent Document Processing, IDP, and OCR.
+overview: 'Affinda publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Documents API, Document Types API, Workspaces API, and 13 more. Tagged areas include Artificial Intelligence, Document Processing, Intelligent Document Processing, OCR, and Resume Parsing.
 
 
   The Affinda catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -715,9 +723,10 @@ rate_limits:
   name: Affinda Rate Limits
   slug: affinda-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Affinda API Rules
+  name: Affinda — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -725,7 +734,8 @@ rules:
     info: 2
     warn: 4
   slug: affinda-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Affinda API Rules
@@ -738,23 +748,23 @@ rules:
   slug: affinda-rules
 score:
   band: strong
-  composite: 63.7
+  composite: 54.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 76.5
+    artifact_dirs: 22
+    catalog_earned: 60.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.5
+    catalog_gap: 54.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.9
   facets:
-    access_clarity: 72.4
+    access_clarity: 48.7
     contract_governance: 13.6
-    contract_quality: 69.6
-    developer_ergonomics: 79.8
-    discoverability: 64.8
-    operational_transparency: 57.9
-  previous_composite: 63.7
+    contract_quality: 63.5
+    developer_ergonomics: 79.0
+    discoverability: 65.0
+    operational_transparency: 42.1
+  previous_composite: 60.4
   provenance:
     agentic_access: derived
     contracts:
@@ -768,10 +778,10 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 18.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -794,7 +804,6 @@ tags:
 - Artificial Intelligence
 - Document Processing
 - Intelligent Document Processing
-- IDP
 - OCR
 - Resume Parsing
 - Invoice Parsing
@@ -802,7 +811,7 @@ tags:
 - Document Extraction
 - Document Classification
 - Document Splitting
-- Recruitment
+- Recruiting
 - Banking
 - Insurance
 - Logistics

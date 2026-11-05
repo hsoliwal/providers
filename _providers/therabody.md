@@ -23,9 +23,9 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.4
-  scored_at: '2026-09-20'
+  score: 32.8
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Therabody's agent-facing commerce server, implementing the Universal Commerce Protocol (UCP) shopping service over MCP on the Therabody storefront host. Anonymous tools/list returns 13 tools with full
@@ -148,14 +148,14 @@ description: 'Therabody is a Los Angeles-based wellness technology company found
 image: https://www.therabody.com/cdn/shop/files/theragun-social-media.jpg?v=1742212493
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.therabody.com.
   name: Therabody MCP Server
-  slug: therabody-mcp-server
+  slug: therabody-mcp-yml
 modified: '2026-08-05'
 name: Therabody
 nav: Providers
 network: true
-overview: 'Therabody publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wellness, Health, Consumer Products, and E-Commerce.
+overview: 'Therabody is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wellness, Health, Consumer Products, and E-Commerce.
 
 
   Therabody''s developer surface includes engineering blog, support, signup flow, authentication, and 16 more developer resources.'
@@ -166,41 +166,43 @@ scopes:
   slug: therabody-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 34.1
+  band: emerging
+  composite: 25.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 20.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 34.1
+  previous_composite: 24.9
   provenance:
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

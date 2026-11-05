@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 67
+- acting_count: 81
   human_in_the_loop: 1
   name: Medadvisor Agentic Access
-  operation_count: 112
+  operation_count: 158
   slug: medadvisor-agentic-access
-  summary_line: 112 operations · 67 acting · 1 human-in-the-loop
+  summary_line: 158 operations · 81 acting · 1 human-in-the-loop
 api_count: 2
 apis:
 - baseURL: https://pharmacy-unified.api.medadvisor.com.au
@@ -263,14 +263,14 @@ modified: '2026-09-16'
 name: MedAdvisor
 nav: Providers
 network: true
-overview: 'MedAdvisor publishes 14 APIs on the [APIs.io](https://apis.io/) network, including 3rd-Party Integration API, Account API, Booking API, and 11 more. Tagged areas include Healthcare, Australia, Pharmacy, Medication Management, and Medication Adherence.
+overview: 'MedAdvisor publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including 3rd-Party Integration API, Account API, Booking API, and 11 more. Tagged areas include Healthcare, Australia, Pharmacy, Medication Management, and Medication Adherence.
 
 
   MedAdvisor''s developer surface includes authentication, API reference, documentation, support, and 24 more developer resources.'
 random_paper: 14
 score:
   band: developing
-  composite: 49.7
+  composite: 46.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -282,9 +282,9 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 45.4
+    contract_quality: 41.1
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -293,7 +293,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 49.7
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -315,9 +315,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 51.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

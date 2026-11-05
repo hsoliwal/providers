@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 30.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -114,6 +114,11 @@ collections:
   name: Paigo Customers Webhooks API
   slug: open-paigo-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/paigo/refs/heads/main/capabilities/paigo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/paigo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/paigo/refs/heads/main/agentic-access/paigo-agentic-access.yml
   title: ''
@@ -196,9 +201,13 @@ examples:
   name: Paigo Usage Create Example
   slug: paigo-usage-create-example
 finops:
-- name: Paigo Finops
+- has_sources: false
+  method: generated
+  name: Paigo Finops
+  primary_unit: ''
   service_category: ''
   slug: paigo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/paigo.png
 json_schemas:
 - name: AggregatedUsageResponse
@@ -241,13 +250,13 @@ modified: '2026-06-13'
 name: Paigo
 nav: Providers
 network: true
-overview: 'Paigo publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Customers API, Dimensions API, Invoices API, and 5 more. Tagged areas include Billing, Usage-Based Billing, Metering, Invoicing, and Pricing.
+overview: 'Paigo publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Customers API, Dimensions API, Invoices API, and 5 more. Tagged areas include Billing, Usage-Based Billing, Metering, Invoicing, and Pricing.
 
 
   The Paigo catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Paigo''s developer surface includes authentication, documentation, engineering blog, pricing, and 10 more developer resources.'
+  Paigo''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
 plans:
 - name: Paigo Plans Pricing
   plan_count: 1
@@ -258,9 +267,10 @@ rate_limits:
   name: Paigo Rate Limits
   slug: paigo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Paigo API Rules
+  name: Paigo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -275,23 +285,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 39.0
+  composite: 34.6
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 62.3
+    artifact_dirs: 19
+    catalog_earned: 53.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 34.2
+    access_clarity: 10.5
     contract_governance: 9.8
-    contract_quality: 56.8
+    contract_quality: 52.5
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 39.0
+  previous_composite: 38.9
   provenance:
     agentic_access: derived
     contracts:
@@ -299,8 +309,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.1
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -50,21 +50,21 @@ apis:
   name: dopost Social Media Scheduler API
   slug: dopost-social-media-scheduler-api
 - baseURL: https://dopost.co
-  baseurl_source: declared
+  baseurl_source: spec
   description: Upload, list, and delete media assets used in posts.
   name: dopost Media API
   slug: dopost-co-media-api
 - baseURL: https://dopost.co
-  baseurl_source: declared
+  baseurl_source: spec
   description: Schedule, retrieve, reschedule, and delete posts across connected networks.
   name: dopost Posts API
   slug: dopost-co-posts-api
 - baseURL: https://dopost.co
-  baseurl_source: declared
+  baseurl_source: spec
   description: Inspect connected social accounts and per-network posting limits.
   name: dopost Social Accounts API
   slug: dopost-co-social-accounts-api
-artifact_total: 24
+artifact_total: 26
 collections:
 - collection_type: open
   name: API Collection
@@ -82,6 +82,26 @@ collections:
   name: dopost Social Media Scheduler API
   slug: open-dopost
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/dopost-co/refs/heads/main/plans/dopost-co-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/dopost-co-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/dopost-co/refs/heads/main/rate-limits/dopost-co-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/dopost-co-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/dopost-co/refs/heads/main/finops/dopost-co-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/dopost-co-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/dopost-co/refs/heads/main/capabilities/dopost-co-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/dopost-co-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/dopost-co/refs/heads/main/agentic-access/dopost-co-agentic-access.yml
   title: ''
@@ -150,9 +170,13 @@ examples:
   name: Schedule Instagram Post
   slug: schedule-instagram-post
 finops:
-- name: Dopost Co Finops
+- has_sources: true
+  method: generated
+  name: Dopost Co Finops
+  primary_unit: ''
   service_category: ''
   slug: dopost-co-finops
+  template: true
 image: https://dopost.co/favicon.ico
 json_schemas:
 - name: Account
@@ -170,17 +194,21 @@ jsonld:
   property_count: 0
   slug: dopost-co-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.dopost.co over HTTP.
+  name: dopost MCP Server
+  slug: dopost-co
 modified: '2026-05-27'
 name: dopost
 nav: Providers
 network: true
-overview: 'dopost publishes 3 APIs on the [APIs.io](https://apis.io/) network: Media API, Posts API, and Social Accounts API. Tagged areas include Social-Media, Scheduling, Publishing, Instagram, and Facebook.
+overview: 'dopost publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Media API, Posts API, Social Accounts API, and 1 more. Tagged areas include Social Media, Scheduling, Publishing, Instagram, and Facebook.
 
 
   The dopost catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  dopost''s developer surface includes authentication, documentation, pricing, engineering blog, and 9 more developer resources.'
+  dopost''s developer surface includes authentication, documentation, pricing, engineering blog, and 13 more developer resources.'
 plans:
 - name: Dopost Co Plans Pricing
   plan_count: 3
@@ -191,9 +219,10 @@ rate_limits:
   name: Dopost Co Rate Limits
   slug: dopost-co-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: dopost API Rules
+  name: dopost — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -201,7 +230,8 @@ rules:
     info: 2
     warn: 3
   slug: dopost-co-jsonschema-spectral-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
   name: dopost API Rules
@@ -213,24 +243,24 @@ rules:
     warn: 2
   slug: dopost-co-rules
 score:
-  band: thin
-  composite: 27.0
+  band: emerging
+  composite: 20.0
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 64.5
+    artifact_dirs: 20
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 13.6
     contract_quality: 5.4
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 66.7
     operational_transparency: 0.0
-  previous_composite: 27.0
+  previous_composite: 25.6
   provenance:
     agentic_access: derived
     contracts:
@@ -239,9 +269,15 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -255,9 +291,13 @@ security:
   name: Dopost Co Domain Security
   slug: dopost-co-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+- kind: vulnerability-disclosure
+  name: Dopost Co Vulnerability Disclosure
+  slug: dopost-co-vulnerability-disclosure
+  summary_line: security.txt · contact published
 slug: dopost-co
 tags:
-- Social-Media
+- Social Media
 - Scheduling
 - Publishing
 - Instagram

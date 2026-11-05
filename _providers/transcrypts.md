@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
@@ -85,14 +85,14 @@ modified: '2026-07-21'
 name: TransCrypts
 nav: Providers
 network: true
-overview: 'TransCrypts is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto, Blockchain, Identity, and Verification.
+overview: 'TransCrypts is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Blockchain, Identity, and Verification.
 
 
   TransCrypts'' developer surface includes pricing, engineering blog, support, and 7 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 7.9
+  composite: 6.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -106,11 +106,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 7.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.1
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 8.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -129,7 +135,7 @@ security:
 slug: transcrypts
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Blockchain
 - Identity
 - Verification

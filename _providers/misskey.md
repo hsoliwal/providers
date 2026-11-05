@@ -29,26 +29,26 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 412
+- acting_count: 408
   human_in_the_loop: 6
   name: Misskey Agentic Access
   operation_count: 439
   slug: misskey-agentic-access
-  summary_line: 439 operations · 412 acting · 6 human-in-the-loop
+  summary_line: 439 operations · 408 acting · 6 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The account API from Misskey — 34 operation(s) for account.
-  name: Misskey account API
+  name: Misskey Account API
   slug: misskey-account-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -58,17 +58,17 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The antennas API from Misskey — 6 operation(s) for antennas.
-  name: Misskey antennas API
+  name: Misskey Antennas API
   slug: misskey-antennas-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The app API from Misskey — 2 operation(s) for app.
-  name: Misskey app API
+  name: Misskey App API
   slug: misskey-app-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The auth API from Misskey — 5 operation(s) for auth.
-  name: Misskey auth API
+  name: Misskey Auth API
   slug: misskey-auth-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -78,27 +78,27 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The channels API from Misskey — 13 operation(s) for channels.
-  name: Misskey channels API
+  name: Misskey Channels API
   slug: misskey-channels-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The charts API from Misskey — 12 operation(s) for charts.
-  name: Misskey charts API
+  name: Misskey Charts API
   slug: misskey-charts-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The clip API from Misskey — 2 operation(s) for clip.
-  name: Misskey clip API
+  name: Misskey Clip API
   slug: misskey-clip-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The clips API from Misskey — 6 operation(s) for clips.
-  name: Misskey clips API
+  name: Misskey Clips API
   slug: misskey-clips-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The drive API from Misskey — 18 operation(s) for drive.
-  name: Misskey drive API
+  name: Misskey Drive API
   slug: misskey-drive-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -108,32 +108,32 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The federation API from Misskey — 9 operation(s) for federation.
-  name: Misskey federation API
+  name: Misskey Federation API
   slug: misskey-federation-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The flash API from Misskey — 5 operation(s) for flash.
-  name: Misskey flash API
+  name: Misskey Flash API
   slug: misskey-flash-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The flashs API from Misskey — 2 operation(s) for flashs.
-  name: Misskey flashs API
+  name: Misskey Flashs API
   slug: misskey-flashs-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The following API from Misskey — 10 operation(s) for following.
-  name: Misskey following API
+  name: Misskey Following API
   slug: misskey-following-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The gallery API from Misskey — 9 operation(s) for gallery.
-  name: Misskey gallery API
+  name: Misskey Gallery API
   slug: misskey-gallery-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The hashtags API from Misskey — 5 operation(s) for hashtags.
-  name: Misskey hashtags API
+  name: Misskey Hashtags API
   slug: misskey-hashtags-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -143,27 +143,27 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The lists API from Misskey — 9 operation(s) for lists.
-  name: Misskey lists API
+  name: Misskey Lists API
   slug: misskey-lists-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The meta API from Misskey — 18 operation(s) for meta.
-  name: Misskey meta API
+  name: Misskey Meta API
   slug: misskey-meta-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The non-productive API from Misskey — 2 operation(s) for non-productive.
-  name: Misskey non-productive API
+  name: Misskey Non Productive API
   slug: misskey-non-productive-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The notes API from Misskey — 32 operation(s) for notes.
-  name: Misskey notes API
+  name: Misskey Notes API
   slug: misskey-notes-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The notifications API from Misskey — 4 operation(s) for notifications.
-  name: Misskey notifications API
+  name: Misskey Notifications API
   slug: misskey-notifications-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -173,12 +173,12 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The pages API from Misskey — 7 operation(s) for pages.
-  name: Misskey pages API
+  name: Misskey Pages API
   slug: misskey-pages-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The reactions API from Misskey — 2 operation(s) for reactions.
-  name: Misskey reactions API
+  name: Misskey Reactions API
   slug: misskey-reactions-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -193,7 +193,7 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The role API from Misskey — 4 operation(s) for role.
-  name: Misskey role API
+  name: Misskey Role API
   slug: misskey-role-api
 - baseURL: https://misskey.io/api
   baseurl_source: spec
@@ -203,7 +203,7 @@ apis:
 - baseURL: https://misskey.io/api
   baseurl_source: spec
   description: The webhooks API from Misskey — 7 operation(s) for webhooks.
-  name: Misskey webhooks API
+  name: Misskey Webhooks API
   slug: misskey-webhooks-api
 artifact_total: 195
 collections:
@@ -307,6 +307,25 @@ collections:
   name: Misskey account webhooks API
   slug: open-misskey-webhooks-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/plans/misskey-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/misskey-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/rate-limits/misskey-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/misskey-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/finops/misskey-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/misskey-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://misskey-hub.net/en/blog/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/misskey/refs/heads/main/capabilities/misskey-capability-edges.yml
   title: ''
@@ -549,9 +568,13 @@ examples:
   name: Misskey Post___Admin___Federation___Remove All Following Example
   slug: misskey-post___admin___federation___remove-all-following-example
 finops:
-- name: Misskey Finops
+- has_sources: false
+  method: generated
+  name: Misskey Finops
+  primary_unit: ''
   service_category: API
   slug: misskey-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/misskey.png
 json_schemas:
 - name: AbuseReportNotificationRecipient
@@ -777,17 +800,17 @@ jsonld:
   property_count: 495
   slug: misskey-context
 layout: provider
-modified: '2026-06-13'
+modified: '2026-10-06'
 name: Misskey
 nav: Providers
 network: true
-overview: 'Misskey publishes 32 APIs on the [APIs.io](https://apis.io/) network, including account API, Admin API, antennas API, and 29 more. Tagged areas include Open-Source, Social Network, Fediverse, ActivityPub, and Decentralized.
+overview: 'Misskey publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Admin API, Antennas API, and 29 more. Tagged areas include Open Source, Social Network, Fediverse, ActivityPub, and Decentralized.
 
 
   The Misskey catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
 
 
-  Misskey''s developer surface includes authentication, documentation, getting-started guide, support, and 17 more developer resources.'
+  Misskey''s developer surface includes engineering blog, authentication, documentation, getting-started guide, support, and 20 more developer resources.'
 plans:
 - name: Misskey Plans Pricing
   plan_count: 3
@@ -798,9 +821,10 @@ rate_limits:
   name: Misskey Rate Limits
   slug: misskey-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Misskey API Rules
+  name: Misskey — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -810,26 +834,26 @@ rules:
   slug: misskey-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 53.4
+  composite: 44.4
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 72.3
+    artifact_dirs: 19
+    catalog_earned: 53.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 42.8
+    catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 63.2
-    developer_ergonomics: 45.2
-    discoverability: 53.7
-    operational_transparency: 60.5
+    access_clarity: 7.9
+    contract_governance: 23.5
+    contract_quality: 57.4
+    developer_ergonomics: 47.6
+    discoverability: 57.1
+    operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 53.4
+  previous_composite: 51.4
   provenance:
     agentic_access: derived
     contracts:
@@ -837,9 +861,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 32
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -855,7 +885,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: misskey
 tags:
-- Open-Source
+- Open Source
 - Social Network
 - Fediverse
 - ActivityPub

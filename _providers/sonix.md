@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -75,7 +75,7 @@ apis:
   description: Translate a completed transcript into another language.
   name: Sonix Translations API
   slug: sonix-translations-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -102,6 +102,10 @@ collections:
   name: Sonix API
   slug: open-sonix
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://sonix.ai/pricing
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/sonix/refs/heads/main/capabilities/sonix-capability-edges.yml
   title: ''
@@ -151,22 +155,30 @@ common:
 created: '2026-07-11'
 description: Sonix is an AI-powered platform for automated audio and video transcription, subtitles, and translation. It transcribes in 54+ languages with speaker labels and word-level timestamps, translates transcripts into 55+ languages, generates subtitles and captions (SRT, VTT, TXT, JSON, DOCX, PDF), and runs AI analysis (summaries, chapters, sentiment, entities). The Sonix REST API - available to subscribers - lets developers upload media, poll transcription status, retrieve and edit transcripts, export subtitles, and translate, all authorized with a Bearer API key against https://api.sonix.ai/v1.
 finops:
-- name: Sonix Finops
+- has_sources: true
+  method: generated
+  name: Sonix Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: sonix-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sonix.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.sonix.ai over HTTP.
+  name: Sonix MCP Server
+  slug: sonix
 modified: '2026-07-11'
 name: Sonix
 nav: Providers
 network: true
-overview: 'Sonix publishes 6 APIs on the [APIs.io](https://apis.io/) network, including AI Analysis API, Exports API, Folders API, and 3 more. Tagged areas include Audio Transcription, Transcription, Speech-to-Text, Subtitles, and Captions.
+overview: 'Sonix publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Analysis API, Exports API, Folders API, and 3 more. Tagged areas include Audio Transcription, Transcription, Speech-to-Text, Subtitles, and Captions.
 
 
-  Sonix''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  Sonix''s developer surface includes pricing, authentication, documentation, engineering blog, and 7 more developer resources.'
 plans:
 - name: Sonix Plans Pricing
-  plan_count: 5
+  plan_count: 8
   slug: sonix-plans-pricing
 random_paper: 11
 rate_limits:
@@ -174,24 +186,24 @@ rate_limits:
   name: Sonix Rate Limits
   slug: sonix-rate-limits
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 34.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    artifact_dirs: 14
+    catalog_earned: 52.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 59.2
+    contract_quality: 53.6
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 39.4
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -200,8 +212,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

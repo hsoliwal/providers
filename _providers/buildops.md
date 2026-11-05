@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,20 +25,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 32.0
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The BuildOps Public API, named by the BuildOps Dev Center as the REST + webhook-callback integration surface for customers, software partners and vendors. The Dev Center gates its reference behind "In
   name: BuildOps Public API
   slug: public-api
-artifact_total: 7
+artifact_total: 8
 asyncapis:
 - description: ''
   name: Buildops Webhooks
@@ -158,11 +158,15 @@ description: BuildOps is an AI-native, all-in-one commercial contractor manageme
   is a Data Dictionary describing BuildOps datasets on the Dashboard module and a Snowflake private share. BuildOps does publish a security policy and a Vanta-hosted Trust Center carrying SOC 2 Type I.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/buildops.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.buildops.com over HTTP.
+  name: BuildOps MCP Server
+  slug: buildops
 modified: '2026-08-10'
 name: BuildOps
 nav: Providers
 network: true
-overview: 'BuildOps publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction Software, Field Service Management, Contractor Management, and Commercial Services.
+overview: 'BuildOps is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction Software, Field Service, Contractor Management, and Commercial Services.
 
 
   The BuildOps catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -180,27 +184,33 @@ rate_limits:
   slug: buildops-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 34.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 34.2
+  previous_composite: 34.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -224,7 +234,7 @@ slug: buildops
 tags:
 - Company
 - Construction Software
-- Field Service Management
+- Field Service
 - Contractor Management
 - Commercial Services
 - HVAC

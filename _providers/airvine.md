@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -138,10 +138,10 @@ overview: 'Airvine is profiled on the [APIs.io](https://apis.io/) network. Tagge
   Airvine''s developer surface includes documentation, support, engineering blog, release notes, and 14 more developer resources.'
 random_paper: 2
 score:
-  band: minimal
-  composite: 10.9
+  band: emerging
+  composite: 11.3
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -153,22 +153,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 15.8
-  previous_composite: 10.9
+  previous_composite: 11.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 13.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/airvine/refs/heads/main/screenshots/airvine-2026-10-11T093436.png
 security:
 - kind: domain-security
   name: Airvine Domain Security

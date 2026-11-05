@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Libryo Platform''s partner-facing RESTful API. Third-party applications integrate on behalf of a Libryo user using the OAuth 2.0 authorization-code flow, then call the versioned /api/v1 surface to '
@@ -128,7 +128,7 @@ modified: '2026-07-19'
 name: Libryo
 nav: Providers
 network: true
-overview: 'Libryo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Regulatory Compliance, Legal Tech, Environmental Health and Safety, and Governance Risk and Compliance.
+overview: 'Libryo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Regulatory Compliance, Legal Tech, Environmental Health and Safety, and Governance Risk and Compliance.
 
 
   Libryo''s developer surface includes documentation, support, pricing, and 15 more developer resources.'
@@ -140,7 +140,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: emerging
-  composite: 25.2
+  composite: 23.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -154,9 +154,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 25.2
+  previous_composite: 23.2
   provenance:
     conformance: first-party
   regulatory:
@@ -168,9 +168,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

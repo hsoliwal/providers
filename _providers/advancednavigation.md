@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: HTTP/JSON API for Advanced Navigation's Kinematica cloud GNSS/INS post-processing kinematic (PPK) service. Eleven documented calls let a customer application create a data set, upload primary and seco
@@ -157,7 +157,7 @@ modified: '2026-09-09'
 name: Advanced Navigation
 nav: Providers
 network: true
-overview: 'Advanced Navigation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Navigation, Inertial Navigation, GNSS, and Positioning.
+overview: 'Advanced Navigation is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Navigation, Inertial Navigation, GNSS, and Positioning.
 
 
   Advanced Navigation''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
@@ -172,9 +172,9 @@ rate_limits:
   slug: advancednavigation-rate-limits
 score:
   band: developing
-  composite: 41.2
+  composite: 42.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -186,19 +186,31 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 41.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - australia
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 42.3
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/advancednavigation/refs/heads/main/screenshots/advancednavigation-2026-10-11T092854.png
 security:
 - kind: authentication
   name: Advancednavigation Authentication

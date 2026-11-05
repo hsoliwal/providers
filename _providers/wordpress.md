@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.9
-  scored_at: '2026-09-20'
+  score: 29.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -203,6 +203,21 @@ collections:
   name: WordPress REST Block Types Users API
   slug: open-wordpress-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/wordpress/refs/heads/main/plans/wordpress-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/wordpress-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/wordpress/refs/heads/main/rate-limits/wordpress-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/wordpress-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/wordpress/refs/heads/main/finops/wordpress-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/wordpress-finops.yml
 - group: company
   title: ''
   type: Website
@@ -449,9 +464,13 @@ features:
 - description: Provider-agnostic PHP AI client SDK and MCP adapter for integrating generative AI capabilities into WordPress
   name: AI Integration
 finops:
-- name: Wordpress Finops
+- has_sources: false
+  method: generated
+  name: Wordpress Finops
+  primary_unit: ''
   service_category: API
   slug: wordpress-finops
+  template: true
 graphqls:
 - description: WordPress supports a full-featured GraphQL API through the [WPGraphQL plugin](https://www.wpgraphql.com/), an open-source WordPress plugin that provides an extendable GraphQL schema and API for any Wo
   name: WordPress GraphQL API
@@ -596,13 +615,13 @@ modified: '2026-05-19'
 name: WordPress
 nav: Providers
 network: true
-overview: 'WordPress publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Block Types API, Blocks API, Categories API, and 11 more. Tagged areas include CMS, Content Management, Open-Source, and WordPress.
+overview: 'WordPress is listed with 17 APIs on the [APIs.io](https://apis.io/) network, including Block Types API, Blocks API, Categories API, and 14 more. Tagged areas include CMS, Content Management, Open Source, and WordPress.
 
 
   The WordPress catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  WordPress'' developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, changelog, support, and 32 more developer resources.'
+  WordPress'' developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, changelog, support, and 35 more developer resources.'
 plans:
 - name: Wordpress Plans Pricing
   plan_count: 3
@@ -613,9 +632,10 @@ rate_limits:
   name: Wordpress Rate Limits
   slug: wordpress-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: WordPress API Rules
+  name: WordPress — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -623,7 +643,8 @@ rules:
     info: 1
     warn: 4
   slug: wordpress-jsonschema-spectral-rules
-- effective_rule_count: 87
+- authorship: generated
+  effective_rule_count: 87
   extends:
   - spectral:oas
   name: WordPress API Rules
@@ -636,26 +657,26 @@ rules:
   slug: wordpress-spectral-rules
 score:
   band: developing
-  composite: 45.3
+  composite: 46.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 66.5
+    artifact_dirs: 23
+    catalog_earned: 65.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.5
+    catalog_gap: 50.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 36.8
-    contract_governance: 28.8
-    contract_quality: 38.7
-    developer_ergonomics: 72.6
-    discoverability: 57.4
+    access_clarity: 28.9
+    contract_governance: 27.3
+    contract_quality: 38.1
+    developer_ergonomics: 71.9
+    discoverability: 60.0
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 45.3
+  previous_composite: 47.3
   provenance:
     agentic_access: derived
     contracts:
@@ -663,8 +684,14 @@ score:
       derived: 15
       marker_coverage: 100.0
       total: 15
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -723,7 +750,7 @@ slug: wordpress
 tags:
 - CMS
 - Content Management
-- Open-Source
+- Open Source
 - WordPress
 use_cases:
 - description: Use WordPress as a headless CMS with the REST API to deliver content to any frontend framework like Next.js, Nuxt, or React

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -72,7 +72,7 @@ apis:
   description: OAuth 2.0 authorization endpoints.
   name: Podio O Auth API
   slug: podio-oauth-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -165,11 +165,15 @@ created: '2026-05-11'
 description: Podio is a flexible work management and collaboration platform (originally acquired by Citrix in 2012, and now part of Progress Software following the October 2024 acquisition of ShareFile and Podio) that lets teams build custom apps, workspaces, and workflows for project management, CRM, and internal operations. The Podio API offers a complete programmable interface to all Podio functionality including apps, items, tasks, workspaces, users, files, and webhooks, with official client libraries available for PHP, .NET, Ruby, Java, Python, Android, and Objective-C.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/podio.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.podio.com over HTTP.
+  name: Podio MCP Server
+  slug: podio
 modified: '2026-05-11'
 name: Podio
 nav: Providers
 network: true
-overview: 'Podio publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Hooks API, Items API, and 2 more. Tagged areas include Work Management, Collaboration, Project Management, CRM, and Workflows.
+overview: 'Podio publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Hooks API, Items API, and 3 more. Tagged areas include Work Management, Collaboration, Project Management, CRM, and Workflows.
 
 
   Podio''s developer surface includes authentication, documentation, pricing, signup flow, and 11 more developer resources.'
@@ -181,23 +185,23 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.2
+  composite: 34.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 34.2
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     contracts:
@@ -206,8 +210,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -225,7 +235,7 @@ security:
 - kind: vulnerability-disclosure
   name: Podio Vulnerability Disclosure
   slug: podio-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: podio
 tags:
 - Work Management

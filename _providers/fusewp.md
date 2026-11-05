@@ -27,16 +27,16 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 17.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The hosted OAuth authorization broker FuseWP operates at auth.fusewp.com. The self-hosted FuseWP plugin cannot safely hold OAuth client secrets for the partner platforms it connects to, so it delegate
@@ -44,6 +44,10 @@ apis:
   slug: oauth-broker
 artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://fusewp.com/blog/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/fusewp/refs/heads/main/security/fusewp-domain-security.yml
   title: ''
@@ -167,17 +171,17 @@ description: 'FuseWP is a WordPress automation plugin from the FuseWP Team (Prop
 image: https://fusewp.com/wp-content/uploads/2023/06/fusewp-wordpress-plugin.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at fusewp.com.
   name: FuseWP MCP Server
-  slug: fusewp-mcp-server
-modified: '2026-08-12'
+  slug: fusewp-mcp-yml
+modified: '2026-10-06'
 name: FuseWP
 nav: Providers
 network: true
-overview: 'FuseWP publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, WordPress, Email Marketing, Marketing Automation, and CRM.
+overview: 'FuseWP is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, WordPress, Email Marketing, Marketing Automation, and CRM.
 
 
-  FuseWP''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 19 more developer resources.'
+  FuseWP''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 20 more developer resources.'
 plans:
 - name: Fusewp Plans Pricing
   plan_count: 7
@@ -193,34 +197,41 @@ scopes:
   slug: fusewp-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 37.4
+  band: developing
+  composite: 40.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 37.4
+  previous_composite: 40.1
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/fusewp/refs/heads/main/screenshots/fusewp-2026-10-11T185736.png
 security:
 - kind: authentication
   name: Fusewp Authentication

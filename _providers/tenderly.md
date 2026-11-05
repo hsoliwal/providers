@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,14 +26,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-09-20'
+  score: 30.2
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: Core REST API for managing Tenderly projects including smart contract simulations, alerts, Web3 Actions, contract management, wallet tracking, and virtual test environments.
@@ -54,8 +54,18 @@ apis:
 - description: Deploy and manage serverless JavaScript/TypeScript functions triggered by on-chain or off-chain events, enabling custom monitoring automation, incident response, and backend integrations without manag
   name: Tenderly Web3 Actions API
   slug: tenderly-web3-actions-api
-artifact_total: 10
+artifact_total: 11
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tenderly/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tenderly/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: company
   title: ''
   type: Website
@@ -136,19 +146,27 @@ common:
 created: '2026-06-13'
 description: Tenderly is a Web3 development platform offering smart contract debugging, transaction simulation, virtual test environments, node RPC infrastructure, alerting, Web3 Actions serverless functions, and gas profiling across 80+ EVM-compatible blockchain networks.
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tenderly.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tenderly.co over HTTP.
+  name: Tenderly MCP Server
+  slug: tenderly
 modified: '2026-09-16'
 name: Tenderly
 nav: Providers
 network: true
-overview: 'Tenderly publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Web3, Blockchain, Smart Contracts, Ethereum, and EVM.
+overview: 'Tenderly is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 5 more. Tagged areas include Web3, Blockchain, Smart Contracts, Ethereum, and EVM.
 
 
-  Tenderly''s developer surface includes developer portal, documentation, pricing, signup flow, engineering blog, status page, GitHub presence, and 12 more developer resources.'
+  Tenderly''s developer surface includes developer portal, documentation, pricing, signup flow, engineering blog, status page, GitHub presence, and 14 more developer resources.'
 plans:
 - name: Plans
   plan_count: 2
@@ -160,27 +178,33 @@ rate_limits:
   slug: rate-limits
 score:
   band: thin
-  composite: 32.9
+  composite: 27.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 51.0
+    artifact_dirs: 10
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.2
   facets:
-    access_clarity: 51.3
+    access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 39.3
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 5.3
-  previous_composite: 32.9
+  previous_composite: 31.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: Hosted, highly customisable payment form for accepting payments across cards, alternative payment methods, and wallets. Merchants open the Payment Page with a signed request (HMAC signature over the r
@@ -194,7 +194,7 @@ modified: '2026-07-24'
 name: ECOMMPAY
 nav: Providers
 network: true
-overview: 'ECOMMPAY publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, United Kingdom, Payment Gateway, Payment Processing, and Acquiring.
+overview: 'ECOMMPAY is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, United Kingdom, Payment Gateway, Payment Processing, and Acquiring.
 
 
   The ECOMMPAY catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -204,9 +204,9 @@ overview: 'ECOMMPAY publishes 4 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 1
 score:
   band: thin
-  composite: 35.1
+  composite: 33.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -216,9 +216,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -228,7 +228,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 35.1
+  previous_composite: 33.0
   provenance:
     conformance: first-party
   regulatory:
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -270,6 +270,6 @@ tags:
 - Open Banking
 - Payouts
 - Cross-Border
-- Fraud
+- Fraud Prevention
 website: https://ecommpay.com/
 ---

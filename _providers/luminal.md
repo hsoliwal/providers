@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.luminal.com/feed
 - group: operate
   title: ''
   type: IssueTracker
@@ -99,18 +103,18 @@ created: '2026-07-17'
 description: 'Luminal is an AI inference-optimization company that compiles machine-learning models ahead-of-time into optimized native code for GPUs and ASICs, aiming to deliver the fastest, highest-throughput inference available. Its core product is an open-source, high-performance general-purpose inference compiler written in Rust (the "luminal" crate), built around static computation graphs, a compile-time-checked GraphTensor API, composable neural-network modules, and pluggable graph compilers. Luminal ships two deployment paths: Luminal Cloud, a managed serverless inference service with automatic scaling, and licensed on-prem deployment with dedicated support and custom optimization. The company is backed by Felicis.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/luminal.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Luminal
 nav: Providers
 network: true
-overview: 'Luminal is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Inference, and Compilers.
+overview: 'Luminal is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Inference, and Compilers.
 
 
-  Luminal''s developer surface includes documentation, getting-started guide, API reference, engineering blog, support, and 9 more developer resources.'
+  Luminal''s developer surface includes documentation, getting-started guide, API reference, engineering blog, support, and 10 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 16.2
+  composite: 14.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -118,20 +122,26 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 16.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -147,13 +157,13 @@ slug: luminal
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Inference
 - Compilers
 - GPU
 - Deep Learning
 - Rust
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://luminal.com
 ---

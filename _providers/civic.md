@@ -28,21 +28,21 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-09-20'
+  score: 25.8
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 5
+- acting_count: 4
   human_in_the_loop: 1
   name: Civic Agentic Access
   operation_count: 7
   slug: civic-agentic-access
-  summary_line: 7 operations · 5 acting · 1 human-in-the-loop
-api_count: 1
+  summary_line: 7 operations · 4 acting · 1 human-in-the-loop
+api_count: 2
 apis:
 - description: Civic Hub is a Model Context Protocol gateway that provides AI agents with secure, audited access to 80+ external tools and services through a single Streamable HTTP endpoint. Authentication uses 30-d
   name: Civic Hub MCP API
@@ -53,12 +53,12 @@ apis:
 - baseURL: https://app.civic.com/hub/mcp
   baseurl_source: declared
   description: Issue and manage Civic Passes
-  name: Civic pass API
+  name: Civic Pass API
   slug: civic-pass-api
 - baseURL: https://app.civic.com/hub/mcp
   baseurl_source: declared
   description: Get user PII and approve / reject receipt of PII
-  name: Civic piirequest API
+  name: Civic Piirequest API
   slug: civic-piirequest-api
 artifact_total: 24
 collections:
@@ -78,6 +78,15 @@ collections:
   name: Civic Customer pass piirequest API
   slug: open-civic-piirequest-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.civic.com/feed.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/civic/refs/heads/main/capabilities/civic-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/civic-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -184,9 +193,13 @@ examples:
   name: Civic Pii Get
   slug: civic-pii-get
 finops:
-- name: Civic Finops
+- has_sources: true
+  method: generated
+  name: Civic Finops
+  primary_unit: ''
   service_category: Security and Identity
   slug: civic-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/civic.png
 json_schemas:
 - name: Civic Pass Customer API Schemas
@@ -198,17 +211,17 @@ jsonld:
   property_count: 25
   slug: civic-pass-context
 layout: provider
-modified: '2026-06-14'
+modified: '2026-10-06'
 name: Civic
 nav: Providers
 network: true
-overview: 'Civic publishes 2 APIs on the [APIs.io](https://apis.io/) network: pass API and piirequest API. Tagged areas include AI Agents, Authentication, Digital Identity, Identity Verification, and KYC.
+overview: 'Civic publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Pass API, Piirequest API, and 2 more. Tagged areas include AI Agents, Authentication, Digital Identity, Identity Verification, and KYC.
 
 
   The Civic catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Civic''s developer surface includes authentication, documentation, getting-started guide, developer portal, signup flow, pricing, engineering blog, and 13 more developer resources.'
+  Civic''s developer surface includes authentication, documentation, getting-started guide, developer portal, signup flow, pricing, engineering blog, and 15 more developer resources.'
 plans:
 - name: Civic Plans Pricing
   plan_count: 3
@@ -219,9 +232,10 @@ rate_limits:
   name: Civic Rate Limits
   slug: civic-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Civic API Rules
+  name: Civic — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -235,24 +249,24 @@ scopes:
   slug: civic-scopes
   summary_line: 2 scopes · clientCredentials
 score:
-  band: strong
-  composite: 56.0
+  band: developing
+  composite: 45.3
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 71.3
+    artifact_dirs: 20
+    catalog_earned: 53.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.8
+    catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 63.2
+    access_clarity: 31.6
     contract_governance: 9.8
-    contract_quality: 61.9
+    contract_quality: 56.6
     developer_ergonomics: 63.1
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 56.0
+    discoverability: 66.1
+    operational_transparency: 34.2
+  previous_composite: 52.7
   provenance:
     agentic_access: derived
     contracts:
@@ -265,10 +279,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 24.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

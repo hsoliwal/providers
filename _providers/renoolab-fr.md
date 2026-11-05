@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-09-20'
+  score: 34.7
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'Official remote MCP server (streamable HTTP, JSON-RPC 2.0, MCP 2025-06-18, serverInfo renoolab-mcp 1.4.0) exposing four French-language tools over the marketplace: rechercher_artisans (one trade withi'
@@ -34,6 +34,10 @@ apis:
   slug: renoolab-a2a-agent
 artifact_total: 19
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://renoolab.fr/artisans/
 - group: company
   title: ''
   type: Website
@@ -227,15 +231,15 @@ layout: provider
 mcp_servers:
 - description: RenooLab operates an official remote MCP server at https://mcp.renoolab.fr/mcp (streamable HTTP, JSON-RPC 2.0, MCP protocol 2025-06-18) exposing four tools over its French building-tradespeople market
   name: RenooLab MCP Server
-  slug: renoolab-mcp-server
+  slug: renoolab-mcp
 modified: '2026-09-19'
 name: RenooLab
 nav: Providers
 network: true
-overview: 'RenooLab publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Home Services, Construction, Building Trades, Renovation, and Marketplace.
+overview: 'RenooLab is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Home Services, Construction, Building Trades, Renovation, and Marketplace.
 
 
-  RenooLab''s developer surface includes documentation, engineering blog, support, legal docs, signup flow, authentication, changelog, and 34 more developer resources.'
+  RenooLab''s developer surface includes pricing, documentation, engineering blog, support, legal docs, signup flow, authentication, and 35 more developer resources.'
 plans:
 - name: Renoolab Fr Plans Pricing
   plan_count: 4
@@ -251,35 +255,50 @@ scopes:
   slug: renoolab-fr-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 38.3
+  band: developing
+  composite: 46.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 23
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 33.3
+  delta: 2.2
   facets:
-    access_clarity: 65.8
+    access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 5.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - france-iberia
+  previous_composite: 44.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 55.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/renoolab-fr/refs/heads/main/screenshots/renoolab-fr-2026-10-11T125132.png
 security:
 - kind: authentication
   name: Renoolab Fr Authentication

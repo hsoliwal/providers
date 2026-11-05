@@ -22,18 +22,18 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 19.3
+  scored_at: '2026-10-17'
 api_count: 7
 apis:
 - description: Cloud compilation and code-signing service for Android and iOS React Native apps. Submits build jobs via eas-cli or programmatic token access, returns build artifacts, and fires BUILD webhooks on comp
@@ -57,7 +57,7 @@ apis:
 - description: Event notification system that delivers HTTP POST payloads to configured endpoints when EAS Build or EAS Submit jobs complete. Payloads are signed with HMAC-SHA1 using a shared secret. Supports expone
   name: EAS Webhooks API
   slug: eas-webhooks-api
-artifact_total: 14
+artifact_total: 15
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/expo/refs/heads/main/security/expo-trust-center.yml
@@ -132,9 +132,13 @@ common:
 created: 2026-06-13
 description: Expo is a React Native development platform providing cloud infrastructure for building, submitting, updating, and managing mobile apps. Expo Application Services (EAS) delivers REST and CLI-driven APIs for EAS Build (cloud compilation and code signing for Android and iOS), EAS Submit (automated App Store and Google Play submissions), EAS Update (over-the-air JavaScript bundle delivery), EAS Workflows (CI/CD pipelines with cron and Slack integration), EAS Hosting (edge deployment of Expo Router and React Native web apps), EAS Insights (analytics), EAS Observe (performance monitoring), and a Push Notifications broker. All services are accessible programmatically via the eas-cli, Personal Access Tokens, or Robot User tokens, and support webhooks for build and submission events.
 finops:
-- name: Expo Finops
+- has_sources: false
+  method: generated
+  name: Expo Finops
+  primary_unit: ''
   service_category: ''
   slug: expo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/expo.png
 jsonld:
 - class_count: 11
@@ -142,11 +146,15 @@ jsonld:
   property_count: 33
   slug: expo-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.expo.dev over HTTP.
+  name: Expo MCP Server
+  slug: expo
 modified: 2026-06-13
 name: Expo
 nav: Providers
 network: true
-overview: 'Expo publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include React Native, Mobile Development, Build Automation, Over-the-Air Updates, and CI/CD.
+overview: 'Expo is listed with 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include React Native, Mobile Development, Build Automation, Over-the-Air Updates, and CI/CD.
 
 
   The Expo catalog on APIs.io includes 1 JSON-LD context.
@@ -164,28 +172,34 @@ rate_limits:
   slug: expo-rate-limits
 score:
   band: thin
-  composite: 34.6
+  composite: 30.0
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 66.0
+    artifact_dirs: 10
+    catalog_earned: 54.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.0
+    catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 57.9
+    access_clarity: 26.3
     contract_governance: 0.0
     contract_quality: 14.3
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 44.7
-  previous_composite: 34.6
+  previous_composite: 35.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

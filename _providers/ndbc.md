@@ -26,13 +26,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - description: Provides access to the last 45 days of meteorological and oceanographic observations from NDBC moored buoys and C-MAN coastal stations. Data files are served via HTTPS at https://www.ndbc.noaa.gov/dat
@@ -93,21 +93,6 @@ common:
   title: ''
   type: TermsOfService
   url: https://www.noaa.gov/disclaimer
-- group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/plans/free.md
-  title: ''
-  type: Plans
-  url: /plans/free.md
-- group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/rate-limits/rate-limits.md
-  title: ''
-  type: RateLimits
-  url: /rate-limits/rate-limits.md
-- group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/finops/finops.md
-  title: ''
-  type: FinOps
-  url: /finops/finops.md
 created: '2026-06-13'
 description: The NOAA National Data Buoy Center (NDBC) operates a global network of over 1,000 moored buoys, drifting buoys, Coastal-Marine Automated Network (C-MAN) stations, and partner stations that continuously measure and transmit meteorological and oceanographic conditions. Real-time and historical data — wind direction and speed, wave height and period, sea surface temperature, atmospheric pressure, air temperature, dew point, visibility, and salinity — are distributed freely via HTTP file URLs, a THREDDS/OPeNDAP server (NetCDF), an RSS observation feed, and a latest-observations snapshot updated every five minutes. No API key or authentication is required; data is in the public domain under U.S. government open-data policy.
 image: https://www.ndbc.noaa.gov/images/nws/nws_logo.png
@@ -116,14 +101,14 @@ modified: '2026-06-13'
 name: NDBC — National Data Buoy Center
 nav: Providers
 network: true
-overview: 'NDBC — National Data Buoy Center publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include NOAA, Marine, Buoys, Ocean, and Weather.
+overview: 'NDBC — National Data Buoy Center is listed with 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include NOAA, Marine, Buoys, Ocean, and Weather.
 
 
-  NDBC — National Data Buoy Center''s developer surface includes developer portal, documentation, and 11 more developer resources.'
+  NDBC — National Data Buoy Center''s developer surface includes developer portal, documentation, and 8 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 12.8
+  composite: 12.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 40.0
@@ -137,17 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 0.0
-  previous_composite: 12.8
+  previous_composite: 12.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

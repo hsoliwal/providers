@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -64,7 +64,7 @@ apis:
   description: The Voices API from Keyframe Labs — 2 operation(s) for voices.
   name: Keyframe Labs Voices API
   slug: keyframe-labs-voices-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -82,6 +82,11 @@ collections:
   name: Sessions LLM models Voices API
   slug: open-keyframe-labs-voices-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/keyframe-labs/refs/heads/main/plans/keyframe-labs-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/keyframe-labs-plans-pricing.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/keyframe-labs/refs/heads/main/agentic-access/keyframe-labs-agentic-access.yml
   title: ''
@@ -217,35 +222,41 @@ modified: '2026-07-19'
 name: Keyframe Labs
 nav: Providers
 network: true
-overview: 'Keyframe Labs publishes 4 APIs on the [APIs.io](https://apis.io/) network, including LLM models API, Meet bots API, Sessions API, and 1 more. Tagged areas include Company, Artificial Intelligence, Avatars, Video, and Conversational AI.
+overview: 'Keyframe Labs publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including LLM models API, Meet bots API, Sessions API, and 1 more. Tagged areas include Company, Artificial Intelligence, Avatars, Video, and Conversational AI.
 
 
-  Keyframe Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, and 21 more developer resources.'
+  Keyframe Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, and 22 more developer resources.'
+plans:
+- name: Keyframe Labs Plans Pricing
+  plan_count: 5
+  slug: keyframe-labs-plans-pricing
 random_paper: 17
 score:
-  band: thin
-  composite: 36.1
+  band: developing
+  composite: 40.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 20
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.0
   facets:
-    access_clarity: 10.5
+    access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 52.1
+    contract_quality: 46.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.1
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -256,9 +267,15 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -109,6 +109,10 @@ collections:
   name: ShipMonk Warehouses API
   slug: open-shipmonk-warehouses-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.shipmonk.com/feed
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/shipmonk/refs/heads/main/capabilities/shipmonk-capability-edges.yml
   title: ''
@@ -317,18 +321,18 @@ layout: provider
 mcp_servers:
 - description: ShipMonk serves a live MCP endpoint from its own developer-docs host. tools/list responds anonymously over streamable HTTP (SSE) with five spec-driven tools. These are ReadMe's documentation-MCP tools
   name: ShipMonk MCP Server
-  slug: shipmonk-mcp-server
-modified: '2026-08-02'
+  slug: shipmonk-api
+modified: '2026-10-06'
 name: ShipMonk
 nav: Providers
 network: true
-overview: 'ShipMonk publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Orders API, Products API, and 4 more. Tagged areas include Logistics, Fulfillment, 3PL, E-Commerce, and Warehousing.
+overview: 'ShipMonk publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks, Orders API, Products API, and 5 more. Tagged areas include Logistics, Fulfillment, 3PL, E-Commerce, and Warehousing.
 
 
   The ShipMonk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  ShipMonk''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
+  ShipMonk''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 38 more developer resources.'
 random_paper: 15
 rate_limits:
 - limit_count: 2
@@ -336,9 +340,9 @@ rate_limits:
   slug: shipmonk-rate-limits
 score:
   band: developing
-  composite: 52.4
+  composite: 53.8
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
@@ -348,16 +352,18 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 58.0
+    contract_quality: 53.6
     developer_ergonomics: 41.1
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 56.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.4
+  previous_composite: 53.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -368,8 +374,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

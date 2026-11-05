@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 62.0
-  scored_at: '2026-09-20'
+  score: 59.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 95
   human_in_the_loop: 1
@@ -359,14 +359,14 @@ description: Didit is a developer-first identity verification and fraud-preventi
 image: https://avatars.githubusercontent.com/u/131235139?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.didit.me over HTTP.
   name: Didit MCP Server
-  slug: didit-mcp-server
+  slug: didit
 modified: '2026-07-18'
 name: Didit
 nav: Providers
 network: true
-overview: 'Didit publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Billing API, Businesses API, Case Blueprints API, and 14 more. Tagged areas include Identity, Identity Verification, KYC, KYB, and AML.
+overview: 'Didit publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Businesses API, Case Blueprints API, and 14 more. Tagged areas include Identity, Identity Verification, KYC, KYB, and AML.
 
 
   The Didit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -381,23 +381,23 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: strong
-  composite: 59.8
+  composite: 62.6
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 60.4
+    contract_quality: 55.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 59.8
+  previous_composite: 62.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -408,8 +408,22 @@ score:
       total: 17
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: eidas2
+    - jurisdiction: EU
+      standard: eu-ai-act
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 45.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -435,6 +449,6 @@ tags:
 - Compliance
 - Biometrics
 - Transaction Monitoring
-- Crypto
+- Cryptocurrency
 website: https://www.didit.me/
 ---

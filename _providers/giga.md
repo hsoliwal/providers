@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://giga.ai/news/rss.xml
 - group: company
   title: ''
   type: Website
@@ -114,18 +118,18 @@ created: '2026-07-17'
 description: Giga (legal name Giga AI, Inc.; formerly Giga ML) is a San Francisco-based agentic AI company that builds human-like voice, chat, and multimodal AI agents for high-volume enterprise customer support. Its agents run on a unified real-time orchestration layer that listens, reasons, checks connected systems, and responds in roughly half a second, resolving issues end to end rather than merely deflecting. Agents are built in Agent Canvas, a low-code studio that auto-writes policies from uploaded transcripts, and support 90 languages with real-time hallucination correction. Backed by Redpoint Ventures, Y Combinator, and Nexus Venture Partners (USD 61M Series A); customers include DoorDash, Toast, Postman, and Capital.com.
 image: https://giga.ai/og/og-default.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Giga
 nav: Providers
 network: true
-overview: 'Giga is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Voice AI, and Customer-Support.
+overview: 'Giga is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Voice AI, and Customer Service.
 
 
-  Giga''s developer surface includes documentation, signup flow, engineering blog, support, and 13 more developer resources.'
+  Giga''s developer surface includes documentation, signup flow, engineering blog, support, and 14 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 18.5
+  composite: 20.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -133,24 +137,38 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.8
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.5
+  previous_composite: 19.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 29.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -172,10 +190,9 @@ tags:
 - Artificial Intelligence
 - AI Agents
 - Voice AI
-- Customer-Support
+- Customer Service
 - Conversational AI
 - Contact Center
-- Agentic AI
 - Enterprise
 website: https://giga.ai/
 ---

@@ -25,18 +25,18 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.0
-  scored_at: '2026-09-20'
+  score: 51.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -46,17 +46,17 @@ agentic_access:
   summary_line: 4 operations · 2 acting
 api_count: 1
 apis:
-- baseURL: https://appsumo.com
-  baseurl_source: declared
+- baseURL: https://appsumo.com/api/v2
+  baseurl_source: spec
   description: License management for AppSumo marketplace purchases
   name: AppSumo Licenses API
   slug: appsumo-licenses-api
-- baseURL: https://appsumo.com
-  baseurl_source: declared
+- baseURL: https://appsumo.com/api/v2
+  baseurl_source: spec
   description: Partner profile management
   name: AppSumo Profile API
   slug: appsumo-profile-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: postman
   name: AppSumo Licensing Licenses API
@@ -74,6 +74,30 @@ collections:
   name: AppSumo Licensing Licenses Profile API
   slug: open-appsumo-profile-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/plans/appsumo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/appsumo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/rate-limits/appsumo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/appsumo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/finops/appsumo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/appsumo-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://appsumo.com:443/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/capabilities/appsumo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/appsumo-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -180,9 +204,13 @@ examples:
   name: License Example
   slug: license-example
 finops:
-- name: Appsumo Finops
+- has_sources: false
+  method: generated
+  name: Appsumo Finops
+  primary_unit: ''
   service_category: API
   slug: appsumo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/appsumo.png
 json_schemas:
 - name: License
@@ -198,17 +226,21 @@ jsonld:
   property_count: 0
   slug: appsumo-context
 layout: provider
-modified: '2026-05-19'
+mcp_servers:
+- description: Remote MCP server at appsumo.com over HTTP.
+  name: AppSumo MCP Server
+  slug: appsumo
+modified: '2026-10-06'
 name: AppSumo
 nav: Providers
 network: true
-overview: 'AppSumo publishes 2 APIs on the [APIs.io](https://apis.io/) network: Licenses API and Profile API. Tagged areas include Marketplace, Software-as-a-Service, and Software Deals.
+overview: 'AppSumo publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Licenses API and Profile API. Tagged areas include Marketplace, Software-as-a-Service, and Software Deals.
 
 
   The AppSumo catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  AppSumo''s developer surface includes authentication, documentation, signup flow, pricing, getting-started guide, support, engineering blog, and 17 more developer resources.'
+  AppSumo''s developer surface includes engineering blog, authentication, documentation, signup flow, pricing, getting-started guide, support, and 22 more developer resources.'
 plans:
 - name: Appsumo Plans Pricing
   plan_count: 3
@@ -219,9 +251,10 @@ rate_limits:
   name: Appsumo Rate Limits
   slug: appsumo-rate-limits
 rules:
-- effective_rule_count: 4
+- authorship: generated
+  effective_rule_count: 4
   extends: []
-  name: AppSumo API Rules
+  name: AppSumo — jsonschema rules
   rule_count: 4
   severity_counts:
     error: 0
@@ -229,7 +262,8 @@ rules:
     info: 1
     warn: 3
   slug: appsumo-jsonschema-spectral-rules
-- effective_rule_count: 62
+- authorship: generated
+  effective_rule_count: 62
   extends:
   - spectral:oas
   name: AppSumo API Rules
@@ -242,23 +276,23 @@ rules:
   slug: appsumo-spectral-rules
 score:
   band: developing
-  composite: 47.4
+  composite: 44.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 56.5
+    artifact_dirs: 21
+    catalog_earned: 47.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 67.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 60.5
-    contract_governance: 28.8
-    contract_quality: 69.4
+    access_clarity: 52.6
+    contract_governance: 27.3
+    contract_quality: 63.2
     developer_ergonomics: 41.7
-    discoverability: 44.4
+    discoverability: 38.3
     operational_transparency: 18.4
-  previous_composite: 47.4
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     contracts:
@@ -267,8 +301,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -89,6 +89,21 @@ collections:
   name: Carbon Intensity Factors Statistics API
   slug: open-carbon-intensity-statistics-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/carbon-intensity/refs/heads/main/plans/carbon-intensity-plans.yml
+  title: ''
+  type: Plans
+  url: plans/carbon-intensity-plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/carbon-intensity/refs/heads/main/rate-limits/carbon-intensity-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/carbon-intensity-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/carbon-intensity/refs/heads/main/finops/carbon-intensity-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/carbon-intensity-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -150,9 +165,13 @@ examples:
   name: Get Regional Intensity
   slug: get-regional-intensity
 finops:
-- name: Carbon Intensity Finops
+- has_sources: false
+  method: generated
+  name: Carbon Intensity Finops
+  primary_unit: ''
   service_category: API
   slug: carbon-intensity-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/carbon-intensity.png
 json_schemas:
 - name: Generation Mix
@@ -177,13 +196,13 @@ modified: '2026-06-13'
 name: Carbon Intensity API
 nav: Providers
 network: true
-overview: 'Carbon Intensity API publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Factors API, Generation Mix API, National Intensity API, and 2 more. Tagged areas include Carbon Intensity, Environment, Energy, Electricity, and Climate.
+overview: 'Carbon Intensity API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Factors API, Generation Mix API, National Intensity API, and 2 more. Tagged areas include Carbon Intensity, Environment, Energy, Electricity, and Climate.
 
 
   The Carbon Intensity API catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Carbon Intensity API''s developer surface includes documentation and 9 more developer resources.'
+  Carbon Intensity API''s developer surface includes documentation and 12 more developer resources.'
 plans:
 - name: Carbon Intensity Plans
   plan_count: 1
@@ -194,9 +213,10 @@ rate_limits:
   name: Carbon Intensity Rate Limits
   slug: carbon-intensity-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Carbon Intensity API API Rules
+  name: Carbon Intensity API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -205,29 +225,29 @@ rules:
     warn: 3
   slug: carbon-intensity-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 30.7
   coverage:
     artifact_dirs: 14
-    catalog_earned: 86.3
+    catalog_earned: 66.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.8
+    catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 66.2
+    access_clarity: 15.8
+    contract_governance: 23.5
+    contract_quality: 60.1
     developer_ergonomics: 9.5
-    discoverability: 68.5
-    operational_transparency: 34.2
+    discoverability: 66.1
+    operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 40.8
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -240,10 +260,10 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 20.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 12.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

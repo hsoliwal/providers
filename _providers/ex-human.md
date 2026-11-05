@@ -34,25 +34,25 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 11
+- acting_count: 7
   human_in_the_loop: 0
   name: Ex Human Agentic Access
   operation_count: 12
   slug: ex-human-agentic-access
-  summary_line: 12 operations · 11 acting
+  summary_line: 12 operations · 7 acting
 api_count: 1
 apis:
 - baseURL: https://api.exh.ai
   baseurl_source: declared
   description: The animations API from Ex-Human — 6 operation(s) for animations.
-  name: Ex-Human animations API
+  name: Ex-Human Animations API
   slug: ex-human-animations-api
 - baseURL: https://api.exh.ai
   baseurl_source: declared
   description: The chatbot API from Ex-Human — 3 operation(s) for chatbot.
-  name: Ex-Human chatbot API
+  name: Ex-Human Chatbot API
   slug: ex-human-chatbot-api
 - baseURL: https://api.exh.ai
   baseurl_source: declared
@@ -64,7 +64,7 @@ apis:
   description: The Text to Speech API from Ex-Human — 1 operation(s) for text to speech.
   name: Ex-Human Text to Speech API
   slug: ex-human-text-to-speech-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -82,6 +82,11 @@ collections:
   name: Ex-Human animations Text to Speech API
   slug: open-ex-human-text-to-speech-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ex-human/refs/heads/main/plans/ex-human-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ex-human-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -207,30 +212,34 @@ modified: '2026-07-19'
 name: Ex-Human
 nav: Providers
 network: true
-overview: 'Ex-Human publishes 4 APIs on the [APIs.io](https://apis.io/) network, including animations API, chatbot API, Image Generation API, and 1 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, AI Companions, and Generative AI.
+overview: 'Ex-Human publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Animations API, Chatbot API, Image Generation API, and 1 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, AI Companion, and Generative AI.
 
 
-  Ex-Human''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, pricing, signup flow, and 19 more developer resources.'
+  Ex-Human''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, pricing, signup flow, and 20 more developer resources.'
+plans:
+- name: Ex Human Plans Pricing
+  plan_count: 3
+  slug: ex-human-plans-pricing
 random_paper: 11
 score:
   band: thin
-  composite: 33.6
+  composite: 39.0
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 19
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 53.6
+    contract_quality: 48.3
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 33.6
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,9 +250,15 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -262,10 +277,10 @@ tags:
 - Company
 - Artificial Intelligence
 - Conversational AI
-- AI Companions
+- AI Companion
 - Generative AI
 - Text-to-Speech
-- Image-Generation
+- Image Generation
 - Video Generation
 - Avatars
 - Multi-Modal

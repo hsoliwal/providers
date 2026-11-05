@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
@@ -144,9 +144,9 @@ rate_limits:
   slug: symplr-rate-limits
 score:
   band: emerging
-  composite: 15.2
+  composite: 14.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -158,22 +158,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 3.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 15.2
+  previous_composite: 14.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/screenshots/symplr-2026-10-11T130547.png
 security:
 - kind: domain-security
   name: Symplr Domain Security

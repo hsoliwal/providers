@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -86,6 +86,26 @@ collections:
   name: Doctave Deployments Sites API
   slug: open-doctave-sites-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/plans/doctave-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/doctave-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/rate-limits/doctave-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/doctave-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/finops/doctave-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/doctave-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/capabilities/doctave-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/doctave-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/agentic-access/doctave-agentic-access.yml
   title: ''
@@ -128,9 +148,13 @@ common:
 created: '2025-01-08'
 description: Doctave is a platform for building modern technical documentation sites. Bring your guides, your API references and SDK documentation, and build developer portals that make your product stand out. It supports a docs-as-code workflow powered by Markdown and OpenAPI, with Git-friendly version control, full-text search, and automated deployments.
 finops:
-- name: Doctave Finops
+- has_sources: false
+  method: generated
+  name: Doctave Finops
+  primary_unit: ''
   service_category: API
   slug: doctave-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/doctave.png
 json_schemas:
 - name: Doctave Deployment
@@ -149,13 +173,13 @@ modified: '2026-05-19'
 name: Doctave
 nav: Providers
 network: true
-overview: 'Doctave publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Deployments API, Pages API, Search API, and 1 more. Tagged areas include Documentation, OpenAPI, Platform, and Portal.
+overview: 'Doctave publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Deployments API, Pages API, Search API, and 1 more. Tagged areas include Documentation, OpenAPI, Platform, and Portal.
 
 
   The Doctave catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Doctave''s developer surface includes authentication, documentation, engineering blog, pricing, and 5 more developer resources.'
+  Doctave''s developer surface includes authentication, documentation, engineering blog, pricing, and 9 more developer resources.'
 plans:
 - name: Doctave Plans Pricing
   plan_count: 3
@@ -166,9 +190,10 @@ rate_limits:
   name: Doctave Rate Limits
   slug: doctave-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Doctave API Rules
+  name: Doctave — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -178,23 +203,23 @@ rules:
   slug: doctave-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 32.5
+  composite: 29.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 47.3
+    artifact_dirs: 15
+    catalog_earned: 44.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 67.8
+    catalog_gap: 70.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 62.6
+    contract_quality: 57.2
     developer_ergonomics: 23.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 32.5
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -202,8 +227,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

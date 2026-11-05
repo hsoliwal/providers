@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -89,14 +89,14 @@ modified: '2026-08-01'
 name: Firehawk Aerospace
 nav: Providers
 network: true
-overview: 'Firehawk Aerospace is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Aerospace, Defense, Rocket Propulsion, and Additive Manufacturing.
+overview: 'Firehawk Aerospace is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Aerospace, Defense, Rocket Propulsion, and 3D Printing.
 
 
   Firehawk Aerospace''s developer surface includes engineering blog and 9 more developer resources.'
 random_paper: 15
 score:
   band: minimal
-  composite: 5.4
+  composite: 4.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 25.0
@@ -110,13 +110,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 0.0
-  previous_composite: 5.4
+  previous_composite: 4.5
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -134,7 +140,7 @@ tags:
 - Aerospace
 - Defense
 - Rocket Propulsion
-- Additive Manufacturing
+- 3D Printing
 - Energetics
 - Manufacturing
 - Space

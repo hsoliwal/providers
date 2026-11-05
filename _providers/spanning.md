@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -81,6 +81,21 @@ collections:
   name: Spanning Backup for Google Workspace Exports Users API
   slug: open-spanning-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/spanning/refs/heads/main/plans/spanning-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/spanning-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/spanning/refs/heads/main/rate-limits/spanning-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/spanning-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/spanning/refs/heads/main/finops/spanning-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/spanning-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -139,9 +154,13 @@ examples:
   name: Spanning List Users Example
   slug: spanning-list-users-example
 finops:
-- name: Spanning Finops
+- has_sources: false
+  method: generated
+  name: Spanning Finops
+  primary_unit: ''
   service_category: API
   slug: spanning-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/spanning.png
 json_schemas:
 - name: Spanning Backup User
@@ -161,13 +180,13 @@ modified: '2026-05-19'
 name: Spanning
 nav: Providers
 network: true
-overview: 'Spanning publishes 3 APIs on the [APIs.io](https://apis.io/) network: Exports API, Shared Drives API, and Users API. Tagged areas include Data Protection, SaaS Backup, Cloud Backup, Microsoft-365, and Google Workspace.
+overview: 'Spanning publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Exports API, Shared Drives API, Users API, and 1 more. Tagged areas include Data Protection, SaaS Backup, Cloud Backup, Microsoft 365, and Google Workspace.
 
 
   The Spanning catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Spanning''s developer surface includes authentication, documentation, API reference, GitHub presence, pricing, and 7 more developer resources.'
+  Spanning''s developer surface includes authentication, documentation, API reference, GitHub presence, pricing, and 10 more developer resources.'
 plans:
 - name: Spanning Plans Pricing
   plan_count: 3
@@ -178,9 +197,10 @@ rate_limits:
   name: Spanning Rate Limits
   slug: spanning-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Spanning API Rules
+  name: Spanning — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -188,7 +208,8 @@ rules:
     info: 2
     warn: 3
   slug: spanning-jsonschema-spectral-rules
-- effective_rule_count: 8
+- authorship: unmarked
+  effective_rule_count: 8
   extends: []
   name: Spanning API Rules
   rule_count: 8
@@ -200,26 +221,26 @@ rules:
   slug: spanning-rules
 score:
   band: thin
-  composite: 37.2
+  composite: 34.3
   coverage:
     artifact_dirs: 16
-    catalog_earned: 71.3
+    catalog_earned: 67.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.8
+    catalog_gap: 47.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 15.8
-    contract_governance: 25.0
-    contract_quality: 67.3
+    access_clarity: 7.9
+    contract_governance: 23.5
+    contract_quality: 61.4
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 37.2
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -227,8 +248,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -248,7 +275,7 @@ tags:
 - Data Protection
 - SaaS Backup
 - Cloud Backup
-- Microsoft-365
+- Microsoft 365
 - Google Workspace
 - Salesforce
 website: https://spanning.com

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -108,6 +108,16 @@ collections:
   name: Google Forms Watches API
   slug: open-google-forms-watches-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/google-forms/refs/heads/main/plans/google-forms-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/google-forms-plans-pricing.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/google-forms/refs/heads/main/finops/google-forms-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/google-forms-finops.yml
 - group: company
   title: ''
   type: Website
@@ -320,9 +330,13 @@ features:
 - description: Support for rating-style questions with customizable icons.
   name: Rating Questions
 finops:
-- name: Google Forms Finops
+- has_sources: false
+  method: generated
+  name: Google Forms Finops
+  primary_unit: ''
   service_category: API
   slug: google-forms-finops
+  template: true
 image: https://www.gstatic.com/images/branding/product/2x/forms_2020q4_48dp.png
 integrations:
 - description: Automatically link form responses to Google Sheets for analysis.
@@ -369,13 +383,13 @@ modified: '2026-09-16'
 name: Google Forms
 nav: Providers
 network: true
-overview: 'Google Forms publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Responses API, Watches API, and 1 more. Tagged areas include Data Collection, Forms, Google, Google Workspace, and Questionnaire.
+overview: 'Google Forms is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Responses API, Watches API, and 1 more. Tagged areas include Data Collection, Forms, Google, Google Workspace, and Questionnaire.
 
 
   The Google Forms catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Google Forms'' developer surface includes changelog, authentication, developer console, getting-started guide, support, and 33 more developer resources.'
+  Google Forms'' developer surface includes changelog, authentication, developer console, getting-started guide, support, and 35 more developer resources.'
 plans:
 - name: Google Forms Plans Pricing
   plan_count: 3
@@ -386,9 +400,10 @@ rate_limits:
   name: Google Forms Rate Limits
   slug: google-forms-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Google Forms API Rules
+  name: Google Forms — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -396,7 +411,8 @@ rules:
     info: 2
     warn: 3
   slug: google-forms-jsonschema-spectral-rules
-- effective_rule_count: 73
+- authorship: generated
+  effective_rule_count: 73
   extends:
   - spectral:oas
   name: Google Forms API Rules
@@ -414,23 +430,23 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: developing
-  composite: 43.0
+  composite: 44.5
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 79.5
+    artifact_dirs: 32
+    catalog_earned: 75.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.5
+    catalog_gap: 40.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 36.8
-    contract_governance: 33.3
-    contract_quality: 32.0
+    access_clarity: 28.9
+    contract_governance: 31.8
+    contract_quality: 31.3
     developer_ergonomics: 50.0
-    discoverability: 88.9
+    discoverability: 85.7
     operational_transparency: 42.1
-  previous_composite: 43.0
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -440,8 +456,14 @@ score:
       marker_coverage: 100.0
       total: 4
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

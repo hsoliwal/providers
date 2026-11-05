@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -44,67 +44,67 @@ agentic_access:
 api_count: 1
 apis:
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: File hosting up to 5 MB per file, 1000 files per namespace
   name: BrewPage Files API
   slug: brewpage-files-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Browse public content from the 'public' namespace without password protection
   name: BrewPage Gallery API
   slug: brewpage-gallery-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: HTML page hosting with markdown support
   name: BrewPage HTML API
   slug: brewpage-html-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: JSON document store with up to 10,000 docs per collection
   name: BrewPage JSON API
   slug: brewpage-json-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Key-Value store with up to 1000 keys per namespace
   name: BrewPage KV API
   slug: brewpage-kv-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Fresh, collision-free namespace suggestions
   name: BrewPage Namespace API
   slug: brewpage-namespace-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Lightweight owner-token probe; never increments views or returns content
   name: BrewPage Owner Check API
   slug: brewpage-owner-check-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: OpenGraph metadata for social bots
-  name: BrewPage preview API
+  name: BrewPage Preview API
   slug: brewpage-preview-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Abuse reports for hosted content
   name: BrewPage Reports API
   slug: brewpage-reports-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Search engine optimization endpoints
   name: BrewPage SEO API
   slug: brewpage-seo-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Short URL resolver for sharing
   name: BrewPage Short Links API
   slug: brewpage-short-links-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Multi-file HTML site hosting via ZIP or folder upload
   name: BrewPage Sites API
   slug: brewpage-sites-api
 - baseURL: https://brewpage.app
-  baseurl_source: declared
+  baseurl_source: spec
   description: Platform-wide usage statistics
   name: BrewPage Stats API
   slug: brewpage-stats-api
@@ -279,9 +279,13 @@ features:
 - description: llms.txt and llms-full.txt manifests, an MCP server, a Claude Code skill, and required identifying User-Agent headers make BrewPage first-class for autonomous agents.
   name: AI-Agent Friendly
 finops:
-- name: Brewpage Finops
+- has_sources: true
+  method: generated
+  name: Brewpage Finops
+  primary_unit: ''
   service_category: Web Hosting and Storage
   slug: brewpage-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brewpage.png
 integrations:
 - description: Official MCP server `brewpage-mcp` exposes BrewPage to any LLM/agent (Claude, Codex, Gemini, Cursor) via the Model Context Protocol.
@@ -329,7 +333,7 @@ modified: '2026-05-19'
 name: BrewPage
 nav: Providers
 network: true
-overview: 'BrewPage publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Files API, Gallery API, HTML API, and 10 more. Tagged areas include Hosting, Markdown, HTML, AI Artifacts, and File Hosting.
+overview: 'BrewPage publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Files API, Gallery API, HTML API, and 10 more. Tagged areas include Hosting, Markdown, HTML, AI Artifacts, and File Hosting.
 
 
   The BrewPage catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -346,9 +350,10 @@ rate_limits:
   name: Brewpage Rate Limits
   slug: brewpage-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: BrewPage API Rules
+  name: BrewPage — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -356,7 +361,8 @@ rules:
     info: 2
     warn: 3
   slug: brewpage-jsonschema-spectral-rules
-- effective_rule_count: 62
+- authorship: unmarked
+  effective_rule_count: 62
   extends:
   - spectral:oas
   name: BrewPage API Rules
@@ -369,23 +375,23 @@ rules:
   slug: brewpage-rules
 score:
   band: developing
-  composite: 50.0
+  composite: 39.7
   coverage:
     artifact_dirs: 15
-    catalog_earned: 87.5
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 27.5
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 28.9
-    contract_governance: 28.8
-    contract_quality: 67.5
+    access_clarity: 5.3
+    contract_governance: 27.3
+    contract_quality: 61.9
     developer_ergonomics: 57.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 50.0
+    discoverability: 57.1
+    operational_transparency: 7.9
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     contracts:
@@ -393,9 +399,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2

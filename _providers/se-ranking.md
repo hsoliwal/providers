@@ -34,15 +34,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 28
+- acting_count: 27
   human_in_the_loop: 0
   name: Se Ranking Agentic Access
   operation_count: 86
   slug: se-ranking-agentic-access
-  summary_line: 86 operations · 28 acting
-api_count: 1
+  summary_line: 86 operations · 27 acting
+api_count: 2
 apis:
 - description: REST API providing access to SE Ranking's SEO datasets including keyword research, backlink analysis, domain analysis, SERP data, website audits, and AI search visibility tracking. Uses a credit-based
   name: SE Ranking Data API
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://api.seranking.com
   baseurl_source: declared
   description: '# Backlinks API This collection of requests allows you to conduct a comprehensive analysis of the backlink profile for any given target, whether it''s a root domain, a specific host (subdomain), or a p'
-  name: SE Ranking backlinks API
+  name: SE Ranking Backlinks API
   slug: se-ranking-backlinks-api
 - baseURL: https://api.seranking.com
   baseurl_source: declared
@@ -115,6 +115,11 @@ collections:
   name: SE Ranking Data Account & system Website Audit API
   slug: open-se-ranking-website-audit-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/se-ranking/refs/heads/main/capabilities/se-ranking-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/se-ranking-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -310,9 +315,13 @@ examples:
   name: Se Ranking Site Audit Example
   slug: se-ranking-site-audit-example
 finops:
-- name: Se Ranking Finops
+- has_sources: false
+  method: generated
+  name: Se Ranking Finops
+  primary_unit: ''
   service_category: ''
   slug: se-ranking-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/se-ranking.png
 json_schemas:
 - name: SE Ranking AI Search Visibility
@@ -334,20 +343,20 @@ jsonld:
   slug: se-ranking-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.seranking.com over streamable HTTP requiring OAuth; 217 tools listed.
   name: SE Ranking MCP Server
-  slug: se-ranking-mcp-server
+  slug: se-ranking
 modified: '2026-08-13'
 name: SE Ranking
 nav: Providers
 network: true
-overview: 'SE Ranking publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data API, Project API, Account & system API, and 6 more. Tagged areas include SEO, Keyword Research, Rank Tracking, Backlinks, and Competitor Analysis.
+overview: 'SE Ranking publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Project API, Account & system API, and 7 more. Tagged areas include SEO, Keyword Research, Rank Tracking, Backlinks, and Competitor Analysis.
 
 
   The SE Ranking catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  SE Ranking''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 32 more developer resources.'
+  SE Ranking''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 33 more developer resources.'
 plans:
 - name: Se Ranking Plans Pricing
   plan_count: 6
@@ -358,9 +367,10 @@ rate_limits:
   name: Se Ranking Rate Limits
   slug: se-ranking-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: SE Ranking API Rules
+  name: SE Ranking — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -375,23 +385,23 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 60.4
+  composite: 60.3
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 75.3
+    artifact_dirs: 31
+    catalog_earned: 72.3
     catalog_earned_first_party: 24.0
-    catalog_gap: 39.8
+    catalog_gap: 42.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 84.2
+    access_clarity: 76.3
     contract_governance: 14.4
-    contract_quality: 59.2
+    contract_quality: 53.8
     developer_ergonomics: 66.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 57.9
-  previous_composite: 60.4
+  previous_composite: 61.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -402,8 +412,14 @@ score:
       total: 7
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

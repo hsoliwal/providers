@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/bite-data/refs/heads/main/plans/bite-data-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/bite-data-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -98,30 +103,40 @@ network: true
 overview: 'BITE Data is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Trade Compliance, Customs, Tariffs, and HTS Classification.
 
 
-  BITE Data''s developer surface includes documentation, getting-started guide, pricing, signup flow, support, engineering blog, changelog, and 5 more developer resources.'
+  BITE Data''s developer surface includes documentation, getting-started guide, pricing, signup flow, support, engineering blog, changelog, and 6 more developer resources.'
+plans:
+- name: Bite Data Plans Pricing
+  plan_count: 4
+  slug: bite-data-plans-pricing
 random_paper: 17
 score:
   band: emerging
-  composite: 19.8
+  composite: 25.6
   coverage:
-    artifact_dirs: 6
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 7
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 63.2
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 19.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  previous_composite: 19.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -142,7 +157,7 @@ tags:
 - Export Control
 - Sanctions Screening
 - Supply Chain
-- Risk
+- Risk Management
 - Artificial Intelligence
 website: https://bitedata.io/
 ---

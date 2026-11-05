@@ -25,17 +25,22 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 0
+artifact_total: 2
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tryprism/refs/heads/main/plans/tryprism-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tryprism-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -48,6 +53,10 @@ created: '2026-07-17'
 description: Prism (tryprism.com) is a San Francisco, Y Combinator-backed AI-powered recruiting agency that delivers qualified talent leads to hiring teams faster and more affordably than traditional recruiters. Clients describe the role they need to fill, Prism's AI handles sourcing, screening, and candidate outreach end-to-end, and clients interview only pre-screened candidates. Pricing is 15% of first-year salary per hire (versus the typical 20-30% agency fee) plus a retainer to initiate and prioritize the search, charged only when a hire is made. As of this profile Prism operates as a managed recruiting service and publishes no public developer API, SDK, documentation, or discovery surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tryprism.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at tryprism.com over HTTP.
+  name: Tryprism MCP Server
+  slug: tryprism
 modified: '2026-07-21'
 name: Tryprism
 nav: Providers
@@ -55,31 +64,41 @@ network: true
 overview: 'Tryprism is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruiting, Talent Acquisition, Hiring, and Artificial Intelligence.
 
 
-  Tryprism''s developer surface includes pricing and 1 more developer resources.'
+  Tryprism''s developer surface includes pricing and 2 more developer resources.'
+plans:
+- name: Tryprism Plans Pricing
+  plan_count: 2
+  slug: tryprism-plans-pricing
 random_paper: 4
 score:
   band: minimal
-  composite: 7.1
+  composite: 8.7
   coverage:
-    artifact_dirs: 3
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 4
+    catalog_earned: 35.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 4.2
   facets:
-    access_clarity: 10.5
+    access_clarity: 31.6
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 7.1
+  previous_composite: 4.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

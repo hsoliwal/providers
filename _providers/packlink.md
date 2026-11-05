@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-09-20'
+  score: 20.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 9
+- acting_count: 7
   human_in_the_loop: 0
   name: Packlink Agentic Access
   operation_count: 24
   slug: packlink-agentic-access
-  summary_line: 24 operations · 9 acting
+  summary_line: 24 operations · 7 acting
 api_count: 6
 apis:
 - baseURL: https://api.packlink.com
@@ -222,7 +222,7 @@ modified: '2026-07-20'
 name: Packlink
 nav: Providers
 network: true
-overview: 'Packlink publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Clients API, Customs API, Integrations API, and 3 more. Tagged areas include Company, E-Commerce, Shipping, Logistics, and Parcel Delivery.
+overview: 'Packlink is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Clients API, Customs API, Integrations API, and 3 more. Tagged areas include Company, E-Commerce, Shipping, Logistics, and Parcel Delivery.
 
 
   The Packlink catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -231,10 +231,10 @@ overview: 'Packlink publishes 6 APIs on the [APIs.io](https://apis.io/) network,
   Packlink''s developer surface includes developer portal, support, engineering blog, signup flow, authentication, and 19 more developer resources.'
 random_paper: 9
 score:
-  band: thin
-  composite: 27.1
+  band: emerging
+  composite: 26.1
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -246,9 +246,9 @@ score:
     contract_governance: 4.5
     contract_quality: 21.1
     developer_ergonomics: 37.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 27.1
+  previous_composite: 26.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -264,9 +264,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 34.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

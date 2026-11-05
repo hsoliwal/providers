@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -101,7 +101,7 @@ modified: '2026-09-07'
 name: AdaptX
 nav: Providers
 network: true
-overview: 'AdaptX is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Healthcare Analytics, Clinical Data, and Electronic Medical Records.
+overview: 'AdaptX is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Healthcare Analytics, Clinical Data, and Electronic Health Records.
 
 
   AdaptX''s developer surface includes support and 10 more developer resources.'
@@ -116,9 +116,9 @@ rate_limits:
   slug: adaptx-rate-limits
 score:
   band: emerging
-  composite: 15.0
+  composite: 14.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -130,14 +130,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.0
+  previous_composite: 14.0
   provenance:
     conformance: first-party
   regulatory:
@@ -145,14 +147,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/adaptx/refs/heads/main/screenshots/adaptx-2026-10-11T092741.png
 security:
 - kind: domain-security
   name: Adaptx Domain Security
@@ -164,7 +167,7 @@ tags:
 - Healthcare
 - Healthcare Analytics
 - Clinical Data
-- Electronic Medical Records
+- Electronic Health Records
 - Hospital Operations
 - Quality Improvement
 - Business Intelligence

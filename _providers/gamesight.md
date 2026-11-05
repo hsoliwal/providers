@@ -39,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -71,6 +71,10 @@ collections:
   name: Gamesight Measurement Reporting API
   slug: open-gamesight-reporting-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.gamesight.io/rss/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/gamesight/refs/heads/main/overlays/gamesight-measurement-overlay.yaml
   title: ''
@@ -234,17 +238,17 @@ description: Gamesight is a performance marketing platform for PC and console ga
 image: https://console.gamesight.io/images/meta/gamesight-facebook.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at console.gamesight.io over HTTP.
   name: Gamesight MCP Server
   slug: gamesight-mcp-server
-modified: '2026-08-13'
+modified: '2026-10-06'
 name: Gamesight
 nav: Providers
 network: true
-overview: 'Gamesight publishes 2 APIs on the [APIs.io](https://apis.io/) network: Measurement API and Reporting API. Tagged areas include Company, Gaming, Marketing, Analytics, and Attribution.
+overview: 'Gamesight publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Measurement API and Reporting API. Tagged areas include Company, Gaming, Marketing, Analytics, and Attribution.
 
 
-  Gamesight''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, support, and 27 more developer resources.'
+  Gamesight''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, support, and 28 more developer resources.'
 plans:
 - name: Gamesight Plans Pricing
   plan_count: 0
@@ -261,9 +265,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 48.7
+  composite: 50.1
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 26
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -273,11 +277,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
-  previous_composite: 48.7
+  previous_composite: 50.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -288,8 +292,20 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -22,19 +22,19 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 18.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Credit-metered company and people data enrichment. Two entities — company (keyed on domain or LinkedIn URL) and person (keyed on LinkedIn profile URL or business email) — with a structured filter gram
@@ -180,7 +180,7 @@ modified: '2026-08-13'
 name: Tofu
 nav: Providers
 network: true
-overview: 'Tofu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Marketing, Go-To-Market, and Sales.
+overview: 'Tofu is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Marketing, Go-To-Market, and Sales.
 
 
   Tofu''s developer surface includes documentation, engineering blog, signup flow, CLI, authentication, changelog, and 22 more developer resources.'
@@ -199,30 +199,36 @@ scopes:
   slug: tofu-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode/refreshToken
 score:
-  band: thin
-  composite: 38.5
+  band: developing
+  composite: 41.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 38.5
+  previous_composite: 41.8
   provenance:
     conformance: first-party
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -241,7 +247,7 @@ security:
 slug: tofu
 tags:
 - Company
-- Ai Ml
+- Artificial Intelligence
 - Marketing
 - Go-To-Market
 - Sales
@@ -254,5 +260,6 @@ tags:
 - Lead Generation
 - Agents
 - Contact Data
+- A2A
 website: https://tofuhq.com
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: JSON:API-compliant REST API for the Transcriptic / Strateos robotic cloud lab — organizations, projects, runs, datasets, containers and aliquots, plus Autoprotocol experiment submission. Authenticates
@@ -115,14 +115,14 @@ modified: '2026-07-21'
 name: Transcriptic
 nav: Providers
 network: true
-overview: 'Transcriptic publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Laboratory Automation, Cloud Lab, and Drug Discovery.
+overview: 'Transcriptic is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Laboratory Automation, Cloud Lab, and Drug Discovery.
 
 
   Transcriptic''s developer surface includes documentation, getting-started guide, CLI, authentication, and 10 more developer resources.'
 random_paper: 4
 score:
   band: emerging
-  composite: 21.1
+  composite: 20.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -136,9 +136,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 46.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 21.1
+  previous_composite: 20.6
   provenance:
     conformance: first-party
   regulatory:
@@ -146,9 +146,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

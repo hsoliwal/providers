@@ -30,31 +30,31 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.9
-  scored_at: '2026-09-20'
+  score: 51.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 83
+- acting_count: 56
   human_in_the_loop: 0
   name: Pleo Agentic Access
-  operation_count: 142
+  operation_count: 117
   slug: pleo-agentic-access
-  summary_line: 142 operations · 83 acting
-api_count: 11
+  summary_line: 117 operations · 56 acting
+api_count: 12
 apis:
 - baseURL: https://external.pleo.io
   baseurl_source: declared
   description: 'The Accounting Entries API endpoints enable you to perform the following: - Apply filters and search for accounting entries and accounting receipts. - Retrieve list of accounting entries and accountin'
-  name: Pleo accounting-entries API
+  name: Pleo Accounting Entries API
   slug: pleo-accounting-entries-api
 - baseURL: https://external.pleo.io
   baseurl_source: declared
   description: The accounting-entries-external API from Pleo — 3 operation(s) for accounting-entries-external.
-  name: Pleo accounting-entries-external API
+  name: Pleo Accounting Entries External API
   slug: pleo-accounting-entries-external-api
 - baseURL: https://external.pleo.io
   baseurl_source: declared
@@ -124,7 +124,7 @@ apis:
 - baseURL: https://external.pleo.io
   baseurl_source: declared
   description: The external-vendors API from Pleo — 13 operation(s) for external-vendors.
-  name: Pleo external-vendors API
+  name: Pleo External Vendors API
   slug: pleo-external-vendors-api
 - baseURL: https://external.pleo.io
   baseurl_source: declared
@@ -139,19 +139,19 @@ apis:
 - baseURL: https://external.pleo.io
   baseurl_source: declared
   description: The tag-groups API from Pleo — 6 operation(s) for tag-groups.
-  name: Pleo tag-groups API
+  name: Pleo Tag Groups API
   slug: pleo-tag-groups-api
 - baseURL: https://external.pleo.io
   baseurl_source: declared
   description: The tags API from Pleo — 8 operation(s) for tags.
-  name: Pleo tags API
+  name: Pleo Tags API
   slug: pleo-tags-api
 - baseURL: https://external.pleo.io
   baseurl_source: declared
   description: Tax Codes API
-  name: Pleo tax-codes API
+  name: Pleo Tax Codes API
   slug: pleo-tax-codes-api
-artifact_total: 77
+artifact_total: 78
 collections:
 - collection_type: open
   name: API Collection
@@ -220,6 +220,11 @@ collections:
   name: App Marketplace accounting-entries tax-codes API
   slug: open-pleo-tax-codes-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pleo/refs/heads/main/capabilities/pleo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pleo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/pleo/refs/heads/main/agentic-access/pleo-agentic-access.yml
   title: ''
@@ -315,9 +320,13 @@ examples:
   name: Pleo Webhook Subscription Example
   slug: pleo-webhook-subscription-example
 finops:
-- name: Pleo Finops
+- has_sources: false
+  method: generated
+  name: Pleo Finops
+  primary_unit: ''
   service_category: ''
   slug: pleo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pleo.png
 json_schemas:
 - name: Account
@@ -389,17 +398,21 @@ jsonld:
   property_count: 18
   slug: pleo-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pleo.io over HTTP.
+  name: Pleo MCP Server
+  slug: pleo
 modified: '2026-09-13'
 name: Pleo
 nav: Providers
 network: true
-overview: 'Pleo publishes 21 APIs on the [APIs.io](https://apis.io/) network, including accounting-entries API, accounting-entries-external API, AccountingEntryEnrichmentV2 API, and 18 more. Tagged areas include Expense Management, Company Cards, Spend Management, Reimbursement, and Accounting.
+overview: 'Pleo publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounting Entries API, Accounting Entries External API, AccountingEntryEnrichmentV2 API, and 18 more. Tagged areas include Expense Management, Company Cards, Spend Management, Reimbursement, and Accounting.
 
 
   The Pleo catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Pleo''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
+  Pleo''s developer surface includes authentication, documentation, engineering blog, pricing, and 14 more developer resources.'
 plans:
 - name: Pleo Plans Pricing
   plan_count: 4
@@ -410,9 +423,10 @@ rate_limits:
   name: Pleo Rate Limits
   slug: pleo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Pleo API Rules
+  name: Pleo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -421,24 +435,24 @@ rules:
     warn: 3
   slug: pleo-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 48.6
+  band: thin
+  composite: 37.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 86.3
+    artifact_dirs: 20
+    catalog_earned: 64.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.8
+    catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 62.8
+    access_clarity: 18.4
+    contract_governance: 23.5
+    contract_quality: 57.5
     developer_ergonomics: 23.8
-    discoverability: 74.1
-    operational_transparency: 50.0
-  previous_composite: 48.6
+    discoverability: 73.3
+    operational_transparency: 26.3
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     contracts:
@@ -452,10 +466,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8

@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -22,10 +22,10 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 22.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 31
+- acting_count: 23
   human_in_the_loop: 0
   name: Nutanix Agentic Access
   operation_count: 54
   slug: nutanix-agentic-access
-  summary_line: 54 operations · 31 acting
+  summary_line: 54 operations · 23 acting
 api_count: 2
 apis:
 - description: The next-generation v4 API for managing the Nutanix Cloud Platform through Prism Central with GA SDKs for Python, Java, Go, and JavaScript. The v4 API is now the recommended version for production env
@@ -137,7 +137,7 @@ apis:
   description: Manage virtual machines including creation, update, deletion, and power state operations through the intent-based API model.
   name: Nutanix V Ms API
   slug: nutanix-vms-api
-artifact_total: 82
+artifact_total: 97
 collections:
 - collection_type: postman
   name: Nutanix Prism Central API v3 Alerts API
@@ -239,6 +239,91 @@ collections:
   name: Nutanix Prism Central API v3 Alerts Webhooks API
   slug: open-nutanix-webhooks-api
 common:
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://www.nutanix.com/trust/privacy
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/finops/nutanix-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/nutanix-finops.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/rules/nutanix-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/nutanix-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/rules/nutanix-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/nutanix-jsonschema-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/json-ld/nutanix-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/nutanix-context.jsonld
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/vocabulary/nutanix-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/nutanix-vocabulary.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/data-model/nutanix-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/nutanix-data-model.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/errors/nutanix-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/nutanix-problem-types.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/conformance/nutanix-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/nutanix-conformance.yml
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/well-known/nutanix-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/nutanix-status-security.txt
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/well-known/nutanix-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/nutanix-well-known.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/hosts/nutanix-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/nutanix-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/vendors/nutanix-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/nutanix-vendors.yml
+- group: auth
+  title: ''
+  type: TrustCenter
+  url: https://www.nutanix.com/trust
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.nutanix.com/products/security
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.nutanix.com/newsroom
+- group: other
+  title: ''
+  type: Leadership
+  url: https://www.nutanix.com/company/leadership
 - group: operate
   href: https://raw.githubusercontent.com/api-evangelist/nutanix/refs/heads/main/rate-limits/nutanix-rate-limits.yml
   title: ''
@@ -301,10 +386,6 @@ common:
   title: ''
   type: GettingStarted
   url: https://www.nutanix.dev/nutanix-api-user-guide/
-- group: build
-  title: ''
-  type: SDKs
-  url: https://www.nutanix.dev/sdk_reference/
 - group: docs
   title: ''
   type: Reference
@@ -353,10 +434,6 @@ common:
   title: ''
   type: TermsOfService
   url: https://www.nutanix.com/legal/terms-of-use
-- group: commercial
-  title: ''
-  type: PrivacyPolicy
-  url: https://www.nutanix.com/legal/privacy-notice
 - group: agent
   title: ''
   type: LlmsText
@@ -364,11 +441,21 @@ common:
 created: '2025-03-14'
 description: Nutanix is a hyper-converged infrastructure solution that integrates compute, virtualization, storage, networking, and security to power enterprise applications. Nutanix provides public APIs for managing and automating infrastructure including Prism Central, Prism Element, Karbon Kubernetes, Nutanix Database Service (NDB), Cloud Clusters (NC2), NCM Self-Service, and the GA v4 API platform.
 finops:
-- name: Nutanix Finops
+- has_sources: true
+  method: generated
+  name: Nutanix Finops
+  primary_unit: ''
   service_category: Hybrid Cloud Infrastructure
   slug: nutanix-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nutanix.png
 json_schemas:
+- name: ClusterIntentResponse
+  property_count: 3
+  slug: nutanix-cluster-intent-response
+- name: ClusterListResponse
+  property_count: 3
+  slug: nutanix-cluster-list-response
 - name: Cluster
   property_count: 7
   slug: nutanix-cluster
@@ -386,19 +473,37 @@ json_schemas:
   slug: nutanix-host
 - name: ImageIntentInput
   property_count: 2
+  slug: nutanix-image-intent-input
+- name: ImageListResponse
+  property_count: 3
+  slug: nutanix-image-list-response
+- name: ImageIntentInput
+  property_count: 2
   slug: nutanix-imageintentinput
 - name: ImageListResponse
   property_count: 3
   slug: nutanix-imagelistresponse
 - name: ListMetadata
   property_count: 6
+  slug: nutanix-list-metadata
+- name: ListMetadata
+  property_count: 6
   slug: nutanix-listmetadata
+- name: PaginationMetadata
+  property_count: 5
+  slug: nutanix-pagination-metadata
 - name: PaginationMetadata
   property_count: 5
   slug: nutanix-paginationmetadata
 - name: Reference
   property_count: 3
   slug: nutanix-reference
+- name: StorageContainerInput
+  property_count: 5
+  slug: nutanix-storage-container-input
+- name: StorageContainer
+  property_count: 8
+  slug: nutanix-storage-container
 - name: StorageContainer
   property_count: 8
   slug: nutanix-storagecontainer
@@ -407,10 +512,25 @@ json_schemas:
   slug: nutanix-storagecontainerinput
 - name: SubnetIntentInput
   property_count: 2
+  slug: nutanix-subnet-intent-input
+- name: SubnetListResponse
+  property_count: 3
+  slug: nutanix-subnet-list-response
+- name: SubnetIntentInput
+  property_count: 2
   slug: nutanix-subnetintentinput
 - name: SubnetListResponse
   property_count: 3
   slug: nutanix-subnetlistresponse
+- name: VmIntentInput
+  property_count: 2
+  slug: nutanix-vm-intent-input
+- name: VmIntentResponse
+  property_count: 3
+  slug: nutanix-vm-intent-response
+- name: VmListResponse
+  property_count: 3
+  slug: nutanix-vm-list-response
 - name: VmIntentInput
   property_count: 2
   slug: nutanix-vmintentinput
@@ -427,6 +547,11 @@ json_structures:
 - name: Nutanix Structure
   property_count: 0
   slug: nutanix-structure
+jsonld:
+- class_count: 18
+  name: Nutanix Context
+  property_count: 46
+  slug: nutanix-context
 layout: provider
 mcp_servers:
 - description: ''
@@ -436,13 +561,13 @@ modified: '2026-08-15'
 name: Nutanix
 nav: Providers
 network: true
-overview: 'Nutanix publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Categories API, Clusters API, and 12 more. Tagged areas include Cloud Management, Hyperconverged, Infrastructure, Virtualization, and Kubernetes.
+overview: 'Nutanix publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Categories API, Clusters API, and 18 more. Tagged areas include Cloud Management, Hyperconverged, Infrastructure, Virtualization, and Kubernetes.
 
 
-  The Nutanix catalog on APIs.io includes 1 Spectral governance ruleset.
+  The Nutanix catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Nutanix''s developer surface includes pricing, authentication, documentation, getting-started guide, code examples, changelog, engineering blog, and 22 more developer resources.'
+  Nutanix''s developer surface includes pricing, authentication, documentation, getting-started guide, code examples, changelog, engineering blog, and 38 more developer resources.'
 plans:
 - name: Nutanix Plans Pricing
   plan_count: 19
@@ -456,9 +581,10 @@ rate_limits:
   name: Nutanix Rate Limits
   slug: nutanix-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Nutanix API Rules
+  name: Nutanix — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -466,35 +592,56 @@ rules:
     info: 1
     warn: 4
   slug: nutanix-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 57
+  extends:
+  - spectral:oas
+  name: Nutanix API Rules
+  rule_count: 16
+  severity_counts:
+    error: 15
+    hint: 0
+    info: 1
+    warn: 0
+  slug: nutanix-rules
 score:
   band: strong
-  composite: 57.8
+  composite: 65.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 62.3
+    artifact_dirs: 31
+    catalog_earned: 85.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 52.8
+    catalog_gap: 30.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 9.9
+  delta: -3.8
   facets:
     access_clarity: 67.1
-    contract_governance: 9.8
-    contract_quality: 61.1
-    developer_ergonomics: 56.0
-    discoverability: 66.7
-    operational_transparency: 65.8
-  previous_composite: 47.9
+    contract_governance: 31.8
+    contract_quality: 69.3
+    developer_ergonomics: 57.7
+    discoverability: 67.9
+    operational_transparency: 76.3
+  previous_composite: 69.7
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 15
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    mcp: derived
+    skills: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
@@ -516,5 +663,6 @@ tags:
 - Virtualization
 - Kubernetes
 - Database
+- Data Center
 website: https://www.nutanix.com
 ---

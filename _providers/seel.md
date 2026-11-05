@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 9
 apis:
 - baseURL: https://api-test.seel.com/v1
@@ -194,7 +194,7 @@ modified: '2026-07-21'
 name: Seel
 nav: Providers
 network: true
-overview: 'Seel publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Bill API, Claim API, Contract API, and 6 more. Tagged areas include Company, E-Commerce, Insurance, Post-Purchase, and Returns.
+overview: 'Seel is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Bill API, Claim API, Contract API, and 6 more. Tagged areas include Company, E-Commerce, Insurance, Post-Purchase, and Returns.
 
 
   The Seel catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -203,24 +203,24 @@ overview: 'Seel publishes 9 APIs on the [APIs.io](https://apis.io/) network, inc
   Seel''s developer surface includes documentation, API reference, getting-started guide, engineering blog, and 11 more developer resources.'
 random_paper: 7
 score:
-  band: thin
-  composite: 26.6
+  band: emerging
+  composite: 25.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
     contract_quality: 9.3
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 7.9
-  previous_composite: 26.6
+  previous_composite: 25.4
   provenance:
     conformance: derived
     contracts:
@@ -235,9 +235,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -260,7 +260,7 @@ tags:
 - Post-Purchase
 - Returns
 - Extended Warranty
-- Fraud
+- Fraud Prevention
 - Payments
 website: https://seel.com/
 ---

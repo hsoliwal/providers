@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -56,7 +56,7 @@ apis:
 - description: 'Published SKILL.md that teaches an agent tool selection from natural-language intent, credit mechanics, pagination, destructive-action confirmation, and prompt patterns for ad creative. Installed via '
   name: AdMakeAI Agent Skill
   slug: admakeai-agent-skill
-artifact_total: 11
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -192,15 +192,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: AdMakeAI MCP Server
-  slug: admakeai-mcp-server
-- description: ''
-  name: AdMakeAI MCP Server
-  slug: admakeai-mcp-server-2
+  slug: mcp
 modified: '2026-08-11'
 name: AdMakeAI
 nav: Providers
 network: true
-overview: 'AdMakeAI publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Advertising, Marketing, AdTech, Generative AI, and Image-Generation.
+overview: 'AdMakeAI is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Advertising, Marketing, AdTech, Generative AI, and Image Generation.
 
 
   AdMakeAI''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 21 more developer resources.'
@@ -220,30 +217,36 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 41.9
+  composite: 43.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 60.0
     catalog_earned_first_party: 20.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 26.3
-  previous_composite: 41.9
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -265,7 +268,7 @@ tags:
 - Marketing
 - AdTech
 - Generative AI
-- Image-Generation
+- Image Generation
 - Video Generation
 - Meta Ads
 - Competitive Intelligence

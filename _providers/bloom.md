@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -83,11 +83,11 @@ modified: '2026-07-20'
 name: Bloom
 nav: Providers
 network: true
-overview: Bloom is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto, Identity, Verifiable Credentials, and Decentralized Identity.
+overview: Bloom is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Identity, Verifiable Credentials, and Decentralized Identity.
 random_paper: 9
 score:
   band: minimal
-  composite: 9.7
+  composite: 0.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -98,16 +98,23 @@ score:
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 18.2
+    contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
-    discoverability: 57.4
-    operational_transparency: 2.6
-  previous_composite: 9.7
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -122,7 +129,7 @@ security:
 slug: bloom
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Identity
 - Verifiable Credentials
 - Decentralized Identity
@@ -131,5 +138,6 @@ tags:
 - Ethereum
 - Self-Sovereign Identity
 - Discontinued
+- Defunct
 website: https://bloom.co/
 ---

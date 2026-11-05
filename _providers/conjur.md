@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -34,9 +34,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 20.5
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://cyberark.github.io/conjur
   baseurl_source: declared
@@ -195,43 +195,49 @@ description: Conjur is CyberArk's open-source secrets management platform. It au
 image: https://avatars.githubusercontent.com/u/30869256?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: CyberArk Secrets Manager MCP server
   slug: cyberark-secrets-manager-mcp-server
 modified: '2026-07-18'
 name: Conjur
 nav: Providers
 network: true
-overview: 'Conjur publishes 1 API on the [APIs.io](https://apis.io/) network: / CyberArk Secrets Manager API. Tagged areas include Company, Cybersecurity, Secrets Management, Identity and Access Management, and DevSecOps.
+overview: 'Conjur publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: / CyberArk Secrets Manager API. Tagged areas include Company, Cybersecurity, Secrets Management, Identity and Access Management, and DevSecOps.
 
 
   Conjur''s developer surface includes documentation, API reference, authentication, CLI, changelog, and 20 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 30.4
+  composite: 29.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 36.1
+    contract_quality: 32.4
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 30.4
+  previous_composite: 29.2
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -256,6 +262,6 @@ tags:
 - DevSecOps
 - Kubernetes
 - Machine Identity
-- Open-Source
+- Open Source
 website: https://conjur.org
 ---

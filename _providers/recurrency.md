@@ -11,7 +11,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.7
-  scored_at: '2026-09-20'
+  score: 37.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.recurrency.com
@@ -194,14 +193,14 @@ description: Recurrency is an AI-powered ERP automation platform for wholesale d
 image: https://storage.googleapis.com/s.mkswft.com/RmlsZTpiNjE4NGRjYy01OGVjLTQ2YWQtOWMyMS0zNjJiZWZiNmYxOTM=/recurrency-dashboard.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.recurrency.com over HTTP.
   name: Recurrency MCP Server
-  slug: recurrency-mcp-server
+  slug: recurrency
 modified: '2026-07-21'
 name: Recurrency
 nav: Providers
 network: true
-overview: 'Recurrency publishes 2 APIs on the [APIs.io](https://apis.io/) network: E-Procurement API and Orders API. Tagged areas include Company, Ai Ml, ERP, Distribution, and Wholesale.
+overview: 'Recurrency publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: E-Procurement API and Orders API. Tagged areas include Company, Artificial Intelligence, ERP, Distribution, and Wholesale.
 
 
   Recurrency''s developer surface includes documentation, authentication, sandbox, engineering blog, support, signup flow, and 21 more developer resources.'
@@ -213,23 +212,23 @@ scopes:
   summary_line: 4 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 32.9
+  composite: 36.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
     contract_quality: 14.8
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 32.9
+  previous_composite: 36.5
   provenance:
     conformance: derived
     contracts:
@@ -239,8 +238,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -262,7 +267,7 @@ security:
 slug: recurrency
 tags:
 - Company
-- Ai Ml
+- Artificial Intelligence
 - ERP
 - Distribution
 - Wholesale

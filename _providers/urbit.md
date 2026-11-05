@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The HTTP interface of every Urbit ship, served by the Eyre kernel vane. Clients authenticate by POSTing the ship's web login code to /~/login for an urbauth session cookie, then interact through chann
@@ -170,19 +170,19 @@ layout: provider
 mcp_servers:
 - description: Urbit MCP (%mcp) is a general-purpose Model Context Protocol interface for Urbit, documented in urbit.org's first-party public agent-skill snapshot (/.agents/skills/using-urbit-apps/references/urbit-m
   name: Urbit MCP Server
-  slug: urbit-mcp-server
+  slug: urbit-mcp
 modified: '2026-07-21'
 name: Urbit
 nav: Providers
 network: true
-overview: 'Urbit publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto, Personal Servers, Decentralized Identity, and Peer-to-Peer.
+overview: 'Urbit is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Personal Servers, Decentralized Identity, and Peer-to-Peer.
 
 
   Urbit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 19 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 31.9
+  composite: 32.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -190,21 +190,27 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 31.9
+  previous_composite: 32.8
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -223,7 +229,7 @@ security:
 slug: urbit
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Personal Servers
 - Decentralized Identity
 - Peer-to-Peer

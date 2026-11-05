@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - baseURL: https://api.id.unico.app
@@ -241,7 +241,7 @@ modified: '2026-09-02'
 name: Unico
 nav: Providers
 network: true
-overview: 'Unico publishes 3 APIs on the [APIs.io](https://apis.io/) network: IDCloud API, IDCloud Web & SDK API, and Identity OAuth2. Tagged areas include Identity Verification, Biometrics, Facial Recognition, Liveness Detection, and KYC.
+overview: 'Unico is listed with 3 APIs on the [APIs.io](https://apis.io/) network: IDCloud API, IDCloud Web & SDK API, and Identity OAuth2. Tagged areas include Identity Verification, Biometrics, Facial Recognition, Liveness Detection, and KYC.
 
 
   The Unico catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -259,26 +259,26 @@ rate_limits:
   slug: unico-rate-limits
 scopes:
 - name: Unico Scopes
-  scope_count: 0
+  scope_count: 1
   slug: unico-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: developing
-  composite: 54.2
+  band: strong
+  composite: 57.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.6
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 76.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -287,17 +287,24 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 54.2
+  previous_composite: 57.7
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 43.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/unico/refs/heads/main/screenshots/unico-2026-10-11T131414.png
 security:
 - kind: authentication
   name: Unico Authentication

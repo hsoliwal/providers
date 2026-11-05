@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 113
+- acting_count: 110
   human_in_the_loop: 2
   name: Zulip Agentic Access
   operation_count: 161
   slug: zulip-agentic-access
-  summary_line: 161 operations · 113 acting · 2 human-in-the-loop
+  summary_line: 161 operations · 110 acting · 2 human-in-the-loop
 api_count: 1
 apis:
 - description: The Zulip REST API powers the Zulip web and mobile apps. It provides programmatic access to messages, streams, users, organizations, and all other Zulip functionality. Anything you can do in Zulip, yo
@@ -57,72 +57,72 @@ apis:
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The authentication API from Zulip — 4 operation(s) for authentication.
-  name: Zulip authentication API
+  name: Zulip Authentication API
   slug: zulip-authentication-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The bots API from Zulip — 1 operation(s) for bots.
-  name: Zulip bots API
+  name: Zulip Bots API
   slug: zulip-bots-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The channels API from Zulip — 23 operation(s) for channels.
-  name: Zulip channels API
+  name: Zulip Channels API
   slug: zulip-channels-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The drafts API from Zulip — 4 operation(s) for drafts.
-  name: Zulip drafts API
+  name: Zulip Drafts API
   slug: zulip-drafts-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The invites API from Zulip — 5 operation(s) for invites.
-  name: Zulip invites API
+  name: Zulip Invites API
   slug: zulip-invites-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The messages API from Zulip — 16 operation(s) for messages.
-  name: Zulip messages API
+  name: Zulip Messages API
   slug: zulip-messages-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The mobile API from Zulip — 6 operation(s) for mobile.
-  name: Zulip mobile API
+  name: Zulip Mobile API
   slug: zulip-mobile-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The navigation_views API from Zulip — 2 operation(s) for navigation_views.
-  name: Zulip navigation_views API
+  name: Zulip Navigation Views API
   slug: zulip-navigation-views-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The real_time_events API from Zulip — 4 operation(s) for real_time_events.
-  name: Zulip real_time_events API
+  name: Zulip Real Time Events API
   slug: zulip-real-time-events-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The reminders API from Zulip — 2 operation(s) for reminders.
-  name: Zulip reminders API
+  name: Zulip Reminders API
   slug: zulip-reminders-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The scheduled_messages API from Zulip — 2 operation(s) for scheduled_messages.
-  name: Zulip scheduled_messages API
+  name: Zulip Scheduled Messages API
   slug: zulip-scheduled-messages-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The server_and_organizations API from Zulip — 16 operation(s) for server_and_organizations.
-  name: Zulip server_and_organizations API
+  name: Zulip Server And Organizations API
   slug: zulip-server-and-organizations-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The users API from Zulip — 29 operation(s) for users.
-  name: Zulip users API
+  name: Zulip Users API
   slug: zulip-users-api
 - baseURL_template: https://{subdomain}.zulipchat.com/api/v1
   baseurl_source: spec_template
   description: The webhooks API from Zulip — 1 operation(s) for webhooks.
-  name: Zulip webhooks API
+  name: Zulip Webhooks API
   slug: zulip-webhooks-api
 artifact_total: 43
 asyncapis:
@@ -179,6 +179,25 @@ collections:
   name: Zulip REST API
   slug: open-zulip
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/zulip/refs/heads/main/plans/zulip-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/zulip-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/zulip/refs/heads/main/rate-limits/zulip-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/zulip-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/zulip/refs/heads/main/finops/zulip-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/zulip-finops.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.zulip.com/rss.xml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/zulip/refs/heads/main/agentic-access/zulip-agentic-access.yml
   title: ''
@@ -223,22 +242,26 @@ common:
 created: '2026-01-02'
 description: Zulip is an open-source team chat application with a unique topic-based threading model. Zulip's APIs power the web and mobile apps and provide REST endpoints, incoming webhooks, outgoing webhooks, and event-driven integrations to connect Zulip with external services.
 finops:
-- name: Zulip Finops
+- has_sources: false
+  method: generated
+  name: Zulip Finops
+  primary_unit: ''
   service_category: API
   slug: zulip-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zulip.png
 layout: provider
-modified: '2026-05-29'
+modified: '2026-10-06'
 name: Zulip
 nav: Providers
 network: true
-overview: 'Zulip publishes 16 APIs on the [APIs.io](https://apis.io/) network, including REST API, Events API, authentication API, and 13 more. Tagged areas include Collaboration, Messaging, Team Chat, and Webhook.
+overview: 'Zulip publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including REST API, Events API, Authentication API, and 14 more. Tagged areas include Collaboration, Messaging, Team Chat, and Webhook.
 
 
   The Zulip catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Zulip''s developer surface includes authentication, documentation, and 7 more developer resources.'
+  Zulip''s developer surface includes authentication, documentation, and 11 more developer resources.'
 plans:
 - name: Zulip Plans Pricing
   plan_count: 3
@@ -249,10 +272,11 @@ rate_limits:
   name: Zulip Rate Limits
   slug: zulip-rate-limits
 rules:
-- effective_rule_count: 32
+- authorship: generated
+  effective_rule_count: 32
   extends:
   - spectral:asyncapi
-  name: Zulip API Rules
+  name: Zulip — asyncapi rules
   rule_count: 5
   severity_counts:
     error: 1
@@ -262,23 +286,23 @@ rules:
   slug: zulip-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 33.6
+  composite: 31.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 39.8
+    artifact_dirs: 19
+    catalog_earned: 36.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.3
+    catalog_gap: 78.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 23.7
+    access_clarity: 15.8
     contract_governance: 11.4
-    contract_quality: 63.2
+    contract_quality: 58.5
     developer_ergonomics: 28.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 33.6
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     contracts:
@@ -286,8 +310,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

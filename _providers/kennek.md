@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://kennek.io/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://kennek.io/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/kennek/refs/heads/main/security/kennek-domain-security.yml
   title: ''
@@ -65,36 +73,47 @@ created: '2026-07-17'
 description: Kennek (Kennek Solutions Ltd) is a UK-based fintech providing all-in-one loan management software built for specialist bridge and development lenders. The platform lets lenders originate, manage, and service loans while monitoring funding lines in one place, automating manual workflows, covenant and eligibility calculations, portfolio risk visibility, and investor reporting so lending teams can scale without adding headcount. Founded by former lenders and backed by HV Capital, Kennek is surfaced in the API Evangelist network as a fintech portfolio-company profile; it publishes a marketing site and legal pages but no public developer portal, API documentation, or SDKs at this time.
 image: https://kennek.io/favicon.ico
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kennek
 nav: Providers
 network: true
 overview: 'Kennek is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Lending, Loan Management, and Loan Servicing.
 
 
-  Kennek''s developer surface includes support and 5 more developer resources.'
+  Kennek''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 20
 score:
   band: minimal
-  composite: 10.2
+  composite: 10.3
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 50.0
+    developer_ergonomics: 7.1
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 10.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 9.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -114,7 +133,7 @@ tags:
 - Loan Management
 - Loan Servicing
 - Loan Origination
-- Financial-Services
+- Financial Services
 - Software-as-a-Service
 website: https://kennek.io
 ---

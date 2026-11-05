@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -112,6 +112,10 @@ created: '2026-07-17'
 description: LottieFiles is the platform and open-source runtime ecosystem for Lottie and dotLottie — a lightweight, JSON-based vector animation format that ships motion on any platform as easily as a static asset. Rather than a hosted HTTP API, LottieFiles' developer surface is a family of first-party, Rust+WASM-powered "dotLottie" players and framework/native components (Web, React, Vue, Svelte, Solid, React Native, iOS, Android, Flutter), plus embeddable web components and design-tool plugins for Adobe After Effects, Figma, Canva, VSCode, Framer and Webflow, letting developers render and control animations client-side.
 image: https://github.com/LottieFiles.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.lottiefiles.com over HTTP.
+  name: LottieFiles MCP Server
+  slug: lottiefiles
 modified: '2026-07-20'
 name: LottieFiles
 nav: Providers
@@ -123,27 +127,33 @@ overview: 'LottieFiles is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 0
 score:
   band: emerging
-  composite: 18.2
+  composite: 16.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
-  previous_composite: 18.2
+  previous_composite: 16.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +174,7 @@ tags:
 - Developer Tools
 - SDK
 - Web Components
-- Open-Source
+- Open Source
 - Lottie
 website: https://lottiefiles.com
 ---

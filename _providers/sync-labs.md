@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -72,7 +72,7 @@ apis:
   description: Available AI model listing
   name: Sync Labs Models API
   slug: sync-labs-models-api
-artifact_total: 24
+artifact_total: 25
 collections:
 - collection_type: open
   name: API Collection
@@ -93,6 +93,21 @@ collections:
   name: Sync Labs API
   slug: open-sync-labs
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/sync-labs/refs/heads/main/plans/sync-labs-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/sync-labs-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/sync-labs/refs/heads/main/rate-limits/sync-labs-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/sync-labs-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/sync-labs/refs/heads/main/finops/sync-labs-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/sync-labs-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/sync-labs/refs/heads/main/capabilities/sync-labs-capability-edges.yml
   title: ''
@@ -168,9 +183,13 @@ examples:
   name: Sync Labs Create Generation Example
   slug: sync-labs-create-generation-example
 finops:
-- name: Sync Labs Finops
+- has_sources: true
+  method: generated
+  name: Sync Labs Finops
+  primary_unit: ''
   service_category: AI Infrastructure / Media Generation
   slug: sync-labs-finops
+  template: false
 image: https://sync.so/favicon.ico
 json_schemas:
 - name: Sync Labs Generation
@@ -186,17 +205,21 @@ jsonld:
   property_count: 22
   slug: sync-labs-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sync.so over HTTP.
+  name: Sync Labs MCP Server
+  slug: sync-labs
 modified: '2026-05-19'
 name: Sync Labs
 nav: Providers
 network: true
-overview: 'Sync Labs publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Batch API, Generate API, and 1 more. Tagged areas include Artificial Intelligence, Content Localization, Dubbing, Lip Sync, and Media.
+overview: 'Sync Labs publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Batch API, Generate API, and 3 more. Tagged areas include Artificial Intelligence, Content Localization, Dubbing, Lip Sync, and Media.
 
 
   The Sync Labs catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Sync Labs'' developer surface includes authentication, documentation, getting-started guide, pricing, signup flow, engineering blog, and 10 more developer resources.'
+  Sync Labs'' developer surface includes authentication, documentation, getting-started guide, pricing, signup flow, engineering blog, and 13 more developer resources.'
 plans:
 - name: Sync Labs Plans Pricing
   plan_count: 5
@@ -207,9 +230,10 @@ rate_limits:
   name: Sync Labs Rate Limits
   slug: sync-labs-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Sync Labs API Rules
+  name: Sync Labs — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -217,7 +241,8 @@ rules:
     info: 1
     warn: 4
   slug: sync-labs-jsonschema-spectral-rules
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: Sync Labs API Rules
@@ -229,24 +254,24 @@ rules:
     warn: 5
   slug: sync-labs-rules
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 36.5
   coverage:
     artifact_dirs: 21
-    catalog_earned: 53.5
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.5
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 39.5
+    access_clarity: 31.6
     contract_governance: 13.6
-    contract_quality: 61.7
+    contract_quality: 56.1
     developer_ergonomics: 35.7
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 39.4
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     contracts:
@@ -255,8 +280,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

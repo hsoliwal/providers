@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: First-party remote Model Context Protocol server exposing read-only GlacierGrid facility monitoring data — HVAC, refrigeration, energy and savings, sensor readings, issues, notifications, device conne
@@ -44,6 +44,14 @@ apis:
   slug: glaciergrid-mcp-server
 artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.glaciergrid.com/company/newsroom
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.glaciergrid.com/company/newsroom/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hello-therma/refs/heads/main/security/hello-therma-domain-security.yml
   title: ''
@@ -165,17 +173,17 @@ description: Hello Therma is the original brand of Therma, Inc., the San Francis
 image: https://www.glaciergrid.com/hubfs/Glacier%20Grid%20Primary%20Teal-2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: GlacierGrid (formerly Therma / Hello Therma) operates a first-party remote MCP server that exposes read-only facility monitoring data — HVAC, refrigeration, energy and savings, sensor readings, issues
   name: GlacierGrid MCP Server
   slug: glaciergrid-mcp-server
-modified: '2026-08-22'
+modified: '2026-10-06'
 name: Hello Therma
 nav: Providers
 network: true
-overview: 'Hello Therma publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, IoT, Energy, Sustainability, and Cold Chain.
+overview: 'Hello Therma is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, IoT, Energy, Sustainability, and Cold Chain.
 
 
-  Hello Therma''s developer surface includes documentation, support, engineering blog, signup flow, changelog, authentication, and 19 more developer resources.'
+  Hello Therma''s developer surface includes engineering blog, documentation, support, signup flow, changelog, authentication, and 21 more developer resources.'
 plans:
 - name: Hello Therma Plans Pricing
   plan_count: 0
@@ -187,12 +195,12 @@ rate_limits:
   slug: hello-therma-rate-limits
 scopes:
 - name: Hello Therma Scopes
-  scope_count: 0
+  scope_count: 2
   slug: hello-therma-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: thin
-  composite: 35.1
+  composite: 32.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -206,9 +214,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 55.3
-  previous_composite: 35.1
+  previous_composite: 32.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -217,9 +225,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 63.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

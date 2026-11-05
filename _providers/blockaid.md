@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 76
+- acting_count: 69
   human_in_the_loop: 0
   name: Blockaid Agentic Access
   operation_count: 93
   slug: blockaid-agentic-access
-  summary_line: 93 operations · 76 acting
+  summary_line: 93 operations · 69 acting
 api_count: 1
 apis:
 - baseURL: https://api.blockaid.io
@@ -67,7 +67,7 @@ apis:
 - baseURL: https://api.blockaid.io
   baseurl_source: declared
   description: The cosigner API from Blockaid — 6 operation(s) for cosigner.
-  name: Blockaid cosigner API
+  name: Blockaid Cosigner API
   slug: blockaid-cosigner-api
 - baseURL: https://api.blockaid.io
   baseurl_source: declared
@@ -92,7 +92,7 @@ apis:
 - baseURL: https://api.blockaid.io
   baseurl_source: declared
   description: The external API from Blockaid — 1 operation(s) for external.
-  name: Blockaid external API
+  name: Blockaid External API
   slug: blockaid-external-api
 - baseURL: https://api.blockaid.io
   baseurl_source: declared
@@ -238,6 +238,11 @@ collections:
   name: Blockaid Asset Management Tron API
   slug: open-blockaid-tron-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/blockaid/refs/heads/main/capabilities/blockaid-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/blockaid-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -362,19 +367,19 @@ modified: '2026-07-18'
 name: Blockaid
 nav: Providers
 network: true
-overview: 'Blockaid publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Asset Management API, Audit Logs API, Bitcoin API, and 20 more. Tagged areas include Company, Fintech, Web3 Security, Blockchain, and Crypto.
+overview: 'Blockaid publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset Management API, Audit Logs API, Bitcoin API, and 20 more. Tagged areas include Company, Fintech, Web3 Security, Blockchain, and Cryptocurrency.
 
 
   The Blockaid catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Blockaid''s developer surface includes documentation, API reference, engineering blog, support, authentication, and 20 more developer resources.'
+  Blockaid''s developer surface includes documentation, API reference, engineering blog, support, authentication, and 21 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 37.9
+  composite: 35.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -384,11 +389,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 65.0
+    contract_quality: 59.5
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 37.9
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -404,9 +409,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -427,7 +432,7 @@ tags:
 - Fintech
 - Web3 Security
 - Blockchain
-- Crypto
+- Cryptocurrency
 - Fraud Prevention
 - Transaction Scanning
 - Wallet Security

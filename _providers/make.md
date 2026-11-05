@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 1
@@ -78,7 +78,7 @@ apis:
   description: The Scenarios API from Make — 6 operation(s) for scenarios.
   name: Make Scenarios API
   slug: make-scenarios-api
-artifact_total: 36
+artifact_total: 37
 collections:
 - collection_type: open
   name: API Collection
@@ -99,6 +99,21 @@ collections:
   name: Make API
   slug: open-make
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/make/refs/heads/main/plans/make-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/make-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/make/refs/heads/main/rate-limits/make-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/make-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/make/refs/heads/main/finops/make-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/make-finops.yml
 - group: company
   title: ''
   type: Website
@@ -214,19 +229,27 @@ features:
 - Error handlers per module
 - OAuth + API tokens
 finops:
-- name: Make Finops
+- has_sources: true
+  method: generated
+  name: Make Finops
+  primary_unit: ''
   service_category: iPaaS
   slug: make-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/make.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.make.com over HTTP.
+  name: Make MCP Server
+  slug: make
 modified: '2026-05-04'
 name: Make
 nav: Providers
 network: true
-overview: 'Make publishes 4 APIs on the [APIs.io](https://apis.io/) network, including AI Agents API, Scenario Execution API, Scenario Variables API, and 1 more. Tagged areas include Automation, Integration, iPaaS, No-Code, and Scenarios.
+overview: 'Make publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Agents API, Scenario Execution API, Scenario Variables API, and 5 more. Tagged areas include Automation, Integration, iPaaS, No-Code, and Scenarios.
 
 
-  Make''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, signup flow, pricing, academy / training, and 16 more developer resources.'
+  Make''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, signup flow, pricing, academy / training, and 19 more developer resources.'
 plans:
 - name: Make Plans Pricing
   plan_count: 5
@@ -238,23 +261,23 @@ rate_limits:
   slug: make-rate-limits
 score:
   band: developing
-  composite: 45.0
+  composite: 42.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 35.0
+    artifact_dirs: 15
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 53.9
+    access_clarity: 46.1
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 54.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 36.8
-  previous_composite: 45.0
+  previous_composite: 44.4
   provenance:
     agentic_access: derived
     contracts:
@@ -263,8 +286,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -287,5 +316,6 @@ tags:
 - No-Code
 - Scenarios
 - Workflows
+- Workflow Automation
 website: https://www.make.com/
 ---

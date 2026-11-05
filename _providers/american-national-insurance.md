@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 13
 common:
@@ -114,7 +114,7 @@ modified: '2026-09-02'
 name: American National Insurance
 nav: Providers
 network: true
-overview: 'American National Insurance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Life Insurance, Annuities, Health Insurance, and Property Casualty.
+overview: 'American National Insurance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Life Insurance, Annuities, Health Insurance, and Property and Casualty.
 
 
   American National Insurance''s developer surface includes support, engineering blog, and 6 more developer resources.'
@@ -139,7 +139,7 @@ score:
   band: minimal
   composite: 10.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -151,10 +151,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
@@ -164,14 +166,15 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/american-national-insurance/refs/heads/main/screenshots/american-national-insurance-2026-10-11T141639.png
 security:
 - kind: domain-security
   name: American National Insurance Domain Security
@@ -183,9 +186,9 @@ tags:
 - Life Insurance
 - Annuities
 - Health Insurance
-- Property Casualty
+- Property and Casualty
 - Pensions
-- Financial-Services
+- Financial Services
 - Fortune 1000
 use_cases:
 - description: Using annuity products to create guaranteed lifetime income streams for retirees and near-retirees concerned about outliving their assets.

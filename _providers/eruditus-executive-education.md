@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -208,14 +208,14 @@ modified: '2026-08-04'
 name: Eruditus
 nav: Providers
 network: true
-overview: 'Eruditus publishes 2 APIs on the [APIs.io](https://apis.io/) network: Leads API and Programs API. Tagged areas include Company, Education, Online Learning, Executive Education, and EdTech.
+overview: 'Eruditus is listed with 2 APIs on the [APIs.io](https://apis.io/) network: Leads API and Programs API. Tagged areas include Company, Education, E-Learning, Executive Education, and EdTech.
 
 
   Eruditus'' developer surface includes documentation, getting-started guide, engineering blog, support, authentication, sandbox, and 23 more developer resources.'
 random_paper: 5
 score:
   band: thin
-  composite: 36.2
+  composite: 33.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -229,7 +229,7 @@ score:
     contract_governance: 4.5
     contract_quality: 15.2
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -238,7 +238,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 36.2
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -254,9 +254,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -279,7 +279,7 @@ slug: eruditus-executive-education
 tags:
 - Company
 - Education
-- Online Learning
+- E-Learning
 - Executive Education
 - EdTech
 - Higher Education

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 15
 apis:
 - description: 'Secure, real-time EOI decisioning on a benefit technology partner''s platform when required by an elected Guardian benefit. Employees required to submit EOI are presented the required health questions '
@@ -151,7 +151,7 @@ modified: '2026-08-06'
 name: Guardian Life
 nav: Providers
 network: true
-overview: 'Guardian Life publishes 15 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Life Insurance, Disability Insurance, Dental Insurance, and Employee Benefits.
+overview: 'Guardian Life is listed with 15 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Life Insurance, Disability Insurance, Dental Insurance, and Employee Benefits.
 
 
   Guardian Life''s developer surface includes API reference, getting-started guide, FAQ, support, and 10 more developer resources.'
@@ -162,7 +162,7 @@ press:
 random_paper: 6
 score:
   band: emerging
-  composite: 17.4
+  composite: 17.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 35.0
@@ -170,23 +170,23 @@ score:
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 17.4
+  previous_composite: 17.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 24.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

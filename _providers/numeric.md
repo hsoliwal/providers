@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: OAuth-protected Model Context Protocol server exposing Numeric's close-automation toolkit to AI agents. Streamable-HTTP MCP endpoint at api.numeric.io/mcp, guarded by OAuth 2.0 / OIDC (auth.numeric.io
@@ -41,6 +41,10 @@ apis:
   slug: numeric-mcp-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://numeric.substack.com/feed
 - group: company
   title: ''
   type: Website
@@ -118,17 +122,17 @@ description: Numeric is an AI close-automation platform that unifies close manag
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/numeric.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.numeric.io over HTTP.
   name: Numeric MCP Server
-  slug: numeric-mcp-server
-modified: '2026-07-20'
+  slug: numeric
+modified: '2026-10-06'
 name: Numeric
 nav: Providers
 network: true
-overview: 'Numeric publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Accounting, Financial Close, and Reconciliation.
+overview: 'Numeric is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Accounting, Financial Close, and Reconciliation.
 
 
-  Numeric''s developer surface includes documentation, engineering blog, pricing, authentication, and 12 more developer resources.'
+  Numeric''s developer surface includes documentation, engineering blog, pricing, authentication, and 13 more developer resources.'
 random_paper: 7
 scopes:
 - name: Numeric Scopes
@@ -136,8 +140,8 @@ scopes:
   slug: numeric-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
-  band: emerging
-  composite: 24.0
+  band: thin
+  composite: 26.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -151,15 +155,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 24.0
+  previous_composite: 26.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

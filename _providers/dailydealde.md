@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.dailydeal.de/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/dailydealde/refs/heads/main/security/dailydealde-domain-security.yml
   title: ''
@@ -61,20 +65,20 @@ created: '2026-07-17'
 description: DailyDeal.de is a German consumer deals, coupons, and discounts platform ("Deals, Gutscheine & Schnäppchen") that aggregates daily deals across categories including electronics, fashion, home and garden, beauty, kids, sports, and free-to-try product samples ("gratis testen"). Shoppers browse discounted products, brand vouchers, and shop-specific coupon codes, and read shopping guides in the site's Magazin. Originally founded in Berlin in 2009 and briefly owned by Google, DailyDeal today operates as a WordPress-based consumer commerce and content site and publishes no public developer API program. It was added to the API Evangelist network as an Insight Partners portfolio lead.
 image: https://www.dailydeal.de/wp-content/themes/dealtheme/assets/frontend/images/dailydeal-logo-white.svg
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: DailyDeal.de
 nav: Providers
 network: true
 overview: 'DailyDeal.de is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Deals, Coupons, Discounts, and E-Commerce.
 
 
-  DailyDeal.de''s developer surface includes support, engineering blog, and 3 more developer resources.'
+  DailyDeal.de''s developer surface includes support, engineering blog, and 4 more developer resources.'
 random_paper: 16
 score:
   band: minimal
-  composite: 8.5
+  composite: 7.5
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -86,7 +90,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -96,9 +100,15 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 8.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

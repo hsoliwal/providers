@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.niahealth.ai/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/nia-health/refs/heads/main/security/nia-health-domain-security.yml
   title: ''
@@ -65,7 +69,7 @@ created: '2026-07-17'
 description: Nia Health GmbH is a Berlin-based digital health company and spin-off of Charité Universitätsmedizin Berlin that develops Nia, a mobile medical application supporting people living with atopic dermatitis (neurodermatitis) and other chronic skin conditions. Nia was the first atopic dermatitis app approved as a medical device, helping patients document flare-ups, identify triggers such as stress or fragrances, and manage their therapy day to day. The company builds a patient-engagement platform that turns real-world behavioral and symptom data into insights for patients, physicians, and research partners including pharmaceutical companies such as Sanofi. Nia Health is a consumer- and clinician-facing mobile product; it exposes no public developer API, developer portal, SDK, or machine-readable API surface. This profile was surfaced as a portfolio company of Version One Ventures and enriched from public sources.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nia-health.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Nia Health
 nav: Providers
 network: true
@@ -73,9 +77,9 @@ overview: Nia Health is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 19
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -87,23 +91,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 3.3
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

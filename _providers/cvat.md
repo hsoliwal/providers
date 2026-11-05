@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -48,42 +48,42 @@ apis:
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Shapes, tracks, and tags attached to tasks and jobs.
-  name: CVAT annotations API
+  name: CVAT Annotations API
   slug: cvat-annotations-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: External object-storage connections used as data sources.
-  name: CVAT cloudstorages API
+  name: CVAT Cloudstorages API
   slug: cvat-cloudstorages-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Assignable annotation units that subdivide a task.
-  name: CVAT jobs API
+  name: CVAT Jobs API
   slug: cvat-jobs-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Label taxonomy shared across projects, tasks, and jobs.
-  name: CVAT labels API
+  name: CVAT Labels API
   slug: cvat-labels-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Membership of users within organizations.
-  name: CVAT memberships API
+  name: CVAT Memberships API
   slug: cvat-memberships-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Organizations scoping resources for teams.
-  name: CVAT organizations API
+  name: CVAT Organizations API
   slug: cvat-organizations-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Annotation projects that group tasks and share a label set.
-  name: CVAT projects API
+  name: CVAT Projects API
   slug: cvat-projects-api
 - baseURL: https://app.cvat.ai/api
   baseurl_source: declared
   description: Annotation tasks holding media data and annotations.
-  name: CVAT tasks API
+  name: CVAT Tasks API
   slug: cvat-tasks-api
 artifact_total: 24
 collections:
@@ -171,16 +171,20 @@ common:
 created: '2026-06-21'
 description: CVAT (Computer Vision Annotation Tool) is an open-source platform for annotating images, video, and 3D point clouds for vision AI. The CVAT REST API exposes projects, tasks, jobs, annotations, labels, organizations, memberships, and cloud storage integrations, available both self-hosted (MIT-licensed) and as the hosted CVAT Online service at app.cvat.ai.
 finops:
-- name: Cvat Finops
+- has_sources: true
+  method: generated
+  name: Cvat Finops
+  primary_unit: ''
   service_category: Machine Learning and Data Annotation
   slug: cvat-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cvat.png
 layout: provider
 modified: '2026-06-21'
 name: CVAT
 nav: Providers
 network: true
-overview: 'CVAT publishes 8 APIs on the [APIs.io](https://apis.io/) network, including annotations API, cloudstorages API, jobs API, and 5 more. Tagged areas include Computer-Vision, Data Annotation, Labeling, Datasets, and Open-Source.
+overview: 'CVAT publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Annotations API, Cloudstorages API, Jobs API, and 5 more. Tagged areas include Computer Vision, Data Annotation, Labeling, Datasets, and Open Source.
 
 
   CVAT''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
@@ -195,23 +199,23 @@ rate_limits:
   slug: cvat-rate-limits
 score:
   band: thin
-  composite: 37.8
+  composite: 26.3
   coverage:
     artifact_dirs: 11
-    catalog_earned: 64.0
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 51.6
+    contract_quality: 46.8
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 37.8
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -219,9 +223,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -237,10 +247,10 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: cvat
 tags:
-- Computer-Vision
+- Computer Vision
 - Data Annotation
 - Labeling
 - Datasets
-- Open-Source
+- Open Source
 website: https://www.cvat.ai
 ---

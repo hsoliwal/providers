@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -86,18 +86,22 @@ created: '2026-07-17'
 description: 'Saffron Finance is a decentralized peer-to-peer interest-rate risk adjustment protocol built on Ethereum. Underlying DeFi yield is transformed by a smart-contract vault system according to each user''s indicated risk preference, splitting deposits into senior (fixed-income, risk-averse) and junior (variable, risk-seeking) tranches across Uniswap V3 fixed-income vaults. The protocol is governed by the Saffron DAO and its SFI token, and was surfaced in the API Evangelist network as a portfolio company of Multicoin Capital in the crypto-web3 sector. Saffron is an on-chain protocol rather than a hosted web-API provider: its developer surface is Solidity smart contracts, published documentation, audits, and whitepapers rather than a REST/HTTP API.'
 image: https://saffron.finance/og.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.saffron.finance over HTTP; 3 tools listed.
+  name: Saffron Finance MCP Server
+  slug: saffron-finance
 modified: '2026-07-21'
 name: Saffron Finance
 nav: Providers
 network: true
-overview: 'Saffron Finance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Web3, DeFi, Yield, and Fixed Income.
+overview: 'Saffron Finance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, DeFi, Yield, and Fixed Income.
 
 
   Saffron Finance''s developer surface includes documentation, getting-started guide, engineering blog, support, and 7 more developer resources.'
 random_paper: 2
 score:
-  band: emerging
-  composite: 11.1
+  band: minimal
+  composite: 9.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -111,13 +115,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 11.1
+  previous_composite: 9.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +142,7 @@ security:
 slug: saffron-finance
 tags:
 - Company
-- Crypto Web3
+- Web3
 - DeFi
 - Yield
 - Fixed Income
@@ -140,5 +150,6 @@ tags:
 - Ethereum
 - Smart Contracts
 - Governance
+- Cryptocurrency
 website: https://saffron.finance
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -121,14 +121,14 @@ modified: '2026-08-09'
 name: Chinese Medicine Online
 nav: Providers
 network: true
-overview: 'Chinese Medicine Online is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Traditional Chinese Medicine, Healthcare, Medical Education, Continuing Medical Education, and Online Learning.
+overview: 'Chinese Medicine Online is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Traditional Chinese Medicine, Healthcare, Medical Education, Continuing Medical Education, and E-Learning.
 
 
   Chinese Medicine Online''s developer surface includes support, signup flow, product news, and 11 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.4
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -142,7 +142,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -151,15 +151,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 12.6
+  previous_composite: 12.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -177,7 +177,6 @@ tags:
 - Healthcare
 - Medical Education
 - Continuing Medical Education
-- Online Learning
 - E-Learning
 - Artificial Intelligence
 - China

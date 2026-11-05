@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,16 +32,16 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 76
+- acting_count: 69
   human_in_the_loop: 2
   name: Apiman Agentic Access
-  operation_count: 177
+  operation_count: 199
   slug: apiman-agentic-access
-  summary_line: 177 operations · 76 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 199 operations · 69 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - description: Apiman is an open source API management platform with a developer portal, API gateway, and management UI supporting policies, plans, organizations, multi-tenancy, and extensible Java-based plugin arch
   name: Apiman
@@ -175,6 +175,16 @@ collections:
   name: API Manager REST API
   slug: open-apiman
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apiman/refs/heads/main/finops/apiman-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apiman-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apiman/refs/heads/main/capabilities/apiman-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apiman-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -356,9 +366,13 @@ features:
 - description: Configurable approval workflows for API subscriptions with notification and event support.
   name: Approval Workflows
 finops:
-- name: Apiman Finops
+- has_sources: false
+  method: generated
+  name: Apiman Finops
+  primary_unit: ''
   service_category: API
   slug: apiman-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apiman.png
 json_schemas:
 - name: Apiman API
@@ -384,13 +398,13 @@ modified: '2026-09-06'
 name: Apiman
 nav: Providers
 network: true
-overview: 'Apiman publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Blobs API, Developers API, and 12 more. Tagged areas include API Gateway, API Management, Developer Portal, Java, and Open-Source.
+overview: 'Apiman publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, Blobs API, Developers API, and 13 more. Tagged areas include API Gateway, API Management, Developer Portal, Java, and Open Source.
 
 
   The Apiman catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Apiman''s developer surface includes support, engineering blog, documentation, API reference, getting-started guide, changelog, authentication, and 28 more developer resources.'
+  Apiman''s developer surface includes support, engineering blog, documentation, API reference, getting-started guide, changelog, authentication, and 30 more developer resources.'
 plans:
 - name: Apiman Plans Pricing
   plan_count: 0
@@ -401,9 +415,10 @@ rate_limits:
   name: Apiman Rate Limits
   slug: apiman-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Apiman API Rules
+  name: Apiman — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -413,26 +428,26 @@ rules:
   slug: apiman-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 45.7
+  composite: 44.2
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 61.3
+    artifact_dirs: 32
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.8
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 7.9
+    access_clarity: 0.0
     contract_governance: 28.0
-    contract_quality: 52.9
+    contract_quality: 48.4
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 45.7
+  previous_composite: 45.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -443,8 +458,14 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -476,7 +497,7 @@ tags:
 - API Management
 - Developer Portal
 - Java
-- Open-Source
+- Open Source
 use_cases:
 - description: Deploy Apiman on-premise to manage APIs across internal services with full control over infrastructure.
   name: On-Premise API Management

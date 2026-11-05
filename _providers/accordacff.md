@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: A single GraphQL endpoint exposing the Accord data model — accords, stages, steps, stakeholders, playbooks, resources, summaries, engagement and CRM sync objects. The public reference documents 461 qu
@@ -32,7 +32,7 @@ apis:
 - description: Hosted, remote Model Context Protocol server that wraps the Accord Developer API and exposes its read surface to any MCP client (Claude, Claude Code, Cursor, Gemini CLI, ChatGPT). Streamable HTTP tran
   name: Accord MCP Server
   slug: accord-mcp-server
-artifact_total: 11
+artifact_total: 10
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/accordacff/refs/heads/main/security/accordacff-domain-security.yml
@@ -179,14 +179,11 @@ mcp_servers:
 - description: Hosted, remote Model Context Protocol server published by Accord. Per Accord's own announcement it "wraps our Developer API and exposes the same read endpoints through a secure, standardized interface
   name: Accord MCP Server
   slug: accord-mcp-server
-- description: ''
-  name: Accord MCP Server
-  slug: accord-mcp-server-2
 modified: '2026-09-06'
 name: Accord
 nav: Providers
 network: true
-overview: 'Accord publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Sales Enablement, Revenue Operations, Customer Collaboration, Sales Engagement, and Customer Onboarding.
+overview: 'Accord is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Sales Enablement, Revenue Operations, Customer Collaboration, Sales Engagement, and Customer Onboarding.
 
 
   Accord''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
@@ -201,44 +198,53 @@ rate_limits:
   slug: accordacff-rate-limits
 scopes:
 - name: Accordacff Scopes
-  scope_count: 0
+  scope_count: 2
   slug: accordacff-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · authorization_code/refresh_token
 score:
   band: developing
-  composite: 39.6
+  composite: 43.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.6
+  previous_composite: 43.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/accordacff/refs/heads/main/screenshots/accordacff-2026-10-11T092521.png
 security:
 - kind: authentication
   name: Accordacff Authentication
@@ -267,7 +273,7 @@ tags:
 - CRM
 - GraphQL
 - MCP
-- agent-native
+- Agent-Native
 - Software-as-a-Service
 - Company
 website: https://inaccord.com/

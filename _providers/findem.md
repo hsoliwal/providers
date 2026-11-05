@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 11
 apis:
 - description: Assistive AI product that searches Findem's enriched people graph using natural-language attribute queries, returning ranked candidate lists with contact data and outreach workflows.
@@ -71,6 +71,25 @@ apis:
   slug: embedded-ai
 artifact_total: 15
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/findem/refs/heads/main/plans/findem-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/findem-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/findem/refs/heads/main/rate-limits/findem-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/findem-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/findem/refs/heads/main/finops/findem-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/findem-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.findem.ai/blog
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/findem/refs/heads/main/security/findem-domain-security.yml
   title: ''
@@ -99,16 +118,23 @@ common:
 created: '2026-05-23'
 description: Findem is an AI Talent Intelligence platform that blends assistive AI for sourcing, marketing, executive search, and analytics with agentic AI workers for intelligent job posting, application boost, screening, and scheduling. The company also exposes Embedded AI building blocks (AI Job Board, Sourcing Copilot, Labeling Engine, Agents, and MCP) for partners to ship branded AI hiring experiences. Findem is sold enterprise-direct; ATS, HRIS, and partner integrations are gated rather than offered through a public self-serve developer portal.
 finops:
-- name: Findem Finops
+- has_sources: false
+  method: generated
+  name: Findem Finops
+  primary_unit: ''
   service_category: API
   slug: findem-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/findem.png
 layout: provider
-modified: '2026-05-23'
+modified: '2026-10-06'
 name: Findem
 nav: Providers
 network: true
-overview: Findem publishes 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Talent Intelligence, AI Sourcing, Talent Analytics, Agentic AI, and Embedded AI.
+overview: 'Findem is listed with 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Talent Intelligence, AI Sourcing, Talent Analytics, AI Agents, and Embedded AI.
+
+
+  Findem''s developer surface includes engineering blog and 9 more developer resources.'
 plans:
 - name: Findem Plans Pricing
   plan_count: 1
@@ -119,27 +145,33 @@ rate_limits:
   name: Findem Rate Limits
   slug: findem-rate-limits
 score:
-  band: emerging
-  composite: 17.8
+  band: minimal
+  composite: 9.3
   coverage:
-    artifact_dirs: 6
-    catalog_earned: 59.0
+    artifact_dirs: 8
+    catalog_earned: 44.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 9.5
-    discoverability: 74.1
-    operational_transparency: 21.1
-  previous_composite: 17.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    developer_ergonomics: 11.9
+    discoverability: 71.4
+    operational_transparency: 5.3
+  previous_composite: 14.9
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -155,7 +187,7 @@ tags:
 - Talent Intelligence
 - AI Sourcing
 - Talent Analytics
-- Agentic AI
+- AI Agents
 - Embedded AI
 - Human Resources
 website: https://www.findem.ai

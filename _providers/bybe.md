@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,9 +23,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-09-20'
+  score: 27.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 16
   slug: bybe-agentic-access
   summary_line: 16 operations · 3 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.bybe.io
   baseurl_source: declared
@@ -223,7 +223,7 @@ modified: '2026-08-13'
 name: BYBE
 nav: Providers
 network: true
-overview: 'BYBE publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Clips API, Consumers API, Manufacturers API, and 4 more. Tagged areas include Company, Alcohol, Beverages, Promotions, and Rebates.
+overview: 'BYBE publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clips API, Consumers API, Manufacturers API, and 4 more. Tagged areas include Company, Alcohol, Beverages, Promotions, and Rebates.
 
 
   BYBE''s developer surface includes documentation, API reference, getting-started guide, pricing, support, authentication, sandbox, and 22 more developer resources.'
@@ -238,7 +238,7 @@ rate_limits:
   slug: bybe-rate-limits
 score:
   band: thin
-  composite: 34.6
+  composite: 33.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -250,11 +250,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 49.6
+    contract_quality: 44.6
     developer_ergonomics: 42.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 34.6
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -270,9 +270,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -296,7 +296,7 @@ tags:
 - Rebates
 - Marketing
 - Retail
-- CPG
+- Consumer Packaged Goods
 - Loyalty
 - Payments
 - Disbursements

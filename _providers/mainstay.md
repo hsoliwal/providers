@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: AdmitHub/Mainstay REST API v1.0 for syncing student and employee records and engagement data between Mainstay and external systems, with Bearer API-token authentication.
@@ -42,6 +42,10 @@ apis:
   slug: mainstay-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://mainstay.com/feed/
 - group: company
   title: ''
   type: Website
@@ -115,18 +119,18 @@ created: '2026-07-17'
 description: Mainstay (formerly AdmitHub) is a student engagement platform for higher education that delivers human-centered, AI-enhanced conversational coaching to students via SMS text messaging, live chat, web chat, and social messaging. Grounded in behavioral science research, its two-way messaging assistant nudges students through enrollment, registration, financial aid, and academic milestones while giving institutional staff insights and tools to improve engagement, persistence, and outcomes. Mainstay is a Techstars portfolio company. It publishes an API-token authenticated REST API (v1.0, base URL https://api.admithub.com) documented at docs.api.mainstay.com, used to sync student and employee records and engagement data between Mainstay and external systems; tokens are generated from the Mainstay dashboard and presented as Bearer credentials.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mainstay.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Mainstay
 nav: Providers
 network: true
-overview: 'Mainstay publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Higher Education, and Conversational AI.
+overview: 'Mainstay is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Higher Education, and Conversational AI.
 
 
-  Mainstay''s developer surface includes documentation, API reference, support, engineering blog, authentication, and 11 more developer resources.'
+  Mainstay''s developer surface includes documentation, API reference, support, engineering blog, authentication, and 12 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 28.5
+  composite: 26.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -140,17 +144,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.5
+  previous_composite: 26.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

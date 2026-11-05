@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 3
+- acting_count: 0
   human_in_the_loop: 0
   name: Move Bank Agentic Access
   operation_count: 19
   slug: move-bank-agentic-access
-  summary_line: 19 operations · 3 acting
+  summary_line: 19 operations
 api_count: 1
 apis:
 - baseURL: https://openbanking.movebank.com.au/OpenBanking/cds-au/v1/banking/products
@@ -242,7 +242,7 @@ modified: '2026-07-21'
 name: MOVE Bank
 nav: Providers
 network: true
-overview: 'MOVE Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'MOVE Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   MOVE Bank''s developer surface includes authentication, getting-started guide, API reference, documentation, engineering blog, and 22 more developer resources.'
@@ -254,9 +254,9 @@ scopes:
   summary_line: 9 scopes
 score:
   band: thin
-  composite: 29.9
+  composite: 27.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -266,9 +266,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -277,7 +277,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 29.9
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -293,9 +293,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 50.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -312,7 +312,7 @@ security:
   summary_line: TLSv1.2 · HSTS · DMARC
 slug: move-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

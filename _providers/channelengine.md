@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: 'Integrate the system of your choice (ERP, PIM, WMS, or webstore) with ChannelEngine. Synchronize product content and offers; retrieve, acknowledge and update orders, shipments, returns, cancellations '
@@ -53,6 +53,14 @@ asyncapis:
   name: Channelengine Webhooks
   slug: channelengine-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.channelengine.com/en/blog/tag/category-news
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.channelengine.com/en/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/channelengine/refs/heads/main/security/channelengine-trust-center.yml
   title: ''
@@ -234,23 +242,23 @@ created: '2026-07-17'
 description: 'ChannelEngine is a marketplace integration and multichannel e-commerce platform, founded in Leiden, Netherlands and backed by General Catalyst, that lets brands, retailers, and manufacturers connect their ERP, PIM, WMS, or webstore once and sell across 1,300+ global marketplaces, social platforms, and emerging AI commerce channels. It centralizes product listing, inventory and offer synchronization, order and fulfillment management, returns, and dynamic repricing from a single dashboard, and exposes three REST APIs: the Merchant API (integrate your own systems with ChannelEngine), the Channel API (build your own marketplace on ChannelEngine), and the Channel Management API (export marketplace categories and product attributes). The APIs use API-key authentication, JSON response envelopes, page-based pagination, header-based rate limiting, and webhooks for near-real-time events.'
 image: https://www.channelengine.com/hubfs/ChannelEngine-Logomark.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: ChannelEngine
 nav: Providers
 network: true
-overview: 'ChannelEngine publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Marketplace Integration, Multi-Channel Commerce, and Order Management.
+overview: 'ChannelEngine is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Marketplace Integration, Multi-Channel Commerce, and Order Management.
 
 
   The ChannelEngine catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  ChannelEngine''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
+  ChannelEngine''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 34 more developer resources.'
 random_paper: 17
 score:
-  band: developing
-  composite: 53.2
+  band: strong
+  composite: 54.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -260,9 +268,9 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 73.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 60.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -272,13 +280,23 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 53.2
+  previous_composite: 54.7
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -309,7 +327,7 @@ tags:
 - Marketplace Integration
 - Multi-Channel Commerce
 - Order Management
-- Inventory Management
+- Inventory
 - Product Information
 - Retail
 - Webhook

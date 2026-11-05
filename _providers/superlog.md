@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.9
-  scored_at: '2026-09-20'
+  score: 50.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -44,7 +44,7 @@ agentic_access:
   operation_count: 17
   slug: superlog-agentic-access
   summary_line: 17 operations · 8 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.superlog.sh
   baseurl_source: declared
@@ -92,6 +92,15 @@ collections:
   name: Superlog Management API keys Telemetry read API
   slug: open-superlog-telemetry-read-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://superlog.sh/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/superlog/refs/heads/main/capabilities/superlog-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/superlog-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -214,20 +223,20 @@ description: Superlog is an AI-native, open-core observability platform (Y Combi
 image: https://media.brand.dev/b517a2c9-12a7-4caa-9afc-34d21e942292.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.superlog.sh over HTTP; 34 tools listed.
   name: Superlog MCP Server
-  slug: superlog-mcp-server
-modified: '2026-07-21'
+  slug: superlog
+modified: '2026-10-06'
 name: Superlog
 nav: Providers
 network: true
-overview: 'Superlog publishes 4 APIs on the [APIs.io](https://apis.io/) network, including API keys API, GitHub integration API, Projects API, and 1 more. Tagged areas include Company, Observability, OpenTelemetry, Monitoring, and Logging.
+overview: 'Superlog publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including API keys API, GitHub integration API, Projects API, and 1 more. Tagged areas include Company, Observability, OpenTelemetry, Monitoring, and Logging.
 
 
   The Superlog catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Superlog''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 19 more developer resources.'
+  Superlog''s developer surface includes engineering blog, documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 20 more developer resources.'
 random_paper: 1
 scopes:
 - name: Superlog Scopes
@@ -236,23 +245,23 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.0
+  composite: 42.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 14.5
     contract_governance: 18.2
-    contract_quality: 57.7
-    developer_ergonomics: 71.4
-    discoverability: 75.9
+    contract_quality: 52.8
+    developer_ergonomics: 73.8
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 42.0
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -263,8 +272,14 @@ score:
       total: 4
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

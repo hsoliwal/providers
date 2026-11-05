@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: flavored
     agent_skills: false
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.9
-  scored_at: '2026-09-20'
+  score: 28.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -65,7 +65,7 @@ apis:
   description: Order and checkout fraud/abuse decisions and order status.
   name: Forter Orders API
   slug: forter-orders-api
-artifact_total: 16
+artifact_total: 17
 collections:
 - collection_type: open
   name: API Collection
@@ -86,6 +86,15 @@ collections:
   name: Forter API
   slug: open-forter
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.forter.com/platform/payment-optimization/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/forter/refs/heads/main/capabilities/forter-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/forter-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/forter/refs/heads/main/a2a/forter-a2a.yml
   title: ''
@@ -144,22 +153,30 @@ common:
 created: '2026-07-12'
 description: Forter is a fraud prevention and digital identity platform for online commerce. Its Decision API returns real-time trust-or-not decisions for orders, payments, account signups, and logins, drawing on a global identity graph and machine learning trained across a large network of merchants. Beyond fraud management, Forter covers chargeback recovery, abuse prevention, payment optimization, 3DS orchestration, and identity protection. Access is enterprise / contact-sales - API credentials (a per-account site ID and API key) are provisioned by Forter during onboarding, and requests are sent to a dedicated per-tenant host.
 finops:
-- name: Forter Finops
+- has_sources: true
+  method: generated
+  name: Forter Finops
+  primary_unit: ''
   service_category: Fraud Prevention and Identity
   slug: forter-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at www.forter.com over HTTP; 5 tools listed.
+  name: Forter MCP Server
+  slug: forter
 modified: '2026-07-12'
 name: Forter
 nav: Providers
 network: true
-overview: 'Forter publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Data Privacy API, Disputes API, and 1 more. Tagged areas include Fraud Detection, Fraud Prevention, Identity, Trust, and Payments.
+overview: 'Forter publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Data Privacy API, Disputes API, and 1 more. Tagged areas include Fraud Prevention, Identity, Trust, Payments, and Chargebacks.
 
 
-  Forter''s developer surface includes authentication, documentation, engineering blog, support, and 8 more developer resources.'
+  Forter''s developer surface includes pricing, authentication, documentation, engineering blog, support, and 9 more developer resources.'
 plans:
 - name: Forter Plans Pricing
-  plan_count: 1
+  plan_count: 0
   slug: forter-plans-pricing
 random_paper: 20
 rate_limits:
@@ -167,24 +184,24 @@ rate_limits:
   name: Forter Rate Limits
   slug: forter-rate-limits
 score:
-  band: thin
-  composite: 29.1
+  band: emerging
+  composite: 22.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 56.0
+    artifact_dirs: 15
+    catalog_earned: 39.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 53.4
+    contract_quality: 48.1
     developer_ergonomics: 15.5
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 29.1
+    discoverability: 68.3
+    operational_transparency: 5.3
+  previous_composite: 27.6
   provenance:
     agentic_access: derived
     contracts:
@@ -198,10 +215,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -217,7 +234,6 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: forter
 tags:
-- Fraud Detection
 - Fraud Prevention
 - Identity
 - Trust
@@ -225,7 +241,8 @@ tags:
 - Chargebacks
 - Account Protection
 - E-Commerce
-- Risk
-- Machine-Learning
+- Risk Management
+- Machine Learning
+- A2A
 website: https://www.forter.com/
 ---

@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 49.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 136
+- acting_count: 138
   human_in_the_loop: 4
   name: Modulr Agentic Access
-  operation_count: 207
+  operation_count: 212
   slug: modulr-agentic-access
-  summary_line: 207 operations · 136 acting · 4 human-in-the-loop
+  summary_line: 212 operations · 138 acting · 4 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.modulrfinance.com
@@ -186,6 +186,14 @@ collections:
   name: Modulr API
   slug: open-modulr-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.modulrfinance.com/newsroom
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.modulrfinance.com/newsroom/rss.xml
 - group: commercial
   href: https://raw.githubusercontent.com/api-evangelist/modulr/refs/heads/main/plans/modulr-plans-pricing.yml
   title: ''
@@ -368,20 +376,20 @@ description: 'Modulr is a United Kingdom-based embedded payments and Banking-as-
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at modulr.readme.io over HTTP; 6 tools listed.
   name: Modulr MCP Server
-  slug: modulr-mcp-server
-modified: '2026-09-16'
+  slug: modulr
+modified: '2026-10-06'
 name: Modulr
 nav: Providers
 network: true
-overview: 'Modulr publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Access Group API, Accounts API, Async API, and 23 more. Tagged areas include Payments, United Kingdom, Banking as a Service, Embedded Finance, and Payment Processing.
+overview: 'Modulr publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Group API, Accounts API, Async API, and 23 more. Tagged areas include Payments, United Kingdom, Banking as a Service, Embedded Finance, and Payment Processing.
 
 
   The Modulr catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Modulr''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, pricing, engineering blog, and 31 more developer resources.'
+  Modulr''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, changelog, pricing, and 33 more developer resources.'
 plans:
 - name: Modulr Plans Pricing
   plan_count: 12
@@ -395,22 +403,22 @@ rate_limits:
   name: Modulr Rate Limits
   slug: modulr-rate-limits
 score:
-  band: strong
-  composite: 56.7
+  band: developing
+  composite: 53.9
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 63.0
+    contract_quality: 57.5
     developer_ergonomics: 48.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -420,7 +428,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 50.4
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -436,10 +444,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 29.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 33.3

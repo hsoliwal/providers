@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.birdie.care/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -95,18 +99,18 @@ created: '2026-07-17'
 description: Birdie is a UK homecare technology platform that gives domiciliary care agencies a single unified system for care management, rostering and scheduling, finance and invoicing, quality and compliance, medication management and clinically-validated assessments, backed by dedicated apps for carers and families. Over 1,000 homecare providers use Birdie to save time, reduce mistakes and evidence care quality, with a Q-Score that predicts CQC ratings in real time. Birdie is UK-hosted and holds ISO 27001, Cyber Essentials Plus and NHS Data Security and Protection Toolkit assurances. It is backed by Index Ventures. Birdie does not currently publish a public developer API or OpenAPI specification; this profile captures its identity, domain security and compliance posture.
 image: https://cdn.prod.website-files.com/5d80c03f1edd7bd68fcdb623/633ead0f172e7255f4ce0395_logo-white.svg
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Birdie
 nav: Providers
 network: true
 overview: 'Birdie is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Home Care, Domiciliary Care, and Care Management.
 
 
-  Birdie''s developer surface includes pricing, engineering blog, support, signup flow, and 9 more developer resources.'
+  Birdie''s developer surface includes pricing, engineering blog, support, signup flow, and 10 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 20.4
+  composite: 19.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -120,17 +124,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 20.4
+  previous_composite: 19.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

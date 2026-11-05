@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 58.8
-  scored_at: '2026-09-20'
+  score: 56.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,7 +81,7 @@ apis:
   description: The Markets API from Trading Economics — 9 operation(s) for markets.
   name: Trading Economics Markets API
   slug: tradingeconomics-markets-api
-artifact_total: 24
+artifact_total: 25
 asyncapis:
 - description: 'AsyncAPI 2.6 description of the Trading Economics **WebSocket streaming surface** at `wss://stream.tradingeconomics.com/`. Unlike many data providers whose "streaming" is HTTP polling or SSE, Trading '
   name: Trading Economics Streaming API (WebSocket)
@@ -170,16 +170,24 @@ common:
 created: '2026-07-11'
 description: Trading Economics provides economic data for 196 countries - more than 20 million time series covering economic indicators like interest rates, inflation, GDP, and unemployment - alongside an economic calendar, proprietary macro forecasts, historical data, and live market quotes, all delivered through a single REST API and a WebSocket streaming service.
 finops:
-- name: Tradingeconomics Finops
+- has_sources: true
+  method: generated
+  name: Tradingeconomics Finops
+  primary_unit: ''
   service_category: Analytics
   slug: tradingeconomics-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tradingeconomics.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tradingeconomics.com over HTTP.
+  name: Trading Economics MCP Server
+  slug: tradingeconomics
 modified: '2026-07-11'
 name: Trading Economics
 nav: Providers
 network: true
-overview: 'Trading Economics publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Streaming API, Economic Calendar API, Financials API, and 4 more. Tagged areas include Economic Indicators, Interest Rates, Macroeconomics, Financial Data, and Economic Calendar.
+overview: 'Trading Economics publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Streaming API, Economic Calendar API, Financials API, and 4 more. Tagged areas include Economic Indicators, Interest Rates, Macroeconomics, Financial Data, and Economic Calendar.
 
 
   The Trading Economics catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -196,10 +204,11 @@ rate_limits:
   name: Tradingeconomics Rate Limits
   slug: tradingeconomics-rate-limits
 rules:
-- effective_rule_count: 34
+- authorship: generated
+  effective_rule_count: 34
   extends:
   - spectral:asyncapi
-  name: Trading Economics API Rules
+  name: Trading Economics — asyncapi rules
   rule_count: 7
   severity_counts:
     error: 1
@@ -208,24 +217,24 @@ rules:
     warn: 6
   slug: tradingeconomics-asyncapi-spectral-rules
 score:
-  band: developing
-  composite: 41.1
+  band: thin
+  composite: 31.0
   coverage:
     artifact_dirs: 14
-    catalog_earned: 67.8
+    catalog_earned: 46.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.3
+    catalog_gap: 68.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 11.4
-    contract_quality: 56.7
+    contract_quality: 52.5
     developer_ergonomics: 21.4
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 41.1
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 39.3
   provenance:
     agentic_access: derived
     contracts:
@@ -234,9 +243,15 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
@@ -254,7 +269,7 @@ security:
 - kind: vulnerability-disclosure
   name: Tradingeconomics Vulnerability Disclosure
   slug: tradingeconomics-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: tradingeconomics
 tags:
 - Economic Indicators
@@ -264,5 +279,6 @@ tags:
 - Economic Calendar
 - Forecast
 - Markets
+- Real-Time
 website: https://tradingeconomics.com
 ---

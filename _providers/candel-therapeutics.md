@@ -23,10 +23,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/candel-therapeutics/refs/heads/main/plans/candel-therapeutics-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/candel-therapeutics-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/candel-therapeutics/refs/heads/main/rate-limits/candel-therapeutics-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/candel-therapeutics-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -90,7 +100,7 @@ network: true
 overview: 'Candel Therapeutics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Pharmaceuticals, Immunotherapy, and Oncology.
 
 
-  Candel Therapeutics'' developer surface includes engineering blog, support, and 7 more developer resources.'
+  Candel Therapeutics'' developer surface includes engineering blog, support, and 9 more developer resources.'
 plans:
 - name: Candel Therapeutics Plans Pricing
   plan_count: 0
@@ -102,9 +112,9 @@ rate_limits:
   slug: candel-therapeutics-rate-limits
 score:
   band: minimal
-  composite: 8.3
+  composite: 8.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -116,27 +126,30 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 8.3
+  previous_composite: 8.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/candel-therapeutics/refs/heads/main/screenshots/candel-therapeutics-2026-10-11T102700.png
 security:
 - kind: domain-security
   name: Candel Therapeutics Domain Security

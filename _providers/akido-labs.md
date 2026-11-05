@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.akidolabs.com/blog-feed.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/akido-labs/refs/heads/main/security/akido-labs-domain-security.yml
   title: ''
@@ -77,47 +81,49 @@ created: '2026-07-17'
 description: Akido Labs is a Los Angeles-based healthcare technology company re-engineering care delivery with artificial intelligence. Its flagship system, Scope AI, is a clinical decision support platform trained on large volumes of healthcare data using reinforcement learning with human feedback (RLHF) to help physicians reach efficient diagnoses, order the right diagnostics, personalize treatment, and forecast health risks. Providers use Scope AI through the Akido Chart EMR to expand capacity for primary care and specialty visits. Akido also operates Akido Medical, a care network spanning dozens of locations and hundreds of providers serving hundreds of thousands of patients, with an emphasis on underserved and street-medicine populations. The company is venture-backed (including a Series B led by Oak HC/FT) and does not currently publish a public developer API surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akido-labs.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Akido Labs
 nav: Providers
 network: true
 overview: 'Akido Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Artificial Intelligence, Clinical Decision Support, and Primary Care.
 
 
-  Akido Labs'' developer surface includes engineering blog and 8 more developer resources.'
+  Akido Labs'' developer surface includes engineering blog and 9 more developer resources.'
 random_paper: 15
 score:
   band: minimal
-  composite: 9.9
+  composite: 9.6
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 9.9
+  previous_composite: 9.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -136,8 +142,8 @@ tags:
 - Artificial Intelligence
 - Clinical Decision Support
 - Primary Care
-- Health Technology
-- Machine-Learning
+- Health Tech
+- Machine Learning
 - Medical
 website: https://www.akidolabs.com/
 ---

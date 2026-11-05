@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 20.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -204,16 +204,20 @@ common:
 created: '2026-05-08'
 description: Hyperscience provides enterprise-grade intelligent document processing (IDP) via the Hypercell platform. Capabilities include automated extraction, classification, GenAI processing, human-in-the-loop validation, and industry/use-case specific products (Hypercell for Freight Pay, GenAI, SNAP). Hyperscience exposes a REST API and a Flows SDK to its customers. FedRAMP High authorised; deployed in cloud and on-premises configurations.
 finops:
-- name: Hyperscience Finops
+- has_sources: true
+  method: generated
+  name: Hyperscience Finops
+  primary_unit: ''
   service_category: Enterprise IDP
   slug: hyperscience-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hyperscience.png
 layout: provider
 modified: '2026-05-08'
 name: Hyperscience
 nav: Providers
 network: true
-overview: 'Hyperscience publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Cases API, Documents API, and 6 more. Tagged areas include Artificial Intelligence, Document AI, IDP, Enterprise, and Automation.
+overview: 'Hyperscience publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit Logs API, Cases API, Documents API, and 7 more. Tagged areas include Artificial Intelligence, Document AI, Intelligent Document Processing, Enterprise, and Automation.
 
 
   Hyperscience''s developer surface includes authentication, pricing, engineering blog, and 13 more developer resources.'
@@ -233,23 +237,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 28.7
+  composite: 27.5
   coverage:
     artifact_dirs: 13
-    catalog_earned: 45.0
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.0
   facets:
-    access_clarity: 34.2
+    access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 28.7
+  previous_composite: 29.5
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +261,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -276,7 +286,7 @@ security:
 - kind: vulnerability-disclosure
   name: Hyperscience Vulnerability Disclosure
   slug: hyperscience-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Hyperscience Trust Center
   slug: hyperscience-trust-center
@@ -285,7 +295,7 @@ slug: hyperscience
 tags:
 - Artificial Intelligence
 - Document AI
-- IDP
+- Intelligent Document Processing
 - Enterprise
 - Automation
 - Generative AI

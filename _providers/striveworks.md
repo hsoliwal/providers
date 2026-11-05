@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Per-tenant REST API for the Chariot AI operations platform, organized as versioned microservice paths under /api/{service}/{version}/ — identity, training, evaluation, notification, catalog, serve and
@@ -42,6 +42,14 @@ apis:
   slug: chariot-platform-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://medium.com/@striveworks
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://medium.com/feed/@striveworks
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/striveworks/refs/heads/main/security/striveworks-domain-security.yml
   title: ''
@@ -132,18 +140,18 @@ description: 'Striveworks is an Austin, Texas enterprise AI operations (AIOps) c
   with US defense and federal customers, including US Army and US Navy AI programs.'
 image: https://cdn.prod.website-files.com/687f6a68c97e16777c3d2778/689f6daf828285a886335b48_open%20graph.png
 layout: provider
-modified: '2026-08-05'
+modified: '2026-10-06'
 name: Striveworks
 nav: Providers
 network: true
-overview: 'Striveworks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, MLOps, and AIOps.
+overview: 'Striveworks is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, MLOps, and AIOps.
 
 
-  Striveworks'' developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, authentication, CLI, and 12 more developer resources.'
+  Striveworks'' developer surface includes engineering blog, documentation, API reference, getting-started guide, changelog, authentication, CLI, and 14 more developer resources.'
 random_paper: 3
 score:
-  band: thin
-  composite: 27.0
+  band: emerging
+  composite: 25.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -157,9 +165,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 27.0
+  previous_composite: 25.6
   provenance:
     conformance: first-party
   regulatory:
@@ -167,9 +175,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -189,14 +197,14 @@ slug: striveworks
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - MLOps
 - AIOps
 - Model Deployment
 - Model Monitoring
 - Inference
 - Data Annotation
-- Computer-Vision
+- Computer Vision
 - Agentic Workflows
 - Defense
 - GovTech

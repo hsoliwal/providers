@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The Adverity Management API provides programmatic access to the Adverity platform for managing datastreams, authorizations, fetches, transformations, data mappings, destinations, workspaces, and users
@@ -53,6 +53,10 @@ asyncapis:
   name: Adverity Webhooks
   slug: adverity-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.adverity.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -212,20 +216,20 @@ description: Adverity is a marketing data intelligence platform that integrates,
 image: https://www.adverity.com/hubfs/7.%20Webpages/adverity-banner.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.eu.adverity.com over HTTP; 12 tools listed.
   name: Adverity MCP
   slug: adverity-mcp
-modified: '2026-08-13'
+modified: '2026-10-06'
 name: Adverity
 nav: Providers
 network: true
-overview: 'Adverity publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Analytics, Marketing Analytics, Data Integration, and ETL.
+overview: 'Adverity is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Analytics, Marketing Analytics, Data Integration, and ETL.
 
 
   The Adverity catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Adverity''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 27 more developer resources.'
+  Adverity''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 28 more developer resources.'
 plans:
 - name: Adverity Plans Pricing
   plan_count: 0
@@ -237,33 +241,49 @@ rate_limits:
   slug: adverity-rate-limits
 scopes:
 - name: Adverity Scopes
-  scope_count: 0
+  scope_count: 14
   slug: adverity-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.3
+  composite: 53.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 61.9
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 71.1
-  previous_composite: 50.3
+  previous_composite: 53.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: dora
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

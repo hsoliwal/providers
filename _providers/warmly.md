@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: REST API for Warmly's agent-tools surface — discover available tools, execute read tools (warm visitors, warm accounts, third-party intent signals, credit balance) and async write tools (push contacts
@@ -219,14 +219,14 @@ description: Warmly is a signal-based revenue orchestration and AI go-to-market 
 image: https://logo.clearbit.com/warmly.ai
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at opps-api.getwarmly.com over HTTP; 4 tools listed.
   name: Warmly MCP Server
-  slug: warmly-mcp-server
+  slug: warmly
 modified: '2026-08-13'
 name: Warmly
 nav: Providers
 network: true
-overview: 'Warmly publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales, Marketing, Intent Data, and Revenue Orchestration.
+overview: 'Warmly is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales, Marketing, Intent Data, and Revenue Orchestration.
 
 
   The Warmly catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -249,9 +249,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode/deviceCode/refreshToken/clientCredentials
 score:
   band: strong
-  composite: 55.1
+  composite: 58.8
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -261,17 +261,29 @@ score:
   facets:
     access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 71.1
-  previous_composite: 55.1
+  previous_composite: 58.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

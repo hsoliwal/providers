@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
@@ -91,14 +91,14 @@ modified: '2026-07-21'
 name: Strella
 nav: Providers
 network: true
-overview: 'Strella is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Customer Research, User Research, and Market Research.
+overview: 'Strella is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Customer Research, User Research, and Market Research.
 
 
   Strella''s developer surface includes engineering blog, changelog, support, and 8 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 14.0
+  composite: 13.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -112,11 +112,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 15.8
-  previous_composite: 14.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +141,7 @@ security:
 slug: strella
 tags:
 - Company
-- Ai Ml
+- Artificial Intelligence
 - Customer Research
 - User Research
 - Market Research

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 85
   human_in_the_loop: 1
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 171
   slug: burstiq-agentic-access
   summary_line: 171 operations · 85 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.burstiq.com
   baseurl_source: declared
@@ -218,6 +218,15 @@ collections:
   name: LifeGraph APIs BlastAI APIs Wallet APIs API
   slug: open-burstiq-wallet-apis-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://burstiq.com/feed/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/burstiq/refs/heads/main/capabilities/burstiq-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/burstiq-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/burstiq/refs/heads/main/agentic-access/burstiq-agentic-access.yml
   title: ''
@@ -314,20 +323,20 @@ created: '2026-07-17'
 description: BurstIQ is a health-and-data technology company whose LifeGraph platform pairs a blockchain-secured knowledge graph (GraphChain) with granular consent-and-ownership wallets and configurable data pipelines to give enterprises trusted, agent-ready data. The LifeGraph REST API (OpenAPI 3.1, version 2.42.0) exposes 171 operations across GraphChain Smart Data Objects, user and system wallets, dictionaries, glossaries, edge definitions, data pipelines, job management, and an OData v4 query surface, secured with bearer (JWT) authentication. BurstIQ was surfaced as a 500 Global portfolio company and enriched into the API Evangelist network.
 image: https://burstiq.com/favicon.ico
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: BurstIQ
 nav: Providers
 network: true
-overview: 'BurstIQ publishes 21 APIs on the [APIs.io](https://apis.io/) network, including BlastAI APIs API, Customer Directory APIs API, Data Pipeline APIs API, and 18 more. Tagged areas include Company, Health, Data, Blockchain, and Knowledge Graph.
+overview: 'BurstIQ publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including BlastAI APIs API, Customer Directory APIs API, Data Pipeline APIs API, and 18 more. Tagged areas include Company, Health, Data, Blockchain, and Knowledge Graph.
 
 
-  BurstIQ''s developer surface includes authentication, documentation, API reference, engineering blog, support, and 15 more developer resources.'
+  BurstIQ''s developer surface includes authentication, documentation, API reference, engineering blog, support, and 17 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 31.2
+  composite: 29.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -337,11 +346,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 50.7
+    contract_quality: 46.0
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 31.2
+  previous_composite: 29.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -357,9 +366,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -382,6 +391,6 @@ tags:
 - Blockchain
 - Knowledge Graph
 - Consent
-- Agentic AI
+- AI Agents
 website: https://burstiq.com
 ---

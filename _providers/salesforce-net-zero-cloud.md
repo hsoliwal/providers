@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -136,6 +136,26 @@ collections:
   name: Salesforce Net Zero Cloud REST Carbon Emissions Water Usage API
   slug: open-salesforce-net-zero-cloud-water-usage-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/salesforce-net-zero-cloud/refs/heads/main/plans/salesforce-net-zero-cloud-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/salesforce-net-zero-cloud-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/salesforce-net-zero-cloud/refs/heads/main/rate-limits/salesforce-net-zero-cloud-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/salesforce-net-zero-cloud-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/salesforce-net-zero-cloud/refs/heads/main/finops/salesforce-net-zero-cloud-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/salesforce-net-zero-cloud-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/salesforce-net-zero-cloud/refs/heads/main/capabilities/salesforce-net-zero-cloud-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/salesforce-net-zero-cloud-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -243,9 +263,13 @@ examples:
   name: Salesforce Net Zero Cloud List Sustainability Goals Example
   slug: salesforce-net-zero-cloud-list-sustainability-goals-example
 finops:
-- name: Salesforce Net Zero Cloud Finops
+- has_sources: true
+  method: generated
+  name: Salesforce Net Zero Cloud Finops
+  primary_unit: ''
   service_category: Sustainability / ESG
   slug: salesforce-net-zero-cloud-finops
+  template: false
 image: https://www.salesforce.com/content/dam/web/en_us/www/images/logo-salesforce.svg
 json_schemas:
 - name: Salesforce Net Zero Cloud Carbon Emission
@@ -268,13 +292,13 @@ modified: '2026-05-19'
 name: Salesforce Net Zero Cloud
 nav: Providers
 network: true
-overview: 'Salesforce Net Zero Cloud publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Carbon Emissions API, Emission Factors API, Energy Consumption API, and 4 more. Tagged areas include Carbon Accounting, Carbon Emissions, Climate, Environmental, and ESG.
+overview: 'Salesforce Net Zero Cloud publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Carbon Emissions API, Emission Factors API, Energy Consumption API, and 6 more. Tagged areas include Carbon Accounting, Carbon Emissions, Climate, Environmental, and ESG.
 
 
   The Salesforce Net Zero Cloud catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Salesforce Net Zero Cloud''s developer surface includes authentication, engineering blog, getting-started guide, release notes, support, and 17 more developer resources.'
+  Salesforce Net Zero Cloud''s developer surface includes authentication, engineering blog, getting-started guide, release notes, support, and 21 more developer resources.'
 plans:
 - name: Salesforce Net Zero Cloud Plans Pricing
   plan_count: 1
@@ -285,9 +309,10 @@ rate_limits:
   name: Salesforce Net Zero Cloud Rate Limits
   slug: salesforce-net-zero-cloud-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Salesforce Net Zero Cloud API Rules
+  name: Salesforce Net Zero Cloud — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -295,7 +320,8 @@ rules:
     info: 1
     warn: 4
   slug: salesforce-net-zero-cloud-jsonschema-spectral-rules
-- effective_rule_count: 9
+- authorship: unmarked
+  effective_rule_count: 9
   extends: []
   name: Salesforce Net Zero Cloud API Rules
   rule_count: 9
@@ -312,23 +338,23 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 46.8
+  composite: 46.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 60.3
+    artifact_dirs: 20
+    catalog_earned: 56.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.8
+    catalog_gap: 58.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 34.2
-    contract_governance: 25.0
-    contract_quality: 63.0
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 57.4
     developer_ergonomics: 51.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 46.8
+  previous_composite: 47.8
   provenance:
     agentic_access: derived
     contracts:
@@ -336,8 +362,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

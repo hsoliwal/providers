@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Sempra Energy runs a Google Apigee API program. api.sempra.com is the Apigee runtime gateway — an unrouted request returns the genuine Apigee messaging.adaptors.http.flow.ApplicationNotFound JSON faul
@@ -119,7 +119,7 @@ modified: '2026-08-28'
 name: Sempra Energy
 nav: Providers
 network: true
-overview: 'Sempra Energy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, Energy, Utilities, Natural Gas, and Electricity.
+overview: 'Sempra Energy is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, Energy, Utilities, Natural Gas, and Electricity.
 
 
   Sempra Energy''s developer surface includes authentication and 10 more developer resources.'
@@ -159,7 +159,7 @@ rate_limits:
   slug: sempra-energy-rate-limits
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -173,27 +173,30 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.8
+  previous_composite: 10.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 16.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/sempra-energy/refs/heads/main/screenshots/sempra-energy-2026-10-11T125706.png
 security:
 - kind: authentication
   name: Sempra Energy Authentication

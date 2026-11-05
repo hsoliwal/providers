@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 31
+- acting_count: 30
   human_in_the_loop: 1
   name: Anamai Agentic Access
   operation_count: 57
   slug: anamai-agentic-access
-  summary_line: 57 operations · 31 acting · 1 human-in-the-loop
+  summary_line: 57 operations · 30 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.anam.ai/v1/
@@ -341,7 +341,7 @@ modified: '2026-07-17'
 name: Anam.ai
 nav: Providers
 network: true
-overview: 'Anam.ai publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Avatars API, Engine API, Knowledge API, and 7 more. Tagged areas include Company, AI Avatars, Conversational AI, Real-Time Video, and WebRTC.
+overview: 'Anam.ai publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Avatars API, Engine API, Knowledge API, and 7 more. Tagged areas include Company, AI Avatars, Conversational AI, Real-Time Video, and WebRTC.
 
 
   Anam.ai''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 31 more developer resources.'
@@ -352,7 +352,7 @@ rate_limits:
   slug: anamai-rate-limits
 score:
   band: developing
-  composite: 54.2
+  composite: 54.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -360,15 +360,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 60.7
+    contract_quality: 55.0
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 71.1
-  previous_composite: 54.2
+  previous_composite: 54.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -379,8 +379,18 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 28.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

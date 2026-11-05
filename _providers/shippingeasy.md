@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -168,16 +168,16 @@ modified: '2026-05-25'
 name: ShippingEasy
 nav: Providers
 network: true
-overview: 'ShippingEasy publishes 2 APIs on the [APIs.io](https://apis.io/) network: Orders API and Stores API. Tagged areas include Shipping, Logistics, Multi-Carrier, Labels, and Order Management.
+overview: 'ShippingEasy publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Orders API and Stores API. Tagged areas include Shipping, Logistics, Multi-Carrier, Labels, and Order Management.
 
 
   ShippingEasy''s developer surface includes authentication, pricing, documentation, signup flow, support, engineering blog, YouTube channel, and 15 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 30.2
+  composite: 28.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -187,11 +187,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 30.2
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     contracts:
@@ -204,9 +204,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

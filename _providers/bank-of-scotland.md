@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-09-20'
+  score: 33.6
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - baseURL: https://api.bankofscotland.co.uk/open-banking/v2.2
@@ -215,6 +215,10 @@ collections:
   name: Open Data API
   slug: open-obie-opendata-swagger
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.bankofscotland.co.uk/blog/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/bank-of-scotland/refs/heads/main/capabilities/bank-of-scotland-capability-edges.yml
   title: ''
@@ -349,14 +353,14 @@ description: Bank of Scotland is a UK high-street retail and commercial bank, fo
   accessed through the Lloyds Banking Group developer platform after eIDAS/OBIE certificate onboarding.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-23'
+modified: '2026-10-06'
 name: Bank of Scotland
 nav: Providers
 network: true
-overview: 'Bank of Scotland publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Bank of Scotland publishes 34 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
-  Bank of Scotland''s developer surface includes authentication, sandbox, documentation, and 24 more developer resources.'
+  Bank of Scotland''s developer surface includes engineering blog, authentication, sandbox, documentation, and 24 more developer resources.'
 random_paper: 9
 scopes:
 - name: Bank Of Scotland Scopes
@@ -365,21 +369,21 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 33.3
+  composite: 31.0
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 52.1
-    developer_ergonomics: 47.0
-    discoverability: 81.5
+    contract_quality: 46.9
+    developer_ergonomics: 49.4
+    discoverability: 78.6
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -389,7 +393,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.3
+  previous_composite: 30.5
   provenance:
     conformance: derived
     contracts:
@@ -408,9 +412,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 50.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -427,7 +431,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: bank-of-scotland
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

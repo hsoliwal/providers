@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 245
   human_in_the_loop: 5
@@ -48,52 +48,52 @@ apis:
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The activitypub API from Forgejo — 11 operation(s) for activitypub.
-  name: Forgejo activitypub API
+  name: Forgejo Activitypub API
   slug: forgejo-activitypub-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The admin API from Forgejo — 34 operation(s) for admin.
-  name: Forgejo admin API
+  name: Forgejo Admin API
   slug: forgejo-admin-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The issue API from Forgejo — 33 operation(s) for issue.
-  name: Forgejo issue API
+  name: Forgejo Issue API
   slug: forgejo-issue-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The miscellaneous API from Forgejo — 14 operation(s) for miscellaneous.
-  name: Forgejo miscellaneous API
+  name: Forgejo Miscellaneous API
   slug: forgejo-miscellaneous-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The notification API from Forgejo — 4 operation(s) for notification.
-  name: Forgejo notification API
+  name: Forgejo Notification API
   slug: forgejo-notification-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The organization API from Forgejo — 42 operation(s) for organization.
-  name: Forgejo organization API
+  name: Forgejo Organization API
   slug: forgejo-organization-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The package API from Forgejo — 5 operation(s) for package.
-  name: Forgejo package API
+  name: Forgejo Package API
   slug: forgejo-package-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The repository API from Forgejo — 126 operation(s) for repository.
-  name: Forgejo repository API
+  name: Forgejo Repository API
   slug: forgejo-repository-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The settings API from Forgejo — 4 operation(s) for settings.
-  name: Forgejo settings API
+  name: Forgejo Settings API
   slug: forgejo-settings-api
 - baseURL: https://code.forgejo.org/api/v1
   baseurl_source: declared
   description: The user API from Forgejo — 54 operation(s) for user.
-  name: Forgejo user API
+  name: Forgejo User API
   slug: forgejo-user-api
 artifact_total: 290
 collections:
@@ -131,6 +131,11 @@ collections:
   name: Forgejo activitypub user API
   slug: open-forgejo-user-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/forgejo/refs/heads/main/capabilities/forgejo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/forgejo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/forgejo/refs/heads/main/agentic-access/forgejo-agentic-access.yml
   title: ''
@@ -255,9 +260,13 @@ examples:
   name: User Example
   slug: user-example
 finops:
-- name: Forgejo Finops
+- has_sources: false
+  method: generated
+  name: Forgejo Finops
+  primary_unit: ''
   service_category: ''
   slug: forgejo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/forgejo.png
 json_schemas:
 - name: AccessToken represents an API access token.
@@ -1003,13 +1012,13 @@ modified: '2026-06-13'
 name: Forgejo
 nav: Providers
 network: true
-overview: 'Forgejo publishes 10 APIs on the [APIs.io](https://apis.io/) network, including activitypub API, admin API, issue API, and 7 more. Tagged areas include Git, Source Code Management, Self-Hosted, DevOps, and CI/CD.
+overview: 'Forgejo publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activitypub API, Admin API, Issue API, and 7 more. Tagged areas include Git, Version Control, Self-Hosted, DevOps, and CI/CD.
 
 
   The Forgejo catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Forgejo''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
+  Forgejo''s developer surface includes authentication, documentation, engineering blog, pricing, and 14 more developer resources.'
 plans:
 - name: Forgejo Plans Pricing
   plan_count: 2
@@ -1020,9 +1029,10 @@ rate_limits:
   name: Forgejo Rate Limits
   slug: forgejo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Forgejo API Rules
+  name: Forgejo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1032,23 +1042,23 @@ rules:
   slug: forgejo-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.9
+  composite: 30.2
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 51.3
+    artifact_dirs: 17
+    catalog_earned: 42.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.8
+    catalog_gap: 72.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 47.8
+    contract_quality: 43.6
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 35.9
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -1056,8 +1066,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -1079,11 +1095,11 @@ security:
 slug: forgejo
 tags:
 - Git
-- Source Code Management
+- Version Control
 - Self-Hosted
 - DevOps
 - CI/CD
-- Open-Source
+- Open Source
 - Forge
 - Repositories
 - Issues
